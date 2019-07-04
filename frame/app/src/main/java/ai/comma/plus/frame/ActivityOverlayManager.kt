@@ -11,8 +11,8 @@ interface ActivityOverlayManagerDelegate {
 
 class ActivityOverlayManager(val activityOverlay: View, val delegate: ActivityOverlayManagerDelegate) {
     companion object {
-        val OVERLAY_START_CAR = OverlayMessage("Start your car to begin", dismiss = "Go back")
-        val OVERLAY_THERMAL_WARNING = OverlayMessage("Ride completed", "Continue", "Keep EON away from sunlight", timeoutMillis = 30000)
+        val OVERLAY_START_CAR = OverlayMessage("启动你的汽车", dismiss = "返回")
+        val OVERLAY_THERMAL_WARNING = OverlayMessage("驾驶完成", "继续", "远离阳光", timeoutMillis = 30000)
     }
 
     var timerHandler = Handler(Looper.getMainLooper())

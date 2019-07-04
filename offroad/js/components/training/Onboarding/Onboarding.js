@@ -253,20 +253,20 @@ class Onboarding extends Component {
                 <X.Text
                     size='jumbo' color='white' weight='bold'
                     style={ Styles.onboardingStepHeader }>
-                    Welcome to openpilot alpha
+                    欢迎来到openpilot alpha
                 </X.Text>
                 <X.Text
                     color='white' weight='light'
                     style={ Styles.onboardingStepContext }>
-                    Now that you’re all set up, it’s important to
-                    understand the functionality and limitations of
-                    openpilot as alpha software before testing.
+                    现在你们都准备好了，
+                    重要的是了解的功能和限制,
+                    openpilot作为alpha软件进行测试。
                 </X.Text>
                 <View style={ Styles.onboardingPrimaryAction }>
                     <X.Button
                         color='setupPrimary'
                         onPress={ () => this.setStep('OB_INTRO') }>
-                        Begin Training
+                        开始训练
                     </X.Button>
                 </View>
             </X.Entrance>
@@ -295,33 +295,33 @@ class Onboarding extends Component {
                     </View>
                     <View style={ Styles.onboardingStepPointBody }>
                         <X.Text size='bigger' color='white' weight='bold'>
-                            openpilot is an advanced driver assistance system.
+                            openpilot是一个高级的驾驶员辅助系统。
                         </X.Text>
                         <X.Text
                             size='smallish' color='white' weight='light'
                             style={ Styles.onboardingStepContextSmall }>
-                            A driver assistance system is not a self driving car.
-                            This means openpilot is designed to work with you,
-                            not without you. Your attention is required to drive.
+                            驾驶员辅助系统不是自动驾驶汽车。
+                            这意味着openpilot是为你设计的，
+                            不是没有你。开车时要集中注意力。
                         </X.Text>
                         <X.CheckboxField
                             size='small'
                             color='white'
                             isChecked={ stepChecks.includes(1) }
                             onPress={ () => this.handleIntroCheckboxPressed(1) }
-                            label='I will keep my eyes on the road.' />
+                            label='我会一直盯着这条路。' />
                         <X.CheckboxField
                             size='small'
                             color='white'
                             isChecked={ stepChecks.includes(2) }
                             onPress={ () => this.handleIntroCheckboxPressed(2) }
-                            label='I will be ready to take over at any time.' />
+                            label='我随时准备接手。' />
                         <X.CheckboxField
                             size='small'
                             color='white'
                             isChecked={ stepChecks.includes(3) }
                             onPress={ () => this.handleIntroCheckboxPressed(3) }
-                            label='I will be ready to take over at any time!' />
+                            label='我随时准备接手!' />
                     </View>
                 </View>
             </X.Entrance>
@@ -349,13 +349,13 @@ class Onboarding extends Component {
                 </View>
                 <View style={ Styles.onboardingStepPointBody }>
                     <X.Text size='bigger' color='white' weight='bold'>
-                        openpilot uses multiple sensors to see the road ahead.
+                        openpilot使用多个传感器来查看前方道路。
                     </X.Text>
                     <X.Text
                         size='smallish' color='white' weight='light'
                         style={ Styles.onboardingStepContextSmall }>
-                        Before any signals are sent to control your car,
-                        sensors are fused to construct a scene of the road.
+                        在发出任何控制汽车的信号之前，
+                        传感器被融合在一起构成道路的场景。
                     </X.Text>
                     <X.RadioField
                         size='big'
@@ -363,7 +363,7 @@ class Onboarding extends Component {
                         isChecked={ stepChecks.includes('camera') }
                         hasAppend={ true }
                         onPress={ () => this.handleSensorRadioPressed('camera') }
-                        label='Camera from EON' />
+                        label='摄像头' />
                     <X.RadioField
                         size='big'
                         color='white'
@@ -371,7 +371,7 @@ class Onboarding extends Component {
                         isChecked={ stepChecks.includes('radar') }
                         hasAppend={ true }
                         onPress={ () => this.handleSensorRadioPressed('radar') }
-                        label='Radar from your car' />
+                        label='车载雷达' />
                 </View>
             </View>
         )
@@ -387,22 +387,20 @@ class Onboarding extends Component {
                     size='small' color='ghost' textWeight='light'
                     style={ Styles.onboardingStepPointCrumb }
                     onPress={ () => this.handleSensorRadioPressed('index') }>
-                    openpilot sensors
+                    openpilot传感器
                 </X.Button>
                 <X.Text size='medium' color='white' weight='bold'>
-                    Camera from EON
+                    摄像头
                 </X.Text>
                 <X.Text
                     size='small' color='white' weight='light'
                     style={ Styles.onboardingStepContextSmaller }>
-                    A vision algorithm leverages EON’s road-facing
-                    camera to determine the path to drive.
+                    视觉算法利用面向道路的摄像头来确定行驶的路径。
                 </X.Text>
                 <X.Text
                     size='small' color='white' weight='light'
                     style={ Styles.onboardingStepContextSmaller }>
-                    The lane lines are drawn with varying widths to
-                    reflect the confidence in finding your lane.
+                    车道线的宽度是不同的，以反映找到你的车道的信心。
                 </X.Text>
                 <X.Button color='ghost'
                     style={ Styles.onboardingStepPointInstruction }
@@ -410,7 +408,7 @@ class Onboarding extends Component {
                     <X.Text
                         size='small' color='white' weight='semibold'
                         style={ Styles.onboardingStepPointInstructionText }>
-                        Select path to continue
+                        选择要继续的路径
                     </X.Text>
                     <X.Image
                       source={ require('../../../img/icon_chevron_right.png') }
@@ -430,22 +428,20 @@ class Onboarding extends Component {
                     size='small' color='ghost' textWeight='light'
                     style={ Styles.onboardingStepPointCrumb }
                     onPress={ () => this.handleSensorRadioPressed('index') }>
-                    openpilot sensors
+                    openpilot传感器
                 </X.Button>
                 <X.Text size='medium' color='white' weight='bold'>
-                    Radar from your car
+                    车载雷达
                 </X.Text>
                 <X.Text
                     size='small' color='white' weight='light'
                     style={ Styles.onboardingStepContextSmaller }>
-                    The stock radar in your car helps openpilot measure
-                    the lead car distance for longitudinal control.
+                    您的汽车雷达帮助openpilot测量前方汽车距离已控制车辆。
                 </X.Text>
                 <X.Text
                     size='small' color='white' weight='light'
                     style={ Styles.onboardingStepContextSmaller }>
-                    The indicator is drawn either red or yellow to
-                    illustrate relative speed to the lead car.
+                    该指示器被显示成红色或黄色，以说明相对于前车的相对速度。
                 </X.Text>
                 <X.Button color='ghost'
                     style={ Styles.onboardingStepPointInstruction }
@@ -453,7 +449,7 @@ class Onboarding extends Component {
                     <X.Text
                         size='small' color='white' weight='semibold'
                         style={ Styles.onboardingStepPointInstructionText }>
-                        Select lead car indicator
+                        选择前方车辆
                     </X.Text>
                     <X.Image
                         source={ require('../../../img/icon_chevron_right.png') }
@@ -504,12 +500,12 @@ class Onboarding extends Component {
                 </View>
                 <View style={ Styles.onboardingStepPointBody }>
                     <X.Text size='bigger' color='white' weight='bold'>
-                        openpilot will start driving when cruise control is set.
+                        设置巡航控制后，openpilot将开始驾驶。
                     </X.Text>
                     <X.Text
                         size='smallish' color='white' weight='light'
                         style={ Styles.onboardingStepContextSmall }>
-                        Press cruise to engage and a pedal to disengage.
+                        按下巡航键使其开始，按下踏板使其松开。
                     </X.Text>
                     <X.RadioField
                         size='medium'
@@ -517,7 +513,7 @@ class Onboarding extends Component {
                         isChecked={ stepChecks.includes('cruise') }
                         hasAppend={ true }
                         onPress={ () => this.handleControlsRadioPressed('cruise') }
-                        label='Engage openpilot' />
+                        label='启用openpilot' />
                     <X.RadioField
                         size='medium'
                         color='white'
@@ -525,7 +521,7 @@ class Onboarding extends Component {
                         isChecked={ stepChecks.includes('monitoring') }
                         hasAppend={ true }
                         onPress={ () => this.handleControlsRadioPressed('monitoring') }
-                        label='Driver Monitoring' />
+                        label='司机监控' />
                     <X.RadioField
                         size='medium'
                         color='white'
@@ -533,7 +529,7 @@ class Onboarding extends Component {
                         isChecked={ stepChecks.includes('pedal') }
                         hasAppend={ true }
                         onPress={ () => this.handleControlsRadioPressed('pedal') }
-                        label='Disengage openpilot' />
+                        label='停止openpilot' />
                 </View>
             </View>
         )
@@ -549,17 +545,15 @@ class Onboarding extends Component {
                     size='small' color='ghost' textWeight='light'
                     style={ Styles.onboardingStepPointCrumb }
                     onPress={ () => this.handleControlsRadioPressed('index') }>
-                    openpilot controls
+                    openpilot控制
                 </X.Button>
                 <X.Text size='medium' color='white' weight='bold'>
-                    Engage openpilot
+                    启用openpilot
                 </X.Text>
                 <X.Text
                     size='small' color='white' weight='light'
                     style={ Styles.onboardingStepContextSmaller }>
-                    When you are ready to engage openpilot at a comfortable
-                    speed, locate the cruise controls on your steering wheel
-                    and press "SET" to begin.
+                    当你准备以合适的速度启动openpilot时，定位方向盘上的巡航控制，并按“设置”开始。
                 </X.Text>
                 <X.Button color='ghost'
                     style={ Styles.onboardingStepPointInstruction }
@@ -567,7 +561,7 @@ class Onboarding extends Component {
                     <X.Text
                         size='small' color='white' weight='semibold'
                         style={ Styles.onboardingStepPointInstructionText }>
-                        Tap "SET" to engage
+                        点击“设置”键进入
                     </X.Text>
                     <X.Image
                         source={ require('../../../img/icon_chevron_right.png') }
@@ -588,18 +582,15 @@ class Onboarding extends Component {
                         size='small' color='ghost' textWeight='light'
                         style={ Styles.onboardingStepPointCrumb }
                         onPress={ () => this.handleControlsRadioPressed('index') }>
-                        openpilot controls
+                        openpilot控制
                     </X.Button>
                     <X.Text size='medium' color='white' weight='bold'>
-                        Driver Monitoring
+                        司机监控
                     </X.Text>
                     <X.Text
                         size='small' color='white' weight='light'
                         style={ Styles.onboardingStepContextSmaller }>
-                        When openpilot is engaged, you must always pay attention!
-                        openpilot monitors awareness with 3D facial reconstruction
-                        and pose. Distracted drivers are alerted, then disengaged
-                        from openpilot until corrected.
+                        当openpilot启用时，您必须始终注意!openpilot通过3D面部重建和姿态监控感知。分心时驾驶员会收到警告，然后脱离openpilot，直到得到纠正。
                     </X.Text>
                     <X.Button color='ghost'
                         style={ Styles.onboardingStepPointInstruction }
@@ -607,7 +598,7 @@ class Onboarding extends Component {
                         <X.Text
                             size='small' color='white' weight='semibold'
                             style={ Styles.onboardingStepPointInstructionText }>
-                            Select face to continue
+                            选择面部并继续
                         </X.Text>
                         <X.Image
                             source={ require('../../../img/icon_chevron_right.png') }
@@ -629,18 +620,15 @@ class Onboarding extends Component {
                         size='small' color='ghost' textWeight='light'
                         style={ Styles.onboardingStepPointCrumb }
                         onPress={ () => this.handleControlsRadioPressed('index') }>
-                        openpilot controls
+                        openpilot控制
                     </X.Button>
                     <X.Text size='medium' color='white' weight='bold'>
-                        Disengage openpilot
+                        停止openpilot
                     </X.Text>
                     <X.Text
                         size='small' color='white' weight='light'
                         style={ Styles.onboardingStepContextSmaller }>
-                        While openpilot is engaged, you may keep your hands
-                        on the wheel to override lateral controls. Longitudinal
-                        controls will be managed by openpilot until the gas
-                        or brake pedal is pressed to disengage.
+                        当openpilot处于工作状态时，您可以将手放在方向盘上以横向控制。纵向控制将由openpilot管理，直到踩下油门或刹车踏板脱离。
                     </X.Text>
                     <X.Button color='ghost'
                         style={ Styles.onboardingStepPointInstruction }
@@ -648,7 +636,7 @@ class Onboarding extends Component {
                         <X.Text
                             size='small' color='white' weight='semibold'
                             style={ Styles.onboardingStepPointInstructionText }>
-                            Tap a pedal to disengage
+                            轻踩踏板使之停止
                         </X.Text>
                         <X.Image
                             source={ require('../../../img/icon_chevron_right.png') }
@@ -692,9 +680,7 @@ class Onboarding extends Component {
                 <X.Text
                     color='white' weight='light'
                     style={ Styles.onboardingStepContextSmaller }>
-                    This guide can be replayed at any time from the
-                    EON settings. To learn more about openpilot, read the
-                    wiki and join the community at discord.comma.ai
+                    本指南可以在设置中随时回顾。要了解更多关于openpilot的信息，请阅读wiki并加入discord.com.ai社区
                 </X.Text>
                 <X.Line color='transparent' spacing='small' />
                 <View style={ Styles.onboardingActionsRow }>
@@ -702,7 +688,7 @@ class Onboarding extends Component {
                         <X.Button
                             color='setupPrimary'
                             onPress={ this.props.completeTrainingStep }>
-                            Finish Training
+                            完成培训
                         </X.Button>
                     </View>
                     <View style={ Styles.onboardingSecondaryAction }>
@@ -710,7 +696,7 @@ class Onboarding extends Component {
                             color='setupInverted'
                             textColor='white'
                             onPress={ this.handleRestartPressed }>
-                            Restart
+                            重新开始
                         </X.Button>
                     </View>
                 </View>

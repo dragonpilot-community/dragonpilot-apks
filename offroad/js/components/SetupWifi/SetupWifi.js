@@ -230,7 +230,7 @@ class SetupWifi extends Component {
                         </View>
                     ] }>
                     <X.Text>
-                        Password
+                        密码
                     </X.Text>
                     <TextInput
                         onChangeText={ (password) => this.setState({ password })}
@@ -259,14 +259,14 @@ class SetupWifi extends Component {
                         <X.Button
                             color='setupInverted'
                             onPress={ this.props.onMoreOptionsPress }>
-                            More Options
+                            更多选项
                         </X.Button>
                     </View>
                     <View style={ Styles.nextButton }>
                         <X.Button
                             color={ connectedNetworkSsid ? 'setupPrimary' : 'setupInverted' }
                             onPress={ this.props.onContinue }>
-                            { connectedNetworkSsid === null ? 'Skip for now' : 'Continue' }
+                            { connectedNetworkSsid === null ? '跳过' : '继续' }
                         </X.Button>
                     </View>
                 </View>

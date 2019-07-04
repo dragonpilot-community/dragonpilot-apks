@@ -9,7 +9,7 @@ class GiraffeSwitch extends Component {
   render() {
     return (
       <X.Entrance style={ Styles.onboardingContainer }>
-        <X.Text color='white'>Before driving with openpilot 0.5.5, ensure your giraffe switches are configured like so: </X.Text>
+        <X.Text color='white'>在使用之前，请确保您的配置如下: </X.Text>
         <X.Button onPress={ this.props.completeTrainingStep }></X.Button>
       </X.Entrance>
     );
