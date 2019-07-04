@@ -28,19 +28,19 @@ const TabsByStep = {
         'Review Terms',
         'Select WiFi',
         'Add SIM Card',
-        'PAIR EON',
+        'PAIR',
     ],
     WIFI: [
         'Select WiFi',
         'Add SIM Card',
-        'PAIR EON',
+        'PAIR',
     ],
     SIM: [
         'Add SIM Card',
-        'PAIR EON',
+        'PAIR',
     ],
     PAIR: [
-        'PAIR EON',
+        'PAIR',
     ]
 }
 

@@ -32,10 +32,10 @@ class UpdatePrompt extends Component {
                     primaryButtonText={ 'Reboot and Update' }
                     secondaryButtonText={ 'Later' }
                     onScroll={ this.onScroll }>
-                    <X.Text color='white' size='big' weight='semibold'>Update Available</X.Text>
+                    <X.Text color='white' size='big' weight='semibold'>有可用更新</X.Text>
                     <X.Line />
                     <X.Text color='white'>
-                        { 'Please keep in mind that system behavior may change.\n\n' }
+                        { '请记住，系统行为可能会发生变化。\n\n' }
                         { this.props.releaseNotes }
                     </X.Text>
                 </ScrollThrough>

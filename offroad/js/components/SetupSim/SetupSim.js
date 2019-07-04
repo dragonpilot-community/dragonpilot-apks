@@ -60,22 +60,22 @@ class SetupSim extends Component {
                         size='big'
                         weight='semibold'
                         style={ Styles.titleText }>
-                        { simState === 'ABSENT' ? 'No SIM card detected in EON' : 'SIM card detected in EON' }
+                        { simState === 'ABSENT' ? '没有检测到SIM卡' : '已插入SIM卡' }
                     </X.Text>
                     <X.Text
                         color='white'
                         size='small'
                         weight='light'
                         style={ Styles.detailText }>
-                        { simState === 'ABSENT' ? 'Insert a SIM card with data to access services like Navigation and Music on the road.'
-                        : (networkName === null ? 'A SIM card was entered, however your cellular network has not yet been discovered.'
-                                : "You're all set to get EON on the road with full cellular connection. Complete set up to continue.") }
+                        { simState === 'ABSENT' ? '插入SIM卡来访问导航和音乐等服务。'
+                        : (networkName === null ? '已插入SIM卡，但尚未发现移动网络。'
+                                : "手机连接完成。完成设置继续。") }
                     </X.Text>
                 </View>
                 <View style={ Styles.statusRow }>
                     <View style={ Styles.status }>
                         <X.Text color='white'>
-                            { simState === 'ABSENT' ? 'Waiting for SIM...' : (networkName === null ? 'Searching for cellular networks...' : `Connected to ${networkName}`)}
+                            { simState === 'ABSENT' ? '等待SIM……' : (networkName === null ? '搜索蜂窝网络…' : `连接到 ${networkName}`)}
                         </X.Text>
                         { networkName !== null ?
                             <Image
@@ -98,7 +98,7 @@ class SetupSim extends Component {
                             <X.Button
                                 onPress={ this.props.onContinue }
                                 color='setupInverted'>
-                                Skip for now
+                                跳过
                             </X.Button>
                             : null
                         }
@@ -114,7 +114,7 @@ class SetupSim extends Component {
                                     <X.Text
                                         color='white'
                                         weight='semibold'>
-                                        { networkName === null ? 'Waiting for network...' : 'Complete Setup' }
+                                        { networkName === null ? '等待网络……' : '完成设置' }
                                     </X.Text>
                                 </X.Gradient>
                             </X.Button>

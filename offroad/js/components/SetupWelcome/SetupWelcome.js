@@ -21,11 +21,11 @@ class SetupWelcome extends Component {
                         size='jumbo'
                         weight='semibold'
                         color='white'
-                        style={ Styles.welcomeText }>Welcome to EON</X.Text>
+                        style={ Styles.welcomeText }>欢迎</X.Text>
                     <X.Text
                         size='medium'
                         color='white'
-                        style={ Styles.detailText }>Before we get on the road, let{"\'"}s cover some details and connect to the internet.</X.Text>
+                        style={ Styles.detailText }>在开始之前，让我们先介绍一些细节并连接到internet。</X.Text>
                     <View style={ Styles.setupButton }>
                         <X.Button
                             color='transparent'
@@ -34,7 +34,7 @@ class SetupWelcome extends Component {
                             <X.Gradient
                                 colors={ [ 'rgb(26,48,64)', 'rgb(18,39,56)' ] }
                                 style={ Styles.setupButtonGradient }>
-                                <X.Text size='big' weight='semibold' color='white'>Set up your EON</X.Text>
+                                <X.Text size='big' weight='semibold' color='white'>设置</X.Text>
                             </X.Gradient>
                         </X.Button>
                     </View>

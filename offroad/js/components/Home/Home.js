@@ -1,14 +1,19 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
     Linking,
     Text,
     View,
 } from 'react-native';
-import { connect } from 'react-redux';
-import { NavigationActions } from 'react-navigation';
+import {connect} from 'react-redux';
+import {NavigationActions} from 'react-navigation';
 
 // Native Modules
 import ChffrPlus from '../../native/ChffrPlus';
+
+// Utils
+import pluralize from '../../utils/pluralize';
+import { farenToCel } from '../../utils/conversions';
+import { formatSize } from '../../utils/bytes';
 
 // UI
 import { HOME_BUTTON_GRADIENT } from '../../styles/gradients';
@@ -73,7 +78,7 @@ class Home extends Component {
                                 color='white'
                                 size='small'
                                 weight='semibold'>
-                                New Destination
+                                新目的地{/*New Destination*/}
                             </X.Text>
                         </View>
                     </View>
@@ -87,7 +92,7 @@ class Home extends Component {
                             color='white'
                             weight='semibold'
                             size='medium'>
-                            New Destination
+                            新目的地{/*New Destination*/}
                         </X.Text>
                     </View>
                 }
@@ -97,22 +102,41 @@ class Home extends Component {
 
     renderDrivePrompt() {
         return (
-          <PrimaryButton
-              onPress={ this.handlePressedStartDrive }>
-              <View style={ Styles.homeActionsPrimaryButtonBody }>
-                  <View style={ Styles.homeActionsPrimaryButtonIcon }>
-                      <X.Image
-                          source={ require('../../img/icon_plus.png') } />
-                  </View>
-                  <X.Text
-                      color='white'
-                      weight='semibold'
-                      size='medium'>
-                      New Drive
-                  </X.Text>
-              </View>
-          </PrimaryButton>
+            <PrimaryButton
+                onPress={this.handlePressedStartDrive}>
+                <View style={Styles.homeActionsPrimaryButtonBody}>
+                    <View style={Styles.homeActionsPrimaryButtonIcon}>
+                        <X.Image
+                            source={require('../../img/icon_plus.png')}/>
+                    </View>
+                    <X.Text
+                        color='white'
+                        weight='semibold'
+                        size='medium'>
+                        新的驾驶 {/*// tian New Drive*/}
+                    </X.Text>
+                </View>
+            </PrimaryButton>
         );
+    }
+
+    renderUploadStatus() {
+        const {
+            uploadsPrettySizeOnDisk,
+        } = this.props;
+
+        if (uploadsPrettySizeOnDisk > 0) {
+            return (
+                <X.Text
+                    color='white'
+                    size='small'
+                    weight='light'>
+                    {uploadsPrettySizeOnDisk} to upload
+                </X.Text>
+            );
+        } else {
+            return null;
+        }
     }
 
     render() {
@@ -126,85 +150,86 @@ class Home extends Component {
 
         return (
             <X.Gradient color='dark_blue'>
-                <View style={ Styles.home }>
-                    <View style={ Styles.homeWelcome }>
-                        <View style={ Styles.homeWelcomeSummary }>
-                            <View style={ Styles.homeWelcomeSummaryDate }>
+                <View style={Styles.home}>
+                    <View style={Styles.homeWelcome}>
+                        <View style={Styles.homeWelcomeSummary}>
+                            <View style={Styles.homeWelcomeSummaryDate}>
                                 <X.Text
                                     color='white'
                                     weight='light'>
-                                    { summaryDate }
+                                    {summaryDate}
                                 </X.Text>
                             </View>
-                            <View style={ Styles.homeWelcomeSummaryCity }>
+                            <View style={Styles.homeWelcomeSummaryCity}>
                                 <X.Text
                                     color='white'
-                                    size={ summaryCity.length > 20 ? 'big' : 'jumbo' }
-                                    numberOfLines={ 1 }
+                                    size={summaryCity.length > 20 ? 'big' : 'jumbo'}
+                                    numberOfLines={1}
                                     weight='semibold'>
-                                    { summaryCity }
+                                    {summaryCity}
                                 </X.Text>
                             </View>
+                            {this.renderUploadStatus()}
                         </View>
                     </View>
-                    <View style={ Styles.homeActions }>
-                        <View style={ Styles.homeActionsPrimary }>
-                            { this.renderDrivePrompt() }
+                    <View style={Styles.homeActions}>
+                        <View style={Styles.homeActionsPrimary}>
+                            {this.renderDrivePrompt()}
                         </View>
-                        <View style={ Styles.homeActionsSecondary }>
-                            <View style={ Styles.homeActionsSecondaryAction }>
+                        <View style={Styles.homeActionsSecondary}>
+                            <View style={Styles.homeActionsSecondaryAction}>
                                 <X.Button
                                     color='transparent'
                                     size='full'
-                                    onPress={ isPaired ? null : this.props.openPairing }>
+                                    onPress={isPaired ? null : this.props.openPairing}>
                                     <X.Gradient
-                                        colors={ HOME_BUTTON_GRADIENT }
-                                        style={ Styles.homeActionsSecondaryButton }>
-                                        { isPaired ?
-                                            <View style={ Styles.homeActionsSecondaryButtonBody }>
-                                                <View style={ Styles.homeActionsSecondaryButtonIcon }>
+                                        colors={HOME_BUTTON_GRADIENT}
+                                        style={Styles.homeActionsSecondaryButton}>
+                                        {isPaired ?
+                                            <View style={Styles.homeActionsSecondaryButtonBody}>
+                                                <View style={Styles.homeActionsSecondaryButtonIcon}>
                                                     <X.Image
-                                                        source={ require('../../img/icon_road.png') } />
+                                                        source={require('../../img/icon_road.png')}/>
                                                 </View>
                                                 <X.Text
                                                     color='white'
                                                     weight='semibold'>
-                                                    EON Paired
+                                                    已配对{/* Paired */}
                                                 </X.Text>
                                             </View>
                                             :
-                                            <View style={ Styles.homeActionsSecondaryButtonBody }>
-                                                <View style={ Styles.homeActionsSecondaryButtonIcon }>
+                                            <View style={Styles.homeActionsSecondaryButtonBody}>
+                                                <View style={Styles.homeActionsSecondaryButtonIcon}>
                                                     <X.Image
-                                                        source={ require('../../img/icon_user.png') } />
+                                                        source={require('../../img/icon_user.png')}/>
                                                 </View>
                                                 <X.Text
                                                     color='white'
                                                     weight='semibold'>
-                                                    Pair EON
+                                                    配对{/*Pair*/}
                                                 </X.Text>
                                             </View>
                                         }
                                     </X.Gradient>
                                 </X.Button>
                             </View>
-                            <View style={ Styles.homeActionsSecondaryAction }>
+                            <View style={Styles.homeActionsSecondaryAction}>
                                 <X.Button
                                     color='transparent'
                                     size='full'
-                                    onPress={ this.handlePressedSettings }>
+                                    onPress={this.handlePressedSettings}>
                                     <X.Gradient
-                                        colors={ HOME_BUTTON_GRADIENT }
-                                        style={ Styles.homeActionsSecondaryButton }>
-                                        <View style={ Styles.homeActionsSecondaryButtonBody }>
-                                            <View style={ Styles.homeActionsSecondaryButtonIcon }>
+                                        colors={HOME_BUTTON_GRADIENT}
+                                        style={Styles.homeActionsSecondaryButton}>
+                                        <View style={Styles.homeActionsSecondaryButtonBody}>
+                                            <View style={Styles.homeActionsSecondaryButtonIcon}>
                                                 <X.Image
-                                                    source={ require('../../img/icon_settings.png') } />
+                                                    source={require('../../img/icon_settings.png')}/>
                                             </View>
                                             <X.Text
                                                 color='white'
                                                 weight='semibold'>
-                                                Settings
+                                                设置{/*Settings*/}
                                             </X.Text>
                                         </View>
                                     </X.Gradient>
@@ -223,6 +248,7 @@ const mapStateToProps = (state) => {
         isPaired: state.host.device && state.host.device.is_paired,
         destination: state.driving.destination,
         isNavAvailable: state.host.isNavAvailable,
+        uploadsPrettySizeOnDisk: formatSize(state.host.thermal.unuploadedBytes),
         latitude: state.environment.latitude,
         longitude: state.environment.longitude,
         summaryCity: state.environment.city,
@@ -232,13 +258,13 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => ({
     openSettings: () => {
-        dispatch(NavigationActions.navigate({ routeName: 'Settings' }));
+        dispatch(NavigationActions.navigate({routeName: 'Settings'}));
     },
     openPairing: () => {
-        dispatch(NavigationActions.navigate({ routeName: 'PairAfterSetup' }))
+        dispatch(NavigationActions.navigate({routeName: 'PairAfterSetup'}))
     },
     openDrives: () => {
-        dispatch(NavigationActions.navigate({ routeName: 'DrivesOverview' }));
+        dispatch(NavigationActions.navigate({routeName: 'DrivesOverview'}));
     },
     onNewDestinationPressed: () => {
         ChffrPlus.sendBroadcast("ai.comma.plus.frame.NEW_DESTINATION");
