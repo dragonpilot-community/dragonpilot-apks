@@ -101,13 +101,10 @@ class Settings extends Component {
 
     handlePressedResetCalibration = async () => {
         this.props.deleteParam(Params.KEY_CALIBRATION_PARAMS);
-        this.setState({calibration: null});
+        this.setState({ calibration: null });
         Alert.alert('Reboot', 'Resetting calibration requires a reboot.', [
-            {
-                text: 'Later', onPress: () => {
-                }, style: 'cancel'
-            },
-            {text: 'Reboot Now', onPress: () => ChffrPlus.reboot()},
+            { text: 'Later', onPress: () => {}, style: 'cancel' },
+            { text: 'Reboot Now', onPress: () => ChffrPlus.reboot() },
         ]);
     }
 
@@ -349,7 +346,7 @@ class Settings extends Component {
                         <X.Button
                             color='settingsDefault'
                             onPress={() => this.props.openTrainingGuide()}>
-                            回顾培训指南{/*Review Training Guide*/}
+                            回顾培训指南
                         </X.Button>
                     </X.Table>
                     <X.Table color='darkBlue'>
@@ -517,14 +514,7 @@ class Settings extends Component {
                             onPress={() => ChffrPlus.openWifiSettings()}>
                             WiFi设置
                         </X.Button>
-                        <X.Line color='transparent' size='tiny' spacing='mini'/>
-                        <X.Button
-                            size='small'
-                            color='settingsDefault'
-                            onPress={() => ChffrPlus.openBluetoothSettings()}>
-                            蓝牙设置
-                        </X.Button>
-                        <X.Line color='transparent' size='tiny' spacing='mini'/>
+                        <X.Line color='transparent' size='tiny' spacing='mini' />
                         <X.Button
                             size='small'
                             color='settingsDefault'
@@ -654,29 +644,20 @@ const mapDispatchToProps = dispatch => ({
     },
     reboot: () => {
         Alert.alert('重启', '确认重启？', [
-            {
-                text: '取消', onPress: () => {
-                }, style: 'cancel'
-            },
-            {text: '重启', onPress: () => ChffrPlus.reboot()},
+            { text: '取消', onPress: () => {}, style: 'cancel' },
+            { text: '重启', onPress: () => ChffrPlus.reboot() },
         ]);
     },
     shutdown: () => {
         Alert.alert('关机', '确认关机？', [
-            {
-                text: '取消', onPress: () => {
-                }, style: 'cancel'
-            },
-            {text: '关机', onPress: () => ChffrPlus.shutdown()},
+            { text: '取消', onPress: () => {}, style: 'cancel' },
+            { text: '关机', onPress: () => ChffrPlus.shutdown() },
         ]);
     },
     uninstall: () => {
         Alert.alert('卸载', '确认卸载？', [
-            {
-                text: '取消', onPress: () => {
-                }, style: 'cancel'
-            },
-            {text: '卸载', onPress: () => ChffrPlus.writeParam(Params.KEY_DO_UNINSTALL, "1")},
+            { text: '取消', onPress: () => {}, style: 'cancel' },
+            { text: '卸载', onPress: () => ChffrPlus.writeParam(Params.KEY_DO_UNINSTALL, "1") },
         ]);
     },
     openTrainingGuide: () => {

@@ -10,11 +10,6 @@ import {NavigationActions} from 'react-navigation';
 // Native Modules
 import ChffrPlus from '../../native/ChffrPlus';
 
-// Utils
-import pluralize from '../../utils/pluralize';
-import { farenToCel } from '../../utils/conversions';
-import { formatSize } from '../../utils/bytes';
-
 // UI
 import { HOME_BUTTON_GRADIENT } from '../../styles/gradients';
 import X from '../../themes';
@@ -78,7 +73,7 @@ class Home extends Component {
                                 color='white'
                                 size='small'
                                 weight='semibold'>
-                                新目的地{/*New Destination*/}
+                                新目的地
                             </X.Text>
                         </View>
                     </View>
@@ -92,7 +87,7 @@ class Home extends Component {
                             color='white'
                             weight='semibold'
                             size='medium'>
-                            新目的地{/*New Destination*/}
+                            新目的地
                         </X.Text>
                     </View>
                 }
@@ -113,30 +108,11 @@ class Home extends Component {
                         color='white'
                         weight='semibold'
                         size='medium'>
-                        新的驾驶 {/*// tian New Drive*/}
+                        新的驾驶
                     </X.Text>
                 </View>
             </PrimaryButton>
         );
-    }
-
-    renderUploadStatus() {
-        const {
-            uploadsPrettySizeOnDisk,
-        } = this.props;
-
-        if (uploadsPrettySizeOnDisk > 0) {
-            return (
-                <X.Text
-                    color='white'
-                    size='small'
-                    weight='light'>
-                    {uploadsPrettySizeOnDisk} to upload
-                </X.Text>
-            );
-        } else {
-            return null;
-        }
     }
 
     render() {
@@ -169,7 +145,6 @@ class Home extends Component {
                                     {summaryCity}
                                 </X.Text>
                             </View>
-                            {this.renderUploadStatus()}
                         </View>
                     </View>
                     <View style={Styles.homeActions}>
@@ -194,7 +169,7 @@ class Home extends Component {
                                                 <X.Text
                                                     color='white'
                                                     weight='semibold'>
-                                                    已配对{/* Paired */}
+                                                    已配对
                                                 </X.Text>
                                             </View>
                                             :
@@ -206,7 +181,7 @@ class Home extends Component {
                                                 <X.Text
                                                     color='white'
                                                     weight='semibold'>
-                                                    配对{/*Pair*/}
+                                                    配对
                                                 </X.Text>
                                             </View>
                                         }
@@ -229,7 +204,7 @@ class Home extends Component {
                                             <X.Text
                                                 color='white'
                                                 weight='semibold'>
-                                                设置{/*Settings*/}
+                                                设置
                                             </X.Text>
                                         </View>
                                     </X.Gradient>
@@ -248,7 +223,6 @@ const mapStateToProps = (state) => {
         isPaired: state.host.device && state.host.device.is_paired,
         destination: state.driving.destination,
         isNavAvailable: state.host.isNavAvailable,
-        uploadsPrettySizeOnDisk: formatSize(state.host.thermal.unuploadedBytes),
         latitude: state.environment.latitude,
         longitude: state.environment.longitude,
         summaryCity: state.environment.city,
