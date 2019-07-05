@@ -66,3 +66,17 @@ Clone or move this repository under the [openpilot](https://github.com/commaai/o
 
 See build.sh in project directories.
 
+
+##dinglianxue
+
+after first builded you must modified this file:
+offroad/node_modules/comma-x-native/x/components/TableCell/TableCellStyles.js
+
+defaultSizeTableCellDrawer: {	//19行
+            display: 'flex',
+			paddingTop: 10,		//添加此行
+            paddingBottom: 20,
+            paddingRight: 40,
+},
+
+

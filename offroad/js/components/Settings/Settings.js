@@ -505,7 +505,7 @@ class Settings extends Component {
                             title='手机上传'
                             value={!!parseInt(isCellularUploadEnabled)}
                             iconSource={Icons.network}
-                            description='Upload driving data over cellular connection if a sim card is used and no wifi network is available. If you have a limited data plan, you might incur in surcharges.'
+                            description='如没有WIFI网络且插入SIM卡，将使用数据网络上传驾驶数据。若数据流量有限，可能会带来额外的费用。'
                             isExpanded={expandedCell == 'cellular_enabled'}
                             handleExpanded={() => this.handleExpanded('cellular_enabled')}
                             handleChanged={this.props.setCellularEnabled}/>
@@ -584,7 +584,7 @@ class Settings extends Component {
                             title='SSH'
                             value={isSshEnabled}
                             iconSource={Icons.developer}
-                            description='Allow devices to connect to your EON using Secure Shell (SSH).'
+                            description='允许使用安全Shell (SSH)连接到您的设备。'
                             isExpanded={expandedCell == 'ssh'}
                             handleExpanded={() => this.handleExpanded('ssh')}
                             handleChanged={this.props.setSshEnabled}/>
