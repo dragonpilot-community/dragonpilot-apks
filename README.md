@@ -66,6 +66,3 @@ Clone or move this repository under the [openpilot](https://github.com/commaai/o
 
 See build.sh in project directories.
 
-
-
-
