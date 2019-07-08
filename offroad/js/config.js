@@ -24,4 +24,9 @@ export const Params = {
     KEY_LIMIT_SET_SPEED: 'LimitSetSpeed',
     KEY_SPEED_LIMIT_OFFSET: 'SpeedLimitOffset',
     KEY_LIVE_PARAMETERS: 'LiveParameters',
+    // dragonpilot
+    KEY_DISABLE_ON_SIGNAL: 'DragonTempDisableSteerOnSignal',
+    KEY_ENABLE_DASHCAM: 'DragonEnableDashcam',
+    KEY_DISABLE_DRIVER_SAFETY_CHECK: 'DragonDisableDriverSafetyCheck',
+    KEY_AUTO_SHUTDOWN: 'DragonAutoShutdownAt',
 };
