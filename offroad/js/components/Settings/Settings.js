@@ -346,7 +346,7 @@ class Settings extends Component {
                         <X.Button
                             color='settingsDefault'
                             onPress={ () => this.props.openDragonpilotSettings() }>
-                            Dragonpilot Settings
+                            Dragonpilot 設定
                         </X.Button>
                     </X.Table>
                     <X.Table color='darkBlue'>
