@@ -33,7 +33,7 @@ class SetupQr extends Component {
       console.log('Render: Connection status is ' + (this.props.isConnected ? 'online' : 'offline') + ' ' + this.props.isConnected);
         return (
             <View style={ Styles.root }>
-                <Pairing onPairConfirmed={ this.props.onContinue } skipText='Skip'  onContinueButton={ this.props.onContinue} continueText='Continue'/>
+                <Pairing onPairConfirmed={ this.props.onContinue } skipText='略過'  onContinueButton={ this.props.onContinue} continueText='繼續'/>
             </View>
         );
 

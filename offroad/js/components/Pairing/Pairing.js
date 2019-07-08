@@ -60,7 +60,7 @@ class Pairing extends Component {
             color='white'
             size='medium'
             style={ Styles.scanText }>
-            { this.props.isConnected ? 'Scan with \ncomma connect \non iOS or Android' : 'Network connection required for pairing' }
+            { this.props.isConnected ? '請在您的手機上安裝\ncomma connect \n並用它來掃描' : '配對需要網路連線' }
           </X.Text>
         { this.props.isConnected ? this.renderQR() : null }
         </View>

@@ -29,13 +29,13 @@ class UpdatePrompt extends Component {
                 <ScrollThrough
                     onPrimaryButtonClick={ this.onUpdatePressed }
                     onSecondaryButtonClick={ this.props.onDismiss }
-                    primaryButtonText={ 'Reboot and Update' }
-                    secondaryButtonText={ 'Later' }
+                    primaryButtonText={ '重啟並更新系統' }
+                    secondaryButtonText={ '稍後' }
                     onScroll={ this.onScroll }>
-                    <X.Text color='white' size='big' weight='semibold'>Update Available</X.Text>
+                    <X.Text color='white' size='big' weight='semibold'>系統更新</X.Text>
                     <X.Line />
                     <X.Text color='white'>
-                        { 'Please keep in mind that system behavior may change.\n\n' }
+                        { '請注意，系統的行為可能會有不同。\n\n' }
                         { this.props.releaseNotes }
                     </X.Text>
                 </ScrollThrough>

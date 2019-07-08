@@ -39,15 +39,15 @@ class PairAfterSetup extends Component {
                             color='ghost'
                             size='small'
                             onPress={ () => this.handlePressedBack() }>
-                            {'<  Pair EON'}
+                            {'<  配對 EON'}
                         </X.Button>
                     </View>
                     <View style={{ flex: 1 }}>
                         { !this.state.pairConfirmed ?
-                          <Pairing onPairConfirmed={ this.onPairConfirmed } onContinueButton={  () => this.handlePressedBack() } skipText='Back' continueText='Back' />
+                          <Pairing onPairConfirmed={ this.onPairConfirmed } onContinueButton={  () => this.handlePressedBack() } skipText='返回' continueText='返回' />
                          :
                             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                                <X.Text color='white'>EON Paired</X.Text>
+                                <X.Text color='white'>EON 已配對</X.Text>
                             </View>
                         }
                     </View>

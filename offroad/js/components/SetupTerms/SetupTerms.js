@@ -35,13 +35,13 @@ export default class SetupTerms extends Component {
         return (
             <ScrollThrough
                 onPrimaryButtonClick={ this.props.onAccept }
-                primaryButtonText={ hasScrolled ? 'I agree to the terms' : 'Read to Continue' }
-                secondaryButtonText={ 'Decline' }
+                primaryButtonText={ hasScrolled ? '我同意這些條款' : '續續閱讀' }
+                secondaryButtonText={ '不同意' }
                 onScroll={ this.onScroll }
                 primaryButtonEnabled={ hasScrolled }>
-                <X.Text weight='semibold' color='white'>Comma.ai, Inc. Terms & Conditions</X.Text>
+                <X.Text weight='semibold' color='white'>Comma.ai, Inc. 條款和條件</X.Text>
                 <X.Text size='small' color='white' style={ Styles.tosText }>{ Documents.TOS }</X.Text>
-                <X.Text size='small' color='white'>Privacy policy available at https://community.comma.ai/privacy.html</X.Text>
+                <X.Text size='small' color='white'>隱私政策請至 https://community.comma.ai/privacy.html 查看</X.Text>
             </ScrollThrough>
         );
 

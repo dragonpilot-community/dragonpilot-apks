@@ -311,20 +311,20 @@ class MainActivity : Activity(), NewDestinationReceiverDelegate, OffroadNavigati
     fun updatePandaConnectionStatus() {
         Log.i("frame", satelliteCount.toString())
         if (pandaConnectionMonitor?.isConnected == false) {
-            sidebarMetricPanda?.text = "NO PANDA"
+            sidebarMetricPanda?.text = "無 PANDA"
             sidebarMetricPandaEdge?.setColorFilter(colorRed!!);
             sidebarMetricPandaBorder!!.getBackground().setAlpha(255)
         } else {
             if (satelliteCount == -1) {
-              sidebarMetricPanda?.text = "PANDA ACTIVE"
+              sidebarMetricPanda?.text = "PANDA 已啟動"
               sidebarMetricPandaEdge?.setColorFilter(colorWhite!!);
               sidebarMetricPandaBorder!!.getBackground().setAlpha(76);
             } else if (satelliteCount < 6) {
-              sidebarMetricPanda?.text = "PANDA\nNO GPS"
+              sidebarMetricPanda?.text = "PANDA\nGPS: 無"
               sidebarMetricPandaEdge?.setColorFilter(colorYellow!!);
               sidebarMetricPandaBorder!!.getBackground().setAlpha(255);
             } else if (satelliteCount >= 6) {
-              sidebarMetricPanda?.text = "PANDA GOOD GPS"
+              sidebarMetricPanda?.text = "PANDA\nGPS: 好"
               sidebarMetricPandaEdge?.setColorFilter(colorWhite!!);
               sidebarMetricPandaBorder!!.getBackground().setAlpha(76);
             }
@@ -721,7 +721,7 @@ class MainActivity : Activity(), NewDestinationReceiverDelegate, OffroadNavigati
                 "LTE"
             else -> {
                 if (simState == "ABSENT") {
-                    "No SIM"
+                    "NO SIM"
                 } else {
                     CloudLog.log("No service detected. networkType ${telManager.networkType} lastNetworkType ${lastNetworkType}")
                     if (lastNetworkType != null) lastNetworkType!! else null

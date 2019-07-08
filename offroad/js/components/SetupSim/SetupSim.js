@@ -60,7 +60,7 @@ class SetupSim extends Component {
                         size='big'
                         weight='semibold'
                         style={ Styles.titleText }>
-                        { simState === 'ABSENT' ? 'No SIM card detected in EON' : 'SIM card detected in EON' }
+                        { simState === 'ABSENT' ? 'EON 沒有檢測到 SIM 卡' : 'EON 檢測到 SIM 卡' }
                     </X.Text>
                     <X.Text
                         color='white'
@@ -75,7 +75,7 @@ class SetupSim extends Component {
                 <View style={ Styles.statusRow }>
                     <View style={ Styles.status }>
                         <X.Text color='white'>
-                            { simState === 'ABSENT' ? 'Waiting for SIM...' : (networkName === null ? 'Searching for cellular networks...' : `Connected to ${networkName}`)}
+                            { simState === 'ABSENT' ? '等待 SIM 卡...' : (networkName === null ? '搜索手機行動網路中...' : `連線至 ${networkName}`)}
                         </X.Text>
                         { networkName !== null ?
                             <Image
@@ -98,7 +98,7 @@ class SetupSim extends Component {
                             <X.Button
                                 onPress={ this.props.onContinue }
                                 color='setupInverted'>
-                                Skip for now
+                                略過
                             </X.Button>
                             : null
                         }
@@ -114,7 +114,7 @@ class SetupSim extends Component {
                                     <X.Text
                                         color='white'
                                         weight='semibold'>
-                                        { networkName === null ? 'Waiting for network...' : 'Complete Setup' }
+                                        { networkName === null ? '等待網路中...' : '完成設定' }
                                     </X.Text>
                                 </X.Gradient>
                             </X.Button>

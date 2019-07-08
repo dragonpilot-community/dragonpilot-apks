@@ -61,7 +61,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="40dp"
-                    android:text="Go back"
+                    android:text="返回"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
                     android:textSize="18sp" />

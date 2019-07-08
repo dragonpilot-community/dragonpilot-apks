@@ -73,7 +73,7 @@ class Home extends Component {
                                 color='white'
                                 size='small'
                                 weight='semibold'>
-                                New Destination
+                                新的目的地
                             </X.Text>
                         </View>
                     </View>
@@ -87,7 +87,7 @@ class Home extends Component {
                             color='white'
                             weight='semibold'
                             size='medium'>
-                            New Destination
+                            新的目的地
                         </X.Text>
                     </View>
                 }
@@ -108,7 +108,7 @@ class Home extends Component {
                       color='white'
                       weight='semibold'
                       size='medium'>
-                      New Drive
+                      新的記錄
                   </X.Text>
               </View>
           </PrimaryButton>
@@ -169,7 +169,7 @@ class Home extends Component {
                                                 <X.Text
                                                     color='white'
                                                     weight='semibold'>
-                                                    EON Paired
+                                                    EON 已配對
                                                 </X.Text>
                                             </View>
                                             :
@@ -181,7 +181,7 @@ class Home extends Component {
                                                 <X.Text
                                                     color='white'
                                                     weight='semibold'>
-                                                    Pair EON
+                                                    配對 EON
                                                 </X.Text>
                                             </View>
                                         }
@@ -204,7 +204,7 @@ class Home extends Component {
                                             <X.Text
                                                 color='white'
                                                 weight='semibold'>
-                                                Settings
+                                                設定
                                             </X.Text>
                                         </View>
                                     </X.Gradient>

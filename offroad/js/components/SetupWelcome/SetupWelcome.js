@@ -21,7 +21,7 @@ class SetupWelcome extends Component {
                         size='jumbo'
                         weight='semibold'
                         color='white'
-                        style={ Styles.welcomeText }>Welcome to EON</X.Text>
+                        style={ Styles.welcomeText }>歡迎使用 EON</X.Text>
                     <X.Text
                         size='medium'
                         color='white'
@@ -34,7 +34,7 @@ class SetupWelcome extends Component {
                             <X.Gradient
                                 colors={ [ 'rgb(26,48,64)', 'rgb(18,39,56)' ] }
                                 style={ Styles.setupButtonGradient }>
-                                <X.Text size='big' weight='semibold' color='white'>Set up your EON</X.Text>
+                                <X.Text size='big' weight='semibold' color='white'>設定您的 EON</X.Text>
                             </X.Gradient>
                         </X.Button>
                     </View>

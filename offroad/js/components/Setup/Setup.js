@@ -25,22 +25,22 @@ const Step = {
 
 const TabsByStep = {
     REVIEW_TERMS: [
-        'Review Terms',
-        'Select WiFi',
-        'Add SIM Card',
-        'PAIR EON',
+        '審核條款',
+        '選擇無線網路',
+        '加入 SIM 卡',
+        '配對 EON',
     ],
     WIFI: [
-        'Select WiFi',
-        'Add SIM Card',
-        'PAIR EON',
+        '選擇無線網路',
+        '加入 SIM 卡',
+        '配對 EON',
     ],
     SIM: [
-        'Add SIM Card',
-        'PAIR EON',
+        '加入 SIM 卡',
+        '配對 EON',
     ],
     PAIR: [
-        'PAIR EON',
+        '配對 EON',
     ]
 }
 
