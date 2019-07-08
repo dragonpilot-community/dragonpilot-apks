@@ -237,11 +237,6 @@ class Settings extends Component {
                 LongitudinalControl: hasLongitudinalControl,
                 LimitSetSpeed: limitSetSpeed,
                 SpeedLimitOffset: speedLimitOffset,
-                // dragonpilot
-                DragonTempDisableSteerOnSignal: dragonTempDisableSteerOnSignal,
-                DragonEnableDashcam: dragonEnableDashcam,
-                DragonDisableDriverSafetyCheck: dragonDisableDriverSafetyCheck,
-                DragonAutoShutdownAt: dragonAutoShutdownAt,
             }
         } = this.props;
         const { expandedCell, speedLimitOffsetInt } = this.state;
@@ -298,42 +293,6 @@ class Settings extends Component {
                             isExpanded={ expandedCell == 'metric' }
                             handleExpanded={ () => this.handleExpanded('metric') }
                             handleChanged={ this.props.setMetric } />
-                        <X.TableCell
-                            type='switch'
-                            title='方向燈暫時取消方向盤控制'
-                            value={ !!parseInt(dragonTempDisableSteerOnSignal) }
-                            iconSource={ Icons.developer }
-                            description='當方向燈亮起時，暫時取消方向盤控制，OP 將會在方向燈熄滅後 1 秒取回控制。'
-                            isExpanded={ expandedCell == 'disable_on_signal' }
-                            handleExpanded={ () => this.handleExpanded('disable_on_signal') }
-                            handleChanged={ this.props.setDisableOnSignal } />
-                        <X.TableCell
-                            type='switch'
-                            title='啟用行車記錄'
-                            value={ !!parseInt(dragonEnableDashcam) }
-                            iconSource={ Icons.developer }
-                            description='錄下 EON 的畫面當做行車記錄，當系統的空間不足 15% 時會自動刪除舊的記錄。'
-                            isExpanded={ expandedCell == 'dashcam' }
-                            handleExpanded={ () => this.handleExpanded('dashcam') }
-                            handleChanged={ this.props.setEnableDashcam } />
-                        <X.TableCell
-                            type='switch'
-                            title='啟用睡覺模式'
-                            value={ !!parseInt(dragonDisableDriverSafetyCheck) }
-                            iconSource={ Icons.developer }
-                            description='這個功能將會完全取消駕駛監控，除非你知道你在做什麼，不然我們不建議你使用，我們也不會負任何事故的責任。'
-                            isExpanded={ expandedCell == 'safetyCheck' }
-                            handleExpanded={ () => this.handleExpanded('safetyCheck') }
-                            handleChanged={ this.props.setDriverSafetyCheck } />
-                        <X.TableCell
-                            type='switch'
-                            title='啟用自動關機'
-                            value={ parseInt(dragonAutoShutdownAt) > 0 }
-                            iconSource={ Icons.developer }
-                            description='啟用這個選項後，當 Panda 的 USB 停止供電時 EON 將會在 30 分鐘後自動關機。'
-                            isExpanded={ expandedCell == 'autoShutdown' }
-                            handleExpanded={ () => this.handleExpanded('autoShutdown') }
-                            handleChanged={ this.props.setAutoShutdown } />
                       </X.Table>
                       {/*
                       <X.Table color='darkBlue'>
@@ -383,6 +342,13 @@ class Settings extends Component {
                             handleChanged={ this.props.setLimitSetSpeed } />
                     </X.Table>
                     */}
+                    <X.Table color='darkBlue'>
+                        <X.Button
+                            color='settingsDefault'
+                            onPress={ () => this.props.openDragonpilotSettings() }>
+                            Dragonpilot Settings
+                        </X.Button>
+                    </X.Table>
                     <X.Table color='darkBlue'>
                         <X.Button
                             color='settingsDefault'
@@ -604,10 +570,6 @@ class Settings extends Component {
                             title='Git 修訂版'
                             value={ gitRevision.slice(0, 12) }
                             valueTextSize='tiny' />
-                        <X.TableCell
-                            title='中文化'
-                            value='Rick Lan (https://github.com/efiniLan/)'
-                            valueTextSize='tiny' />
                     </X.Table>
                     <X.Table color='darkBlue'>
                         <X.TableCell
@@ -710,6 +672,15 @@ const mapDispatchToProps = dispatch => ({
             ]
         }))
     },
+    openDragonpilotSettings: () => {
+        dispatch(NavigationActions.reset({
+            index: 0,
+            key: null,
+            actions: [
+                NavigationActions.navigate({ routeName: 'DragonpilotSettings' })
+            ]
+        }))
+    },
     setDriverMonitoringEnabled: (isDriverMonitoringEnabled) => {
         const value = (isDriverMonitoringEnabled | 0).toString();
         dispatch(updateParam(Params.KEY_IS_DRIVER_MONITORING_ENABLED, value));
@@ -740,19 +711,6 @@ const mapDispatchToProps = dispatch => ({
     },
     deleteParam: (param) => {
         dispatch(deleteParam(param));
-    },
-    // dragonpilot
-    setDisableOnSignal: (disableOnSignal) => {
-        dispatch(updateParam(Params.KEY_DISABLE_ON_SIGNAL, (disableOnSignal | 0).toString()));
-    },
-    setEnableDashcam: (enableDashcam) => {
-        dispatch(updateParam(Params.KEY_ENABLE_DASHCAM, (enableDashcam | 0).toString()));
-    },
-    setDriverSafetyCheck: (safetyCheck) => {
-        dispatch(updateParam(Params.KEY_DISABLE_DRIVER_SAFETY_CHECK, (safetyCheck | 0).toString()));
-    },
-    setAutoShutdown: (autoShutdown) => {
-        dispatch(updateParam(Params.KEY_AUTO_SHUTDOWN, (autoShutdown? 30 : 0).toString()));
     },
 });
 

@@ -16,6 +16,7 @@ import SetupWelcome from '../components/SetupWelcome';
 import Onboarding from '../components/training/Onboarding';
 import GiraffeSwitch from '../components/training/GiraffeSwitch'
 import UpdatePrompt from '../components/UpdatePrompt';
+import DragonpilotSettings from '../components/DragonpilotSettings'
 
 export const StackNavigator = RNStackNavigator({
     Home: { screen: Home },
@@ -27,6 +28,7 @@ export const StackNavigator = RNStackNavigator({
     Settings: { screen: Settings },
     SettingsStandalone: { screen: Settings },
     UpdatePrompt: { screen: UpdatePrompt },
+    DragonpilotSettings: { screen: DragonpilotSettings },
 });
 
 
