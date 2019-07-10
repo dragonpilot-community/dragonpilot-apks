@@ -116,10 +116,12 @@ class DragonpilotSettings extends Component {
     renderPrimarySettings() {
         const {
             params: {
+                DragonDisableLogger: dragonDisableLogger,
                 DragonTempDisableSteerOnSignal: dragonTempDisableSteerOnSignal,
                 DragonEnableDashcam: dragonEnableDashcam,
                 DragonDisableDriverSafetyCheck: dragonDisableDriverSafetyCheck,
                 DragonAutoShutdownAt: dragonAutoShutdownAt,
+                DragonNoctuaMode: dragonNoctuaMode,
             }
         } = this.props;
         const { expandedCell } = this.state;
@@ -148,6 +150,15 @@ class DragonpilotSettings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
+                            title='Disable Logger'
+                            value={ !!parseInt(dragonDisableLogger) }
+                            iconSource={ Icons.developer }
+                            description='Disable logger (loggered/tombstoned) so it will never record driving data, reboot required.'
+                            isExpanded={ expandedCell == 'disable_logger' }
+                            handleExpanded={ () => this.handleExpanded('disable_logger') }
+                            handleChanged={ this.props.setDisableLogger } />
+                        <X.TableCell
+                            type='switch'
                             title='方向燈暫時取消方向盤控制'
                             value={ !!parseInt(dragonTempDisableSteerOnSignal) }
                             iconSource={ Icons.developer }
@@ -160,7 +171,7 @@ class DragonpilotSettings extends Component {
                             title='啟用行車記錄'
                             value={ !!parseInt(dragonEnableDashcam) }
                             iconSource={ Icons.developer }
-                            description='錄下 EON 的畫面當做行車記錄，當系統的空間不足 15% 時會自動刪除舊的記錄。'
+                            description='錄下 EON 的畫面當做行車記錄，當系統的空間不足 15% 時會自動刪除舊的記錄。記錢會存在 /sdcard/dashcam/ 裡。'
                             isExpanded={ expandedCell == 'dashcam' }
                             handleExpanded={ () => this.handleExpanded('dashcam') }
                             handleChanged={ this.props.setEnableDashcam } />
@@ -182,6 +193,15 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'autoShutdown' }
                             handleExpanded={ () => this.handleExpanded('autoShutdown') }
                             handleChanged={ this.props.setAutoShutdown } />
+                        <X.TableCell
+                            type='switch'
+                            title='Enable Noctua Fan Mode'
+                            value={ !!parseInt(dragonNoctuaMode) }
+                            iconSource={ Icons.developer }
+                            description='Enable this will let the fan running at full speed at any temperature, reboot required.'
+                            isExpanded={ expandedCell == 'enable_noctua_mode' }
+                            handleExpanded={ () => this.handleExpanded('enable_noctua_mode') }
+                            handleChanged={ this.props.setNoctuaMode } />
                     </X.Table>
                 </ScrollView>
             </View>
@@ -281,6 +301,9 @@ const mapDispatchToProps = dispatch => ({
         dispatch(deleteParam(param));
     },
     // dragonpilot
+    setDisableLogger: (disableLogger) => {
+        dispatch(updateParam(Params.KEY_DISABLE_LOGGER, (disableLogger | 0).toString()));
+    },
     setDisableOnSignal: (disableOnSignal) => {
         dispatch(updateParam(Params.KEY_DISABLE_ON_SIGNAL, (disableOnSignal | 0).toString()));
     },
@@ -292,6 +315,9 @@ const mapDispatchToProps = dispatch => ({
     },
     setAutoShutdown: (autoShutdown) => {
         dispatch(updateParam(Params.KEY_AUTO_SHUTDOWN, (autoShutdown? 30 : 0).toString()));
+    },
+    setNoctuaMode: (noctuaMode) => {
+        dispatch(updateParam(Params.KEY_ENABLE_NOCTUA_MODE, (noctuaMode | 0).toString()));
     },
 });
 
