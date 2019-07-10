@@ -150,10 +150,10 @@ class DragonpilotSettings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
-                            title='Disable Logger'
+                            title='關閉記錄服務'
                             value={ !!parseInt(dragonDisableLogger) }
                             iconSource={ Icons.developer }
-                            description='Disable logger (loggered/tombstoned) so it will never record driving data, reboot required.'
+                            description='關閉記錄服務 (loggered/tombstoned) 將會停止記錄所有的行車記錄，需要重新開機。'
                             isExpanded={ expandedCell == 'disable_logger' }
                             handleExpanded={ () => this.handleExpanded('disable_logger') }
                             handleChanged={ this.props.setDisableLogger } />
@@ -195,10 +195,10 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setAutoShutdown } />
                         <X.TableCell
                             type='switch'
-                            title='Enable Noctua Fan Mode'
+                            title='啟用 Noctua 風扇模式'
                             value={ !!parseInt(dragonNoctuaMode) }
                             iconSource={ Icons.developer }
-                            description='Enable this will let the fan running at full speed at any temperature, reboot required.'
+                            description='啟用這個選項後，EON 的風扇將會一直以全速運轉，這個功能適合有改裝 Noctua 鳳扇的用戶，需要重新開機。'
                             isExpanded={ expandedCell == 'enable_noctua_mode' }
                             handleExpanded={ () => this.handleExpanded('enable_noctua_mode') }
                             handleChanged={ this.props.setNoctuaMode } />
