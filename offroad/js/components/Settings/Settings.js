@@ -237,11 +237,6 @@ class Settings extends Component {
                 LongitudinalControl: hasLongitudinalControl,
                 LimitSetSpeed: limitSetSpeed,
                 SpeedLimitOffset: speedLimitOffset,
-                // dragonpilot
-                DragonTempDisableSteerOnSignal: dragonTempDisableSteerOnSignal,
-                DragonEnableDashcam: dragonEnableDashcam,
-                DragonDisableDriverSafetyCheck: dragonDisableDriverSafetyCheck,
-                DragonAutoShutdownAt: dragonAutoShutdownAt,
             }
         } = this.props;
         const { expandedCell, speedLimitOffsetInt } = this.state;
@@ -298,42 +293,6 @@ class Settings extends Component {
                             isExpanded={ expandedCell == 'metric' }
                             handleExpanded={ () => this.handleExpanded('metric') }
                             handleChanged={ this.props.setMetric } />
-                        <X.TableCell
-                            type='switch'
-                            title='Disable Steering On Blinker'
-                            value={ !!parseInt(dragonTempDisableSteerOnSignal) }
-                            iconSource={ Icons.developer }
-                            description='Temporary disable steering control when left/right blinker is on, will resume 1 second after the blinker is off.'
-                            isExpanded={ expandedCell == 'disable_on_signal' }
-                            handleExpanded={ () => this.handleExpanded('disable_on_signal') }
-                            handleChanged={ this.props.setDisableOnSignal } />
-                        <X.TableCell
-                            type='switch'
-                            title='Enable Dashcam'
-                            value={ !!parseInt(dragonEnableDashcam) }
-                            iconSource={ Icons.developer }
-                            description='Record EON screen as dashcam footage, it will automatically delete old footage if the available space is less than 15%'
-                            isExpanded={ expandedCell == 'dashcam' }
-                            handleExpanded={ () => this.handleExpanded('dashcam') }
-                            handleChanged={ this.props.setEnableDashcam } />
-                        <X.TableCell
-                            type='switch'
-                            title='Enable Sleep Mode'
-                            value={ !!parseInt(dragonDisableDriverSafetyCheck) }
-                            iconSource={ Icons.developer }
-                            description='This will disable driver safety check completely, we don not recommend that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option.'
-                            isExpanded={ expandedCell == 'safetyCheck' }
-                            handleExpanded={ () => this.handleExpanded('safetyCheck') }
-                            handleChanged={ this.props.setDriverSafetyCheck } />
-                        <X.TableCell
-                            type='switch'
-                            title='Enable Auto Shutdown'
-                            value={ parseInt(dragonAutoShutdownAt) > 0 }
-                            iconSource={ Icons.developer }
-                            description='Shutdown EON when usb power is not present for 30 minutes.'
-                            isExpanded={ expandedCell == 'autoShutdown' }
-                            handleExpanded={ () => this.handleExpanded('autoShutdown') }
-                            handleChanged={ this.props.setAutoShutdown } />
                       </X.Table>
                       {/*
                       <X.Table color='darkBlue'>
@@ -383,6 +342,13 @@ class Settings extends Component {
                             handleChanged={ this.props.setLimitSetSpeed } />
                     </X.Table>
                     */}
+                    <X.Table color='darkBlue'>
+                        <X.Button
+                            color='settingsDefault'
+                            onPress={ () => this.props.openDragonpilotSettings() }>
+                            Dragonpilot Settings
+                        </X.Button>
+                    </X.Table>
                     <X.Table color='darkBlue'>
                         <X.Button
                             color='settingsDefault'
@@ -604,10 +570,6 @@ class Settings extends Component {
                             title='Git修订版'
                             value={ gitRevision.slice(0, 12) }
                             valueTextSize='tiny' />
-                        <X.TableCell
-                            title='简体中文化'
-                            value='dinglx(https://github.com/dingliangxue/)'
-                            valueTextSize='tiny' />
                     </X.Table>
                     <X.Table color='darkBlue'>
                         <X.TableCell
@@ -710,6 +672,15 @@ const mapDispatchToProps = dispatch => ({
             ]
         }))
     },
+    openDragonpilotSettings: () => {
+        dispatch(NavigationActions.reset({
+            index: 0,
+            key: null,
+            actions: [
+                NavigationActions.navigate({ routeName: 'DragonpilotSettings' })
+            ]
+        }))
+    },
     setDriverMonitoringEnabled: (isDriverMonitoringEnabled) => {
         const value = (isDriverMonitoringEnabled | 0).toString();
         dispatch(updateParam(Params.KEY_IS_DRIVER_MONITORING_ENABLED, value));
@@ -740,19 +711,6 @@ const mapDispatchToProps = dispatch => ({
     },
     deleteParam: (param) => {
         dispatch(deleteParam(param));
-    },
-    // dragonpilot
-    setDisableOnSignal: (disableOnSignal) => {
-        dispatch(updateParam(Params.KEY_DISABLE_ON_SIGNAL, (disableOnSignal | 0).toString()));
-    },
-    setEnableDashcam: (enableDashcam) => {
-        dispatch(updateParam(Params.KEY_ENABLE_DASHCAM, (enableDashcam | 0).toString()));
-    },
-    setDriverSafetyCheck: (safetyCheck) => {
-        dispatch(updateParam(Params.KEY_DISABLE_DRIVER_SAFETY_CHECK, (safetyCheck | 0).toString()));
-    },
-    setAutoShutdown: (autoShutdown) => {
-        dispatch(updateParam(Params.KEY_AUTO_SHUTDOWN, (autoShutdown? 30 : 0).toString()));
     },
 });
 
