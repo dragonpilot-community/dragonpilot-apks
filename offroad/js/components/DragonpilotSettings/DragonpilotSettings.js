@@ -122,6 +122,7 @@ class DragonpilotSettings extends Component {
                 DragonDisableDriverSafetyCheck: dragonDisableDriverSafetyCheck,
                 DragonAutoShutdownAt: dragonAutoShutdownAt,
                 DragonNoctuaMode: dragonNoctuaMode,
+                DragonCacheCar: dragonCacheCar
             }
         } = this.props;
         const { expandedCell } = this.state;
@@ -202,6 +203,15 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'enable_noctua_mode' }
                             handleExpanded={ () => this.handleExpanded('enable_noctua_mode') }
                             handleChanged={ this.props.setNoctuaMode } />
+                        <X.TableCell
+                            type='switch'
+                            title='Cache Fingerprint'
+                            value={ !!parseInt(dragonCacheCar) }
+                            iconSource={ Icons.developer }
+                            description='Enable this to store your fingerprint/vin/car model into files and use it when required, this will reduce the car model detection time, disable this if you put EON onto another car, reboot required.'
+                            isExpanded={ expandedCell == 'cache_fingerprint' }
+                            handleExpanded={ () => this.handleExpanded('cache_fingerprint') }
+                            handleChanged={ this.props.setCacheCar } />
                     </X.Table>
                 </ScrollView>
             </View>
@@ -318,6 +328,9 @@ const mapDispatchToProps = dispatch => ({
     },
     setNoctuaMode: (noctuaMode) => {
         dispatch(updateParam(Params.KEY_ENABLE_NOCTUA_MODE, (noctuaMode | 0).toString()));
+    },
+    setCacheCar: (cacheCar) => {
+        dispatch(updateParam(Params.KEY_CACHE_CAR, (cacheCar | 0).toString()));
     },
 });
 
