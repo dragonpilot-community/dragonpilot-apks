@@ -231,7 +231,7 @@ class Home extends Component {
                                             <X.Text
                                                 color='white'
                                                 weight='semibold'>
-                                                Dragonpilot Settings
+                                                Dragonpilot
                                             </X.Text>
                                         </View>
                                     </X.Gradient>
