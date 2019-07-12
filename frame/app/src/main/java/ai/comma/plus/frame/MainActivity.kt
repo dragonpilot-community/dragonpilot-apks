@@ -311,12 +311,12 @@ class MainActivity : Activity(), NewDestinationReceiverDelegate, OffroadNavigati
     fun updatePandaConnectionStatus() {
         Log.i("frame", satelliteCount.toString())
         if (pandaConnectionMonitor?.isConnected == false) {
-            sidebarMetricPanda?.text = "無 PANDA"
+            sidebarMetricPanda?.text = "PANDA\n未連線"
             sidebarMetricPandaEdge?.setColorFilter(colorRed!!);
             sidebarMetricPandaBorder!!.getBackground().setAlpha(255)
         } else {
             if (satelliteCount == -1) {
-              sidebarMetricPanda?.text = "PANDA 已啟動"
+              sidebarMetricPanda?.text = "PANDA\n已連線"
               sidebarMetricPandaEdge?.setColorFilter(colorWhite!!);
               sidebarMetricPandaBorder!!.getBackground().setAlpha(76);
             } else if (satelliteCount < 6) {

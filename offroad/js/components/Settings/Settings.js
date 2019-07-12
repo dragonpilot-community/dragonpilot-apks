@@ -519,14 +519,14 @@ class Settings extends Component {
                             size='small'
                             color='settingsDefault'
                             onPress={ () => ChffrPlus.openWifiSettings() }>
-                            Open WiFi Settings
+                            打開無線網路設定
                         </X.Button>
                         <X.Line color='transparent' size='tiny' spacing='mini' />
                         <X.Button
                             size='small'
                             color='settingsDefault'
                             onPress={ () => ChffrPlus.openTetheringSettings() }>
-                            Open Tethering Settings
+                            打開網絡共享設定
                         </X.Button>
                     </X.Table>
                 </ScrollView>
