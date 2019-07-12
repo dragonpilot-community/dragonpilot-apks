@@ -585,7 +585,7 @@ class Onboarding extends Component {
                     <X.Text
                         size='small' color='white' weight='light'
                         style={ Styles.onboardingStepContextSmaller }>
-                        當你使用 openpilot 時，請您務必隨時注意路況! openpilot 通過 3D 人臉/姿態識別來判斷駕駛的狀態。若是檢測到駕駛分心，openpilot 在警示完後取消。
+                        當您使用 openpilot 時，請您務必隨時注意路況! openpilot 通過 3D 人臉/姿態識別來判斷駕駛的狀態。若是檢測到駕駛分心，openpilot 在警示完後取消。
                     </X.Text>
                     <X.Button color='ghost'
                         style={ Styles.onboardingStepPointInstruction }

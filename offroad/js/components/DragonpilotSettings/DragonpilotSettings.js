@@ -181,7 +181,7 @@ class DragonpilotSettings extends Component {
                             title='啟用睡覺模式'
                             value={ !!parseInt(dragonDisableDriverSafetyCheck) }
                             iconSource={ Icons.developer }
-                            description='這個功能將會完全取消駕駛監控，除非你知道你在做什麼，不然我們不建議你使用，我們也不會負任何事故的責任。'
+                            description='這個功能將會完全取消駕駛監控，除非您知道您在做什麼，不然我們不建議您使用，我們也不會負任何事故的責任。'
                             isExpanded={ expandedCell == 'safetyCheck' }
                             handleExpanded={ () => this.handleExpanded('safetyCheck') }
                             handleChanged={ this.props.setDriverSafetyCheck } />
@@ -205,10 +205,10 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setNoctuaMode } />
                         <X.TableCell
                             type='switch'
-                            title='Cache Fingerprint'
+                            title='啟用暫存指紋'
                             value={ !!parseInt(dragonCacheCar) }
                             iconSource={ Icons.developer }
-                            description='Enable this to store your fingerprint/vin/car model into files and use it when required, this will reduce the car model detection time, disable this if you put EON onto another car, reboot required.'
+                            description='啟用這個選項後， EON 會將您的車型、指紋、VIN 存至檔案裡，當需要時直接讀取以加速車型的辨識速度，若是將 EON 掛載至其它車型請將它關閉，需要重新開機。'
                             isExpanded={ expandedCell == 'cache_fingerprint' }
                             handleExpanded={ () => this.handleExpanded('cache_fingerprint') }
                             handleChanged={ this.props.setCacheCar } />
