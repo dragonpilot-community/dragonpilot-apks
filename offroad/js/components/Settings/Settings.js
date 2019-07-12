@@ -474,7 +474,7 @@ class Settings extends Component {
                             color='settingsDefault'
                             size='small'
                             onPress={ () => ChffrPlus.openDateTimeSettings() }>
-                            Open Date and Time Settings
+                            打開日期與時間設定
                         </X.Button>
                     </X.Table>
                 </ScrollView>
