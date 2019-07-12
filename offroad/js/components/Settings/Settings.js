@@ -345,13 +345,6 @@ class Settings extends Component {
                     <X.Table color='darkBlue'>
                         <X.Button
                             color='settingsDefault'
-                            onPress={ () => this.props.openDragonpilotSettings() }>
-                            Dragonpilot 設定
-                        </X.Button>
-                    </X.Table>
-                    <X.Table color='darkBlue'>
-                        <X.Button
-                            color='settingsDefault'
                             onPress={ () => this.props.openTrainingGuide() }>
                             查看使用教學
                         </X.Button>
@@ -669,15 +662,6 @@ const mapDispatchToProps = dispatch => ({
             key: null,
             actions: [
                 NavigationActions.navigate({ routeName: 'Onboarding' })
-            ]
-        }))
-    },
-    openDragonpilotSettings: () => {
-        dispatch(NavigationActions.reset({
-            index: 0,
-            key: null,
-            actions: [
-                NavigationActions.navigate({ routeName: 'DragonpilotSettings' })
             ]
         }))
     },

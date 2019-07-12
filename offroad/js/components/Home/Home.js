@@ -30,6 +30,11 @@ class Home extends Component {
         this.props.openSettings();
     }
 
+    handlePressedDragonpilotSettings = () => {
+        ChffrPlus.sendBroadcast("ai.comma.plus.offroad.NAVIGATED_TO_DRAGONPILOT_SETTINGS");
+        this.props.openDragonpilotSettings();
+    }
+
     renderNewDestination() {
         const { destination } = this.props;
 
@@ -210,6 +215,28 @@ class Home extends Component {
                                     </X.Gradient>
                                 </X.Button>
                             </View>
+                            <View style={ Styles.homeActionsSecondaryAction }>
+                                <X.Button
+                                    color='transparent'
+                                    size='full'
+                                    onPress={ this.handlePressedDragonpilotSettings }>
+                                    <X.Gradient
+                                        colors={ HOME_BUTTON_GRADIENT }
+                                        style={ Styles.homeActionsSecondaryButton }>
+                                        <View style={ Styles.homeActionsSecondaryButtonBody }>
+                                            <View style={ Styles.homeActionsSecondaryButtonIcon }>
+                                                <X.Image
+                                                    source={ require('../../img/icon_settings.png') } />
+                                            </View>
+                                            <X.Text
+                                                color='white'
+                                                weight='semibold'>
+                                                Dragonpilot Settings
+                                            </X.Text>
+                                        </View>
+                                    </X.Gradient>
+                                </X.Button>
+                            </View>
                         </View>
                     </View>
                 </View>
@@ -233,6 +260,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => ({
     openSettings: () => {
         dispatch(NavigationActions.navigate({ routeName: 'Settings' }));
+    },
+    openDragonpilotSettings: () => {
+        dispatch(NavigationActions.navigate({ routeName: 'DragonpilotSettings' }));
     },
     openPairing: () => {
         dispatch(NavigationActions.navigate({ routeName: 'PairAfterSetup' }))
