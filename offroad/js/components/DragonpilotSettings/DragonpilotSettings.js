@@ -178,7 +178,7 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setEnableDashcam } />
                         <X.TableCell
                             type='switch'
-                            title='啟用睡覺模式'
+                            title='完全關閉安全監控'
                             value={ !!parseInt(dragonDisableDriverSafetyCheck) }
                             iconSource={ Icons.developer }
                             description='這個功能將會完全取消駕駛監控，除非您知道您在做什麼，不然我們不建議您使用，我們也不會負任何事故的責任。'
