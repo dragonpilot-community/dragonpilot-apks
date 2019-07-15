@@ -178,7 +178,7 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setEnableDashcam } />
                         <X.TableCell
                             type='switch'
-                            title='Enable Sleep Mode'
+                            title='Disable Safety Check'
                             value={ !!parseInt(dragonDisableDriverSafetyCheck) }
                             iconSource={ Icons.developer }
                             description='This will disable driver safety check completely, we don not recommend that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option.'
