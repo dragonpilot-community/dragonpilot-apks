@@ -116,7 +116,9 @@ class DragonpilotSettings extends Component {
     renderPrimarySettings() {
         const {
             params: {
+                DragonAllowGas: dragonAllowGas,
                 DragonDisableLogger: dragonDisableLogger,
+                DragonDisableUploader: dragonDisableUploader,
                 DragonTempDisableSteerOnSignal: dragonTempDisableSteerOnSignal,
                 DragonEnableDashcam: dragonEnableDashcam,
                 DragonDisableDriverSafetyCheck: dragonDisableDriverSafetyCheck,
@@ -151,6 +153,15 @@ class DragonpilotSettings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
+                            title='Allow Gas'
+                            value={ !!parseInt(dragonAllowGas) }
+                            iconSource={ Icons.developer }
+                            description='Enable this if you wish to use gas on engaged.'
+                            isExpanded={ expandedCell == 'allow_gas' }
+                            handleExpanded={ () => this.handleExpanded('allow_gas') }
+                            handleChanged={ this.props.setAllowGas } />
+                        <X.TableCell
+                            type='switch'
                             title='關閉記錄服務'
                             value={ !!parseInt(dragonDisableLogger) }
                             iconSource={ Icons.developer }
@@ -158,6 +169,15 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'disable_logger' }
                             handleExpanded={ () => this.handleExpanded('disable_logger') }
                             handleChanged={ this.props.setDisableLogger } />
+                        <X.TableCell
+                            type='switch'
+                            title='Disable Uploader'
+                            value={ !!parseInt(dragonDisableUploader) }
+                            iconSource={ Icons.developer }
+                            description='Disable uploader so it will stop uploading driving data, reboot required.'
+                            isExpanded={ expandedCell == 'disable_uploader' }
+                            handleExpanded={ () => this.handleExpanded('disable_uploader') }
+                            handleChanged={ this.props.setDisableUploader } />
                         <X.TableCell
                             type='switch'
                             title='方向燈暫時取消方向盤控制'
@@ -311,8 +331,14 @@ const mapDispatchToProps = dispatch => ({
         dispatch(deleteParam(param));
     },
     // dragonpilot
+    setAllowGas: (allowGas) => {
+        dispatch(updateParam(Params.KEY_ALLOW_GAS, (allowGas | 0).toString()));
+    },
     setDisableLogger: (disableLogger) => {
         dispatch(updateParam(Params.KEY_DISABLE_LOGGER, (disableLogger | 0).toString()));
+    },
+    setDisableUploader: (disableUploader) => {
+        dispatch(updateParam(Params.KEY_DISABLE_UPLOADER, (disableUploader | 0).toString()));
     },
     setDisableOnSignal: (disableOnSignal) => {
         dispatch(updateParam(Params.KEY_DISABLE_ON_SIGNAL, (disableOnSignal | 0).toString()));
