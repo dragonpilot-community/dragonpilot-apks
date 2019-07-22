@@ -165,16 +165,16 @@ class DragonpilotSettings extends Component {
                             title='關閉記錄服務'
                             value={ !!parseInt(dragonDisableLogger) }
                             iconSource={ Icons.developer }
-                            description='關閉記錄服務 (loggered/tombstoned) 將會停止記錄所有的行車記錄，需要重新開機。'
+                            description='開啟這個選項將會停止 comma ai 的行車記錄，需要重新開機。'
                             isExpanded={ expandedCell == 'disable_logger' }
                             handleExpanded={ () => this.handleExpanded('disable_logger') }
                             handleChanged={ this.props.setDisableLogger } />
                         <X.TableCell
                             type='switch'
-                            title='Disable Uploader'
+                            title='關閉上傳記錄服務'
                             value={ !!parseInt(dragonDisableUploader) }
                             iconSource={ Icons.developer }
-                            description='Disable uploader so it will stop uploading driving data, reboot required.'
+                            description='開啟這個選項將會停止上傳行車記錄給 comma ai，需要重新開機。'
                             isExpanded={ expandedCell == 'disable_uploader' }
                             handleExpanded={ () => this.handleExpanded('disable_uploader') }
                             handleChanged={ this.props.setDisableUploader } />
@@ -192,7 +192,7 @@ class DragonpilotSettings extends Component {
                             title='啟用行車記錄'
                             value={ !!parseInt(dragonEnableDashcam) }
                             iconSource={ Icons.developer }
-                            description='錄下 EON 的畫面當做行車記錄，當系統的空間不足 15% 時會自動刪除舊的記錄。記錢會存在 /sdcard/dashcam/ 裡。'
+                            description='錄下 EON 的畫面當做行車記錄，當系統的空間不足 15% 時會自動刪除舊的記錄。記錄會存在 /sdcard/dashcam/ 裡。'
                             isExpanded={ expandedCell == 'dashcam' }
                             handleExpanded={ () => this.handleExpanded('dashcam') }
                             handleChanged={ this.props.setEnableDashcam } />
