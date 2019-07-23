@@ -233,6 +233,14 @@ class DragonpilotSettings extends Component {
                             handleExpanded={ () => this.handleExpanded('cache_fingerprint') }
                             handleChanged={ this.props.setCacheCar } />
                     </X.Table>
+                    <X.Table color='darkBlue' padding='big'>
+                        <X.Button
+                            size='small'
+                            color='settingsDefault'
+                            onPress={ () => ChffrPlus.openLocaleSettings() }>
+                            Open Locale Settings
+                        </X.Button>
+                    </X.Table>
                 </ScrollView>
             </View>
         )
