@@ -29,7 +29,9 @@ const PARAMS = [
   "TrainingVersion",
   "Version",
   // dragonpilot
+  "DragonAllowGas",
   "DragonDisableLogger",
+  "DragonDisableUploader",
   "DragonTempDisableSteerOnSignal",
   "DragonEnableDashcam",
   "DragonDisableDriverSafetyCheck",

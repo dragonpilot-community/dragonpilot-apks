@@ -67,9 +67,9 @@ class SetupSim extends Component {
                         size='small'
                         weight='light'
                         style={ Styles.detailText }>
-                        { simState === 'ABSENT' ? '插入SIM卡来访问导航和音乐等服务。'
-                        : (networkName === null ? '已插入SIM卡，但尚未发现移动网络。'
-                                : "手机连接完成。完成设置继续。") }
+                        { simState === 'ABSENT' ? 'Insert a SIM card with data. Need one? Get a comma SIM at shop.comma.ai'
+                        : (networkName === null ? 'A SIM card was entered, however your cellular network has not yet been discovered.'
+                                : "You're all set to get EON on the road with full cellular connection. Complete set up to continue.") }
                     </X.Text>
                 </View>
                 <View style={ Styles.statusRow }>

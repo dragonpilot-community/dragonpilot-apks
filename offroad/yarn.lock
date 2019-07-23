@@ -1603,7 +1603,7 @@ combined-stream@1.0.6, combined-stream@^1.0.5, combined-stream@~1.0.5:
 
 "comma-x-native@git+https://git@github.com/dragonpilot-community/comma-x-native.git":
   version "0.1.0"
-  resolved "git+https://git@github.com/dragonpilot-community/comma-x-native.git#6a9a0b5e9c65b291004b72faa9c9a34127d1d6ef"
+  resolved "git+https://git@github.com/dragonpilot-community/comma-x-native.git#bbfe8700008db165339bd6edecb6f2374c0421e2"
   dependencies:
     react-native-linear-gradient "^2.3.0"
 
