@@ -235,10 +235,10 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setCacheCar } />
                         <X.TableCell
                             type='switch'
-                            title='Enable DevUI'
+                            title='啟用開發人員介面'
                             value={ !!parseInt(dragonBBUI) }
                             iconSource={ Icons.developer }
-                            description='Enable this to display DevUI found in kegman/arne fork.'
+                            description='啟用這個選項後，畫面將會顯示類似於 kegman/arne 的畫面。'
                             isExpanded={ expandedCell == 'dragon_bbui' }
                             handleExpanded={ () => this.handleExpanded('dragon_bbui') }
                             handleChanged={ this.props.setBBUI } />
