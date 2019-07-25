@@ -124,7 +124,8 @@ class DragonpilotSettings extends Component {
                 DragonDisableDriverSafetyCheck: dragonDisableDriverSafetyCheck,
                 DragonAutoShutdownAt: dragonAutoShutdownAt,
                 DragonNoctuaMode: dragonNoctuaMode,
-                DragonCacheCar: dragonCacheCar
+                DragonCacheCar: dragonCacheCar,
+                DragonBBUI: dragonBBUI,
             }
         } = this.props;
         const { expandedCell } = this.state;
@@ -232,6 +233,15 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'cache_fingerprint' }
                             handleExpanded={ () => this.handleExpanded('cache_fingerprint') }
                             handleChanged={ this.props.setCacheCar } />
+                        <X.TableCell
+                            type='switch'
+                            title='Enable DevUI'
+                            value={ !!parseInt(dragonBBUI) }
+                            iconSource={ Icons.developer }
+                            description='Enable this to display DevUI found in kegman/arne fork.'
+                            isExpanded={ expandedCell == 'dragon_bbui' }
+                            handleExpanded={ () => this.handleExpanded('dragon_bbui') }
+                            handleChanged={ this.props.setBBUI } />
                     </X.Table>
                     <X.Table color='darkBlue' padding='big'>
                         <X.Button
@@ -365,6 +375,9 @@ const mapDispatchToProps = dispatch => ({
     },
     setCacheCar: (cacheCar) => {
         dispatch(updateParam(Params.KEY_CACHE_CAR, (cacheCar | 0).toString()));
+    },
+    setBBUI: (bbui) => {
+        dispatch(updateParam(Params.KEY_BBUI, (bbui | 0).toString()));
     },
 });
 
