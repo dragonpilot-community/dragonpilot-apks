@@ -28,12 +28,13 @@ export const Params = {
     KEY_GITHUB_SSH_KEYS: 'GithubSshKeys',
     // dragonpilot
     KEY_ALLOW_GAS: 'DragonAllowGas',
-    KEY_DISABLE_LOGGER: 'DragonDisableLogger',
-    KEY_DISABLE_UPLOADER: 'DragonDisableUploader',
-    KEY_DISABLE_ON_SIGNAL: 'DragonTempDisableSteerOnSignal',
+    KEY_ENABLE_LOGGER: 'DragonEnableLogger',
+    KEY_ENABLE_UPLOADER: 'DragonEnableUploader',
+    KEY_ENABLE_STEERING_ON_SIGNAL: 'DragonEnableSteeringOnSignal',
     KEY_ENABLE_DASHCAM: 'DragonEnableDashcam',
-    KEY_DISABLE_DRIVER_SAFETY_CHECK: 'DragonDisableDriverSafetyCheck',
+    KEY_ENABLE_DRIVER_SAFETY_CHECK: 'DragonEnableDriverSafetyCheck',
     KEY_AUTO_SHUTDOWN: 'DragonAutoShutdownAt',
     KEY_ENABLE_NOCTUA_MODE: 'DragonNoctuaMode',
     KEY_CACHE_CAR: 'DragonCacheCar',
+    KEY_BBUI: 'DragonBBUI',
 };

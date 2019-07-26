@@ -117,14 +117,15 @@ class DragonpilotSettings extends Component {
         const {
             params: {
                 DragonAllowGas: dragonAllowGas,
-                DragonDisableLogger: dragonDisableLogger,
-                DragonDisableUploader: dragonDisableUploader,
-                DragonTempDisableSteerOnSignal: dragonTempDisableSteerOnSignal,
+                DragonEnableLogger: dragonEnableLogger,
+                DragonEnableUploader: dragonEnableUploader,
+                DragonEnableSteeringOnSignal: dragonEnableSteeringOnSignal,
                 DragonEnableDashcam: dragonEnableDashcam,
-                DragonDisableDriverSafetyCheck: dragonDisableDriverSafetyCheck,
+                DragonEnableDriverSafetyCheck: dragonEnableDriverSafetyCheck,
                 DragonAutoShutdownAt: dragonAutoShutdownAt,
                 DragonNoctuaMode: dragonNoctuaMode,
-                DragonCacheCar: dragonCacheCar
+                DragonCacheCar: dragonCacheCar,
+                DragonBBUI: dragonBBUI,
             }
         } = this.props;
         const { expandedCell } = this.state;
@@ -162,31 +163,31 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setAllowGas } />
                         <X.TableCell
                             type='switch'
-                            title='Disable Logger'
-                            value={ !!parseInt(dragonDisableLogger) }
+                            title='Enable Logger'
+                            value={ !!parseInt(dragonEnableLogger) }
                             iconSource={ Icons.developer }
-                            description='Disable logger (loggered/tombstoned) so it will never record driving data to comma ai, reboot required.'
-                            isExpanded={ expandedCell == 'disable_logger' }
-                            handleExpanded={ () => this.handleExpanded('disable_logger') }
-                            handleChanged={ this.props.setDisableLogger } />
+                            description='If you disable logger (loggered/tombstoned), it will stop recording driving data for AI training, reboot required.'
+                            isExpanded={ expandedCell == 'enable_logger' }
+                            handleExpanded={ () => this.handleExpanded('enable_logger') }
+                            handleChanged={ this.props.setEnableLogger } />
                         <X.TableCell
                             type='switch'
-                            title='Disable Uploader'
-                            value={ !!parseInt(dragonDisableUploader) }
+                            title='Enable Uploader'
+                            value={ !!parseInt(dragonEnableUploader) }
                             iconSource={ Icons.developer }
-                            description='Disable uploader so it will stop uploading driving data, reboot required.'
-                            isExpanded={ expandedCell == 'disable_uploader' }
-                            handleExpanded={ () => this.handleExpanded('disable_uploader') }
-                            handleChanged={ this.props.setDisableUploader } />
+                            description='If you disable uploader, it will stop uploading driving data for AI training, reboot required.'
+                            isExpanded={ expandedCell == 'enable_uploader' }
+                            handleExpanded={ () => this.handleExpanded('enable_uploader') }
+                            handleChanged={ this.props.setEnableUploader } />
                         <X.TableCell
                             type='switch'
-                            title='Disable Steering On Blinker'
-                            value={ !!parseInt(dragonTempDisableSteerOnSignal) }
+                            title='Enable Steering On Signal'
+                            value={ !!parseInt(dragonEnableSteeringOnSignal) }
                             iconSource={ Icons.developer }
-                            description='Temporary disable steering control when left/right blinker is on, will resume 1 second after the blinker is off.'
-                            isExpanded={ expandedCell == 'disable_on_signal' }
-                            handleExpanded={ () => this.handleExpanded('disable_on_signal') }
-                            handleChanged={ this.props.setDisableOnSignal } />
+                            description='If you enable this, it will temporary disable steering control when left/right blinker is on and resume control 1 second after the blinker is off.'
+                            isExpanded={ expandedCell == 'enable_steering_on_signal' }
+                            handleExpanded={ () => this.handleExpanded('enable_steering_on_signal') }
+                            handleChanged={ this.props.setEnableSteeringOnSignal } />
                         <X.TableCell
                             type='switch'
                             title='Enable Dashcam'
@@ -198,13 +199,13 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setEnableDashcam } />
                         <X.TableCell
                             type='switch'
-                            title='Disable Safety Check'
-                            value={ !!parseInt(dragonDisableDriverSafetyCheck) }
+                            title='Enable Safety Check'
+                            value={ !!parseInt(dragonEnableDriverSafetyCheck) }
                             iconSource={ Icons.developer }
-                            description='This will disable driver safety check completely, we don not recommend that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option.'
+                            description='If you disable this, the driver safety check will be disabled completely, we don not recommend that you turn on this unless you know what you are doing, we hold no responsibility if you disable this option.'
                             isExpanded={ expandedCell == 'safetyCheck' }
                             handleExpanded={ () => this.handleExpanded('safetyCheck') }
-                            handleChanged={ this.props.setDriverSafetyCheck } />
+                            handleChanged={ this.props.setEnableDriverSafetyCheck } />
                         <X.TableCell
                             type='switch'
                             title='Enable Auto Shutdown'
@@ -232,6 +233,15 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'cache_fingerprint' }
                             handleExpanded={ () => this.handleExpanded('cache_fingerprint') }
                             handleChanged={ this.props.setCacheCar } />
+                        <X.TableCell
+                            type='switch'
+                            title='Enable DevUI'
+                            value={ !!parseInt(dragonBBUI) }
+                            iconSource={ Icons.developer }
+                            description='Enable this to display DevUI found in kegman/arne fork.'
+                            isExpanded={ expandedCell == 'dragon_bbui' }
+                            handleExpanded={ () => this.handleExpanded('dragon_bbui') }
+                            handleChanged={ this.props.setBBUI } />
                     </X.Table>
                     <X.Table color='darkBlue' padding='big'>
                         <X.Button
@@ -342,20 +352,20 @@ const mapDispatchToProps = dispatch => ({
     setAllowGas: (allowGas) => {
         dispatch(updateParam(Params.KEY_ALLOW_GAS, (allowGas | 0).toString()));
     },
-    setDisableLogger: (disableLogger) => {
-        dispatch(updateParam(Params.KEY_DISABLE_LOGGER, (disableLogger | 0).toString()));
+    setEnableLogger: (enableLogger) => {
+        dispatch(updateParam(Params.KEY_ENABLE_LOGGER, (enableLogger | 0).toString()));
     },
-    setDisableUploader: (disableUploader) => {
-        dispatch(updateParam(Params.KEY_DISABLE_UPLOADER, (disableUploader | 0).toString()));
+    setEnableUploader: (enableUploader) => {
+        dispatch(updateParam(Params.KEY_ENABLE_UPLOADER, (enableUploader | 0).toString()));
     },
-    setDisableOnSignal: (disableOnSignal) => {
-        dispatch(updateParam(Params.KEY_DISABLE_ON_SIGNAL, (disableOnSignal | 0).toString()));
+    setEnableSteeringOnSignal: (enableSteeringOnSignal) => {
+        dispatch(updateParam(Params.KEY_ENABLE_STEERING_ON_SIGNAL, (enableSteeringOnSignal | 0).toString()));
     },
     setEnableDashcam: (enableDashcam) => {
         dispatch(updateParam(Params.KEY_ENABLE_DASHCAM, (enableDashcam | 0).toString()));
     },
-    setDriverSafetyCheck: (safetyCheck) => {
-        dispatch(updateParam(Params.KEY_DISABLE_DRIVER_SAFETY_CHECK, (safetyCheck | 0).toString()));
+    setEnableDriverSafetyCheck: (enableDriverSafetyCheck) => {
+        dispatch(updateParam(Params.KEY_ENABLE_DRIVER_SAFETY_CHECK, (enableDriverSafetyCheck | 0).toString()));
     },
     setAutoShutdown: (autoShutdown) => {
         dispatch(updateParam(Params.KEY_AUTO_SHUTDOWN, (autoShutdown? 30 : 0).toString()));
@@ -365,6 +375,9 @@ const mapDispatchToProps = dispatch => ({
     },
     setCacheCar: (cacheCar) => {
         dispatch(updateParam(Params.KEY_CACHE_CAR, (cacheCar | 0).toString()));
+    },
+    setBBUI: (bbui) => {
+        dispatch(updateParam(Params.KEY_BBUI, (bbui | 0).toString()));
     },
 });
 
