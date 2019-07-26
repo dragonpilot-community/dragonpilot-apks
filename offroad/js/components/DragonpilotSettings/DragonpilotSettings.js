@@ -117,14 +117,15 @@ class DragonpilotSettings extends Component {
         const {
             params: {
                 DragonAllowGas: dragonAllowGas,
-                DragonDisableLogger: dragonDisableLogger,
-                DragonDisableUploader: dragonDisableUploader,
-                DragonTempDisableSteerOnSignal: dragonTempDisableSteerOnSignal,
+                DragonEnableLogger: dragonEnableLogger,
+                DragonEnableUploader: dragonEnableUploader,
+                DragonEnableSteeringOnSignal: dragonEnableSteeringOnSignal,
                 DragonEnableDashcam: dragonEnableDashcam,
-                DragonDisableDriverSafetyCheck: dragonDisableDriverSafetyCheck,
+                DragonEnableDriverSafetyCheck: dragonEnableDriverSafetyCheck,
                 DragonAutoShutdownAt: dragonAutoShutdownAt,
                 DragonNoctuaMode: dragonNoctuaMode,
-                DragonCacheCar: dragonCacheCar
+                DragonCacheCar: dragonCacheCar,
+                DragonBBUI: dragonBBUI,
             }
         } = this.props;
         const { expandedCell } = this.state;
@@ -162,31 +163,31 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setAllowGas } />
                         <X.TableCell
                             type='switch'
-                            title='關閉記錄服務'
-                            value={ !!parseInt(dragonDisableLogger) }
+                            title='啟用記錄服務'
+                            value={ !!parseInt(dragonEnableLogger) }
                             iconSource={ Icons.developer }
-                            description='開啟這個選項將會停止 comma ai 的行車記錄，需要重新開機。'
-                            isExpanded={ expandedCell == 'disable_logger' }
-                            handleExpanded={ () => this.handleExpanded('disable_logger') }
-                            handleChanged={ this.props.setDisableLogger } />
+                            description='如果您關閉這個選項，記錄服務將停止儲存用來訓練 AI 模式的資料，需要重新開機。'
+                            isExpanded={ expandedCell == 'enable_logger' }
+                            handleExpanded={ () => this.handleExpanded('enable_logger') }
+                            handleChanged={ this.props.setEnableLogger } />
                         <X.TableCell
                             type='switch'
-                            title='關閉上傳記錄服務'
-                            value={ !!parseInt(dragonDisableUploader) }
+                            title='啟用上傳記錄服務'
+                            value={ !!parseInt(dragonEnableUploader) }
                             iconSource={ Icons.developer }
-                            description='開啟這個選項將會停止上傳行車記錄給 comma ai，需要重新開機。'
-                            isExpanded={ expandedCell == 'disable_uploader' }
-                            handleExpanded={ () => this.handleExpanded('disable_uploader') }
-                            handleChanged={ this.props.setDisableUploader } />
+                            description='如果您關閉這個選項，上傳記錄服務將停止上傳用來訓練 AI 模式的資料，需要重新開機。'
+                            isExpanded={ expandedCell == 'enable_uploader' }
+                            handleExpanded={ () => this.handleExpanded('enable_uploader') }
+                            handleChanged={ this.props.setEnableUploader } />
                         <X.TableCell
                             type='switch'
-                            title='方向燈暫時取消方向盤控制'
-                            value={ !!parseInt(dragonTempDisableSteerOnSignal) }
+                            title='啟用方向燈暫時取消方向盤控制'
+                            value={ !!parseInt(dragonEnableSteeringOnSignal) }
                             iconSource={ Icons.developer }
-                            description='當方向燈亮起時，暫時取消方向盤控制，OP 將會在方向燈熄滅後 1 秒取回控制。'
-                            isExpanded={ expandedCell == 'disable_on_signal' }
-                            handleExpanded={ () => this.handleExpanded('disable_on_signal') }
-                            handleChanged={ this.props.setDisableOnSignal } />
+                            description='如果您啟用這個選項，當方向燈亮起時，將暫時取消 DP 的方向盤控制，然後 DP 會在方向燈熄滅後 1 秒取回控制。'
+                            isExpanded={ expandedCell == 'enable_steering_on_signal' }
+                            handleExpanded={ () => this.handleExpanded('enable_steering_on_signal') }
+                            handleChanged={ this.props.setEnableSteeringOnSignal } />
                         <X.TableCell
                             type='switch'
                             title='啟用行車記錄'
@@ -198,13 +199,13 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setEnableDashcam } />
                         <X.TableCell
                             type='switch'
-                            title='完全關閉安全監控'
-                            value={ !!parseInt(dragonDisableDriverSafetyCheck) }
+                            title='啟用安全監控'
+                            value={ !!parseInt(dragonEnableDriverSafetyCheck) }
                             iconSource={ Icons.developer }
-                            description='這個功能將會完全取消駕駛監控，除非您知道您在做什麼，不然我們不建議您使用，我們也不會負任何事故的責任。'
+                            description='如果您關閉這個選項，DP 的監駛監控功能將完全取消，除非您知道您在做什麼，不然我們不建議您使用，我們也不會負任何事故的責任。'
                             isExpanded={ expandedCell == 'safetyCheck' }
                             handleExpanded={ () => this.handleExpanded('safetyCheck') }
-                            handleChanged={ this.props.setDriverSafetyCheck } />
+                            handleChanged={ this.props.setEnableDriverSafetyCheck } />
                         <X.TableCell
                             type='switch'
                             title='啟用自動關機'
@@ -232,6 +233,15 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'cache_fingerprint' }
                             handleExpanded={ () => this.handleExpanded('cache_fingerprint') }
                             handleChanged={ this.props.setCacheCar } />
+                        <X.TableCell
+                            type='switch'
+                            title='啟用開發人員介面'
+                            value={ !!parseInt(dragonBBUI) }
+                            iconSource={ Icons.developer }
+                            description='啟用這個選項後，畫面將會顯示類似於 kegman/arne 的畫面。'
+                            isExpanded={ expandedCell == 'dragon_bbui' }
+                            handleExpanded={ () => this.handleExpanded('dragon_bbui') }
+                            handleChanged={ this.props.setBBUI } />
                     </X.Table>
                     <X.Table color='darkBlue' padding='big'>
                         <X.Button
@@ -342,20 +352,20 @@ const mapDispatchToProps = dispatch => ({
     setAllowGas: (allowGas) => {
         dispatch(updateParam(Params.KEY_ALLOW_GAS, (allowGas | 0).toString()));
     },
-    setDisableLogger: (disableLogger) => {
-        dispatch(updateParam(Params.KEY_DISABLE_LOGGER, (disableLogger | 0).toString()));
+    setEnableLogger: (enableLogger) => {
+        dispatch(updateParam(Params.KEY_ENABLE_LOGGER, (enableLogger | 0).toString()));
     },
-    setDisableUploader: (disableUploader) => {
-        dispatch(updateParam(Params.KEY_DISABLE_UPLOADER, (disableUploader | 0).toString()));
+    setEnableUploader: (enableUploader) => {
+        dispatch(updateParam(Params.KEY_ENABLE_UPLOADER, (enableUploader | 0).toString()));
     },
-    setDisableOnSignal: (disableOnSignal) => {
-        dispatch(updateParam(Params.KEY_DISABLE_ON_SIGNAL, (disableOnSignal | 0).toString()));
+    setEnableSteeringOnSignal: (enableSteeringOnSignal) => {
+        dispatch(updateParam(Params.KEY_ENABLE_STEERING_ON_SIGNAL, (enableSteeringOnSignal | 0).toString()));
     },
     setEnableDashcam: (enableDashcam) => {
         dispatch(updateParam(Params.KEY_ENABLE_DASHCAM, (enableDashcam | 0).toString()));
     },
-    setDriverSafetyCheck: (safetyCheck) => {
-        dispatch(updateParam(Params.KEY_DISABLE_DRIVER_SAFETY_CHECK, (safetyCheck | 0).toString()));
+    setEnableDriverSafetyCheck: (enableDriverSafetyCheck) => {
+        dispatch(updateParam(Params.KEY_ENABLE_DRIVER_SAFETY_CHECK, (enableDriverSafetyCheck | 0).toString()));
     },
     setAutoShutdown: (autoShutdown) => {
         dispatch(updateParam(Params.KEY_AUTO_SHUTDOWN, (autoShutdown? 30 : 0).toString()));
@@ -365,6 +375,9 @@ const mapDispatchToProps = dispatch => ({
     },
     setCacheCar: (cacheCar) => {
         dispatch(updateParam(Params.KEY_CACHE_CAR, (cacheCar | 0).toString()));
+    },
+    setBBUI: (bbui) => {
+        dispatch(updateParam(Params.KEY_BBUI, (bbui | 0).toString()));
     },
 });
 
