@@ -119,7 +119,7 @@ class DragonpilotSettings extends Component {
                 DragonAllowGas: dragonAllowGas,
                 DragonEnableLogger: dragonEnableLogger,
                 DragonEnableUploader: dragonEnableUploader,
-                DragonTempEnableSteerOnSignal: dragonEnableSteeringOnSignal,
+                DragonEnableSteeringOnSignal: dragonEnableSteeringOnSignal,
                 DragonEnableDashcam: dragonEnableDashcam,
                 DragonEnableDriverSafetyCheck: dragonEnableDriverSafetyCheck,
                 DragonAutoShutdownAt: dragonAutoShutdownAt,
@@ -353,7 +353,7 @@ const mapDispatchToProps = dispatch => ({
         dispatch(updateParam(Params.KEY_ALLOW_GAS, (allowGas | 0).toString()));
     },
     setEnableLogger: (enableLogger) => {
-        dispatch(updateParam(Params.KEY_DISABLE_LOGGER, (enableLogger | 0).toString()));
+        dispatch(updateParam(Params.KEY_ENABLE_LOGGER, (enableLogger | 0).toString()));
     },
     setEnableUploader: (enableUploader) => {
         dispatch(updateParam(Params.KEY_ENABLE_UPLOADER, (enableUploader | 0).toString()));
