@@ -39,6 +39,7 @@ const PARAMS = [
   "DragonNoctuaMode",
   "DragonCacheCar",
   "DragonBBUI",
+  "DragonToyotaStockDSU",
 ];
 
 export function refreshParams() {

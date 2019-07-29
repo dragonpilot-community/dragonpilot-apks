@@ -257,6 +257,11 @@ class DragonpilotSettings extends Component {
     }
 
     renderToyotaSettings() {
+        const {
+            params: {
+                DragonToyotaStockDSU: dragonToyotaStockDSU,
+            },
+        } = this.props;
         const { expandedCell } = this.state;
         return (
             <View style={ Styles.settings }>
@@ -271,13 +276,18 @@ class DragonpilotSettings extends Component {
                 <ScrollView
                     ref="settingsScrollView"
                     style={ Styles.settingsWindow }>
-                    <View>
-                        <X.Table>
-                            <X.TableCell
-                                title='Device Paired'
-                                value='Yes' />
-                        </X.Table>
-                    </View>
+                    <X.Line color='transparent' spacing='tiny' />
+                    <X.Table color='darkBlue'>
+                        <X.TableCell
+                            type='switch'
+                            title='Enable Stock DSU Mode'
+                            value={ !!parseInt(dragonToyotaStockDSU) }
+                            iconSource={ Icons.developer }
+                            description='Some models DSU cannot be unplugged (such as Lexus IS/GS/ES), once this option is enabled, turn on AHB (Auto High Beam) will keep you dp always on for Lat Control (control gas/brake manually), turn off AHB if you want to cancel dp Lat Control.'
+                            isExpanded={ expandedCell == 'toyota_stock_dsu' }
+                            handleExpanded={ () => this.handleExpanded('toyota_stock_dsu') }
+                            handleChanged={ this.props.setToyotaStockDSU } />
+                    </X.Table>
                 </ScrollView>
             </View>
         )
@@ -378,6 +388,9 @@ const mapDispatchToProps = dispatch => ({
     },
     setBBUI: (bbui) => {
         dispatch(updateParam(Params.KEY_BBUI, (bbui | 0).toString()));
+    },
+    setToyotaStockDSU: (stockDSU) => {
+        dispatch(updateParam(Params.KEY_TOYOTA_STOCK_DSU, (stockDSU | 0).toString()));
     },
 });
 
