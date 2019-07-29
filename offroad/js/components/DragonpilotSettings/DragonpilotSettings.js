@@ -280,10 +280,10 @@ class DragonpilotSettings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
-                            title='Enable Stock DSU Mode'
+                            title='啟用原廠 DSU 模式'
                             value={ !!parseInt(dragonToyotaStockDSU) }
                             iconSource={ Icons.developer }
-                            description='Some models DSU cannot be unplugged (such as Lexus IS/GS/ES), once this option is enabled, turn on AHB (Auto High Beam) will keep you dp always on for Lat Control (control gas/brake manually), turn off AHB if you want to cancel dp Lat Control.'
+                            description='某些車型 (Lexus IS/GS/ES) 的 DSU 無法拔除，開啟這個選項後，您可以使用 AHB (自動大燈) 來控制 dp，當 AHB 開啟後，dp 將會一直開啟, 您可以手動控制油門和剎車。AHB 關閉後，dp 將會暫時切回原本的模式 (油門/剎車會取消 dp)。'
                             isExpanded={ expandedCell == 'toyota_stock_dsu' }
                             handleExpanded={ () => this.handleExpanded('toyota_stock_dsu') }
                             handleChanged={ this.props.setToyotaStockDSU } />
