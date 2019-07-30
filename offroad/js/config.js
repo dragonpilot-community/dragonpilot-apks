@@ -37,4 +37,5 @@ export const Params = {
     KEY_ENABLE_NOCTUA_MODE: 'DragonNoctuaMode',
     KEY_CACHE_CAR: 'DragonCacheCar',
     KEY_BBUI: 'DragonBBUI',
+    KEY_TOYOTA_STOCK_DSU: 'DragonToyotaStockDSU',
 };
