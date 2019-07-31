@@ -124,7 +124,6 @@ class DragonpilotSettings extends Component {
                 DragonEnableDriverSafetyCheck: dragonEnableDriverSafetyCheck,
                 DragonAutoShutdownAt: dragonAutoShutdownAt,
                 DragonNoctuaMode: dragonNoctuaMode,
-                DragonCacheCar: dragonCacheCar,
                 DragonBBUI: dragonBBUI,
             }
         } = this.props;
@@ -224,15 +223,6 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'enable_noctua_mode' }
                             handleExpanded={ () => this.handleExpanded('enable_noctua_mode') }
                             handleChanged={ this.props.setNoctuaMode } />
-                        <X.TableCell
-                            type='switch'
-                            title='啟用暫存指紋'
-                            value={ !!parseInt(dragonCacheCar) }
-                            iconSource={ Icons.developer }
-                            description='啟用這個選項後， EON 會將您的車型、指紋、VIN 存至檔案裡，當需要時直接讀取以加速車型的辨識速度，若是將 EON 掛載至其它車型請將它關閉，需要重新開機。'
-                            isExpanded={ expandedCell == 'cache_fingerprint' }
-                            handleExpanded={ () => this.handleExpanded('cache_fingerprint') }
-                            handleChanged={ this.props.setCacheCar } />
                         <X.TableCell
                             type='switch'
                             title='啟用開發人員介面'
@@ -382,9 +372,6 @@ const mapDispatchToProps = dispatch => ({
     },
     setNoctuaMode: (noctuaMode) => {
         dispatch(updateParam(Params.KEY_ENABLE_NOCTUA_MODE, (noctuaMode | 0).toString()));
-    },
-    setCacheCar: (cacheCar) => {
-        dispatch(updateParam(Params.KEY_CACHE_CAR, (cacheCar | 0).toString()));
     },
     setBBUI: (bbui) => {
         dispatch(updateParam(Params.KEY_BBUI, (bbui | 0).toString()));
