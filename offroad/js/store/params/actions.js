@@ -38,6 +38,7 @@ const PARAMS = [
   "DragonEnableDriverSafetyCheck",
   "DragonAutoShutdownAt",
   "DragonNoctuaMode",
+  "DragonCacheCar",
   "DragonBBUI",
   "DragonToyotaStockDSU",
 ];
