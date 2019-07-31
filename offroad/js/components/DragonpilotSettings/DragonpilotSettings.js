@@ -116,6 +116,7 @@ class DragonpilotSettings extends Component {
     renderPrimarySettings() {
         const {
             params: {
+                DragonLatCtrl: dragonLatCtrl,
                 DragonAllowGas: dragonAllowGas,
                 DragonEnableLogger: dragonEnableLogger,
                 DragonEnableUploader: dragonEnableUploader,
@@ -151,6 +152,15 @@ class DragonpilotSettings extends Component {
                             valueTextSize='tiny' />
                     </X.Table>
                     <X.Table color='darkBlue'>
+                        <X.TableCell
+                            type='switch'
+                            title='Enable Lateral Control'
+                            value={ !!parseInt(dragonLatCtrl) }
+                            iconSource={ Icons.developer }
+                            description='Enable this if you wish dp to control the steering for you.'
+                            isExpanded={ expandedCell == 'lat_ctrl' }
+                            handleExpanded={ () => this.handleExpanded('lat_ctrl') }
+                            handleChanged={ this.props.setLatCtrl } />
                         <X.TableCell
                             type='switch'
                             title='Allow Gas'
@@ -349,6 +359,9 @@ const mapDispatchToProps = dispatch => ({
         dispatch(deleteParam(param));
     },
     // dragonpilot
+    setLatCtrl: (latCtrl) => {
+        dispatch(updateParam(Params.KEY_LAT_CTRL, (latCtrl | 0).toString()));
+    },
     setAllowGas: (allowGas) => {
         dispatch(updateParam(Params.KEY_ALLOW_GAS, (allowGas | 0).toString()));
     },

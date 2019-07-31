@@ -29,6 +29,7 @@ const PARAMS = [
   "TrainingVersion",
   "Version",
   // dragonpilot
+  "DragonLatCtrl",
   "DragonAllowGas",
   "DragonEnableLogger",
   "DragonEnableUploader",

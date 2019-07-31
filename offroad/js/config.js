@@ -27,6 +27,7 @@ export const Params = {
     KEY_LIVE_PARAMETERS: 'LiveParameters',
     KEY_GITHUB_SSH_KEYS: 'GithubSshKeys',
     // dragonpilot
+    KEY_LAT_CTRL: 'DragonLatCtrl',
     KEY_ALLOW_GAS: 'DragonAllowGas',
     KEY_ENABLE_LOGGER: 'DragonEnableLogger',
     KEY_ENABLE_UPLOADER: 'DragonEnableUploader',

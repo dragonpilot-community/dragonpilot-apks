@@ -268,6 +268,13 @@ class Settings extends Component {
                         { this.renderSettingsMenu() }
                     </X.Table>
                     <X.Table color='darkBlue'>
+                        <X.Button
+                            color='settingsDefault'
+                            onPress={ () => this.props.openDragonpilotSettings() }>
+                            Dragonpilot
+                        </X.Button>
+                    </X.Table>
+                    <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
                             title='Enable Driver Monitoring'
@@ -353,13 +360,6 @@ class Settings extends Component {
                             handleChanged={ this.props.setLimitSetSpeed } />
                     </X.Table>
                     */}
-                    <X.Table color='darkBlue'>
-                        <X.Button
-                            color='settingsDefault'
-                            onPress={ () => this.props.openDragonpilotSettings() }>
-                            Dragonpilot
-                        </X.Button>
-                    </X.Table>
                     <X.Table color='darkBlue'>
                         <X.Button
                             color='settingsDefault'
