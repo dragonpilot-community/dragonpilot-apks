@@ -39,8 +39,12 @@ const PARAMS = [
   "DragonAutoShutdownAt",
   "DragonNoctuaMode",
   "DragonCacheCar",
-  "DragonBBUI",
   "DragonToyotaStockDSU",
+  "DragonUIEvent",
+  "DragonUIMaxSpeed",
+  "DragonUIFace",
+  "DragonUIDev",
+  "DragonUIDevMini",
 ];
 
 export function refreshParams() {

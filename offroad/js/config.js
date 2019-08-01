@@ -37,6 +37,10 @@ export const Params = {
     KEY_AUTO_SHUTDOWN: 'DragonAutoShutdownAt',
     KEY_ENABLE_NOCTUA_MODE: 'DragonNoctuaMode',
     KEY_CACHE_CAR: 'DragonCacheCar',
-    KEY_BBUI: 'DragonBBUI',
     KEY_TOYOTA_STOCK_DSU: 'DragonToyotaStockDSU',
+    KEY_UI_EVENT: 'DragonUIEvent',
+    KEY_UI_MAXSPEED: 'DragonUIMaxSpeed',
+    KEY_UI_FACE: 'DragonUIFace',
+    KEY_UI_DEV: 'DragonUIDev',
+    KEY_UI_DEV_MINI: 'DragonUIDevMini',
 };
