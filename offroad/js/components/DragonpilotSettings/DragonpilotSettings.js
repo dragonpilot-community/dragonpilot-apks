@@ -18,6 +18,7 @@ const SettingsRoutes = {
     PRIMARY: 'PRIMARY',
     TOYOTA: 'TOYOTA',
     HONDA: 'HONDA',
+    UI: 'UI',
 }
 
 const Icons = {
@@ -77,6 +78,12 @@ class DragonpilotSettings extends Component {
                 context: '',
                 route: SettingsRoutes.HONDA,
             },
+            {
+                icon: Icons.developer,
+                title: 'UI',
+                context: '',
+                route: SettingsRoutes.UI,
+            },
         ];
         return settingsMenuItems.map((item, idx) => {
             const cellButtonStyle = [
@@ -116,6 +123,7 @@ class DragonpilotSettings extends Component {
     renderPrimarySettings() {
         const {
             params: {
+                DragonLatCtrl: dragonLatCtrl,
                 DragonAllowGas: dragonAllowGas,
                 DragonEnableLogger: dragonEnableLogger,
                 DragonEnableUploader: dragonEnableUploader,
@@ -124,7 +132,7 @@ class DragonpilotSettings extends Component {
                 DragonEnableDriverSafetyCheck: dragonEnableDriverSafetyCheck,
                 DragonAutoShutdownAt: dragonAutoShutdownAt,
                 DragonNoctuaMode: dragonNoctuaMode,
-                DragonBBUI: dragonBBUI,
+                DragonCacheCar: dragonCacheCar,
             }
         } = this.props;
         const { expandedCell } = this.state;
@@ -151,6 +159,15 @@ class DragonpilotSettings extends Component {
                             valueTextSize='tiny' />
                     </X.Table>
                     <X.Table color='darkBlue'>
+                        <X.TableCell
+                            type='switch'
+                            title='Enable Lateral Control'
+                            value={ !!parseInt(dragonLatCtrl) }
+                            iconSource={ Icons.developer }
+                            description='Enable this if you wish dp to control the steering for you.'
+                            isExpanded={ expandedCell == 'lat_ctrl' }
+                            handleExpanded={ () => this.handleExpanded('lat_ctrl') }
+                            handleChanged={ this.props.setLatCtrl } />
                         <X.TableCell
                             type='switch'
                             title='Allow Gas'
@@ -225,13 +242,13 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setNoctuaMode } />
                         <X.TableCell
                             type='switch'
-                            title='Enable DevUI'
-                            value={ !!parseInt(dragonBBUI) }
+                            title='Cache Fingerprint'
+                            value={ !!parseInt(dragonCacheCar) }
                             iconSource={ Icons.developer }
-                            description='Enable this to display DevUI found in kegman/arne fork.'
-                            isExpanded={ expandedCell == 'dragon_bbui' }
-                            handleExpanded={ () => this.handleExpanded('dragon_bbui') }
-                            handleChanged={ this.props.setBBUI } />
+                            description='Enable this to store your fingerprint/vin/car model into files and use it when required, this will reduce the car model detection time, disable this if you put EON onto another car, reboot required.'
+                            isExpanded={ expandedCell == 'cache_fingerprint' }
+                            handleExpanded={ () => this.handleExpanded('cache_fingerprint') }
+                            handleChanged={ this.props.setCacheCar } />
                     </X.Table>
                     <X.Table color='darkBlue' padding='big'>
                         <X.Button
@@ -310,6 +327,83 @@ class DragonpilotSettings extends Component {
         )
     }
 
+    renderUISettings() {
+        const {
+            params: {
+                DragonUIEvent: dragonUIEvent,
+                DragonUIMaxSpeed: dragonUIMaxSpeed,
+                DragonUIFace: dragonUIFace,
+                DragonUIDev: dragonUIDev,
+                DragonUIDevMini: dragonUIDevMini,
+            },
+        } = this.props;
+        const { expandedCell } = this.state;
+        return (
+            <View style={ Styles.settings }>
+                <View style={ Styles.settingsHeader }>
+                    <X.Button
+                        color='ghost'
+                        size='small'
+                        onPress={ () => this.handlePressedBack() }>
+                        {'<  UI Settings'}
+                    </X.Button>
+                </View>
+                <ScrollView
+                    ref="settingsScrollView"
+                    style={ Styles.settingsWindow }>
+                    <X.Line color='transparent' spacing='tiny' />
+                    <X.Table color='darkBlue'>
+                        <X.TableCell
+                            type='switch'
+                            title='Display Event / Steering Icon'
+                            value={ !!parseInt(dragonUIEvent) }
+                            iconSource={ Icons.developer }
+                            description='Enable this to display Event / Steering Icon.'
+                            isExpanded={ expandedCell == 'dragon_ui_event' }
+                            handleExpanded={ () => this.handleExpanded('dragon_ui_event') }
+                            handleChanged={ this.props.setUIEvent } />
+                        <X.TableCell
+                            type='switch'
+                            title='Display Max Speed'
+                            value={ !!parseInt(dragonUIMaxSpeed) }
+                            iconSource={ Icons.developer }
+                            description='Enable this to display Max Speed.'
+                            isExpanded={ expandedCell == 'dragon_ui_maxspeed' }
+                            handleExpanded={ () => this.handleExpanded('dragon_ui_maxspeed') }
+                            handleChanged={ this.props.setUIMaxSpeed } />
+                        <X.TableCell
+                            type='switch'
+                            title='Display Face Icon'
+                            value={ !!parseInt(dragonUIFace) }
+                            iconSource={ Icons.developer }
+                            description='Enable this to display Face Icon.'
+                            isExpanded={ expandedCell == 'dragon_ui_face' }
+                            handleExpanded={ () => this.handleExpanded('dragon_ui_face') }
+                            handleChanged={ this.props.setUIFace } />
+                        <X.TableCell
+                            type='switch'
+                            title='Display Dev UI'
+                            value={ !!parseInt(dragonUIDev) }
+                            iconSource={ Icons.developer }
+                            description='Enable this to display DevUI found in kegman/arne fork.'
+                            isExpanded={ expandedCell == 'dragon_ui_dev' }
+                            handleExpanded={ () => this.handleExpanded('dragon_ui_dev') }
+                            handleChanged={ this.props.setUIDev } />
+                        <X.TableCell
+                            type='switch'
+                            title='Display Mini Dev UI'
+                            value={ !!parseInt(dragonUIDevMini) }
+                            iconSource={ Icons.developer }
+                            description='Enable this to display Mini Dev UI designed for dragonpilot.'
+                            isExpanded={ expandedCell == 'dragon_ui_dev_mini' }
+                            handleExpanded={ () => this.handleExpanded('dragon_ui_dev_mini') }
+                            handleChanged={ this.props.setUIDevMini } />
+                    </X.Table>
+                </ScrollView>
+            </View>
+        )
+    }
+
     renderSettingsByRoute() {
         const { route } = this.state;
         switch (route) {
@@ -319,6 +413,8 @@ class DragonpilotSettings extends Component {
                 return this.renderToyotaSettings();
             case SettingsRoutes.HONDA:
                 return this.renderHondaSettings();
+            case SettingsRoutes.UI:
+                return this.renderUISettings();
         }
     }
 
@@ -349,6 +445,9 @@ const mapDispatchToProps = dispatch => ({
         dispatch(deleteParam(param));
     },
     // dragonpilot
+    setLatCtrl: (latCtrl) => {
+        dispatch(updateParam(Params.KEY_LAT_CTRL, (latCtrl | 0).toString()));
+    },
     setAllowGas: (allowGas) => {
         dispatch(updateParam(Params.KEY_ALLOW_GAS, (allowGas | 0).toString()));
     },
@@ -373,11 +472,26 @@ const mapDispatchToProps = dispatch => ({
     setNoctuaMode: (noctuaMode) => {
         dispatch(updateParam(Params.KEY_ENABLE_NOCTUA_MODE, (noctuaMode | 0).toString()));
     },
-    setBBUI: (bbui) => {
-        dispatch(updateParam(Params.KEY_BBUI, (bbui | 0).toString()));
+    setCacheCar: (cacheCar) => {
+        dispatch(updateParam(Params.KEY_CACHE_CAR, (cacheCar | 0).toString()));
     },
     setToyotaStockDSU: (stockDSU) => {
         dispatch(updateParam(Params.KEY_TOYOTA_STOCK_DSU, (stockDSU | 0).toString()));
+    },
+    setUIEvent: (val) => {
+        dispatch(updateParam(Params.KEY_UI_EVENT, (val | 0).toString()));
+    },
+    setUIMaxSpeed: (val) => {
+        dispatch(updateParam(Params.KEY_UI_MAXSPEED, (val | 0).toString()));
+    },
+    setUIFace: (val) => {
+        dispatch(updateParam(Params.KEY_UI_FACE, (val | 0).toString()));
+    },
+    setUIDev: (val) => {
+        dispatch(updateParam(Params.KEY_UI_DEV, (val | 0).toString()));
+    },
+    setUIDevMini: (val) => {
+        dispatch(updateParam(Params.KEY_UI_DEV_MINI, (val | 0).toString()));
     },
 });
 

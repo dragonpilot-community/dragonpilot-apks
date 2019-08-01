@@ -29,6 +29,7 @@ const PARAMS = [
   "TrainingVersion",
   "Version",
   // dragonpilot
+  "DragonLatCtrl",
   "DragonAllowGas",
   "DragonEnableLogger",
   "DragonEnableUploader",
@@ -37,8 +38,13 @@ const PARAMS = [
   "DragonEnableDriverSafetyCheck",
   "DragonAutoShutdownAt",
   "DragonNoctuaMode",
-  "DragonBBUI",
+  "DragonCacheCar",
   "DragonToyotaStockDSU",
+  "DragonUIEvent",
+  "DragonUIMaxSpeed",
+  "DragonUIFace",
+  "DragonUIDev",
+  "DragonUIDevMini",
 ];
 
 export function refreshParams() {
