@@ -27,6 +27,7 @@ export const Params = {
     KEY_LIVE_PARAMETERS: 'LiveParameters',
     KEY_GITHUB_SSH_KEYS: 'GithubSshKeys',
     // dragonpilot
+    KEY_LAT_CTRL: 'DragonLatCtrl',
     KEY_ALLOW_GAS: 'DragonAllowGas',
     KEY_ENABLE_LOGGER: 'DragonEnableLogger',
     KEY_ENABLE_UPLOADER: 'DragonEnableUploader',
@@ -35,6 +36,11 @@ export const Params = {
     KEY_ENABLE_DRIVER_SAFETY_CHECK: 'DragonEnableDriverSafetyCheck',
     KEY_AUTO_SHUTDOWN: 'DragonAutoShutdownAt',
     KEY_ENABLE_NOCTUA_MODE: 'DragonNoctuaMode',
-    KEY_BBUI: 'DragonBBUI',
+    KEY_CACHE_CAR: 'DragonCacheCar',
     KEY_TOYOTA_STOCK_DSU: 'DragonToyotaStockDSU',
+    KEY_UI_EVENT: 'DragonUIEvent',
+    KEY_UI_MAXSPEED: 'DragonUIMaxSpeed',
+    KEY_UI_FACE: 'DragonUIFace',
+    KEY_UI_DEV: 'DragonUIDev',
+    KEY_UI_DEV_MINI: 'DragonUIDevMini',
 };
