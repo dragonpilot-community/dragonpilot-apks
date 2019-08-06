@@ -80,7 +80,7 @@ class DragonpilotSettings extends Component {
             },
             {
                 icon: Icons.developer,
-                title: 'UI',
+                title: '介面',
                 context: '',
                 route: SettingsRoutes.UI,
             },
@@ -345,7 +345,7 @@ class DragonpilotSettings extends Component {
                         color='ghost'
                         size='small'
                         onPress={ () => this.handlePressedBack() }>
-                        {'<  UI Settings'}
+                        {'<  介面設定'}
                     </X.Button>
                 </View>
                 <ScrollView
@@ -355,46 +355,46 @@ class DragonpilotSettings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
-                            title='Display Event / Steering Icon'
+                            title='顯示事件／方向盤圖示'
                             value={ !!parseInt(dragonUIEvent) }
                             iconSource={ Icons.developer }
-                            description='Enable this to display Event / Steering Icon.'
+                            description='啟用這個選項後，畫面將會顯示事件／方向盤圖示。'
                             isExpanded={ expandedCell == 'dragon_ui_event' }
                             handleExpanded={ () => this.handleExpanded('dragon_ui_event') }
                             handleChanged={ this.props.setUIEvent } />
                         <X.TableCell
                             type='switch'
-                            title='Display Max Speed'
+                            title='顯示巡航速度'
                             value={ !!parseInt(dragonUIMaxSpeed) }
                             iconSource={ Icons.developer }
-                            description='Enable this to display Max Speed.'
+                            description='啟用這個選項後，畫面將會顯示巡航速度。'
                             isExpanded={ expandedCell == 'dragon_ui_maxspeed' }
                             handleExpanded={ () => this.handleExpanded('dragon_ui_maxspeed') }
                             handleChanged={ this.props.setUIMaxSpeed } />
                         <X.TableCell
                             type='switch'
-                            title='Display Face Icon'
+                            title='顯示人臉圖示'
                             value={ !!parseInt(dragonUIFace) }
                             iconSource={ Icons.developer }
-                            description='Enable this to display Face Icon.'
+                            description='啟用這個選項後，畫面將會顯示人臉圖示。'
                             isExpanded={ expandedCell == 'dragon_ui_face' }
                             handleExpanded={ () => this.handleExpanded('dragon_ui_face') }
                             handleChanged={ this.props.setUIFace } />
                         <X.TableCell
                             type='switch'
-                            title='Display Dev UI'
+                            title='顯示調校介面'
                             value={ !!parseInt(dragonUIDev) }
                             iconSource={ Icons.developer }
-                            description='Enable this to display DevUI found in kegman/arne fork.'
+                            description='啟用這個選項後，畫面將會顯示類似於 kegman / arne 的調校介面。'
                             isExpanded={ expandedCell == 'dragon_ui_dev' }
                             handleExpanded={ () => this.handleExpanded('dragon_ui_dev') }
                             handleChanged={ this.props.setUIDev } />
                         <X.TableCell
                             type='switch'
-                            title='Display Mini Dev UI'
+                            title='顯示 dp 介面'
                             value={ !!parseInt(dragonUIDevMini) }
                             iconSource={ Icons.developer }
-                            description='Enable this to display Mini Dev UI designed for dragonpilot.'
+                            description='啟用這個選項後，畫面將會顯示 dp 的調校介面。'
                             isExpanded={ expandedCell == 'dragon_ui_dev_mini' }
                             handleExpanded={ () => this.handleExpanded('dragon_ui_dev_mini') }
                             handleChanged={ this.props.setUIDevMini } />
