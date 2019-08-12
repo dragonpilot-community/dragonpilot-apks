@@ -270,6 +270,20 @@ class Settings extends Component {
                     <X.Table color='darkBlue'>
                         <X.Button
                             color='settingsDefault'
+                            onPress={ () => ChffrPlus.openSpeedcam() }>
+                            Traffic Alert
+                        </X.Button>
+                    </X.Table>
+                    {/*<X.Table color='darkBlue'>*/}
+                        {/*<X.Button*/}
+                            {/*color='settingsDefault'*/}
+                            {/*onPress={ () => ChffrPlus.openAutonavi() }>*/}
+                            {/*AutoNavi*/}
+                        {/*</X.Button>*/}
+                    {/*</X.Table>*/}
+                    <X.Table color='darkBlue'>
+                        <X.Button
+                            color='settingsDefault'
                             onPress={ () => this.props.openDragonpilotSettings() }>
                             Dragonpilot
                         </X.Button>
