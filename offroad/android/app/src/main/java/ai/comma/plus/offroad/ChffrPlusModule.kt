@@ -245,6 +245,22 @@ class ChffrPlusModule(val ctx: ReactApplicationContext) :
     }
 
     @ReactMethod
+    fun openSpeedcam() {
+        val pm = reactApplicationContext.packageManager
+        val intent = pm.getLaunchIntentForPackage("com.tomtom.speedcams.android.map")
+        intent.putExtra("extra_prefs_show_button_bar", true)
+        startActivityWithIntent(intent)
+    }
+
+    @ReactMethod
+    fun openAutonavi() {
+        val pm = reactApplicationContext.packageManager
+        val intent = pm.getLaunchIntentForPackage("com.autonavi.amapauto")
+        intent.putExtra("extra_prefs_show_button_bar", true)
+        startActivityWithIntent(intent)
+    }
+
+    @ReactMethod
     fun reboot() {
         try {
             // IPowerManager.reboot(confirm=false, reason=0, wait=true)
