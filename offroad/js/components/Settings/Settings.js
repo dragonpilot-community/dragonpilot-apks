@@ -278,7 +278,7 @@ class Settings extends Component {
                         <X.Button
                             color='settingsDefault'
                             onPress={ () => ChffrPlus.openAutonavi() }>
-                            AutoNavi
+                            高德地图
                         </X.Button>
                     </X.Table>
                     <X.Table color='darkBlue'>
