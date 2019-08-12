@@ -271,16 +271,16 @@ class Settings extends Component {
                         <X.Button
                             color='settingsDefault'
                             onPress={ () => ChffrPlus.openSpeedcam() }>
-                            Traffic Alert
+                            TomTom
                         </X.Button>
                     </X.Table>
-                    {/*<X.Table color='darkBlue'>*/}
-                        {/*<X.Button*/}
-                            {/*color='settingsDefault'*/}
-                            {/*onPress={ () => ChffrPlus.openAutonavi() }>*/}
-                            {/*AutoNavi*/}
-                        {/*</X.Button>*/}
-                    {/*</X.Table>*/}
+                    <X.Table color='darkBlue'>
+                        <X.Button
+                            color='settingsDefault'
+                            onPress={ () => ChffrPlus.openAutonavi() }>
+                            AutoNavi
+                        </X.Button>
+                    </X.Table>
                     <X.Table color='darkBlue'>
                         <X.Button
                             color='settingsDefault'
