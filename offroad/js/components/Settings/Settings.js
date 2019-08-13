@@ -270,8 +270,8 @@ class Settings extends Component {
                     <X.Table color='darkBlue'>
                         <X.Button
                             color='settingsDefault'
-                            onPress={ () => ChffrPlus.openSpeedcam() }>
-                            TomTom
+                            onPress={ () => ChffrPlus.openWaze() }>
+                            Waze
                         </X.Button>
                     </X.Table>
                     <X.Table color='darkBlue'>
