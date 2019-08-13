@@ -254,9 +254,9 @@ class ChffrPlusModule(val ctx: ReactApplicationContext) :
     }
 
     @ReactMethod
-    fun openWaze() {
+    fun openTomTom() {
         val pm = reactApplicationContext.packageManager
-        val intent = pm.getLaunchIntentForPackage("com.waze")
+        val intent = pm.getLaunchIntentForPackage("com.tomtom.speedcams.android.map")
         intent.putExtra("extra_prefs_show_button_bar", true)
         startActivityWithIntent(intent)
     }
