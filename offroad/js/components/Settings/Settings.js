@@ -271,7 +271,7 @@ class Settings extends Component {
                         <X.Button
                             color='settingsDefault'
                             onPress={ () => ChffrPlus.openWaze() }>
-                            Waze
+                            位智
                         </X.Button>
                     </X.Table>
                     <X.Table color='darkBlue'>
