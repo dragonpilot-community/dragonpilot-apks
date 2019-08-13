@@ -245,9 +245,9 @@ class ChffrPlusModule(val ctx: ReactApplicationContext) :
     }
 
     @ReactMethod
-    fun openSpeedcam() {
+    fun openWaze() {
         val pm = reactApplicationContext.packageManager
-        val intent = pm.getLaunchIntentForPackage("com.tomtom.speedcams.android.map")
+        val intent = pm.getLaunchIntentForPackage("com.waze")
         intent.putExtra("extra_prefs_show_button_bar", true)
         startActivityWithIntent(intent)
     }
@@ -268,7 +268,6 @@ class ChffrPlusModule(val ctx: ReactApplicationContext) :
         } catch (e: IOException) {
             CloudLog.exception("BaseUIReactModule.reboot", e)
         }
-
     }
 
     @ReactMethod
