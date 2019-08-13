@@ -161,10 +161,10 @@ class DragonpilotSettings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
-                            title='Enable Lateral Control'
+                            title='啟用橫向控制'
                             value={ !!parseInt(dragonLatCtrl) }
                             iconSource={ Icons.developer }
-                            description='Enable this if you wish dp to control the steering for you.'
+                            description='啟用這個選項後，dp 將可以控制您的方向盤。'
                             isExpanded={ expandedCell == 'lat_ctrl' }
                             handleExpanded={ () => this.handleExpanded('lat_ctrl') }
                             handleChanged={ this.props.setLatCtrl } />
@@ -173,7 +173,7 @@ class DragonpilotSettings extends Component {
                             title='允許踩油門'
                             value={ !!parseInt(dragonAllowGas) }
                             iconSource={ Icons.developer }
-                            description='啟用這個選項後，當 OP 在控制時您仍然可以踩油門。'
+                            description='啟用這個選項後，當 dp 在控制時您仍然可以踩油門。'
                             isExpanded={ expandedCell == 'allow_gas' }
                             handleExpanded={ () => this.handleExpanded('allow_gas') }
                             handleChanged={ this.props.setAllowGas } />
@@ -236,7 +236,7 @@ class DragonpilotSettings extends Component {
                             title='啟用 Noctua 風扇模式'
                             value={ !!parseInt(dragonNoctuaMode) }
                             iconSource={ Icons.developer }
-                            description='啟用這個選項後，EON 的風扇將會一直以全速運轉，這個功能適合有改裝 Noctua 鳳扇的用戶，需要重新開機。'
+                            description='啟用這個選項後，EON 的風扇將會一直以全速運轉，這個功能適合有改裝 Noctua 風扇的用戶，需要重新開機。'
                             isExpanded={ expandedCell == 'enable_noctua_mode' }
                             handleExpanded={ () => this.handleExpanded('enable_noctua_mode') }
                             handleChanged={ this.props.setNoctuaMode } />
