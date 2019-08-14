@@ -43,4 +43,6 @@ export const Params = {
     KEY_UI_FACE: 'DragonUIFace',
     KEY_UI_DEV: 'DragonUIDev',
     KEY_UI_DEV_MINI: 'DragonUIDevMini',
+    KEY_BOOT_TOMTOM: 'DragonBootTomTom',
+    KEY_BOOT_AUTONAVI: 'DragonBootAutonavi',
 };
