@@ -17,7 +17,7 @@ import Styles from './DragonpilotSettingsStyles';
 const SettingsRoutes = {
     PRIMARY: 'PRIMARY',
     TOYOTA: 'TOYOTA',
-    HONDA: 'HONDA',
+    // HONDA: 'HONDA',
     UI: 'UI',
 }
 
@@ -72,12 +72,12 @@ class DragonpilotSettings extends Component {
                 context: '',
                 route: SettingsRoutes.TOYOTA,
             },
-            {
-                icon: Icons.developer,
-                title: 'Honda',
-                context: '',
-                route: SettingsRoutes.HONDA,
-            },
+            // {
+            //     icon: Icons.developer,
+            //     title: 'Honda',
+            //     context: '',
+            //     route: SettingsRoutes.HONDA,
+            // },
             {
                 icon: Icons.developer,
                 title: '介面',
@@ -133,6 +133,8 @@ class DragonpilotSettings extends Component {
                 DragonAutoShutdownAt: dragonAutoShutdownAt,
                 DragonNoctuaMode: dragonNoctuaMode,
                 DragonCacheCar: dragonCacheCar,
+                DragonBootTomTom: dragonBootTomTom,
+                DragonBootAutonavi: dragonBootAutonavi,
             }
         } = this.props;
         const { expandedCell } = this.state;
@@ -249,6 +251,24 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'cache_fingerprint' }
                             handleExpanded={ () => this.handleExpanded('cache_fingerprint') }
                             handleChanged={ this.props.setCacheCar } />
+                        <X.TableCell
+                            type='switch'
+                            title='Run TomTom At Startup'
+                            value={ !!parseInt(dragonBootTomTom) }
+                            iconSource={ Icons.developer }
+                            description='Enable this will run TomTom at startup.'
+                            isExpanded={ expandedCell == 'run_tomtom' }
+                            handleExpanded={ () => this.handleExpanded('run_tomtom') }
+                            handleChanged={ this.props.setTomTom } />
+                        <X.TableCell
+                            type='switch'
+                            title='Run Autonavi At Startup'
+                            value={ !!parseInt(dragonBootAutonavi) }
+                            iconSource={ Icons.developer }
+                            description='Enable this will run Autonavi at startup.'
+                            isExpanded={ expandedCell == 'run_autonavi' }
+                            handleExpanded={ () => this.handleExpanded('run_autonavi') }
+                            handleChanged={ this.props.setAutonavi } />
                     </X.Table>
                     <X.Table color='darkBlue' padding='big'>
                         <X.Button
@@ -300,32 +320,32 @@ class DragonpilotSettings extends Component {
         )
     }
 
-    renderHondaSettings() {
-        const { expandedCell } = this.state;
-        return (
-            <View style={ Styles.settings }>
-                <View style={ Styles.settingsHeader }>
-                    <X.Button
-                        color='ghost'
-                        size='small'
-                        onPress={ () => this.handlePressedBack() }>
-                        {'<  Honda 設定'}
-                    </X.Button>
-                </View>
-                <ScrollView
-                    ref="settingsScrollView"
-                    style={ Styles.settingsWindow }>
-                    <View>
-                        <X.Table>
-                            <X.TableCell
-                                title='Device Paired'
-                                value='Yes' />
-                        </X.Table>
-                    </View>
-                </ScrollView>
-            </View>
-        )
-    }
+    // renderHondaSettings() {
+    //     const { expandedCell } = this.state;
+    //     return (
+    //         <View style={ Styles.settings }>
+    //             <View style={ Styles.settingsHeader }>
+    //                 <X.Button
+    //                     color='ghost'
+    //                     size='small'
+    //                     onPress={ () => this.handlePressedBack() }>
+    //                     {'<  Honda Settings'}
+    //                 </X.Button>
+    //             </View>
+    //             <ScrollView
+    //                 ref="settingsScrollView"
+    //                 style={ Styles.settingsWindow }>
+    //                 <View>
+    //                     <X.Table>
+    //                         <X.TableCell
+    //                             title='Device Paired'
+    //                             value='Yes' />
+    //                     </X.Table>
+    //                 </View>
+    //             </ScrollView>
+    //         </View>
+    //     )
+    // }
 
     renderUISettings() {
         const {
@@ -411,8 +431,8 @@ class DragonpilotSettings extends Component {
                 return this.renderPrimarySettings();
             case SettingsRoutes.TOYOTA:
                 return this.renderToyotaSettings();
-            case SettingsRoutes.HONDA:
-                return this.renderHondaSettings();
+            // case SettingsRoutes.HONDA:
+            //     return this.renderHondaSettings();
             case SettingsRoutes.UI:
                 return this.renderUISettings();
         }
@@ -492,6 +512,12 @@ const mapDispatchToProps = dispatch => ({
     },
     setUIDevMini: (val) => {
         dispatch(updateParam(Params.KEY_UI_DEV_MINI, (val | 0).toString()));
+    },
+    setTomTom: (val) => {
+        dispatch(updateParam(Params.KEY_BOOT_TOMTOM, (val | 0).toString()));
+    },
+    setAutonavi: (val) => {
+        dispatch(updateParam(Params.KEY_BOOT_AUTONAVI, (val | 0).toString()));
     },
 });
 
