@@ -253,19 +253,19 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setCacheCar } />
                         <X.TableCell
                             type='switch'
-                            title='Run TomTom At Startup'
+                            title='開機啟動 TomTom'
                             value={ !!parseInt(dragonBootTomTom) }
                             iconSource={ Icons.developer }
-                            description='Enable this will run TomTom at startup.'
+                            description='啟用這個選項後，TomTom 將在開機後自動啟動。'
                             isExpanded={ expandedCell == 'run_tomtom' }
                             handleExpanded={ () => this.handleExpanded('run_tomtom') }
                             handleChanged={ this.props.setTomTom } />
                         <X.TableCell
                             type='switch'
-                            title='Run Autonavi At Startup'
+                            title='開機啟動高德地圖'
                             value={ !!parseInt(dragonBootAutonavi) }
                             iconSource={ Icons.developer }
-                            description='Enable this will run Autonavi at startup.'
+                            description='啟用這個選項後，高德地圖將在開機後自動啟動。'
                             isExpanded={ expandedCell == 'run_autonavi' }
                             handleExpanded={ () => this.handleExpanded('run_autonavi') }
                             handleChanged={ this.props.setAutonavi } />
