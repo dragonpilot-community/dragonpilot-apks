@@ -220,7 +220,7 @@ class DragonpilotSettings extends Component {
                             title='啟用安全監控'
                             value={ !!parseInt(dragonEnableDriverSafetyCheck) }
                             iconSource={ Icons.developer }
-                            description='如果您關閉這個選項，DP 的監駛監控功能將完全取消，除非您知道您在做什麼，不然我們不建議您使用，我們也不會負任何事故的責任。'
+                            description='如果您關閉這個選項，DP 的駕駛監控功能將完全取消，除非您知道您在做什麼，不然我們不建議您使用，我們也不會負任何事故的責任。'
                             isExpanded={ expandedCell == 'safetyCheck' }
                             handleExpanded={ () => this.handleExpanded('safetyCheck') }
                             handleChanged={ this.props.setEnableDriverSafetyCheck } />

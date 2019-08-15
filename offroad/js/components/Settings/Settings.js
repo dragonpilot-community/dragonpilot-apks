@@ -271,7 +271,7 @@ class Settings extends Component {
                         <X.Button
                             color='settingsDefault'
                             onPress={ () => ChffrPlus.openTomTom() }>
-                            TomTom
+                            TomTom 測速照相
                         </X.Button>
                     </X.Table>
                     <X.Table color='darkBlue'>
