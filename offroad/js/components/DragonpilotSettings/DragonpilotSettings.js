@@ -298,9 +298,9 @@ class DragonpilotSettings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='custom'
-                            title='Steering Monitor Timer'
+                            title='方向盤監控計時 (分鐘)'
                             iconSource={ Icons.developer }
-                            description='Adjust the steering monitor timer, set this to 0 if you would like to disable steering monitor. Default is 3 minutes.'
+                            description='調整方向盤監控計時，如果您想取消方向盤監控，請將它設成 0。預設值為 3 分鐘。'
                             isExpanded={ expandedCell == 'steering_monitor_timer' }
                             handleExpanded={ () => this.handleExpanded('steering_monitor_timer') }>
                             <X.Button
@@ -335,7 +335,7 @@ class DragonpilotSettings extends Component {
                             size='small'
                             color='settingsDefault'
                             onPress={ () => ChffrPlus.openLocaleSettings() }>
-                            Open Locale Settings
+                            打開語系設定
                         </X.Button>
                     </X.Table>
                 </ScrollView>
