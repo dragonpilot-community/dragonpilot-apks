@@ -47,6 +47,7 @@ const PARAMS = [
   "DragonUIDevMini",
   "DragonBootTomTom",
   "DragonBootAutonavi",
+  "DragonSteeringMonitorTimer",
 ];
 
 export function refreshParams() {

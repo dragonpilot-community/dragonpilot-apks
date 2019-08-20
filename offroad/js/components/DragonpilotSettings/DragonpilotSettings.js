@@ -23,6 +23,8 @@ const SettingsRoutes = {
 
 const Icons = {
     developer: require('../../img/icon_shell.png'),
+    plus: require('../../img/icon_plus.png'),
+    minus: require('../../img/icon_minus.png'),
 }
 
 class DragonpilotSettings extends Component {
@@ -36,10 +38,17 @@ class DragonpilotSettings extends Component {
         this.state = {
             route: SettingsRoutes.PRIMARY,
             expandedCell: null,
+            steeringMonitorTimerInt: '3',
         }
     }
 
     async componentWillMount() {
+        const {
+            params: {
+                DragonSteeringMonitorTimer: dragonSteeringMonitorTimer
+            },
+        } = this.props;
+        this.setState({ steeringMonitorTimerInt: parseInt(dragonSteeringMonitorTimer) || 3 })
     }
 
     handleExpanded(key) {
@@ -62,6 +71,21 @@ class DragonpilotSettings extends Component {
     handleNavigatedFromMenu(route) {
         this.setState({ route: route })
         this.refs.settingsScrollView.scrollTo({ x: 0, y: 0, animated: false })
+    }
+
+    handleChangedSteeringMonitorTimer(operator) {
+        const { steeringMonitorTimerInt } = this.state;
+        let _steeringMonitorTimer;
+        switch (operator) {
+          case 'increment':
+              _steeringMonitorTimer = steeringMonitorTimerInt + 1;
+              break;
+          case 'decrement':
+              _steeringMonitorTimer = Math.max(0, steeringMonitorTimerInt - 1);
+              break;
+        }
+        this.setState({ steeringMonitorTimerInt: _steeringMonitorTimer });
+        this.props.setSteeringMonitorTimer(_steeringMonitorTimer);
     }
 
     renderSettingsMenu() {
@@ -135,9 +159,10 @@ class DragonpilotSettings extends Component {
                 DragonCacheCar: dragonCacheCar,
                 DragonBootTomTom: dragonBootTomTom,
                 DragonBootAutonavi: dragonBootAutonavi,
+                DragonSteeringMonitorTimer: dragonSteeringMonitorTimer,
             }
         } = this.props;
-        const { expandedCell } = this.state;
+        const { expandedCell, steeringMonitorTimerInt } = this.state;
         return (
             <View style={ Styles.settings }>
                 <View style={ Styles.settingsHeader }>
@@ -269,6 +294,41 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'run_autonavi' }
                             handleExpanded={ () => this.handleExpanded('run_autonavi') }
                             handleChanged={ this.props.setAutonavi } />
+                    </X.Table>
+                    <X.Table color='darkBlue'>
+                        <X.TableCell
+                            type='custom'
+                            title='Steering Monitor Timer'
+                            iconSource={ Icons.developer }
+                            description='Adjust the steering monitor timer, set this to 0 if you would like to disable steering monitor. Default is 3 minutes.'
+                            isExpanded={ expandedCell == 'steering_monitor_timer' }
+                            handleExpanded={ () => this.handleExpanded('steering_monitor_timer') }>
+                            <X.Button
+                                color='ghost'
+                                activeOpacity={ 1 }
+                                style={ Styles.settingsSteeringMonitorTimer }>
+                                <X.Button
+                                    style={ [Styles.settingsNumericButton, { opacity: steeringMonitorTimerInt <= 0? 0.1 : 0.8 }] }
+                                    onPress={ () => this.handleChangedSteeringMonitorTimer('decrement')  }>
+                                    <X.Image
+                                        source={ Icons.minus }
+                                        style={ Styles.settingsNumericIcon } />
+                                </X.Button>
+                                <X.Text
+                                    color='white'
+                                    weight='semibold'
+                                    style={ Styles.settingsNumericValue }>
+                                    { steeringMonitorTimerInt }
+                                </X.Text>
+                                <X.Button
+                                    style={ [Styles.settingsNumericButton, { opacity: 0.8 }] }
+                                    onPress={ () => this.handleChangedSteeringMonitorTimer('increment') }>
+                                    <X.Image
+                                        source={ Icons.plus }
+                                        style={ Styles.settingsNumericIcon } />
+                                </X.Button>
+                            </X.Button>
+                        </X.TableCell>
                     </X.Table>
                     <X.Table color='darkBlue' padding='big'>
                         <X.Button
@@ -518,6 +578,9 @@ const mapDispatchToProps = dispatch => ({
     },
     setAutonavi: (val) => {
         dispatch(updateParam(Params.KEY_BOOT_AUTONAVI, (val | 0).toString()));
+    },
+    setSteeringMonitorTimer: (val) => {
+        dispatch(updateParam(Params.KEY_STEERING_MONITOR_TIMER, (val).toString()));
     },
 });
 
