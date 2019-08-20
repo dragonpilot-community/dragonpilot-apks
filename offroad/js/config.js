@@ -45,4 +45,5 @@ export const Params = {
     KEY_UI_DEV_MINI: 'DragonUIDevMini',
     KEY_BOOT_TOMTOM: 'DragonBootTomTom',
     KEY_BOOT_AUTONAVI: 'DragonBootAutonavi',
+    KEY_STEERING_MONITOR_TIMER: 'DragonSteeringMonitorTimer',
 };

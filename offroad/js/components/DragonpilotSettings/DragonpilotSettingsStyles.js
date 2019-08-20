@@ -58,13 +58,6 @@ export default StyleSheet.create({
     display: 'flex',
     paddingBottom: 20,
   },
-  settingsSpeedLimitOffset: {
-    alignItems: 'center',
-    display: 'flex',
-    height: 66,
-    flexDirection: 'row',
-    width: '100%',
-  },
   settingsNumericButton: {
     backgroundColor: 'transparent',
     height: 22,
@@ -78,5 +71,12 @@ export default StyleSheet.create({
   settingsNumericValue: {
     textAlign: 'center',
     width: 40,
+  },
+  settingsSteeringMonitorTimer: {
+    alignItems: 'center',
+    display: 'flex',
+    height: 66,
+    flexDirection: 'row',
+    width: '100%',
   },
 })
