@@ -16,9 +16,11 @@ import Styles from './DragonpilotSettingsStyles';
 
 const SettingsRoutes = {
     PRIMARY: 'PRIMARY',
+    SAFETY: 'SAFETY',
+    UI: 'UI',
+    APP: 'APP',
     TOYOTA: 'TOYOTA',
     // HONDA: 'HONDA',
-    UI: 'UI',
 }
 
 const Icons = {
@@ -39,16 +41,25 @@ class DragonpilotSettings extends Component {
             route: SettingsRoutes.PRIMARY,
             expandedCell: null,
             steeringMonitorTimerInt: '3',
+            enableTomTom: false,
+            enableAutonavi: false,
+            enableMixplorer: false,
         }
     }
 
     async componentWillMount() {
         const {
             params: {
-                DragonSteeringMonitorTimer: dragonSteeringMonitorTimer
+                DragonSteeringMonitorTimer: dragonSteeringMonitorTimer,
+                DragonEnableTomTom: dragonEnableTomTom,
+                DragonEnableAutonavi: dragonEnableAutonavi,
+                DragonEnableMixplorer: dragonEnableMixplorer,
             },
         } = this.props;
-        this.setState({ steeringMonitorTimerInt: parseInt(dragonSteeringMonitorTimer) || 3 })
+        this.setState({ steeringMonitorTimerInt: dragonSteeringMonitorTimer === '0'? 0 : parseInt(dragonSteeringMonitorTimer) || 3 })
+        this.setState({ enableTomTom: dragonEnableTomTom === '1' })
+        this.setState({ enableAutonavi: dragonEnableAutonavi === '1' })
+        this.setState({ enableMixplorer: dragonEnableMixplorer === '1' })
     }
 
     handleExpanded(key) {
@@ -88,8 +99,34 @@ class DragonpilotSettings extends Component {
         this.props.setSteeringMonitorTimer(_steeringMonitorTimer);
     }
 
+    handleRunApp(app, val) {
+        switch (app) {
+            case 'mixplorer':
+                this.props.runMixplorer(val);
+                break;
+        }
+    }
+
     renderSettingsMenu() {
         const settingsMenuItems = [
+            {
+                icon: Icons.developer,
+                title: 'Safety',
+                context: '',
+                route: SettingsRoutes.SAFETY,
+            },
+            {
+                icon: Icons.developer,
+                title: 'UI',
+                context: '',
+                route: SettingsRoutes.UI,
+            },
+            {
+                icon: Icons.developer,
+                title: '3rd Party Apps',
+                context: '',
+                route: SettingsRoutes.APP,
+            },
             {
                 icon: Icons.developer,
                 title: 'Toyota/Lexus',
@@ -102,12 +139,6 @@ class DragonpilotSettings extends Component {
             //     context: '',
             //     route: SettingsRoutes.HONDA,
             // },
-            {
-                icon: Icons.developer,
-                title: 'UI',
-                context: '',
-                route: SettingsRoutes.UI,
-            },
         ];
         return settingsMenuItems.map((item, idx) => {
             const cellButtonStyle = [
@@ -147,22 +178,15 @@ class DragonpilotSettings extends Component {
     renderPrimarySettings() {
         const {
             params: {
-                DragonLatCtrl: dragonLatCtrl,
-                DragonAllowGas: dragonAllowGas,
                 DragonEnableLogger: dragonEnableLogger,
                 DragonEnableUploader: dragonEnableUploader,
-                DragonEnableSteeringOnSignal: dragonEnableSteeringOnSignal,
                 DragonEnableDashcam: dragonEnableDashcam,
-                DragonEnableDriverSafetyCheck: dragonEnableDriverSafetyCheck,
                 DragonAutoShutdownAt: dragonAutoShutdownAt,
                 DragonNoctuaMode: dragonNoctuaMode,
                 DragonCacheCar: dragonCacheCar,
-                DragonBootTomTom: dragonBootTomTom,
-                DragonBootAutonavi: dragonBootAutonavi,
-                DragonSteeringMonitorTimer: dragonSteeringMonitorTimer,
             }
         } = this.props;
-        const { expandedCell, steeringMonitorTimerInt } = this.state;
+        const { expandedCell, enableMixplorer } = this.state;
         return (
             <View style={ Styles.settings }>
                 <View style={ Styles.settingsHeader }>
@@ -185,25 +209,16 @@ class DragonpilotSettings extends Component {
                             value='dinglx (https://github.com/dingliangxue/)'
                             valueTextSize='tiny' />
                     </X.Table>
+                    {enableMixplorer &&
                     <X.Table color='darkBlue'>
-                        <X.TableCell
-                            type='switch'
-                            title='Enable Lateral Control'
-                            value={ !!parseInt(dragonLatCtrl) }
-                            iconSource={ Icons.developer }
-                            description='Enable this if you wish dp to control the steering for you.'
-                            isExpanded={ expandedCell == 'lat_ctrl' }
-                            handleExpanded={ () => this.handleExpanded('lat_ctrl') }
-                            handleChanged={ this.props.setLatCtrl } />
-                        <X.TableCell
-                            type='switch'
-                            title='Allow Gas'
-                            value={ !!parseInt(dragonAllowGas) }
-                            iconSource={ Icons.developer }
-                            description='Enable this if you wish to use gas on engaged.'
-                            isExpanded={ expandedCell == 'allow_gas' }
-                            handleExpanded={ () => this.handleExpanded('allow_gas') }
-                            handleChanged={ this.props.setAllowGas } />
+                        <X.Button
+                            color='settingsDefault'
+                            onPress={() => this.handleRunApp('mixplorer', '1')}>
+                            MiXplorer File Manager
+                        </X.Button>
+                    </X.Table>
+                    }
+                    <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
                             title='Enable Logger'
@@ -224,15 +239,6 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setEnableUploader } />
                         <X.TableCell
                             type='switch'
-                            title='Enable Steering On Signal'
-                            value={ !!parseInt(dragonEnableSteeringOnSignal) }
-                            iconSource={ Icons.developer }
-                            description='If you enable this, it will temporary disable steering control when left/right blinker is on and resume control 1 second after the blinker is off.'
-                            isExpanded={ expandedCell == 'enable_steering_on_signal' }
-                            handleExpanded={ () => this.handleExpanded('enable_steering_on_signal') }
-                            handleChanged={ this.props.setEnableSteeringOnSignal } />
-                        <X.TableCell
-                            type='switch'
                             title='Enable Dashcam'
                             value={ !!parseInt(dragonEnableDashcam) }
                             iconSource={ Icons.developer }
@@ -240,15 +246,6 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'dashcam' }
                             handleExpanded={ () => this.handleExpanded('dashcam') }
                             handleChanged={ this.props.setEnableDashcam } />
-                        <X.TableCell
-                            type='switch'
-                            title='Enable Safety Check'
-                            value={ !!parseInt(dragonEnableDriverSafetyCheck) }
-                            iconSource={ Icons.developer }
-                            description='If you disable this, the driver safety check will be disabled completely, we don not recommend that you turn on this unless you know what you are doing, we hold no responsibility if you disable this option.'
-                            isExpanded={ expandedCell == 'safetyCheck' }
-                            handleExpanded={ () => this.handleExpanded('safetyCheck') }
-                            handleChanged={ this.props.setEnableDriverSafetyCheck } />
                         <X.TableCell
                             type='switch'
                             title='Enable Auto Shutdown'
@@ -276,26 +273,83 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'cache_fingerprint' }
                             handleExpanded={ () => this.handleExpanded('cache_fingerprint') }
                             handleChanged={ this.props.setCacheCar } />
+                    </X.Table>
+                    <X.Table color='darkBlue' padding='big'>
+                        <X.Button
+                            size='small'
+                            color='settingsDefault'
+                            onPress={ () => ChffrPlus.openLocaleSettings() }>
+                            Open Locale Settings
+                        </X.Button>
+                    </X.Table>
+                </ScrollView>
+            </View>
+        )
+    }
+
+    renderSafetySettings() {
+        const {
+            params: {
+                DragonLatCtrl: dragonLatCtrl,
+                DragonAllowGas: dragonAllowGas,
+                DragonEnableSteeringOnSignal: dragonEnableSteeringOnSignal,
+                DragonEnableDriverSafetyCheck: dragonEnableDriverSafetyCheck,
+            },
+        } = this.props;
+        const { expandedCell, steeringMonitorTimerInt } = this.state;
+        return (
+            <View style={ Styles.settings }>
+                <View style={ Styles.settingsHeader }>
+                    <X.Button
+                        color='ghost'
+                        size='small'
+                        onPress={ () => this.handlePressedBack() }>
+                        {'<  Safety Settings'}
+                    </X.Button>
+                </View>
+                <ScrollView
+                    ref="settingsScrollView"
+                    style={ Styles.settingsWindow }>
+                    <X.Line color='transparent' spacing='tiny' />
+                    <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
-                            title='Run TomTom At Startup'
-                            value={ !!parseInt(dragonBootTomTom) }
+                            title='Enable Lateral Control'
+                            value={ !!parseInt(dragonLatCtrl) }
                             iconSource={ Icons.developer }
-                            description='Enable this will run TomTom at startup.'
-                            isExpanded={ expandedCell == 'run_tomtom' }
-                            handleExpanded={ () => this.handleExpanded('run_tomtom') }
-                            handleChanged={ this.props.setTomTom } />
+                            description='Enable this if you wish dp to control the steering for you.'
+                            isExpanded={ expandedCell == 'lat_ctrl' }
+                            handleExpanded={ () => this.handleExpanded('lat_ctrl') }
+                            handleChanged={ this.props.setLatCtrl } />
                         <X.TableCell
                             type='switch'
-                            title='Run Autonavi At Startup'
-                            value={ !!parseInt(dragonBootAutonavi) }
+                            title='Allow Gas'
+                            value={ !!parseInt(dragonAllowGas) }
                             iconSource={ Icons.developer }
-                            description='Enable this will run Autonavi at startup.'
-                            isExpanded={ expandedCell == 'run_autonavi' }
-                            handleExpanded={ () => this.handleExpanded('run_autonavi') }
-                            handleChanged={ this.props.setAutonavi } />
+                            description='Enable this if you wish to use gas on engaged.'
+                            isExpanded={ expandedCell == 'allow_gas' }
+                            handleExpanded={ () => this.handleExpanded('allow_gas') }
+                            handleChanged={ this.props.setAllowGas } />
+                        <X.TableCell
+                            type='switch'
+                            title='Enable Steering On Signal'
+                            value={ !!parseInt(dragonEnableSteeringOnSignal) }
+                            iconSource={ Icons.developer }
+                            description='If you enable this, it will temporary disable steering control when left/right blinker is on and resume control 1 second after the blinker is off.'
+                            isExpanded={ expandedCell == 'enable_steering_on_signal' }
+                            handleExpanded={ () => this.handleExpanded('enable_steering_on_signal') }
+                            handleChanged={ this.props.setEnableSteeringOnSignal } />
                     </X.Table>
                     <X.Table color='darkBlue'>
+                        <X.TableCell
+                            type='switch'
+                            title='Enable Safety Check'
+                            value={ !!parseInt(dragonEnableDriverSafetyCheck) }
+                            iconSource={ Icons.developer }
+                            description='If you disable this, the driver safety check will be disabled completely, we don not recommend that you turn on this unless you know what you are doing, we hold no responsibility if you disable this option.'
+                            isExpanded={ expandedCell == 'safetyCheck' }
+                            handleExpanded={ () => this.handleExpanded('safetyCheck') }
+                            handleChanged={ this.props.setEnableDriverSafetyCheck } />
                         <X.TableCell
                             type='custom'
                             title='Steering Monitor Timer'
@@ -330,13 +384,86 @@ class DragonpilotSettings extends Component {
                             </X.Button>
                         </X.TableCell>
                     </X.Table>
-                    <X.Table color='darkBlue' padding='big'>
-                        <X.Button
-                            size='small'
-                            color='settingsDefault'
-                            onPress={ () => ChffrPlus.openLocaleSettings() }>
-                            Open Locale Settings
-                        </X.Button>
+                </ScrollView>
+            </View>
+        )
+    }
+
+    renderAPPSettings() {
+        const {
+            params: {
+                DragonEnableTomTom: dragonEnableTomTom,
+                DragonBootTomTom: dragonBootTomTom,
+                DragonEnableAutonavi: dragonEnableAutonavi,
+                DragonBootAutonavi: dragonBootAutonavi,
+                DragonEnableMixplorer: dragonEnableMixplorer,
+            },
+        } = this.props;
+        const { expandedCell, enableTomTom, enableAutonavi } = this.state;
+        return (
+            <View style={ Styles.settings }>
+                <View style={ Styles.settingsHeader }>
+                    <X.Button
+                        color='ghost'
+                        size='small'
+                        onPress={ () => this.handlePressedBack() }>
+                        {'<  3rd Party Apps Settings'}
+                    </X.Button>
+                </View>
+                <ScrollView
+                    ref="settingsScrollView"
+                    style={ Styles.settingsWindow }>
+                    <X.Line color='transparent' spacing='tiny' />
+                    <X.Table color='darkBlue'>
+                        <X.TableCell
+                            type='switch'
+                            title='Enable TomTom App'
+                            value={ !!parseInt(dragonEnableTomTom) }
+                            iconSource={ Icons.developer }
+                            description='Enable this if you wish to use TomTom Safety Camera App.'
+                            isExpanded={ expandedCell == 'enable_tomtom' }
+                            handleExpanded={ () => this.handleExpanded('enable_tomtom') }
+                            handleChanged={ this.props.setEnableTomTom } />
+                        {enableTomTom &&
+                        <X.TableCell
+                            type='switch'
+                            title='Run TomTom At Startup'
+                            value={!!parseInt(dragonBootTomTom)}
+                            iconSource={Icons.developer}
+                            description='Enable this will run TomTom at startup.'
+                            isExpanded={expandedCell == 'run_tomtom'}
+                            handleExpanded={() => this.handleExpanded('run_tomtom')}
+                            handleChanged={this.props.setBootTomTom}/>
+                        }
+                        <X.TableCell
+                            type='switch'
+                            title='Enable Autonavi App'
+                            value={ !!parseInt(dragonEnableAutonavi) }
+                            iconSource={ Icons.developer }
+                            description='Enable this if you wish to use Autonavi Map App.'
+                            isExpanded={ expandedCell == 'enable_autonavi' }
+                            handleExpanded={ () => this.handleExpanded('enable_autonavi') }
+                            handleChanged={ this.props.setEnableAutonavi} />
+                        {enableAutonavi &&
+                        <X.TableCell
+                            type='switch'
+                            title='Run Autonavi At Startup'
+                            value={!!parseInt(dragonBootAutonavi)}
+                            iconSource={Icons.developer}
+                            description='Enable this will run Autonavi at startup.'
+                            isExpanded={expandedCell == 'run_autonavi'}
+                            handleExpanded={() => this.handleExpanded('run_autonavi')}
+                            handleChanged={this.props.setBootAutonavi}/>
+                        }
+                        <X.TableCell
+                            type='switch'
+                            title='Enable MiXplorer App'
+                            value={ !!parseInt(dragonEnableMixplorer) }
+                            iconSource={ Icons.developer }
+                            description='Enable this if you wish to use MiXplorer file manager App.'
+                            isExpanded={ expandedCell == 'enable_mixplorer' }
+                            handleExpanded={ () => this.handleExpanded('enable_mixplorer') }
+                            handleChanged={ this.props.setEnableMixplorer} />
                     </X.Table>
                 </ScrollView>
             </View>
@@ -489,12 +616,16 @@ class DragonpilotSettings extends Component {
         switch (route) {
             case SettingsRoutes.PRIMARY:
                 return this.renderPrimarySettings();
+            case SettingsRoutes.SAFETY:
+                return this.renderSafetySettings();
             case SettingsRoutes.TOYOTA:
                 return this.renderToyotaSettings();
             // case SettingsRoutes.HONDA:
             //     return this.renderHondaSettings();
             case SettingsRoutes.UI:
                 return this.renderUISettings();
+            case SettingsRoutes.APP:
+                return this.renderAPPSettings();
         }
     }
 
@@ -573,14 +704,26 @@ const mapDispatchToProps = dispatch => ({
     setUIDevMini: (val) => {
         dispatch(updateParam(Params.KEY_UI_DEV_MINI, (val | 0).toString()));
     },
-    setTomTom: (val) => {
+    setEnableTomTom: (val) => {
+        dispatch(updateParam(Params.KEY_ENABLE_TOMTOM, (val | 0).toString()));
+    },
+    setBootTomTom: (val) => {
         dispatch(updateParam(Params.KEY_BOOT_TOMTOM, (val | 0).toString()));
     },
-    setAutonavi: (val) => {
+    setEnableAutonavi: (val) => {
+        dispatch(updateParam(Params.KEY_ENABLE_AUTONAVI, (val | 0).toString()));
+    },
+    setBootAutonavi: (val) => {
         dispatch(updateParam(Params.KEY_BOOT_AUTONAVI, (val | 0).toString()));
+    },
+    setEnableMixplorer: (val) => {
+        dispatch(updateParam(Params.KEY_ENABLE_MIXPLORER, (val | 0).toString()));
     },
     setSteeringMonitorTimer: (val) => {
         dispatch(updateParam(Params.KEY_STEERING_MONITOR_TIMER, (val).toString()));
+    },
+    runMixplorer: (val) => {
+        dispatch(updateParam(Params.KEY_RUN_MIXPLORER, (val).toString()));
     },
 });
 
