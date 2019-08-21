@@ -191,7 +191,7 @@ class DragonpilotSettings extends Component {
                         <X.Button
                             color='settingsDefault'
                             onPress={ () => ChffrPlus.openMixplorer() }>
-                            MiXplorer File Manager
+                            MiXplorer 檔案管理器
                         </X.Button>
                     </X.Table>
                     <X.Table color='darkBlue'>
