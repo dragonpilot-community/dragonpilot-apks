@@ -45,8 +45,14 @@ const PARAMS = [
   "DragonUIFace",
   "DragonUIDev",
   "DragonUIDevMini",
+  "DragonEnableTomTom",
   "DragonBootTomTom",
+  "DragonRunTomTom",
+  "DragonEnableAutonavi",
   "DragonBootAutonavi",
+  "DragonRunAutonavi",
+  "DragonEnableMixplorer",
+  "DragonRunMixplorer",
   "DragonSteeringMonitorTimer",
 ];
 

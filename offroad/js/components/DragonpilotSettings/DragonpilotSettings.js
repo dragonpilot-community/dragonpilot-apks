@@ -18,6 +18,7 @@ const SettingsRoutes = {
     PRIMARY: 'PRIMARY',
     SAFETY: 'SAFETY',
     UI: 'UI',
+    APP: 'APP',
     TOYOTA: 'TOYOTA',
     // HONDA: 'HONDA',
 }
@@ -40,16 +41,25 @@ class DragonpilotSettings extends Component {
             route: SettingsRoutes.PRIMARY,
             expandedCell: null,
             steeringMonitorTimerInt: '3',
+            enableTomTom: false,
+            enableAutonavi: false,
+            enableMixplorer: false,
         }
     }
 
     async componentWillMount() {
         const {
             params: {
-                DragonSteeringMonitorTimer: dragonSteeringMonitorTimer
+                DragonSteeringMonitorTimer: dragonSteeringMonitorTimer,
+                DragonEnableTomTom: dragonEnableTomTom,
+                DragonEnableAutonavi: dragonEnableAutonavi,
+                DragonEnableMixplorer: dragonEnableMixplorer,
             },
         } = this.props;
         this.setState({ steeringMonitorTimerInt: dragonSteeringMonitorTimer === '0'? 0 : parseInt(dragonSteeringMonitorTimer) || 3 })
+        this.setState({ enableTomTom: dragonEnableTomTom === '1' })
+        this.setState({ enableAutonavi: dragonEnableAutonavi === '1' })
+        this.setState({ enableMixplorer: dragonEnableMixplorer === '1' })
     }
 
     handleExpanded(key) {
@@ -89,19 +99,33 @@ class DragonpilotSettings extends Component {
         this.props.setSteeringMonitorTimer(_steeringMonitorTimer);
     }
 
+    handleRunApp(app, val) {
+        switch (app) {
+            case 'mixplorer':
+                this.props.runMixplorer(val);
+                break;
+        }
+    }
+
     renderSettingsMenu() {
         const settingsMenuItems = [
             {
                 icon: Icons.developer,
-                title: 'Safety',
+                title: '安全性',
                 context: '',
                 route: SettingsRoutes.SAFETY,
             },
             {
                 icon: Icons.developer,
-                title: 'UI',
+                title: '介面',
                 context: '',
                 route: SettingsRoutes.UI,
+            },
+            {
+                icon: Icons.developer,
+                title: '第三方 App',
+                context: '',
+                route: SettingsRoutes.APP,
             },
             {
                 icon: Icons.developer,
@@ -160,11 +184,9 @@ class DragonpilotSettings extends Component {
                 DragonAutoShutdownAt: dragonAutoShutdownAt,
                 DragonNoctuaMode: dragonNoctuaMode,
                 DragonCacheCar: dragonCacheCar,
-                DragonBootTomTom: dragonBootTomTom,
-                DragonBootAutonavi: dragonBootAutonavi,
             }
         } = this.props;
-        const { expandedCell } = this.state;
+        const { expandedCell, enableMixplorer } = this.state;
         return (
             <View style={ Styles.settings }>
                 <View style={ Styles.settingsHeader }>
@@ -187,13 +209,15 @@ class DragonpilotSettings extends Component {
                             value='Rick Lan (https://github.com/efinilan/)'
                             valueTextSize='tiny' />
                     </X.Table>
+                    {enableMixplorer &&
                     <X.Table color='darkBlue'>
                         <X.Button
                             color='settingsDefault'
-                            onPress={ () => ChffrPlus.openMixplorer() }>
+                            onPress={() => this.handleRunApp('mixplorer', '1')}>
                             MiXplorer 檔案管理器
                         </X.Button>
                     </X.Table>
+                    }
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
@@ -215,7 +239,7 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setEnableUploader } />
                         <X.TableCell
                             type='switch'
-                            title='Enable Dashcam'
+                            title='啟用行車記錄'
                             value={ !!parseInt(dragonEnableDashcam) }
                             iconSource={ Icons.developer }
                             description='錄下 EON 的畫面當做行車記錄，當系統的空間不足 15% 時會自動刪除舊的記錄。記錄會存在 /sdcard/dashcam/ 裡。'
@@ -249,24 +273,6 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'cache_fingerprint' }
                             handleExpanded={ () => this.handleExpanded('cache_fingerprint') }
                             handleChanged={ this.props.setCacheCar } />
-                        <X.TableCell
-                            type='switch'
-                            title='開機啟動 TomTom'
-                            value={ !!parseInt(dragonBootTomTom) }
-                            iconSource={ Icons.developer }
-                            description='啟用這個選項後，TomTom 將在行駛時自動開啟，當溫度過高或熄火後自動關閉。'
-                            isExpanded={ expandedCell == 'run_tomtom' }
-                            handleExpanded={ () => this.handleExpanded('run_tomtom') }
-                            handleChanged={ this.props.setTomTom } />
-                        <X.TableCell
-                            type='switch'
-                            title='開機啟動高德地圖'
-                            value={ !!parseInt(dragonBootAutonavi) }
-                            iconSource={ Icons.developer }
-                            description='啟用這個選項後，高德地圖將在行駛時自動開啟，當溫度過高或熄火後自動關閉。'
-                            isExpanded={ expandedCell == 'run_autonavi' }
-                            handleExpanded={ () => this.handleExpanded('run_autonavi') }
-                            handleChanged={ this.props.setAutonavi } />
                     </X.Table>
                     <X.Table color='darkBlue' padding='big'>
                         <X.Button
@@ -298,7 +304,7 @@ class DragonpilotSettings extends Component {
                         color='ghost'
                         size='small'
                         onPress={ () => this.handlePressedBack() }>
-                        {'<  Toyota/Lexus Settings'}
+                        {'<  安全性設定'}
                     </X.Button>
                 </View>
                 <ScrollView
@@ -377,6 +383,87 @@ class DragonpilotSettings extends Component {
                                 </X.Button>
                             </X.Button>
                         </X.TableCell>
+                    </X.Table>
+                </ScrollView>
+            </View>
+        )
+    }
+
+    renderAPPSettings() {
+        const {
+            params: {
+                DragonEnableTomTom: dragonEnableTomTom,
+                DragonBootTomTom: dragonBootTomTom,
+                DragonEnableAutonavi: dragonEnableAutonavi,
+                DragonBootAutonavi: dragonBootAutonavi,
+                DragonEnableMixplorer: dragonEnableMixplorer,
+            },
+        } = this.props;
+        const { expandedCell, enableTomTom, enableAutonavi } = this.state;
+        return (
+            <View style={ Styles.settings }>
+                <View style={ Styles.settingsHeader }>
+                    <X.Button
+                        color='ghost'
+                        size='small'
+                        onPress={ () => this.handlePressedBack() }>
+                        {'<  第三方 App 設定'}
+                    </X.Button>
+                </View>
+                <ScrollView
+                    ref="settingsScrollView"
+                    style={ Styles.settingsWindow }>
+                    <X.Line color='transparent' spacing='tiny' />
+                    <X.Table color='darkBlue'>
+                        <X.TableCell
+                            type='switch'
+                            title='啟用 TomTom'
+                            value={ !!parseInt(dragonEnableTomTom) }
+                            iconSource={ Icons.developer }
+                            description='若您想使用 TomTom，請啟用這個選項，需重新開機。'
+                            isExpanded={ expandedCell == 'enable_tomtom' }
+                            handleExpanded={ () => this.handleExpanded('enable_tomtom') }
+                            handleChanged={ this.props.setEnableTomTom } />
+                        {enableTomTom &&
+                        <X.TableCell
+                            type='switch'
+                            title='自動執行 TomTom'
+                            value={!!parseInt(dragonBootTomTom)}
+                            iconSource={Icons.developer}
+                            description='啟用這個選項後，TomTom 將在行駛時自動開啟，當溫度過高或熄火後自動關閉。'
+                            isExpanded={expandedCell == 'run_tomtom'}
+                            handleExpanded={() => this.handleExpanded('run_tomtom')}
+                            handleChanged={this.props.setBootTomTom}/>
+                        }
+                        <X.TableCell
+                            type='switch'
+                            title='啟用高德地圖'
+                            value={ !!parseInt(dragonEnableAutonavi) }
+                            iconSource={ Icons.developer }
+                            description='若您想使用高德地圖，請啟用這個選項，需重新開機。'
+                            isExpanded={ expandedCell == 'enable_autonavi' }
+                            handleExpanded={ () => this.handleExpanded('enable_autonavi') }
+                            handleChanged={ this.props.setEnableAutonavi} />
+                        {enableAutonavi &&
+                        <X.TableCell
+                            type='switch'
+                            title='自動執行高德地圖'
+                            value={!!parseInt(dragonBootAutonavi)}
+                            iconSource={Icons.developer}
+                            description='啟用這個選項後，高德地圖將在行駛時自動開啟，當溫度過高或熄火後自動關閉。'
+                            isExpanded={expandedCell == 'run_autonavi'}
+                            handleExpanded={() => this.handleExpanded('run_autonavi')}
+                            handleChanged={this.props.setBootAutonavi}/>
+                        }
+                        <X.TableCell
+                            type='switch'
+                            title='啟用 MiXplorer 檔案管理器'
+                            value={ !!parseInt(dragonEnableMixplorer) }
+                            iconSource={ Icons.developer }
+                            description='若您想使用 MiXplorer 檔案管理器，請啟用這個選項，需重新開機。'
+                            isExpanded={ expandedCell == 'enable_mixplorer' }
+                            handleExpanded={ () => this.handleExpanded('enable_mixplorer') }
+                            handleChanged={ this.props.setEnableMixplorer} />
                     </X.Table>
                 </ScrollView>
             </View>
@@ -537,6 +624,8 @@ class DragonpilotSettings extends Component {
             //     return this.renderHondaSettings();
             case SettingsRoutes.UI:
                 return this.renderUISettings();
+            case SettingsRoutes.APP:
+                return this.renderAPPSettings();
         }
     }
 
@@ -615,14 +704,26 @@ const mapDispatchToProps = dispatch => ({
     setUIDevMini: (val) => {
         dispatch(updateParam(Params.KEY_UI_DEV_MINI, (val | 0).toString()));
     },
-    setTomTom: (val) => {
+    setEnableTomTom: (val) => {
+        dispatch(updateParam(Params.KEY_ENABLE_TOMTOM, (val | 0).toString()));
+    },
+    setBootTomTom: (val) => {
         dispatch(updateParam(Params.KEY_BOOT_TOMTOM, (val | 0).toString()));
     },
-    setAutonavi: (val) => {
+    setEnableAutonavi: (val) => {
+        dispatch(updateParam(Params.KEY_ENABLE_AUTONAVI, (val | 0).toString()));
+    },
+    setBootAutonavi: (val) => {
         dispatch(updateParam(Params.KEY_BOOT_AUTONAVI, (val | 0).toString()));
+    },
+    setEnableMixplorer: (val) => {
+        dispatch(updateParam(Params.KEY_ENABLE_MIXPLORER, (val | 0).toString()));
     },
     setSteeringMonitorTimer: (val) => {
         dispatch(updateParam(Params.KEY_STEERING_MONITOR_TIMER, (val).toString()));
+    },
+    runMixplorer: (val) => {
+        dispatch(updateParam(Params.KEY_RUN_MIXPLORER, (val).toString()));
     },
 });
 
