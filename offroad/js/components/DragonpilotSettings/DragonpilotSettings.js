@@ -186,6 +186,13 @@ class DragonpilotSettings extends Component {
                             valueTextSize='tiny' />
                     </X.Table>
                     <X.Table color='darkBlue'>
+                        <X.Button
+                            color='settingsDefault'
+                            onPress={ () => ChffrPlus.openMixplorer() }>
+                            MiXplorer File Manager
+                        </X.Button>
+                    </X.Table>
+                    <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
                             title='Enable Lateral Control'

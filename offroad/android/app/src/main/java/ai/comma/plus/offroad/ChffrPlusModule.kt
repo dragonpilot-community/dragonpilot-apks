@@ -270,6 +270,14 @@ class ChffrPlusModule(val ctx: ReactApplicationContext) :
     }
 
     @ReactMethod
+    fun openMixplorer() {
+        val pm = reactApplicationContext.packageManager
+        val intent = pm.getLaunchIntentForPackage("com.mixplorer")
+        intent.putExtra("extra_prefs_show_button_bar", true)
+        startActivityWithIntent(intent)
+    }
+
+    @ReactMethod
     fun reboot() {
         try {
             // IPowerManager.reboot(confirm=false, reason=0, wait=true)
