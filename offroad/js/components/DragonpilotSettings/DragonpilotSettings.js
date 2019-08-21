@@ -16,9 +16,10 @@ import Styles from './DragonpilotSettingsStyles';
 
 const SettingsRoutes = {
     PRIMARY: 'PRIMARY',
+    SAFETY: 'SAFETY',
+    UI: 'UI',
     TOYOTA: 'TOYOTA',
     // HONDA: 'HONDA',
-    UI: 'UI',
 }
 
 const Icons = {
@@ -48,7 +49,7 @@ class DragonpilotSettings extends Component {
                 DragonSteeringMonitorTimer: dragonSteeringMonitorTimer
             },
         } = this.props;
-        this.setState({ steeringMonitorTimerInt: parseInt(dragonSteeringMonitorTimer) || 3 })
+        this.setState({ steeringMonitorTimerInt: dragonSteeringMonitorTimer === '0'? 0 : parseInt(dragonSteeringMonitorTimer) || 3 })
     }
 
     handleExpanded(key) {
@@ -92,6 +93,18 @@ class DragonpilotSettings extends Component {
         const settingsMenuItems = [
             {
                 icon: Icons.developer,
+                title: 'Safety',
+                context: '',
+                route: SettingsRoutes.SAFETY,
+            },
+            {
+                icon: Icons.developer,
+                title: 'UI',
+                context: '',
+                route: SettingsRoutes.UI,
+            },
+            {
+                icon: Icons.developer,
                 title: 'Toyota/Lexus',
                 context: '',
                 route: SettingsRoutes.TOYOTA,
@@ -102,12 +115,6 @@ class DragonpilotSettings extends Component {
             //     context: '',
             //     route: SettingsRoutes.HONDA,
             // },
-            {
-                icon: Icons.developer,
-                title: 'UI',
-                context: '',
-                route: SettingsRoutes.UI,
-            },
         ];
         return settingsMenuItems.map((item, idx) => {
             const cellButtonStyle = [
@@ -147,22 +154,17 @@ class DragonpilotSettings extends Component {
     renderPrimarySettings() {
         const {
             params: {
-                DragonLatCtrl: dragonLatCtrl,
-                DragonAllowGas: dragonAllowGas,
                 DragonEnableLogger: dragonEnableLogger,
                 DragonEnableUploader: dragonEnableUploader,
-                DragonEnableSteeringOnSignal: dragonEnableSteeringOnSignal,
                 DragonEnableDashcam: dragonEnableDashcam,
-                DragonEnableDriverSafetyCheck: dragonEnableDriverSafetyCheck,
                 DragonAutoShutdownAt: dragonAutoShutdownAt,
                 DragonNoctuaMode: dragonNoctuaMode,
                 DragonCacheCar: dragonCacheCar,
                 DragonBootTomTom: dragonBootTomTom,
                 DragonBootAutonavi: dragonBootAutonavi,
-                DragonSteeringMonitorTimer: dragonSteeringMonitorTimer,
             }
         } = this.props;
-        const { expandedCell, steeringMonitorTimerInt } = this.state;
+        const { expandedCell } = this.state;
         return (
             <View style={ Styles.settings }>
                 <View style={ Styles.settingsHeader }>
@@ -195,24 +197,6 @@ class DragonpilotSettings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
-                            title='Enable Lateral Control'
-                            value={ !!parseInt(dragonLatCtrl) }
-                            iconSource={ Icons.developer }
-                            description='Enable this if you wish dp to control the steering for you.'
-                            isExpanded={ expandedCell == 'lat_ctrl' }
-                            handleExpanded={ () => this.handleExpanded('lat_ctrl') }
-                            handleChanged={ this.props.setLatCtrl } />
-                        <X.TableCell
-                            type='switch'
-                            title='Allow Gas'
-                            value={ !!parseInt(dragonAllowGas) }
-                            iconSource={ Icons.developer }
-                            description='Enable this if you wish to use gas on engaged.'
-                            isExpanded={ expandedCell == 'allow_gas' }
-                            handleExpanded={ () => this.handleExpanded('allow_gas') }
-                            handleChanged={ this.props.setAllowGas } />
-                        <X.TableCell
-                            type='switch'
                             title='Enable Logger'
                             value={ !!parseInt(dragonEnableLogger) }
                             iconSource={ Icons.developer }
@@ -231,15 +215,6 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setEnableUploader } />
                         <X.TableCell
                             type='switch'
-                            title='Enable Steering On Signal'
-                            value={ !!parseInt(dragonEnableSteeringOnSignal) }
-                            iconSource={ Icons.developer }
-                            description='If you enable this, it will temporary disable steering control when left/right blinker is on and resume control 1 second after the blinker is off.'
-                            isExpanded={ expandedCell == 'enable_steering_on_signal' }
-                            handleExpanded={ () => this.handleExpanded('enable_steering_on_signal') }
-                            handleChanged={ this.props.setEnableSteeringOnSignal } />
-                        <X.TableCell
-                            type='switch'
                             title='Enable Dashcam'
                             value={ !!parseInt(dragonEnableDashcam) }
                             iconSource={ Icons.developer }
@@ -247,15 +222,6 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'dashcam' }
                             handleExpanded={ () => this.handleExpanded('dashcam') }
                             handleChanged={ this.props.setEnableDashcam } />
-                        <X.TableCell
-                            type='switch'
-                            title='Enable Safety Check'
-                            value={ !!parseInt(dragonEnableDriverSafetyCheck) }
-                            iconSource={ Icons.developer }
-                            description='If you disable this, the driver safety check will be disabled completely, we don not recommend that you turn on this unless you know what you are doing, we hold no responsibility if you disable this option.'
-                            isExpanded={ expandedCell == 'safetyCheck' }
-                            handleExpanded={ () => this.handleExpanded('safetyCheck') }
-                            handleChanged={ this.props.setEnableDriverSafetyCheck } />
                         <X.TableCell
                             type='switch'
                             title='Enable Auto Shutdown'
@@ -302,7 +268,82 @@ class DragonpilotSettings extends Component {
                             handleExpanded={ () => this.handleExpanded('run_autonavi') }
                             handleChanged={ this.props.setAutonavi } />
                     </X.Table>
+                    <X.Table color='darkBlue' padding='big'>
+                        <X.Button
+                            size='small'
+                            color='settingsDefault'
+                            onPress={ () => ChffrPlus.openLocaleSettings() }>
+                            Open Locale Settings
+                        </X.Button>
+                    </X.Table>
+                </ScrollView>
+            </View>
+        )
+    }
+
+    renderSafetySettings() {
+        const {
+            params: {
+                DragonLatCtrl: dragonLatCtrl,
+                DragonAllowGas: dragonAllowGas,
+                DragonEnableSteeringOnSignal: dragonEnableSteeringOnSignal,
+                DragonEnableDriverSafetyCheck: dragonEnableDriverSafetyCheck,
+            },
+        } = this.props;
+        const { expandedCell, steeringMonitorTimerInt } = this.state;
+        return (
+            <View style={ Styles.settings }>
+                <View style={ Styles.settingsHeader }>
+                    <X.Button
+                        color='ghost'
+                        size='small'
+                        onPress={ () => this.handlePressedBack() }>
+                        {'<  Toyota/Lexus Settings'}
+                    </X.Button>
+                </View>
+                <ScrollView
+                    ref="settingsScrollView"
+                    style={ Styles.settingsWindow }>
+                    <X.Line color='transparent' spacing='tiny' />
                     <X.Table color='darkBlue'>
+                        <X.TableCell
+                            type='switch'
+                            title='Enable Lateral Control'
+                            value={ !!parseInt(dragonLatCtrl) }
+                            iconSource={ Icons.developer }
+                            description='Enable this if you wish dp to control the steering for you.'
+                            isExpanded={ expandedCell == 'lat_ctrl' }
+                            handleExpanded={ () => this.handleExpanded('lat_ctrl') }
+                            handleChanged={ this.props.setLatCtrl } />
+                        <X.TableCell
+                            type='switch'
+                            title='Allow Gas'
+                            value={ !!parseInt(dragonAllowGas) }
+                            iconSource={ Icons.developer }
+                            description='Enable this if you wish to use gas on engaged.'
+                            isExpanded={ expandedCell == 'allow_gas' }
+                            handleExpanded={ () => this.handleExpanded('allow_gas') }
+                            handleChanged={ this.props.setAllowGas } />
+                        <X.TableCell
+                            type='switch'
+                            title='Enable Steering On Signal'
+                            value={ !!parseInt(dragonEnableSteeringOnSignal) }
+                            iconSource={ Icons.developer }
+                            description='If you enable this, it will temporary disable steering control when left/right blinker is on and resume control 1 second after the blinker is off.'
+                            isExpanded={ expandedCell == 'enable_steering_on_signal' }
+                            handleExpanded={ () => this.handleExpanded('enable_steering_on_signal') }
+                            handleChanged={ this.props.setEnableSteeringOnSignal } />
+                    </X.Table>
+                    <X.Table color='darkBlue'>
+                        <X.TableCell
+                            type='switch'
+                            title='Enable Safety Check'
+                            value={ !!parseInt(dragonEnableDriverSafetyCheck) }
+                            iconSource={ Icons.developer }
+                            description='If you disable this, the driver safety check will be disabled completely, we don not recommend that you turn on this unless you know what you are doing, we hold no responsibility if you disable this option.'
+                            isExpanded={ expandedCell == 'safetyCheck' }
+                            handleExpanded={ () => this.handleExpanded('safetyCheck') }
+                            handleChanged={ this.props.setEnableDriverSafetyCheck } />
                         <X.TableCell
                             type='custom'
                             title='Steering Monitor Timer'
@@ -336,14 +377,6 @@ class DragonpilotSettings extends Component {
                                 </X.Button>
                             </X.Button>
                         </X.TableCell>
-                    </X.Table>
-                    <X.Table color='darkBlue' padding='big'>
-                        <X.Button
-                            size='small'
-                            color='settingsDefault'
-                            onPress={ () => ChffrPlus.openLocaleSettings() }>
-                            Open Locale Settings
-                        </X.Button>
                     </X.Table>
                 </ScrollView>
             </View>
@@ -496,6 +529,8 @@ class DragonpilotSettings extends Component {
         switch (route) {
             case SettingsRoutes.PRIMARY:
                 return this.renderPrimarySettings();
+            case SettingsRoutes.SAFETY:
+                return this.renderSafetySettings();
             case SettingsRoutes.TOYOTA:
                 return this.renderToyotaSettings();
             // case SettingsRoutes.HONDA:
