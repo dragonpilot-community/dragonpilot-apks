@@ -67,6 +67,8 @@ class Settings extends Component {
             speedLimitOffsetInt: '0',
             githubUsername: '',
             authKeysUpdateState: null,
+            enableTomTom: false,
+            enableAutonavi: false,
         }
 
         this.writeSshKeys = this.writeSshKeys.bind(this);
@@ -77,10 +79,14 @@ class Settings extends Component {
         const {
             isMetric,
             params: {
-                SpeedLimitOffset: speedLimitOffset
+                SpeedLimitOffset: speedLimitOffset,
+                DragonEnableTomTom: dragonEnableTomTom,
+                DragonEnableAutonavi: dragonEnableAutonavi,
             },
         } = this.props;
 
+        this.setState({ enableTomTom: dragonEnableTomTom === '1' })
+        this.setState({ enableAutonavi: dragonEnableAutonavi === '1' })
         if (isMetric) {
             this.setState({ speedLimitOffsetInt: parseInt(mpsToKph(speedLimitOffset)) })
         } else {
@@ -117,6 +123,17 @@ class Settings extends Component {
             { text: 'Later', onPress: () => {}, style: 'cancel' },
             { text: 'Reboot Now', onPress: () => ChffrPlus.reboot() },
         ]);
+    }
+
+    handleRunApp(app, val) {
+        switch (app) {
+            case 'tomtom':
+                this.props.runTomTom(val);
+                break;
+            case 'autonavi':
+                this.props.runAutonavi(val);
+                break;
+        }
     }
 
     // handleChangedSpeedLimitOffset(operator) {
@@ -250,7 +267,7 @@ class Settings extends Component {
                 SpeedLimitOffset: speedLimitOffset,
             }
         } = this.props;
-        const { expandedCell, speedLimitOffsetInt } = this.state;
+        const { expandedCell, speedLimitOffsetInt, enableTomTom, enableAutonavi } = this.state;
         return (
             <View style={ Styles.settings }>
                 <View style={ Styles.settingsHeader }>
@@ -267,19 +284,36 @@ class Settings extends Component {
                     <X.Table direction='row' color='darkBlue'>
                         { this.renderSettingsMenu() }
                     </X.Table>
+                    {enableTomTom &&
                     <X.Table color='darkBlue'>
                         <X.Button
                             color='settingsDefault'
-                            onPress={ () => ChffrPlus.openTomTom() }>
-                            TomTom Safety Camera
+                            onPress={() => this.handleRunApp('tomtom', '1')}>
+                            Open TomTom Safety Camera
                         </X.Button>
-                        <X.Line color='transparent' size='tiny' spacing='mini' />
+                        <X.Line color='transparent' size='tiny' spacing='mini'/>
                         <X.Button
                             color='settingsDefault'
-                            onPress={ () => ChffrPlus.openAutonavi() }>
-                            AutoNavi Map
+                            onPress={() => this.handleRunApp('tomtom', '-1')}>
+                            Close TomTom Safety Camera
                         </X.Button>
                     </X.Table>
+                    }
+                    {enableAutonavi &&
+                    <X.Table color='darkBlue'>
+                        <X.Button
+                            color='settingsDefault'
+                            onPress={() => this.handleRunApp('autonavi', '1')}>
+                            Open AutoNavi Map
+                        </X.Button>
+                        <X.Line color='transparent' size='tiny' spacing='mini'/>
+                        <X.Button
+                            color='settingsDefault'
+                            onPress={() => this.handleRunApp('autonavi', '-1')}>
+                            Close AutoNavi Map
+                        </X.Button>
+                    </X.Table>
+                    }
                     <X.Table color='darkBlue'>
                         <X.Button
                             color='settingsDefault'
@@ -847,6 +881,12 @@ const mapDispatchToProps = dispatch => ({
     },
     setSpeedLimitOffset: (speedLimitOffset) => {
         dispatch(updateParam(Params.KEY_SPEED_LIMIT_OFFSET, (speedLimitOffset).toString()));
+    },
+    runTomTom: (val) => {
+        dispatch(updateParam(Params.KEY_RUN_TOMTOM, (val).toString()));
+    },
+    runAutonavi: (val) => {
+        dispatch(updateParam(Params.KEY_RUN_AUTONAVI, (val).toString()));
     },
     deleteParam: (param) => {
         dispatch(deleteParam(param));
