@@ -288,24 +288,14 @@ class Settings extends Component {
                     <X.Table color='darkBlue'>
                         <X.Button
                             color='settingsDefault'
-<<<<<<< HEAD
-                            onPress={ () => ChffrPlus.openTomTom() }>
-                            TomTom 測速照相
-=======
                             onPress={() => this.handleRunApp('tomtom', '1')}>
-                            Open TomTom Safety Camera
->>>>>>> 618374189929e71f58e71d595924da724481c7cf
+                            開啟 TomTom 測速照相
                         </X.Button>
                         <X.Line color='transparent' size='tiny' spacing='mini'/>
                         <X.Button
                             color='settingsDefault'
-<<<<<<< HEAD
-                            onPress={ () => ChffrPlus.openAutonavi() }>
-                            高德地圖
-=======
                             onPress={() => this.handleRunApp('tomtom', '-1')}>
-                            Close TomTom Safety Camera
->>>>>>> 618374189929e71f58e71d595924da724481c7cf
+                            關閉 TomTom 測速照相
                         </X.Button>
                     </X.Table>
                     }
@@ -314,13 +304,13 @@ class Settings extends Component {
                         <X.Button
                             color='settingsDefault'
                             onPress={() => this.handleRunApp('autonavi', '1')}>
-                            Open AutoNavi Map
+                            開啟高德地圖
                         </X.Button>
                         <X.Line color='transparent' size='tiny' spacing='mini'/>
                         <X.Button
                             color='settingsDefault'
                             onPress={() => this.handleRunApp('autonavi', '-1')}>
-                            Close AutoNavi Map
+                            關閉高德地圖
                         </X.Button>
                     </X.Table>
                     }
