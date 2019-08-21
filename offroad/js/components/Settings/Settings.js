@@ -273,8 +273,7 @@ class Settings extends Component {
                             onPress={ () => ChffrPlus.openTomTom() }>
                             TomTom 測速照相
                         </X.Button>
-                    </X.Table>
-                    <X.Table color='darkBlue'>
+                        <X.Line color='transparent' size='tiny' spacing='mini' />
                         <X.Button
                             color='settingsDefault'
                             onPress={ () => ChffrPlus.openAutonavi() }>
