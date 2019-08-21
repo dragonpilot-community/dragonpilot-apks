@@ -99,6 +99,14 @@ class DragonpilotSettings extends Component {
         this.props.setSteeringMonitorTimer(_steeringMonitorTimer);
     }
 
+    handleRunApp(app, val) {
+        switch (app) {
+            case 'mixplorer':
+                this.props.runMixplorer(val);
+                break;
+        }
+    }
+
     renderSettingsMenu() {
         const settingsMenuItems = [
             {
@@ -205,7 +213,7 @@ class DragonpilotSettings extends Component {
                     <X.Table color='darkBlue'>
                         <X.Button
                             color='settingsDefault'
-                            onPress={() => ChffrPlus.openMixplorer()}>
+                            onPress={() => this.handleRunApp('mixplorer', '1')}>
                             MiXplorer File Manager
                         </X.Button>
                     </X.Table>
@@ -713,6 +721,9 @@ const mapDispatchToProps = dispatch => ({
     },
     setSteeringMonitorTimer: (val) => {
         dispatch(updateParam(Params.KEY_STEERING_MONITOR_TIMER, (val).toString()));
+    },
+    runMixplorer: (val) => {
+        dispatch(updateParam(Params.KEY_RUN_MIXPLORER, (val).toString()));
     },
 });
 
