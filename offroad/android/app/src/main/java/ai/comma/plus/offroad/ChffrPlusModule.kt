@@ -253,30 +253,6 @@ class ChffrPlusModule(val ctx: ReactApplicationContext) :
         startActivityWithIntent(intent)
     }
 
-//    @ReactMethod
-//    fun openTomTom() {
-//        val pm = reactApplicationContext.packageManager
-//        val intent = pm.getLaunchIntentForPackage("com.tomtom.speedcams.android.map")
-//        intent.putExtra("extra_prefs_show_button_bar", true)
-//        startActivityWithIntent(intent)
-//    }
-//
-//    @ReactMethod
-//    fun openAutonavi() {
-//        val pm = reactApplicationContext.packageManager
-//        val intent = pm.getLaunchIntentForPackage("com.autonavi.amapauto")
-//        intent.putExtra("extra_prefs_show_button_bar", true)
-//        startActivityWithIntent(intent)
-//    }
-//
-//    @ReactMethod
-//    fun openMixplorer() {
-//        val pm = reactApplicationContext.packageManager
-//        val intent = pm.getLaunchIntentForPackage("com.mixplorer")
-//        intent.putExtra("extra_prefs_show_button_bar", true)
-//        startActivityWithIntent(intent)
-//    }
-
     @ReactMethod
     fun reboot() {
         try {

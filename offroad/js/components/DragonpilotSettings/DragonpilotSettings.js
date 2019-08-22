@@ -112,25 +112,25 @@ class DragonpilotSettings extends Component {
             {
                 icon: Icons.developer,
                 title: 'Safety',
-                context: '',
+                context: 'Settings',
                 route: SettingsRoutes.SAFETY,
             },
             {
                 icon: Icons.developer,
                 title: 'UI',
-                context: '',
+                context: 'Settings',
                 route: SettingsRoutes.UI,
             },
             {
                 icon: Icons.developer,
                 title: '3rd Party Apps',
-                context: '',
+                context: 'Settings',
                 route: SettingsRoutes.APP,
             },
             {
                 icon: Icons.developer,
                 title: 'Toyota/Lexus',
-                context: '',
+                context: 'Settings',
                 route: SettingsRoutes.TOYOTA,
             },
             // {
@@ -346,7 +346,7 @@ class DragonpilotSettings extends Component {
                             title='Enable Safety Check'
                             value={ !!parseInt(dragonEnableDriverSafetyCheck) }
                             iconSource={ Icons.developer }
-                            description='If you disable this, the driver safety check will be disabled completely, we don not recommend that you turn on this unless you know what you are doing, we hold no responsibility if you disable this option.'
+                            description='If you disable this, the driver safety check will be disabled completely, we DO NOT RECOMMEND that you turn off this unless you know what you are doing, we hold no responsibility if you disable this option.'
                             isExpanded={ expandedCell == 'safetyCheck' }
                             handleExpanded={ () => this.handleExpanded('safetyCheck') }
                             handleChanged={ this.props.setEnableDriverSafetyCheck } />
@@ -417,40 +417,40 @@ class DragonpilotSettings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
-                            title='Enable TomTom App'
+                            title='Enable TomTom Safety Camera App'
                             value={ !!parseInt(dragonEnableTomTom) }
                             iconSource={ Icons.developer }
-                            description='Enable this if you wish to use TomTom Safety Camera App.'
+                            description='Enable this if you wish to use TomTom Safety Camera App, restart required.'
                             isExpanded={ expandedCell == 'enable_tomtom' }
                             handleExpanded={ () => this.handleExpanded('enable_tomtom') }
                             handleChanged={ this.props.setEnableTomTom } />
                         {enableTomTom &&
                         <X.TableCell
                             type='switch'
-                            title='Run TomTom At Startup'
+                            title='Auto Run TomTom Safety Camera App'
                             value={!!parseInt(dragonBootTomTom)}
                             iconSource={Icons.developer}
-                            description='Enable this will run TomTom at startup.'
+                            description='Enable this will have TomTom Safety Camera App start when car is on, stop when car is off.'
                             isExpanded={expandedCell == 'run_tomtom'}
                             handleExpanded={() => this.handleExpanded('run_tomtom')}
                             handleChanged={this.props.setBootTomTom}/>
                         }
                         <X.TableCell
                             type='switch'
-                            title='Enable Autonavi App'
+                            title='Enable Autonavi Map App'
                             value={ !!parseInt(dragonEnableAutonavi) }
                             iconSource={ Icons.developer }
-                            description='Enable this if you wish to use Autonavi Map App.'
+                            description='Enable this if you wish to use Autonavi Map App, restart required.'
                             isExpanded={ expandedCell == 'enable_autonavi' }
                             handleExpanded={ () => this.handleExpanded('enable_autonavi') }
                             handleChanged={ this.props.setEnableAutonavi} />
                         {enableAutonavi &&
                         <X.TableCell
                             type='switch'
-                            title='Run Autonavi At Startup'
+                            title='Auto Run Autonavi Map'
                             value={!!parseInt(dragonBootAutonavi)}
                             iconSource={Icons.developer}
-                            description='Enable this will run Autonavi at startup.'
+                            description='Enable this will have Autonavi Map App start when car is on, stop when car is off.'
                             isExpanded={expandedCell == 'run_autonavi'}
                             handleExpanded={() => this.handleExpanded('run_autonavi')}
                             handleChanged={this.props.setBootAutonavi}/>
@@ -460,7 +460,7 @@ class DragonpilotSettings extends Component {
                             title='Enable MiXplorer App'
                             value={ !!parseInt(dragonEnableMixplorer) }
                             iconSource={ Icons.developer }
-                            description='Enable this if you wish to use MiXplorer file manager App.'
+                            description='Enable this if you wish to use MiXplorer file manager App, restart required.'
                             isExpanded={ expandedCell == 'enable_mixplorer' }
                             handleExpanded={ () => this.handleExpanded('enable_mixplorer') }
                             handleChanged={ this.props.setEnableMixplorer} />
