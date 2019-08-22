@@ -112,25 +112,25 @@ class DragonpilotSettings extends Component {
             {
                 icon: Icons.developer,
                 title: '安全性',
-                context: '',
+                context: '設定',
                 route: SettingsRoutes.SAFETY,
             },
             {
                 icon: Icons.developer,
                 title: '介面',
-                context: '',
+                context: '設定',
                 route: SettingsRoutes.UI,
             },
             {
                 icon: Icons.developer,
-                title: '第三方 App',
-                context: '',
+                title: '第三方應用',
+                context: '設定',
                 route: SettingsRoutes.APP,
             },
             {
                 icon: Icons.developer,
                 title: 'Toyota/Lexus',
-                context: '',
+                context: '設定',
                 route: SettingsRoutes.TOYOTA,
             },
             // {
@@ -407,7 +407,7 @@ class DragonpilotSettings extends Component {
                         color='ghost'
                         size='small'
                         onPress={ () => this.handlePressedBack() }>
-                        {'<  第三方 App 設定'}
+                        {'<  第三方應用設定'}
                     </X.Button>
                 </View>
                 <ScrollView
@@ -417,20 +417,20 @@ class DragonpilotSettings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
-                            title='啟用 TomTom'
+                            title='啟用 TomTom 測速照相'
                             value={ !!parseInt(dragonEnableTomTom) }
                             iconSource={ Icons.developer }
-                            description='若您想使用 TomTom，請啟用這個選項，需重新開機。'
+                            description='若您想使用 TomTom 測速照相，請啟用這個選項，需重新開機。'
                             isExpanded={ expandedCell == 'enable_tomtom' }
                             handleExpanded={ () => this.handleExpanded('enable_tomtom') }
                             handleChanged={ this.props.setEnableTomTom } />
                         {enableTomTom &&
                         <X.TableCell
                             type='switch'
-                            title='自動執行 TomTom'
+                            title='自動執行 TomTom 測速照相'
                             value={!!parseInt(dragonBootTomTom)}
                             iconSource={Icons.developer}
-                            description='啟用這個選項後，TomTom 將在行駛時自動開啟，當溫度過高或熄火後自動關閉。'
+                            description='啟用這個選項後，TomTom 測速照相將在行駛時自動開啟，當溫度過高或熄火後自動關閉。'
                             isExpanded={expandedCell == 'run_tomtom'}
                             handleExpanded={() => this.handleExpanded('run_tomtom')}
                             handleChanged={this.props.setBootTomTom}/>
