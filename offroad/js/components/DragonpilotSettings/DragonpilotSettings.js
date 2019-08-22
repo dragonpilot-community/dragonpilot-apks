@@ -293,9 +293,9 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setCacheCar } />
                         <X.TableCell
                             type='custom'
-                            title='Camera Offset (cm)'
+                            title='相機偏移距離 (公分)'
                             iconSource={ Icons.developer }
-                            description='Adjust the camera offset if your car is not centered, slowly increase this if your car is close to the right, slowly decrease this if your car is close to the left, default is 6 cm.'
+                            description='如果您的車子無法在正中央前行，您可以微調此數值，太靠右，請增加此值；太靠左，請減少此值。預設為 6 公分。需重新啟動車子。'
                             isExpanded={ expandedCell == 'camera_offset' }
                             handleExpanded={ () => this.handleExpanded('camera_offset') }>
                             <X.Button
