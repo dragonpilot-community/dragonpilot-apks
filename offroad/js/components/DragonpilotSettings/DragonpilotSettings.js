@@ -55,7 +55,7 @@ class DragonpilotSettings extends Component {
                 DragonEnableTomTom: dragonEnableTomTom,
                 DragonEnableAutonavi: dragonEnableAutonavi,
                 DragonEnableMixplorer: dragonEnableMixplorer,
-                DragonCammeraOffset: dragonCameraOffset,
+                DragonCameraOffset: dragonCameraOffset,
             },
         } = this.props;
         this.setState({ steeringMonitorTimerInt: dragonSteeringMonitorTimer === '0'? 0 : parseInt(dragonSteeringMonitorTimer) || 3 })
