@@ -52,4 +52,5 @@ export const Params = {
     KEY_ENABLE_MIXPLORER: 'DragonEnableMixplorer',
     KEY_RUN_MIXPLORER: 'DragonRunMixplorer',
     KEY_STEERING_MONITOR_TIMER: 'DragonSteeringMonitorTimer',
+    KEY_CAMERA_OFFSET: 'DragonCameraOffset',
 };

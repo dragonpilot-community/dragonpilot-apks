@@ -54,6 +54,7 @@ const PARAMS = [
   "DragonEnableMixplorer",
   "DragonRunMixplorer",
   "DragonSteeringMonitorTimer",
+  "DragonCameraOffset",
 ];
 
 export function refreshParams() {
