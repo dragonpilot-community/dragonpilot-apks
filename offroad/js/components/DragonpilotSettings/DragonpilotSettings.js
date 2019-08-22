@@ -44,6 +44,7 @@ class DragonpilotSettings extends Component {
             enableTomTom: false,
             enableAutonavi: false,
             enableMixplorer: false,
+            cameraOffsetInt: '6',
         }
     }
 
@@ -54,12 +55,14 @@ class DragonpilotSettings extends Component {
                 DragonEnableTomTom: dragonEnableTomTom,
                 DragonEnableAutonavi: dragonEnableAutonavi,
                 DragonEnableMixplorer: dragonEnableMixplorer,
+                DragonCammeraOffset: dragonCameraOffset,
             },
         } = this.props;
         this.setState({ steeringMonitorTimerInt: dragonSteeringMonitorTimer === '0'? 0 : parseInt(dragonSteeringMonitorTimer) || 3 })
         this.setState({ enableTomTom: dragonEnableTomTom === '1' })
         this.setState({ enableAutonavi: dragonEnableAutonavi === '1' })
         this.setState({ enableMixplorer: dragonEnableMixplorer === '1' })
+        this.setState({ cameraOffsetInt: dragonCameraOffset === '0'? 0 : parseInt(dragonCameraOffset) || 6 })
     }
 
     handleExpanded(key) {
@@ -97,6 +100,21 @@ class DragonpilotSettings extends Component {
         }
         this.setState({ steeringMonitorTimerInt: _steeringMonitorTimer });
         this.props.setSteeringMonitorTimer(_steeringMonitorTimer);
+    }
+
+    handleChangedCameraOffset(operator) {
+        const { cameraOffsetInt } = this.state;
+        let _cameraOffset;
+        switch (operator) {
+            case 'increment':
+                _cameraOffset = cameraOffsetInt + 1;
+                break;
+            case 'decrement':
+                _cameraOffset = cameraOffsetInt - 1;
+                break;
+        }
+        this.setState({ cameraOffsetInt: _cameraOffset });
+        this.props.setCameraOffset(_cameraOffset);
     }
 
     handleRunApp(app, val) {
@@ -186,7 +204,7 @@ class DragonpilotSettings extends Component {
                 DragonCacheCar: dragonCacheCar,
             }
         } = this.props;
-        const { expandedCell, enableMixplorer } = this.state;
+        const { expandedCell, enableMixplorer, cameraOffsetInt } = this.state;
         return (
             <View style={ Styles.settings }>
                 <View style={ Styles.settingsHeader }>
@@ -273,6 +291,39 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'cache_fingerprint' }
                             handleExpanded={ () => this.handleExpanded('cache_fingerprint') }
                             handleChanged={ this.props.setCacheCar } />
+                        <X.TableCell
+                            type='custom'
+                            title='Camera Offset (cm)'
+                            iconSource={ Icons.developer }
+                            description='Adjust the camera offset if your car is not centered, slowly increase this if your car is close to the right, slowly decrease this if your car is close to the left, default is 6 cm.'
+                            isExpanded={ expandedCell == 'camera_offset' }
+                            handleExpanded={ () => this.handleExpanded('camera_offset') }>
+                            <X.Button
+                                color='ghost'
+                                activeOpacity={ 1 }
+                                style={ Styles.settingsCameraOffset }>
+                                <X.Button
+                                    style={ [Styles.settingsNumericButton, { opacity: 0.8 }] }
+                                    onPress={ () => this.handleChangedCameraOffset('decrement')  }>
+                                    <X.Image
+                                        source={ Icons.minus }
+                                        style={ Styles.settingsNumericIcon } />
+                                </X.Button>
+                                <X.Text
+                                    color='white'
+                                    weight='semibold'
+                                    style={ Styles.settingsNumericValue }>
+                                    { cameraOffsetInt }
+                                </X.Text>
+                                <X.Button
+                                    style={ [Styles.settingsNumericButton, { opacity: 0.8 }] }
+                                    onPress={ () => this.handleChangedCameraOffset('increment') }>
+                                    <X.Image
+                                        source={ Icons.plus }
+                                        style={ Styles.settingsNumericIcon } />
+                                </X.Button>
+                            </X.Button>
+                        </X.TableCell>
                     </X.Table>
                     <X.Table color='darkBlue' padding='big'>
                         <X.Button
@@ -724,6 +775,9 @@ const mapDispatchToProps = dispatch => ({
     },
     runMixplorer: (val) => {
         dispatch(updateParam(Params.KEY_RUN_MIXPLORER, (val).toString()));
+    },
+    setCameraOffset: (val) => {
+        dispatch(updateParam(Params.KEY_CAMERA_OFFSET, (val).toString()));
     },
 });
 
