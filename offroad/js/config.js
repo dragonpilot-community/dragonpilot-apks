@@ -53,4 +53,5 @@ export const Params = {
     KEY_RUN_MIXPLORER: 'DragonRunMixplorer',
     KEY_STEERING_MONITOR_TIMER: 'DragonSteeringMonitorTimer',
     KEY_CAMERA_OFFSET: 'DragonCameraOffset',
+    KEY_UI_VOLUME_BOOST: 'DragonUIVolumeBoost',
 };

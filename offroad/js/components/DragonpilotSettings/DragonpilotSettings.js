@@ -45,6 +45,8 @@ class DragonpilotSettings extends Component {
             enableAutonavi: false,
             enableMixplorer: false,
             cameraOffsetInt: '6',
+            autoShutdownAtInt: '0',
+            VolumeBoost: '0',
         }
     }
 
@@ -56,6 +58,8 @@ class DragonpilotSettings extends Component {
                 DragonEnableAutonavi: dragonEnableAutonavi,
                 DragonEnableMixplorer: dragonEnableMixplorer,
                 DragonCameraOffset: dragonCameraOffset,
+                DragonAutoShutdownAt: dragonAutoShutdownAt,
+                DragonUIVolumeBoost: dragonUIVolumeBoost,
             },
         } = this.props;
         this.setState({ steeringMonitorTimerInt: dragonSteeringMonitorTimer === '0'? 0 : parseInt(dragonSteeringMonitorTimer) || 3 })
@@ -63,6 +67,8 @@ class DragonpilotSettings extends Component {
         this.setState({ enableAutonavi: dragonEnableAutonavi === '1' })
         this.setState({ enableMixplorer: dragonEnableMixplorer === '1' })
         this.setState({ cameraOffsetInt: dragonCameraOffset === '0'? 0 : parseInt(dragonCameraOffset) || 6 })
+        this.setState({ autoShutdownAtInt: dragonAutoShutdownAt === '0'? 0 : parseInt(dragonAutoShutdownAt) || 0 })
+        this.setState({ VolumeBoostInt: dragonUIVolumeBoost === '0'? 0 : parseInt(dragonUIVolumeBoost) || 0 })
     }
 
     handleExpanded(key) {
@@ -115,6 +121,36 @@ class DragonpilotSettings extends Component {
         }
         this.setState({ cameraOffsetInt: _cameraOffset });
         this.props.setCameraOffset(_cameraOffset);
+    }
+
+    handleChangedAutoShutdownAt(operator) {
+        const { autoShutdownAtInt } = this.state;
+        let _autoShutdownAt;
+        switch (operator) {
+            case 'increment':
+                _autoShutdownAt = autoShutdownAtInt + 1;
+                break;
+            case 'decrement':
+                _autoShutdownAt = autoShutdownAtInt - 1;
+                break;
+        }
+        this.setState({ autoShutdownAtInt: _autoShutdownAt });
+        this.props.setAutoShutdown(_autoShutdownAt);
+    }
+
+    handleChangedVolumeBoost(operator) {
+        const { VolumeBoostInt } = this.state;
+        let _VolumeBoost;
+        switch (operator) {
+            case 'increment':
+                _VolumeBoost = Math.min(100, VolumeBoostInt + 10);
+                break;
+            case 'decrement':
+                _VolumeBoost = Math.max(-100, VolumeBoostInt - 10);
+                break;
+        }
+        this.setState({ VolumeBoostInt: _VolumeBoost });
+        this.props.setVolumeBoost(_VolumeBoost);
     }
 
     handleRunApp(app, val) {
@@ -199,12 +235,11 @@ class DragonpilotSettings extends Component {
                 DragonEnableLogger: dragonEnableLogger,
                 DragonEnableUploader: dragonEnableUploader,
                 DragonEnableDashcam: dragonEnableDashcam,
-                DragonAutoShutdownAt: dragonAutoShutdownAt,
                 DragonNoctuaMode: dragonNoctuaMode,
                 DragonCacheCar: dragonCacheCar,
             }
         } = this.props;
-        const { expandedCell, enableMixplorer, cameraOffsetInt } = this.state;
+        const { expandedCell, enableMixplorer, cameraOffsetInt, autoShutdownAtInt } = this.state;
         return (
             <View style={ Styles.settings }>
                 <View style={ Styles.settingsHeader }>
@@ -265,14 +300,38 @@ class DragonpilotSettings extends Component {
                             handleExpanded={ () => this.handleExpanded('dashcam') }
                             handleChanged={ this.props.setEnableDashcam } />
                         <X.TableCell
-                            type='switch'
-                            title='Enable Auto Shutdown'
-                            value={ parseInt(dragonAutoShutdownAt) > 0 }
+                            type='custom'
+                            title='Auto Shutdown (min)'
                             iconSource={ Icons.developer }
-                            description='Shutdown EON when usb power is not present for 30 minutes.'
+                            description='Adjust the shutdown timer if you would like EON to shutdown after a period of time (when usb power is not present), set this to 0 if you would like to disable this feature.'
                             isExpanded={ expandedCell == 'autoShutdown' }
-                            handleExpanded={ () => this.handleExpanded('autoShutdown') }
-                            handleChanged={ this.props.setAutoShutdown } />
+                            handleExpanded={ () => this.handleExpanded('autoShutdown') }>
+                            <X.Button
+                                color='ghost'
+                                activeOpacity={ 1 }
+                                style={ Styles.settingsPlusMinus }>
+                                <X.Button
+                                    style={ [Styles.settingsNumericButton, { opacity: autoShutdownAtInt <= 0? 0.1 : 0.8 }] }
+                                    onPress={ () => this.handleChangedAutoShutdownAt('decrement')  }>
+                                    <X.Image
+                                        source={ Icons.minus }
+                                        style={ Styles.settingsNumericIcon } />
+                                </X.Button>
+                                <X.Text
+                                    color='white'
+                                    weight='semibold'
+                                    style={ Styles.settingsNumericValue }>
+                                    { autoShutdownAtInt }
+                                </X.Text>
+                                <X.Button
+                                    style={ [Styles.settingsNumericButton, { opacity: 0.8 }] }
+                                    onPress={ () => this.handleChangedAutoShutdownAt('increment') }>
+                                    <X.Image
+                                        source={ Icons.plus }
+                                        style={ Styles.settingsNumericIcon } />
+                                </X.Button>
+                            </X.Button>
+                        </X.TableCell>
                         <X.TableCell
                             type='switch'
                             title='Enable Noctua Fan Mode'
@@ -301,7 +360,7 @@ class DragonpilotSettings extends Component {
                             <X.Button
                                 color='ghost'
                                 activeOpacity={ 1 }
-                                style={ Styles.settingsCameraOffset }>
+                                style={ Styles.settingsPlusMinus }>
                                 <X.Button
                                     style={ [Styles.settingsNumericButton, { opacity: 0.8 }] }
                                     onPress={ () => this.handleChangedCameraOffset('decrement')  }>
@@ -411,7 +470,7 @@ class DragonpilotSettings extends Component {
                             <X.Button
                                 color='ghost'
                                 activeOpacity={ 1 }
-                                style={ Styles.settingsSteeringMonitorTimer }>
+                                style={ Styles.settingsPlusMinus }>
                                 <X.Button
                                     style={ [Styles.settingsNumericButton, { opacity: steeringMonitorTimerInt <= 0? 0.1 : 0.8 }] }
                                     onPress={ () => this.handleChangedSteeringMonitorTimer('decrement')  }>
@@ -595,7 +654,7 @@ class DragonpilotSettings extends Component {
                 DragonUIDevMini: dragonUIDevMini,
             },
         } = this.props;
-        const { expandedCell } = this.state;
+        const { expandedCell, VolumeBoostInt } = this.state;
         return (
             <View style={ Styles.settings }>
                 <View style={ Styles.settingsHeader }>
@@ -656,6 +715,39 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'dragon_ui_dev_mini' }
                             handleExpanded={ () => this.handleExpanded('dragon_ui_dev_mini') }
                             handleChanged={ this.props.setUIDevMini } />
+                        <X.TableCell
+                            type='custom'
+                            title='Boost Audio Alert Volume (%)'
+                            iconSource={ Icons.developer }
+                            description='Boost audio alert volume in percentage, set to -100 (%) if you would like to disable audio alert. Default is 0 (%).'
+                            isExpanded={ expandedCell == 'adjust_audio_alert_vol' }
+                            handleExpanded={ () => this.handleExpanded('adjust_audio_alert_vol') }>
+                            <X.Button
+                                color='ghost'
+                                activeOpacity={ 1 }
+                                style={ Styles.settingsPlusMinus }>
+                                <X.Button
+                                    style={ [Styles.settingsNumericButton, { opacity: VolumeBoostInt <= -100? 0.1 : 0.8 }] }
+                                    onPress={ () => this.handleChangedVolumeBoost('decrement')  }>
+                                    <X.Image
+                                        source={ Icons.minus }
+                                        style={ Styles.settingsNumericIcon } />
+                                </X.Button>
+                                <X.Text
+                                    color='white'
+                                    weight='semibold'
+                                    style={ Styles.settingsNumericValue }>
+                                    { VolumeBoostInt }
+                                </X.Text>
+                                <X.Button
+                                    style={ [Styles.settingsNumericButton, { opacity: VolumeBoostInt >= 100? 0.1 : 0.8 }] }
+                                    onPress={ () => this.handleChangedVolumeBoost('increment') }>
+                                    <X.Image
+                                        source={ Icons.plus }
+                                        style={ Styles.settingsNumericIcon } />
+                                </X.Button>
+                            </X.Button>
+                        </X.TableCell>
                     </X.Table>
                 </ScrollView>
             </View>
@@ -729,7 +821,7 @@ const mapDispatchToProps = dispatch => ({
         dispatch(updateParam(Params.KEY_ENABLE_DRIVER_SAFETY_CHECK, (enableDriverSafetyCheck | 0).toString()));
     },
     setAutoShutdown: (autoShutdown) => {
-        dispatch(updateParam(Params.KEY_AUTO_SHUTDOWN, (autoShutdown? 30 : 0).toString()));
+        dispatch(updateParam(Params.KEY_AUTO_SHUTDOWN, (autoShutdown).toString()));
     },
     setNoctuaMode: (noctuaMode) => {
         dispatch(updateParam(Params.KEY_ENABLE_NOCTUA_MODE, (noctuaMode | 0).toString()));
@@ -771,14 +863,17 @@ const mapDispatchToProps = dispatch => ({
         dispatch(updateParam(Params.KEY_ENABLE_MIXPLORER, (val | 0).toString()));
     },
     setSteeringMonitorTimer: (val) => {
-        dispatch(updateParam(Params.KEY_STEERING_MONITOR_TIMER, (val).toString()));
+        dispatch(updateParam(Params.KEY_STEERING_MONITOR_TIMER, (val | 3).toString()));
     },
     runMixplorer: (val) => {
-        dispatch(updateParam(Params.KEY_RUN_MIXPLORER, (val).toString()));
+        dispatch(updateParam(Params.KEY_RUN_MIXPLORER, (val | 0).toString()));
     },
     setCameraOffset: (val) => {
-        dispatch(updateParam(Params.KEY_CAMERA_OFFSET, (val).toString()));
+        dispatch(updateParam(Params.KEY_CAMERA_OFFSET, (val | 6).toString()));
     },
+    setVolumeBoost: (val) => {
+        dispatch(updateParam(Params.KEY_UI_VOLUME_BOOST, (val | 0).toString()));
+    }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DragonpilotSettings);
