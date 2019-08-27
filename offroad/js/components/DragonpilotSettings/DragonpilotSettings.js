@@ -283,9 +283,9 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setEnableDashcam } />
                         <X.TableCell
                             type='custom'
-                            title='Auto Shutdown (min)'
+                            title='自動關機 (分鐘)'
                             iconSource={ Icons.developer }
-                            description='Adjust the shutdown timer if you would like EON to shutdown after a period of time (when usb power is not present), set this to 0 if you would like to disable this feature.'
+                            description='如果您想要 dp 在斷電後自動關機，您可以調整自動關機時長，如果您不想啟用本功能，請將它設成 0 (分鐘)，此功能不支持使用 comma power 的用戶。'
                             isExpanded={ expandedCell == 'autoShutdown' }
                             handleExpanded={ () => this.handleExpanded('autoShutdown') }>
                             <X.Button
