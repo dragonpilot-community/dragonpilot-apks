@@ -45,6 +45,7 @@ class DragonpilotSettings extends Component {
             enableAutonavi: false,
             enableMixplorer: false,
             cameraOffsetInt: '6',
+            autoShutdownAtInt: '0',
         }
     }
 
@@ -56,6 +57,7 @@ class DragonpilotSettings extends Component {
                 DragonEnableAutonavi: dragonEnableAutonavi,
                 DragonEnableMixplorer: dragonEnableMixplorer,
                 DragonCammeraOffset: dragonCameraOffset,
+                DragonAutoShutdownAt: dragonAutoShutdownAt,
             },
         } = this.props;
         this.setState({ steeringMonitorTimerInt: dragonSteeringMonitorTimer === '0'? 0 : parseInt(dragonSteeringMonitorTimer) || 3 })
@@ -63,6 +65,7 @@ class DragonpilotSettings extends Component {
         this.setState({ enableAutonavi: dragonEnableAutonavi === '1' })
         this.setState({ enableMixplorer: dragonEnableMixplorer === '1' })
         this.setState({ cameraOffsetInt: dragonCameraOffset === '0'? 0 : parseInt(dragonCameraOffset) || 6 })
+        this.setState({ autoShutdownAtInt: dragonAutoShutdownAt === '0'? 0 : parseInt(dragonAutoShutdownAt) || 0 })
     }
 
     handleExpanded(key) {
@@ -115,6 +118,21 @@ class DragonpilotSettings extends Component {
         }
         this.setState({ cameraOffsetInt: _cameraOffset });
         this.props.setCameraOffset(_cameraOffset);
+    }
+
+    handleChangedAutoShutdownAt(operator) {
+        const { autoShutdownAtInt } = this.state;
+        let _autoShutdownAt;
+        switch (operator) {
+            case 'increment':
+                _autoShutdownAt = autoShutdownAtInt + 1;
+                break;
+            case 'decrement':
+                _autoShutdownAt = autoShutdownAtInt - 1;
+                break;
+        }
+        this.setState({ autoShutdownAtInt: _autoShutdownAt });
+        this.props.setAutoShutdown(_autoShutdownAt);
     }
 
     handleRunApp(app, val) {
@@ -199,12 +217,11 @@ class DragonpilotSettings extends Component {
                 DragonEnableLogger: dragonEnableLogger,
                 DragonEnableUploader: dragonEnableUploader,
                 DragonEnableDashcam: dragonEnableDashcam,
-                DragonAutoShutdownAt: dragonAutoShutdownAt,
                 DragonNoctuaMode: dragonNoctuaMode,
                 DragonCacheCar: dragonCacheCar,
             }
         } = this.props;
-        const { expandedCell, enableMixplorer, cameraOffsetInt } = this.state;
+        const { expandedCell, enableMixplorer, cameraOffsetInt, autoShutdownAtInt } = this.state;
         return (
             <View style={ Styles.settings }>
                 <View style={ Styles.settingsHeader }>
@@ -265,14 +282,38 @@ class DragonpilotSettings extends Component {
                             handleExpanded={ () => this.handleExpanded('dashcam') }
                             handleChanged={ this.props.setEnableDashcam } />
                         <X.TableCell
-                            type='switch'
-                            title='啟用自動關機'
-                            value={ parseInt(dragonAutoShutdownAt) > 0 }
+                            type='custom'
+                            title='Auto Shutdown (min)'
                             iconSource={ Icons.developer }
-                            description='啟用這個選項後，當 Panda 的 USB 停止供電時 EON 將會在 30 分鐘後自動關機。'
+                            description='Adjust the shutdown timer if you would like EON to shutdown after a period of time (when usb power is not present), set this to 0 if you would like to disable this feature.'
                             isExpanded={ expandedCell == 'autoShutdown' }
-                            handleExpanded={ () => this.handleExpanded('autoShutdown') }
-                            handleChanged={ this.props.setAutoShutdown } />
+                            handleExpanded={ () => this.handleExpanded('autoShutdown') }>
+                            <X.Button
+                                color='ghost'
+                                activeOpacity={ 1 }
+                                style={ Styles.settingsAutoShutdown }>
+                                <X.Button
+                                    style={ [Styles.settingsNumericButton, { opacity: autoShutdownAtInt <= 0? 0.1 : 0.8 }] }
+                                    onPress={ () => this.handleChangedAutoShutdownAt('decrement')  }>
+                                    <X.Image
+                                        source={ Icons.minus }
+                                        style={ Styles.settingsNumericIcon } />
+                                </X.Button>
+                                <X.Text
+                                    color='white'
+                                    weight='semibold'
+                                    style={ Styles.settingsNumericValue }>
+                                    { autoShutdownAtInt }
+                                </X.Text>
+                                <X.Button
+                                    style={ [Styles.settingsNumericButton, { opacity: 0.8 }] }
+                                    onPress={ () => this.handleChangedAutoShutdownAt('increment') }>
+                                    <X.Image
+                                        source={ Icons.plus }
+                                        style={ Styles.settingsNumericIcon } />
+                                </X.Button>
+                            </X.Button>
+                        </X.TableCell>
                         <X.TableCell
                             type='switch'
                             title='啟用 Noctua 風扇模式'
@@ -729,7 +770,7 @@ const mapDispatchToProps = dispatch => ({
         dispatch(updateParam(Params.KEY_ENABLE_DRIVER_SAFETY_CHECK, (enableDriverSafetyCheck | 0).toString()));
     },
     setAutoShutdown: (autoShutdown) => {
-        dispatch(updateParam(Params.KEY_AUTO_SHUTDOWN, (autoShutdown? 30 : 0).toString()));
+        dispatch(updateParam(Params.KEY_AUTO_SHUTDOWN, (autoShutdown).toString()));
     },
     setNoctuaMode: (noctuaMode) => {
         dispatch(updateParam(Params.KEY_ENABLE_NOCTUA_MODE, (noctuaMode | 0).toString()));

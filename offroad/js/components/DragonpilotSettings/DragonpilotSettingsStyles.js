@@ -86,4 +86,11 @@ export default StyleSheet.create({
     flexDirection: 'row',
     width: '100%',
   },
+  settingsAutoShutdown: {
+    alignItems: 'center',
+    display: 'flex',
+    height: 66,
+    flexDirection: 'row',
+    width: '100%',
+  },
 })
