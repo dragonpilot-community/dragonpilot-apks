@@ -46,6 +46,7 @@ class DragonpilotSettings extends Component {
             enableMixplorer: false,
             cameraOffsetInt: '6',
             autoShutdownAtInt: '0',
+            VolumeBoost: '0',
         }
     }
 
@@ -58,6 +59,7 @@ class DragonpilotSettings extends Component {
                 DragonEnableMixplorer: dragonEnableMixplorer,
                 DragonCammeraOffset: dragonCameraOffset,
                 DragonAutoShutdownAt: dragonAutoShutdownAt,
+                DragonUIVolumeBoost: dragonUIVolumeBoost,
             },
         } = this.props;
         this.setState({ steeringMonitorTimerInt: dragonSteeringMonitorTimer === '0'? 0 : parseInt(dragonSteeringMonitorTimer) || 3 })
@@ -66,6 +68,7 @@ class DragonpilotSettings extends Component {
         this.setState({ enableMixplorer: dragonEnableMixplorer === '1' })
         this.setState({ cameraOffsetInt: dragonCameraOffset === '0'? 0 : parseInt(dragonCameraOffset) || 6 })
         this.setState({ autoShutdownAtInt: dragonAutoShutdownAt === '0'? 0 : parseInt(dragonAutoShutdownAt) || 0 })
+        this.setState({ VolumeBoostInt: dragonUIVolumeBoost === '0'? 0 : parseInt(dragonUIVolumeBoost) || 0 })
     }
 
     handleExpanded(key) {
@@ -133,6 +136,21 @@ class DragonpilotSettings extends Component {
         }
         this.setState({ autoShutdownAtInt: _autoShutdownAt });
         this.props.setAutoShutdown(_autoShutdownAt);
+    }
+
+    handleChangedVolumeBoost(operator) {
+        const { VolumeBoostInt } = this.state;
+        let _VolumeBoost;
+        switch (operator) {
+            case 'increment':
+                _VolumeBoost = Math.min(100, VolumeBoostInt + 10);
+                break;
+            case 'decrement':
+                _VolumeBoost = Math.max(-100, VolumeBoostInt - 10);
+                break;
+        }
+        this.setState({ VolumeBoostInt: _VolumeBoost });
+        this.props.setVolumeBoost(_VolumeBoost);
     }
 
     handleRunApp(app, val) {
@@ -291,7 +309,7 @@ class DragonpilotSettings extends Component {
                             <X.Button
                                 color='ghost'
                                 activeOpacity={ 1 }
-                                style={ Styles.settingsAutoShutdown }>
+                                style={ Styles.settingsPlusMinus }>
                                 <X.Button
                                     style={ [Styles.settingsNumericButton, { opacity: autoShutdownAtInt <= 0? 0.1 : 0.8 }] }
                                     onPress={ () => this.handleChangedAutoShutdownAt('decrement')  }>
@@ -342,7 +360,7 @@ class DragonpilotSettings extends Component {
                             <X.Button
                                 color='ghost'
                                 activeOpacity={ 1 }
-                                style={ Styles.settingsCameraOffset }>
+                                style={ Styles.settingsPlusMinus }>
                                 <X.Button
                                     style={ [Styles.settingsNumericButton, { opacity: 0.8 }] }
                                     onPress={ () => this.handleChangedCameraOffset('decrement')  }>
@@ -452,7 +470,7 @@ class DragonpilotSettings extends Component {
                             <X.Button
                                 color='ghost'
                                 activeOpacity={ 1 }
-                                style={ Styles.settingsSteeringMonitorTimer }>
+                                style={ Styles.settingsPlusMinus }>
                                 <X.Button
                                     style={ [Styles.settingsNumericButton, { opacity: steeringMonitorTimerInt <= 0? 0.1 : 0.8 }] }
                                     onPress={ () => this.handleChangedSteeringMonitorTimer('decrement')  }>
@@ -636,7 +654,7 @@ class DragonpilotSettings extends Component {
                 DragonUIDevMini: dragonUIDevMini,
             },
         } = this.props;
-        const { expandedCell } = this.state;
+        const { expandedCell, VolumeBoostInt } = this.state;
         return (
             <View style={ Styles.settings }>
                 <View style={ Styles.settingsHeader }>
@@ -697,6 +715,39 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'dragon_ui_dev_mini' }
                             handleExpanded={ () => this.handleExpanded('dragon_ui_dev_mini') }
                             handleChanged={ this.props.setUIDevMini } />
+                        <X.TableCell
+                            type='custom'
+                            title='Boost Audio Alert Volume (%)'
+                            iconSource={ Icons.developer }
+                            description='Boost audio alert volume in percentage, set to -100 (%) if you would like to disable audio alert. Default is 0 (%).'
+                            isExpanded={ expandedCell == 'adjust_audio_alert_vol' }
+                            handleExpanded={ () => this.handleExpanded('adjust_audio_alert_vol') }>
+                            <X.Button
+                                color='ghost'
+                                activeOpacity={ 1 }
+                                style={ Styles.settingsPlusMinus }>
+                                <X.Button
+                                    style={ [Styles.settingsNumericButton, { opacity: VolumeBoostInt <= -100? 0.1 : 0.8 }] }
+                                    onPress={ () => this.handleChangedVolumeBoost('decrement')  }>
+                                    <X.Image
+                                        source={ Icons.minus }
+                                        style={ Styles.settingsNumericIcon } />
+                                </X.Button>
+                                <X.Text
+                                    color='white'
+                                    weight='semibold'
+                                    style={ Styles.settingsNumericValue }>
+                                    { VolumeBoostInt }
+                                </X.Text>
+                                <X.Button
+                                    style={ [Styles.settingsNumericButton, { opacity: VolumeBoostInt >= 100? 0.1 : 0.8 }] }
+                                    onPress={ () => this.handleChangedVolumeBoost('increment') }>
+                                    <X.Image
+                                        source={ Icons.plus }
+                                        style={ Styles.settingsNumericIcon } />
+                                </X.Button>
+                            </X.Button>
+                        </X.TableCell>
                     </X.Table>
                 </ScrollView>
             </View>
@@ -812,14 +863,17 @@ const mapDispatchToProps = dispatch => ({
         dispatch(updateParam(Params.KEY_ENABLE_MIXPLORER, (val | 0).toString()));
     },
     setSteeringMonitorTimer: (val) => {
-        dispatch(updateParam(Params.KEY_STEERING_MONITOR_TIMER, (val).toString()));
+        dispatch(updateParam(Params.KEY_STEERING_MONITOR_TIMER, (val | 3).toString()));
     },
     runMixplorer: (val) => {
-        dispatch(updateParam(Params.KEY_RUN_MIXPLORER, (val).toString()));
+        dispatch(updateParam(Params.KEY_RUN_MIXPLORER, (val | 0).toString()));
     },
     setCameraOffset: (val) => {
-        dispatch(updateParam(Params.KEY_CAMERA_OFFSET, (val).toString()));
+        dispatch(updateParam(Params.KEY_CAMERA_OFFSET, (val | 6).toString()));
     },
+    setVolumeBoost: (val) => {
+        dispatch(updateParam(Params.KEY_UI_VOLUME_BOOST, (val | 0).toString()));
+    }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DragonpilotSettings);

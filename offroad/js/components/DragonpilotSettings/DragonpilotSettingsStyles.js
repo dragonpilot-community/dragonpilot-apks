@@ -72,21 +72,7 @@ export default StyleSheet.create({
     textAlign: 'center',
     width: 40,
   },
-  settingsSteeringMonitorTimer: {
-    alignItems: 'center',
-    display: 'flex',
-    height: 66,
-    flexDirection: 'row',
-    width: '100%',
-  },
-  settingsCameraOffset: {
-    alignItems: 'center',
-    display: 'flex',
-    height: 66,
-    flexDirection: 'row',
-    width: '100%',
-  },
-  settingsAutoShutdown: {
+  settingsPlusMinus: {
     alignItems: 'center',
     display: 'flex',
     height: 66,
