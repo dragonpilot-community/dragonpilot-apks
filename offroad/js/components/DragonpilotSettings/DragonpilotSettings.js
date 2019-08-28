@@ -717,9 +717,9 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setUIDevMini } />
                         <X.TableCell
                             type='custom'
-                            title='Boost Audio Alert Volume (%)'
+                            title='擴大警示音量 (%)'
                             iconSource={ Icons.developer }
-                            description='Boost audio alert volume in percentage, set to -100 (%) if you would like to disable audio alert. Default is 0 (%).'
+                            description='擴大或減少警示音量，設至 -100 (%) 可以完全關閉警示音。預設為 0 (%)。'
                             isExpanded={ expandedCell == 'adjust_audio_alert_vol' }
                             handleExpanded={ () => this.handleExpanded('adjust_audio_alert_vol') }>
                             <X.Button
