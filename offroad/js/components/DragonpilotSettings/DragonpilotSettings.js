@@ -57,7 +57,7 @@ class DragonpilotSettings extends Component {
                 DragonEnableTomTom: dragonEnableTomTom,
                 DragonEnableAutonavi: dragonEnableAutonavi,
                 DragonEnableMixplorer: dragonEnableMixplorer,
-                DragonCammeraOffset: dragonCameraOffset,
+                DragonCameraOffset: dragonCameraOffset,
                 DragonAutoShutdownAt: dragonAutoShutdownAt,
                 DragonUIVolumeBoost: dragonUIVolumeBoost,
             },
