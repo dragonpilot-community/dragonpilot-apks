@@ -54,5 +54,4 @@ export const Params = {
     KEY_STEERING_MONITOR_TIMER: 'DragonSteeringMonitorTimer',
     KEY_CAMERA_OFFSET: 'DragonCameraOffset',
     KEY_UI_VOLUME_BOOST: 'DragonUIVolumeBoost',
-    KEY_CHARGING_CTRL: 'DragonChargingCtrl',
 };
