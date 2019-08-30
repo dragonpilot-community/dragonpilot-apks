@@ -237,7 +237,6 @@ class DragonpilotSettings extends Component {
                 DragonEnableDashcam: dragonEnableDashcam,
                 DragonNoctuaMode: dragonNoctuaMode,
                 DragonCacheCar: dragonCacheCar,
-                DragonChargingCtrl: dragonChargingCtrl,
             }
         } = this.props;
         const { expandedCell, enableMixplorer, cameraOffsetInt, autoShutdownAtInt } = this.state;
@@ -351,15 +350,6 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'cache_fingerprint' }
                             handleExpanded={ () => this.handleExpanded('cache_fingerprint') }
                             handleChanged={ this.props.setCacheCar } />
-                        <X.TableCell
-                            type='switch'
-                            title='電池充電控制'
-                            value={ !!parseInt(dragonChargingCtrl) }
-                            iconSource={ Icons.developer }
-                            description='啟用這個選項後，dp 將會把電池電量控制在 60% 至 80% 之間，以保持電池的效能。'
-                            isExpanded={ expandedCell == 'charging_ctrl' }
-                            handleExpanded={ () => this.handleExpanded('charging_ctrl') }
-                            handleChanged={ this.props.setChargingCtrl } />
                         <X.TableCell
                             type='custom'
                             title='相機偏移距離 (公分)'
@@ -883,10 +873,7 @@ const mapDispatchToProps = dispatch => ({
     },
     setVolumeBoost: (val) => {
         dispatch(updateParam(Params.KEY_UI_VOLUME_BOOST, (val).toString()));
-    },
-    setChargingCtrl: (val) => {
-        dispatch(updateParam(Params.KEY_CHARGING_CTRL, (val | 0).toString()));
-    },
+    }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DragonpilotSettings);
