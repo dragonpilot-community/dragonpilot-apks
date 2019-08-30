@@ -863,16 +863,16 @@ const mapDispatchToProps = dispatch => ({
         dispatch(updateParam(Params.KEY_ENABLE_MIXPLORER, (val | 0).toString()));
     },
     setSteeringMonitorTimer: (val) => {
-        dispatch(updateParam(Params.KEY_STEERING_MONITOR_TIMER, (val | 3).toString()));
+        dispatch(updateParam(Params.KEY_STEERING_MONITOR_TIMER, (val).toString()));
     },
     runMixplorer: (val) => {
         dispatch(updateParam(Params.KEY_RUN_MIXPLORER, (val | 0).toString()));
     },
     setCameraOffset: (val) => {
-        dispatch(updateParam(Params.KEY_CAMERA_OFFSET, (val | 6).toString()));
+        dispatch(updateParam(Params.KEY_CAMERA_OFFSET, (val).toString()));
     },
     setVolumeBoost: (val) => {
-        dispatch(updateParam(Params.KEY_UI_VOLUME_BOOST, (val | 0).toString()));
+        dispatch(updateParam(Params.KEY_UI_VOLUME_BOOST, (val).toString()));
     }
 });
 
