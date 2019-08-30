@@ -353,10 +353,10 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setCacheCar } />
                         <X.TableCell
                             type='switch'
-                            title='Charging Control'
+                            title='電池充電控制'
                             value={ !!parseInt(dragonChargingCtrl) }
                             iconSource={ Icons.developer }
-                            description='Enable this will let the keep your battery percentage between 60% ~ 80%.'
+                            description='啟用這個選項後，dp 將會把電池電量控制在 60% 至 80% 之間，以保持電池的效能。'
                             isExpanded={ expandedCell == 'charging_ctrl' }
                             handleExpanded={ () => this.handleExpanded('charging_ctrl') }
                             handleChanged={ this.props.setChargingCtrl } />
