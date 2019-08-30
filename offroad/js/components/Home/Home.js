@@ -120,6 +120,12 @@ class Home extends Component {
         );
     }
 
+    getLocalizedDate(){
+        var n = new Date()
+        var weekdays = new Array("星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六")
+        return n.getFullYear() + ' 年 ' + (n.getMonth()+1) +' 月 ' + n.getDate() + ' 日 ' + ' ' + weekdays[n.getDay()]
+    }
+
     render() {
         const {
             isPaired,
@@ -138,7 +144,7 @@ class Home extends Component {
                                 <X.Text
                                     color='white'
                                     weight='light'>
-                                    { summaryDate }
+                                    { this.getLocalizedDate() }
                                 </X.Text>
                             </View>
                             <View style={ Styles.homeWelcomeSummaryCity }>
