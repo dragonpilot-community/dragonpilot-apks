@@ -82,6 +82,8 @@ class MainActivity : Activity(), NewDestinationReceiverDelegate, OffroadNavigati
     var networkTypeText: TextView? = null
     var batteryLevelView: ImageView? = null
 
+    var sidebarMetricIP: TextView? = null
+
     var ctx: Context? = null
     var activityView: ActivityView? = null
     var activityViewLoaded: Boolean = false
@@ -265,7 +267,8 @@ class MainActivity : Activity(), NewDestinationReceiverDelegate, OffroadNavigati
                 updateSidebarMetrics(
                   log.thermal.freeSpace,
                   log.thermal.bat,
-                  log.thermal.thermalStatus.toString());
+                  log.thermal.thermalStatus.toString(),
+                  log.thermal.ipAddr.toString());
             }
 
             
@@ -331,7 +334,7 @@ class MainActivity : Activity(), NewDestinationReceiverDelegate, OffroadNavigati
         }
     }
 
-    fun updateSidebarMetrics(freeSpace: Float, batteryTemp: Int, thermalStatus: String) {
+    fun updateSidebarMetrics(freeSpace: Float, batteryTemp: Int, thermalStatus: String, ipAddr: String) {
       // Storage
       var storagePct = (1.0-freeSpace)*100;
       sidebarMetricStorage?.text = String.format("%.0f", storagePct).plus("%");
@@ -367,7 +370,30 @@ class MainActivity : Activity(), NewDestinationReceiverDelegate, OffroadNavigati
         sidebarMetricTempBorder!!.getBackground().setTint(colorRed!!);
         sidebarMetricTempBorder!!.getBackground().setAlpha(255);
       }
+
+      // IP
+      sidebarMetricIP?.text = ipAddr;
     }
+
+//    private fun getLocalIpAddress(): String? {
+//        try {
+//
+//            val wm = getSystemService(WIFI_SERVICE) as WifiManager
+//            return ipToString(wm.getConnectionInfo().getIpAddress())
+//        } catch (ex: Exception) {
+//            Log.e("IP Address", ex.toString())
+//        }
+//
+//        return null
+//    }
+//
+//    private fun ipToString(i: Int): String {
+//        return (i and 0xFF).toString() + "." +
+//                (i shr 8 and 0xFF) + "." +
+//                (i shr 16 and 0xFF) + "." +
+//                (i shr 24 and 0xFF)
+//
+//    }
 
     /* fun controlsThread() {
         Log.w("frame", "controlsThread")
@@ -560,6 +586,7 @@ class MainActivity : Activity(), NewDestinationReceiverDelegate, OffroadNavigati
         activityOverlayManager = ActivityOverlayManager(findViewById(R.id.activity_mock), this)
         activityTouchGate = findViewById(R.id.activity_touch_gate) as RelativeLayout
         ctx = activityView!!.getContext() as Context
+        sidebarMetricIP = findViewById(R.id.sidebarMetricIPValue) as TextView
 
         // Colors
         colorGreen = ContextCompat.getColor(ctx, R.color.engagedGreen);
