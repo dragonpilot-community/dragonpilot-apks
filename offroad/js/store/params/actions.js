@@ -56,6 +56,7 @@ const PARAMS = [
   "DragonSteeringMonitorTimer",
   "DragonCameraOffset",
   "DragonUIVolumeBoost",
+  "DragonGreyPandaMode",
 ];
 
 export function refreshParams() {
