@@ -55,4 +55,5 @@ export const Params = {
     KEY_CAMERA_OFFSET: 'DragonCameraOffset',
     KEY_UI_VOLUME_BOOST: 'DragonUIVolumeBoost',
     KEY_GREY_PANDA_MODE: 'DragonGreyPandaMode',
+    KEY_DRIVING_UI: 'DragonDrivingUI',
 };

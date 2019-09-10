@@ -47,6 +47,7 @@ class DragonpilotSettings extends Component {
             cameraOffsetInt: '6',
             autoShutdownAtInt: '0',
             VolumeBoost: '0',
+            enableDrivingUI: true,
         }
     }
 
@@ -60,6 +61,7 @@ class DragonpilotSettings extends Component {
                 DragonCameraOffset: dragonCameraOffset,
                 DragonAutoShutdownAt: dragonAutoShutdownAt,
                 DragonUIVolumeBoost: dragonUIVolumeBoost,
+                DragonDrivingUI: dragonDrivingUI,
             },
         } = this.props;
         this.setState({ steeringMonitorTimerInt: dragonSteeringMonitorTimer === '0'? 0 : parseInt(dragonSteeringMonitorTimer) || 3 })
@@ -69,6 +71,7 @@ class DragonpilotSettings extends Component {
         this.setState({ cameraOffsetInt: dragonCameraOffset === '0'? 0 : parseInt(dragonCameraOffset) || 6 })
         this.setState({ autoShutdownAtInt: dragonAutoShutdownAt === '0'? 0 : parseInt(dragonAutoShutdownAt) || 0 })
         this.setState({ VolumeBoostInt: dragonUIVolumeBoost === '0'? 0 : parseInt(dragonUIVolumeBoost) || 0 })
+        this.setState({ enableDrivingUI: dragonDrivingUI === '1' })
     }
 
     handleExpanded(key) {
@@ -647,6 +650,7 @@ class DragonpilotSettings extends Component {
     renderUISettings() {
         const {
             params: {
+                DragonDrivingUI: dragonDrivingUI,
                 DragonUIEvent: dragonUIEvent,
                 DragonUIMaxSpeed: dragonUIMaxSpeed,
                 DragonUIFace: dragonUIFace,
@@ -654,7 +658,7 @@ class DragonpilotSettings extends Component {
                 DragonUIDevMini: dragonUIDevMini,
             },
         } = this.props;
-        const { expandedCell, VolumeBoostInt } = this.state;
+        const { expandedCell, VolumeBoostInt, enableDrivingUI } = this.state;
         return (
             <View style={ Styles.settings }>
                 <View style={ Styles.settingsHeader }>
@@ -672,22 +676,36 @@ class DragonpilotSettings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
-                            title='Display Event / Steering Icon'
-                            value={ !!parseInt(dragonUIEvent) }
+                            title='Display Driving UI'
+                            value={ !!parseInt(dragonDrivingUI) }
                             iconSource={ Icons.developer }
+                            description='Disable this only if you do not want to see the driving UI and its blocking your navigation view, this will also effect what you records in dashcam.'
+                            isExpanded={ expandedCell == 'driving_ui' }
+                            handleExpanded={ () => this.handleExpanded('driving_ui') }
+                            handleChanged={ this.props.setDrivingUI } />
+                        {enableDrivingUI &&
+                        <X.TableCell
+                            type='switch'
+                            title='Display Event / Steering Icon'
+                            value={!!parseInt(dragonUIEvent)}
+                            iconSource={Icons.developer}
                             description='Enable this to display Event / Steering Icon.'
-                            isExpanded={ expandedCell == 'dragon_ui_event' }
-                            handleExpanded={ () => this.handleExpanded('dragon_ui_event') }
-                            handleChanged={ this.props.setUIEvent } />
+                            isExpanded={expandedCell == 'dragon_ui_event'}
+                            handleExpanded={() => this.handleExpanded('dragon_ui_event')}
+                            handleChanged={this.props.setUIEvent}/>
+                        }
+                        {enableDrivingUI &&
                         <X.TableCell
                             type='switch'
                             title='Display Max Speed'
-                            value={ !!parseInt(dragonUIMaxSpeed) }
-                            iconSource={ Icons.developer }
+                            value={!!parseInt(dragonUIMaxSpeed)}
+                            iconSource={Icons.developer}
                             description='Enable this to display Max Speed.'
-                            isExpanded={ expandedCell == 'dragon_ui_maxspeed' }
-                            handleExpanded={ () => this.handleExpanded('dragon_ui_maxspeed') }
-                            handleChanged={ this.props.setUIMaxSpeed } />
+                            isExpanded={expandedCell == 'dragon_ui_maxspeed'}
+                            handleExpanded={() => this.handleExpanded('dragon_ui_maxspeed')}
+                            handleChanged={this.props.setUIMaxSpeed}/>
+                        }
+                        {enableDrivingUI &&
                         <X.TableCell
                             type='switch'
                             title='Display Face Icon'
@@ -697,6 +715,8 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'dragon_ui_face' }
                             handleExpanded={ () => this.handleExpanded('dragon_ui_face') }
                             handleChanged={ this.props.setUIFace } />
+                        }
+                        {enableDrivingUI &&
                         <X.TableCell
                             type='switch'
                             title='Display Dev UI'
@@ -706,6 +726,8 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'dragon_ui_dev' }
                             handleExpanded={ () => this.handleExpanded('dragon_ui_dev') }
                             handleChanged={ this.props.setUIDev } />
+                        }
+                        {enableDrivingUI &&
                         <X.TableCell
                             type='switch'
                             title='Display Mini Dev UI'
@@ -715,6 +737,7 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'dragon_ui_dev_mini' }
                             handleExpanded={ () => this.handleExpanded('dragon_ui_dev_mini') }
                             handleChanged={ this.props.setUIDevMini } />
+                        }
                         <X.TableCell
                             type='custom'
                             title='Boost Audio Alert Volume (%)'
@@ -873,7 +896,10 @@ const mapDispatchToProps = dispatch => ({
     },
     setVolumeBoost: (val) => {
         dispatch(updateParam(Params.KEY_UI_VOLUME_BOOST, (val).toString()));
-    }
+    },
+    setDrivingUI: (val) => {
+        dispatch(updateParam(Params.KEY_DRIVING_UI, (val | 0).toString()));
+    },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DragonpilotSettings);
