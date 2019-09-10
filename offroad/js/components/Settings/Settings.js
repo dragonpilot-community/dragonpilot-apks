@@ -37,7 +37,6 @@ const Icons = {
     user: require('../../img/icon_user.png'),
     developer: require('../../img/icon_shell.png'),
     warning: require('../../img/icon_warning.png'),
-    monitoring: require('../../img/icon_monitoring.png'),
     metric: require('../../img/icon_metric.png'),
     network: require('../../img/icon_network.png'),
     eon: require('../../img/icon_eon.png'),
@@ -258,9 +257,7 @@ class Settings extends Component {
     renderPrimarySettings() {
         const {
             params: {
-                IsDriverMonitoringEnabled: isDriverMonitoringEnabled,
                 RecordFront: recordFront,
-                IsFcwEnabled: isFcwEnabled,
                 IsMetric: isMetric,
                 LongitudinalControl: hasLongitudinalControl,
                 LimitSetSpeed: limitSetSpeed,
@@ -324,15 +321,6 @@ class Settings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
-                            title='Enable Driver Monitoring'
-                            value={ !!parseInt(isDriverMonitoringEnabled) }
-                            iconSource={ Icons.monitoring }
-                            description='Driver Monitoring detects driver awareness with 3D facial reconstruction and pose estimation. It is used to warn the driver when they appear distracted while openpilot is engaged. This feature is still in beta, so Driver Monitoring is unavailable when the facial tracking is too inaccurate (e.g. at night). The availability is indicated by the face icon at the bottom-left corner of your EON.'
-                            isExpanded={ expandedCell == 'driver_monitoring' }
-                            handleExpanded={ () => this.handleExpanded('driver_monitoring') }
-                            handleChanged={ this.props.setDriverMonitoringEnabled } />
-                        <X.TableCell
-                            type='switch'
                             title='Record and Upload Driver Camera'
                             value={ !!parseInt(recordFront) }
                             iconSource={ Icons.network }
@@ -340,15 +328,6 @@ class Settings extends Component {
                             isExpanded={ expandedCell == 'record_front' }
                             handleExpanded={ () => this.handleExpanded('record_front') }
                             handleChanged={ this.props.setRecordFront } />
-                        <X.TableCell
-                            type='switch'
-                            title='Enable Forward Collision Warning'
-                            value={ !!parseInt(isFcwEnabled) }
-                            iconSource={ Icons.warning }
-                            description='Use visual and acoustic warnings when risk of forward collision is detected.'
-                            isExpanded={ expandedCell == 'fcw' }
-                            handleExpanded={ () => this.handleExpanded('fcw') }
-                            handleChanged={ this.props.setFcwEnabled } />
                         <X.TableCell
                             type='switch'
                             title='Use Metric System'
@@ -457,6 +436,16 @@ class Settings extends Component {
                                 value={ isPaired ? 'Yes' : 'No' } />
                             <X.Text color='white' size='tiny'>Terms of Service available at {'https://my.comma.ai/terms.html'}</X.Text>
                         </X.Table>
+                        { isPaired ? null : (
+                          <X.Table color='darkBlue' padding='big'>
+                              <X.Button
+                                  color='settingsDefault'
+                                  size='small'
+                                  onPress={ this.props.openPairing }>
+                                  Pair Device
+                              </X.Button>
+                          </X.Table>
+                        ) }
                     </View>
                 </ScrollView>
             </View>
@@ -817,6 +806,9 @@ const mapDispatchToProps = dispatch => ({
                 NavigationActions.navigate({ routeName: 'Home' })
             ]
         }));
+    },
+    openPairing: () => {
+        dispatch(NavigationActions.navigate({ routeName: 'PairAfterSetup' }))
     },
     reboot: () => {
         Alert.alert('Reboot', 'Are you sure you want to reboot?', [

@@ -15,8 +15,6 @@ const PARAMS = [
   "GitRemote",
   "HasAcceptedTerms",
   "HasCompletedSetup",
-  "IsDriverMonitoringEnabled",
-  "IsFcwEnabled",
   "IsGeofenceEnabled",
   "IsMetric",
   "IsUploadVideoOverCellularEnabled",
