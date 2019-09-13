@@ -389,7 +389,7 @@ class DragonpilotSettings extends Component {
                             size='small'
                             color='settingsDefault'
                             onPress={ () => ChffrPlus.openAndroidSettings() }>
-                            Open Android Settings
+                            開啟 Android 設定
                         </X.Button>
                     </X.Table>
                 </ScrollView>
@@ -452,10 +452,10 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setEnableSteeringOnSignal } />
                         <X.TableCell
                             type='switch'
-                            title='Display "Turn Exceeds Steering Limit" Alert'
+                            title='顯示 "彎道超過方向盤轉向限制" 警示訊息'
                             value={ !!parseInt(dragonDisplaySteeringLimitAlert) }
                             iconSource={ Icons.developer }
-                            description='If you disable this, you will not receive any "Turn Exceeds Steering Limit" alerts on the screen. Hyundai, Ford, Toyota do not have this alert.'
+                            description='如果您關閉這個選項，您將不再會收到 "彎道超過方向盤轉向限制" 的警示訊息。 Hyundai、Ford、Toyota 車種沒有用到此警示。'
                             isExpanded={ expandedCell == 'display_steering_limit_alert' }
                             handleExpanded={ () => this.handleExpanded('display_steering_limit_alert') }
                             handleChanged={ this.props.setDisplaySteeringLimitAlert } />
@@ -684,19 +684,19 @@ class DragonpilotSettings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
-                            title='Display Driving UI'
+                            title='顯示駕駛介面'
                             value={ !!parseInt(dragonDrivingUI) }
                             iconSource={ Icons.developer }
-                            description='Disable this only if you do not want to see the driving UI and its blocking your navigation view, this will also effect what you records in dashcam.'
+                            description='關閉這個選項後，畫面將不再顯示後置鏡頭的影像，這個選項適合有用第三方導航系統的用戶。此功能將會影響您行車記錄的錄像。'
                             isExpanded={ expandedCell == 'driving_ui' }
                             handleExpanded={ () => this.handleExpanded('driving_ui') }
                             handleChanged={ this.props.setDrivingUI } />
                         <X.TableCell
                             type='switch'
-                            title='Display Speed'
+                            title='顯示速度'
                             value={!!parseInt(dragonUISpeed)}
                             iconSource={Icons.developer}
-                            description='Enable this to display Speed.'
+                            description='啟用這個選項後，畫面將會顯示速度以及速度的單位。'
                             isExpanded={expandedCell == 'dragon_ui_speed'}
                             handleExpanded={() => this.handleExpanded('dragon_ui_speed')}
                             handleChanged={this.props.setUISpeed}/>
