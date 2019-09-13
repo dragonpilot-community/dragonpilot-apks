@@ -388,8 +388,8 @@ class DragonpilotSettings extends Component {
                         <X.Button
                             size='small'
                             color='settingsDefault'
-                            onPress={ () => ChffrPlus.openLocaleSettings() }>
-                            Open Locale Settings
+                            onPress={ () => ChffrPlus.openAndroidSettings() }>
+                            Open Android Settings
                         </X.Button>
                     </X.Table>
                 </ScrollView>

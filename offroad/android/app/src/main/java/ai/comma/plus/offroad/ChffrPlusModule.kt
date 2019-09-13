@@ -246,9 +246,9 @@ class ChffrPlusModule(val ctx: ReactApplicationContext) :
     }
 
     @ReactMethod
-    fun openLocaleSettings() {
+    fun openAndroidSettings() {
         val intent = Intent("android.intent.action.MAIN")
-        intent.component = ComponentName("com.android.settings", "com.android.settings.LanguageSettings")
+        intent.component = ComponentName("com.android.settings", "com.android.settings.Settings")
         intent.putExtra("extra_prefs_show_button_bar", true)
         startActivityWithIntent(intent)
     }
