@@ -54,4 +54,5 @@ export const Params = {
     KEY_UI_VOLUME_BOOST: 'DragonUIVolumeBoost',
     KEY_GREY_PANDA_MODE: 'DragonGreyPandaMode',
     KEY_DRIVING_UI: 'DragonDrivingUI',
+    KEY_DISPLAY_STEERING_LIMIT_ALERT: 'DragonDisplaySteeringLimitAlert',
 };

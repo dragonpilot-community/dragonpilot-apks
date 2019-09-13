@@ -407,6 +407,7 @@ class DragonpilotSettings extends Component {
                 DragonAllowGas: dragonAllowGas,
                 DragonEnableSteeringOnSignal: dragonEnableSteeringOnSignal,
                 DragonEnableDriverSafetyCheck: dragonEnableDriverSafetyCheck,
+                DragonDisplaySteeringLimitAlert: dragonDisplaySteeringLimitAlert
             },
         } = this.props;
         const { expandedCell, steeringMonitorTimerInt } = this.state;
@@ -452,6 +453,15 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'enable_steering_on_signal' }
                             handleExpanded={ () => this.handleExpanded('enable_steering_on_signal') }
                             handleChanged={ this.props.setEnableSteeringOnSignal } />
+                        <X.TableCell
+                            type='switch'
+                            title='Display "Turn Exceeds Steering Limit" Alert'
+                            value={ !!parseInt(dragonDisplaySteeringLimitAlert) }
+                            iconSource={ Icons.developer }
+                            description='If you disable this, you will not receive any "Turn Exceeds Steering Limit" alerts on the screen. Hyundai, Ford, Toyota do not have this alert.'
+                            isExpanded={ expandedCell == 'display_steering_limit_alert' }
+                            handleExpanded={ () => this.handleExpanded('display_steering_limit_alert') }
+                            handleChanged={ this.props.setDisplaySteeringLimitAlert } />
                     </X.Table>
                     <X.Table color='darkBlue'>
                         <X.TableCell
@@ -899,6 +909,9 @@ const mapDispatchToProps = dispatch => ({
     },
     setDrivingUI: (val) => {
         dispatch(updateParam(Params.KEY_DRIVING_UI, (val | 0).toString()));
+    },
+    setDisplaySteeringLimitAlert: (val) => {
+        dispatch(updateParam(Params.KEY_DISPLAY_STEERING_LIMIT_ALERT, (val | 0).toString()));
     },
 });
 
