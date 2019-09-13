@@ -37,7 +37,6 @@ const Icons = {
     user: require('../../img/icon_user.png'),
     developer: require('../../img/icon_shell.png'),
     warning: require('../../img/icon_warning.png'),
-    monitoring: require('../../img/icon_monitoring.png'),
     metric: require('../../img/icon_metric.png'),
     network: require('../../img/icon_network.png'),
     eon: require('../../img/icon_eon.png'),
@@ -258,9 +257,7 @@ class Settings extends Component {
     renderPrimarySettings() {
         const {
             params: {
-                IsDriverMonitoringEnabled: isDriverMonitoringEnabled,
                 RecordFront: recordFront,
-                IsFcwEnabled: isFcwEnabled,
                 IsMetric: isMetric,
                 LongitudinalControl: hasLongitudinalControl,
                 LimitSetSpeed: limitSetSpeed,
@@ -324,15 +321,6 @@ class Settings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
-                            title='啟用駕駛監控'
-                            value={ !!parseInt(isDriverMonitoringEnabled) }
-                            iconSource={ Icons.monitoring }
-                            description='駕駛監控系統利用 3D 人臉/姿態識別來判斷駕駛的狀態。當 openpilot 啟用時，它會在駕駛分心時發出警示。這個功能仍然在測試階段，所以監控會在無法正確識別時暫時取消 (例如光線不足時)。您可以從 EON 左下角的人臉圖示來判斷它的狀態。'
-                            isExpanded={ expandedCell == 'driver_monitoring' }
-                            handleExpanded={ () => this.handleExpanded('driver_monitoring') }
-                            handleChanged={ this.props.setDriverMonitoringEnabled } />
-                        <X.TableCell
-                            type='switch'
                             title='錄制並上傳駕駛的錄像'
                             value={ !!parseInt(recordFront) }
                             iconSource={ Icons.network }
@@ -340,15 +328,6 @@ class Settings extends Component {
                             isExpanded={ expandedCell == 'record_front' }
                             handleExpanded={ () => this.handleExpanded('record_front') }
                             handleChanged={ this.props.setRecordFront } />
-                        <X.TableCell
-                            type='switch'
-                            title='啟用前方碰撞預警'
-                            value={ !!parseInt(isFcwEnabled) }
-                            iconSource={ Icons.warning }
-                            description='當檢測到前方有碰撞的風險時，使用視覺和音效來警示。'
-                            isExpanded={ expandedCell == 'fcw' }
-                            handleExpanded={ () => this.handleExpanded('fcw') }
-                            handleChanged={ this.props.setFcwEnabled } />
                         <X.TableCell
                             type='switch'
                             title='使用公/米制單位'
@@ -457,6 +436,16 @@ class Settings extends Component {
                                 value={ isPaired ? '是' : '否' } />
                             <X.Text color='white' size='tiny'>Terms of Service available at {'https://my.comma.ai/terms.html'}</X.Text>
                         </X.Table>
+                        { isPaired ? null : (
+                          <X.Table color='darkBlue' padding='big'>
+                              <X.Button
+                                  color='settingsDefault'
+                                  size='small'
+                                  onPress={ this.props.openPairing }>
+                                  Pair Device
+                              </X.Button>
+                          </X.Table>
+                        ) }
                     </View>
                 </ScrollView>
             </View>
@@ -817,6 +806,9 @@ const mapDispatchToProps = dispatch => ({
                 NavigationActions.navigate({ routeName: 'Home' })
             ]
         }));
+    },
+    openPairing: () => {
+        dispatch(NavigationActions.navigate({ routeName: 'PairAfterSetup' }))
     },
     reboot: () => {
         Alert.alert('重新啟動', '您確定要重新啟動嗎?', [

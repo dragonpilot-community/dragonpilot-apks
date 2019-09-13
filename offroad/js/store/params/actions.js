@@ -15,8 +15,6 @@ const PARAMS = [
   "GitRemote",
   "HasAcceptedTerms",
   "HasCompletedSetup",
-  "IsDriverMonitoringEnabled",
-  "IsFcwEnabled",
   "IsGeofenceEnabled",
   "IsMetric",
   "IsUploadVideoOverCellularEnabled",
@@ -40,6 +38,7 @@ const PARAMS = [
   "DragonNoctuaMode",
   "DragonCacheCar",
   "DragonToyotaStockDSU",
+  "DragonUISpeed",
   "DragonUIEvent",
   "DragonUIMaxSpeed",
   "DragonUIFace",
@@ -57,6 +56,8 @@ const PARAMS = [
   "DragonCameraOffset",
   "DragonUIVolumeBoost",
   "DragonGreyPandaMode",
+  "DragonDrivingUI",
+  "DragonDisplaySteeringLimitAlert",
 ];
 
 export function refreshParams() {
