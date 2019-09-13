@@ -663,6 +663,7 @@ class DragonpilotSettings extends Component {
                 DragonUIFace: dragonUIFace,
                 DragonUIDev: dragonUIDev,
                 DragonUIDevMini: dragonUIDevMini,
+                DragonUISpeed: dragonUISpeed,
             },
         } = this.props;
         const { expandedCell, VolumeBoostInt } = this.state;
@@ -690,6 +691,15 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'driving_ui' }
                             handleExpanded={ () => this.handleExpanded('driving_ui') }
                             handleChanged={ this.props.setDrivingUI } />
+                        <X.TableCell
+                            type='switch'
+                            title='Display Speed'
+                            value={!!parseInt(dragonUISpeed)}
+                            iconSource={Icons.developer}
+                            description='Enable this to display Speed.'
+                            isExpanded={expandedCell == 'dragon_ui_speed'}
+                            handleExpanded={() => this.handleExpanded('dragon_ui_speed')}
+                            handleChanged={this.props.setUISpeed}/>
                         <X.TableCell
                             type='switch'
                             title='Display Event / Steering Icon'
@@ -851,6 +861,9 @@ const mapDispatchToProps = dispatch => ({
     },
     setToyotaStockDSU: (stockDSU) => {
         dispatch(updateParam(Params.KEY_TOYOTA_STOCK_DSU, (stockDSU | 0).toString()));
+    },
+    setUISpeed: (val) => {
+        dispatch(updateParam(Params.KEY_UI_SPEED, (val | 0).toString()));
     },
     setUIEvent: (val) => {
         dispatch(updateParam(Params.KEY_UI_EVENT, (val | 0).toString()));

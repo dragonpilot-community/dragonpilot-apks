@@ -38,6 +38,7 @@ const PARAMS = [
   "DragonNoctuaMode",
   "DragonCacheCar",
   "DragonToyotaStockDSU",
+  "DragonUISpeed",
   "DragonUIEvent",
   "DragonUIMaxSpeed",
   "DragonUIFace",
