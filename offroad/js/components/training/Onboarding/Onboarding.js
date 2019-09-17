@@ -530,7 +530,7 @@ class Onboarding extends Component {
                         isChecked={ stepChecks.includes('limitations') }
                         hasAppend={ true }
                         onPress={ () => this.handleControlsRadioPressed('limitations') }
-                        label='Limited Features' />
+                        label='有限的功能' />
                     <X.RadioField
                         color='white'
                         isDisabled={ !stepChecks.includes('limitations') }
@@ -631,15 +631,12 @@ class Onboarding extends Component {
                         openpilot controls
                     </X.Button>
                     <X.Text size='medium' color='white' weight='bold'>
-                        Limited Features
+                        有限的功能
                     </X.Text>
                     <X.Text
                         size='small' color='white' weight='light'
                         style={ Styles.onboardingStepContextSmaller }>
-                        Keep in mind that certain situations are not handled by
-                        openpilot. Scenarios such as traffic lights, stop signs,
-                        quick vehicle cutins and pedestrians are unrecognized
-                        and openpilot may accelerate.
+                        請注意，在紅綠燈號誌、停止號誌、前方車輛快速切入、行人穿越等等的情況，因 openpilot 無法正確判斷，它將有可能導致不正常的加速。
                     </X.Text>
                     <X.Button color='ghost'
                         style={ Styles.onboardingStepPointInstruction }
@@ -647,7 +644,7 @@ class Onboarding extends Component {
                         <X.Text
                             size='small' color='white' weight='semibold'
                             style={ Styles.onboardingStepPointInstructionText }>
-                            Select light to continue
+                            請點選畫面上的紅綠燈繼續
                         </X.Text>
                         <X.Image
                             source={ require('../../../img/icon_chevron_right.png') }
