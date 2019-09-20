@@ -58,6 +58,7 @@ const PARAMS = [
   "DragonGreyPandaMode",
   "DragonDrivingUI",
   "DragonDisplaySteeringLimitAlert",
+  "DragonChargingCtrl",
 ];
 
 export function refreshParams() {

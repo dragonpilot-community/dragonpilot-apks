@@ -404,7 +404,8 @@ class DragonpilotSettings extends Component {
                 DragonAllowGas: dragonAllowGas,
                 DragonEnableSteeringOnSignal: dragonEnableSteeringOnSignal,
                 DragonEnableDriverSafetyCheck: dragonEnableDriverSafetyCheck,
-                DragonDisplaySteeringLimitAlert: dragonDisplaySteeringLimitAlert
+                DragonDisplaySteeringLimitAlert: dragonDisplaySteeringLimitAlert,
+                DragonChargingCtrl: dragonChargingCtrl,
             },
         } = this.props;
         const { expandedCell, steeringMonitorTimerInt } = this.state;
@@ -459,6 +460,15 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'display_steering_limit_alert' }
                             handleExpanded={ () => this.handleExpanded('display_steering_limit_alert') }
                             handleChanged={ this.props.setDisplaySteeringLimitAlert } />
+                        <X.TableCell
+                            type='switch'
+                            title='Charging Control'
+                            value={ !!parseInt(dragonChargingCtrl) }
+                            iconSource={ Icons.developer }
+                            description='If you turn this on, dp will try to keep your battery level between 60%~70% to protect your battery, reboot required.'
+                            isExpanded={ expandedCell == 'charging_ctrl' }
+                            handleExpanded={ () => this.handleExpanded('charging_ctrl') }
+                            handleChanged={ this.props.setChargingCtrl} />
                     </X.Table>
                     <X.Table color='darkBlue'>
                         <X.TableCell
@@ -912,6 +922,9 @@ const mapDispatchToProps = dispatch => ({
     },
     setDisplaySteeringLimitAlert: (val) => {
         dispatch(updateParam(Params.KEY_DISPLAY_STEERING_LIMIT_ALERT, (val | 0).toString()));
+    },
+    setChargingCtrl: (val) => {
+        dispatch(updateParam(Params.KEY_CHARGING_CTRL, (val | 0).toString()));
     },
 });
 

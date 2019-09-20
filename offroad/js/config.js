@@ -56,4 +56,5 @@ export const Params = {
     KEY_GREY_PANDA_MODE: 'DragonGreyPandaMode',
     KEY_DRIVING_UI: 'DragonDrivingUI',
     KEY_DISPLAY_STEERING_LIMIT_ALERT: 'DragonDisplaySteeringLimitAlert',
+    KEY_CHARGING_CTRL: 'DragonChargingCtrl',
 };
