@@ -462,10 +462,10 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setDisplaySteeringLimitAlert } />
                         <X.TableCell
                             type='switch'
-                            title='Charging Control'
+                            title='充電控制'
                             value={ !!parseInt(dragonChargingCtrl) }
                             iconSource={ Icons.developer }
-                            description='If you turn this on, dp will try to keep your battery level between 60%~70% to protect your battery, reboot required.'
+                            description='如果您開啟這個選項，DP 將會嘗試將電量控制在 60%~70% 之間，需要重新開機。'
                             isExpanded={ expandedCell == 'charging_ctrl' }
                             handleExpanded={ () => this.handleExpanded('charging_ctrl') }
                             handleChanged={ this.props.setChargingCtrl} />
