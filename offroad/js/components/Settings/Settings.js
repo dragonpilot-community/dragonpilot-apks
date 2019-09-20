@@ -37,7 +37,6 @@ const Icons = {
     user: require('../../img/icon_user.png'),
     developer: require('../../img/icon_shell.png'),
     warning: require('../../img/icon_warning.png'),
-    monitoring: require('../../img/icon_monitoring.png'),
     metric: require('../../img/icon_metric.png'),
     network: require('../../img/icon_network.png'),
     eon: require('../../img/icon_eon.png'),
@@ -258,9 +257,7 @@ class Settings extends Component {
     renderPrimarySettings() {
         const {
             params: {
-                IsDriverMonitoringEnabled: isDriverMonitoringEnabled,
                 RecordFront: recordFront,
-                IsFcwEnabled: isFcwEnabled,
                 IsMetric: isMetric,
                 LongitudinalControl: hasLongitudinalControl,
                 LimitSetSpeed: limitSetSpeed,
@@ -324,15 +321,6 @@ class Settings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
-                            title='驾驶员监控'
-                            value={ !!parseInt(isDriverMonitoringEnabled) }
-                            iconSource={ Icons.monitoring }
-                            description='{\n\"}驾驶员监控通过三维人脸重建和姿态估计来检测驾驶员的感知。当openpilot被占用时，当驾驶员出现分心时，它会发出警告。这一功能仍处于测试阶段，所以当面部跟踪太不准确时(比如在晚上)，司机监控是不可用的。可用性由左下角的face图标指示。'
-                            isExpanded={ expandedCell == 'driver_monitoring' }
-                            handleExpanded={ () => this.handleExpanded('driver_monitoring') }
-                            handleChanged={ this.props.setDriverMonitoringEnabled } />
-                        <X.TableCell
-                            type='switch'
                             title='记录并上传摄像头信息'
                             value={ !!parseInt(recordFront) }
                             iconSource={ Icons.network }
@@ -340,15 +328,6 @@ class Settings extends Component {
                             isExpanded={ expandedCell == 'record_front' }
                             handleExpanded={ () => this.handleExpanded('record_front') }
                             handleChanged={ this.props.setRecordFront } />
-                        <X.TableCell
-                            type='switch'
-                            title='碰撞警告'
-                            value={ !!parseInt(isFcwEnabled) }
-                            iconSource={ Icons.warning }
-                            description='当发现前方有碰撞危险时，使用视觉和听觉警告。'
-                            isExpanded={ expandedCell == 'fcw' }
-                            handleExpanded={ () => this.handleExpanded('fcw') }
-                            handleChanged={ this.props.setFcwEnabled } />
                         <X.TableCell
                             type='switch'
                             title='使用公里制'
@@ -457,6 +436,16 @@ class Settings extends Component {
                                 value={ isPaired ? 'Yes' : 'No' } />
                             <X.Text color='white' size='tiny'>Terms of Service available at {'https://my.comma.ai/terms.html'}</X.Text>
                         </X.Table>
+                        { isPaired ? null : (
+                          <X.Table color='darkBlue' padding='big'>
+                              <X.Button
+                                  color='settingsDefault'
+                                  size='small'
+                                  onPress={ this.props.openPairing }>
+                                  Pair Device
+                              </X.Button>
+                          </X.Table>
+                        ) }
                     </View>
                 </ScrollView>
             </View>
@@ -817,6 +806,9 @@ const mapDispatchToProps = dispatch => ({
                 NavigationActions.navigate({ routeName: 'Home' })
             ]
         }));
+    },
+    openPairing: () => {
+        dispatch(NavigationActions.navigate({ routeName: 'PairAfterSetup' }))
     },
     reboot: () => {
         Alert.alert('重启', '确认重启？', [

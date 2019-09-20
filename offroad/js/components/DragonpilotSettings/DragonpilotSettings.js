@@ -388,8 +388,8 @@ class DragonpilotSettings extends Component {
                         <X.Button
                             size='small'
                             color='settingsDefault'
-                            onPress={ () => ChffrPlus.openLocaleSettings() }>
-                            Open Locale Settings
+                            onPress={ () => ChffrPlus.openAndroidSettings() }>
+                            Open Android Settings
                         </X.Button>
                     </X.Table>
                 </ScrollView>
@@ -404,6 +404,8 @@ class DragonpilotSettings extends Component {
                 DragonAllowGas: dragonAllowGas,
                 DragonEnableSteeringOnSignal: dragonEnableSteeringOnSignal,
                 DragonEnableDriverSafetyCheck: dragonEnableDriverSafetyCheck,
+                DragonDisplaySteeringLimitAlert: dragonDisplaySteeringLimitAlert,
+                DragonChargingCtrl: dragonChargingCtrl,
             },
         } = this.props;
         const { expandedCell, steeringMonitorTimerInt } = this.state;
@@ -449,6 +451,24 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'enable_steering_on_signal' }
                             handleExpanded={ () => this.handleExpanded('enable_steering_on_signal') }
                             handleChanged={ this.props.setEnableSteeringOnSignal } />
+                        <X.TableCell
+                            type='switch'
+                            title='Display "Turn Exceeds Steering Limit" Alert'
+                            value={ !!parseInt(dragonDisplaySteeringLimitAlert) }
+                            iconSource={ Icons.developer }
+                            description='If you disable this, you will not receive any "Turn Exceeds Steering Limit" alerts on the screen. Hyundai, Ford, Toyota do not have this alert.'
+                            isExpanded={ expandedCell == 'display_steering_limit_alert' }
+                            handleExpanded={ () => this.handleExpanded('display_steering_limit_alert') }
+                            handleChanged={ this.props.setDisplaySteeringLimitAlert } />
+                        <X.TableCell
+                            type='switch'
+                            title='Charging Control'
+                            value={ !!parseInt(dragonChargingCtrl) }
+                            iconSource={ Icons.developer }
+                            description='If you turn this on, dp will try to keep your battery level between 60%~70% to protect your battery, reboot required.'
+                            isExpanded={ expandedCell == 'charging_ctrl' }
+                            handleExpanded={ () => this.handleExpanded('charging_ctrl') }
+                            handleChanged={ this.props.setChargingCtrl} />
                     </X.Table>
                     <X.Table color='darkBlue'>
                         <X.TableCell
@@ -647,11 +667,13 @@ class DragonpilotSettings extends Component {
     renderUISettings() {
         const {
             params: {
+                DragonDrivingUI: dragonDrivingUI,
                 DragonUIEvent: dragonUIEvent,
                 DragonUIMaxSpeed: dragonUIMaxSpeed,
                 DragonUIFace: dragonUIFace,
                 DragonUIDev: dragonUIDev,
                 DragonUIDevMini: dragonUIDevMini,
+                DragonUISpeed: dragonUISpeed,
             },
         } = this.props;
         const { expandedCell, VolumeBoostInt } = this.state;
@@ -672,22 +694,40 @@ class DragonpilotSettings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
-                            title='Display Event / Steering Icon'
-                            value={ !!parseInt(dragonUIEvent) }
+                            title='Display Driving UI'
+                            value={ !!parseInt(dragonDrivingUI) }
                             iconSource={ Icons.developer }
+                            description='Disable this only if you do not want to see the driving UI and its blocking your navigation view, this will also effect what you records in dashcam.'
+                            isExpanded={ expandedCell == 'driving_ui' }
+                            handleExpanded={ () => this.handleExpanded('driving_ui') }
+                            handleChanged={ this.props.setDrivingUI } />
+                        <X.TableCell
+                            type='switch'
+                            title='Display Speed'
+                            value={!!parseInt(dragonUISpeed)}
+                            iconSource={Icons.developer}
+                            description='Enable this to display Speed.'
+                            isExpanded={expandedCell == 'dragon_ui_speed'}
+                            handleExpanded={() => this.handleExpanded('dragon_ui_speed')}
+                            handleChanged={this.props.setUISpeed}/>
+                        <X.TableCell
+                            type='switch'
+                            title='Display Event / Steering Icon'
+                            value={!!parseInt(dragonUIEvent)}
+                            iconSource={Icons.developer}
                             description='Enable this to display Event / Steering Icon.'
-                            isExpanded={ expandedCell == 'dragon_ui_event' }
-                            handleExpanded={ () => this.handleExpanded('dragon_ui_event') }
-                            handleChanged={ this.props.setUIEvent } />
+                            isExpanded={expandedCell == 'dragon_ui_event'}
+                            handleExpanded={() => this.handleExpanded('dragon_ui_event')}
+                            handleChanged={this.props.setUIEvent}/>
                         <X.TableCell
                             type='switch'
                             title='Display Max Speed'
-                            value={ !!parseInt(dragonUIMaxSpeed) }
-                            iconSource={ Icons.developer }
+                            value={!!parseInt(dragonUIMaxSpeed)}
+                            iconSource={Icons.developer}
                             description='Enable this to display Max Speed.'
-                            isExpanded={ expandedCell == 'dragon_ui_maxspeed' }
-                            handleExpanded={ () => this.handleExpanded('dragon_ui_maxspeed') }
-                            handleChanged={ this.props.setUIMaxSpeed } />
+                            isExpanded={expandedCell == 'dragon_ui_maxspeed'}
+                            handleExpanded={() => this.handleExpanded('dragon_ui_maxspeed')}
+                            handleChanged={this.props.setUIMaxSpeed}/>
                         <X.TableCell
                             type='switch'
                             title='Display Face Icon'
@@ -832,6 +872,9 @@ const mapDispatchToProps = dispatch => ({
     setToyotaStockDSU: (stockDSU) => {
         dispatch(updateParam(Params.KEY_TOYOTA_STOCK_DSU, (stockDSU | 0).toString()));
     },
+    setUISpeed: (val) => {
+        dispatch(updateParam(Params.KEY_UI_SPEED, (val | 0).toString()));
+    },
     setUIEvent: (val) => {
         dispatch(updateParam(Params.KEY_UI_EVENT, (val | 0).toString()));
     },
@@ -873,7 +916,16 @@ const mapDispatchToProps = dispatch => ({
     },
     setVolumeBoost: (val) => {
         dispatch(updateParam(Params.KEY_UI_VOLUME_BOOST, (val).toString()));
-    }
+    },
+    setDrivingUI: (val) => {
+        dispatch(updateParam(Params.KEY_DRIVING_UI, (val | 0).toString()));
+    },
+    setDisplaySteeringLimitAlert: (val) => {
+        dispatch(updateParam(Params.KEY_DISPLAY_STEERING_LIMIT_ALERT, (val | 0).toString()));
+    },
+    setChargingCtrl: (val) => {
+        dispatch(updateParam(Params.KEY_CHARGING_CTRL, (val | 0).toString()));
+    },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DragonpilotSettings);
