@@ -237,6 +237,7 @@ class DragonpilotSettings extends Component {
                 DragonEnableDashcam: dragonEnableDashcam,
                 DragonNoctuaMode: dragonNoctuaMode,
                 DragonCacheCar: dragonCacheCar,
+                DragonChargingCtrl: dragonChargingCtrl,
             }
         } = this.props;
         const { expandedCell, enableMixplorer, cameraOffsetInt, autoShutdownAtInt } = this.state;
@@ -351,6 +352,15 @@ class DragonpilotSettings extends Component {
                             handleExpanded={ () => this.handleExpanded('cache_fingerprint') }
                             handleChanged={ this.props.setCacheCar } />
                         <X.TableCell
+                            type='switch'
+                            title='Charging Control'
+                            value={ !!parseInt(dragonChargingCtrl) }
+                            iconSource={ Icons.developer }
+                            description='If you turn this on, dp will try to keep your battery level between 60%~70% to protect your battery, reboot required.'
+                            isExpanded={ expandedCell == 'charging_ctrl' }
+                            handleExpanded={ () => this.handleExpanded('charging_ctrl') }
+                            handleChanged={ this.props.setChargingCtrl} />
+                        <X.TableCell
                             type='custom'
                             title='相機偏移距離 (公分)'
                             iconSource={ Icons.developer }
@@ -405,7 +415,6 @@ class DragonpilotSettings extends Component {
                 DragonEnableSteeringOnSignal: dragonEnableSteeringOnSignal,
                 DragonEnableDriverSafetyCheck: dragonEnableDriverSafetyCheck,
                 DragonDisplaySteeringLimitAlert: dragonDisplaySteeringLimitAlert,
-                DragonChargingCtrl: dragonChargingCtrl,
             },
         } = this.props;
         const { expandedCell, steeringMonitorTimerInt } = this.state;
@@ -460,15 +469,6 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'display_steering_limit_alert' }
                             handleExpanded={ () => this.handleExpanded('display_steering_limit_alert') }
                             handleChanged={ this.props.setDisplaySteeringLimitAlert } />
-                        <X.TableCell
-                            type='switch'
-                            title='充電控制'
-                            value={ !!parseInt(dragonChargingCtrl) }
-                            iconSource={ Icons.developer }
-                            description='如果您開啟這個選項，DP 將會嘗試將電量控制在 60%~70% 之間，需要重新開機。'
-                            isExpanded={ expandedCell == 'charging_ctrl' }
-                            handleExpanded={ () => this.handleExpanded('charging_ctrl') }
-                            handleChanged={ this.props.setChargingCtrl} />
                     </X.Table>
                     <X.Table color='darkBlue'>
                         <X.TableCell
@@ -604,6 +604,7 @@ class DragonpilotSettings extends Component {
         const {
             params: {
                 DragonToyotaStockDSU: dragonToyotaStockDSU,
+                DragonToyotaLaneDepartureWarning: dragonToyotaLaneDepartureWarning,
             },
         } = this.props;
         const { expandedCell } = this.state;
@@ -631,6 +632,15 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'toyota_stock_dsu' }
                             handleExpanded={ () => this.handleExpanded('toyota_stock_dsu') }
                             handleChanged={ this.props.setToyotaStockDSU } />
+                        <X.TableCell
+                            type='switch'
+                            title='Enable Lane Departure Warning'
+                            value={ !!parseInt(dragonToyotaLaneDepartureWarning) }
+                            iconSource={ Icons.developer }
+                            description='Enable this if you wish to receive the factory lane departure warning when crossing lanes. (e.g. vibrate steering wheel)'
+                            isExpanded={ expandedCell == 'toyota_lane_departure_warning' }
+                            handleExpanded={ () => this.handleExpanded('toyota_lane_departure_warning') }
+                            handleChanged={ this.props.setToyotaLaneDepartureWarning } />
                     </X.Table>
                 </ScrollView>
             </View>
@@ -925,6 +935,9 @@ const mapDispatchToProps = dispatch => ({
     },
     setChargingCtrl: (val) => {
         dispatch(updateParam(Params.KEY_CHARGING_CTRL, (val | 0).toString()));
+    },
+    setToyotaLaneDepartureWarning: (val) => {
+        dispatch(updateParam(Params.KEY_TOYOTA_LANE_DEPARTURE_WARNING, (val | 0).toString()));
     },
 });
 

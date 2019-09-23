@@ -59,6 +59,7 @@ const PARAMS = [
   "DragonDrivingUI",
   "DragonDisplaySteeringLimitAlert",
   "DragonChargingCtrl",
+  "DragonToyotaLaneDepartureWarning",
 ];
 
 export function refreshParams() {
