@@ -14,7 +14,6 @@ import ChffrPlus from '../../native/ChffrPlus';
 import { HOME_BUTTON_GRADIENT } from '../../styles/gradients';
 import X from '../../themes';
 import Styles from './HomeStyles';
-import PrimaryButton from '../PrimaryButton';
 
 class Home extends Component {
     static navigationOptions = {
@@ -35,54 +34,15 @@ class Home extends Component {
         this.props.openDragonpilotSettings();
     }
 
-    renderNewDestination() {
-        const { destination } = this.props;
-
+    renderDrivePrompt() {
         return (
-            <PrimaryButton
-                onPress={ this.props.onNewDestinationPressed }>
-                { destination !== null ?
-                    <View style={ Styles.homeActionsPrimaryButtonBody }>
-                        <X.Text
-                            color='white'
-                            weight='light'
-                            size='small'
-                            style={ Styles.homeActionsPrimaryButtonHeader }>
-                            Destination:
-                        </X.Text>
-                        { destination.address.length > 0
-                            && destination.city.length > 0
-                            && destination.state.length > 0 ?
-                            <View>
-                                <X.Text
-                                    color='white'>
-                                    { destination.address }
-                                </X.Text>
-                                <X.Text
-                                    color='white'>
-                                    { `${ destination.city }, ${ destination.state }` }
-                                </X.Text>
-                            </View>
-                            :
-                            <X.Text
-                                color='white'>
-                                { destination.title }
-                            </X.Text>
-                        }
-                        <View style={ Styles.homeActionsPrimaryButtonOption }>
-                            <View style={ Styles.homeActionsPrimaryButtonOptionIcon }>
-                                <X.Image
-                                    source={ require('../../img/icon_plus.png') } />
-                            </View>
-                            <X.Text
-                                color='white'
-                                size='small'
-                                weight='semibold'>
-                                新的目的地
-                            </X.Text>
-                        </View>
-                    </View>
-                    :
+            <X.Button
+                color='transparent'
+                size='full'
+                onPress={ this.handlePressedStartDrive }>
+                <X.Gradient
+                    colors={ HOME_BUTTON_GRADIENT }
+                    style={ Styles.homeActionsPrimaryButton }>
                     <View style={ Styles.homeActionsPrimaryButtonBody }>
                         <View style={ Styles.homeActionsPrimaryButtonIcon }>
                             <X.Image
@@ -92,31 +52,11 @@ class Home extends Component {
                             color='white'
                             weight='semibold'
                             size='medium'>
-                            新的目的地
+                            新的駕駛
                         </X.Text>
                     </View>
-                }
-            </PrimaryButton>
-        );
-    }
-
-    renderDrivePrompt() {
-        return (
-          <PrimaryButton
-              onPress={ this.handlePressedStartDrive }>
-              <View style={ Styles.homeActionsPrimaryButtonBody }>
-                  <View style={ Styles.homeActionsPrimaryButtonIcon }>
-                      <X.Image
-                          source={ require('../../img/icon_plus.png') } />
-                  </View>
-                  <X.Text
-                      color='white'
-                      weight='semibold'
-                      size='medium'>
-                      新的記錄
-                  </X.Text>
-              </View>
-          </PrimaryButton>
+                </X.Gradient>
+            </X.Button>
         );
     }
 
@@ -129,7 +69,6 @@ class Home extends Component {
     render() {
         const {
             isPaired,
-            destination,
             isNavAvailable,
             summaryDate,
             summaryCity,
@@ -254,7 +193,6 @@ class Home extends Component {
 const mapStateToProps = (state) => {
     return {
         isPaired: state.host.device && state.host.device.is_paired,
-        destination: state.driving.destination,
         isNavAvailable: state.host.isNavAvailable,
         latitude: state.environment.latitude,
         longitude: state.environment.longitude,
@@ -271,13 +209,10 @@ const mapDispatchToProps = (dispatch) => ({
         dispatch(NavigationActions.navigate({ routeName: 'DragonpilotSettings' }));
     },
     openPairing: () => {
-        dispatch(NavigationActions.navigate({ routeName: 'PairAfterSetup' }))
+        dispatch(NavigationActions.navigate({ routeName: 'SetupQr' }))
     },
     openDrives: () => {
         dispatch(NavigationActions.navigate({ routeName: 'DrivesOverview' }));
-    },
-    onNewDestinationPressed: () => {
-        ChffrPlus.sendBroadcast("ai.comma.plus.frame.NEW_DESTINATION");
     },
     onNewDrivePressed: () => {
         ChffrPlus.sendBroadcast("ai.comma.plus.frame.ACTION_SHOW_START_CAR");
