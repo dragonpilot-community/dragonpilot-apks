@@ -356,7 +356,7 @@ class DragonpilotSettings extends Component {
                             title='Charging Control'
                             value={ !!parseInt(dragonChargingCtrl) }
                             iconSource={ Icons.developer }
-                            description='If you turn this on, dp will try to keep your battery level between 60%~70% to protect your battery, reboot required.'
+                            description='If you turn this on, dp will try to keep your battery level between 60%~70% to protect your battery.'
                             isExpanded={ expandedCell == 'charging_ctrl' }
                             handleExpanded={ () => this.handleExpanded('charging_ctrl') }
                             handleChanged={ this.props.setChargingCtrl} />
