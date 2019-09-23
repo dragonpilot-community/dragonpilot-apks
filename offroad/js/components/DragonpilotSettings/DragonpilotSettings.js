@@ -353,10 +353,10 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setCacheCar } />
                         <X.TableCell
                             type='switch'
-                            title='Charging Control'
+                            title='充電控制'
                             value={ !!parseInt(dragonChargingCtrl) }
                             iconSource={ Icons.developer }
-                            description='If you turn this on, dp will try to keep your battery level between 60%~70% to protect your battery, reboot required.'
+                            description='如果您開啟這個選項，DP 將會嘗試將電量控制在 60%~70% 之間。'
                             isExpanded={ expandedCell == 'charging_ctrl' }
                             handleExpanded={ () => this.handleExpanded('charging_ctrl') }
                             handleChanged={ this.props.setChargingCtrl} />
@@ -634,10 +634,10 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setToyotaStockDSU } />
                         <X.TableCell
                             type='switch'
-                            title='Enable Lane Departure Warning'
+                            title='啟用車道偏離警示'
                             value={ !!parseInt(dragonToyotaLaneDepartureWarning) }
                             iconSource={ Icons.developer }
-                            description='Enable this if you wish to receive the factory lane departure warning when crossing lanes. (e.g. vibrate steering wheel)'
+                            description='開啟這個選項後，如果您的車子偏離車道 (壓線)，您將會收到警示訊息。 (例如：振動方向盤)'
                             isExpanded={ expandedCell == 'toyota_lane_departure_warning' }
                             handleExpanded={ () => this.handleExpanded('toyota_lane_departure_warning') }
                             handleChanged={ this.props.setToyotaLaneDepartureWarning } />
