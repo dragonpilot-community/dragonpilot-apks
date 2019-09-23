@@ -57,4 +57,5 @@ export const Params = {
     KEY_DRIVING_UI: 'DragonDrivingUI',
     KEY_DISPLAY_STEERING_LIMIT_ALERT: 'DragonDisplaySteeringLimitAlert',
     KEY_CHARGING_CTRL: 'DragonChargingCtrl',
+    KEY_TOYOTA_LANE_DEPARTURE_WARNING: 'DragonToyotaLaneDepartureWarning',
 };

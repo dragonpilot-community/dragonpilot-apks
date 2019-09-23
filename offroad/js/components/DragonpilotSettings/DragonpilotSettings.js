@@ -604,6 +604,7 @@ class DragonpilotSettings extends Component {
         const {
             params: {
                 DragonToyotaStockDSU: dragonToyotaStockDSU,
+                DragonToyotaLaneDepartureWarning: dragonToyotaLaneDepartureWarning,
             },
         } = this.props;
         const { expandedCell } = this.state;
@@ -631,6 +632,15 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'toyota_stock_dsu' }
                             handleExpanded={ () => this.handleExpanded('toyota_stock_dsu') }
                             handleChanged={ this.props.setToyotaStockDSU } />
+                        <X.TableCell
+                            type='switch'
+                            title='Enable Lane Departure Warning'
+                            value={ !!parseInt(dragonToyotaLaneDepartureWarning) }
+                            iconSource={ Icons.developer }
+                            description='Enable this if you wish to receive the factory lane departure warning when crossing lanes. (e.g. vibrate steering wheel)'
+                            isExpanded={ expandedCell == 'toyota_lane_departure_warning' }
+                            handleExpanded={ () => this.handleExpanded('toyota_lane_departure_warning') }
+                            handleChanged={ this.props.setToyotaLaneDepartureWarning } />
                     </X.Table>
                 </ScrollView>
             </View>
@@ -925,6 +935,9 @@ const mapDispatchToProps = dispatch => ({
     },
     setChargingCtrl: (val) => {
         dispatch(updateParam(Params.KEY_CHARGING_CTRL, (val | 0).toString()));
+    },
+    setToyotaLaneDepartureWarning: (val) => {
+        dispatch(updateParam(Params.KEY_TOYOTA_LANE_DEPARTURE_WARNING, (val | 0).toString()));
     },
 });
 
