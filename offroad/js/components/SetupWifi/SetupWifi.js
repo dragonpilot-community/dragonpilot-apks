@@ -68,7 +68,7 @@ class SetupWifi extends Component {
             if (this.state.isLoading && this.state.networks.length < 1) {
                 this.setState({
                     isLoading: false,
-                    errorMessage: 'There was a problem scanning WiFi networks. \nMake sure WiFi is enabled in \"More Options\" above.',
+                    errorMessage: '掃描無線網路出現錯誤。\n請確認無線網路功能已在上方的 \"更多選項\" 裡開啟。',
                 })
             }
         }, 15000);
@@ -212,9 +212,9 @@ class SetupWifi extends Component {
                             size='tiny'
                             color='lightGrey200'
                             weight='light'>
-                            { isConnected ? 'Connected'
-                                : isConnecting ? 'Authenticating...'
-                                : hasAttempted ? 'Authentication problem'
+                            { isConnected ? '已連線'
+                                : isConnecting ? '認證中...'
+                                : hasAttempted ? '認證錯誤'
                                 : item.security }
                         </X.Text>
                     </View>
@@ -232,7 +232,7 @@ class SetupWifi extends Component {
                                     color='white'
                                     size='small'
                                     weight='semibold'>
-                                    Connected
+                                    已連線
                                 </X.Text>
                             </X.Button>
                         ): null }
@@ -255,7 +255,7 @@ class SetupWifi extends Component {
                                 size='small'
                                 onPress={ () => this.onTapToConnect(item) }
                                 style={ Styles.setupWifiNetworkButton }>
-                                Connect
+                                連線
                             </X.Button>
                         ) : null }
                     </View>
@@ -306,7 +306,7 @@ class SetupWifi extends Component {
                                         color='lightGrey700'
                                         size='small'
                                         weight='semibold'>
-                                        Cancel
+                                        取消
                                     </X.Text>
                                 </X.Button>
                                 <X.Button
@@ -319,7 +319,7 @@ class SetupWifi extends Component {
                                         color='white'
                                         size='small'
                                         weight='semibold'>
-                                        Connect
+                                        連線
                                     </X.Text>
                                 </X.Button>
                             </View>
@@ -327,7 +327,7 @@ class SetupWifi extends Component {
                         <X.Text
                             size='small'
                             weight='semibold'>
-                            The network "{ connectingNetwork ? connectingNetwork.ssid : '' }" requires a password.
+                            無線網路 "{ connectingNetwork ? connectingNetwork.ssid : '' }" 需要輸入密碼.
                         </X.Text>
                         <View style={ Styles.setupWifiPasswordInputRow }>
                             <View style={ Styles.setupWifiPasswordInputLabel }>
@@ -335,7 +335,7 @@ class SetupWifi extends Component {
                                     size='small'
                                     color='whiteFieldLabel'
                                     style={ Styles.setupWifiPasswordInputLabelText }>
-                                    Password:
+                                    密碼:
                                 </X.Text>
                             </View>
                             <TextInput
@@ -355,14 +355,14 @@ class SetupWifi extends Component {
                             color='white'
                             size='big'
                             weight='bold'>
-                            Connect to WiFi
+                            連線至無線網路
                         </X.Text>
                         <X.Button
                             size='small'
                             color='setupInverted'
                             onPress={ this.props.handleSetupWifiMoreOptionsPressed }
                             style={ Styles.setupWifiHeaderButton }>
-                            More Options
+                            更多選項
                         </X.Button>
                     </View>
                     <View style={ Styles.setupWifiNetworks }>
@@ -382,7 +382,7 @@ class SetupWifi extends Component {
                                     <X.Text
                                         color='white'
                                         size='small'>
-                                        { isLoading && networks.length == 0 ? 'Scanning WiFi Networks...'
+                                        { isLoading && networks.length == 0 ? '掃描無線網路中...'
                                             : !isLoading && networks.length == 0 ?
                                             this.state.errorMessage : '' }
                                     </X.Text>
@@ -399,7 +399,7 @@ class SetupWifi extends Component {
                                 <X.Text
                                     color='white'
                                     weight='semibold'>
-                                    Go Back
+                                    返回
                                 </X.Text>
                             </X.Button>
                         ) : null }
@@ -410,7 +410,7 @@ class SetupWifi extends Component {
                             <X.Text
                                 color='white'
                                 weight='semibold'>
-                                { !connectedNetworkSsid ? 'Skip For Now' : 'Continue' }
+                                { !connectedNetworkSsid ? '暫時跳過' : '繼續' }
                             </X.Text>
                         </X.Button>
                     </View>

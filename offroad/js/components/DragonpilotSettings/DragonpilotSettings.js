@@ -726,37 +726,37 @@ class DragonpilotSettings extends Component {
                             handleChanged={this.props.setUISpeed}/>
                         <X.TableCell
                             type='switch'
-                            title='Display Lane Prediction'
+                            title='顯示車道預測'
                             value={!!parseInt(dragonUILane)}
                             iconSource={Icons.developer}
-                            description='Enable this to display lane prediction.'
+                            description='啟用這個選項後，畫面將會顯示車道預測 (兩側的線)。'
                             isExpanded={expandedCell == 'dragon_ui_lane'}
                             handleExpanded={() => this.handleExpanded('dragon_ui_lane')}
                             handleChanged={this.props.setUILane}/>
                         <X.TableCell
                             type='switch'
-                            title='Display Lead Car Indicator'
+                            title='顯示前車的指示符號'
                             value={!!parseInt(dragonUILead)}
                             iconSource={Icons.developer}
-                            description='Enable this to display lead car indicator, this only works on supported cars.'
+                            description='啟用這個選項後，畫面將會顯示前車的指示符號 (三角符號)，請注意，這個只有在支援的車種才會顯示。'
                             isExpanded={expandedCell == 'dragon_ui_lead'}
                             handleExpanded={() => this.handleExpanded('dragon_ui_lead')}
                             handleChanged={this.props.setUILead}/>
                         <X.TableCell
                             type='switch'
-                            title='Display Path Prediction'
+                            title='顯示路線預測'
                             value={!!parseInt(dragonUIPath)}
                             iconSource={Icons.developer}
-                            description='Enable this to display path prediction.'
+                            description='啟用這個選項後，畫面將會顯示將行駛的路線預測 (中間的線)。'
                             isExpanded={expandedCell == 'dragon_ui_path'}
                             handleExpanded={() => this.handleExpanded('dragon_ui_path')}
                             handleChanged={this.props.setUIPath}/>
                         <X.TableCell
                             type='switch'
-                            title='Display Turning Signal'
+                            title='顯示方向燈'
                             value={!!parseInt(dragonUIBlinker)}
                             iconSource={Icons.developer}
-                            description='Enable this to display turning signal.'
+                            description='啟用這個選項後，畫面將會顯示方向燈。'
                             isExpanded={expandedCell == 'dragon_ui_blinker'}
                             handleExpanded={() => this.handleExpanded('dragon_ui_blinker')}
                             handleChanged={this.props.setUIBlinker}/>

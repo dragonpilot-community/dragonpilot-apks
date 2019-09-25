@@ -61,7 +61,7 @@ class SetupPair extends Component {
                             color='white'
                             size='big'
                             weight='bold'>
-                            Pair Your Account
+                            與您的帳號配對
                         </X.Text>
                     </View>
                     <View style={ Styles.setupPairingBody }>
@@ -80,7 +80,7 @@ class SetupPair extends Component {
                                                   color='whiteFieldLabel'
                                                   size='tiny'
                                                   weight='semibold'>
-                                                  Succesfully paired to account
+                                                  已成功配對到帳號
                                               </X.Text>
                                           </View>
                                       </View>
@@ -102,7 +102,7 @@ class SetupPair extends Component {
                                 <X.Text>
                                     <X.Text
                                         color='white'>
-                                        { deviceIsPaired ? 'Successfully paired to an account in ' : 'Download ' }
+                                        { deviceIsPaired ? '已配對成功: ' : '下載 ' }
                                     </X.Text>
                                     <X.Text
                                         color='white'
@@ -112,7 +112,7 @@ class SetupPair extends Component {
                                     { deviceIsPaired ? null : (
                                       <X.Text
                                           color='white'>
-                                          { 'and scan this code to pair.' }
+                                          { '然後掃描這個二維碼配對。' }
                                       </X.Text>
                                     ) }
                                 </X.Text>
@@ -138,14 +138,14 @@ class SetupPair extends Component {
                                         color='setupPrimary'
                                         onPress={ this.props.handleSetupPairCompleted }
                                         style={ Styles.setupPairingButtonsContinue }>
-                                        Continue
+                                        繼續
                                     </X.Button>
                                 ) : (
                                     <X.Button
                                         color='setupInverted'
                                         onPress={ this.props.handleSetupPairSkipped }
                                         style={ Styles.setupPairingButtonsContinue }>
-                                        Skip for Now
+                                        暫時跳過
                                     </X.Button>
                                 ) }
                             </View>
