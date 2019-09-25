@@ -684,6 +684,10 @@ class DragonpilotSettings extends Component {
                 DragonUIDev: dragonUIDev,
                 DragonUIDevMini: dragonUIDevMini,
                 DragonUISpeed: dragonUISpeed,
+                DragonUILane: dragonUILane,
+                DragonUILead: dragonUILead,
+                DragonUIPath: dragonUIPath,
+                DragonUIBlinker: dragonUIBlinker,
             },
         } = this.props;
         const { expandedCell, VolumeBoostInt } = this.state;
@@ -720,6 +724,42 @@ class DragonpilotSettings extends Component {
                             isExpanded={expandedCell == 'dragon_ui_speed'}
                             handleExpanded={() => this.handleExpanded('dragon_ui_speed')}
                             handleChanged={this.props.setUISpeed}/>
+                        <X.TableCell
+                            type='switch'
+                            title='Display Lane Prediction'
+                            value={!!parseInt(dragonUILane)}
+                            iconSource={Icons.developer}
+                            description='Enable this to display lane prediction.'
+                            isExpanded={expandedCell == 'dragon_ui_lane'}
+                            handleExpanded={() => this.handleExpanded('dragon_ui_lane')}
+                            handleChanged={this.props.setUILane}/>
+                        <X.TableCell
+                            type='switch'
+                            title='Display Lead Car Indicator'
+                            value={!!parseInt(dragonUILead)}
+                            iconSource={Icons.developer}
+                            description='Enable this to display lead car indicator, this only works on supported cars.'
+                            isExpanded={expandedCell == 'dragon_ui_lead'}
+                            handleExpanded={() => this.handleExpanded('dragon_ui_lead')}
+                            handleChanged={this.props.setUILead}/>
+                        <X.TableCell
+                            type='switch'
+                            title='Display Path Prediction'
+                            value={!!parseInt(dragonUIPath)}
+                            iconSource={Icons.developer}
+                            description='Enable this to display path prediction.'
+                            isExpanded={expandedCell == 'dragon_ui_path'}
+                            handleExpanded={() => this.handleExpanded('dragon_ui_path')}
+                            handleChanged={this.props.setUIPath}/>
+                        <X.TableCell
+                            type='switch'
+                            title='Display Turning Signal'
+                            value={!!parseInt(dragonUIBlinker)}
+                            iconSource={Icons.developer}
+                            description='Enable this to display turning signal.'
+                            isExpanded={expandedCell == 'dragon_ui_blinker'}
+                            handleExpanded={() => this.handleExpanded('dragon_ui_blinker')}
+                            handleChanged={this.props.setUIBlinker}/>
                         <X.TableCell
                             type='switch'
                             title='顯示事件／方向盤圖示'
@@ -938,6 +978,18 @@ const mapDispatchToProps = dispatch => ({
     },
     setToyotaLaneDepartureWarning: (val) => {
         dispatch(updateParam(Params.KEY_TOYOTA_LANE_DEPARTURE_WARNING, (val | 0).toString()));
+    },
+    setUILane: (val) => {
+        dispatch(updateParam(Params.KEY_UI_LANE, (val | 0).toString()));
+    },
+    setUILead: (val) => {
+        dispatch(updateParam(Params.KEY_UI_LEAD, (val | 0).toString()));
+    },
+    setUIPath: (val) => {
+        dispatch(updateParam(Params.KEY_UI_PATH, (val | 0).toString()));
+    },
+    setUIBlinker: (val) => {
+        dispatch(updateParam(Params.KEY_UI_BLINKER, (val | 0).toString()));
     },
 });
 
