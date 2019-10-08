@@ -64,6 +64,7 @@ const PARAMS = [
   "DragonUILead",
   "DragonUIPath",
   "DragonUIBlinker",
+  "DragonEnableDriverMonitoring",
 ];
 
 export function refreshParams() {

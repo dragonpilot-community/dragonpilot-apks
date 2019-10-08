@@ -62,4 +62,5 @@ export const Params = {
     KEY_UI_LEAD: 'DragonUILead',
     KEY_UI_PATH: 'DragonUIPath',
     KEY_UI_BLINKER: 'DragonUIBlinker',
+    KEY_ENABLE_DRIVER_MONITORING: 'DragonEnableDriverMonitoring',
 };
