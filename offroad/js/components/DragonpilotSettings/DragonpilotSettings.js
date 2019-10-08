@@ -27,6 +27,7 @@ const Icons = {
     developer: require('../../img/icon_shell.png'),
     plus: require('../../img/icon_plus.png'),
     minus: require('../../img/icon_minus.png'),
+    monitoring: require('../../img/icon_monitoring.png'),
 }
 
 class DragonpilotSettings extends Component {
@@ -415,6 +416,7 @@ class DragonpilotSettings extends Component {
                 DragonEnableSteeringOnSignal: dragonEnableSteeringOnSignal,
                 DragonEnableDriverSafetyCheck: dragonEnableDriverSafetyCheck,
                 DragonDisplaySteeringLimitAlert: dragonDisplaySteeringLimitAlert,
+                DragonEnableDriverMonitoring: dragonEnableDriverMonitoring,
             },
         } = this.props;
         const { expandedCell, steeringMonitorTimerInt } = this.state;
@@ -480,6 +482,15 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'safetyCheck' }
                             handleExpanded={ () => this.handleExpanded('safetyCheck') }
                             handleChanged={ this.props.setEnableDriverSafetyCheck } />
+                        <X.TableCell
+                            type='switch'
+                            title='Enable Driver Monitoring'
+                            value={ !!parseInt(dragonEnableDriverMonitoring) }
+                            iconSource={ Icons.monitoring }
+                            description='Driver Monitoring detects driver awareness with 3D facial reconstruction and pose estimation. It is used to warn the driver when they appear distracted while openpilot is engaged. This feature is still in beta, so Driver Monitoring is unavailable when the facial tracking is too inaccurate (e.g. at night). The availability is indicated by the face icon at the bottom-left corner of your EON.'
+                            isExpanded={ expandedCell == 'driver_monitoring' }
+                            handleExpanded={ () => this.handleExpanded('driver_monitoring') }
+                            handleChanged={ this.props.setEnableDriverMonitoring } />
                         <X.TableCell
                             type='custom'
                             title='方向盤監控計時 (分鐘)'
@@ -990,6 +1001,9 @@ const mapDispatchToProps = dispatch => ({
     },
     setUIBlinker: (val) => {
         dispatch(updateParam(Params.KEY_UI_BLINKER, (val | 0).toString()));
+    },
+    setEnableDriverMonitoring: (val) => {
+        dispatch(updateParam(Params.KEY_ENABLE_DRIVER_MONITORING, (val | 0).toString()));
     },
 });
 
