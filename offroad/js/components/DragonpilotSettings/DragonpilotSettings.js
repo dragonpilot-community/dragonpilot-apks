@@ -484,10 +484,10 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setEnableDriverSafetyCheck } />
                         <X.TableCell
                             type='switch'
-                            title='Enable Driver Monitoring'
+                            title='啟用駕駛監控'
                             value={ !!parseInt(dragonEnableDriverMonitoring) }
                             iconSource={ Icons.monitoring }
-                            description='Driver Monitoring detects driver awareness with 3D facial reconstruction and pose estimation. It is used to warn the driver when they appear distracted while openpilot is engaged. This feature is still in beta, so Driver Monitoring is unavailable when the facial tracking is too inaccurate (e.g. at night). The availability is indicated by the face icon at the bottom-left corner of your EON.'
+                            description='駕駛監控系統利用 3D 人臉/姿態識別來判斷駕駛的狀態。當 openpilot 啟用時，它會在駕駛分心時發出警示。這個功能仍然在測試階段，所以監控會在無法正確識別時暫時取消 (例如光線不足時)。您可以從 EON 左下角的人臉圖示來判斷它的狀態。'
                             isExpanded={ expandedCell == 'driver_monitoring' }
                             handleExpanded={ () => this.handleExpanded('driver_monitoring') }
                             handleChanged={ this.props.setEnableDriverMonitoring } />
