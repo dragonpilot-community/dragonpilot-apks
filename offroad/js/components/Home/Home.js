@@ -218,7 +218,7 @@ class Home extends Component {
                                             color='darkBlue'
                                             size='tiny'
                                             weight='semibold'>
-                                            Update Available
+                                            有可用的更新
                                         </X.Text>
                                     </X.Button>
                                 </View>
@@ -233,7 +233,7 @@ class Home extends Component {
                                             color='white'
                                             size='tiny'
                                             weight='semibold'>
-                                            { alerts.length } { alerts.length > 1 ? 'ALERTS' : 'ALERT' }
+                                            { alerts.length } { alerts.length > 1 ? '通知' : '通知' }
                                         </X.Text>
                                     </X.Button>
                                 </View>
@@ -271,7 +271,7 @@ class Home extends Component {
                                         size='tiny'
                                         onPress={ this.handleHideAlertsPressed }
                                         style={ Styles.homeBodyAlertAction }>
-                                        Hide Alerts
+                                        隱藏通知
                                     </X.Button>
                                 </View>
                             </ScrollView>
@@ -301,7 +301,7 @@ class Home extends Component {
                                       color='white'
                                       size='tiny'
                                       weight='semibold'>
-                                      上一周
+                                      上周
                                   </X.Text>
                               </View>
                               <View style={ Styles.homeBodyStatsRow }>
