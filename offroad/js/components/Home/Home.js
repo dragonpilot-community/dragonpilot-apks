@@ -149,7 +149,7 @@ class Home extends Component {
             updateReleaseNotes,
         } = this.props;
 
-        const softwareName = !!parseInt(params.Passive) ? 'dashcam' : 'openpilot';
+        const softwareName = !!parseInt(params.Passive) ? 'dashcam' : 'dragonpilot';
         const softwareString = `${ softwareName } v${ params.Version }`;
         const isAmerica = this.checkIsInAmerica();
         const hasDeviceStats = typeof(deviceStats.all) !== 'undefined';
@@ -283,13 +283,13 @@ class Home extends Component {
                                     color='white'
                                     size='jumbo'
                                     weight='semibold'>
-                                    No Network Connection
+                                    沒有網路連線
                                 </X.Text>
                                 <X.Text
                                     color='lightGrey700'
                                     size='medium'
                                     style={ Styles.homeBodyDisconnectedContext }>
-                                    Connect to a WiFi or cellular network to upload and review your drives.
+                                    連線到無線網路或手機網路來上傳您的行車記錄。
                                 </X.Text>
                             </View>
                         </View>
@@ -301,7 +301,7 @@ class Home extends Component {
                                       color='white'
                                       size='tiny'
                                       weight='semibold'>
-                                      PAST WEEK
+                                      上一周
                                   </X.Text>
                               </View>
                               <View style={ Styles.homeBodyStatsRow }>
@@ -317,7 +317,7 @@ class Home extends Component {
                                           color='lightGrey700'
                                           size='tiny'
                                           style={ Styles.homeBodyStatLabel }>
-                                          DRIVES
+                                          行駛
                                       </X.Text>
                                   </View>
                                   <View style={ Styles.homeBodyStat }>
@@ -332,7 +332,7 @@ class Home extends Component {
                                           color='lightGrey700'
                                           size='tiny'
                                           style={ Styles.homeBodyStatLabel }>
-                                          MILES
+                                          英里
                                       </X.Text>
                                   </View>
                                   <View style={ Styles.homeBodyStat }>
@@ -347,7 +347,7 @@ class Home extends Component {
                                           color='lightGrey700'
                                           size='tiny'
                                           style={ Styles.homeBodyStatLabel }>
-                                          HOURS
+                                          小時
                                       </X.Text>
                                   </View>
                               </View>
@@ -359,7 +359,7 @@ class Home extends Component {
                                       color='white'
                                       size='tiny'
                                       weight='semibold'>
-                                      ALL TIME
+                                      全部
                                   </X.Text>
                               </View>
                               <View style={ Styles.homeBodyStatsRow }>
@@ -375,7 +375,7 @@ class Home extends Component {
                                           color='lightGrey700'
                                           size='tiny'
                                           style={ Styles.homeBodyStatLabel }>
-                                          DRIVES
+                                          行駛
                                       </X.Text>
                                   </View>
                                   <View style={ Styles.homeBodyStat }>
@@ -390,7 +390,7 @@ class Home extends Component {
                                           color='lightGrey700'
                                           size='tiny'
                                           style={ Styles.homeBodyStatLabel }>
-                                          MILES
+                                          英里
                                       </X.Text>
                                   </View>
                                   <View style={ Styles.homeBodyStat }>
@@ -405,7 +405,7 @@ class Home extends Component {
                                           color='lightGrey700'
                                           size='tiny'
                                           style={ Styles.homeBodyStatLabel }>
-                                          HOURS
+                                          小時
                                       </X.Text>
                                   </View>
                               </View>
@@ -449,14 +449,14 @@ class Home extends Component {
                                           size='medium'
                                           weight='semibold'
                                           style={ Styles.homeBodyAccountUpgradeTitle }>
-                                          Upgrade Now
+                                          馬上升級
                                       </X.Text>
                                       <X.Text
                                           color='white'
                                           size='tiny'
                                           weight='light'
                                           style={ Styles.homeBodyAccountUpgradeContext }>
-                                          Become a comma prime member in the comma app and get premium features!
+                                          成為 comma app 裡的 comma prime 會員取得更多功能！
                                       </X.Text>
                                       <View style={ Styles.homeBodyAccountUpgradeFeatures }>
                                           <View style={ Styles.homeBodyAccountUpgradeFeature }>
@@ -468,7 +468,7 @@ class Home extends Component {
                                                   color='white'
                                                   size='tiny'
                                                   weight='semibold'>
-                                                  Remote Access
+                                                  遠程訪問
                                               </X.Text>
                                           </View>
                                           <View style={ Styles.homeBodyAccountUpgradeFeature }>
@@ -480,6 +480,7 @@ class Home extends Component {
                                                   color='white'
                                                   size='tiny'
                                                   weight='semibold'>
+                                                  14 天的行車記錄
                                                   14 days of storage
                                               </X.Text>
                                           </View>
@@ -492,7 +493,7 @@ class Home extends Component {
                                                   color='white'
                                                   size='tiny'
                                                   weight='semibold'>
-                                                  Developer perks
+                                                  開發人員 perks
                                               </X.Text>
                                           </View>
                                       </View>
@@ -512,7 +513,7 @@ class Home extends Component {
                                                   color='white'
                                                   size='medium'
                                                   weight='semibold'>
-                                                  Finish Setup
+                                                  完成設定
                                               </X.Text>
                                               <X.Image
                                                   isFlex={ false }
@@ -524,7 +525,7 @@ class Home extends Component {
                                               size='tiny'
                                               weight='light'
                                               style={ Styles.homeBodyAccountPairButtonContext }>
-                                              Pair your comma account with comma connect
+                                              將您的 comma 帳號與 comma connect 配對
                                           </X.Text>
                                       </X.Gradient>
                                   </X.Button>
