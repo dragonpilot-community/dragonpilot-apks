@@ -190,11 +190,17 @@ class Home extends Component {
                                         isFlex={ false }
                                         source={ require('../../img/icon_checkmark.png') } />
                                 ) : null }
-                                <X.Text
-                                    color='white'
-                                    size='tiny'>
-                                    { softwareString }
-                                </X.Text>
+                                <X.Button
+                                    size='smaller'
+                                    color='lightGrey'
+                                    onPress={ this.handlePressedDragonpilotSettings }>
+                                    <X.Text
+                                        color='darkBlue'
+                                        size='tiny'
+                                        weight='semibold'>
+                                        { softwareString }
+                                    </X.Text>
+                                </X.Button>
                             </View>
                             { updateIsAvailable ? (
                                 <View style={ Styles.homeHeaderDetailsAction }>
@@ -227,28 +233,6 @@ class Home extends Component {
                                 </View>
                             ) : null }
                         </View>
-                    </View>
-                    <View style={ Styles.homeActionsSecondaryAction }>
-                        <X.Button
-                            color='transparent'
-                            size='full'
-                            onPress={ this.handlePressedDragonpilotSettings }>
-                            <X.Gradient
-                                colors={ HOME_BUTTON_GRADIENT }
-                                style={ Styles.homeActionsSecondaryButton }>
-                                <View style={ Styles.homeActionsSecondaryButtonBody }>
-                                    <View style={ Styles.homeActionsSecondaryButtonIcon }>
-                                        <X.Image
-                                            source={ require('../../img/icon_settings.png') } />
-                                    </View>
-                                    <X.Text
-                                        color='white'
-                                        weight='semibold'>
-                                        Dragonpilot
-                                    </X.Text>
-                                </View>
-                            </X.Gradient>
-                        </X.Button>
                     </View>
                     { alertsVisible ? (
                         <View style={ homeBodyStyles }>
