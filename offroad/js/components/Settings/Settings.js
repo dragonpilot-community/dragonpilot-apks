@@ -21,6 +21,7 @@ import {
 import {
     deleteParam,
     updateParam,
+    refreshParams,
 } from '../../store/params/actions';
 
 import X from '../../themes';
@@ -46,6 +47,7 @@ const Icons = {
     plus: require('../../img/icon_plus.png'),
     minus: require('../../img/icon_minus.png'),
     mapSpeed: require('../../img/icon_map.png'),
+    openpilot: require('../../img/icon_openpilot.png'),
 }
 
 class Settings extends Component {
@@ -76,6 +78,7 @@ class Settings extends Component {
     }
 
     async componentWillMount() {
+        await this.props.refreshParams();
         const {
             isMetric,
             params: {
@@ -204,7 +207,7 @@ class Settings extends Component {
             {
                 icon: Icons.eon,
                 title: 'Device',
-                context: `${ parseInt(freeSpace * 100) + '%' } Free`,
+                context: `${ parseInt(freeSpace) + '%' } Free`,
                 route: SettingsRoutes.DEVICE,
             },
             {
@@ -263,6 +266,8 @@ class Settings extends Component {
                 LongitudinalControl: hasLongitudinalControl,
                 LimitSetSpeed: limitSetSpeed,
                 SpeedLimitOffset: speedLimitOffset,
+                OpenpilotEnabledToggle: openpilotEnabled,
+                Passive: isPassive,
             }
         } = this.props;
         const { expandedCell, speedLimitOffsetInt, enableTomTom, enableAutonavi } = this.state;
@@ -320,6 +325,17 @@ class Settings extends Component {
                         </X.Button>
                     </X.Table>
                     <X.Table color='darkBlue'>
+                        { !parseInt(isPassive) ? (
+                            <X.TableCell
+                                type='switch'
+                                title='Enable openpilot'
+                                value={ !!parseInt(openpilotEnabled) }
+                                iconSource={ Icons.openpilot }
+                                description='Use the openpilot system for adaptive cruise control and lane keep driver assistance. Your attention is required at all times to use this feature. Changing this setting takes effect when the car is powered off.'
+                                isExpanded={ expandedCell == 'openpilot_enabled' }
+                                handleExpanded={ () => this.handleExpanded('openpilot_enabled') }
+                                handleChanged={ this.props.setOpenpilotEnabled } />
+                        ) : null }
                         <X.TableCell
                             type='switch'
                             title='Record and Upload Driver Camera'
@@ -394,21 +410,6 @@ class Settings extends Component {
                             Review Training Guide
                         </X.Button>
                     </X.Table>
-                    <X.Table color='darkBlue'>
-                        <X.Button
-                            size='small'
-                            color='settingsDefault'
-                            onPress={ () => this.props.reboot() }>
-                            Reboot
-                        </X.Button>
-                        <X.Line color='transparent' size='tiny' spacing='mini' />
-                        <X.Button
-                            size='small'
-                            color='settingsDefault'
-                            onPress={ () => this.props.shutdown() }>
-                            Power Off
-                        </X.Button>
-                    </X.Table>
                 </ScrollView>
             </View>
         )
@@ -435,7 +436,19 @@ class Settings extends Component {
                             <X.TableCell
                                 title='Device Paired'
                                 value={ isPaired ? 'Yes' : 'No' } />
-                            <X.Text color='white' size='tiny'>Terms of Service available at {'https://my.comma.ai/terms.html'}</X.Text>
+                            { isPaired ? (
+                                <X.Text
+                                    color='white'
+                                    size='tiny'>
+                                    You may unpair your device in the comma connect app settings.
+                                </X.Text>
+                            ) : null }
+                            <X.Line color='light' />
+                            <X.Text
+                                color='white'
+                                size='tiny'>
+                                Terms of Service available at {'https://my.comma.ai/terms.html'}
+                            </X.Text>
                         </X.Table>
                         { isPaired ? null : (
                             <X.Table color='darkBlue' padding='big'>
@@ -511,19 +524,26 @@ class Settings extends Component {
                             value={ serialNumber } />
                         <X.TableCell
                             title='Free Storage'
-                            value={ parseInt(freeSpace * 100) + '%' }
+                            value={ parseInt(freeSpace) + '%' }
                              />
                         <X.TableCell
                             title='Upload Speed'
                             value={ txSpeedKbps + ' kbps' }
                              />
                     </X.Table>
-                    <X.Table color='darkBlue' padding='big'>
+                    <X.Table color='darkBlue'>
                         <X.Button
-                            color='settingsDefault'
                             size='small'
-                            onPress={ () => ChffrPlus.openDateTimeSettings() }>
-                            Open Date and Time Settings
+                            color='settingsDefault'
+                            onPress={ () => this.props.reboot() }>
+                            Reboot
+                        </X.Button>
+                        <X.Line color='transparent' size='tiny' spacing='mini' />
+                        <X.Button
+                            size='small'
+                            color='settingsDefault'
+                            onPress={ () => this.props.shutdown() }>
+                            Power Off
                         </X.Button>
                     </X.Table>
                 </ScrollView>
@@ -666,7 +686,16 @@ class Settings extends Component {
         return (
             <View>
                 <X.Text color='white' size='tiny'>
-                    WARNING:{'\n'}This grants SSH access to all public keys in your GitHub settings.{'\n'}Never enter a GitHub username other than your own.{'\n'}A comma employee will never ask you to add their GitHub.{'\n'}
+                    WARNING:
+                    {'\n'}
+                    This grants SSH access to all public keys in your GitHub settings.
+                    {'\n'}
+                    Never enter a GitHub username other than your own.
+                    {'\n'}
+                    The built-in SSH key will be disabled if you proceed.
+                    {'\n'}
+                    A comma employee will never ask you to add their GitHub.
+                    {'\n'}
                 </X.Text>
                 <View style={ Styles.githubUsernameInputContainer }>
                     <X.Text
@@ -727,11 +756,7 @@ class Settings extends Component {
     }
 
     clearSshKeys() {
-        ChffrPlus.deleteParam(Params.KEY_GITHUB_SSH_KEYS);
-        Alert.alert('Reboot', `Reboot to finalize removal of GitHub SSH keys.`, [
-            { text: 'Later', onPress: () => {}, style: 'cancel' },
-            { text: 'Reboot Now', onPress: () => ChffrPlus.reboot() },
-        ]);
+        ChffrPlus.resetSshKeys();
     }
 
     async writeSshKeys() {
@@ -746,11 +771,6 @@ class Settings extends Component {
             }
 
             await ChffrPlus.writeParam(Params.KEY_GITHUB_SSH_KEYS, githubKeys);
-
-            Alert.alert('Reboot', `Reboot to make SSH keys from ${githubUsername} available.`, [
-                { text: 'Later', onPress: () => {}, style: 'cancel' },
-                { text: 'Reboot Now', onPress: () => ChffrPlus.reboot() },
-            ]);
             this.toggleExpandGithubInput();
         } catch(err) {
             console.log(err);
@@ -789,7 +809,6 @@ const mapStateToProps = state => ({
     simState: state.host.simState,
     wifiState: state.host.wifiState,
     isPaired: state.host.device && state.host.device.is_paired,
-    isUpdateAvailable: state.updater.isUpdateAvailable,
 
     // Uploader
     txSpeedKbps: parseInt(state.uploads.txSpeedKbps),
@@ -844,12 +863,8 @@ const mapDispatchToProps = dispatch => ({
             ]
         }))
     },
-    setDriverMonitoringEnabled: (isDriverMonitoringEnabled) => {
-        const value = (isDriverMonitoringEnabled | 0).toString();
-        dispatch(updateParam(Params.KEY_IS_DRIVER_MONITORING_ENABLED, value));
-    },
-    setFcwEnabled: (isFcwEnabled) => {
-        dispatch(updateParam(Params.KEY_IS_FCW_ENABLED, (isFcwEnabled | 0).toString()));
+    setOpenpilotEnabled: (openpilotEnabled) => {
+        dispatch(updateParam(Params.KEY_OPENPILOT_ENABLED, (openpilotEnabled | 0).toString()));
     },
     setMetric: (useMetricUnits) => {
         dispatch(updateParam(Params.KEY_IS_METRIC, (useMetricUnits | 0).toString()));
@@ -880,6 +895,9 @@ const mapDispatchToProps = dispatch => ({
     },
     deleteParam: (param) => {
         dispatch(deleteParam(param));
+    },
+    refreshParams: () => {
+        dispatch(refreshParams());
     },
 });
 
