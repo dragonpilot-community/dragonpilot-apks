@@ -251,11 +251,14 @@ class MainActivity : Activity(), NewDestinationReceiverDelegate, OffroadNavigati
                         expandSidebar()
                         frame?.background = gradientBlue
                         if (state == STATE.HOME) {
-                            broadcastHomePress()
                             startInnerActivity(OFFROAD_APP)
                         }
-                        activityOverlayManager!!.show(ActivityOverlayManager.OVERLAY_THERMAL_WARNING)
-                        hideActivityView()
+                        if (ChffrPlusParams.readParam("UpdateAvailable") == "1") {
+                            showActivityView()
+                        } else {
+                            activityOverlayManager!!.show(ActivityOverlayManager.OVERLAY_THERMAL_WARNING)
+                            hideActivityView()
+                        }
                     }
                 }
 
@@ -270,8 +273,6 @@ class MainActivity : Activity(), NewDestinationReceiverDelegate, OffroadNavigati
                   log.thermal.thermalStatus.toString(),
                   log.thermal.ipAddr.toString());
             }
-
-            
         }
     }
 
@@ -314,20 +315,20 @@ class MainActivity : Activity(), NewDestinationReceiverDelegate, OffroadNavigati
     fun updatePandaConnectionStatus() {
         Log.i("frame", satelliteCount.toString())
         if (pandaConnectionMonitor?.isConnected == false) {
-            sidebarMetricPanda?.text = "无CAN" //NO PANDA
+            sidebarMetricPanda?.text = "PANDA\nN/A"
             sidebarMetricPandaEdge?.setColorFilter(colorRed!!);
             sidebarMetricPandaBorder!!.getBackground().setAlpha(255)
         } else {
             if (satelliteCount == -1) {
-              sidebarMetricPanda?.text = "CAN已链接" //CAN ACTIVE
+              sidebarMetricPanda?.text = "PANDA\nACTIVE"
               sidebarMetricPandaEdge?.setColorFilter(colorWhite!!);
               sidebarMetricPandaBorder!!.getBackground().setAlpha(76);
             } else if (satelliteCount < 6) {
-              sidebarMetricPanda?.text = "CAN\n无GPS" //CAN \n NO GPS
+              sidebarMetricPanda?.text = "PANDA\nGPS: $satelliteCount"
               sidebarMetricPandaEdge?.setColorFilter(colorYellow!!);
               sidebarMetricPandaBorder!!.getBackground().setAlpha(255);
             } else if (satelliteCount >= 6) {
-              sidebarMetricPanda?.text = "就绪" //PANDA GOOD GPS
+              sidebarMetricPanda?.text = "PANDA\nGPS: $satelliteCount"
               sidebarMetricPandaEdge?.setColorFilter(colorWhite!!);
               sidebarMetricPandaBorder!!.getBackground().setAlpha(76);
             }
@@ -432,6 +433,10 @@ class MainActivity : Activity(), NewDestinationReceiverDelegate, OffroadNavigati
             deselectNavItem(settingsButton!!)
             setAndSendState(STATE.HOME)
         }
+    }
+
+    override fun onBackPressed() {
+
     }
 
     override fun uiLayoutOnEngagedMocked() {
