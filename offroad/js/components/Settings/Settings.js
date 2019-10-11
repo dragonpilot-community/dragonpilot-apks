@@ -206,7 +206,7 @@ class Settings extends Component {
             },
             {
                 icon: Icons.eon,
-                title: '裝置',
+                title: '設備',
                 context: `剩餘 ${ parseInt(freeSpace) + '%' }`,
                 route: SettingsRoutes.DEVICE,
             },
@@ -434,7 +434,7 @@ class Settings extends Component {
                     <View>
                         <X.Table>
                             <X.TableCell
-                                title='裝置已配對'
+                                title='設備已配對'
                                 value={ isPaired ? '是' : '否' } />
                             { isPaired ? (
                                 <X.Text
@@ -489,7 +489,7 @@ class Settings extends Component {
                         color='ghost'
                         size='small'
                         onPress={ () => this.handlePressedBack() }>
-                        {'<  裝置設定'}
+                        {'<  設備設定'}
                     </X.Button>
                 </View>
                 <ScrollView
@@ -646,7 +646,7 @@ class Settings extends Component {
                             title='啟用 SSH'
                             value={ isSshEnabled }
                             iconSource={ Icons.developer }
-                            description='允許別的裝置經由 Secure Shell (SSH) 連線至您的 EON。'
+                            description='允許別的設備經由 Secure Shell (SSH) 連線至您的 EON。'
                             isExpanded={ expandedCell == 'ssh' }
                             handleExpanded={ () => this.handleExpanded('ssh') }
                             handleChanged={ this.props.setSshEnabled } />
@@ -662,7 +662,7 @@ class Settings extends Component {
                                 color='settingsDefault'
                                 onPress={ this.toggleExpandGithubInput }
                                 style={ { minWidth: '100%' } }>
-                                { expandedCell === 'ssh_keys' ? 'Cancel' : 'Edit' }
+                                { expandedCell === 'ssh_keys' ? '取消' : '編輯' }
                             </X.Button>
                         </X.TableCell>
                     </X.Table>
