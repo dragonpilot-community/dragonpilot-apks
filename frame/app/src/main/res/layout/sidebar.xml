@@ -54,7 +54,7 @@
                     android:text=""
                     android:textAlignment="center"
                     android:textColor="#ffffff"
-                    android:textSize="8sp" />
+                    android:textSize="9sp" />
                 <ImageView
                     android:id="@+id/indicator_battery_icon"
                     android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
                     android:text=""
                     android:textAlignment="center"
                     android:textColor="#ffffff"
-                    android:textSize="8sp" />
+                    android:textSize="9sp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
