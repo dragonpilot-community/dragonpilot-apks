@@ -14,7 +14,7 @@ class UpdatePrompt extends Component {
 
     onUpdatePressed = () => {
         this.props.dismiss();
-        ChffrPlus.reboot();
+        ChffrPlus.resetAndReboot();
     }
 
     render() {
