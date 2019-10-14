@@ -155,9 +155,9 @@ class DragonpilotSettings extends Component {
     }
 
     handlePressedUpdatePanda = async () => {
-        Alert.alert('Update Panda Firmware', 'Please DO NOT disconnect panda from power source until panda light return to red pulsing lights, continue?', [
-            { text: 'Later', onPress: () => {}, style: 'cancel' },
-            { text: 'Update Now', onPress: () => ChffrPlus.updatePandaFirmware() },
+        Alert.alert('刷新 Panda 韌體', '注意：請勿在刷新過程中中斷 Panda 的電源，刷新嗎？', [
+            { text: '稍等', onPress: () => {}, style: 'cancel' },
+            { text: '馬上刷新', onPress: () => ChffrPlus.updatePandaFirmware() },
         ]);
     }
 
@@ -416,7 +416,7 @@ class DragonpilotSettings extends Component {
                             size='small'
                             color='settingsDefault'
                             onPress={ this.handlePressedUpdatePanda  }>
-                            Update Panda Firmware
+                            刷新 Panda 韌體
                         </X.Button>
                     </X.Table>
                 </ScrollView>
