@@ -81,6 +81,7 @@ class MainActivity : Activity(), NewDestinationReceiverDelegate, OffroadNavigati
     var signalStrengthView: ImageView? = null
     var networkTypeText: TextView? = null
     var batteryLevelView: ImageView? = null
+    var batteryPercentageText: TextView? = null
 
     var sidebarMetricIP: TextView? = null
 
@@ -587,6 +588,7 @@ class MainActivity : Activity(), NewDestinationReceiverDelegate, OffroadNavigati
         signalStrengthView = findViewById(R.id.indicator_network_signal) as ImageView
         networkTypeText = findViewById(R.id.network_type) as TextView
         batteryLevelView = findViewById(R.id.indicator_battery_icon) as ImageView
+        batteryPercentageText = findViewById(R.id.battery_percentage) as TextView
         activityView = findViewById(R.id.activity_view) as ActivityView
         activityOverlayManager = ActivityOverlayManager(findViewById(R.id.activity_mock), this)
         activityTouchGate = findViewById(R.id.activity_touch_gate) as RelativeLayout
@@ -794,6 +796,7 @@ class MainActivity : Activity(), NewDestinationReceiverDelegate, OffroadNavigati
         val iconId = resources.getIdentifier("indicator_battery_${batteryPctRound}${suffix}", "drawable", packageName)
         val iconBattery = resources.getDrawable(iconId, null);
         batteryLevelView?.setImageDrawable(iconBattery);
+        batteryPercentageText?.text = level.toString() + "%"
     }
 
     inner class NetworkMonitor : BroadcastReceiver() {
