@@ -263,6 +263,15 @@ class ChffrPlusModule(val ctx: ReactApplicationContext) :
     }
 
     @ReactMethod
+    fun resetAndReboot() {
+        try {
+            Runtime.getRuntime().exec(arrayOf("/system/bin/su", "-c", "sh /data/openpilot/reset_update.sh"))
+        } catch (e: IOException) {
+            CloudLog.exception("BaseUIReactModule.reboot", e)
+        }
+    }
+
+    @ReactMethod
     fun resetSshKeys() {
         try {
             Runtime.getRuntime().exec(arrayOf("/system/bin/su", "-c", "cp /data/data/com.termux/files/home/.ssh/authorized_keys /data/params/d/GithubSshKeys"))
