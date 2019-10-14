@@ -154,6 +154,14 @@ class DragonpilotSettings extends Component {
         this.props.setVolumeBoost(_VolumeBoost);
     }
 
+    handlePressedUpdatePanda = async () => {
+        Alert.alert('Update Panda Firmware', 'Please DO NOT disconnect panda from power source until panda light return to red pulsing lights, continue?', [
+            { text: 'Later', onPress: () => {}, style: 'cancel' },
+            { text: 'Update Now', onPress: () => ChffrPlus.updatePandaFirmware() },
+        ]);
+    }
+
+
     handleRunApp(app, val) {
         switch (app) {
             case 'mixplorer':
@@ -401,6 +409,14 @@ class DragonpilotSettings extends Component {
                             color='settingsDefault'
                             onPress={ () => ChffrPlus.openAndroidSettings() }>
                             Open Android Settings
+                        </X.Button>
+                    </X.Table>
+                    <X.Table color='darkBlue' padding='big'>
+                        <X.Button
+                            size='small'
+                            color='settingsDefault'
+                            onPress={ this.handlePressedUpdatePanda  }>
+                            Update Panda Firmware
                         </X.Button>
                     </X.Table>
                 </ScrollView>

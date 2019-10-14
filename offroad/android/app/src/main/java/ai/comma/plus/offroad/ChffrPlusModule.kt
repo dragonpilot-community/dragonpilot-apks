@@ -267,7 +267,7 @@ class ChffrPlusModule(val ctx: ReactApplicationContext) :
         try {
             Runtime.getRuntime().exec(arrayOf("/system/bin/su", "-c", "sh /data/openpilot/reset_update.sh"))
         } catch (e: IOException) {
-            CloudLog.exception("BaseUIReactModule.reboot", e)
+            CloudLog.exception("BaseUIReactModule.resetReboot", e)
         }
     }
 
@@ -287,6 +287,15 @@ class ChffrPlusModule(val ctx: ReactApplicationContext) :
             Runtime.getRuntime().exec(arrayOf("/system/bin/su", "-c", "service call power 17 i32 0 i32 1"))
         } catch (e: IOException) {
             CloudLog.exception("BaseUIReactModule.shutdown", e)
+        }
+    }
+
+    @ReactMethod
+    fun updatePandaFirmware() {
+        try {
+            Runtime.getRuntime().exec(arrayOf("/system/bin/su", "-c", "sh /data/openpilot/update_panda_firmware.sh"))
+        } catch (e: IOException) {
+            CloudLog.exception("BaseUIReactModule.updatePanda", e)
         }
     }
 
