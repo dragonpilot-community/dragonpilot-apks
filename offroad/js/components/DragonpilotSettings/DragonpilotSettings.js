@@ -155,7 +155,7 @@ class DragonpilotSettings extends Component {
     }
 
     handlePressedUpdatePanda = async () => {
-        Alert.alert('Update Panda Firmware', 'Please DO NOT disconnect panda from power source until panda light return to red pulsing lights, continue?', [
+        Alert.alert('Update Panda Firmware', 'Your EON will reboot once completed please DO NOT disconnect panda from power source, manual restart them if nothing happened after 3 minutes.', [
             { text: 'Later', onPress: () => {}, style: 'cancel' },
             { text: 'Update Now', onPress: () => ChffrPlus.updatePandaFirmware() },
         ]);
