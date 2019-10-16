@@ -155,7 +155,7 @@ class DragonpilotSettings extends Component {
     }
 
     handlePressedUpdatePanda = async () => {
-        Alert.alert('刷新 Panda 韌體', '注意：請勿在刷新過程中中斷 Panda 的電源，刷新嗎？', [
+        Alert.alert('刷新 Panda 韌體', '您的 EON 將會在刷新完成後重新啟動，請勿在刷新過程中中斷 Panda 的電源。若在三分鐘後沒有任何反應請手動重開 EON 和 Panda。', [
             { text: '稍等', onPress: () => {}, style: 'cancel' },
             { text: '馬上刷新', onPress: () => ChffrPlus.updatePandaFirmware() },
         ]);
