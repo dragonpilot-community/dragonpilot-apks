@@ -493,10 +493,10 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setDisplaySteeringLimitAlert } />
                         <X.TableCell
                             type='switch'
-                            title='Enable Slow on Curve'
+                            title='啟用彎道減速功能'
                             value={ !!parseInt(dragonEnableSlowOnCurve) }
                             iconSource={ Icons.developer }
-                            description='If you enable this, the car will slow down automatically when on a curve road, this feature only works on Long Ctrl supported cars.'
+                            description='啟用這個選項後， dp 在彎道時會依需求減速，這個選項只適用於支持縱向控制的車型。'
                             isExpanded={ expandedCell == 'enable_slow_on_curve' }
                             handleExpanded={ () => this.handleExpanded('enable_slow_on_curve') }
                             handleChanged={ this.props.setEnableSlowOnCurve } />
