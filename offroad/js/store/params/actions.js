@@ -73,6 +73,7 @@ const PARAMS = [
   "DragonUIBlinker",
   "DragonEnableDriverMonitoring",
   "DragonCarModel",
+  "DragonEnableSlowOnCurve",
 ].concat(ALERT_PARAMS);
 
 export function refreshParams(params) {
