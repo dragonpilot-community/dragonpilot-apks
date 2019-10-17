@@ -68,4 +68,5 @@ export const Params = {
     KEY_UI_PATH: 'DragonUIPath',
     KEY_UI_BLINKER: 'DragonUIBlinker',
     KEY_ENABLE_DRIVER_MONITORING: 'DragonEnableDriverMonitoring',
+    KEY_ENABLE_SLOW_ON_CURVE: 'DragonEnableSlowOnCurve',
 };
