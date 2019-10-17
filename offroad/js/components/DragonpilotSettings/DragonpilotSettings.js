@@ -436,6 +436,7 @@ class DragonpilotSettings extends Component {
                 DragonEnableDriverSafetyCheck: dragonEnableDriverSafetyCheck,
                 DragonDisplaySteeringLimitAlert: dragonDisplaySteeringLimitAlert,
                 DragonEnableDriverMonitoring: dragonEnableDriverMonitoring,
+                DragonEnableSlowOnCurve: dragonEnableSlowOnCurve,
             },
         } = this.props;
         const { expandedCell, steeringMonitorTimerInt } = this.state;
@@ -490,6 +491,15 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'display_steering_limit_alert' }
                             handleExpanded={ () => this.handleExpanded('display_steering_limit_alert') }
                             handleChanged={ this.props.setDisplaySteeringLimitAlert } />
+                        <X.TableCell
+                            type='switch'
+                            title='Enable Slow on Curve'
+                            value={ !!parseInt(dragonEnableSlowOnCurve) }
+                            iconSource={ Icons.developer }
+                            description='If you enable this, the car will slow down automatically when on a curve road, this feature only works on Long Ctrl supported cars.'
+                            isExpanded={ expandedCell == 'enable_slow_on_curve' }
+                            handleExpanded={ () => this.handleExpanded('enable_slow_on_curve') }
+                            handleChanged={ this.props.setEnableSlowOnCurve } />
                     </X.Table>
                     <X.Table color='darkBlue'>
                         <X.TableCell
@@ -1023,6 +1033,9 @@ const mapDispatchToProps = dispatch => ({
     },
     setEnableDriverMonitoring: (val) => {
         dispatch(updateParam(Params.KEY_ENABLE_DRIVER_MONITORING, (val | 0).toString()));
+    },
+    setEnableSlowOnCurve: (val) => {
+        dispatch(updateParam(Params.KEY_ENABLE_SLOW_ON_CURVE, (val | 0).toString()));
     },
 });
 
