@@ -48,6 +48,7 @@ class DragonpilotSettings extends Component {
             cameraOffsetInt: '6',
             autoShutdownAtInt: '0',
             VolumeBoost: '0',
+            carModel: '',
         }
     }
 
@@ -61,6 +62,7 @@ class DragonpilotSettings extends Component {
                 DragonCameraOffset: dragonCameraOffset,
                 DragonAutoShutdownAt: dragonAutoShutdownAt,
                 DragonUIVolumeBoost: dragonUIVolumeBoost,
+                DragonCarModel: dragonCarModel,
             },
         } = this.props;
         this.setState({ steeringMonitorTimerInt: dragonSteeringMonitorTimer === '0'? 0 : parseInt(dragonSteeringMonitorTimer) || 3 })
@@ -70,6 +72,7 @@ class DragonpilotSettings extends Component {
         this.setState({ cameraOffsetInt: dragonCameraOffset === '0'? 0 : parseInt(dragonCameraOffset) || 6 })
         this.setState({ autoShutdownAtInt: dragonAutoShutdownAt === '0'? 0 : parseInt(dragonAutoShutdownAt) || 0 })
         this.setState({ VolumeBoostInt: dragonUIVolumeBoost === '0'? 0 : parseInt(dragonUIVolumeBoost) || 0 })
+        this.setState({ carModel: dragonCarModel })
     }
 
     handleExpanded(key) {
@@ -249,7 +252,7 @@ class DragonpilotSettings extends Component {
                 DragonChargingCtrl: dragonChargingCtrl,
             }
         } = this.props;
-        const { expandedCell, enableMixplorer, cameraOffsetInt, autoShutdownAtInt } = this.state;
+        const { expandedCell, enableMixplorer, cameraOffsetInt, autoShutdownAtInt, carModel } = this.state;
         return (
             <View style={ Styles.settings }>
                 <View style={ Styles.settingsHeader }>
@@ -265,12 +268,6 @@ class DragonpilotSettings extends Component {
                     style={ Styles.settingsWindow }>
                     <X.Table direction='row' color='darkBlue'>
                         { this.renderSettingsMenu() }
-                    </X.Table>
-                    <X.Table spacing='none'>
-                        <X.TableCell
-                            title='English Localisation'
-                            value='comma.ai (https://github.com/commaai/)'
-                            valueTextSize='tiny' />
                     </X.Table>
                     {enableMixplorer &&
                     <X.Table color='darkBlue'>
@@ -418,6 +415,12 @@ class DragonpilotSettings extends Component {
                             onPress={ this.handlePressedUpdatePanda  }>
                             Update Panda Firmware
                         </X.Button>
+                    </X.Table>
+                    <X.Table spacing='none'>
+                        <X.TableCell
+                            title='Car Model'
+                            value={ carModel }
+                            valueTextSize='tiny' />
                     </X.Table>
                 </ScrollView>
             </View>
