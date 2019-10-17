@@ -418,7 +418,7 @@ class DragonpilotSettings extends Component {
                     </X.Table>
                     <X.Table spacing='none'>
                         <X.TableCell
-                            title='Car Model'
+                            title='車型'
                             value={ carModel }
                             valueTextSize='tiny' />
                     </X.Table>
