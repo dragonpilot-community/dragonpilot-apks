@@ -437,6 +437,7 @@ class DragonpilotSettings extends Component {
                 DragonDisplaySteeringLimitAlert: dragonDisplaySteeringLimitAlert,
                 DragonEnableDriverMonitoring: dragonEnableDriverMonitoring,
                 DragonEnableSlowOnCurve: dragonEnableSlowOnCurve,
+                DragonEnableLeadCarMovingAlert: dragonEnableLeadCarMovingAlert,
             },
         } = this.props;
         const { expandedCell, steeringMonitorTimerInt } = this.state;
@@ -500,6 +501,15 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'enable_slow_on_curve' }
                             handleExpanded={ () => this.handleExpanded('enable_slow_on_curve') }
                             handleChanged={ this.props.setEnableSlowOnCurve } />
+                        <X.TableCell
+                            type='switch'
+                            title='Enable Lead Car Moving Alert (BETA)'
+                            value={ !!parseInt(dragonEnableLeadCarMovingAlert) }
+                            iconSource={ Icons.developer }
+                            description='If you enable this, dp will notify you when lead car starts moving from stationary.'
+                            isExpanded={ expandedCell == 'enable_lead_car_alert' }
+                            handleExpanded={ () => this.handleExpanded('enable_lead_car_alert') }
+                            handleChanged={ this.props.setEnableLeadCarMovingAlert } />
                     </X.Table>
                     <X.Table color='darkBlue'>
                         <X.TableCell
@@ -1036,6 +1046,9 @@ const mapDispatchToProps = dispatch => ({
     },
     setEnableSlowOnCurve: (val) => {
         dispatch(updateParam(Params.KEY_ENABLE_SLOW_ON_CURVE, (val | 0).toString()));
+    },
+    setEnableLeadCarMovingAlert: (val) => {
+        dispatch(updateParam(Params.KEY_ENABLE_LEAD_CAR_MOVING_ALERT, (val | 0).toString()));
     },
 });
 
