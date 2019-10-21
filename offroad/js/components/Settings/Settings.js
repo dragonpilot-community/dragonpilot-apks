@@ -732,7 +732,7 @@ class Settings extends Component {
                                     style={ Styles.connectingIndicator } />
                             }
                             { authKeysUpdateState === 'failed' &&
-                                <X.Text color='white' size='tiny'>Save failed. Ensure that your username is correct and you are connected to the internet.</X.Text>
+                                <X.Text color='white' size='tiny'>儲存失敗。請確定您的使用者名稱是對的並已連上網路。</X.Text>
                             }
                         </View>
                     }

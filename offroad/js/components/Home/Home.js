@@ -481,7 +481,6 @@ class Home extends Component {
                                                   size='tiny'
                                                   weight='semibold'>
                                                   14 天的行車記錄
-                                                  14 days of storage
                                               </X.Text>
                                           </View>
                                           <View style={ Styles.homeBodyAccountUpgradeFeature }>
