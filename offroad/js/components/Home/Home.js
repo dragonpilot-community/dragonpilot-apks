@@ -26,6 +26,7 @@ import { HOME_BUTTON_GRADIENT } from '../../styles/gradients';
 import X from '../../themes';
 import Styles from './HomeStyles';
 import { formatCommas } from '../../utils/number';
+import { mToKm } from '../../utils/conversions';
 
 class Home extends Component {
     static navigationOptions = {
@@ -153,6 +154,7 @@ class Home extends Component {
         const softwareString = `${ softwareName } v${ params.Version }`;
         const isAmerica = this.checkIsInAmerica();
         const hasDeviceStats = typeof(deviceStats.all) !== 'undefined';
+        const isMetric = !!parseInt(params.IsMetric);
 
         const homeHeaderStyles = [
             Styles.homeHeader,
@@ -326,13 +328,15 @@ class Home extends Component {
                                           size='big'
                                           weight='semibold'
                                           style={ Styles.homeBodyStatNumber }>
-                                          { hasDeviceStats ? formatCommas(Math.floor(deviceStats.week.distance)) : '0' }
+                                          { hasDeviceStats ? formatCommas(Math.floor(
+                                                isMetric ? mToKm(deviceStats.week.distance): deviceStats.week.distance
+                                            )) : '0' }
                                       </X.Text>
                                       <X.Text
                                           color='lightGrey700'
                                           size='tiny'
                                           style={ Styles.homeBodyStatLabel }>
-                                          英里
+                                          { isMetric ? 'KM' : 'MILES' }
                                       </X.Text>
                                   </View>
                                   <View style={ Styles.homeBodyStat }>
@@ -384,13 +388,15 @@ class Home extends Component {
                                           size='medium'
                                           weight='semibold'
                                           style={ Styles.homeBodyStatNumber }>
-                                          { hasDeviceStats ? formatCommas(Math.floor(deviceStats.all.distance)) : '0' }
+                                          { hasDeviceStats ? formatCommas(Math.floor(
+                                                isMetric ? mToKm(deviceStats.all.distance): deviceStats.all.distance
+                                            )) : '0' }
                                       </X.Text>
                                       <X.Text
                                           color='lightGrey700'
                                           size='tiny'
                                           style={ Styles.homeBodyStatLabel }>
-                                          英里
+                                          { isMetric ? 'KM' : 'MILES' }
                                       </X.Text>
                                   </View>
                                   <View style={ Styles.homeBodyStat }>
@@ -430,7 +436,7 @@ class Home extends Component {
                                       </X.Text>
                                   </View>
                                   <View style={ Styles.homeBodyAccountDetails }>
-                                      { typeof(username) !== 'undefined' ? (
+                                      { username !== null ? (
                                           <X.Text
                                               color='white'
                                               size='small'
