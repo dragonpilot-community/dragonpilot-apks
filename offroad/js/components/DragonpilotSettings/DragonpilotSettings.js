@@ -503,10 +503,10 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setEnableSlowOnCurve } />
                         <X.TableCell
                             type='switch'
-                            title='Enable Lead Car Moving Alert (BETA)'
+                            title='啟用前丰靜止移動偵測 (BETA)'
                             value={ !!parseInt(dragonEnableLeadCarMovingAlert) }
                             iconSource={ Icons.developer }
-                            description='If you enable this, dp will notify you when lead car starts moving from stationary.'
+                            description='啟用這個選項後， 當前車從靜止開始移動時 (如紅燈)， dp 將會發出警示訊息。'
                             isExpanded={ expandedCell == 'enable_lead_car_alert' }
                             handleExpanded={ () => this.handleExpanded('enable_lead_car_alert') }
                             handleChanged={ this.props.setEnableLeadCarMovingAlert } />
