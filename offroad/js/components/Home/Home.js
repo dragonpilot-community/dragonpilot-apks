@@ -336,7 +336,7 @@ class Home extends Component {
                                           color='lightGrey700'
                                           size='tiny'
                                           style={ Styles.homeBodyStatLabel }>
-                                          { isMetric ? 'KM' : 'MILES' }
+                                          { isMetric ? '公里' : '英里' }
                                       </X.Text>
                                   </View>
                                   <View style={ Styles.homeBodyStat }>
@@ -396,7 +396,7 @@ class Home extends Component {
                                           color='lightGrey700'
                                           size='tiny'
                                           style={ Styles.homeBodyStatLabel }>
-                                          { isMetric ? 'KM' : 'MILES' }
+                                          { isMetric ? '公里' : '英里' }
                                       </X.Text>
                                   </View>
                                   <View style={ Styles.homeBodyStat }>
