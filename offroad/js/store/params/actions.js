@@ -74,6 +74,7 @@ const PARAMS = [
   "DragonEnableDriverMonitoring",
   "DragonCarModel",
   "DragonEnableSlowOnCurve",
+  "DragonEnableLeadCarMovingAlert",
 ].concat(ALERT_PARAMS);
 
 export function refreshParams(params) {
