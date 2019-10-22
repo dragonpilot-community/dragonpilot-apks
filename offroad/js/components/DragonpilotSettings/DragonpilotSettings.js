@@ -503,7 +503,7 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setEnableSlowOnCurve } />
                         <X.TableCell
                             type='switch'
-                            title='啟用前丰靜止移動偵測 (BETA)'
+                            title='啟用前車靜止移動偵測 (BETA)'
                             value={ !!parseInt(dragonEnableLeadCarMovingAlert) }
                             iconSource={ Icons.developer }
                             description='啟用這個選項後， 當前車從靜止開始移動時 (如紅燈)， dp 將會發出警示訊息。'
