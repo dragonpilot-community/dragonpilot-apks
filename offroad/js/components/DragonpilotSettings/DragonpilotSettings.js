@@ -694,10 +694,10 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setToyotaLaneDepartureWarning } />
                         <X.TableCell
                             type='switch'
-                            title='Enable SnG Mod'
+                            title='啟用 SnG 補丁'
                             value={ !!parseInt(dragonToyotaSnGMod) }
                             iconSource={ Icons.developer }
-                            description='Enable this if you wish to use Stop n Go mod, the car will ignore acceleration commands if you are on a hill, we DO NOT RECOMMEND that you enable this unless you know what it is. (Only works on cars that need resume button to start)'
+                            description='開啟這個選項使用 Stop n Go 補丁，注意：在某些路況下您將需要自行踩油門啟動（如上坡路段），除非您知道您在做什麼，不然我們不建議您使用。（只支援需要按 RES 啟動的車款）'
                             isExpanded={ expandedCell == 'toyota_sng_mod' }
                             handleExpanded={ () => this.handleExpanded('toyota_sng_mod') }
                             handleChanged={ this.props.setToyotaSnGMod } />
