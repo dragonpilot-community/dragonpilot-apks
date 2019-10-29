@@ -8,7 +8,8 @@ export const ALERT_PARAMS = [
   Params.KEY_OFFROAD_CHARGE_DISABLED,
   Params.KEY_OFFROAD_TEMPERATURE_TOO_HIGH,
   Params.KEY_OFFROAD_CONNECTIVITY_NEEDED_PROMPT,
-  Params.KEY_OFFROAD_CONNECTIVITY_NEEDED
+  Params.KEY_OFFROAD_CONNECTIVITY_NEEDED,
+  Params.KEY_OFFROAD_PANDA_FIRMWARE_MISMATCH,
 ];
 const PARAMS = [
   "AccessToken",
@@ -75,6 +76,7 @@ const PARAMS = [
   "DragonCarModel",
   "DragonEnableSlowOnCurve",
   "DragonEnableLeadCarMovingAlert",
+  "DragonToyotaSnGMod",
 ].concat(ALERT_PARAMS);
 
 export function refreshParams(params) {

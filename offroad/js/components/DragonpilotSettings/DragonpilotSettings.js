@@ -655,6 +655,7 @@ class DragonpilotSettings extends Component {
             params: {
                 DragonToyotaStockDSU: dragonToyotaStockDSU,
                 DragonToyotaLaneDepartureWarning: dragonToyotaLaneDepartureWarning,
+                DragonToyotaSnGMod: dragonToyotaSnGMod,
             },
         } = this.props;
         const { expandedCell } = this.state;
@@ -691,6 +692,15 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'toyota_lane_departure_warning' }
                             handleExpanded={ () => this.handleExpanded('toyota_lane_departure_warning') }
                             handleChanged={ this.props.setToyotaLaneDepartureWarning } />
+                        <X.TableCell
+                            type='switch'
+                            title='Enable SnG Mod'
+                            value={ !!parseInt(dragonToyotaSnGMod) }
+                            iconSource={ Icons.developer }
+                            description='Enable this if you wish to use Stop n Go mod, the car will ignore acceleration commands if you are on a hill, we DO NOT RECOMMEND that you enable this unless you know what it is. (Only works on cars that need resume button to start)'
+                            isExpanded={ expandedCell == 'toyota_sng_mod' }
+                            handleExpanded={ () => this.handleExpanded('toyota_sng_mod') }
+                            handleChanged={ this.props.setToyotaSnGMod } />
                     </X.Table>
                 </ScrollView>
             </View>
@@ -1049,6 +1059,9 @@ const mapDispatchToProps = dispatch => ({
     },
     setEnableLeadCarMovingAlert: (val) => {
         dispatch(updateParam(Params.KEY_ENABLE_LEAD_CAR_MOVING_ALERT, (val | 0).toString()));
+    },
+    setToyotaSnGMod: (val) => {
+        dispatch(updateParam(Params.KEY_TOYOTA_SNG_MOD, (val | 0).toString()));
     },
 });
 

@@ -29,6 +29,7 @@ export const Params = {
     KEY_OFFROAD_TEMPERATURE_TOO_HIGH: 'Offroad_TemperatureTooHigh',
     KEY_OFFROAD_CONNECTIVITY_NEEDED_PROMPT: 'Offroad_ConnectivityNeededPrompt',
     KEY_OFFROAD_CONNECTIVITY_NEEDED: 'Offroad_ConnectivityNeeded',
+    KEY_OFFROAD_PANDA_FIRMWARE_MISMATCH: 'Offroad_PandaFirmwareMismatch',
     // dragonpilot
     KEY_LAT_CTRL: 'DragonLatCtrl',
     KEY_ALLOW_GAS: 'DragonAllowGas',
@@ -70,4 +71,5 @@ export const Params = {
     KEY_ENABLE_DRIVER_MONITORING: 'DragonEnableDriverMonitoring',
     KEY_ENABLE_SLOW_ON_CURVE: 'DragonEnableSlowOnCurve',
     KEY_ENABLE_LEAD_CAR_MOVING_ALERT: 'DragonEnableLeadCarMovingAlert',
+    KEY_TOYOTA_SNG_MOD: 'DragonToyotaSnGMod',
 };
