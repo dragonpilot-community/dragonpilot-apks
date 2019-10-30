@@ -1,33 +1,177 @@
 {
-  "New Drive": {
+  "Update Available": {
     "origin": [
       [
         "js/components/Home/Home.js",
-        53
+        210
       ]
     ]
   },
-  "EON Paired": {
+  "ALERTS": {
     "origin": [
       [
         "js/components/Home/Home.js",
-        114
+        225
       ]
     ]
   },
-  "Pair EON": {
+  "ALERT": {
     "origin": [
       [
         "js/components/Home/Home.js",
-        126
+        225
       ]
     ]
   },
-  "Settings": {
+  "Hide Alerts": {
     "origin": [
       [
         "js/components/Home/Home.js",
-        149
+        263
+      ]
+    ]
+  },
+  "No Network Connection": {
+    "origin": [
+      [
+        "js/components/Home/Home.js",
+        275
+      ]
+    ]
+  },
+  "Connect to a WiFi or cellular network to upload and review your drives.": {
+    "origin": [
+      [
+        "js/components/Home/Home.js",
+        281
+      ]
+    ]
+  },
+  "PAST WEEK": {
+    "origin": [
+      [
+        "js/components/Home/Home.js",
+        293
+      ]
+    ]
+  },
+  "DRIVES": {
+    "origin": [
+      [
+        "js/components/Home/Home.js",
+        309
+      ],
+      [
+        "js/components/Home/Home.js",
+        369
+      ]
+    ]
+  },
+  "KM": {
+    "origin": [
+      [
+        "js/components/Home/Home.js",
+        326
+      ],
+      [
+        "js/components/Home/Home.js",
+        386
+      ]
+    ]
+  },
+  "MILES": {
+    "origin": [
+      [
+        "js/components/Home/Home.js",
+        326
+      ],
+      [
+        "js/components/Home/Home.js",
+        386
+      ]
+    ]
+  },
+  "HOURS": {
+    "origin": [
+      [
+        "js/components/Home/Home.js",
+        341
+      ],
+      [
+        "js/components/Home/Home.js",
+        401
+      ]
+    ]
+  },
+  "ALL TIME": {
+    "origin": [
+      [
+        "js/components/Home/Home.js",
+        353
+      ]
+    ]
+  },
+  "COMMA POINTS": {
+    "origin": [
+      [
+        "js/components/Home/Home.js",
+        422
+      ]
+    ]
+  },
+  "Upgrade Now": {
+    "origin": [
+      [
+        "js/components/Home/Home.js",
+        445
+      ]
+    ]
+  },
+  "Become a comma prime member in the comma app and get premium features!": {
+    "origin": [
+      [
+        "js/components/Home/Home.js",
+        452
+      ]
+    ]
+  },
+  "Remote Access": {
+    "origin": [
+      [
+        "js/components/Home/Home.js",
+        464
+      ]
+    ]
+  },
+  "14 days of storage": {
+    "origin": [
+      [
+        "js/components/Home/Home.js",
+        476
+      ]
+    ]
+  },
+  "Developer perks": {
+    "origin": [
+      [
+        "js/components/Home/Home.js",
+        488
+      ]
+    ]
+  },
+  "Finish Setup": {
+    "origin": [
+      [
+        "js/components/Home/Home.js",
+        508
+      ]
+    ]
+  },
+  "Pair your comma account with comma connect": {
+    "origin": [
+      [
+        "js/components/Home/Home.js",
+        520
       ]
     ]
   }

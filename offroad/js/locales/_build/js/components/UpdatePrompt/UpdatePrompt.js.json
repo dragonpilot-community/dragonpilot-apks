@@ -3,7 +3,7 @@
     "origin": [
       [
         "js/components/UpdatePrompt/UpdatePrompt.js",
-        37
+        32
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "js/components/UpdatePrompt/UpdatePrompt.js",
-        38
+        33
       ]
     ]
   },
@@ -19,15 +19,7 @@
     "origin": [
       [
         "js/components/UpdatePrompt/UpdatePrompt.js",
-        40
-      ]
-    ]
-  },
-  "Please keep in mind that system behavior may change.{0}{1}": {
-    "origin": [
-      [
-        "js/components/UpdatePrompt/UpdatePrompt.js",
-        43
+        36
       ]
     ]
   }

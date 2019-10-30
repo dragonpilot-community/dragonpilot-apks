@@ -3,27 +3,15 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        120
+        123
       ],
       [
         "js/components/Settings/Settings.js",
-        352
+        783
       ],
       [
         "js/components/Settings/Settings.js",
-        681
-      ],
-      [
-        "js/components/Settings/Settings.js",
-        700
-      ],
-      [
-        "js/components/Settings/Settings.js",
-        762
-      ],
-      [
-        "js/components/Settings/Settings.js",
-        764
+        785
       ]
     ]
   },
@@ -31,7 +19,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        120
+        123
       ]
     ]
   },
@@ -39,15 +27,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        121
-      ],
-      [
-        "js/components/Settings/Settings.js",
-        682
-      ],
-      [
-        "js/components/Settings/Settings.js",
-        701
+        124
       ]
     ]
   },
@@ -55,15 +35,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        122
-      ],
-      [
-        "js/components/Settings/Settings.js",
-        683
-      ],
-      [
-        "js/components/Settings/Settings.js",
-        702
+        125
       ]
     ]
   },
@@ -71,7 +43,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        187
+        190
       ]
     ]
   },
@@ -79,11 +51,11 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        188
+        191
       ],
       [
         "js/components/Settings/Settings.js",
-        454
+        467
       ]
     ]
   },
@@ -91,7 +63,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        188
+        191
       ]
     ]
   },
@@ -99,7 +71,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        193
+        196
       ]
     ]
   },
@@ -107,7 +79,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        194
+        197
       ]
     ]
   },
@@ -115,7 +87,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        199
+        202
       ]
     ]
   },
@@ -123,7 +95,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        205
+        208
       ]
     ]
   },
@@ -131,27 +103,19 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        263
+        268
       ]
     ]
   },
-  "Record and Upload Driver Camera": {
+  "Enable openpilot": {
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        275
+        281
       ]
     ]
   },
-  "Upload data from the driver facing camera and help improve the Driver Monitoring algorithm.": {
-    "origin": [
-      [
-        "js/components/Settings/Settings.js",
-        278
-      ]
-    ]
-  },
-  "Use Metric System": {
+  "Use the openpilot system for adaptive cruise control and lane keep driver assistance. Your attention is required at all times to use this feature. Changing this setting takes effect when the car is powered off.": {
     "origin": [
       [
         "js/components/Settings/Settings.js",
@@ -159,11 +123,35 @@
       ]
     ]
   },
+  "Record and Upload Driver Camera": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        291
+      ]
+    ]
+  },
+  "Upload data from the driver facing camera and help improve the Driver Monitoring algorithm.": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        294
+      ]
+    ]
+  },
+  "Use Metric System": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        300
+      ]
+    ]
+  },
   "Display speed in km/h instead of mp/h and temperature in °C instead of °F.": {
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        287
+        303
       ]
     ]
   },
@@ -171,19 +159,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        344
-      ]
-    ]
-  },
-  "Power Off": {
-    "origin": [
-      [
-        "js/components/Settings/Settings.js",
-        359
-      ],
-      [
-        "js/components/Settings/Settings.js",
-        768
+        360
       ]
     ]
   },
@@ -191,7 +167,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        377
+        378
       ]
     ]
   },
@@ -199,7 +175,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        386
+        387
       ]
     ]
   },
@@ -207,11 +183,11 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        387
+        388
       ],
       [
         "js/components/Settings/Settings.js",
-        455
+        468
       ]
     ]
   },
@@ -219,11 +195,19 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        387
+        388
       ],
       [
         "js/components/Settings/Settings.js",
-        455
+        468
+      ]
+    ]
+  },
+  "You may unpair your device in the comma connect app settings.": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        393
       ]
     ]
   },
@@ -231,7 +215,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        388
+        400
       ]
     ]
   },
@@ -239,7 +223,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        396
+        409
       ]
     ]
   },
@@ -247,7 +231,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        429
+        442
       ]
     ]
   },
@@ -255,7 +239,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        438
+        451
       ]
     ]
   },
@@ -263,7 +247,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        440
+        453
       ]
     ]
   },
@@ -271,7 +255,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        448
+        461
       ]
     ]
   },
@@ -279,7 +263,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        457
+        470
       ]
     ]
   },
@@ -287,7 +271,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        460
+        473
       ]
     ]
   },
@@ -295,7 +279,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        463
+        476
       ]
     ]
   },
@@ -303,15 +287,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        467
-      ]
-    ]
-  },
-  "Open Date and Time Settings": {
-    "origin": [
-      [
-        "js/components/Settings/Settings.js",
-        476
+        480
       ]
     ]
   },
@@ -319,7 +295,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        498
+        518
       ]
     ]
   },
@@ -327,7 +303,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        508
+        528
       ]
     ]
   },
@@ -335,7 +311,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        511
+        531
       ]
     ]
   },
@@ -343,7 +319,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        521
+        541
       ]
     ]
   },
@@ -351,7 +327,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        528
+        548
       ]
     ]
   },
@@ -359,7 +335,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        555
+        575
       ]
     ]
   },
@@ -367,7 +343,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        563
+        583
       ]
     ]
   },
@@ -375,7 +351,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        566
+        586
       ]
     ]
   },
@@ -383,7 +359,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        569
+        589
       ]
     ]
   },
@@ -391,7 +367,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        576
+        596
       ]
     ]
   },
@@ -399,7 +375,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        579
+        599
       ]
     ]
   },
@@ -407,7 +383,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        585
+        605
       ]
     ]
   },
@@ -415,19 +391,19 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        595
+        615
       ],
       [
         "js/components/Settings/Settings.js",
-        763
+        784
       ],
       [
         "js/components/Settings/Settings.js",
-        769
+        790
       ],
       [
         "js/components/Settings/Settings.js",
-        775
+        796
       ]
     ]
   },
@@ -435,7 +411,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        595
+        615
       ]
     ]
   },
@@ -443,15 +419,15 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        604
+        624
       ]
     ]
   },
-  "WARNING: This grants SSH access to all public keys in your GitHub settings. Never enter a GitHub username other than your own. A comma employee will never ask you to add their GitHub.": {
+  "WARNING: This grants SSH access to all public keys in your GitHub settings. Never enter a GitHub username other than your own. The built-in SSH key will be disabled if you proceed. A comma employee will never ask you to add their GitHub.": {
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        619
+        639
       ]
     ]
   },
@@ -459,7 +435,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        627
+        658
       ]
     ]
   },
@@ -467,7 +443,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        644
+        675
       ]
     ]
   },
@@ -475,7 +451,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        656
+        687
       ]
     ]
   },
@@ -483,23 +459,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        666
-      ]
-    ]
-  },
-  "Reboot to finalize removal of GitHub SSH keys.": {
-    "origin": [
-      [
-        "js/components/Settings/Settings.js",
-        681
-      ]
-    ]
-  },
-  "Reboot to make SSH keys from {githubUsername} available.": {
-    "origin": [
-      [
-        "js/components/Settings/Settings.js",
-        700
+        697
       ]
     ]
   },
@@ -507,7 +467,15 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        762
+        783
+      ]
+    ]
+  },
+  "Power Off": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        789
       ]
     ]
   },
@@ -515,7 +483,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        768
+        789
       ]
     ]
   },
@@ -523,7 +491,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        770
+        791
       ]
     ]
   },
@@ -531,11 +499,11 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        774
+        795
       ],
       [
         "js/components/Settings/Settings.js",
-        776
+        797
       ]
     ]
   },
@@ -543,7 +511,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        774
+        795
       ]
     ]
   }

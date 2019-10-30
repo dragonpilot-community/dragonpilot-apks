@@ -210,8 +210,8 @@ class Settings extends Component {
             },
             {
                 icon: Icons.eon,
-                title: 'Device',
-                context: `${ parseInt(freeSpace) + '%' } Free`,
+                title: i18n._(t`Device`),
+                context: i18n._(t`${ parseInt(freeSpace) + '%' } Free`),
                 route: SettingsRoutes.DEVICE,
             },
             {
@@ -332,10 +332,10 @@ class Settings extends Component {
                         { !parseInt(isPassive) ? (
                             <X.TableCell
                                 type='switch'
-                                title='Enable openpilot'
+                                title={ i18n._(t`Enable openpilot`) }
                                 value={ !!parseInt(openpilotEnabled) }
                                 iconSource={ Icons.openpilot }
-                                description='Use the openpilot system for adaptive cruise control and lane keep driver assistance. Your attention is required at all times to use this feature. Changing this setting takes effect when the car is powered off.'
+                                description={ i18n._(t`Use the openpilot system for adaptive cruise control and lane keep driver assistance. Your attention is required at all times to use this feature. Changing this setting takes effect when the car is powered off.`) }
                                 isExpanded={ expandedCell == 'openpilot_enabled' }
                                 handleExpanded={ () => this.handleExpanded('openpilot_enabled') }
                                 handleChanged={ this.props.setOpenpilotEnabled } />
@@ -411,7 +411,7 @@ class Settings extends Component {
                         <X.Button
                             color='settingsDefault'
                             onPress={ () => this.props.openTrainingGuide() }>
-                            Review Training Guide
+                            { i18n._(t`Review Training Guide`) }
                         </X.Button>
                     </X.Table>
                 </ScrollView>
@@ -438,20 +438,20 @@ class Settings extends Component {
                     <View>
                         <X.Table>
                             <X.TableCell
-                                title='Device Paired'
-                                value={ isPaired ? 'Yes' : 'No' } />
+                                title={ i18n._(t`Device Paired`) }
+                                value={ i18n._(isPaired ? t`Yes` : t`No`) } />
                             { isPaired ? (
                                 <X.Text
                                     color='white'
                                     size='tiny'>
-                                    You may unpair your device in the comma connect app settings.
+                                    <Trans>You may unpair your device in the comma connect app settings.</Trans>
                                 </X.Text>
                             ) : null }
                             <X.Line color='light' />
                             <X.Text
                                 color='white'
                                 size='tiny'>
-                                Terms of Service available at {'https://my.comma.ai/terms.html'}
+                                <Trans>Terms of Service available at {'https://my.comma.ai/terms.html'}</Trans>
                             </X.Text>
                         </X.Table>
                         { isPaired ? null : (
@@ -527,7 +527,7 @@ class Settings extends Component {
                             title={ i18n._(t`Serial Number`) }
                             value={ serialNumber } />
                         <X.TableCell
-                            title='Free Storage'
+                            title={ i18n._(t`Free Storage`) }
                             value={ parseInt(freeSpace) + '%' }
                              />
                         <X.TableCell
@@ -690,6 +690,7 @@ class Settings extends Component {
         return (
             <View>
                 <X.Text color='white' size='tiny'>
+                    <Trans>
                     WARNING:
                     {'\n'}
                     This grants SSH access to all public keys in your GitHub settings.
@@ -700,6 +701,7 @@ class Settings extends Component {
                     {'\n'}
                     A comma employee will never ask you to add their GitHub.
                     {'\n'}
+                    </Trans>
                 </X.Text>
                 <View style={ Styles.githubUsernameInputContainer }>
                     <X.Text

@@ -29,7 +29,8 @@ import { formatCommas } from '../../utils/number';
 import { mToKm } from '../../utils/conversions';
 
 // i18n
-import { Trans } from "@lingui/macro"
+import {t, Trans} from "@lingui/macro"
+import {i18n} from "../../utils/I18n";
 
 class Home extends Component {
     static navigationOptions = {
@@ -217,7 +218,7 @@ class Home extends Component {
                                             color='darkBlue'
                                             size='tiny'
                                             weight='semibold'>
-                                            Update Available
+                                            <Trans>Update Available</Trans>
                                         </X.Text>
                                     </X.Button>
                                 </View>
@@ -232,7 +233,7 @@ class Home extends Component {
                                             color='white'
                                             size='tiny'
                                             weight='semibold'>
-                                            { alerts.length } { alerts.length > 1 ? 'ALERTS' : 'ALERT' }
+                                            { alerts.length } { i18n._(alerts.length > 1 ? t`ALERTS` : t`ALERT`) }
                                         </X.Text>
                                     </X.Button>
                                 </View>
@@ -270,7 +271,7 @@ class Home extends Component {
                                         size='tiny'
                                         onPress={ this.handleHideAlertsPressed }
                                         style={ Styles.homeBodyAlertAction }>
-                                        Hide Alerts
+                                        { i18n._(t`Hide Alerts`) }
                                     </X.Button>
                                 </View>
                             </ScrollView>
@@ -282,13 +283,13 @@ class Home extends Component {
                                     color='white'
                                     size='jumbo'
                                     weight='semibold'>
-                                    No Network Connection
+                                    <Trans>No Network Connection</Trans>
                                 </X.Text>
                                 <X.Text
                                     color='lightGrey700'
                                     size='medium'
                                     style={ Styles.homeBodyDisconnectedContext }>
-                                    Connect to a WiFi or cellular network to upload and review your drives.
+                                    <Trans>Connect to a WiFi or cellular network to upload and review your drives.</Trans>
                                 </X.Text>
                             </View>
                         </View>
@@ -300,7 +301,7 @@ class Home extends Component {
                                       color='white'
                                       size='tiny'
                                       weight='semibold'>
-                                      PAST WEEK
+                                      <Trans>PAST WEEK</Trans>
                                   </X.Text>
                               </View>
                               <View style={ Styles.homeBodyStatsRow }>
@@ -316,7 +317,7 @@ class Home extends Component {
                                           color='lightGrey700'
                                           size='tiny'
                                           style={ Styles.homeBodyStatLabel }>
-                                          DRIVES
+                                          <Trans>DRIVES</Trans>
                                       </X.Text>
                                   </View>
                                   <View style={ Styles.homeBodyStat }>
@@ -333,7 +334,7 @@ class Home extends Component {
                                           color='lightGrey700'
                                           size='tiny'
                                           style={ Styles.homeBodyStatLabel }>
-                                          { isMetric ? 'KM' : 'MILES' }
+                                          { i18n._(isMetric ? t`KM` : t`MILES`) }
                                       </X.Text>
                                   </View>
                                   <View style={ Styles.homeBodyStat }>
@@ -348,7 +349,7 @@ class Home extends Component {
                                           color='lightGrey700'
                                           size='tiny'
                                           style={ Styles.homeBodyStatLabel }>
-                                          HOURS
+                                          <Trans>HOURS</Trans>
                                       </X.Text>
                                   </View>
                               </View>
@@ -360,7 +361,7 @@ class Home extends Component {
                                       color='white'
                                       size='tiny'
                                       weight='semibold'>
-                                      ALL TIME
+                                      <Trans>ALL TIME</Trans>
                                   </X.Text>
                               </View>
                               <View style={ Styles.homeBodyStatsRow }>
@@ -376,7 +377,7 @@ class Home extends Component {
                                           color='lightGrey700'
                                           size='tiny'
                                           style={ Styles.homeBodyStatLabel }>
-                                          DRIVES
+                                          <Trans>DRIVES</Trans>
                                       </X.Text>
                                   </View>
                                   <View style={ Styles.homeBodyStat }>
@@ -393,7 +394,7 @@ class Home extends Component {
                                           color='lightGrey700'
                                           size='tiny'
                                           style={ Styles.homeBodyStatLabel }>
-                                          { isMetric ? 'KM' : 'MILES' }
+                                          { i18n._(isMetric ? t`KM` : t`MILES`) }
                                       </X.Text>
                                   </View>
                                   <View style={ Styles.homeBodyStat }>
@@ -408,7 +409,7 @@ class Home extends Component {
                                           color='lightGrey700'
                                           size='tiny'
                                           style={ Styles.homeBodyStatLabel }>
-                                          HOURS
+                                          <Trans>HOURS</Trans>
                                       </X.Text>
                                   </View>
                               </View>
@@ -429,7 +430,7 @@ class Home extends Component {
                                           color='lightGrey700'
                                           size='tiny'
                                           style={ Styles.homeBodyAccountPointsLabel }>
-                                          COMMA POINTS
+                                          <Trans>COMMA POINTS</Trans>
                                       </X.Text>
                                   </View>
                                   <View style={ Styles.homeBodyAccountDetails }>
@@ -452,14 +453,14 @@ class Home extends Component {
                                           size='medium'
                                           weight='semibold'
                                           style={ Styles.homeBodyAccountUpgradeTitle }>
-                                          Upgrade Now
+                                          <Trans>Upgrade Now</Trans>
                                       </X.Text>
                                       <X.Text
                                           color='white'
                                           size='tiny'
                                           weight='light'
                                           style={ Styles.homeBodyAccountUpgradeContext }>
-                                          Become a comma prime member in the comma app and get premium features!
+                                          <Trans>Become a comma prime member in the comma app and get premium features!</Trans>
                                       </X.Text>
                                       <View style={ Styles.homeBodyAccountUpgradeFeatures }>
                                           <View style={ Styles.homeBodyAccountUpgradeFeature }>
@@ -471,7 +472,7 @@ class Home extends Component {
                                                   color='white'
                                                   size='tiny'
                                                   weight='semibold'>
-                                                  Remote Access
+                                                  <Trans>Remote Access</Trans>
                                               </X.Text>
                                           </View>
                                           <View style={ Styles.homeBodyAccountUpgradeFeature }>
@@ -483,7 +484,7 @@ class Home extends Component {
                                                   color='white'
                                                   size='tiny'
                                                   weight='semibold'>
-                                                  14 days of storage
+                                                  <Trans>14 days of storage</Trans>
                                               </X.Text>
                                           </View>
                                           <View style={ Styles.homeBodyAccountUpgradeFeature }>
@@ -495,7 +496,7 @@ class Home extends Component {
                                                   color='white'
                                                   size='tiny'
                                                   weight='semibold'>
-                                                  Developer perks
+                                                  <Trans>Developer perks</Trans>
                                               </X.Text>
                                           </View>
                                       </View>
@@ -515,7 +516,7 @@ class Home extends Component {
                                                   color='white'
                                                   size='medium'
                                                   weight='semibold'>
-                                                  Finish Setup
+                                                  <Trans>Finish Setup</Trans>
                                               </X.Text>
                                               <X.Image
                                                   isFlex={ false }
@@ -527,7 +528,7 @@ class Home extends Component {
                                               size='tiny'
                                               weight='light'
                                               style={ Styles.homeBodyAccountPairButtonContext }>
-                                              Pair your comma account with comma connect
+                                              <Trans>Pair your comma account with comma connect</Trans>
                                           </X.Text>
                                       </X.Gradient>
                                   </X.Button>
