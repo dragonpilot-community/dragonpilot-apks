@@ -30,6 +30,7 @@ export const Params = {
     KEY_OFFROAD_CONNECTIVITY_NEEDED_PROMPT: 'Offroad_ConnectivityNeededPrompt',
     KEY_OFFROAD_CONNECTIVITY_NEEDED: 'Offroad_ConnectivityNeeded',
     KEY_OFFROAD_PANDA_FIRMWARE_MISMATCH: 'Offroad_PandaFirmwareMismatch',
+    KEY_OFFROAD_INVALID_TIME: 'Offroad_InvalidTime',
     // dragonpilot
     KEY_LAT_CTRL: 'DragonLatCtrl',
     KEY_ALLOW_GAS: 'DragonAllowGas',

@@ -1,0 +1,34 @@
+{
+  "New Drive": {
+    "origin": [
+      [
+        "js/components/Home/Home.js",
+        53
+      ]
+    ]
+  },
+  "EON Paired": {
+    "origin": [
+      [
+        "js/components/Home/Home.js",
+        114
+      ]
+    ]
+  },
+  "Pair EON": {
+    "origin": [
+      [
+        "js/components/Home/Home.js",
+        126
+      ]
+    ]
+  },
+  "Settings": {
+    "origin": [
+      [
+        "js/components/Home/Home.js",
+        149
+      ]
+    ]
+  }
+}

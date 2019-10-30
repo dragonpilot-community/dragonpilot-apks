@@ -1,0 +1,6 @@
+{
+   "localeDir": "js/locales/",
+   "srcPathDirs": ["js/components/"],
+   "format": "po",
+   "sourceLocale": "en"
+}

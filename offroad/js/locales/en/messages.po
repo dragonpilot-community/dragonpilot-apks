@@ -1,0 +1,564 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2019-07-23 23:56+1000\n"
+"Mime-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: js/components/Settings/Settings.js:377
+msgid "<  Account Settings"
+msgstr "<  Account Settings"
+
+#: js/components/Settings/Settings.js:555
+msgid "<  Developer Settings"
+msgstr "<  Developer Settings"
+
+#: js/components/Settings/Settings.js:429
+msgid "<  Device Settings"
+msgstr "<  Device Settings"
+
+#: js/components/Settings/Settings.js:498
+msgid "<  Network Settings"
+msgstr "<  Network Settings"
+
+#: js/components/PairAfterSetup/PairAfterSetup.js:46
+#~ msgid "<  Pair EON"
+#~ msgstr "<  Pair EON"
+
+#: js/components/Settings/Settings.js:263
+msgid "<  Settings"
+msgstr "<  Settings"
+
+#: js/components/SetupSim/SetupSim.js:75
+#~ msgid "A SIM card was entered, however your cellular network has not yet been discovered."
+#~ msgstr "A SIM card was entered, however your cellular network has not yet been discovered."
+
+#: js/components/training/Onboarding/Onboarding.js:318
+msgid "A driver assistance system is not a self driving car. This means openpilot is designed to work with you, not without you. Your attention is required to drive."
+msgstr "A driver assistance system is not a self driving car. This means openpilot is designed to work with you, not without you. Your attention is required to drive."
+
+#: js/components/training/Onboarding/Onboarding.js:417
+msgid "A vision algorithm leverages EON’s road-facing camera to determine the path to drive."
+msgstr "A vision algorithm leverages EON’s road-facing camera to determine the path to drive."
+
+#: js/components/Settings/Settings.js:187
+msgid "Account"
+msgstr "Account"
+
+#: js/components/Setup/Setup.js:34
+#: js/components/Setup/Setup.js:39
+#: js/components/Setup/Setup.js:43
+#~ msgid "Add SIM Card"
+#~ msgstr "Add SIM Card"
+
+#: js/components/Settings/Settings.js:579
+msgid "Allow devices to connect to your EON using Secure Shell (SSH)."
+msgstr "Allow devices to connect to your EON using Secure Shell (SSH)."
+
+#: js/components/Settings/Settings.js:762
+msgid "Are you sure you want to reboot?"
+msgstr "Are you sure you want to reboot?"
+
+#: js/components/Settings/Settings.js:768
+msgid "Are you sure you want to shutdown?"
+msgstr "Are you sure you want to shutdown?"
+
+#: js/components/Settings/Settings.js:774
+msgid "Are you sure you want to uninstall?"
+msgstr "Are you sure you want to uninstall?"
+
+#: js/components/SetupWifi/SetupWifi.js:220
+msgid "Authenticating..."
+msgstr "Authenticating..."
+
+#: js/components/SetupWifi/SetupWifi.js:221
+msgid "Authentication problem"
+msgstr "Authentication problem"
+
+#: js/components/Settings/Settings.js:585
+msgid "Authorized SSH Keys"
+msgstr "Authorized SSH Keys"
+
+#: js/components/training/Onboarding/Onboarding.js:374
+msgid "Before any signals are sent to control your car, sensors are fused to construct a scene of the road."
+msgstr "Before any signals are sent to control your car, sensors are fused to construct a scene of the road."
+
+#: js/components/training/Onboarding/Onboarding.js:284
+msgid "Begin Training"
+msgstr "Begin Training"
+
+#: js/components/Settings/Settings.js:438
+msgid "Camera Calibration"
+msgstr "Camera Calibration"
+
+#: js/components/training/Onboarding/Onboarding.js:385
+#: js/components/training/Onboarding/Onboarding.js:412
+msgid "Camera from EON"
+msgstr "Camera from EON"
+
+#: js/components/Settings/Settings.js:595
+#: js/components/Settings/Settings.js:763
+#: js/components/Settings/Settings.js:769
+#: js/components/Settings/Settings.js:775
+#: js/components/SetupWifi/SetupWifi.js:313
+msgid "Cancel"
+msgstr "Cancel"
+
+#: js/components/training/Onboarding/Onboarding.js:772
+msgid "Congratulations! You have completed openpilot training."
+msgstr "Congratulations! You have completed openpilot training."
+
+#: js/components/SetupWifi/SetupWifi.js:262
+#: js/components/SetupWifi/SetupWifi.js:326
+msgid "Connect"
+msgstr "Connect"
+
+#: js/components/SetupWifi/SetupWifi.js:362
+msgid "Connect to WiFi"
+msgstr "Connect to WiFi"
+
+#: js/components/SetupWifi/SetupWifi.js:219
+#: js/components/SetupWifi/SetupWifi.js:239
+msgid "Connected"
+msgstr "Connected"
+
+#: js/components/SetupQr/SetupQr.js:145
+#: js/components/SetupWifi/SetupWifi.js:417
+msgid "Continue"
+msgstr "Continue"
+
+#: js/components/Settings/Settings.js:205
+msgid "Developer"
+msgstr "Developer"
+
+#: js/components/Settings/Settings.js:193
+msgid "Device"
+msgstr "Device"
+
+#: js/components/Settings/Settings.js:386
+msgid "Device Paired"
+msgstr "Device Paired"
+
+#: js/components/training/Onboarding/Onboarding.js:567
+#: js/components/training/Onboarding/Onboarding.js:713
+msgid "Disengage openpilot"
+msgstr "Disengage openpilot"
+
+#: js/components/Settings/Settings.js:287
+msgid "Display speed in km/h instead of mp/h and temperature in °C instead of °F."
+msgstr "Display speed in km/h instead of mp/h and temperature in °C instead of °F."
+
+#: js/components/Settings/Settings.js:457
+msgid "Dongle ID"
+msgstr "Dongle ID"
+
+#: js/components/SetupQr/SetupQr.js:109
+msgid "Download"
+msgstr "Download"
+
+#: js/components/training/Onboarding/Onboarding.js:553
+#: js/components/training/Onboarding/Onboarding.js:627
+msgid "Driver Monitoring"
+msgstr "Driver Monitoring"
+
+#: js/components/Home/Home.js:114
+msgid "EON Paired"
+msgstr "EON Paired"
+
+#: js/components/Settings/Settings.js:595
+msgid "Edit"
+msgstr "Edit"
+
+#: js/components/Settings/Settings.js:576
+msgid "Enable SSH"
+msgstr "Enable SSH"
+
+#: js/components/Settings/Settings.js:508
+msgid "Enable Upload Over Cellular"
+msgstr "Enable Upload Over Cellular"
+
+#: js/components/training/Onboarding/Onboarding.js:546
+#: js/components/training/Onboarding/Onboarding.js:586
+msgid "Engage openpilot"
+msgstr "Engage openpilot"
+
+#: js/components/training/Onboarding/Onboarding.js:789
+msgid "Finish Training"
+msgstr "Finish Training"
+
+#: js/components/Settings/Settings.js:463
+msgid "Free Storage"
+msgstr "Free Storage"
+
+#: js/components/Settings/Settings.js:566
+msgid "Git Branch"
+msgstr "Git Branch"
+
+#: js/components/Settings/Settings.js:569
+msgid "Git Revision"
+msgstr "Git Revision"
+
+#: js/components/Settings/Settings.js:627
+msgid "GitHub Username"
+msgstr "GitHub Username"
+
+#: js/components/SetupWifi/SetupWifi.js:406
+msgid "Go Back"
+msgstr "Go Back"
+
+#: js/components/training/Onboarding/Onboarding.js:341
+msgid "I will be ready to take over at any time!"
+msgstr "I will be ready to take over at any time!"
+
+#: js/components/training/Onboarding/Onboarding.js:335
+msgid "I will be ready to take over at any time."
+msgstr "I will be ready to take over at any time."
+
+#: js/components/training/Onboarding/Onboarding.js:329
+msgid "I will keep my eyes on the road."
+msgstr "I will keep my eyes on the road."
+
+#: js/components/training/Onboarding/Onboarding.js:675
+msgid "Keep in mind that certain situations are not handled by openpilot. Scenarios such as traffic lights, stop signs, quick vehicle cutins and pedestrians are unrecognized and openpilot may accelerate."
+msgstr "Keep in mind that certain situations are not handled by openpilot. Scenarios such as traffic lights, stop signs, quick vehicle cutins and pedestrians are unrecognized and openpilot may accelerate."
+
+#: js/components/Settings/Settings.js:121
+#: js/components/Settings/Settings.js:682
+#: js/components/Settings/Settings.js:701
+#: js/components/UpdatePrompt/UpdatePrompt.js:38
+msgid "Later"
+msgstr "Later"
+
+#: js/components/training/Onboarding/Onboarding.js:560
+#: js/components/training/Onboarding/Onboarding.js:670
+msgid "Limited Features"
+msgstr "Limited Features"
+
+#: js/components/SetupWifi/SetupWifi.js:369
+msgid "More Options"
+msgstr "More Options"
+
+#: js/components/Settings/Settings.js:199
+msgid "Network"
+msgstr "Network"
+
+#: js/components/Home/Home.js:53
+msgid "New Drive"
+msgstr "New Drive"
+
+#: js/components/Settings/Settings.js:387
+#: js/components/Settings/Settings.js:455
+msgid "No"
+msgstr "No"
+
+#: js/components/training/Onboarding/Onboarding.js:274
+msgid "Now that you’re all set up, it’s important to understand the functionality and limitations of openpilot as alpha software before testing."
+msgstr "Now that you’re all set up, it’s important to understand the functionality and limitations of openpilot as alpha software before testing."
+
+#: js/components/Settings/Settings.js:476
+msgid "Open Date and Time Settings"
+msgstr "Open Date and Time Settings"
+
+#: js/components/Settings/Settings.js:528
+msgid "Open Tethering Settings"
+msgstr "Open Tethering Settings"
+
+#: js/components/Settings/Settings.js:521
+msgid "Open WiFi Settings"
+msgstr "Open WiFi Settings"
+
+#: js/components/Settings/Settings.js:396
+msgid "Pair Device"
+msgstr "Pair Device"
+
+#: js/components/Home/Home.js:126
+msgid "Pair EON"
+msgstr "Pair EON"
+
+#: js/components/SetupQr/SetupQr.js:68
+msgid "Pair Your Account"
+msgstr "Pair Your Account"
+
+#: js/components/Settings/Settings.js:188
+#: js/components/Settings/Settings.js:454
+msgid "Paired"
+msgstr "Paired"
+
+#: js/components/SetupWifi/SetupWifi.js:342
+msgid "Password:"
+msgstr "Password:"
+
+#: js/components/UpdatePrompt/UpdatePrompt.js:43
+msgid "Please keep in mind that system behavior may change.{0}{1}"
+msgstr "Please keep in mind that system behavior may change.{0}{1}"
+
+#: js/components/Settings/Settings.js:359
+#: js/components/Settings/Settings.js:768
+msgid "Power Off"
+msgstr "Power Off"
+
+#: js/components/training/Onboarding/Onboarding.js:539
+msgid "Press cruise to engage and a pedal to disengage."
+msgstr "Press cruise to engage and a pedal to disengage."
+
+#: js/components/training/Onboarding/Onboarding.js:393
+#: js/components/training/Onboarding/Onboarding.js:459
+msgid "Radar from your car"
+msgstr "Radar from your car"
+
+#: js/components/Settings/Settings.js:120
+#: js/components/Settings/Settings.js:352
+#: js/components/Settings/Settings.js:681
+#: js/components/Settings/Settings.js:700
+#: js/components/Settings/Settings.js:762
+#: js/components/Settings/Settings.js:764
+msgid "Reboot"
+msgstr "Reboot"
+
+#: js/components/Settings/Settings.js:122
+#: js/components/Settings/Settings.js:683
+#: js/components/Settings/Settings.js:702
+msgid "Reboot Now"
+msgstr "Reboot Now"
+
+#: js/components/UpdatePrompt/UpdatePrompt.js:37
+msgid "Reboot and Update"
+msgstr "Reboot and Update"
+
+#: js/components/Settings/Settings.js:681
+msgid "Reboot to finalize removal of GitHub SSH keys."
+msgstr "Reboot to finalize removal of GitHub SSH keys."
+
+#: js/components/Settings/Settings.js:700
+msgid "Reboot to make SSH keys from {githubUsername} available."
+msgstr "Reboot to make SSH keys from {githubUsername} available."
+
+#: js/components/Settings/Settings.js:275
+msgid "Record and Upload Driver Camera"
+msgstr "Record and Upload Driver Camera"
+
+#: js/components/Settings/Settings.js:666
+msgid "Remove all"
+msgstr "Remove all"
+
+#: js/components/Settings/Settings.js:448
+msgid "Reset"
+msgstr "Reset"
+
+#: js/components/Settings/Settings.js:120
+msgid "Resetting calibration requires a reboot."
+msgstr "Resetting calibration requires a reboot."
+
+#: js/components/training/Onboarding/Onboarding.js:797
+msgid "Restart"
+msgstr "Restart"
+
+#: js/components/Settings/Settings.js:344
+msgid "Review Training Guide"
+msgstr "Review Training Guide"
+
+#: js/components/Settings/Settings.js:644
+msgid "Save"
+msgstr "Save"
+
+#: js/components/Settings/Settings.js:656
+msgid "Save failed. Ensure that your username is correct and you are connected to the internet."
+msgstr "Save failed. Ensure that your username is correct and you are connected to the internet."
+
+#: js/components/SetupWifi/SetupWifi.js:389
+msgid "Scanning WiFi Networks..."
+msgstr "Scanning WiFi Networks..."
+
+#: js/components/training/Onboarding/Onboarding.js:645
+msgid "Select face to continue"
+msgstr "Select face to continue"
+
+#: js/components/training/Onboarding/Onboarding.js:483
+msgid "Select lead car indicator"
+msgstr "Select lead car indicator"
+
+#: js/components/training/Onboarding/Onboarding.js:688
+msgid "Select light to continue"
+msgstr "Select light to continue"
+
+#: js/components/training/Onboarding/Onboarding.js:436
+msgid "Select path to continue"
+msgstr "Select path to continue"
+
+#: js/components/Settings/Settings.js:460
+msgid "Serial Number"
+msgstr "Serial Number"
+
+#: js/components/Home/Home.js:149
+msgid "Settings"
+msgstr "Settings"
+
+#: js/components/SetupWifi/SetupWifi.js:301
+msgid "Show password"
+msgstr "Show password"
+
+#: js/components/Settings/Settings.js:770
+msgid "Shutdown"
+msgstr "Shutdown"
+
+#: js/components/SetupWifi/SetupWifi.js:417
+msgid "Skip For Now"
+msgstr "Skip For Now"
+
+#: js/components/SetupQr/SetupQr.js:152
+msgid "Skip for Now"
+msgstr "Skip for Now"
+
+#: js/components/SetupQr/SetupQr.js:87
+msgid "Succesfully paired to account"
+msgstr "Succesfully paired to account"
+
+#: js/components/SetupQr/SetupQr.js:109
+msgid "Successfully paired to an account in"
+msgstr "Successfully paired to an account in"
+
+#: js/components/training/Onboarding/Onboarding.js:603
+msgid "Tap \"SET\" to engage"
+msgstr "Tap \"SET\" to engage"
+
+#: js/components/training/Onboarding/Onboarding.js:731
+msgid "Tap a pedal to disengage"
+msgstr "Tap a pedal to disengage"
+
+#: js/components/Settings/Settings.js:388
+msgid "Terms of Service available at https://my.comma.ai/terms.html"
+msgstr "Terms of Service available at https://my.comma.ai/terms.html"
+
+#: js/components/Settings/Settings.js:440
+msgid "The calibration algorithm is always active on the road facing camera. Resetting calibration is only advised when EON reports an invalid calibration alert or when EON is remounted in a different position."
+msgstr "The calibration algorithm is always active on the road facing camera. Resetting calibration is only advised when EON reports an invalid calibration alert or when EON is remounted in a different position."
+
+#: js/components/training/Onboarding/Onboarding.js:472
+msgid "The indicator is drawn either red or yellow to illustrate relative speed to the lead car."
+msgstr "The indicator is drawn either red or yellow to illustrate relative speed to the lead car."
+
+#: js/components/training/Onboarding/Onboarding.js:425
+msgid "The lane lines are drawn with varying widths to reflect the confidence in finding your lane."
+msgstr "The lane lines are drawn with varying widths to reflect the confidence in finding your lane."
+
+#: js/components/SetupWifi/SetupWifi.js:334
+msgid "The network \"{0}\" requires a password."
+msgstr "The network \"{0}\" requires a password."
+
+#: js/components/training/Onboarding/Onboarding.js:464
+msgid "The stock radar in your car helps openpilot measure the lead car distance for longitudinal control."
+msgstr "The stock radar in your car helps openpilot measure the lead car distance for longitudinal control."
+
+#: js/components/SetupWifi/SetupWifi.js:75
+msgid "There was a problem scanning WiFi networks. {0}Make sure WiFi is enabled in \"More Options\" above."
+msgstr "There was a problem scanning WiFi networks. {0}Make sure WiFi is enabled in \"More Options\" above."
+
+#: js/components/training/Onboarding/Onboarding.js:777
+msgid "This guide can be replayed at any time from the EON settings. To learn more about openpilot, read the wiki and join the community at discord.comma.ai"
+msgstr "This guide can be replayed at any time from the EON settings. To learn more about openpilot, read the wiki and join the community at discord.comma.ai"
+
+#: js/components/Settings/Settings.js:774
+#: js/components/Settings/Settings.js:776
+msgid "Uninstall"
+msgstr "Uninstall"
+
+#: js/components/Settings/Settings.js:604
+msgid "Uninstall {software}"
+msgstr "Uninstall {software}"
+
+#: js/components/Settings/Settings.js:188
+msgid "Unpaired"
+msgstr "Unpaired"
+
+#: js/components/UpdatePrompt/UpdatePrompt.js:40
+msgid "Update Available"
+msgstr "Update Available"
+
+#: js/components/Settings/Settings.js:467
+msgid "Upload Speed"
+msgstr "Upload Speed"
+
+#: js/components/Settings/Settings.js:278
+msgid "Upload data from the driver facing camera and help improve the Driver Monitoring algorithm."
+msgstr "Upload data from the driver facing camera and help improve the Driver Monitoring algorithm."
+
+#: js/components/Settings/Settings.js:511
+msgid "Upload driving data over cellular connection if a sim card is used and no wifi network is available. If you have a limited data plan, you might incur in surcharges."
+msgstr "Upload driving data over cellular connection if a sim card is used and no wifi network is available. If you have a limited data plan, you might incur in surcharges."
+
+#: js/components/Settings/Settings.js:284
+msgid "Use Metric System"
+msgstr "Use Metric System"
+
+#: js/components/Settings/Settings.js:563
+msgid "Version"
+msgstr "Version"
+
+#: js/components/Settings/Settings.js:619
+msgid "WARNING: This grants SSH access to all public keys in your GitHub settings. Never enter a GitHub username other than your own. A comma employee will never ask you to add their GitHub."
+msgstr "WARNING: This grants SSH access to all public keys in your GitHub settings. Never enter a GitHub username other than your own. A comma employee will never ask you to add their GitHub."
+
+#: js/components/training/Onboarding/Onboarding.js:269
+msgid "Welcome to openpilot alpha"
+msgstr "Welcome to openpilot alpha"
+
+#: js/components/training/Onboarding/Onboarding.js:632
+msgid "When openpilot is engaged, you must always pay attention! openpilot monitors awareness with 3D facial reconstruction and pose. Distracted drivers are alerted, then disengaged from openpilot until corrected."
+msgstr "When openpilot is engaged, you must always pay attention! openpilot monitors awareness with 3D facial reconstruction and pose. Distracted drivers are alerted, then disengaged from openpilot until corrected."
+
+#: js/components/training/Onboarding/Onboarding.js:591
+msgid "When you are ready to engage openpilot at a comfortable speed, locate the cruise controls on your steering wheel and press \"SET\" to begin."
+msgstr "When you are ready to engage openpilot at a comfortable speed, locate the cruise controls on your steering wheel and press \"SET\" to begin."
+
+#: js/components/training/Onboarding/Onboarding.js:718
+msgid "While openpilot is engaged, you may keep your hands on the wheel to override lateral controls. Longitudinal controls will be managed by openpilot until the gas or brake pedal is pressed to disengage."
+msgstr "While openpilot is engaged, you may keep your hands on the wheel to override lateral controls. Longitudinal controls will be managed by openpilot until the gas or brake pedal is pressed to disengage."
+
+#: js/components/Settings/Settings.js:387
+#: js/components/Settings/Settings.js:455
+msgid "Yes"
+msgstr "Yes"
+
+#: js/components/SetupQr/SetupQr.js:119
+msgid "and scan this code to pair."
+msgstr "and scan this code to pair."
+
+#: js/components/SetupQr/SetupQr.js:114
+msgid "comma connect"
+msgstr "comma connect"
+
+#: js/components/training/Onboarding/Onboarding.js:583
+#: js/components/training/Onboarding/Onboarding.js:624
+#: js/components/training/Onboarding/Onboarding.js:667
+#: js/components/training/Onboarding/Onboarding.js:710
+msgid "openpilot controls"
+msgstr "openpilot controls"
+
+#: js/components/training/Onboarding/Onboarding.js:313
+msgid "openpilot is an advanced driver assistance system."
+msgstr "openpilot is an advanced driver assistance system."
+
+#: js/components/training/Onboarding/Onboarding.js:409
+#: js/components/training/Onboarding/Onboarding.js:456
+msgid "openpilot sensors"
+msgstr "openpilot sensors"
+
+#: js/components/training/Onboarding/Onboarding.js:369
+msgid "openpilot uses multiple sensors to see the road ahead."
+msgstr "openpilot uses multiple sensors to see the road ahead."
+
+#: js/components/training/Onboarding/Onboarding.js:534
+msgid "openpilot will start driving when cruise control is set."
+msgstr "openpilot will start driving when cruise control is set."
+
+#: js/components/Settings/Settings.js:194
+msgid "{0} Free"
+msgstr "{0} Free"

@@ -12,5 +12,8 @@
     "production": {
         "plugins": ["transform-remove-console"]
     }
-  }
+  },
+  "plugins": [
+    "macros"
+  ]
 }

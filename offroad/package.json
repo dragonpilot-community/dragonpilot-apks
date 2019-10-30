@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@lingui/cli": "^2.8.3",
+    "@lingui/macro": "^2.8.3",
+    "babel-core": "^6.0.0",
+    "babel-plugin-macros": "^2.6.1",
     "babel-plugin-transform-proto-to-assign": "^6.26.0",
     "babel-plugin-transform-remove-console": "^6.8.5",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -19,7 +24,10 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "log": "react-native log-android",
-    "test": "node node_modules/jest/bin/jest.js --watch"
+    "test": "node node_modules/jest/bin/jest.js --watch",
+    "add-locale": "lingui add-locale",
+    "extract": "lingui extract",
+    "compile": "lingui compile"
   },
   "jest": {
     "preset": "jest-expo"
@@ -32,6 +40,8 @@
   "dependencies": {
     "@commaai/comma-api": "1.2.1",
     "@expo/react-native-touchable-native-feedback-safe": "^1.1.2",
+    "@lingui/core": "^2.8.3",
+    "@lingui/react": "^2.8.3",
     "@mapbox/geo-viewport": "^0.2.2",
     "@mapbox/polyline": "^0.2.0",
     "comma-x-native": "git+https://git@github.com/dragonpilot-community/comma-x-native.git",
@@ -40,6 +50,7 @@
     "react": "16.0.0-beta.5",
     "react-native": "^0.49.5",
     "react-native-cookies": "^3.2.0",
+    "react-native-fetch-blob": "^0.10.0",
     "react-native-linear-gradient": "^2.3.0",
     "react-native-network-info": "^3.0.0",
     "react-native-popup-dialog": "^0.10.44",

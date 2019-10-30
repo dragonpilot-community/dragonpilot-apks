@@ -1,0 +1,130 @@
+{
+  "Connected": {
+    "origin": [
+      [
+        "js/components/SetupWifi/SetupWifi.js",
+        219
+      ],
+      [
+        "js/components/SetupWifi/SetupWifi.js",
+        239
+      ]
+    ]
+  },
+  "Authenticating...": {
+    "origin": [
+      [
+        "js/components/SetupWifi/SetupWifi.js",
+        220
+      ]
+    ]
+  },
+  "Authentication problem": {
+    "origin": [
+      [
+        "js/components/SetupWifi/SetupWifi.js",
+        221
+      ]
+    ]
+  },
+  "Connect": {
+    "origin": [
+      [
+        "js/components/SetupWifi/SetupWifi.js",
+        262
+      ],
+      [
+        "js/components/SetupWifi/SetupWifi.js",
+        326
+      ]
+    ]
+  },
+  "There was a problem scanning WiFi networks. {0}Make sure WiFi is enabled in \"More Options\" above.": {
+    "origin": [
+      [
+        "js/components/SetupWifi/SetupWifi.js",
+        75
+      ]
+    ]
+  },
+  "Show password": {
+    "origin": [
+      [
+        "js/components/SetupWifi/SetupWifi.js",
+        301
+      ]
+    ]
+  },
+  "Cancel": {
+    "origin": [
+      [
+        "js/components/SetupWifi/SetupWifi.js",
+        313
+      ]
+    ]
+  },
+  "The network \"{0}\" requires a password.": {
+    "origin": [
+      [
+        "js/components/SetupWifi/SetupWifi.js",
+        334
+      ]
+    ]
+  },
+  "Password:": {
+    "origin": [
+      [
+        "js/components/SetupWifi/SetupWifi.js",
+        342
+      ]
+    ]
+  },
+  "Connect to WiFi": {
+    "origin": [
+      [
+        "js/components/SetupWifi/SetupWifi.js",
+        362
+      ]
+    ]
+  },
+  "More Options": {
+    "origin": [
+      [
+        "js/components/SetupWifi/SetupWifi.js",
+        369
+      ]
+    ]
+  },
+  "Scanning WiFi Networks...": {
+    "origin": [
+      [
+        "js/components/SetupWifi/SetupWifi.js",
+        389
+      ]
+    ]
+  },
+  "Go Back": {
+    "origin": [
+      [
+        "js/components/SetupWifi/SetupWifi.js",
+        406
+      ]
+    ]
+  },
+  "Skip For Now": {
+    "origin": [
+      [
+        "js/components/SetupWifi/SetupWifi.js",
+        417
+      ]
+    ]
+  },
+  "Continue": {
+    "origin": [
+      [
+        "js/components/SetupWifi/SetupWifi.js",
+        417
+      ]
+    ]
+  }
+}

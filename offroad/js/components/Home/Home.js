@@ -28,6 +28,9 @@ import Styles from './HomeStyles';
 import { formatCommas } from '../../utils/number';
 import { mToKm } from '../../utils/conversions';
 
+// i18n
+import { Trans } from "@lingui/macro"
+
 class Home extends Component {
     static navigationOptions = {
       header: null,

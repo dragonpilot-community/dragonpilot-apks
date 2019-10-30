@@ -25,6 +25,10 @@ import X from '../../themes';
 import ChffrPlus from '../../native/ChffrPlus';
 import Styles from './SetupWifiStyles';
 
+// i18n
+import { i18n } from '../../utils/I18n'
+import { t, Trans } from "@lingui/macro"
+
 const SECURITY_UNSECURED = 'Unsecured';
 const BarImagesByLevel = {
     0: require('../../img/indicator_wifi_25.png'),
@@ -70,7 +74,7 @@ class SetupWifi extends Component {
             if (this.state.isLoading && this.state.networks.length < 1) {
                 this.setState({
                     isLoading: false,
-                    errorMessage: 'There was a problem scanning WiFi networks. \nMake sure WiFi is enabled in \"More Options\" above.',
+                    errorMessage: i18n._(t`There was a problem scanning WiFi networks. ${'\n'}Make sure WiFi is enabled in "More Options" above.`),
                 })
             }
         }, 15000);
@@ -214,10 +218,10 @@ class SetupWifi extends Component {
                             size='tiny'
                             color='lightGrey200'
                             weight='light'>
-                            { isConnected ? 'Connected'
-                                : isConnecting ? 'Authenticating...'
-                                : hasAttempted ? 'Authentication problem'
-                                : item.security }
+                            { i18n._(isConnected ? t`Connected`
+                                : isConnecting ? t`Authenticating...`
+                                : hasAttempted ? t`Authentication problem`
+                                : item.security) }
                         </X.Text>
                     </View>
                     <View style={ Styles.setupWifiNetworkStatus }>
@@ -234,7 +238,7 @@ class SetupWifi extends Component {
                                     color='white'
                                     size='small'
                                     weight='semibold'>
-                                    Connected
+                                    { i18n._(t`Connected`) }
                                 </X.Text>
                             </X.Button>
                         ): null }
@@ -257,7 +261,7 @@ class SetupWifi extends Component {
                                 size='small'
                                 onPress={ () => this.onTapToConnect(item) }
                                 style={ Styles.setupWifiNetworkButton }>
-                                Connect
+                                {i18n._(t`Connect`)}
                             </X.Button>
                         ) : null }
                     </View>
@@ -296,7 +300,7 @@ class SetupWifi extends Component {
                                         color='dark'
                                         isChecked={ showPassword }
                                         onPress={ this.handleShowPasswordToggled }
-                                        label='Show password' />
+                                        label={ i18n._(t`Show password`) } />
                                 </View>
                                 <X.Button
                                     key='cancel'
@@ -308,7 +312,7 @@ class SetupWifi extends Component {
                                         color='lightGrey700'
                                         size='small'
                                         weight='semibold'>
-                                        Cancel
+                                        { i18n._(t`Cancel`) }
                                     </X.Text>
                                 </X.Button>
                                 <X.Button
@@ -321,7 +325,7 @@ class SetupWifi extends Component {
                                         color='white'
                                         size='small'
                                         weight='semibold'>
-                                        Connect
+                                        { i18n._(t`Connect`) }
                                     </X.Text>
                                 </X.Button>
                             </View>
@@ -329,7 +333,7 @@ class SetupWifi extends Component {
                         <X.Text
                             size='small'
                             weight='semibold'>
-                            The network "{ connectingNetwork ? connectingNetwork.ssid : '' }" requires a password.
+                            <Trans>The network "{ connectingNetwork ? connectingNetwork.ssid : '' }" requires a password.</Trans>
                         </X.Text>
                         <View style={ Styles.setupWifiPasswordInputRow }>
                             <View style={ Styles.setupWifiPasswordInputLabel }>
@@ -337,7 +341,7 @@ class SetupWifi extends Component {
                                     size='small'
                                     color='whiteFieldLabel'
                                     style={ Styles.setupWifiPasswordInputLabelText }>
-                                    Password:
+                                    <Trans>Password:</Trans>
                                 </X.Text>
                             </View>
                             <TextInput
@@ -357,14 +361,14 @@ class SetupWifi extends Component {
                             color='white'
                             size='big'
                             weight='bold'>
-                            Connect to WiFi
+                            <Trans>Connect to WiFi</Trans>
                         </X.Text>
                         <X.Button
                             size='small'
                             color='setupInverted'
                             onPress={ this.props.handleSetupWifiMoreOptionsPressed }
                             style={ Styles.setupWifiHeaderButton }>
-                            More Options
+                            { i18n._(t`More Options`) }
                         </X.Button>
                     </View>
                     <View style={ Styles.setupWifiNetworks }>
@@ -384,9 +388,9 @@ class SetupWifi extends Component {
                                     <X.Text
                                         color='white'
                                         size='small'>
-                                        { isLoading && networks.length == 0 ? 'Scanning WiFi Networks...'
+                                        { i18n._(isLoading && networks.length == 0 ? t`Scanning WiFi Networks...`
                                             : !isLoading && networks.length == 0 ?
-                                            this.state.errorMessage : '' }
+                                            this.state.errorMessage : '') }
                                     </X.Text>
                                 </View>
                             }>
@@ -401,7 +405,7 @@ class SetupWifi extends Component {
                                 <X.Text
                                     color='white'
                                     weight='semibold'>
-                                    Go Back
+                                    { i18n._(t`Go Back`) }
                                 </X.Text>
                             </X.Button>
                         ) : null }
@@ -412,7 +416,7 @@ class SetupWifi extends Component {
                             <X.Text
                                 color='white'
                                 weight='semibold'>
-                                { !connectedNetworkSsid ? 'Skip For Now' : 'Continue' }
+                                { i18n._(!connectedNetworkSsid ? t`Skip For Now` : t`Continue`) }
                             </X.Text>
                         </X.Button>
                     </View>

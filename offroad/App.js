@@ -45,6 +45,8 @@ if (!__DEV__) {
     const sentryDsn = Platform.select({"ios":"https://50043662792c42558b59f761be477b71:79b74f53eaae4b5494e2a3a12b307453@sentry.io/257901","android":"https://50043662792c42558b59f761be477b71:79b74f53eaae4b5494e2a3a12b307453@sentry.io/257901"});
     Sentry.config(sentryDsn).install();
 }
+import i18n from "./js/utils/I18n";
+import { I18nProvider } from "@lingui/react"
 
 function createBaseUiStore() {
     let transforms = compose(applyMiddleware(thunk));
@@ -104,13 +106,15 @@ export default class App extends Component {
 
     render() {
         return (
-            <Provider store={ this.store }>
-                <PersistGate
-                    persistor={ this.persistor }
-                    onBeforeLift={ this.onBeforeLift }>
-                    <StackNavigator />
-                </PersistGate>
-            </Provider>
+            <I18nProvider i18n={i18n}>
+                <Provider store={ this.store }>
+                    <PersistGate
+                        persistor={ this.persistor }
+                        onBeforeLift={ this.onBeforeLift }>
+                        <StackNavigator />
+                    </PersistGate>
+                </Provider>
+            </I18nProvider>
         );
     }
 

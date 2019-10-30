@@ -1,0 +1,66 @@
+{
+  "Pair Your Account": {
+    "origin": [
+      [
+        "js/components/SetupQr/SetupQr.js",
+        68
+      ]
+    ]
+  },
+  "Succesfully paired to account": {
+    "origin": [
+      [
+        "js/components/SetupQr/SetupQr.js",
+        87
+      ]
+    ]
+  },
+  "Successfully paired to an account in": {
+    "origin": [
+      [
+        "js/components/SetupQr/SetupQr.js",
+        109
+      ]
+    ]
+  },
+  "Download": {
+    "origin": [
+      [
+        "js/components/SetupQr/SetupQr.js",
+        109
+      ]
+    ]
+  },
+  "comma connect": {
+    "origin": [
+      [
+        "js/components/SetupQr/SetupQr.js",
+        114
+      ]
+    ]
+  },
+  "and scan this code to pair.": {
+    "origin": [
+      [
+        "js/components/SetupQr/SetupQr.js",
+        119
+      ]
+    ]
+  },
+  "Continue": {
+    "origin": [
+      [
+        "js/components/SetupQr/SetupQr.js",
+        145
+      ]
+    ]
+  },
+  "Skip for Now": {
+    "origin": [
+      [
+        "js/components/SetupQr/SetupQr.js",
+        152
+      ]
+    ]
+  }
+}

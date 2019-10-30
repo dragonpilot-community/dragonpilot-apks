@@ -7,6 +7,10 @@ import ChffrPlus from '../../native/ChffrPlus';
 
 import ScrollThrough from '../ScrollThrough';
 
+// i18n
+import { i18n } from '../../utils/I18n'
+import { t, Trans } from "@lingui/macro"
+
 class UpdatePrompt extends Component {
     static navigationOptions = {
         header: null,

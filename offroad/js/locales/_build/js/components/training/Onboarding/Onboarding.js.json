@@ -1,0 +1,346 @@
+{
+  "Welcome to openpilot alpha": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        269
+      ]
+    ]
+  },
+  "Now that you’re all set up, it’s important to understand the functionality and limitations of openpilot as alpha software before testing.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        274
+      ]
+    ]
+  },
+  "Begin Training": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        284
+      ]
+    ]
+  },
+  "openpilot is an advanced driver assistance system.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        313
+      ]
+    ]
+  },
+  "A driver assistance system is not a self driving car. This means openpilot is designed to work with you, not without you. Your attention is required to drive.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        318
+      ]
+    ]
+  },
+  "I will keep my eyes on the road.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        329
+      ]
+    ]
+  },
+  "I will be ready to take over at any time.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        335
+      ]
+    ]
+  },
+  "I will be ready to take over at any time!": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        341
+      ]
+    ]
+  },
+  "openpilot uses multiple sensors to see the road ahead.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        369
+      ]
+    ]
+  },
+  "Before any signals are sent to control your car, sensors are fused to construct a scene of the road.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        374
+      ]
+    ]
+  },
+  "Camera from EON": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        385
+      ],
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        412
+      ]
+    ]
+  },
+  "Radar from your car": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        393
+      ],
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        459
+      ]
+    ]
+  },
+  "openpilot sensors": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        409
+      ],
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        456
+      ]
+    ]
+  },
+  "A vision algorithm leverages EON’s road-facing camera to determine the path to drive.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        417
+      ]
+    ]
+  },
+  "The lane lines are drawn with varying widths to reflect the confidence in finding your lane.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        425
+      ]
+    ]
+  },
+  "Select path to continue": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        436
+      ]
+    ]
+  },
+  "The stock radar in your car helps openpilot measure the lead car distance for longitudinal control.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        464
+      ]
+    ]
+  },
+  "The indicator is drawn either red or yellow to illustrate relative speed to the lead car.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        472
+      ]
+    ]
+  },
+  "Select lead car indicator": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        483
+      ]
+    ]
+  },
+  "openpilot will start driving when cruise control is set.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        534
+      ]
+    ]
+  },
+  "Press cruise to engage and a pedal to disengage.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        539
+      ]
+    ]
+  },
+  "Engage openpilot": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        546
+      ],
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        586
+      ]
+    ]
+  },
+  "Driver Monitoring": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        553
+      ],
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        627
+      ]
+    ]
+  },
+  "Limited Features": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        560
+      ],
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        670
+      ]
+    ]
+  },
+  "Disengage openpilot": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        567
+      ],
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        713
+      ]
+    ]
+  },
+  "openpilot controls": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        583
+      ],
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        624
+      ],
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        667
+      ],
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        710
+      ]
+    ]
+  },
+  "When you are ready to engage openpilot at a comfortable speed, locate the cruise controls on your steering wheel and press \"SET\" to begin.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        591
+      ]
+    ]
+  },
+  "Tap \"SET\" to engage": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        603
+      ]
+    ]
+  },
+  "When openpilot is engaged, you must always pay attention! openpilot monitors awareness with 3D facial reconstruction and pose. Distracted drivers are alerted, then disengaged from openpilot until corrected.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        632
+      ]
+    ]
+  },
+  "Select face to continue": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        645
+      ]
+    ]
+  },
+  "Keep in mind that certain situations are not handled by openpilot. Scenarios such as traffic lights, stop signs, quick vehicle cutins and pedestrians are unrecognized and openpilot may accelerate.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        675
+      ]
+    ]
+  },
+  "Select light to continue": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        688
+      ]
+    ]
+  },
+  "While openpilot is engaged, you may keep your hands on the wheel to override lateral controls. Longitudinal controls will be managed by openpilot until the gas or brake pedal is pressed to disengage.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        718
+      ]
+    ]
+  },
+  "Tap a pedal to disengage": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        731
+      ]
+    ]
+  },
+  "Congratulations! You have completed openpilot training.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        772
+      ]
+    ]
+  },
+  "This guide can be replayed at any time from the EON settings. To learn more about openpilot, read the wiki and join the community at discord.comma.ai": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        777
+      ]
+    ]
+  },
+  "Finish Training": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        789
+      ]
+    ]
+  },
+  "Restart": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        797
+      ]
+    ]
+  }
+}

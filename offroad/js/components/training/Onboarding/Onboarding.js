@@ -10,6 +10,10 @@ import { onTrainingRouteCompleted } from '../../../utils/version';
 import X from '../../../themes';
 import Styles from './OnboardingStyles';
 
+// i18n
+import { i18n } from '../../../utils/I18n'
+import { t, Trans } from "@lingui/macro"
+
 const Step = {
     OB_SPLASH: 'OB_SPLASH',
     OB_INTRO: 'OB_INTRO',
@@ -262,20 +266,22 @@ class Onboarding extends Component {
                 <X.Text
                     size='jumbo' color='white' weight='bold'
                     style={ Styles.onboardingStepHeader }>
-                    Welcome to openpilot alpha
+                    <Trans>Welcome to openpilot alpha</Trans>
                 </X.Text>
                 <X.Text
                     color='white' weight='light'
                     style={ Styles.onboardingStepContext }>
-                    Now that you’re all set up, it’s important to
-                    understand the functionality and limitations of
-                    openpilot as alpha software before testing.
+                    <Trans>
+                        Now that you’re all set up, it’s important to
+                        understand the functionality and limitations of
+                        openpilot as alpha software before testing.
+                    </Trans>
                 </X.Text>
                 <View style={ Styles.onboardingPrimaryAction }>
                     <X.Button
                         color='setupPrimary'
                         onPress={ () => this.setStep('OB_INTRO') }>
-                        Begin Training
+                        { i18n._(t`Begin Training`) }
                     </X.Button>
                 </View>
             </X.Entrance>
@@ -304,33 +310,35 @@ class Onboarding extends Component {
                     </View>
                     <View style={ Styles.onboardingStepPointBody }>
                         <X.Text size='bigger' color='white' weight='bold'>
-                            openpilot is an advanced driver assistance system.
+                            <Trans>openpilot is an advanced driver assistance system.</Trans>
                         </X.Text>
                         <X.Text
                             size='smallish' color='white' weight='light'
                             style={ Styles.onboardingStepContextSmall }>
-                            A driver assistance system is not a self driving car.
-                            This means openpilot is designed to work with you,
-                            not without you. Your attention is required to drive.
+                            <Trans>
+                                A driver assistance system is not a self driving car.
+                                This means openpilot is designed to work with you,
+                                not without you. Your attention is required to drive.
+                            </Trans>
                         </X.Text>
                         <X.CheckboxField
                             size='small'
                             color='white'
                             isChecked={ stepChecks.includes(1) }
                             onPress={ () => this.handleIntroCheckboxPressed(1) }
-                            label='I will keep my eyes on the road.' />
+                            label={ i18n._(t`I will keep my eyes on the road.`) } />
                         <X.CheckboxField
                             size='small'
                             color='white'
                             isChecked={ stepChecks.includes(2) }
                             onPress={ () => this.handleIntroCheckboxPressed(2) }
-                            label='I will be ready to take over at any time.' />
+                            label={ i18n._(t`I will be ready to take over at any time.`) } />
                         <X.CheckboxField
                             size='small'
                             color='white'
                             isChecked={ stepChecks.includes(3) }
                             onPress={ () => this.handleIntroCheckboxPressed(3) }
-                            label='I will be ready to take over at any time!' />
+                            label={ i18n._(t`I will be ready to take over at any time!`) } />
                     </View>
                 </View>
             </X.Entrance>
@@ -358,13 +366,15 @@ class Onboarding extends Component {
                 </View>
                 <View style={ Styles.onboardingStepPointBody }>
                     <X.Text size='bigger' color='white' weight='bold'>
-                        openpilot uses multiple sensors to see the road ahead.
+                        <Trans>openpilot uses multiple sensors to see the road ahead.</Trans>
                     </X.Text>
                     <X.Text
                         size='smallish' color='white' weight='light'
                         style={ Styles.onboardingStepContextSmall }>
-                        Before any signals are sent to control your car,
-                        sensors are fused to construct a scene of the road.
+                        <Trans>
+                            Before any signals are sent to control your car,
+                            sensors are fused to construct a scene of the road.
+                        </Trans>
                     </X.Text>
                     <X.RadioField
                         size='big'
@@ -372,7 +382,7 @@ class Onboarding extends Component {
                         isChecked={ stepChecks.includes('camera') }
                         hasAppend={ true }
                         onPress={ () => this.handleSensorRadioPressed('camera') }
-                        label='Camera from EON' />
+                        label={ i18n._(t`Camera from EON`) } />
                     <X.RadioField
                         size='big'
                         color='white'
@@ -380,7 +390,7 @@ class Onboarding extends Component {
                         isChecked={ stepChecks.includes('radar') }
                         hasAppend={ true }
                         onPress={ () => this.handleSensorRadioPressed('radar') }
-                        label='Radar from your car' />
+                        label={ i18n._(t`Radar from your car`) } />
                 </View>
             </View>
         )
@@ -396,22 +406,26 @@ class Onboarding extends Component {
                     size='small' color='ghost' textWeight='light'
                     style={ Styles.onboardingStepPointCrumb }
                     onPress={ () => this.handleSensorRadioPressed('index') }>
-                    openpilot sensors
+                    { i18n._(t`openpilot sensors`) }
                 </X.Button>
                 <X.Text size='medium' color='white' weight='bold'>
-                    Camera from EON
+                    <Trans>Camera from EON</Trans>
                 </X.Text>
                 <X.Text
                     size='small' color='white' weight='light'
                     style={ Styles.onboardingStepContextSmaller }>
-                    A vision algorithm leverages EON’s road-facing
-                    camera to determine the path to drive.
+                    <Trans>
+                        A vision algorithm leverages EON’s road-facing
+                        camera to determine the path to drive.
+                    </Trans>
                 </X.Text>
                 <X.Text
                     size='small' color='white' weight='light'
                     style={ Styles.onboardingStepContextSmaller }>
-                    The lane lines are drawn with varying widths to
-                    reflect the confidence in finding your lane.
+                    <Trans>
+                        The lane lines are drawn with varying widths to
+                        reflect the confidence in finding your lane.
+                    </Trans>
                 </X.Text>
                 <X.Button color='ghost'
                     style={ Styles.onboardingStepPointInstruction }
@@ -419,7 +433,7 @@ class Onboarding extends Component {
                     <X.Text
                         size='small' color='white' weight='semibold'
                         style={ Styles.onboardingStepPointInstructionText }>
-                        Select path to continue
+                        <Trans>Select path to continue</Trans>
                     </X.Text>
                     <X.Image
                       source={ require('../../../img/icon_chevron_right.png') }
@@ -439,22 +453,26 @@ class Onboarding extends Component {
                     size='small' color='ghost' textWeight='light'
                     style={ Styles.onboardingStepPointCrumb }
                     onPress={ () => this.handleSensorRadioPressed('index') }>
-                    openpilot sensors
+                    { i18n._(t`openpilot sensors`) }
                 </X.Button>
                 <X.Text size='medium' color='white' weight='bold'>
-                    Radar from your car
+                    <Trans>Radar from your car</Trans>
                 </X.Text>
                 <X.Text
                     size='small' color='white' weight='light'
                     style={ Styles.onboardingStepContextSmaller }>
-                    The stock radar in your car helps openpilot measure
-                    the lead car distance for longitudinal control.
+                    <Trans>
+                        The stock radar in your car helps openpilot measure
+                        the lead car distance for longitudinal control.
+                    </Trans>
                 </X.Text>
                 <X.Text
                     size='small' color='white' weight='light'
                     style={ Styles.onboardingStepContextSmaller }>
-                    The indicator is drawn either red or yellow to
-                    illustrate relative speed to the lead car.
+                    <Trans>
+                        The indicator is drawn either red or yellow to
+                        illustrate relative speed to the lead car.
+                    </Trans>
                 </X.Text>
                 <X.Button color='ghost'
                     style={ Styles.onboardingStepPointInstruction }
@@ -462,7 +480,7 @@ class Onboarding extends Component {
                     <X.Text
                         size='small' color='white' weight='semibold'
                         style={ Styles.onboardingStepPointInstructionText }>
-                        Select lead car indicator
+                        <Trans>Select lead car indicator</Trans>
                     </X.Text>
                     <X.Image
                         source={ require('../../../img/icon_chevron_right.png') }
@@ -513,40 +531,40 @@ class Onboarding extends Component {
                 </View>
                 <View style={ Styles.onboardingStepPointBody }>
                     <X.Text size='bigger' color='white' weight='bold'>
-                        openpilot will start driving when cruise control is set.
+                        <Trans>openpilot will start driving when cruise control is set.</Trans>
                     </X.Text>
                     <X.Text
                         size='smallish' color='white' weight='light'
                         style={ Styles.onboardingStepContextSmall }>
-                        Press cruise to engage and a pedal to disengage.
+                        <Trans>Press cruise to engage and a pedal to disengage.</Trans>
                     </X.Text>
                     <X.RadioField
                         color='white'
                         isChecked={ stepChecks.includes('cruise') }
                         hasAppend={ true }
                         onPress={ () => this.handleControlsRadioPressed('cruise') }
-                        label='Engage openpilot' />
+                        label={ i18n._(t`Engage openpilot`) } />
                     <X.RadioField
                         color='white'
                         isDisabled={ !stepChecks.includes('cruise') }
                         isChecked={ stepChecks.includes('monitoring') }
                         hasAppend={ true }
                         onPress={ () => this.handleControlsRadioPressed('monitoring') }
-                        label='Driver Monitoring' />
+                        label={ i18n._(t`Driver Monitoring`) } />
                     <X.RadioField
                         color='white'
                         isDisabled={ !stepChecks.includes('monitoring') }
                         isChecked={ stepChecks.includes('limitations') }
                         hasAppend={ true }
                         onPress={ () => this.handleControlsRadioPressed('limitations') }
-                        label='Limited Features' />
+                        label={ i18n._(t`Limited Features`) } />
                     <X.RadioField
                         color='white'
                         isDisabled={ !stepChecks.includes('limitations') }
                         isChecked={ stepChecks.includes('pedal') }
                         hasAppend={ true }
                         onPress={ () => this.handleControlsRadioPressed('pedal') }
-                        label='Disengage openpilot' />
+                        label={ i18n._(t`Disengage openpilot`) } />
                 </View>
             </View>
         )
@@ -562,17 +580,19 @@ class Onboarding extends Component {
                     size='small' color='ghost' textWeight='light'
                     style={ Styles.onboardingStepPointCrumb }
                     onPress={ () => this.handleControlsRadioPressed('index') }>
-                    openpilot controls
+                    { i18n._(t`openpilot controls`) }
                 </X.Button>
                 <X.Text size='medium' color='white' weight='bold'>
-                    Engage openpilot
+                    <Trans>Engage openpilot</Trans>
                 </X.Text>
                 <X.Text
                     size='small' color='white' weight='light'
                     style={ Styles.onboardingStepContextSmaller }>
-                    When you are ready to engage openpilot at a comfortable
-                    speed, locate the cruise controls on your steering wheel
-                    and press "SET" to begin.
+                    <Trans>
+                        When you are ready to engage openpilot at a comfortable
+                        speed, locate the cruise controls on your steering wheel
+                        and press "SET" to begin.
+                    </Trans>
                 </X.Text>
                 <X.Button color='ghost'
                     style={ Styles.onboardingStepPointInstruction }
@@ -580,7 +600,7 @@ class Onboarding extends Component {
                     <X.Text
                         size='small' color='white' weight='semibold'
                         style={ Styles.onboardingStepPointInstructionText }>
-                        Tap "SET" to engage
+                        <Trans>Tap "SET" to engage</Trans>
                     </X.Text>
                     <X.Image
                         source={ require('../../../img/icon_chevron_right.png') }
@@ -601,18 +621,20 @@ class Onboarding extends Component {
                         size='small' color='ghost' textWeight='light'
                         style={ Styles.onboardingStepPointCrumb }
                         onPress={ () => this.handleControlsRadioPressed('index') }>
-                        openpilot controls
+                        { i18n._(t`openpilot controls`) }
                     </X.Button>
                     <X.Text size='medium' color='white' weight='bold'>
-                        Driver Monitoring
+                        <Trans>Driver Monitoring</Trans>
                     </X.Text>
                     <X.Text
                         size='small' color='white' weight='light'
                         style={ Styles.onboardingStepContextSmaller }>
-                        When openpilot is engaged, you must always pay attention!
-                        openpilot monitors awareness with 3D facial reconstruction
-                        and pose. Distracted drivers are alerted, then disengaged
-                        from openpilot until corrected.
+                        <Trans>
+                            When openpilot is engaged, you must always pay attention!
+                            openpilot monitors awareness with 3D facial reconstruction
+                            and pose. Distracted drivers are alerted, then disengaged
+                            from openpilot until corrected.
+                        </Trans>
                     </X.Text>
                     <X.Button color='ghost'
                         style={ Styles.onboardingStepPointInstruction }
@@ -620,7 +642,7 @@ class Onboarding extends Component {
                         <X.Text
                             size='small' color='white' weight='semibold'
                             style={ Styles.onboardingStepPointInstructionText }>
-                            Select face to continue
+                            <Trans>Select face to continue</Trans>
                         </X.Text>
                         <X.Image
                             source={ require('../../../img/icon_chevron_right.png') }
@@ -642,18 +664,20 @@ class Onboarding extends Component {
                         size='small' color='ghost' textWeight='light'
                         style={ Styles.onboardingStepPointCrumb }
                         onPress={ () => this.handleControlsRadioPressed('index') }>
-                        openpilot controls
+                        { i18n._(t`openpilot controls`) }
                     </X.Button>
                     <X.Text size='medium' color='white' weight='bold'>
-                        Limited Features
+                        <Trans>Limited Features</Trans>
                     </X.Text>
                     <X.Text
                         size='small' color='white' weight='light'
                         style={ Styles.onboardingStepContextSmaller }>
+                        <Trans>
                         Keep in mind that certain situations are not handled by
                         openpilot. Scenarios such as traffic lights, stop signs,
                         quick vehicle cutins and pedestrians are unrecognized
                         and openpilot may accelerate.
+                        </Trans>
                     </X.Text>
                     <X.Button color='ghost'
                         style={ Styles.onboardingStepPointInstruction }
@@ -661,7 +685,7 @@ class Onboarding extends Component {
                         <X.Text
                             size='small' color='white' weight='semibold'
                             style={ Styles.onboardingStepPointInstructionText }>
-                            Select light to continue
+                            <Trans>Select light to continue</Trans>
                         </X.Text>
                         <X.Image
                             source={ require('../../../img/icon_chevron_right.png') }
@@ -683,18 +707,20 @@ class Onboarding extends Component {
                         size='small' color='ghost' textWeight='light'
                         style={ Styles.onboardingStepPointCrumb }
                         onPress={ () => this.handleControlsRadioPressed('index') }>
-                        openpilot controls
+                        { i18n._(t`openpilot controls`) }
                     </X.Button>
                     <X.Text size='medium' color='white' weight='bold'>
-                        Disengage openpilot
+                        <Trans>Disengage openpilot</Trans>
                     </X.Text>
                     <X.Text
                         size='small' color='white' weight='light'
                         style={ Styles.onboardingStepContextSmaller }>
-                        While openpilot is engaged, you may keep your hands
-                        on the wheel to override lateral controls. Longitudinal
-                        controls will be managed by openpilot until the gas
-                        or brake pedal is pressed to disengage.
+                        <Trans>
+                            While openpilot is engaged, you may keep your hands
+                            on the wheel to override lateral controls. Longitudinal
+                            controls will be managed by openpilot until the gas
+                            or brake pedal is pressed to disengage.
+                        </Trans>
                     </X.Text>
                     <X.Button color='ghost'
                         style={ Styles.onboardingStepPointInstruction }
@@ -702,7 +728,7 @@ class Onboarding extends Component {
                         <X.Text
                             size='small' color='white' weight='semibold'
                             style={ Styles.onboardingStepPointInstructionText }>
-                            Tap a pedal to disengage
+                            <Trans>Tap a pedal to disengage</Trans>
                         </X.Text>
                         <X.Image
                             source={ require('../../../img/icon_chevron_right.png') }
@@ -743,14 +769,16 @@ class Onboarding extends Component {
                 <X.Text
                     size='jumbo' color='white' weight='bold'
                     style={ Styles.onboardingStepHeader }>
-                    Congratulations! You have completed openpilot training.
+                    <Trans>Congratulations! You have completed openpilot training.</Trans>
                 </X.Text>
                 <X.Text
                     color='white' weight='light'
                     style={ Styles.onboardingStepContextSmaller }>
-                    This guide can be replayed at any time from the
-                    EON settings. To learn more about openpilot, read the
-                    wiki and join the community at discord.comma.ai
+                    <Trans>
+                        This guide can be replayed at any time from the
+                        EON settings. To learn more about openpilot, read the
+                        wiki and join the community at discord.comma.ai
+                    </Trans>
                 </X.Text>
                 <X.Line color='transparent' spacing='small' />
                 <View style={ Styles.onboardingActionsRow }>
@@ -758,7 +786,7 @@ class Onboarding extends Component {
                         <X.Button
                             color='setupPrimary'
                             onPress={ this.props.completeTrainingStep }>
-                            Finish Training
+                            { i18n._(t`Finish Training`) }
                         </X.Button>
                     </View>
                     <View style={ Styles.onboardingSecondaryAction }>
@@ -766,7 +794,7 @@ class Onboarding extends Component {
                             color='setupInverted'
                             textColor='white'
                             onPress={ this.handleRestartPressed }>
-                            Restart
+                            { i18n._(t`Restart`) }
                         </X.Button>
                     </View>
                 </View>

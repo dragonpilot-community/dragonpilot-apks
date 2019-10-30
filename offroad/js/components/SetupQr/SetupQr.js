@@ -12,6 +12,10 @@ import X from '../../themes';
 import Styles from './SetupQrStyles';
 import { setDeviceIds, updateConnectionState, updateDeviceIsPaired, refreshDeviceInfo } from '../../store/host/actions';
 
+// i18n
+import { i18n } from '../../utils/I18n'
+import { t, Trans } from "@lingui/macro"
+
 class SetupPair extends Component {
     static navigationOptions = {
         header: null,
@@ -61,7 +65,7 @@ class SetupPair extends Component {
                             color='white'
                             size='big'
                             weight='bold'>
-                            Pair Your Account
+                            <Trans>Pair Your Account</Trans>
                         </X.Text>
                     </View>
                     <View style={ Styles.setupPairingBody }>
@@ -80,7 +84,7 @@ class SetupPair extends Component {
                                                   color='whiteFieldLabel'
                                                   size='tiny'
                                                   weight='semibold'>
-                                                  Succesfully paired to account
+                                                  <Trans>Succesfully paired to account</Trans>
                                               </X.Text>
                                           </View>
                                       </View>
@@ -102,17 +106,17 @@ class SetupPair extends Component {
                                 <X.Text>
                                     <X.Text
                                         color='white'>
-                                        { deviceIsPaired ? 'Successfully paired to an account in ' : 'Download ' }
+                                        { i18n._(deviceIsPaired ? t`Successfully paired to an account in ` : t`Download `) }
                                     </X.Text>
                                     <X.Text
                                         color='white'
                                         weight='bold'>
-                                        { 'comma connect ' }
+                                        {i18n._(t`comma connect `)}
                                     </X.Text>
                                     { deviceIsPaired ? null : (
                                       <X.Text
                                           color='white'>
-                                          { 'and scan this code to pair.' }
+                                          {i18n._(t`and scan this code to pair.`)}
                                       </X.Text>
                                     ) }
                                 </X.Text>
@@ -138,14 +142,14 @@ class SetupPair extends Component {
                                         color='setupPrimary'
                                         onPress={ this.props.handleSetupComplete }
                                         style={ Styles.setupPairingButtonsContinue }>
-                                        Continue
+                                        {i18n._(t`Continue`)}
                                     </X.Button>
                                 ) : (
                                     <X.Button
                                         color='setupInverted'
                                         onPress={ this.props.handleSetupComplete }
                                         style={ Styles.setupPairingButtonsContinue }>
-                                        Skip for Now
+                                        {i18n._(t`Skip for Now`)}
                                     </X.Button>
                                 ) }
                             </View>

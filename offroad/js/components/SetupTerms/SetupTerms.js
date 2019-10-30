@@ -11,6 +11,10 @@ import ScrollThrough from '../ScrollThrough';
 import X from '../../themes';
 import Styles from './SetupTermsStyles';
 
+// i18n
+import { i18n } from '../../utils/I18n'
+import { t, Trans } from "@lingui/macro"
+
 class SetupTerms extends Component {
     static navigationOptions = {
         header: null,
