@@ -14,6 +14,10 @@ import {
 import X from '../../themes';
 import Styles from './DragonpilotSettingsStyles';
 
+// i18n
+import { i18n } from '../../utils/I18n'
+import { t, Trans } from "@lingui/macro"
+
 const SettingsRoutes = {
     PRIMARY: 'PRIMARY',
     SAFETY: 'SAFETY',
@@ -158,9 +162,9 @@ class DragonpilotSettings extends Component {
     }
 
     handlePressedUpdatePanda = async () => {
-        Alert.alert('Update Panda Firmware', 'Your EON will reboot once completed please DO NOT disconnect panda from power source, manual restart them if nothing happened after 3 minutes.', [
-            { text: 'Later', onPress: () => {}, style: 'cancel' },
-            { text: 'Update Now', onPress: () => ChffrPlus.updatePandaFirmware() },
+        Alert.alert(i18n._(t`Update Panda Firmware`), i18n._(t`Your EON will reboot once completed please DO NOT disconnect panda from power source, manual restart them if nothing happened after 3 minutes.`), [
+            { text: i18n._(t`Later`), onPress: () => {}, style: 'cancel' },
+            { text: i18n._(t`Update and Reboot`), onPress: () => ChffrPlus.updatePandaFirmware() },
         ]);
     }
 
@@ -177,26 +181,26 @@ class DragonpilotSettings extends Component {
         const settingsMenuItems = [
             {
                 icon: Icons.developer,
-                title: 'Safety',
-                context: 'Settings',
+                title: i18n._(t`Safety`),
+                context: i18n._(t`Settings`),
                 route: SettingsRoutes.SAFETY,
             },
             {
                 icon: Icons.developer,
-                title: 'UI',
-                context: 'Settings',
+                title: i18n._(t`UI`),
+                context: i18n._(t`Settings`),
                 route: SettingsRoutes.UI,
             },
             {
                 icon: Icons.developer,
-                title: '3rd Party Apps',
-                context: 'Settings',
+                title: i18n._(t`3rd Party Apps`),
+                context: i18n._(t`Settings`),
                 route: SettingsRoutes.APP,
             },
             {
                 icon: Icons.developer,
-                title: 'Toyota/Lexus',
-                context: 'Settings',
+                title: i18n._(t`Toyota/Lexus`),
+                context: i18n._(t`Settings`),
                 route: SettingsRoutes.TOYOTA,
             },
             // {
@@ -260,7 +264,7 @@ class DragonpilotSettings extends Component {
                         color='ghost'
                         size='small'
                         onPress={ () => this.handlePressedBack() }>
-                        {'<  Dragonpilot Settings'}
+                        { i18n._(t`<  dragonpilot Settings`) }
                     </X.Button>
                 </View>
                 <ScrollView
@@ -274,23 +278,23 @@ class DragonpilotSettings extends Component {
                         <X.Button
                             color='settingsDefault'
                             onPress={() => this.handleRunApp('mixplorer', '1')}>
-                            MiXplorer File Manager
+                            { i18n._(t`MiXplorer File Manager`) }
                         </X.Button>
                     </X.Table>
                     }
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
-                            title='Enable Logger'
+                            title={ i18n._(t`Enable Logger`) }
                             value={ !!parseInt(dragonEnableLogger) }
                             iconSource={ Icons.developer }
-                            description='If you disable logger (loggered/tombstoned), it will stop recording driving data for AI training, reboot required.'
+                            description={ i18n._(t`If you disable logger (loggered/tombstoned), it will stop recording driving data for AI training, reboot required.`) }
                             isExpanded={ expandedCell == 'enable_logger' }
                             handleExpanded={ () => this.handleExpanded('enable_logger') }
                             handleChanged={ this.props.setEnableLogger } />
                         <X.TableCell
                             type='switch'
-                            title='Enable Uploader'
+                            title={ i18n._(t`Enable Uploader`) }
                             value={ !!parseInt(dragonEnableUploader) }
                             iconSource={ Icons.developer }
                             description='If you disable uploader, it will stop uploading driving data for AI training, reboot required.'
@@ -299,18 +303,18 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setEnableUploader } />
                         <X.TableCell
                             type='switch'
-                            title='Enable Dashcam'
+                            title={ i18n._(t`Enable Dashcam`) }
                             value={ !!parseInt(dragonEnableDashcam) }
                             iconSource={ Icons.developer }
-                            description='Record EON screen as dashcam footage, it will automatically delete old footage if the available space is less than 15%, footage will be stored in /sdcard/dashcam/.'
+                            description={ i18n._(t`Record EON screen as dashcam footage, it will automatically delete old footage if the available space is less than 15%, footage will be stored in /sdcard/dashcam/.`) }
                             isExpanded={ expandedCell == 'dashcam' }
                             handleExpanded={ () => this.handleExpanded('dashcam') }
                             handleChanged={ this.props.setEnableDashcam } />
                         <X.TableCell
                             type='custom'
-                            title='Auto Shutdown (min)'
+                            title={ i18n._(t`Auto Shutdown (min)`) }
                             iconSource={ Icons.developer }
-                            description='Adjust the shutdown timer if you would like EON to shutdown after a period of time (when usb power is not present), set this to 0 if you would like to disable this feature.'
+                            description={ i18n._(t`Adjust the shutdown timer if you would like EON to shutdown after a period of time (when usb power is not present), set this to 0 if you would like to disable this feature.`) }
                             isExpanded={ expandedCell == 'autoShutdown' }
                             handleExpanded={ () => this.handleExpanded('autoShutdown') }>
                             <X.Button
@@ -341,36 +345,36 @@ class DragonpilotSettings extends Component {
                         </X.TableCell>
                         <X.TableCell
                             type='switch'
-                            title='Enable Noctua Fan Mode'
+                            title={ i18n._(t`Enable Noctua Fan Mode`) }
                             value={ !!parseInt(dragonNoctuaMode) }
                             iconSource={ Icons.developer }
-                            description='Enable this will let the fan running at full speed at any temperature, reboot required.'
+                            description={ i18n._(t`Enable this will let the fan running at full speed at any temperature, reboot required.`) }
                             isExpanded={ expandedCell == 'enable_noctua_mode' }
                             handleExpanded={ () => this.handleExpanded('enable_noctua_mode') }
                             handleChanged={ this.props.setNoctuaMode } />
                         <X.TableCell
                             type='switch'
-                            title='Cache Fingerprint'
+                            title={ i18n._(t`Cache Fingerprint`) }
                             value={ !!parseInt(dragonCacheCar) }
                             iconSource={ Icons.developer }
-                            description='Enable this to store your fingerprint/vin/car model into files and use it when required, this will reduce the car model detection time, disable this if you put EON onto another car, reboot required.'
+                            description={ i18n._(t`Enable this to store your fingerprint/vin/car model into files and use it when required, this will reduce the car model detection time, disable this if you put EON onto another car, reboot required.`) }
                             isExpanded={ expandedCell == 'cache_fingerprint' }
                             handleExpanded={ () => this.handleExpanded('cache_fingerprint') }
                             handleChanged={ this.props.setCacheCar } />
                         <X.TableCell
                             type='switch'
-                            title='Charging Control'
+                            title={ i18n._(t`Charging Control`) }
                             value={ !!parseInt(dragonChargingCtrl) }
                             iconSource={ Icons.developer }
-                            description='If you turn this on, dp will try to keep your battery level between 60%~70% to protect your battery.'
+                            description={ i18n._(t`If you turn this on, dp will try to keep your battery level between 60%~70% to protect your battery.`) }
                             isExpanded={ expandedCell == 'charging_ctrl' }
                             handleExpanded={ () => this.handleExpanded('charging_ctrl') }
                             handleChanged={ this.props.setChargingCtrl} />
                         <X.TableCell
                             type='custom'
-                            title='Camera Offset (cm)'
+                            title={ i18n._(t`Camera Offset (cm)`) }
                             iconSource={ Icons.developer }
-                            description='Adjust the camera offset if your car is not centered, slowly increase this if your car is close to the right, slowly decrease this if your car is close to the left, default is 6 cm.'
+                            description={ i18n._(t`Adjust the camera offset if your car is not centered, slowly increase this if your car is close to the right, slowly decrease this if your car is close to the left, default is 6 cm.`) }
                             isExpanded={ expandedCell == 'camera_offset' }
                             handleExpanded={ () => this.handleExpanded('camera_offset') }>
                             <X.Button
@@ -405,7 +409,7 @@ class DragonpilotSettings extends Component {
                             size='small'
                             color='settingsDefault'
                             onPress={ () => ChffrPlus.openAndroidSettings() }>
-                            Open Android Settings
+                            { i18n._(t`Open Android Settings`) }
                         </X.Button>
                     </X.Table>
                     <X.Table color='darkBlue' padding='big'>
@@ -413,12 +417,12 @@ class DragonpilotSettings extends Component {
                             size='small'
                             color='settingsDefault'
                             onPress={ this.handlePressedUpdatePanda  }>
-                            Update Panda Firmware
+                            { i18n._(t`Update Panda Firmware`) }
                         </X.Button>
                     </X.Table>
                     <X.Table spacing='none'>
                         <X.TableCell
-                            title='Car Model'
+                            title={ i18n._(t`Car Model`) }
                             value={ carModel }
                             valueTextSize='tiny' />
                     </X.Table>
@@ -448,7 +452,7 @@ class DragonpilotSettings extends Component {
                         color='ghost'
                         size='small'
                         onPress={ () => this.handlePressedBack() }>
-                        {'<  Safety Settings'}
+                        { i18n._(t`<  Safety Settings`) }
                     </X.Button>
                 </View>
                 <ScrollView
@@ -458,55 +462,55 @@ class DragonpilotSettings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
-                            title='Enable Lateral Control'
+                            title={ i18n._(t`Enable Lateral Control`) }
                             value={ !!parseInt(dragonLatCtrl) }
                             iconSource={ Icons.developer }
-                            description='Enable this if you wish dp to control the steering for you.'
+                            description={ i18n._(t`Enable this if you wish dp to control the steering for you.`) }
                             isExpanded={ expandedCell == 'lat_ctrl' }
                             handleExpanded={ () => this.handleExpanded('lat_ctrl') }
                             handleChanged={ this.props.setLatCtrl } />
                         <X.TableCell
                             type='switch'
-                            title='Allow Gas'
+                            title={ i18n._(t`Allow Gas`) }
                             value={ !!parseInt(dragonAllowGas) }
                             iconSource={ Icons.developer }
-                            description='Enable this if you wish to use gas on engaged.'
+                            description={ i18n._(t`Enable this if you wish to use gas on engaged.`) }
                             isExpanded={ expandedCell == 'allow_gas' }
                             handleExpanded={ () => this.handleExpanded('allow_gas') }
                             handleChanged={ this.props.setAllowGas } />
                         <X.TableCell
                             type='switch'
-                            title='Enable Steering On Signal'
+                            title={ i18n._(t`Enable Steering On Signal`) }
                             value={ !!parseInt(dragonEnableSteeringOnSignal) }
                             iconSource={ Icons.developer }
-                            description='If you enable this, it will temporary disable steering control when left/right blinker is on and resume control 1 second after the blinker is off.'
+                            description={ i18n._(t`If you enable this, it will temporary disable steering control when left/right blinker is on and resume control 1 second after the blinker is off.`) }
                             isExpanded={ expandedCell == 'enable_steering_on_signal' }
                             handleExpanded={ () => this.handleExpanded('enable_steering_on_signal') }
                             handleChanged={ this.props.setEnableSteeringOnSignal } />
                         <X.TableCell
                             type='switch'
-                            title='Display "Turn Exceeds Steering Limit" Alert'
+                            title={ i18n._(t`Display "Turn Exceeds Steering Limit" Alert`) }
                             value={ !!parseInt(dragonDisplaySteeringLimitAlert) }
                             iconSource={ Icons.developer }
-                            description='If you disable this, you will not receive any "Turn Exceeds Steering Limit" alerts on the screen. Hyundai, Ford, Toyota do not have this alert.'
+                            description={ i18n._(t`If you disable this, you will not receive any "Turn Exceeds Steering Limit" alerts on the screen. Hyundai, Ford, Toyota do not have this alert.`) }
                             isExpanded={ expandedCell == 'display_steering_limit_alert' }
                             handleExpanded={ () => this.handleExpanded('display_steering_limit_alert') }
                             handleChanged={ this.props.setDisplaySteeringLimitAlert } />
                         <X.TableCell
                             type='switch'
-                            title='Enable Slow on Curve'
+                            title={ i18n._(t`Enable Slow on Curve`) }
                             value={ !!parseInt(dragonEnableSlowOnCurve) }
                             iconSource={ Icons.developer }
-                            description='If you enable this, the car will slow down automatically when on a curve road, this feature only works on Long Ctrl supported cars.'
+                            description={ i18n._(t`If you enable this, the car will slow down automatically when on a curve road, this feature only works on Long Ctrl supported cars.`) }
                             isExpanded={ expandedCell == 'enable_slow_on_curve' }
                             handleExpanded={ () => this.handleExpanded('enable_slow_on_curve') }
                             handleChanged={ this.props.setEnableSlowOnCurve } />
                         <X.TableCell
                             type='switch'
-                            title='Enable Lead Car Moving Alert (BETA)'
+                            title={ i18n._(t`Enable Lead Car Moving Alert (BETA)`) }
                             value={ !!parseInt(dragonEnableLeadCarMovingAlert) }
                             iconSource={ Icons.developer }
-                            description='If you enable this, dp will notify you when lead car starts moving from stationary.'
+                            description={ i18n._(t`If you enable this, dp will notify you when lead car starts moving from stationary.`) }
                             isExpanded={ expandedCell == 'enable_lead_car_alert' }
                             handleExpanded={ () => this.handleExpanded('enable_lead_car_alert') }
                             handleChanged={ this.props.setEnableLeadCarMovingAlert } />
@@ -514,27 +518,27 @@ class DragonpilotSettings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
-                            title='Enable Safety Check'
+                            title={ i18n._(t`Enable Safety Check`) }
                             value={ !!parseInt(dragonEnableDriverSafetyCheck) }
                             iconSource={ Icons.developer }
-                            description='If you disable this, the driver safety check will be disabled completely, we DO NOT RECOMMEND that you turn off this unless you know what you are doing, we hold no responsibility if you disable this option.'
+                            description={ i18n._(t`If you disable this, the driver safety check will be disabled completely, we DO NOT RECOMMEND that you turn off this unless you know what you are doing, we hold no responsibility if you disable this option.`) }
                             isExpanded={ expandedCell == 'safetyCheck' }
                             handleExpanded={ () => this.handleExpanded('safetyCheck') }
                             handleChanged={ this.props.setEnableDriverSafetyCheck } />
                         <X.TableCell
                             type='switch'
-                            title='Enable Driver Monitoring'
+                            title={ i18n._(t`Enable Driver Monitoring`) }
                             value={ !!parseInt(dragonEnableDriverMonitoring) }
                             iconSource={ Icons.monitoring }
-                            description='Driver Monitoring detects driver awareness with 3D facial reconstruction and pose estimation. It is used to warn the driver when they appear distracted while openpilot is engaged. This feature is still in beta, so Driver Monitoring is unavailable when the facial tracking is too inaccurate (e.g. at night). The availability is indicated by the face icon at the bottom-left corner of your EON.'
+                            description={ i18n._(t`Driver Monitoring detects driver awareness with 3D facial reconstruction and pose estimation. It is used to warn the driver when they appear distracted while openpilot is engaged. This feature is still in beta, so Driver Monitoring is unavailable when the facial tracking is too inaccurate (e.g. at night). The availability is indicated by the face icon at the bottom-left corner of your EON.`) }
                             isExpanded={ expandedCell == 'driver_monitoring' }
                             handleExpanded={ () => this.handleExpanded('driver_monitoring') }
                             handleChanged={ this.props.setEnableDriverMonitoring } />
                         <X.TableCell
                             type='custom'
-                            title='Steering Monitor Timer'
+                            title={ i18n._(t`Steering Monitor Timer`) }
                             iconSource={ Icons.developer }
-                            description='Adjust the steering monitor timer, set this to 0 if you would like to disable steering monitor. Default is 3 minutes.'
+                            description={ i18n._(t`Adjust the steering monitor timer, set this to 0 if you would like to disable steering monitor. Default is 3 minutes.`) }
                             isExpanded={ expandedCell == 'steering_monitor_timer' }
                             handleExpanded={ () => this.handleExpanded('steering_monitor_timer') }>
                             <X.Button
@@ -587,7 +591,7 @@ class DragonpilotSettings extends Component {
                         color='ghost'
                         size='small'
                         onPress={ () => this.handlePressedBack() }>
-                        {'<  3rd Party Apps Settings'}
+                        { i18n._(t`<  3rd Party Apps Settings`) }
                     </X.Button>
                 </View>
                 <ScrollView
@@ -597,50 +601,50 @@ class DragonpilotSettings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
-                            title='Enable TomTom Safety Camera App'
+                            title={ i18n._(t`Enable TomTom Safety Camera App`) }
                             value={ !!parseInt(dragonEnableTomTom) }
                             iconSource={ Icons.developer }
-                            description='Enable this if you wish to use TomTom Safety Camera App, restart required.'
+                            description={ i18n._(t`Enable this if you wish to use TomTom Safety Camera App, restart required.`) }
                             isExpanded={ expandedCell == 'enable_tomtom' }
                             handleExpanded={ () => this.handleExpanded('enable_tomtom') }
                             handleChanged={ this.props.setEnableTomTom } />
                         {enableTomTom &&
                         <X.TableCell
                             type='switch'
-                            title='Auto Run TomTom Safety Camera App'
+                            title={ i18n._(t`Auto Run TomTom Safety Camera App`) }
                             value={!!parseInt(dragonBootTomTom)}
                             iconSource={Icons.developer}
-                            description='Enable this will have TomTom Safety Camera App start when car is on, stop when car is off.'
+                            description={ i18n._(t`Enable this will have TomTom Safety Camera App start when car is on, stop when car is off.`) }
                             isExpanded={expandedCell == 'run_tomtom'}
                             handleExpanded={() => this.handleExpanded('run_tomtom')}
                             handleChanged={this.props.setBootTomTom}/>
                         }
                         <X.TableCell
                             type='switch'
-                            title='Enable Autonavi Map App'
+                            title={ i18n._(t`Enable Autonavi Map App`) }
                             value={ !!parseInt(dragonEnableAutonavi) }
                             iconSource={ Icons.developer }
-                            description='Enable this if you wish to use Autonavi Map App, restart required.'
+                            description={ i18n._(t`Enable this if you wish to use Autonavi Map App, restart required.`) }
                             isExpanded={ expandedCell == 'enable_autonavi' }
                             handleExpanded={ () => this.handleExpanded('enable_autonavi') }
                             handleChanged={ this.props.setEnableAutonavi} />
                         {enableAutonavi &&
                         <X.TableCell
                             type='switch'
-                            title='Auto Run Autonavi Map'
+                            title={ i18n._(t`Auto Run Autonavi Map`) }
                             value={!!parseInt(dragonBootAutonavi)}
                             iconSource={Icons.developer}
-                            description='Enable this will have Autonavi Map App start when car is on, stop when car is off.'
+                            description={ i18n._(t`Enable this will have Autonavi Map App start when car is on, stop when car is off.`) }
                             isExpanded={expandedCell == 'run_autonavi'}
                             handleExpanded={() => this.handleExpanded('run_autonavi')}
                             handleChanged={this.props.setBootAutonavi}/>
                         }
                         <X.TableCell
                             type='switch'
-                            title='Enable MiXplorer App'
+                            title={ i18n._(t`Enable MiXplorer App`) }
                             value={ !!parseInt(dragonEnableMixplorer) }
                             iconSource={ Icons.developer }
-                            description='Enable this if you wish to use MiXplorer file manager App, restart required.'
+                            description={ i18n._(t`Enable this if you wish to use MiXplorer file manager App, restart required.`) }
                             isExpanded={ expandedCell == 'enable_mixplorer' }
                             handleExpanded={ () => this.handleExpanded('enable_mixplorer') }
                             handleChanged={ this.props.setEnableMixplorer} />
@@ -666,7 +670,7 @@ class DragonpilotSettings extends Component {
                         color='ghost'
                         size='small'
                         onPress={ () => this.handlePressedBack() }>
-                        {'<  Toyota/Lexus Settings'}
+                        { i18n._(t`<  Toyota/Lexus Settings`) }
                     </X.Button>
                 </View>
                 <ScrollView
@@ -676,28 +680,28 @@ class DragonpilotSettings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
-                            title='Enable Stock DSU Mode'
+                            title={ i18n._(t`Enable Stock DSU Mode`) }
                             value={ !!parseInt(dragonToyotaStockDSU) }
                             iconSource={ Icons.developer }
-                            description='Some models DSU cannot be unplugged (such as Lexus IS/GS/ES), once this option is enabled, turn on AHB (Auto High Beam) will keep you dp always on for Lat Control (control gas/brake manually), turn off AHB if you want to cancel dp Lat Control.'
+                            description={ i18n._(t`Some models DSU cannot be unplugged (such as Lexus IS/GS/ES), once this option is enabled, turn on AHB (Auto High Beam) will keep you dp always on for Lat Control (control gas/brake manually), turn off AHB if you want to cancel dp Lat Control.`) }
                             isExpanded={ expandedCell == 'toyota_stock_dsu' }
                             handleExpanded={ () => this.handleExpanded('toyota_stock_dsu') }
                             handleChanged={ this.props.setToyotaStockDSU } />
                         <X.TableCell
                             type='switch'
-                            title='Enable Lane Departure Warning'
+                            title={ i18n._(t`Enable Lane Departure Warning`) }
                             value={ !!parseInt(dragonToyotaLaneDepartureWarning) }
                             iconSource={ Icons.developer }
-                            description='Enable this if you wish to receive the factory lane departure warning when crossing lanes. (e.g. vibrate steering wheel)'
+                            description={ i18n._(t`Enable this if you wish to receive the factory lane departure warning when crossing lanes. (e.g. vibrate steering wheel)`) }
                             isExpanded={ expandedCell == 'toyota_lane_departure_warning' }
                             handleExpanded={ () => this.handleExpanded('toyota_lane_departure_warning') }
                             handleChanged={ this.props.setToyotaLaneDepartureWarning } />
                         <X.TableCell
                             type='switch'
-                            title='Enable SnG Mod'
+                            title={ i18n._(t`Enable SnG Mod`) }
                             value={ !!parseInt(dragonToyotaSnGMod) }
                             iconSource={ Icons.developer }
-                            description='Enable this if you wish to use Stop n Go mod, the car will ignore acceleration commands if you are on a hill, we DO NOT RECOMMEND that you enable this unless you know what it is. (Only works on cars that need resume button to start)'
+                            description={ i18n._(t`Enable this if you wish to use Stop n Go mod, the car will ignore acceleration commands if you are on a hill, we DO NOT RECOMMEND that you enable this unless you know what it is. (Only works on cars that need resume button to start)`) }
                             isExpanded={ expandedCell == 'toyota_sng_mod' }
                             handleExpanded={ () => this.handleExpanded('toyota_sng_mod') }
                             handleChanged={ this.props.setToyotaSnGMod } />
@@ -716,7 +720,7 @@ class DragonpilotSettings extends Component {
     //                     color='ghost'
     //                     size='small'
     //                     onPress={ () => this.handlePressedBack() }>
-    //                     {'<  Honda Settings'}
+    //                     { i18n._(t`<  Honda Settings`) }
     //                 </X.Button>
     //             </View>
     //             <ScrollView
@@ -725,7 +729,7 @@ class DragonpilotSettings extends Component {
     //                 <View>
     //                     <X.Table>
     //                         <X.TableCell
-    //                             title='Device Paired'
+    //                             title={ i18n._(t`Device Paired`) }
     //                             value='Yes' />
     //                     </X.Table>
     //                 </View>
@@ -758,7 +762,7 @@ class DragonpilotSettings extends Component {
                         color='ghost'
                         size='small'
                         onPress={ () => this.handlePressedBack() }>
-                        {'<  UI Settings'}
+                        { i18n._(t`<  UI Settings`) }
                     </X.Button>
                 </View>
                 <ScrollView
@@ -768,108 +772,108 @@ class DragonpilotSettings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
-                            title='Display Driving UI'
+                            title={ i18n._(t`Display Driving UI`) }
                             value={ !!parseInt(dragonDrivingUI) }
                             iconSource={ Icons.developer }
-                            description='Disable this only if you do not want to see the driving UI and its blocking your navigation view, this will also effect what you records in dashcam.'
+                            description={ i18n._(t`Disable this only if you do not want to see the driving UI and its blocking your navigation view, this will also effect what you records in dashcam.`) }
                             isExpanded={ expandedCell == 'driving_ui' }
                             handleExpanded={ () => this.handleExpanded('driving_ui') }
                             handleChanged={ this.props.setDrivingUI } />
                         <X.TableCell
                             type='switch'
-                            title='Display Speed'
+                            title={ i18n._(t`Display Speed`) }
                             value={!!parseInt(dragonUISpeed)}
                             iconSource={Icons.developer}
-                            description='Enable this to display Speed.'
+                            description={ i18n._(t`Enable this to display Speed.`) }
                             isExpanded={expandedCell == 'dragon_ui_speed'}
                             handleExpanded={() => this.handleExpanded('dragon_ui_speed')}
                             handleChanged={this.props.setUISpeed}/>
                         <X.TableCell
                             type='switch'
-                            title='Display Lane Prediction'
+                            title={ i18n._(t`Display Lane Prediction`) }
                             value={!!parseInt(dragonUILane)}
                             iconSource={Icons.developer}
-                            description='Enable this to display lane prediction.'
+                            description={ i18n._(t`Enable this to display lane prediction.`) }
                             isExpanded={expandedCell == 'dragon_ui_lane'}
                             handleExpanded={() => this.handleExpanded('dragon_ui_lane')}
                             handleChanged={this.props.setUILane}/>
                         <X.TableCell
                             type='switch'
-                            title='Display Lead Car Indicator'
+                            title={ i18n._(t`Display Lead Car Indicator`) }
                             value={!!parseInt(dragonUILead)}
                             iconSource={Icons.developer}
-                            description='Enable this to display lead car indicator, this only works on supported cars.'
+                            description={ i18n._(t`Enable this to display lead car indicator, this only works on supported cars.`) }
                             isExpanded={expandedCell == 'dragon_ui_lead'}
                             handleExpanded={() => this.handleExpanded('dragon_ui_lead')}
                             handleChanged={this.props.setUILead}/>
                         <X.TableCell
                             type='switch'
-                            title='Display Path Prediction'
+                            title={ i18n._(t`Display Path Prediction`) }
                             value={!!parseInt(dragonUIPath)}
                             iconSource={Icons.developer}
-                            description='Enable this to display path prediction.'
+                            description={ i18n._(t`Enable this to display path prediction.`) }
                             isExpanded={expandedCell == 'dragon_ui_path'}
                             handleExpanded={() => this.handleExpanded('dragon_ui_path')}
                             handleChanged={this.props.setUIPath}/>
                         <X.TableCell
                             type='switch'
-                            title='Display Turning Signal'
+                            title={ i18n._(t`Display Turning Signal`) }
                             value={!!parseInt(dragonUIBlinker)}
                             iconSource={Icons.developer}
-                            description='Enable this to display turning signal.'
+                            description={ i18n._(t`Enable this to display turning signal.`) }
                             isExpanded={expandedCell == 'dragon_ui_blinker'}
                             handleExpanded={() => this.handleExpanded('dragon_ui_blinker')}
                             handleChanged={this.props.setUIBlinker}/>
                         <X.TableCell
                             type='switch'
-                            title='Display Event / Steering Icon'
+                            title={ i18n._(t`Display Event / Steering Icon`) }
                             value={!!parseInt(dragonUIEvent)}
                             iconSource={Icons.developer}
-                            description='Enable this to display Event / Steering Icon.'
+                            description={ i18n._(t`Enable this to display Event / Steering Icon.`) }
                             isExpanded={expandedCell == 'dragon_ui_event'}
                             handleExpanded={() => this.handleExpanded('dragon_ui_event')}
                             handleChanged={this.props.setUIEvent}/>
                         <X.TableCell
                             type='switch'
-                            title='Display Max Speed'
+                            title={ i18n._(t`Display Max Speed`) }
                             value={!!parseInt(dragonUIMaxSpeed)}
                             iconSource={Icons.developer}
-                            description='Enable this to display Max Speed.'
+                            description={ i18n._(t`Enable this to display Max Speed.`) }
                             isExpanded={expandedCell == 'dragon_ui_maxspeed'}
                             handleExpanded={() => this.handleExpanded('dragon_ui_maxspeed')}
                             handleChanged={this.props.setUIMaxSpeed}/>
                         <X.TableCell
                             type='switch'
-                            title='Display Face Icon'
+                            title={ i18n._(t`Display Face Icon`) }
                             value={ !!parseInt(dragonUIFace) }
                             iconSource={ Icons.developer }
-                            description='Enable this to display Face Icon.'
+                            description={ i18n._(t`Enable this to display Face Icon.`) }
                             isExpanded={ expandedCell == 'dragon_ui_face' }
                             handleExpanded={ () => this.handleExpanded('dragon_ui_face') }
                             handleChanged={ this.props.setUIFace } />
                         <X.TableCell
                             type='switch'
-                            title='Display Dev UI'
+                            title={ i18n._(t`Display Dev UI`) }
                             value={ !!parseInt(dragonUIDev) }
                             iconSource={ Icons.developer }
-                            description='Enable this to display DevUI found in kegman/arne fork.'
+                            description={ i18n._(t`Enable this to display DevUI found in kegman/arne fork.`) }
                             isExpanded={ expandedCell == 'dragon_ui_dev' }
                             handleExpanded={ () => this.handleExpanded('dragon_ui_dev') }
                             handleChanged={ this.props.setUIDev } />
                         <X.TableCell
                             type='switch'
-                            title='Display Mini Dev UI'
+                            title={ i18n._(t`Display Mini Dev UI`) }
                             value={ !!parseInt(dragonUIDevMini) }
                             iconSource={ Icons.developer }
-                            description='Enable this to display Mini Dev UI designed for dragonpilot.'
+                            description={ i18n._(t`Enable this to display Mini Dev UI designed for dragonpilot.`) }
                             isExpanded={ expandedCell == 'dragon_ui_dev_mini' }
                             handleExpanded={ () => this.handleExpanded('dragon_ui_dev_mini') }
                             handleChanged={ this.props.setUIDevMini } />
                         <X.TableCell
                             type='custom'
-                            title='Boost Audio Alert Volume (%)'
+                            title={ i18n._(t`Boost Audio Alert Volume (%)`) }
                             iconSource={ Icons.developer }
-                            description='Boost audio alert volume in percentage, set to -100 (%) if you would like to disable audio alert. Default is 0 (%).'
+                            description={ i18n._(t`Boost audio alert volume in percentage, set to -100 (%) if you would like to disable audio alert. Default is 0 (%).`) }
                             isExpanded={ expandedCell == 'adjust_audio_alert_vol' }
                             handleExpanded={ () => this.handleExpanded('adjust_audio_alert_vol') }>
                             <X.Button

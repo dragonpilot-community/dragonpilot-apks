@@ -1,0 +1,738 @@
+{
+  "Update Panda Firmware": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        165
+      ],
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        420
+      ]
+    ]
+  },
+  "Your EON will reboot once completed please DO NOT disconnect panda from power source, manual restart them if nothing happened after 3 minutes.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        165
+      ]
+    ]
+  },
+  "Later": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        166
+      ]
+    ]
+  },
+  "Update and Reboot": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        167
+      ]
+    ]
+  },
+  "Safety": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        184
+      ]
+    ]
+  },
+  "Settings": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        185
+      ],
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        191
+      ],
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        197
+      ],
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        203
+      ]
+    ]
+  },
+  "UI": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        190
+      ]
+    ]
+  },
+  "3rd Party Apps": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        196
+      ]
+    ]
+  },
+  "Toyota/Lexus": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        202
+      ]
+    ]
+  },
+  "<  dragonpilot Settings": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        267
+      ]
+    ]
+  },
+  "MiXplorer File Manager": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        281
+      ]
+    ]
+  },
+  "Enable Logger": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        288
+      ]
+    ]
+  },
+  "If you disable logger (loggered/tombstoned), it will stop recording driving data for AI training, reboot required.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        291
+      ]
+    ]
+  },
+  "Enable Uploader": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        297
+      ]
+    ]
+  },
+  "Enable Dashcam": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        306
+      ]
+    ]
+  },
+  "Record EON screen as dashcam footage, it will automatically delete old footage if the available space is less than 15%, footage will be stored in /sdcard/dashcam/.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        309
+      ]
+    ]
+  },
+  "Auto Shutdown (min)": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        315
+      ]
+    ]
+  },
+  "Adjust the shutdown timer if you would like EON to shutdown after a period of time (when usb power is not present), set this to 0 if you would like to disable this feature.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        317
+      ]
+    ]
+  },
+  "Enable Noctua Fan Mode": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        348
+      ]
+    ]
+  },
+  "Enable this will let the fan running at full speed at any temperature, reboot required.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        351
+      ]
+    ]
+  },
+  "Cache Fingerprint": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        357
+      ]
+    ]
+  },
+  "Enable this to store your fingerprint/vin/car model into files and use it when required, this will reduce the car model detection time, disable this if you put EON onto another car, reboot required.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        360
+      ]
+    ]
+  },
+  "Charging Control": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        366
+      ]
+    ]
+  },
+  "If you turn this on, dp will try to keep your battery level between 60%~70% to protect your battery.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        369
+      ]
+    ]
+  },
+  "Camera Offset (cm)": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        375
+      ]
+    ]
+  },
+  "Adjust the camera offset if your car is not centered, slowly increase this if your car is close to the right, slowly decrease this if your car is close to the left, default is 6 cm.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        377
+      ]
+    ]
+  },
+  "Open Android Settings": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        412
+      ]
+    ]
+  },
+  "Car Model": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        425
+      ]
+    ]
+  },
+  "<  Safety Settings": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        455
+      ]
+    ]
+  },
+  "Enable Lateral Control": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        465
+      ]
+    ]
+  },
+  "Enable this if you wish dp to control the steering for you.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        468
+      ]
+    ]
+  },
+  "Allow Gas": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        474
+      ]
+    ]
+  },
+  "Enable this if you wish to use gas on engaged.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        477
+      ]
+    ]
+  },
+  "Enable Steering On Signal": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        483
+      ]
+    ]
+  },
+  "If you enable this, it will temporary disable steering control when left/right blinker is on and resume control 1 second after the blinker is off.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        486
+      ]
+    ]
+  },
+  "Display \"Turn Exceeds Steering Limit\" Alert": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        492
+      ]
+    ]
+  },
+  "If you disable this, you will not receive any \"Turn Exceeds Steering Limit\" alerts on the screen. Hyundai, Ford, Toyota do not have this alert.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        495
+      ]
+    ]
+  },
+  "Enable Slow on Curve": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        501
+      ]
+    ]
+  },
+  "If you enable this, the car will slow down automatically when on a curve road, this feature only works on Long Ctrl supported cars.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        504
+      ]
+    ]
+  },
+  "Enable Lead Car Moving Alert (BETA)": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        510
+      ]
+    ]
+  },
+  "If you enable this, dp will notify you when lead car starts moving from stationary.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        513
+      ]
+    ]
+  },
+  "Enable Safety Check": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        521
+      ]
+    ]
+  },
+  "If you disable this, the driver safety check will be disabled completely, we DO NOT RECOMMEND that you turn off this unless you know what you are doing, we hold no responsibility if you disable this option.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        524
+      ]
+    ]
+  },
+  "Enable Driver Monitoring": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        530
+      ]
+    ]
+  },
+  "Driver Monitoring detects driver awareness with 3D facial reconstruction and pose estimation. It is used to warn the driver when they appear distracted while openpilot is engaged. This feature is still in beta, so Driver Monitoring is unavailable when the facial tracking is too inaccurate (e.g. at night). The availability is indicated by the face icon at the bottom-left corner of your EON.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        533
+      ]
+    ]
+  },
+  "Steering Monitor Timer": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        539
+      ]
+    ]
+  },
+  "Adjust the steering monitor timer, set this to 0 if you would like to disable steering monitor. Default is 3 minutes.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        541
+      ]
+    ]
+  },
+  "<  3rd Party Apps Settings": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        594
+      ]
+    ]
+  },
+  "Enable TomTom Safety Camera App": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        604
+      ]
+    ]
+  },
+  "Enable this if you wish to use TomTom Safety Camera App, restart required.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        607
+      ]
+    ]
+  },
+  "Auto Run TomTom Safety Camera App": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        614
+      ]
+    ]
+  },
+  "Enable this will have TomTom Safety Camera App start when car is on, stop when car is off.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        617
+      ]
+    ]
+  },
+  "Enable Autonavi Map App": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        624
+      ]
+    ]
+  },
+  "Enable this if you wish to use Autonavi Map App, restart required.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        627
+      ]
+    ]
+  },
+  "Auto Run Autonavi Map": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        634
+      ]
+    ]
+  },
+  "Enable this will have Autonavi Map App start when car is on, stop when car is off.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        637
+      ]
+    ]
+  },
+  "Enable MiXplorer App": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        644
+      ]
+    ]
+  },
+  "Enable this if you wish to use MiXplorer file manager App, restart required.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        647
+      ]
+    ]
+  },
+  "<  Toyota/Lexus Settings": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        673
+      ]
+    ]
+  },
+  "Enable Stock DSU Mode": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        683
+      ]
+    ]
+  },
+  "Some models DSU cannot be unplugged (such as Lexus IS/GS/ES), once this option is enabled, turn on AHB (Auto High Beam) will keep you dp always on for Lat Control (control gas/brake manually), turn off AHB if you want to cancel dp Lat Control.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        686
+      ]
+    ]
+  },
+  "Enable Lane Departure Warning": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        692
+      ]
+    ]
+  },
+  "Enable this if you wish to receive the factory lane departure warning when crossing lanes. (e.g. vibrate steering wheel)": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        695
+      ]
+    ]
+  },
+  "Enable SnG Mod": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        701
+      ]
+    ]
+  },
+  "Enable this if you wish to use Stop n Go mod, the car will ignore acceleration commands if you are on a hill, we DO NOT RECOMMEND that you enable this unless you know what it is. (Only works on cars that need resume button to start)": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        704
+      ]
+    ]
+  },
+  "<  UI Settings": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        765
+      ]
+    ]
+  },
+  "Display Driving UI": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        775
+      ]
+    ]
+  },
+  "Disable this only if you do not want to see the driving UI and its blocking your navigation view, this will also effect what you records in dashcam.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        778
+      ]
+    ]
+  },
+  "Display Speed": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        784
+      ]
+    ]
+  },
+  "Enable this to display Speed.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        787
+      ]
+    ]
+  },
+  "Display Lane Prediction": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        793
+      ]
+    ]
+  },
+  "Enable this to display lane prediction.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        796
+      ]
+    ]
+  },
+  "Display Lead Car Indicator": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        802
+      ]
+    ]
+  },
+  "Enable this to display lead car indicator, this only works on supported cars.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        805
+      ]
+    ]
+  },
+  "Display Path Prediction": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        811
+      ]
+    ]
+  },
+  "Enable this to display path prediction.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        814
+      ]
+    ]
+  },
+  "Display Turning Signal": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        820
+      ]
+    ]
+  },
+  "Enable this to display turning signal.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        823
+      ]
+    ]
+  },
+  "Display Event / Steering Icon": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        829
+      ]
+    ]
+  },
+  "Enable this to display Event / Steering Icon.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        832
+      ]
+    ]
+  },
+  "Display Max Speed": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        838
+      ]
+    ]
+  },
+  "Enable this to display Max Speed.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        841
+      ]
+    ]
+  },
+  "Display Face Icon": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        847
+      ]
+    ]
+  },
+  "Enable this to display Face Icon.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        850
+      ]
+    ]
+  },
+  "Display Dev UI": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        856
+      ]
+    ]
+  },
+  "Enable this to display DevUI found in kegman/arne fork.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        859
+      ]
+    ]
+  },
+  "Display Mini Dev UI": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        865
+      ]
+    ]
+  },
+  "Enable this to display Mini Dev UI designed for dragonpilot.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        868
+      ]
+    ]
+  },
+  "Boost Audio Alert Volume (%)": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        874
+      ]
+    ]
+  },
+  "Boost audio alert volume in percentage, set to -100 (%) if you would like to disable audio alert. Default is 0 (%).": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        876
+      ]
+    ]
+  }
+}

@@ -296,13 +296,13 @@ class Settings extends Component {
                         <X.Button
                             color='settingsDefault'
                             onPress={() => this.handleRunApp('tomtom', '1')}>
-                            Open TomTom Safety Camera
+                            { i18n._(t`Open TomTom Safety Camera`) }
                         </X.Button>
                         <X.Line color='transparent' size='tiny' spacing='mini'/>
                         <X.Button
                             color='settingsDefault'
                             onPress={() => this.handleRunApp('tomtom', '-1')}>
-                            Close TomTom Safety Camera
+                            { i18n._(t`Close TomTom Safety Camera`) }
                         </X.Button>
                     </X.Table>
                     }
@@ -311,13 +311,13 @@ class Settings extends Component {
                         <X.Button
                             color='settingsDefault'
                             onPress={() => this.handleRunApp('autonavi', '1')}>
-                            Open AutoNavi Map
+                            { i18n._(t`Open AutoNavi Map`) }
                         </X.Button>
                         <X.Line color='transparent' size='tiny' spacing='mini'/>
                         <X.Button
                             color='settingsDefault'
                             onPress={() => this.handleRunApp('autonavi', '-1')}>
-                            Close AutoNavi Map
+                            { i18n._(t`Close AutoNavi Map`) }
                         </X.Button>
                     </X.Table>
                     }
@@ -325,7 +325,7 @@ class Settings extends Component {
                         <X.Button
                             color='settingsDefault'
                             onPress={ () => this.props.openDragonpilotSettings() }>
-                            Dragonpilot
+                            { i18n._(t`dragonpilot`) }
                         </X.Button>
                     </X.Table>
                     <X.Table color='darkBlue'>
