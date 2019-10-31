@@ -35,6 +35,8 @@ const PARAMS = [
   "TrainingVersion",
   "Version",
   "OpenpilotEnabledToggle",
+  "PandaFirmware",
+  "PandaDongleId",
   // dragonpilot
   "DragonLatCtrl",
   "DragonAllowGas",

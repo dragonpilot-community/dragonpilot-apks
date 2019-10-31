@@ -615,6 +615,8 @@ class Settings extends Component {
                 GitBranch: gitBranch,
                 GitCommit: gitRevision,
                 Passive: isPassive,
+                PandaFirmware: pandaFirmware,
+                PandaDongleId: pandaDongleId,
             },
         } = this.props;
         const { expandedCell } = this.state;
@@ -642,6 +644,14 @@ class Settings extends Component {
                         <X.TableCell
                             title={ i18n._(t`Git Revision`) }
                             value={ gitRevision.slice(0, 12) }
+                            valueTextSize='tiny' />
+                        <X.TableCell
+                            title='Panda Firmware'
+                            value={ pandaFirmware != null ? pandaFirmware : 'N/A' }
+                            valueTextSize='tiny' />
+                        <X.TableCell
+                            title='Panda Dongle ID'
+                            value={ pandaDongleId!= null ? pandaDongleId : 'N/A' }
                             valueTextSize='tiny' />
                     </X.Table>
                     <X.Table color='darkBlue'>
