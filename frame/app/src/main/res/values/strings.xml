@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Chffr Plus Frame</string>
+    <string name="storage">STORAGE</string>
+    <string name="eon_temp">EON TEMP</string>
+    <string name="no_panda">PANDA\nN/A</string>
+    <string name="panda_active">PANDA\nACTIVE</string>
 </resources>

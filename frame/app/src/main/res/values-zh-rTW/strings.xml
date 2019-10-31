@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Chffr Plus Frame</string>
+    <string name="storage">儲存空間</string>
+    <string name="eon_temp">EON 溫度</string>
+    <string name="no_panda">PANDA\n未連線</string>
+    <string name="panda_active">PANDA\n已連線</string>
+</resources>
