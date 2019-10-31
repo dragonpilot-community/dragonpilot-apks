@@ -13,15 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:594
-#~ msgid "'<  3rd Party Apps Settings"
-#~ msgstr "'<  3rd Party Apps Settings"
-
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:455
-#~ msgid "'<  Safety Settings"
-#~ msgstr "'<  Safety Settings"
-
-#: js/components/Home/Home.js:487
+#: js/components/Home/Home.js:494
 msgid "14 days of storage"
 msgstr "14 days of storage"
 
@@ -77,15 +69,15 @@ msgstr "A driver assistance system is not a self driving car. This means openpil
 msgid "A vision algorithm leverages EON’s road-facing camera to determine the path to drive."
 msgstr "A vision algorithm leverages EON’s road-facing camera to determine the path to drive."
 
-#: js/components/Home/Home.js:236
+#: js/components/Home/Home.js:243
 msgid "ALERT"
 msgstr "ALERT"
 
-#: js/components/Home/Home.js:236
+#: js/components/Home/Home.js:243
 msgid "ALERTS"
 msgstr "ALERTS"
 
-#: js/components/Home/Home.js:364
+#: js/components/Home/Home.js:371
 msgid "ALL TIME"
 msgstr "ALL TIME"
 
@@ -149,7 +141,7 @@ msgstr "Auto Run TomTom Safety Camera App"
 msgid "Auto Shutdown (min)"
 msgstr "Auto Shutdown (min)"
 
-#: js/components/Home/Home.js:463
+#: js/components/Home/Home.js:470
 msgid "Become a comma prime member in the comma app and get premium features!"
 msgstr "Become a comma prime member in the comma app and get premium features!"
 
@@ -169,7 +161,7 @@ msgstr "Boost Audio Alert Volume (%)"
 msgid "Boost audio alert volume in percentage, set to -100 (%) if you would like to disable audio alert. Default is 0 (%)."
 msgstr "Boost audio alert volume in percentage, set to -100 (%) if you would like to disable audio alert. Default is 0 (%)."
 
-#: js/components/Home/Home.js:433
+#: js/components/Home/Home.js:440
 msgid "COMMA POINTS"
 msgstr "COMMA POINTS"
 
@@ -231,7 +223,7 @@ msgstr "Connect"
 msgid "Connect to WiFi"
 msgstr "Connect to WiFi"
 
-#: js/components/Home/Home.js:292
+#: js/components/Home/Home.js:299
 msgid "Connect to a WiFi or cellular network to upload and review your drives."
 msgstr "Connect to a WiFi or cellular network to upload and review your drives."
 
@@ -245,8 +237,8 @@ msgstr "Connected"
 msgid "Continue"
 msgstr "Continue"
 
-#: js/components/Home/Home.js:320
-#: js/components/Home/Home.js:380
+#: js/components/Home/Home.js:327
+#: js/components/Home/Home.js:387
 msgid "DRIVES"
 msgstr "DRIVES"
 
@@ -254,7 +246,7 @@ msgstr "DRIVES"
 msgid "Developer"
 msgstr "Developer"
 
-#: js/components/Home/Home.js:499
+#: js/components/Home/Home.js:506
 msgid "Developer perks"
 msgstr "Developer perks"
 
@@ -513,7 +505,7 @@ msgstr "Enable this will let the fan running at full speed at any temperature, r
 msgid "Engage openpilot"
 msgstr "Engage openpilot"
 
-#: js/components/Home/Home.js:519
+#: js/components/Home/Home.js:526
 msgid "Finish Setup"
 msgstr "Finish Setup"
 
@@ -524,6 +516,10 @@ msgstr "Finish Training"
 #: js/components/Settings/Settings.js:530
 msgid "Free Storage"
 msgstr "Free Storage"
+
+#: js/components/Home/Home.js:132
+msgid "Friday"
+msgstr "Friday"
 
 #: js/components/Settings/Settings.js:640
 msgid "Git Branch"
@@ -541,12 +537,12 @@ msgstr "GitHub Username"
 msgid "Go Back"
 msgstr "Go Back"
 
-#: js/components/Home/Home.js:352
-#: js/components/Home/Home.js:412
+#: js/components/Home/Home.js:359
+#: js/components/Home/Home.js:419
 msgid "HOURS"
 msgstr "HOURS"
 
-#: js/components/Home/Home.js:274
+#: js/components/Home/Home.js:281
 msgid "Hide Alerts"
 msgstr "Hide Alerts"
 
@@ -590,8 +586,8 @@ msgstr "If you enable this, the car will slow down automatically when on a curve
 msgid "If you turn this on, dp will try to keep your battery level between 60%~70% to protect your battery."
 msgstr "If you turn this on, dp will try to keep your battery level between 60%~70% to protect your battery."
 
-#: js/components/Home/Home.js:337
-#: js/components/Home/Home.js:397
+#: js/components/Home/Home.js:344
+#: js/components/Home/Home.js:404
 msgid "KM"
 msgstr "KM"
 
@@ -610,14 +606,18 @@ msgstr "Later"
 msgid "Limited Features"
 msgstr "Limited Features"
 
-#: js/components/Home/Home.js:337
-#: js/components/Home/Home.js:397
+#: js/components/Home/Home.js:344
+#: js/components/Home/Home.js:404
 msgid "MILES"
 msgstr "MILES"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:281
 msgid "MiXplorer File Manager"
 msgstr "MiXplorer File Manager"
+
+#: js/components/Home/Home.js:132
+msgid "Monday"
+msgstr "Monday"
 
 #: js/components/SetupWifi/SetupWifi.js:371
 msgid "More Options"
@@ -632,7 +632,7 @@ msgstr "Network"
 msgid "No"
 msgstr "No"
 
-#: js/components/Home/Home.js:286
+#: js/components/Home/Home.js:293
 msgid "No Network Connection"
 msgstr "No Network Connection"
 
@@ -660,7 +660,7 @@ msgstr "Open TomTom Safety Camera"
 msgid "Open WiFi Settings"
 msgstr "Open WiFi Settings"
 
-#: js/components/Home/Home.js:304
+#: js/components/Home/Home.js:311
 msgid "PAST WEEK"
 msgstr "PAST WEEK"
 
@@ -672,7 +672,7 @@ msgstr "Pair Device"
 msgid "Pair Your Account"
 msgstr "Pair Your Account"
 
-#: js/components/Home/Home.js:531
+#: js/components/Home/Home.js:538
 msgid "Pair your comma account with comma connect"
 msgstr "Pair your comma account with comma connect"
 
@@ -724,7 +724,7 @@ msgstr "Record EON screen as dashcam footage, it will automatically delete old f
 msgid "Record and Upload Driver Camera"
 msgstr "Record and Upload Driver Camera"
 
-#: js/components/Home/Home.js:475
+#: js/components/Home/Home.js:482
 msgid "Remote Access"
 msgstr "Remote Access"
 
@@ -751,6 +751,10 @@ msgstr "Review Training Guide"
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:184
 msgid "Safety"
 msgstr "Safety"
+
+#: js/components/Home/Home.js:132
+msgid "Saturday"
+msgstr "Saturday"
 
 #: js/components/Settings/Settings.js:729
 msgid "Save"
@@ -823,6 +827,10 @@ msgstr "Succesfully paired to account"
 msgid "Successfully paired to an account in"
 msgstr "Successfully paired to an account in"
 
+#: js/components/Home/Home.js:132
+msgid "Sunday"
+msgstr "Sunday"
+
 #: js/components/training/Onboarding/Onboarding.js:603
 msgid "Tap \"SET\" to engage"
 msgstr "Tap \"SET\" to engage"
@@ -863,9 +871,17 @@ msgstr "There was a problem scanning WiFi networks. {0}Make sure WiFi is enabled
 msgid "This guide can be replayed at any time from the EON settings. To learn more about openpilot, read the wiki and join the community at discord.comma.ai"
 msgstr "This guide can be replayed at any time from the EON settings. To learn more about openpilot, read the wiki and join the community at discord.comma.ai"
 
+#: js/components/Home/Home.js:132
+msgid "Thursday"
+msgstr "Thursday"
+
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:202
 msgid "Toyota/Lexus"
 msgstr "Toyota/Lexus"
+
+#: js/components/Home/Home.js:132
+msgid "Tuesday"
+msgstr "Tuesday"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:190
 msgid "UI"
@@ -884,7 +900,7 @@ msgstr "Uninstall {software}"
 msgid "Unpaired"
 msgstr "Unpaired"
 
-#: js/components/Home/Home.js:221
+#: js/components/Home/Home.js:228
 #: js/components/UpdatePrompt/UpdatePrompt.js:36
 msgid "Update Available"
 msgstr "Update Available"
@@ -898,7 +914,7 @@ msgstr "Update Panda Firmware"
 msgid "Update and Reboot"
 msgstr "Update and Reboot"
 
-#: js/components/Home/Home.js:456
+#: js/components/Home/Home.js:463
 msgid "Upgrade Now"
 msgstr "Upgrade Now"
 
@@ -929,6 +945,10 @@ msgstr "Version"
 #: js/components/Settings/Settings.js:693
 msgid "WARNING: This grants SSH access to all public keys in your GitHub settings. Never enter a GitHub username other than your own. The built-in SSH key will be disabled if you proceed. A comma employee will never ask you to add their GitHub."
 msgstr "WARNING: This grants SSH access to all public keys in your GitHub settings. Never enter a GitHub username other than your own. The built-in SSH key will be disabled if you proceed. A comma employee will never ask you to add their GitHub."
+
+#: js/components/Home/Home.js:132
+msgid "Wednesday"
+msgstr "Wednesday"
 
 #: js/components/training/Onboarding/Onboarding.js:269
 msgid "Welcome to openpilot alpha"
@@ -967,9 +987,17 @@ msgstr "and scan this code to pair."
 msgid "comma connect"
 msgstr "comma connect"
 
+#: js/components/Home/Home.js:133
+msgid "day_postfix"
+msgstr ","
+
 #: js/components/Settings/Settings.js:328
 msgid "dragonpilot"
 msgstr "dragonpilot"
+
+#: js/components/Home/Home.js:133
+msgid "mth_postfix"
+msgstr "-"
 
 #: js/components/training/Onboarding/Onboarding.js:583
 #: js/components/training/Onboarding/Onboarding.js:624
@@ -994,6 +1022,10 @@ msgstr "openpilot uses multiple sensors to see the road ahead."
 #: js/components/training/Onboarding/Onboarding.js:534
 msgid "openpilot will start driving when cruise control is set."
 msgstr "openpilot will start driving when cruise control is set."
+
+#: js/components/Home/Home.js:133
+msgid "yr_postfix"
+msgstr "-"
 
 #: js/components/Settings/Settings.js:214
 msgid "{0} Free"

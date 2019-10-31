@@ -4,7 +4,7 @@ import {
     Text,
     View,
     ScrollView,
-    NetInfo,
+    NetInfo, NativeModules,
 } from 'react-native';
 import { connect } from 'react-redux';
 import { NavigationActions } from 'react-navigation';
@@ -29,7 +29,7 @@ import { formatCommas } from '../../utils/number';
 import { mToKm } from '../../utils/conversions';
 
 // i18n
-import {t, Trans} from "@lingui/macro"
+import {t, Trans, date} from "@lingui/macro"
 import {i18n} from "../../utils/I18n";
 
 class Home extends Component {
@@ -127,6 +127,12 @@ class Home extends Component {
         return ((bottom <= latitude) && (latitude <= top) && (left <= longitude) && (longitude <= right));
     }
 
+    getLocalizedDate(){
+        var n = new Date()
+        var weekdays = new Array(i18n._(t`Sunday`), i18n._(t`Monday`), i18n._(t`Tuesday`), i18n._(t`Wednesday`), i18n._(t`Thursday`), i18n._(t`Friday`), i18n._(t`Saturday`))
+        return n.getFullYear() + i18n._(t('yr_postfix')` / `) + (n.getMonth()+1) + i18n._(t('mth_postfix')` / `) + n.getDate() + i18n._(t('day_postfix')``) + ' ' + weekdays[n.getDay()]
+    }
+
     render() {
         const {
             alerts,
@@ -164,6 +170,7 @@ class Home extends Component {
             (alertsVisible || !isConnected) && Styles.homeBodyDark,
         ];
 
+
         return (
             <X.Gradient color='flat_blue'>
                 <View style={ Styles.home }>
@@ -173,7 +180,7 @@ class Home extends Component {
                                 <X.Text
                                     color='white'
                                     weight='light'>
-                                    { summaryDate }
+                                    { this.getLocalizedDate() }
                                 </X.Text>
                             </View>
                             <View style={ Styles.homeHeaderIntroCity }>

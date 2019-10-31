@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: js/components/Home/Home.js:487
+#: js/components/Home/Home.js:494
 msgid "14 days of storage"
 msgstr "14 天行車記錄"
 
@@ -69,15 +69,15 @@ msgstr "駕駛輔助系統不是自動駕駛系統。這代表 dragonpilot 的�
 msgid "A vision algorithm leverages EON’s road-facing camera to determine the path to drive."
 msgstr "我們利用後置相機補捉到的影像演算出行車的路徑。"
 
-#: js/components/Home/Home.js:236
+#: js/components/Home/Home.js:243
 msgid "ALERT"
 msgstr "提示"
 
-#: js/components/Home/Home.js:236
+#: js/components/Home/Home.js:243
 msgid "ALERTS"
 msgstr "提示"
 
-#: js/components/Home/Home.js:364
+#: js/components/Home/Home.js:371
 msgid "ALL TIME"
 msgstr "全部"
 
@@ -141,7 +141,7 @@ msgstr "自動執行 TomTom 測速照相"
 msgid "Auto Shutdown (min)"
 msgstr "自動關機 (分鐘)"
 
-#: js/components/Home/Home.js:463
+#: js/components/Home/Home.js:470
 msgid "Become a comma prime member in the comma app and get premium features!"
 msgstr "想得到更多高級的功能嗎？立即成為 comma 應用的 comma prime 會員！"
 
@@ -161,7 +161,7 @@ msgstr "擴大警示音量 (%)"
 msgid "Boost audio alert volume in percentage, set to -100 (%) if you would like to disable audio alert. Default is 0 (%)."
 msgstr "擴大或減少警示音量，設至 -100 (%) 可以完全關閉警示音。預設為 0 (%)。"
 
-#: js/components/Home/Home.js:433
+#: js/components/Home/Home.js:440
 msgid "COMMA POINTS"
 msgstr "COMMA 點數"
 
@@ -223,7 +223,7 @@ msgstr "連線"
 msgid "Connect to WiFi"
 msgstr "連線至無線網路"
 
-#: js/components/Home/Home.js:292
+#: js/components/Home/Home.js:299
 msgid "Connect to a WiFi or cellular network to upload and review your drives."
 msgstr "連線至 WiFi 或是行動網路來上傳和查看您的行駛記錄"
 
@@ -237,8 +237,8 @@ msgstr "已連線"
 msgid "Continue"
 msgstr "繼續"
 
-#: js/components/Home/Home.js:320
-#: js/components/Home/Home.js:380
+#: js/components/Home/Home.js:327
+#: js/components/Home/Home.js:387
 msgid "DRIVES"
 msgstr "行駛"
 
@@ -246,7 +246,7 @@ msgstr "行駛"
 msgid "Developer"
 msgstr "開發人員"
 
-#: js/components/Home/Home.js:499
+#: js/components/Home/Home.js:506
 msgid "Developer perks"
 msgstr "開發人員 perks"
 
@@ -505,7 +505,7 @@ msgstr "啟用這個選項後，EON 的風扇將會一直以全速運轉，這�
 msgid "Engage openpilot"
 msgstr "啟用 dragonpilot"
 
-#: js/components/Home/Home.js:519
+#: js/components/Home/Home.js:526
 msgid "Finish Setup"
 msgstr "完成設定"
 
@@ -516,6 +516,10 @@ msgstr "完成教學"
 #: js/components/Settings/Settings.js:530
 msgid "Free Storage"
 msgstr "剩餘空間"
+
+#: js/components/Home/Home.js:132
+msgid "Friday"
+msgstr "星期五"
 
 #: js/components/Settings/Settings.js:640
 msgid "Git Branch"
@@ -533,12 +537,12 @@ msgstr "GitHub 用戶名"
 msgid "Go Back"
 msgstr "回到上一頁"
 
-#: js/components/Home/Home.js:352
-#: js/components/Home/Home.js:412
+#: js/components/Home/Home.js:359
+#: js/components/Home/Home.js:419
 msgid "HOURS"
 msgstr "小時"
 
-#: js/components/Home/Home.js:274
+#: js/components/Home/Home.js:281
 msgid "Hide Alerts"
 msgstr "隱藏提示"
 
@@ -582,8 +586,8 @@ msgstr "啟用這個選項後， dp 在彎道時會依需求減速，這個選�
 msgid "If you turn this on, dp will try to keep your battery level between 60%~70% to protect your battery."
 msgstr "如果您開啟這個選項，dp 將會嘗試將電量控制在 60%~70% 之間。"
 
-#: js/components/Home/Home.js:337
-#: js/components/Home/Home.js:397
+#: js/components/Home/Home.js:344
+#: js/components/Home/Home.js:404
 msgid "KM"
 msgstr "公里"
 
@@ -602,14 +606,18 @@ msgstr "稍後"
 msgid "Limited Features"
 msgstr "有限的功能"
 
-#: js/components/Home/Home.js:337
-#: js/components/Home/Home.js:397
+#: js/components/Home/Home.js:344
+#: js/components/Home/Home.js:404
 msgid "MILES"
 msgstr "英里"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:281
 msgid "MiXplorer File Manager"
 msgstr "MiXplorer 檔案管理器"
+
+#: js/components/Home/Home.js:132
+msgid "Monday"
+msgstr "星期一"
 
 #: js/components/SetupWifi/SetupWifi.js:371
 msgid "More Options"
@@ -624,7 +632,7 @@ msgstr "網路"
 msgid "No"
 msgstr "否"
 
-#: js/components/Home/Home.js:286
+#: js/components/Home/Home.js:293
 msgid "No Network Connection"
 msgstr "沒有網路連線"
 
@@ -652,7 +660,7 @@ msgstr "開啟 TomTom 測速照相"
 msgid "Open WiFi Settings"
 msgstr "開啟無線網路設定"
 
-#: js/components/Home/Home.js:304
+#: js/components/Home/Home.js:311
 msgid "PAST WEEK"
 msgstr "上週"
 
@@ -664,7 +672,7 @@ msgstr "配對裝置"
 msgid "Pair Your Account"
 msgstr "與您的帳號配對"
 
-#: js/components/Home/Home.js:531
+#: js/components/Home/Home.js:538
 msgid "Pair your comma account with comma connect"
 msgstr "與 comma connect 配對您的 comma 帳號"
 
@@ -716,7 +724,7 @@ msgstr "錄下 EON 的畫面當做行車記錄，當系統的空間不足 15% �
 msgid "Record and Upload Driver Camera"
 msgstr "錄制並上傳駕駛的錄像"
 
-#: js/components/Home/Home.js:475
+#: js/components/Home/Home.js:482
 msgid "Remote Access"
 msgstr "遠端控制"
 
@@ -743,6 +751,10 @@ msgstr "查看使用教學"
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:184
 msgid "Safety"
 msgstr "安全"
+
+#: js/components/Home/Home.js:132
+msgid "Saturday"
+msgstr "星期六"
 
 #: js/components/Settings/Settings.js:729
 msgid "Save"
@@ -815,6 +827,10 @@ msgstr "已成功配對到帳號"
 msgid "Successfully paired to an account in"
 msgstr "已配對成功："
 
+#: js/components/Home/Home.js:132
+msgid "Sunday"
+msgstr "星期日"
+
 #: js/components/training/Onboarding/Onboarding.js:603
 msgid "Tap \"SET\" to engage"
 msgstr "請點選畫面上的 \"SET\" 繼續"
@@ -855,9 +871,17 @@ msgstr "掃描無線網路出現錯誤。{0}請確認無線網路功能已在上
 msgid "This guide can be replayed at any time from the EON settings. To learn more about openpilot, read the wiki and join the community at discord.comma.ai"
 msgstr "若有需要，您可以隨時至 EON 設定裡重新閱讀使用指南。若您想知道更多關於 dragonpilot 的訊息，請參閱 wiki 或是加入我們在 discord.comma.ai 的社群。"
 
+#: js/components/Home/Home.js:132
+msgid "Thursday"
+msgstr "星期四"
+
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:202
 msgid "Toyota/Lexus"
 msgstr "Toyota/Lexus"
+
+#: js/components/Home/Home.js:132
+msgid "Tuesday"
+msgstr "星期二"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:190
 msgid "UI"
@@ -876,7 +900,7 @@ msgstr "卸載 {software}"
 msgid "Unpaired"
 msgstr "未配對"
 
-#: js/components/Home/Home.js:221
+#: js/components/Home/Home.js:228
 #: js/components/UpdatePrompt/UpdatePrompt.js:36
 msgid "Update Available"
 msgstr "有可用的更新"
@@ -890,7 +914,7 @@ msgstr "更新 Panda 韌體"
 msgid "Update and Reboot"
 msgstr "更新並重啟"
 
-#: js/components/Home/Home.js:456
+#: js/components/Home/Home.js:463
 msgid "Upgrade Now"
 msgstr "馬上升級"
 
@@ -921,6 +945,10 @@ msgstr "版本"
 #: js/components/Settings/Settings.js:693
 msgid "WARNING: This grants SSH access to all public keys in your GitHub settings. Never enter a GitHub username other than your own. The built-in SSH key will be disabled if you proceed. A comma employee will never ask you to add their GitHub."
 msgstr "警告：這將授予在您 GitHub 帳號裡所有公開密鑰的 SSH 訪問權限。永遠不要輸入您自己以外的 GitHub 用戶名。comma 的員工永遠不會要求您添加他們的 GitHub 用戶名。"
+
+#: js/components/Home/Home.js:132
+msgid "Wednesday"
+msgstr "星期三"
 
 #: js/components/training/Onboarding/Onboarding.js:269
 msgid "Welcome to openpilot alpha"
@@ -959,9 +987,17 @@ msgstr "然後掃描這個二維碼配對。"
 msgid "comma connect"
 msgstr "comma connect"
 
+#: js/components/Home/Home.js:133
+msgid "day_postfix"
+msgstr " 日"
+
 #: js/components/Settings/Settings.js:328
 msgid "dragonpilot"
 msgstr "dragonpilot"
+
+#: js/components/Home/Home.js:133
+msgid "mth_postfix"
+msgstr " 月 "
 
 #: js/components/training/Onboarding/Onboarding.js:583
 #: js/components/training/Onboarding/Onboarding.js:624
@@ -986,6 +1022,10 @@ msgstr "dragonpilot 使用多個傳感器來監看前方道路。"
 #: js/components/training/Onboarding/Onboarding.js:534
 msgid "openpilot will start driving when cruise control is set."
 msgstr "dragonpilot 將在巡航系統啟用後開始運作。"
+
+#: js/components/Home/Home.js:133
+msgid "yr_postfix"
+msgstr " 年 "
 
 #: js/components/Settings/Settings.js:214
 msgid "{0} Free"
