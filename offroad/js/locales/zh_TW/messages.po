@@ -29,7 +29,7 @@ msgstr "<  第三方應用設定"
 msgid "<  Account Settings"
 msgstr "<  帳戶設定"
 
-#: js/components/Settings/Settings.js:629
+#: js/components/Settings/Settings.js:631
 msgid "<  Developer Settings"
 msgstr "<  開發人員設定"
 
@@ -101,19 +101,19 @@ msgstr "調整方向盤監控計時，如果您想取消方向盤監控，請將
 msgid "Allow Gas"
 msgstr "允許踩油門"
 
-#: js/components/Settings/Settings.js:653
+#: js/components/Settings/Settings.js:663
 msgid "Allow devices to connect to your EON using Secure Shell (SSH)."
 msgstr "允許別的裝置經由 Secure Shell (SSH) 連線至您的 EON。"
 
-#: js/components/Settings/Settings.js:837
+#: js/components/Settings/Settings.js:847
 msgid "Are you sure you want to reboot?"
 msgstr "您確定要重新啟動嗎？"
 
-#: js/components/Settings/Settings.js:843
+#: js/components/Settings/Settings.js:853
 msgid "Are you sure you want to shutdown?"
 msgstr "您確定要關機嗎？"
 
-#: js/components/Settings/Settings.js:849
+#: js/components/Settings/Settings.js:859
 msgid "Are you sure you want to uninstall?"
 msgstr "您確定要卸載嗎？"
 
@@ -125,7 +125,7 @@ msgstr "認證中..."
 msgid "Authentication problem"
 msgstr "認證錯誤"
 
-#: js/components/Settings/Settings.js:659
+#: js/components/Settings/Settings.js:669
 msgid "Authorized SSH Keys"
 msgstr "已授權的 SSH 密鑰"
 
@@ -182,10 +182,10 @@ msgstr "相機偏移距離 (公分)"
 msgid "Camera from EON"
 msgstr "來自 EON 的相機"
 
-#: js/components/Settings/Settings.js:669
-#: js/components/Settings/Settings.js:838
-#: js/components/Settings/Settings.js:844
-#: js/components/Settings/Settings.js:850
+#: js/components/Settings/Settings.js:679
+#: js/components/Settings/Settings.js:848
+#: js/components/Settings/Settings.js:854
+#: js/components/Settings/Settings.js:860
 #: js/components/SetupWifi/SetupWifi.js:315
 msgid "Cancel"
 msgstr "取消"
@@ -336,7 +336,7 @@ msgstr "駕駛監控"
 msgid "Driver Monitoring detects driver awareness with 3D facial reconstruction and pose estimation. It is used to warn the driver when they appear distracted while openpilot is engaged. This feature is still in beta, so Driver Monitoring is unavailable when the facial tracking is too inaccurate (e.g. at night). The availability is indicated by the face icon at the bottom-left corner of your EON."
 msgstr "駕駛監控系統利用 3D 人臉/姿態識別來判斷駕駛的狀態。當 dragonpilot 啟用時，它會在駕駛分心時發出警示。這個功能仍然在測試階段，所以監控會在無法正確識別時暫時取消 (例如光線不足時)。您可以從 EON 左下角的人臉圖示來判斷它的狀態。"
 
-#: js/components/Settings/Settings.js:669
+#: js/components/Settings/Settings.js:679
 msgid "Edit"
 msgstr "編輯"
 
@@ -376,7 +376,7 @@ msgstr "啟用 MiXplorer 檔案管理器"
 msgid "Enable Noctua Fan Mode"
 msgstr "啟用 Noctua 風扇模式"
 
-#: js/components/Settings/Settings.js:650
+#: js/components/Settings/Settings.js:660
 msgid "Enable SSH"
 msgstr "啟用 SSH"
 
@@ -521,15 +521,15 @@ msgstr "剩餘空間"
 msgid "Friday"
 msgstr "星期五"
 
-#: js/components/Settings/Settings.js:640
+#: js/components/Settings/Settings.js:642
 msgid "Git Branch"
 msgstr "Git 分支"
 
-#: js/components/Settings/Settings.js:643
+#: js/components/Settings/Settings.js:645
 msgid "Git Revision"
 msgstr "Git 修訂版"
 
-#: js/components/Settings/Settings.js:712
+#: js/components/Settings/Settings.js:722
 msgid "GitHub Username"
 msgstr "GitHub 用戶名"
 
@@ -623,6 +623,11 @@ msgstr "星期一"
 msgid "More Options"
 msgstr "更多選項"
 
+#: js/components/Settings/Settings.js:650
+#: js/components/Settings/Settings.js:654
+msgid "N/A"
+msgstr "無"
+
 #: js/components/Settings/Settings.js:219
 msgid "Network"
 msgstr "網路"
@@ -681,11 +686,19 @@ msgstr "與 comma connect 配對您的 comma 帳號"
 msgid "Paired"
 msgstr "已配對"
 
+#: js/components/Settings/Settings.js:653
+msgid "Panda Dongle ID"
+msgstr "Panda Dongle ID"
+
+#: js/components/Settings/Settings.js:649
+msgid "Panda Firmware"
+msgstr "Panda 韌體"
+
 #: js/components/SetupWifi/SetupWifi.js:344
 msgid "Password:"
 msgstr "密碼:"
 
-#: js/components/Settings/Settings.js:843
+#: js/components/Settings/Settings.js:853
 msgid "Power Off"
 msgstr "關機"
 
@@ -703,8 +716,8 @@ msgid "Radar from your car"
 msgstr "來自您車子的雷達"
 
 #: js/components/Settings/Settings.js:129
-#: js/components/Settings/Settings.js:837
-#: js/components/Settings/Settings.js:839
+#: js/components/Settings/Settings.js:847
+#: js/components/Settings/Settings.js:849
 msgid "Reboot"
 msgstr "重新啟動"
 
@@ -728,7 +741,7 @@ msgstr "錄制並上傳駕駛的錄像"
 msgid "Remote Access"
 msgstr "遠端控制"
 
-#: js/components/Settings/Settings.js:751
+#: js/components/Settings/Settings.js:761
 msgid "Remove all"
 msgstr "移除全部"
 
@@ -756,11 +769,11 @@ msgstr "安全"
 msgid "Saturday"
 msgstr "星期六"
 
-#: js/components/Settings/Settings.js:729
+#: js/components/Settings/Settings.js:739
 msgid "Save"
 msgstr "儲存"
 
-#: js/components/Settings/Settings.js:741
+#: js/components/Settings/Settings.js:751
 msgid "Save failed. Ensure that your username is correct and you are connected to the internet."
 msgstr "儲存失敗，請確認您已連上網路並輸入正確的用戶名。"
 
@@ -799,7 +812,7 @@ msgstr "設定"
 msgid "Show password"
 msgstr "顯示密碼"
 
-#: js/components/Settings/Settings.js:845
+#: js/components/Settings/Settings.js:855
 msgid "Shutdown"
 msgstr "關機"
 
@@ -887,12 +900,12 @@ msgstr "星期二"
 msgid "UI"
 msgstr "介面"
 
-#: js/components/Settings/Settings.js:849
-#: js/components/Settings/Settings.js:851
+#: js/components/Settings/Settings.js:859
+#: js/components/Settings/Settings.js:861
 msgid "Uninstall"
 msgstr "卸載"
 
-#: js/components/Settings/Settings.js:678
+#: js/components/Settings/Settings.js:688
 msgid "Uninstall {software}"
 msgstr "卸載 {software}"
 
@@ -938,11 +951,11 @@ msgstr "使用公／米制單位"
 msgid "Use the openpilot system for adaptive cruise control and lane keep driver assistance. Your attention is required at all times to use this feature. Changing this setting takes effect when the car is powered off."
 msgstr "以 dragonpilot 系統取代您原車的主動車距控制巡航系統以及車道保持輔助系統。使用本系統時，您仍需要全時保持注意。此設定將於重新發動車子後生效。"
 
-#: js/components/Settings/Settings.js:637
+#: js/components/Settings/Settings.js:639
 msgid "Version"
 msgstr "版本"
 
-#: js/components/Settings/Settings.js:693
+#: js/components/Settings/Settings.js:703
 msgid "WARNING: This grants SSH access to all public keys in your GitHub settings. Never enter a GitHub username other than your own. The built-in SSH key will be disabled if you proceed. A comma employee will never ask you to add their GitHub."
 msgstr "警告：這將授予在您 GitHub 帳號裡所有公開密鑰的 SSH 訪問權限。永遠不要輸入您自己以外的 GitHub 用戶名。comma 的員工永遠不會要求您添加他們的 GitHub 用戶名。"
 

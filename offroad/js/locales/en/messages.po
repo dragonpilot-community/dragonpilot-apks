@@ -29,7 +29,7 @@ msgstr "<  3rd Party Apps Settings"
 msgid "<  Account Settings"
 msgstr "<  Account Settings"
 
-#: js/components/Settings/Settings.js:629
+#: js/components/Settings/Settings.js:631
 msgid "<  Developer Settings"
 msgstr "<  Developer Settings"
 
@@ -101,19 +101,19 @@ msgstr "Adjust the steering monitor timer, set this to 0 if you would like to di
 msgid "Allow Gas"
 msgstr "Allow Gas"
 
-#: js/components/Settings/Settings.js:653
+#: js/components/Settings/Settings.js:663
 msgid "Allow devices to connect to your EON using Secure Shell (SSH)."
 msgstr "Allow devices to connect to your EON using Secure Shell (SSH)."
 
-#: js/components/Settings/Settings.js:837
+#: js/components/Settings/Settings.js:847
 msgid "Are you sure you want to reboot?"
 msgstr "Are you sure you want to reboot?"
 
-#: js/components/Settings/Settings.js:843
+#: js/components/Settings/Settings.js:853
 msgid "Are you sure you want to shutdown?"
 msgstr "Are you sure you want to shutdown?"
 
-#: js/components/Settings/Settings.js:849
+#: js/components/Settings/Settings.js:859
 msgid "Are you sure you want to uninstall?"
 msgstr "Are you sure you want to uninstall?"
 
@@ -125,7 +125,7 @@ msgstr "Authenticating..."
 msgid "Authentication problem"
 msgstr "Authentication problem"
 
-#: js/components/Settings/Settings.js:659
+#: js/components/Settings/Settings.js:669
 msgid "Authorized SSH Keys"
 msgstr "Authorized SSH Keys"
 
@@ -182,10 +182,10 @@ msgstr "Camera Offset (cm)"
 msgid "Camera from EON"
 msgstr "Camera from EON"
 
-#: js/components/Settings/Settings.js:669
-#: js/components/Settings/Settings.js:838
-#: js/components/Settings/Settings.js:844
-#: js/components/Settings/Settings.js:850
+#: js/components/Settings/Settings.js:679
+#: js/components/Settings/Settings.js:848
+#: js/components/Settings/Settings.js:854
+#: js/components/Settings/Settings.js:860
 #: js/components/SetupWifi/SetupWifi.js:315
 msgid "Cancel"
 msgstr "Cancel"
@@ -336,7 +336,7 @@ msgstr "Driver Monitoring"
 msgid "Driver Monitoring detects driver awareness with 3D facial reconstruction and pose estimation. It is used to warn the driver when they appear distracted while openpilot is engaged. This feature is still in beta, so Driver Monitoring is unavailable when the facial tracking is too inaccurate (e.g. at night). The availability is indicated by the face icon at the bottom-left corner of your EON."
 msgstr "Driver Monitoring detects driver awareness with 3D facial reconstruction and pose estimation. It is used to warn the driver when they appear distracted while openpilot is engaged. This feature is still in beta, so Driver Monitoring is unavailable when the facial tracking is too inaccurate (e.g. at night). The availability is indicated by the face icon at the bottom-left corner of your EON."
 
-#: js/components/Settings/Settings.js:669
+#: js/components/Settings/Settings.js:679
 msgid "Edit"
 msgstr "Edit"
 
@@ -376,7 +376,7 @@ msgstr "Enable MiXplorer App"
 msgid "Enable Noctua Fan Mode"
 msgstr "Enable Noctua Fan Mode"
 
-#: js/components/Settings/Settings.js:650
+#: js/components/Settings/Settings.js:660
 msgid "Enable SSH"
 msgstr "Enable SSH"
 
@@ -521,15 +521,15 @@ msgstr "Free Storage"
 msgid "Friday"
 msgstr "Friday"
 
-#: js/components/Settings/Settings.js:640
+#: js/components/Settings/Settings.js:642
 msgid "Git Branch"
 msgstr "Git Branch"
 
-#: js/components/Settings/Settings.js:643
+#: js/components/Settings/Settings.js:645
 msgid "Git Revision"
 msgstr "Git Revision"
 
-#: js/components/Settings/Settings.js:712
+#: js/components/Settings/Settings.js:722
 msgid "GitHub Username"
 msgstr "GitHub Username"
 
@@ -623,6 +623,11 @@ msgstr "Monday"
 msgid "More Options"
 msgstr "More Options"
 
+#: js/components/Settings/Settings.js:650
+#: js/components/Settings/Settings.js:654
+msgid "N/A"
+msgstr "N/A"
+
 #: js/components/Settings/Settings.js:219
 msgid "Network"
 msgstr "Network"
@@ -681,11 +686,19 @@ msgstr "Pair your comma account with comma connect"
 msgid "Paired"
 msgstr "Paired"
 
+#: js/components/Settings/Settings.js:653
+msgid "Panda Dongle ID"
+msgstr "Panda Dongle ID"
+
+#: js/components/Settings/Settings.js:649
+msgid "Panda Firmware"
+msgstr "Panda Firmware"
+
 #: js/components/SetupWifi/SetupWifi.js:344
 msgid "Password:"
 msgstr "Password:"
 
-#: js/components/Settings/Settings.js:843
+#: js/components/Settings/Settings.js:853
 msgid "Power Off"
 msgstr "Power Off"
 
@@ -703,8 +716,8 @@ msgid "Radar from your car"
 msgstr "Radar from your car"
 
 #: js/components/Settings/Settings.js:129
-#: js/components/Settings/Settings.js:837
-#: js/components/Settings/Settings.js:839
+#: js/components/Settings/Settings.js:847
+#: js/components/Settings/Settings.js:849
 msgid "Reboot"
 msgstr "Reboot"
 
@@ -728,7 +741,7 @@ msgstr "Record and Upload Driver Camera"
 msgid "Remote Access"
 msgstr "Remote Access"
 
-#: js/components/Settings/Settings.js:751
+#: js/components/Settings/Settings.js:761
 msgid "Remove all"
 msgstr "Remove all"
 
@@ -756,11 +769,11 @@ msgstr "Safety"
 msgid "Saturday"
 msgstr "Saturday"
 
-#: js/components/Settings/Settings.js:729
+#: js/components/Settings/Settings.js:739
 msgid "Save"
 msgstr "Save"
 
-#: js/components/Settings/Settings.js:741
+#: js/components/Settings/Settings.js:751
 msgid "Save failed. Ensure that your username is correct and you are connected to the internet."
 msgstr "Save failed. Ensure that your username is correct and you are connected to the internet."
 
@@ -799,7 +812,7 @@ msgstr "Settings"
 msgid "Show password"
 msgstr "Show password"
 
-#: js/components/Settings/Settings.js:845
+#: js/components/Settings/Settings.js:855
 msgid "Shutdown"
 msgstr "Shutdown"
 
@@ -887,12 +900,12 @@ msgstr "Tuesday"
 msgid "UI"
 msgstr "UI"
 
-#: js/components/Settings/Settings.js:849
-#: js/components/Settings/Settings.js:851
+#: js/components/Settings/Settings.js:859
+#: js/components/Settings/Settings.js:861
 msgid "Uninstall"
 msgstr "Uninstall"
 
-#: js/components/Settings/Settings.js:678
+#: js/components/Settings/Settings.js:688
 msgid "Uninstall {software}"
 msgstr "Uninstall {software}"
 
@@ -938,11 +951,11 @@ msgstr "Use Metric System"
 msgid "Use the openpilot system for adaptive cruise control and lane keep driver assistance. Your attention is required at all times to use this feature. Changing this setting takes effect when the car is powered off."
 msgstr "Use the openpilot system for adaptive cruise control and lane keep driver assistance. Your attention is required at all times to use this feature. Changing this setting takes effect when the car is powered off."
 
-#: js/components/Settings/Settings.js:637
+#: js/components/Settings/Settings.js:639
 msgid "Version"
 msgstr "Version"
 
-#: js/components/Settings/Settings.js:693
+#: js/components/Settings/Settings.js:703
 msgid "WARNING: This grants SSH access to all public keys in your GitHub settings. Never enter a GitHub username other than your own. The built-in SSH key will be disabled if you proceed. A comma employee will never ask you to add their GitHub."
 msgstr "WARNING: This grants SSH access to all public keys in your GitHub settings. Never enter a GitHub username other than your own. The built-in SSH key will be disabled if you proceed. A comma employee will never ask you to add their GitHub."
 

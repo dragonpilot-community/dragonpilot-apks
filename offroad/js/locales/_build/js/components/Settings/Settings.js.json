@@ -7,11 +7,11 @@
       ],
       [
         "js/components/Settings/Settings.js",
-        837
+        847
       ],
       [
         "js/components/Settings/Settings.js",
-        839
+        849
       ]
     ]
   },
@@ -375,7 +375,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        629
+        631
       ]
     ]
   },
@@ -383,7 +383,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        637
+        639
       ]
     ]
   },
@@ -391,7 +391,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        640
+        642
       ]
     ]
   },
@@ -399,19 +399,31 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        643
+        645
       ]
     ]
   },
-  "Enable SSH": {
+  "Panda Firmware": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        649
+      ]
+    ]
+  },
+  "N/A": {
     "origin": [
       [
         "js/components/Settings/Settings.js",
         650
+      ],
+      [
+        "js/components/Settings/Settings.js",
+        654
       ]
     ]
   },
-  "Allow devices to connect to your EON using Secure Shell (SSH).": {
+  "Panda Dongle ID": {
     "origin": [
       [
         "js/components/Settings/Settings.js",
@@ -419,11 +431,27 @@
       ]
     ]
   },
+  "Enable SSH": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        660
+      ]
+    ]
+  },
+  "Allow devices to connect to your EON using Secure Shell (SSH).": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        663
+      ]
+    ]
+  },
   "Authorized SSH Keys": {
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        659
+        669
       ]
     ]
   },
@@ -431,19 +459,19 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        669
+        679
       ],
       [
         "js/components/Settings/Settings.js",
-        838
+        848
       ],
       [
         "js/components/Settings/Settings.js",
-        844
+        854
       ],
       [
         "js/components/Settings/Settings.js",
-        850
+        860
       ]
     ]
   },
@@ -451,7 +479,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        669
+        679
       ]
     ]
   },
@@ -459,7 +487,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        678
+        688
       ]
     ]
   },
@@ -467,7 +495,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        693
+        703
       ]
     ]
   },
@@ -475,7 +503,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        712
+        722
       ]
     ]
   },
@@ -483,7 +511,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        729
+        739
       ]
     ]
   },
@@ -491,7 +519,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        741
+        751
       ]
     ]
   },
@@ -499,7 +527,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        751
+        761
       ]
     ]
   },
@@ -507,7 +535,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        837
+        847
       ]
     ]
   },
@@ -515,7 +543,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        843
+        853
       ]
     ]
   },
@@ -523,7 +551,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        843
+        853
       ]
     ]
   },
@@ -531,7 +559,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        845
+        855
       ]
     ]
   },
@@ -539,11 +567,11 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        849
+        859
       ],
       [
         "js/components/Settings/Settings.js",
-        851
+        861
       ]
     ]
   },
@@ -551,7 +579,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        849
+        859
       ]
     ]
   }
