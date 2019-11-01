@@ -127,6 +127,14 @@
       ]
     ]
   },
+  "If you disable uploader, it will stop uploading driving data for AI training, reboot required.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        300
+      ]
+    ]
+  },
   "Enable Dashcam": {
     "origin": [
       [

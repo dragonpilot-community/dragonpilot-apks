@@ -297,7 +297,7 @@ class DragonpilotSettings extends Component {
                             title={ i18n._(t`Enable Uploader`) }
                             value={ !!parseInt(dragonEnableUploader) }
                             iconSource={ Icons.developer }
-                            description='If you disable uploader, it will stop uploading driving data for AI training, reboot required.'
+                            description={ i18n._(t`If you disable uploader, it will stop uploading driving data for AI training, reboot required.`) }
                             isExpanded={ expandedCell == 'enable_uploader' }
                             handleExpanded={ () => this.handleExpanded('enable_uploader') }
                             handleChanged={ this.props.setEnableUploader } />
