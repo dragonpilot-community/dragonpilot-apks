@@ -301,7 +301,7 @@ msgstr "顯示巡航速度"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:865
 msgid "Display Mini Dev UI"
-msgstr "顯示巡航速度"
+msgstr "顯示 dp 介面"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:811
 msgid "Display Path Prediction"
