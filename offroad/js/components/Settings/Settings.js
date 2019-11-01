@@ -540,14 +540,14 @@ class Settings extends Component {
                             size='small'
                             color='settingsDefault'
                             onPress={ () => this.props.reboot() }>
-                            Reboot
+                            { i18n._(t`Reboot`) }
                         </X.Button>
                         <X.Line color='transparent' size='tiny' spacing='mini' />
                         <X.Button
                             size='small'
                             color='settingsDefault'
                             onPress={ () => this.props.shutdown() }>
-                            Power Off
+                            { i18n._(t`Power Off`) }
                         </X.Button>
                     </X.Table>
                 </ScrollView>

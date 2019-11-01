@@ -698,6 +698,7 @@ msgstr "Panda 韌體"
 msgid "Password:"
 msgstr "密碼:"
 
+#: js/components/Settings/Settings.js:550
 #: js/components/Settings/Settings.js:853
 msgid "Power Off"
 msgstr "關機"
@@ -716,6 +717,7 @@ msgid "Radar from your car"
 msgstr "來自您車子的雷達"
 
 #: js/components/Settings/Settings.js:129
+#: js/components/Settings/Settings.js:543
 #: js/components/Settings/Settings.js:847
 #: js/components/Settings/Settings.js:849
 msgid "Reboot"
