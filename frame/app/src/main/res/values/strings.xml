@@ -4,4 +4,9 @@
     <string name="eon_temp">EON TEMP</string>
     <string name="no_panda">PANDA\nN/A</string>
     <string name="panda_active">PANDA\nACTIVE</string>
+    <string name="start_to_begin">Start your car to begin</string>
+    <string name="go_back">Go back</string>
+    <string name="ride_completed">Ride completed</string>
+    <string name="continue_str">Continue</string>
+    <string name="keey_away_sunlight">Keep EON away from sunlight</string>
 </resources>
