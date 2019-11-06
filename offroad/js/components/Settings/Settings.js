@@ -75,6 +75,7 @@ class Settings extends Component {
             authKeysUpdateState: null,
             enableTomTom: false,
             enableAutonavi: false,
+            enableAegis: false,
         }
 
         this.writeSshKeys = this.writeSshKeys.bind(this);
@@ -89,11 +90,13 @@ class Settings extends Component {
                 SpeedLimitOffset: speedLimitOffset,
                 DragonEnableTomTom: dragonEnableTomTom,
                 DragonEnableAutonavi: dragonEnableAutonavi,
+                DragonEnableAegis: dragonEnableAegis,
             },
         } = this.props;
 
         this.setState({ enableTomTom: dragonEnableTomTom === '1' })
         this.setState({ enableAutonavi: dragonEnableAutonavi === '1' })
+        this.setState({ enableAegis: dragonEnableAegis === '1' })
         if (isMetric) {
             this.setState({ speedLimitOffsetInt: parseInt(mpsToKph(speedLimitOffset)) })
         } else {
@@ -139,6 +142,9 @@ class Settings extends Component {
                 break;
             case 'autonavi':
                 this.props.runAutonavi(val);
+                break;
+            case 'aegis':
+                this.props.runAegis(val);
                 break;
         }
     }
@@ -274,7 +280,7 @@ class Settings extends Component {
                 Passive: isPassive,
             }
         } = this.props;
-        const { expandedCell, speedLimitOffsetInt, enableTomTom, enableAutonavi } = this.state;
+        const { expandedCell, speedLimitOffsetInt, enableTomTom, enableAutonavi, enableAegis } = this.state;
         return (
             <View style={ Styles.settings }>
                 <View style={ Styles.settingsHeader }>
@@ -318,6 +324,21 @@ class Settings extends Component {
                             color='settingsDefault'
                             onPress={() => this.handleRunApp('autonavi', '-1')}>
                             { i18n._(t`Close AutoNavi Map`) }
+                        </X.Button>
+                    </X.Table>
+                    }
+                    {enableAegis &&
+                    <X.Table color='darkBlue'>
+                        <X.Button
+                            color='settingsDefault'
+                            onPress={() => this.handleRunApp('aegis', '1')}>
+                            { i18n._(t`Open Aegis Safety Camera`) }
+                        </X.Button>
+                        <X.Line color='transparent' size='tiny' spacing='mini'/>
+                        <X.Button
+                            color='settingsDefault'
+                            onPress={() => this.handleRunApp('aegis', '-1')}>
+                            { i18n._(t`Close Aegis Safety Camera`) }
                         </X.Button>
                     </X.Table>
                     }
@@ -908,6 +929,9 @@ const mapDispatchToProps = dispatch => ({
     },
     runAutonavi: (val) => {
         dispatch(updateParam(Params.KEY_RUN_AUTONAVI, (val).toString()));
+    },
+    runAegis: (val) => {
+        dispatch(updateParam(Params.KEY_RUN_AEGIS, (val).toString()));
     },
     deleteParam: (param) => {
         dispatch(deleteParam(param));

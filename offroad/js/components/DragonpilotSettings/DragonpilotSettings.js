@@ -580,10 +580,12 @@ class DragonpilotSettings extends Component {
                 DragonBootTomTom: dragonBootTomTom,
                 DragonEnableAutonavi: dragonEnableAutonavi,
                 DragonBootAutonavi: dragonBootAutonavi,
+                DragonEnableAegis: dragonEnableAegis,
+                DragonBootAegis: dragonBootAegis,
                 DragonEnableMixplorer: dragonEnableMixplorer,
             },
         } = this.props;
-        const { expandedCell, enableTomTom, enableAutonavi } = this.state;
+        const { expandedCell, enableTomTom, enableAutonavi, enableAegis } = this.state;
         return (
             <View style={ Styles.settings }>
                 <View style={ Styles.settingsHeader }>
@@ -638,6 +640,26 @@ class DragonpilotSettings extends Component {
                             isExpanded={expandedCell == 'run_autonavi'}
                             handleExpanded={() => this.handleExpanded('run_autonavi')}
                             handleChanged={this.props.setBootAutonavi}/>
+                        }
+                        <X.TableCell
+                            type='switch'
+                            title={ i18n._(t`Enable Aegis Safety Camera App`) }
+                            value={ !!parseInt(dragonEnableAegis) }
+                            iconSource={ Icons.developer }
+                            description={ i18n._(t`Enable this if you wish to use Aegis Safety Camera App, restart required.`) }
+                            isExpanded={ expandedCell == 'enable_aegis' }
+                            handleExpanded={ () => this.handleExpanded('enable_aegis') }
+                            handleChanged={ this.props.setEnableAegis } />
+                        {enableAegis &&
+                        <X.TableCell
+                            type='switch'
+                            title={ i18n._(t`Auto Run Aegis Safety Camera App`) }
+                            value={!!parseInt(dragonBootAegis)}
+                            iconSource={Icons.developer}
+                            description={ i18n._(t`Enable this will have Aegis Safety Camera App start when car is on, stop when car is off.`) }
+                            isExpanded={expandedCell == 'run_aegis'}
+                            handleExpanded={() => this.handleExpanded('run_aegis')}
+                            handleChanged={this.props.setBootAegis}/>
                         }
                         <X.TableCell
                             type='switch'
@@ -1015,6 +1037,12 @@ const mapDispatchToProps = dispatch => ({
     },
     setBootAutonavi: (val) => {
         dispatch(updateParam(Params.KEY_BOOT_AUTONAVI, (val | 0).toString()));
+    },
+    setEnableAegis: (val) => {
+        dispatch(updateParam(Params.KEY_ENABLE_AEGIS, (val | 0).toString()));
+    },
+    setBootAegis: (val) => {
+        dispatch(updateParam(Params.KEY_BOOT_AEGIS, (val | 0).toString()));
     },
     setEnableMixplorer: (val) => {
         dispatch(updateParam(Params.KEY_ENABLE_MIXPLORER, (val | 0).toString()));
