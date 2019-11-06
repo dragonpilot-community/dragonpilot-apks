@@ -25,19 +25,19 @@ msgstr "3rd Party Apps"
 msgid "<  3rd Party Apps Settings"
 msgstr "<  3rd Party Apps Settings"
 
-#: js/components/Settings/Settings.js:453
+#: js/components/Settings/Settings.js:454
 msgid "<  Account Settings"
 msgstr "<  Account Settings"
 
-#: js/components/Settings/Settings.js:652
+#: js/components/Settings/Settings.js:653
 msgid "<  Developer Settings"
 msgstr "<  Developer Settings"
 
-#: js/components/Settings/Settings.js:517
+#: js/components/Settings/Settings.js:518
 msgid "<  Device Settings"
 msgstr "<  Device Settings"
 
-#: js/components/Settings/Settings.js:593
+#: js/components/Settings/Settings.js:594
 msgid "<  Network Settings"
 msgstr "<  Network Settings"
 
@@ -45,7 +45,7 @@ msgstr "<  Network Settings"
 msgid "<  Safety Settings"
 msgstr "<  Safety Settings"
 
-#: js/components/Settings/Settings.js:291
+#: js/components/Settings/Settings.js:292
 msgid "<  Settings"
 msgstr "<  Settings"
 
@@ -81,7 +81,7 @@ msgstr "ALERTS"
 msgid "ALL TIME"
 msgstr "ALL TIME"
 
-#: js/components/Settings/Settings.js:213
+#: js/components/Settings/Settings.js:214
 msgid "Account"
 msgstr "Account"
 
@@ -101,19 +101,19 @@ msgstr "Adjust the steering monitor timer, set this to 0 if you would like to di
 msgid "Allow Gas"
 msgstr "Allow Gas"
 
-#: js/components/Settings/Settings.js:684
+#: js/components/Settings/Settings.js:685
 msgid "Allow devices to connect to your EON using Secure Shell (SSH)."
 msgstr "Allow devices to connect to your EON using Secure Shell (SSH)."
 
-#: js/components/Settings/Settings.js:868
+#: js/components/Settings/Settings.js:869
 msgid "Are you sure you want to reboot?"
 msgstr "Are you sure you want to reboot?"
 
-#: js/components/Settings/Settings.js:874
+#: js/components/Settings/Settings.js:875
 msgid "Are you sure you want to shutdown?"
 msgstr "Are you sure you want to shutdown?"
 
-#: js/components/Settings/Settings.js:880
+#: js/components/Settings/Settings.js:881
 msgid "Are you sure you want to uninstall?"
 msgstr "Are you sure you want to uninstall?"
 
@@ -125,7 +125,7 @@ msgstr "Authenticating..."
 msgid "Authentication problem"
 msgstr "Authentication problem"
 
-#: js/components/Settings/Settings.js:690
+#: js/components/Settings/Settings.js:691
 msgid "Authorized SSH Keys"
 msgstr "Authorized SSH Keys"
 
@@ -173,7 +173,7 @@ msgstr "COMMA POINTS"
 msgid "Cache Fingerprint"
 msgstr "Cache Fingerprint"
 
-#: js/components/Settings/Settings.js:526
+#: js/components/Settings/Settings.js:527
 msgid "Camera Calibration"
 msgstr "Camera Calibration"
 
@@ -186,10 +186,10 @@ msgstr "Camera Offset (cm)"
 msgid "Camera from EON"
 msgstr "Camera from EON"
 
-#: js/components/Settings/Settings.js:700
-#: js/components/Settings/Settings.js:869
-#: js/components/Settings/Settings.js:875
-#: js/components/Settings/Settings.js:881
+#: js/components/Settings/Settings.js:701
+#: js/components/Settings/Settings.js:870
+#: js/components/Settings/Settings.js:876
+#: js/components/Settings/Settings.js:882
 #: js/components/SetupWifi/SetupWifi.js:315
 msgid "Cancel"
 msgstr "Cancel"
@@ -202,15 +202,15 @@ msgstr "Car Model"
 msgid "Charging Control"
 msgstr "Charging Control"
 
-#: js/components/Settings/Settings.js:341
+#: js/components/Settings/Settings.js:342
 msgid "Close Aegis Safety Camera"
 msgstr "Close Aegis Safety Camera"
 
-#: js/components/Settings/Settings.js:326
+#: js/components/Settings/Settings.js:327
 msgid "Close AutoNavi Map"
 msgstr "Close AutoNavi Map"
 
-#: js/components/Settings/Settings.js:311
+#: js/components/Settings/Settings.js:312
 msgid "Close TomTom Safety Camera"
 msgstr "Close TomTom Safety Camera"
 
@@ -250,7 +250,7 @@ msgstr "Continue"
 msgid "DRIVES"
 msgstr "DRIVES"
 
-#: js/components/Settings/Settings.js:231
+#: js/components/Settings/Settings.js:232
 msgid "Developer"
 msgstr "Developer"
 
@@ -258,11 +258,11 @@ msgstr "Developer"
 msgid "Developer perks"
 msgstr "Developer perks"
 
-#: js/components/Settings/Settings.js:219
+#: js/components/Settings/Settings.js:220
 msgid "Device"
 msgstr "Device"
 
-#: js/components/Settings/Settings.js:462
+#: js/components/Settings/Settings.js:463
 msgid "Device Paired"
 msgstr "Device Paired"
 
@@ -323,11 +323,11 @@ msgstr "Display Speed"
 msgid "Display Turning Signal"
 msgstr "Display Turning Signal"
 
-#: js/components/Settings/Settings.js:378
+#: js/components/Settings/Settings.js:379
 msgid "Display speed in km/h instead of mp/h and temperature in °C instead of °F."
 msgstr "Display speed in km/h instead of mp/h and temperature in °C instead of °F."
 
-#: js/components/Settings/Settings.js:545
+#: js/components/Settings/Settings.js:546
 msgid "Dongle ID"
 msgstr "Dongle ID"
 
@@ -344,7 +344,7 @@ msgstr "Driver Monitoring"
 msgid "Driver Monitoring detects driver awareness with 3D facial reconstruction and pose estimation. It is used to warn the driver when they appear distracted while openpilot is engaged. This feature is still in beta, so Driver Monitoring is unavailable when the facial tracking is too inaccurate (e.g. at night). The availability is indicated by the face icon at the bottom-left corner of your EON."
 msgstr "Driver Monitoring detects driver awareness with 3D facial reconstruction and pose estimation. It is used to warn the driver when they appear distracted while openpilot is engaged. This feature is still in beta, so Driver Monitoring is unavailable when the facial tracking is too inaccurate (e.g. at night). The availability is indicated by the face icon at the bottom-left corner of your EON."
 
-#: js/components/Settings/Settings.js:700
+#: js/components/Settings/Settings.js:701
 msgid "Edit"
 msgstr "Edit"
 
@@ -388,7 +388,7 @@ msgstr "Enable MiXplorer App"
 msgid "Enable Noctua Fan Mode"
 msgstr "Enable Noctua Fan Mode"
 
-#: js/components/Settings/Settings.js:681
+#: js/components/Settings/Settings.js:682
 msgid "Enable SSH"
 msgstr "Enable SSH"
 
@@ -416,7 +416,7 @@ msgstr "Enable Stock DSU Mode"
 msgid "Enable TomTom Safety Camera App"
 msgstr "Enable TomTom Safety Camera App"
 
-#: js/components/Settings/Settings.js:603
+#: js/components/Settings/Settings.js:604
 msgid "Enable Upload Over Cellular"
 msgstr "Enable Upload Over Cellular"
 
@@ -424,7 +424,7 @@ msgstr "Enable Upload Over Cellular"
 msgid "Enable Uploader"
 msgstr "Enable Uploader"
 
-#: js/components/Settings/Settings.js:356
+#: js/components/Settings/Settings.js:357
 msgid "Enable openpilot"
 msgstr "Enable openpilot"
 
@@ -533,7 +533,7 @@ msgstr "Finish Setup"
 msgid "Finish Training"
 msgstr "Finish Training"
 
-#: js/components/Settings/Settings.js:551
+#: js/components/Settings/Settings.js:552
 msgid "Free Storage"
 msgstr "Free Storage"
 
@@ -541,15 +541,15 @@ msgstr "Free Storage"
 msgid "Friday"
 msgstr "Friday"
 
-#: js/components/Settings/Settings.js:663
+#: js/components/Settings/Settings.js:664
 msgid "Git Branch"
 msgstr "Git Branch"
 
-#: js/components/Settings/Settings.js:666
+#: js/components/Settings/Settings.js:667
 msgid "Git Revision"
 msgstr "Git Revision"
 
-#: js/components/Settings/Settings.js:743
+#: js/components/Settings/Settings.js:744
 msgid "GitHub Username"
 msgstr "GitHub Username"
 
@@ -620,7 +620,7 @@ msgid "Keep in mind that certain situations are not handled by openpilot. Scenar
 msgstr "Keep in mind that certain situations are not handled by openpilot. Scenarios such as traffic lights, stop signs, quick vehicle cutins and pedestrians are unrecognized and openpilot may accelerate."
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:166
-#: js/components/Settings/Settings.js:133
+#: js/components/Settings/Settings.js:134
 #: js/components/UpdatePrompt/UpdatePrompt.js:33
 msgid "Later"
 msgstr "Later"
@@ -647,17 +647,17 @@ msgstr "Monday"
 msgid "More Options"
 msgstr "More Options"
 
-#: js/components/Settings/Settings.js:671
-#: js/components/Settings/Settings.js:675
+#: js/components/Settings/Settings.js:672
+#: js/components/Settings/Settings.js:676
 msgid "N/A"
 msgstr "N/A"
 
-#: js/components/Settings/Settings.js:225
+#: js/components/Settings/Settings.js:226
 msgid "Network"
 msgstr "Network"
 
-#: js/components/Settings/Settings.js:463
-#: js/components/Settings/Settings.js:543
+#: js/components/Settings/Settings.js:464
+#: js/components/Settings/Settings.js:544
 msgid "No"
 msgstr "No"
 
@@ -669,7 +669,7 @@ msgstr "No Network Connection"
 msgid "Now that you’re all set up, it’s important to understand the functionality and limitations of openpilot as alpha software before testing."
 msgstr "Now that you’re all set up, it’s important to understand the functionality and limitations of openpilot as alpha software before testing."
 
-#: js/components/Settings/Settings.js:335
+#: js/components/Settings/Settings.js:336
 msgid "Open Aegis Safety Camera"
 msgstr "Open Aegis Safety Camera"
 
@@ -677,19 +677,19 @@ msgstr "Open Aegis Safety Camera"
 msgid "Open Android Settings"
 msgstr "Open Android Settings"
 
-#: js/components/Settings/Settings.js:320
+#: js/components/Settings/Settings.js:321
 msgid "Open AutoNavi Map"
 msgstr "Open AutoNavi Map"
 
-#: js/components/Settings/Settings.js:623
+#: js/components/Settings/Settings.js:624
 msgid "Open Tethering Settings"
 msgstr "Open Tethering Settings"
 
-#: js/components/Settings/Settings.js:305
+#: js/components/Settings/Settings.js:306
 msgid "Open TomTom Safety Camera"
 msgstr "Open TomTom Safety Camera"
 
-#: js/components/Settings/Settings.js:616
+#: js/components/Settings/Settings.js:617
 msgid "Open WiFi Settings"
 msgstr "Open WiFi Settings"
 
@@ -697,7 +697,7 @@ msgstr "Open WiFi Settings"
 msgid "PAST WEEK"
 msgstr "PAST WEEK"
 
-#: js/components/Settings/Settings.js:484
+#: js/components/Settings/Settings.js:485
 msgid "Pair Device"
 msgstr "Pair Device"
 
@@ -709,16 +709,16 @@ msgstr "Pair Your Account"
 msgid "Pair your comma account with comma connect"
 msgstr "Pair your comma account with comma connect"
 
-#: js/components/Settings/Settings.js:214
-#: js/components/Settings/Settings.js:542
+#: js/components/Settings/Settings.js:215
+#: js/components/Settings/Settings.js:543
 msgid "Paired"
 msgstr "Paired"
 
-#: js/components/Settings/Settings.js:674
+#: js/components/Settings/Settings.js:675
 msgid "Panda Dongle ID"
 msgstr "Panda Dongle ID"
 
-#: js/components/Settings/Settings.js:670
+#: js/components/Settings/Settings.js:671
 msgid "Panda Firmware"
 msgstr "Panda Firmware"
 
@@ -726,8 +726,8 @@ msgstr "Panda Firmware"
 msgid "Password:"
 msgstr "Password:"
 
-#: js/components/Settings/Settings.js:571
-#: js/components/Settings/Settings.js:874
+#: js/components/Settings/Settings.js:572
+#: js/components/Settings/Settings.js:875
 msgid "Power Off"
 msgstr "Power Off"
 
@@ -744,14 +744,14 @@ msgstr "Privacy policy available at https://my.comma.ai/privacy.html"
 msgid "Radar from your car"
 msgstr "Radar from your car"
 
-#: js/components/Settings/Settings.js:132
-#: js/components/Settings/Settings.js:564
-#: js/components/Settings/Settings.js:868
-#: js/components/Settings/Settings.js:870
+#: js/components/Settings/Settings.js:133
+#: js/components/Settings/Settings.js:565
+#: js/components/Settings/Settings.js:869
+#: js/components/Settings/Settings.js:871
 msgid "Reboot"
 msgstr "Reboot"
 
-#: js/components/Settings/Settings.js:134
+#: js/components/Settings/Settings.js:135
 msgid "Reboot Now"
 msgstr "Reboot Now"
 
@@ -763,7 +763,7 @@ msgstr "Reboot and Update"
 msgid "Record EON screen as dashcam footage, it will automatically delete old footage if the available space is less than 15%, footage will be stored in /sdcard/dashcam/."
 msgstr "Record EON screen as dashcam footage, it will automatically delete old footage if the available space is less than 15%, footage will be stored in /sdcard/dashcam/."
 
-#: js/components/Settings/Settings.js:366
+#: js/components/Settings/Settings.js:367
 msgid "Record and Upload Driver Camera"
 msgstr "Record and Upload Driver Camera"
 
@@ -771,15 +771,15 @@ msgstr "Record and Upload Driver Camera"
 msgid "Remote Access"
 msgstr "Remote Access"
 
-#: js/components/Settings/Settings.js:782
+#: js/components/Settings/Settings.js:783
 msgid "Remove all"
 msgstr "Remove all"
 
-#: js/components/Settings/Settings.js:536
+#: js/components/Settings/Settings.js:537
 msgid "Reset"
 msgstr "Reset"
 
-#: js/components/Settings/Settings.js:132
+#: js/components/Settings/Settings.js:133
 msgid "Resetting calibration requires a reboot."
 msgstr "Resetting calibration requires a reboot."
 
@@ -787,7 +787,7 @@ msgstr "Resetting calibration requires a reboot."
 msgid "Restart"
 msgstr "Restart"
 
-#: js/components/Settings/Settings.js:435
+#: js/components/Settings/Settings.js:436
 msgid "Review Training Guide"
 msgstr "Review Training Guide"
 
@@ -799,11 +799,11 @@ msgstr "Safety"
 msgid "Saturday"
 msgstr "Saturday"
 
-#: js/components/Settings/Settings.js:760
+#: js/components/Settings/Settings.js:761
 msgid "Save"
 msgstr "Save"
 
-#: js/components/Settings/Settings.js:772
+#: js/components/Settings/Settings.js:773
 msgid "Save failed. Ensure that your username is correct and you are connected to the internet."
 msgstr "Save failed. Ensure that your username is correct and you are connected to the internet."
 
@@ -827,7 +827,7 @@ msgstr "Select light to continue"
 msgid "Select path to continue"
 msgstr "Select path to continue"
 
-#: js/components/Settings/Settings.js:548
+#: js/components/Settings/Settings.js:549
 msgid "Serial Number"
 msgstr "Serial Number"
 
@@ -842,7 +842,7 @@ msgstr "Settings"
 msgid "Show password"
 msgstr "Show password"
 
-#: js/components/Settings/Settings.js:876
+#: js/components/Settings/Settings.js:877
 msgid "Shutdown"
 msgstr "Shutdown"
 
@@ -882,11 +882,11 @@ msgstr "Tap \"SET\" to engage"
 msgid "Tap a pedal to disengage"
 msgstr "Tap a pedal to disengage"
 
-#: js/components/Settings/Settings.js:475
+#: js/components/Settings/Settings.js:476
 msgid "Terms of Service available at https://my.comma.ai/terms.html"
 msgstr "Terms of Service available at https://my.comma.ai/terms.html"
 
-#: js/components/Settings/Settings.js:528
+#: js/components/Settings/Settings.js:529
 msgid "The calibration algorithm is always active on the road facing camera. Resetting calibration is only advised when EON reports an invalid calibration alert or when EON is remounted in a different position."
 msgstr "The calibration algorithm is always active on the road facing camera. Resetting calibration is only advised when EON reports an invalid calibration alert or when EON is remounted in a different position."
 
@@ -930,16 +930,16 @@ msgstr "Tuesday"
 msgid "UI"
 msgstr "UI"
 
-#: js/components/Settings/Settings.js:880
-#: js/components/Settings/Settings.js:882
+#: js/components/Settings/Settings.js:881
+#: js/components/Settings/Settings.js:883
 msgid "Uninstall"
 msgstr "Uninstall"
 
-#: js/components/Settings/Settings.js:709
+#: js/components/Settings/Settings.js:710
 msgid "Uninstall {software}"
 msgstr "Uninstall {software}"
 
-#: js/components/Settings/Settings.js:214
+#: js/components/Settings/Settings.js:215
 msgid "Unpaired"
 msgstr "Unpaired"
 
@@ -961,31 +961,31 @@ msgstr "Update and Reboot"
 msgid "Upgrade Now"
 msgstr "Upgrade Now"
 
-#: js/components/Settings/Settings.js:555
+#: js/components/Settings/Settings.js:556
 msgid "Upload Speed"
 msgstr "Upload Speed"
 
-#: js/components/Settings/Settings.js:369
+#: js/components/Settings/Settings.js:370
 msgid "Upload data from the driver facing camera and help improve the Driver Monitoring algorithm."
 msgstr "Upload data from the driver facing camera and help improve the Driver Monitoring algorithm."
 
-#: js/components/Settings/Settings.js:606
+#: js/components/Settings/Settings.js:607
 msgid "Upload driving data over cellular connection if a sim card is used and no wifi network is available. If you have a limited data plan, you might incur in surcharges."
 msgstr "Upload driving data over cellular connection if a sim card is used and no wifi network is available. If you have a limited data plan, you might incur in surcharges."
 
-#: js/components/Settings/Settings.js:375
+#: js/components/Settings/Settings.js:376
 msgid "Use Metric System"
 msgstr "Use Metric System"
 
-#: js/components/Settings/Settings.js:359
+#: js/components/Settings/Settings.js:360
 msgid "Use the openpilot system for adaptive cruise control and lane keep driver assistance. Your attention is required at all times to use this feature. Changing this setting takes effect when the car is powered off."
 msgstr "Use the openpilot system for adaptive cruise control and lane keep driver assistance. Your attention is required at all times to use this feature. Changing this setting takes effect when the car is powered off."
 
-#: js/components/Settings/Settings.js:660
+#: js/components/Settings/Settings.js:661
 msgid "Version"
 msgstr "Version"
 
-#: js/components/Settings/Settings.js:724
+#: js/components/Settings/Settings.js:725
 msgid "WARNING: This grants SSH access to all public keys in your GitHub settings. Never enter a GitHub username other than your own. The built-in SSH key will be disabled if you proceed. A comma employee will never ask you to add their GitHub."
 msgstr "WARNING: This grants SSH access to all public keys in your GitHub settings. Never enter a GitHub username other than your own. The built-in SSH key will be disabled if you proceed. A comma employee will never ask you to add their GitHub."
 
@@ -1009,12 +1009,12 @@ msgstr "When you are ready to engage openpilot at a comfortable speed, locate th
 msgid "While openpilot is engaged, you may keep your hands on the wheel to override lateral controls. Longitudinal controls will be managed by openpilot until the gas or brake pedal is pressed to disengage."
 msgstr "While openpilot is engaged, you may keep your hands on the wheel to override lateral controls. Longitudinal controls will be managed by openpilot until the gas or brake pedal is pressed to disengage."
 
-#: js/components/Settings/Settings.js:463
-#: js/components/Settings/Settings.js:543
+#: js/components/Settings/Settings.js:464
+#: js/components/Settings/Settings.js:544
 msgid "Yes"
 msgstr "Yes"
 
-#: js/components/Settings/Settings.js:468
+#: js/components/Settings/Settings.js:469
 msgid "You may unpair your device in the comma connect app settings."
 msgstr "You may unpair your device in the comma connect app settings."
 
@@ -1034,7 +1034,7 @@ msgstr "comma connect"
 msgid "day_postfix"
 msgstr ","
 
-#: js/components/Settings/Settings.js:349
+#: js/components/Settings/Settings.js:350
 msgid "dragonpilot"
 msgstr "dragonpilot"
 
@@ -1070,6 +1070,6 @@ msgstr "openpilot will start driving when cruise control is set."
 msgid "yr_postfix"
 msgstr "-"
 
-#: js/components/Settings/Settings.js:220
+#: js/components/Settings/Settings.js:221
 msgid "{0} Free"
 msgstr "{0} Free"
