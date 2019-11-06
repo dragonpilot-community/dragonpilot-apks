@@ -124,6 +124,7 @@ class Settings extends Component {
     handleNavigatedFromMenu(route) {
         this.setState({ route: route })
         this.refs.settingsScrollView.scrollTo({ x: 0, y: 0, animated: false })
+        this.props.refreshParams();
     }
 
     handlePressedResetCalibration = async () => {
@@ -672,7 +673,7 @@ class Settings extends Component {
                             valueTextSize='tiny' />
                         <X.TableCell
                             title={ i18n._(t`Panda Dongle ID`) }
-                            value={ pandaDongleId!= null ? pandaDongleId : i18n._(t`N/A`) }
+                            value={ (pandaDongleId != null && pandaDongleId != "unprovisioned") ? pandaDongleId : i18n._(t`N/A`) }
                             valueTextSize='tiny' />
                     </X.Table>
                     <X.Table color='darkBlue'>
