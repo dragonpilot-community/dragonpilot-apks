@@ -80,7 +80,7 @@ class MainActivity : Activity(), NewDestinationReceiverDelegate, OffroadNavigati
     var sidebarCollapsed: Boolean = false
     var signalStrengthView: ImageView? = null
     var networkTypeText: TextView? = null
-    var batteryLevelView: ImageView? = null
+//    var batteryLevelView: ImageView? = null
     var batteryPercentageText: TextView? = null
 
     var sidebarMetricIP: TextView? = null
@@ -587,7 +587,7 @@ class MainActivity : Activity(), NewDestinationReceiverDelegate, OffroadNavigati
         sidebarMetricTempBorder = findViewById(R.id.sidebarMetricTempBorder) as RelativeLayout
         signalStrengthView = findViewById(R.id.indicator_network_signal) as ImageView
         networkTypeText = findViewById(R.id.network_type) as TextView
-        batteryLevelView = findViewById(R.id.indicator_battery_icon) as ImageView
+//        batteryLevelView = findViewById(R.id.indicator_battery_icon) as ImageView
         batteryPercentageText = findViewById(R.id.battery_percentage) as TextView
         activityView = findViewById(R.id.activity_view) as ActivityView
         activityOverlayManager = ActivityOverlayManager(findViewById(R.id.activity_mock), this)
@@ -790,13 +790,13 @@ class MainActivity : Activity(), NewDestinationReceiverDelegate, OffroadNavigati
 
         val isCharging = status == BatteryManager.BATTERY_STATUS_CHARGING || status == BatteryManager.BATTERY_STATUS_FULL
 
-        val batteryPctRound = if (pct > 0) (Math.ceil(pct / 25) * 25).toInt() else 0
+//        val batteryPctRound = if (pct > 0) (Math.ceil(pct / 25) * 25).toInt() else 0
 
-        val suffix = if (isCharging) "_charging" else ""
-        val iconId = resources.getIdentifier("indicator_battery_${batteryPctRound}${suffix}", "drawable", packageName)
-        val iconBattery = resources.getDrawable(iconId, null);
-        batteryLevelView?.setImageDrawable(iconBattery);
-        batteryPercentageText?.text = level.toString() + "%"
+//        val suffix = if (isCharging) "_charging" else ""
+//        val iconId = resources.getIdentifier("indicator_battery_${batteryPctRound}${suffix}", "drawable", packageName)
+//        val iconBattery = resources.getDrawable(iconId, null);
+//        batteryLevelView?.setImageDrawable(iconBattery);
+        batteryPercentageText?.text = String.format("%s%s%s", pct.toInt().toString().padStart(3), "%", if (isCharging) " +" else "  ")
     }
 
     inner class NetworkMonitor : BroadcastReceiver() {

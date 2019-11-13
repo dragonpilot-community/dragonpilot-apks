@@ -8,5 +8,5 @@
     <string name="go_back">返回</string>
     <string name="ride_completed">駕駛結束</string>
     <string name="continue_str">繼續</string>
-    <string name="keey_away_sunlight">請將您的 EON 置於陰涼處避免直接曝晒</string>
+    <string name="keep_away_sunlight">請將您的 EON 置於陰涼處避免直接曝晒</string>
 </resources>
