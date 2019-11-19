@@ -212,7 +212,7 @@ msgstr "關閉高德地圖"
 
 #: js/components/Settings/Settings.js:312
 msgid "Close TomTom Safety Camera"
-msgstr "開啟 TomTom 測速照相"
+msgstr "關閉 TomTom 測速照相"
 
 #: js/components/SetupTerms/SetupTerms.js:47
 msgid "Comma.ai, Inc. Terms & Conditions"
