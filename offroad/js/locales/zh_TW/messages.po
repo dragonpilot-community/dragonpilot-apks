@@ -204,7 +204,7 @@ msgstr "充電控制"
 
 #: js/components/Settings/Settings.js:342
 msgid "Close Aegis Safety Camera"
-msgstr "開啟神盾測速照相"
+msgstr "關閉神盾測速照相"
 
 #: js/components/Settings/Settings.js:327
 msgid "Close AutoNavi Map"
