@@ -353,6 +353,7 @@ class SetupWifi extends Component {
                                 style={ Styles.setupWifiPasswordInputField }
                                 underlineColorAndroid='transparent'
                                 keyboardType={ showPassword ? 'email-address' : null }
+                                autoCapitalize='none'
                             />
                         </View>
                     </PopupDialog>

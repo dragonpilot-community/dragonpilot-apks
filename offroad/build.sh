@@ -11,13 +11,12 @@ if [ ! -d $CEREAL ]; then
 fi
 
 pushd $CEREAL
-make
+scons -i
 popd
 
 export SENTRY_WIZARD_INTEGRATION=reactNative
 
 yarn
-node_modules/.bin/react-native link
 
 mkdir -p android/app/src/main/assets
 rm android/app/src/main/assets/index.android.bundl* || true

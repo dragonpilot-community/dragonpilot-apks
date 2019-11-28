@@ -1,18 +1,4 @@
 {
-  "presets": [
-    "babel-preset-react-native-stage-0/decorator-support",
-    "flow"
-  ],
-  "env": {
-    "development": {
-      "plugins": [
-        "transform-react-jsx-source"
-      ]
-    },
-    "production": {
-        "plugins": ["transform-remove-console"]
-    }
-  },
   "plugins": [
     "macros"
   ]
