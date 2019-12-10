@@ -445,20 +445,20 @@ msgid "Enable this if you wish to receive the factory lane departure warning whe
 msgstr "开启这个选项后，如果您的车子偏离车道 (压线)，您将会收到警示讯息。 (例如：振动方向盘)"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:631
-msgid "Enable this if you wish to turn your device into a Waze navigator, NOTE: 1. once this is enabled, tomtom/autonavi will be disabled. 2. Waze will start automatically and you will not be able to change any settings when the car is started. 3. Most dp UI elements will be disabled."
-msgstr "开启这个选项后，您的 dp 将会变成位智导航车机。注意：1. 启用后将无法使用 TomTom/高德/神盾。 2. 运行中将无法更改部分 dp 设置。 3. 大部分的 dp 介面将会自动关闭。"
+msgid "Enable this if you wish to turn your device into a Waze navigator, NOTE: 1. once this is enabled, tomtom/autonavi will be disabled. 2. Waze will start automatically and you will not be able to change any settings when the car is started. 3. Most driving UI elements will be disabled. 4, Reboot required."
+msgstr "开启这个选项后，您的 dp 将会变成位智导航车机。注意：1. 启用后将无法使用 TomTom/高德/神盾。 2. 运行中将无法更改部分 dp 设置。 3. 大部分的 dp 介面将会自动关闭。 4. 需重启。"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:685
 msgid "Enable this if you wish to use Aegis Safety Camera App, restart required."
-msgstr "若您想使用神盾测速照相，请启用这个选项，需重新开机。"
+msgstr "若您想使用神盾测速照相，请启用这个选项，需重启。"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:663
 msgid "Enable this if you wish to use Autonavi Map App, restart required."
-msgstr "若您想使用高德地图，请启用这个选项，需重新开机。"
+msgstr "若您想使用高德地图，请启用这个选项，需重启。"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:706
 msgid "Enable this if you wish to use MiXplorer file manager App, restart required."
-msgstr "若您想使用 MiXplorer 档案管理器，请启用这个选项，需重新开机。"
+msgstr "若您想使用 MiXplorer 档案管理器，请启用这个选项，需重启。"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:763
 msgid "Enable this if you wish to use Stop n Go mod, the car will ignore acceleration commands if you are on a hill, we DO NOT RECOMMEND that you enable this unless you know what it is. (Only works on cars that need resume button to start)"
@@ -466,7 +466,7 @@ msgstr "开启这个选项使用 Stop n Go 补丁，注意：在某些路况下�
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:641
 msgid "Enable this if you wish to use TomTom Safety Camera App, restart required."
-msgstr "若您想使用 TomTom 测速照相，请启用这个选项，需重新开机。"
+msgstr "若您想使用 TomTom 测速照相，请启用这个选项，需重启。"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:498
 msgid "Enable this if you wish to use gas on engaged."
@@ -530,7 +530,7 @@ msgstr "启用这个选项后，TomTom 测速照相将在行驶时自动开启�
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:372
 msgid "Enable this will let the fan running at full speed at any temperature, reboot required."
-msgstr "启用这个选项后，EON 的风扇将会一直以全速运转，这个功能适合有改装 Noctua 风扇的用户，需要重新开机。"
+msgstr "启用这个选项后，EON 的风扇将会一直以全速运转，这个功能适合有改装 Noctua 风扇的用户，需要重启。"
 
 #: js/components/training/Onboarding/Onboarding.js:546
 #: js/components/training/Onboarding/Onboarding.js:586
@@ -592,7 +592,7 @@ msgstr "我会保持关注路况。"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:312
 msgid "If you disable logger (loggered/tombstoned), it will stop recording driving data for AI training, reboot required."
-msgstr "如果您关闭这个选项，记录服务将停止储存用来训练 AI 模式的资料，需要重新开机。"
+msgstr "如果您关闭这个选项，记录服务将停止储存用来训练 AI 模式的资料，需要重启。"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:545
 msgid "If you disable this, the driver safety check will be disabled completely, we DO NOT RECOMMEND that you turn off this unless you know what you are doing, we hold no responsibility if you disable this option."
@@ -604,7 +604,7 @@ msgstr "如果您关闭这个选项，您将不再会收到 \"弯道超过方向
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:321
 msgid "If you disable uploader, it will stop uploading driving data for AI training, reboot required."
-msgstr "如果您关闭这个选项，记录上传服务将停止上传用来训练 AI 模式的资料，需要重新开机。"
+msgstr "如果您关闭这个选项，记录上传服务将停止上传用来训练 AI 模式的资料，需要重启。"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:534
 msgid "If you enable this, dp will notify you when lead car starts moving from stationary."
@@ -797,7 +797,7 @@ msgstr "重置"
 
 #: js/components/Settings/Settings.js:134
 msgid "Resetting calibration requires a reboot."
-msgstr "重置摄像头校准需要重新启动。"
+msgstr "重置摄像头校准需要重启。"
 
 #: js/components/training/Onboarding/Onboarding.js:797
 msgid "Restart"

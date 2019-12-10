@@ -431,7 +431,7 @@
       ]
     ]
   },
-  "Enable this if you wish to turn your device into a Waze navigator, NOTE: 1. once this is enabled, tomtom/autonavi will be disabled. 2. Waze will start automatically and you will not be able to change any settings when the car is started. 3. Most dp UI elements will be disabled.": {
+  "Enable this if you wish to turn your device into a Waze navigator, NOTE: 1. once this is enabled, tomtom/autonavi will be disabled. 2. Waze will start automatically and you will not be able to change any settings when the car is started. 3. Most driving UI elements will be disabled. 4, Reboot required.": {
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",

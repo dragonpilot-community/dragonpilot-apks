@@ -63,7 +63,7 @@ msgstr "<  dragonpilot Settings"
 
 #: js/components/training/Onboarding/Onboarding.js:318
 msgid "A driver assistance system is not a self driving car. This means openpilot is designed to work with you, not without you. Your attention is required to drive."
-msgstr "A driver assistance system is not a self driving car. This means openpilot is designed to work with you, not without you. Your attention is required to drive."
+msgstr "A driver assistance system is not a self driving car. This means dragonpilot is designed to work with you, not without you. Your attention is required to drive."
 
 #: js/components/training/Onboarding/Onboarding.js:417
 msgid "A vision algorithm leverages EON’s road-facing camera to determine the path to drive."
@@ -224,7 +224,7 @@ msgstr "Comma.ai, Inc. Terms & Conditions"
 
 #: js/components/training/Onboarding/Onboarding.js:772
 msgid "Congratulations! You have completed openpilot training."
-msgstr "Congratulations! You have completed openpilot training."
+msgstr "Congratulations! You have completed dragonpilot training."
 
 #: js/components/SetupWifi/SetupWifi.js:264
 #: js/components/SetupWifi/SetupWifi.js:328
@@ -277,7 +277,7 @@ msgstr "Disable this only if you do not want to see the driving UI and its block
 #: js/components/training/Onboarding/Onboarding.js:567
 #: js/components/training/Onboarding/Onboarding.js:713
 msgid "Disengage openpilot"
-msgstr "Disengage openpilot"
+msgstr "Disengage dragonpilot"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:513
 msgid "Display \"Turn Exceeds Steering Limit\" Alert"
@@ -346,7 +346,7 @@ msgstr "Driver Monitoring"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:554
 msgid "Driver Monitoring detects driver awareness with 3D facial reconstruction and pose estimation. It is used to warn the driver when they appear distracted while openpilot is engaged. This feature is still in beta, so Driver Monitoring is unavailable when the facial tracking is too inaccurate (e.g. at night). The availability is indicated by the face icon at the bottom-left corner of your EON."
-msgstr "Driver Monitoring detects driver awareness with 3D facial reconstruction and pose estimation. It is used to warn the driver when they appear distracted while openpilot is engaged. This feature is still in beta, so Driver Monitoring is unavailable when the facial tracking is too inaccurate (e.g. at night). The availability is indicated by the face icon at the bottom-left corner of your EON."
+msgstr "Driver Monitoring detects driver awareness with 3D facial reconstruction and pose estimation. It is used to warn the driver when they appear distracted while dragonpilot is engaged. This feature is still in beta, so Driver Monitoring is unavailable when the facial tracking is too inaccurate (e.g. at night). The availability is indicated by the face icon at the bottom-left corner of your EON."
 
 #: js/components/Settings/Settings.js:702
 msgid "Edit"
@@ -434,7 +434,7 @@ msgstr "Enable Waze Mode"
 
 #: js/components/Settings/Settings.js:358
 msgid "Enable openpilot"
-msgstr "Enable openpilot"
+msgstr "Enable dragonpilot"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:489
 msgid "Enable this if you wish dp to control the steering for you."
@@ -445,8 +445,8 @@ msgid "Enable this if you wish to receive the factory lane departure warning whe
 msgstr "Enable this if you wish to receive the factory lane departure warning when crossing lanes. (e.g. vibrate steering wheel)"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:631
-msgid "Enable this if you wish to turn your device into a Waze navigator, NOTE: 1. once this is enabled, tomtom/autonavi will be disabled. 2. Waze will start automatically and you will not be able to change any settings when the car is started. 3. Most dp UI elements will be disabled."
-msgstr "Enable this if you wish to turn your device into a Waze navigator, NOTE: 1. once this is enabled, tomtom/autonavi will be disabled. 2. Waze will start automatically and you will not be able to change any settings when the car is started. 3. Most dp UI elements will be disabled."
+msgid "Enable this if you wish to turn your device into a Waze navigator, NOTE: 1. once this is enabled, tomtom/autonavi will be disabled. 2. Waze will start automatically and you will not be able to change any settings when the car is started. 3. Most driving UI elements will be disabled. 4, Reboot required."
+msgstr "Enable this if you wish to turn your device into a Waze navigator, NOTE: 1. once this is enabled, tomtom/autonavi will be disabled. 2. Waze will start automatically and you will not be able to change any settings when the car is started. 3. Most driving UI elements will be disabled. 4, Reboot required."
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:685
 msgid "Enable this if you wish to use Aegis Safety Camera App, restart required."
@@ -535,7 +535,7 @@ msgstr "Enable this will let the fan running at full speed at any temperature, r
 #: js/components/training/Onboarding/Onboarding.js:546
 #: js/components/training/Onboarding/Onboarding.js:586
 msgid "Engage openpilot"
-msgstr "Engage openpilot"
+msgstr "Engage dragonpilot"
 
 #: js/components/Home/Home.js:526
 msgid "Finish Setup"
@@ -629,7 +629,7 @@ msgstr "KM"
 
 #: js/components/training/Onboarding/Onboarding.js:675
 msgid "Keep in mind that certain situations are not handled by openpilot. Scenarios such as traffic lights, stop signs, quick vehicle cutins and pedestrians are unrecognized and openpilot may accelerate."
-msgstr "Keep in mind that certain situations are not handled by openpilot. Scenarios such as traffic lights, stop signs, quick vehicle cutins and pedestrians are unrecognized and openpilot may accelerate."
+msgstr "Keep in mind that certain situations are not handled by dragonpilot. Scenarios such as traffic lights, stop signs, quick vehicle cutins and pedestrians are unrecognized and dragonpilot may accelerate."
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:169
 #: js/components/Settings/Settings.js:135
@@ -679,7 +679,7 @@ msgstr "No Network Connection"
 
 #: js/components/training/Onboarding/Onboarding.js:274
 msgid "Now that you’re all set up, it’s important to understand the functionality and limitations of openpilot as alpha software before testing."
-msgstr "Now that you’re all set up, it’s important to understand the functionality and limitations of openpilot as alpha software before testing."
+msgstr "Now that you’re all set up, it’s important to understand the functionality and limitations of dragonpilot as alpha software before testing."
 
 #: js/components/Settings/Settings.js:337
 msgid "Open Aegis Safety Camera"
@@ -920,7 +920,7 @@ msgstr "The network \"{0}\" requires a password."
 
 #: js/components/training/Onboarding/Onboarding.js:464
 msgid "The stock radar in your car helps openpilot measure the lead car distance for longitudinal control."
-msgstr "The stock radar in your car helps openpilot measure the lead car distance for longitudinal control."
+msgstr "The stock radar in your car helps dragonpilot measure the lead car distance for longitudinal control."
 
 #: js/components/SetupWifi/SetupWifi.js:77
 msgid "There was a problem scanning WiFi networks. {0}Make sure WiFi is enabled in \"More Options\" above."
@@ -928,7 +928,7 @@ msgstr "There was a problem scanning WiFi networks. {0}Make sure WiFi is enabled
 
 #: js/components/training/Onboarding/Onboarding.js:777
 msgid "This guide can be replayed at any time from the EON settings. To learn more about openpilot, read the wiki and join the community at discord.comma.ai"
-msgstr "This guide can be replayed at any time from the EON settings. To learn more about openpilot, read the wiki and join the community at discord.comma.ai"
+msgstr "This guide can be replayed at any time from the EON settings. To learn more about dragonpilot, read the wiki and join the community at discord.comma.ai"
 
 #: js/components/Home/Home.js:132
 msgid "Thursday"
@@ -995,7 +995,7 @@ msgstr "Use Metric System"
 
 #: js/components/Settings/Settings.js:361
 msgid "Use the openpilot system for adaptive cruise control and lane keep driver assistance. Your attention is required at all times to use this feature. Changing this setting takes effect when the car is powered off."
-msgstr "Use the openpilot system for adaptive cruise control and lane keep driver assistance. Your attention is required at all times to use this feature. Changing this setting takes effect when the car is powered off."
+msgstr "Use the dragonpilot system for adaptive cruise control and lane keep driver assistance. Your attention is required at all times to use this feature. Changing this setting takes effect when the car is powered off."
 
 #: js/components/Settings/Settings.js:662
 msgid "Version"
@@ -1011,19 +1011,19 @@ msgstr "Wednesday"
 
 #: js/components/training/Onboarding/Onboarding.js:269
 msgid "Welcome to openpilot alpha"
-msgstr "Welcome to openpilot alpha"
+msgstr "Welcome to dragonpilot alpha"
 
 #: js/components/training/Onboarding/Onboarding.js:632
 msgid "When openpilot is engaged, you must always pay attention! openpilot monitors awareness with 3D facial reconstruction and pose. Distracted drivers are alerted, then disengaged from openpilot until corrected."
-msgstr "When openpilot is engaged, you must always pay attention! openpilot monitors awareness with 3D facial reconstruction and pose. Distracted drivers are alerted, then disengaged from openpilot until corrected."
+msgstr "When dragonpilot is engaged, you must always pay attention! dragonpilot monitors awareness with 3D facial reconstruction and pose. Distracted drivers are alerted, then disengaged from dragonpilot until corrected."
 
 #: js/components/training/Onboarding/Onboarding.js:591
 msgid "When you are ready to engage openpilot at a comfortable speed, locate the cruise controls on your steering wheel and press \"SET\" to begin."
-msgstr "When you are ready to engage openpilot at a comfortable speed, locate the cruise controls on your steering wheel and press \"SET\" to begin."
+msgstr "When you are ready to engage dragonpilot at a comfortable speed, locate the cruise controls on your steering wheel and press \"SET\" to begin."
 
 #: js/components/training/Onboarding/Onboarding.js:718
 msgid "While openpilot is engaged, you may keep your hands on the wheel to override lateral controls. Longitudinal controls will be managed by openpilot until the gas or brake pedal is pressed to disengage."
-msgstr "While openpilot is engaged, you may keep your hands on the wheel to override lateral controls. Longitudinal controls will be managed by openpilot until the gas or brake pedal is pressed to disengage."
+msgstr "While dragonpilot is engaged, you may keep your hands on the wheel to override lateral controls. Longitudinal controls will be managed by dragonpilot until the gas or brake pedal is pressed to disengage."
 
 #: js/components/Settings/Settings.js:465
 #: js/components/Settings/Settings.js:545
@@ -1063,24 +1063,24 @@ msgstr "-"
 #: js/components/training/Onboarding/Onboarding.js:667
 #: js/components/training/Onboarding/Onboarding.js:710
 msgid "openpilot controls"
-msgstr "openpilot controls"
+msgstr "dragonpilot controls"
 
 #: js/components/training/Onboarding/Onboarding.js:313
 msgid "openpilot is an advanced driver assistance system."
-msgstr "openpilot is an advanced driver assistance system."
+msgstr "dragonpilot is an advanced driver assistance system."
 
 #: js/components/training/Onboarding/Onboarding.js:409
 #: js/components/training/Onboarding/Onboarding.js:456
 msgid "openpilot sensors"
-msgstr "openpilot sensors"
+msgstr "dragonpilot sensors"
 
 #: js/components/training/Onboarding/Onboarding.js:369
 msgid "openpilot uses multiple sensors to see the road ahead."
-msgstr "openpilot uses multiple sensors to see the road ahead."
+msgstr "dragonpilot uses multiple sensors to see the road ahead."
 
 #: js/components/training/Onboarding/Onboarding.js:534
 msgid "openpilot will start driving when cruise control is set."
-msgstr "openpilot will start driving when cruise control is set."
+msgstr "dragonpilot will start driving when cruise control is set."
 
 #: js/components/Home/Home.js:133
 msgid "yr_postfix"

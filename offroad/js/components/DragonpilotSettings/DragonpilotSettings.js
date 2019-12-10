@@ -628,7 +628,7 @@ class DragonpilotSettings extends Component {
                             title={ i18n._(t`Enable Waze Mode`) }
                             value={ !!parseInt(dragonWazeMode) }
                             iconSource={ Icons.developer }
-                            description={ i18n._(t`Enable this if you wish to turn your device into a Waze navigator, NOTE: 1. once this is enabled, tomtom/autonavi will be disabled. 2. Waze will start automatically and you will not be able to change any settings when the car is started. 3. Most dp UI elements will be disabled.`) }
+                            description={ i18n._(t`Enable this if you wish to turn your device into a Waze navigator, NOTE: 1. once this is enabled, tomtom/autonavi will be disabled. 2. Waze will start automatically and you will not be able to change any settings when the car is started. 3. Most driving UI elements will be disabled. 4, Reboot required.`) }
                             isExpanded={ expandedCell == 'enable_waze' }
                             handleExpanded={ () => this.handleExpanded('enable_waze') }
                             handleChanged={ this.props.setEnableWazeMode } />

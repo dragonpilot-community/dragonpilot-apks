@@ -445,8 +445,12 @@ msgid "Enable this if you wish to receive the factory lane departure warning whe
 msgstr "開啟這個選項後，如果您的車子偏離車道 (壓線)，您將會收到警示訊息。 (例如：振動方向盤)"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:631
-msgid "Enable this if you wish to turn your device into a Waze navigator, NOTE: 1. once this is enabled, tomtom/autonavi will be disabled. 2. Waze will start automatically and you will not be able to change any settings when the car is started. 3. Most dp UI elements will be disabled."
-msgstr "開啟這個選項後，您的 dp 將會變成位智導航車機。注意：1. 啟用後將無法使用 TomTom/高德/神盾。 2. 運作中將無法更改部分 dp 設定。 3. 大部分的 dp 介面將會自動關閉。"
+#~ msgid "Enable this if you wish to turn your device into a Waze navigator, NOTE: 1. once this is enabled, tomtom/autonavi will be disabled. 2. Waze will start automatically and you will not be able to change any settings when the car is started. 3. Most dp UI elements will be disabled."
+#~ msgstr "開啟這個選項後，您的 dp 將會變成位智導航車機。注意：1. 啟用後將無法使用 TomTom/高德/神盾。 2. 運作中將無法更改部分 dp 設定。 3. 大部分的 dp 介面將會自動關閉。"
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:631
+msgid "Enable this if you wish to turn your device into a Waze navigator, NOTE: 1. once this is enabled, tomtom/autonavi will be disabled. 2. Waze will start automatically and you will not be able to change any settings when the car is started. 3. Most driving UI elements will be disabled. 4, Reboot required."
+msgstr "開啟這個選項後，您的 dp 將會變成位智導航車機。注意：1. 啟用後將無法使用 TomTom/高德/神盾。 2. 運作中將無法更改部分 dp 設定。 3. 大部分的 dp 介面將會自動關閉。 4. 需重新開機。"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:685
 msgid "Enable this if you wish to use Aegis Safety Camera App, restart required."
