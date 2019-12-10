@@ -53,6 +53,7 @@ class DragonpilotSettings extends Component {
             autoShutdownAtInt: '0',
             VolumeBoost: '0',
             carModel: '',
+            wazeMode: false,
         }
     }
 
@@ -67,16 +68,18 @@ class DragonpilotSettings extends Component {
                 DragonAutoShutdownAt: dragonAutoShutdownAt,
                 DragonUIVolumeBoost: dragonUIVolumeBoost,
                 DragonCarModel: dragonCarModel,
+                DragonWazeMode: dragonWazeMode,
             },
         } = this.props;
         this.setState({ steeringMonitorTimerInt: dragonSteeringMonitorTimer === '0'? 0 : parseInt(dragonSteeringMonitorTimer) || 3 })
-        this.setState({ enableTomTom: dragonEnableTomTom === '1' })
-        this.setState({ enableAutonavi: dragonEnableAutonavi === '1' })
+        this.setState({ enableTomTom: dragonWazeMode === '0' && dragonEnableTomTom === '1' })
+        this.setState({ enableAutonavi: dragonWazeMode === '0' && dragonEnableAutonavi === '1' })
         this.setState({ enableMixplorer: dragonEnableMixplorer === '1' })
         this.setState({ cameraOffsetInt: dragonCameraOffset === '0'? 0 : parseInt(dragonCameraOffset) || 6 })
         this.setState({ autoShutdownAtInt: dragonAutoShutdownAt === '0'? 0 : parseInt(dragonAutoShutdownAt) || 0 })
         this.setState({ VolumeBoostInt: dragonUIVolumeBoost === '0'? 0 : parseInt(dragonUIVolumeBoost) || 0 })
         this.setState({ carModel: dragonCarModel })
+        this.setState({ wazeMode: dragonWazeMode === '1' })
     }
 
     handleExpanded(key) {
@@ -174,6 +177,9 @@ class DragonpilotSettings extends Component {
             case 'mixplorer':
                 this.props.runMixplorer(val);
                 break;
+            case 'waze':
+                this.props.runWaze(val);
+                break;
         }
     }
 
@@ -256,7 +262,7 @@ class DragonpilotSettings extends Component {
                 DragonChargingCtrl: dragonChargingCtrl,
             }
         } = this.props;
-        const { expandedCell, enableMixplorer, cameraOffsetInt, autoShutdownAtInt, carModel } = this.state;
+        const { expandedCell, enableMixplorer, cameraOffsetInt, autoShutdownAtInt, carModel, wazeMode } = this.state;
         return (
             <View style={ Styles.settings }>
                 <View style={ Styles.settingsHeader }>
@@ -273,6 +279,21 @@ class DragonpilotSettings extends Component {
                     <X.Table direction='row' color='darkBlue'>
                         { this.renderSettingsMenu() }
                     </X.Table>
+                    {wazeMode &&
+                    <X.Table color='darkBlue'>
+                        <X.Button
+                            color='settingsDefault'
+                            onPress={() => this.handleRunApp('waze', '1')}>
+                            { i18n._(t`Open Waze`) }
+                        </X.Button>
+                        <X.Line color='transparent' size='tiny' spacing='mini'/>
+                        <X.Button
+                            color='settingsDefault'
+                            onPress={() => this.handleRunApp('waze', '-1')}>
+                            { i18n._(t`Close Waze`) }
+                        </X.Button>
+                    </X.Table>
+                    }
                     {enableMixplorer &&
                     <X.Table color='darkBlue'>
                         <X.Button
@@ -583,9 +604,10 @@ class DragonpilotSettings extends Component {
                 DragonEnableAegis: dragonEnableAegis,
                 DragonBootAegis: dragonBootAegis,
                 DragonEnableMixplorer: dragonEnableMixplorer,
+                DragonWazeMode: dragonWazeMode,
             },
         } = this.props;
-        const { expandedCell, enableTomTom, enableAutonavi, enableAegis } = this.state;
+        const { expandedCell, enableTomTom, enableAutonavi, enableAegis, wazeMode } = this.state;
         return (
             <View style={ Styles.settings }>
                 <View style={ Styles.settingsHeader }>
@@ -603,60 +625,75 @@ class DragonpilotSettings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
-                            title={ i18n._(t`Enable TomTom Safety Camera App`) }
-                            value={ !!parseInt(dragonEnableTomTom) }
+                            title={ i18n._(t`Enable Waze Mode`) }
+                            value={ !!parseInt(dragonWazeMode) }
                             iconSource={ Icons.developer }
-                            description={ i18n._(t`Enable this if you wish to use TomTom Safety Camera App, restart required.`) }
-                            isExpanded={ expandedCell == 'enable_tomtom' }
-                            handleExpanded={ () => this.handleExpanded('enable_tomtom') }
-                            handleChanged={ this.props.setEnableTomTom } />
-                        {enableTomTom &&
+                            description={ i18n._(t`Enable this if you wish to turn your device into a Waze navigator, NOTE: 1. once this is enabled, tomtom/autonavi will be disabled. 2. Waze will start automatically and you will not be able to change any settings when the car is started. 3. Most dp UI elements will be disabled.`) }
+                            isExpanded={ expandedCell == 'enable_waze' }
+                            handleExpanded={ () => this.handleExpanded('enable_waze') }
+                            handleChanged={ this.props.setEnableWazeMode } />
+                        {!wazeMode &&
                         <X.TableCell
                             type='switch'
-                            title={ i18n._(t`Auto Run TomTom Safety Camera App`) }
+                            title={i18n._(t`Enable TomTom Safety Camera App`)}
+                            value={!!parseInt(dragonEnableTomTom)}
+                            iconSource={Icons.developer}
+                            description={i18n._(t`Enable this if you wish to use TomTom Safety Camera App, restart required.`)}
+                            isExpanded={expandedCell == 'enable_tomtom'}
+                            handleExpanded={() => this.handleExpanded('enable_tomtom')}
+                            handleChanged={this.props.setEnableTomTom}/>
+                        }
+                        {enableTomTom &&
+                            <X.TableCell
+                            type='switch'
+                            title={i18n._(t`Auto Run TomTom Safety Camera App`)}
                             value={!!parseInt(dragonBootTomTom)}
                             iconSource={Icons.developer}
-                            description={ i18n._(t`Enable this will have TomTom Safety Camera App start when car is on, stop when car is off.`) }
+                            description={i18n._(t`Enable this will have TomTom Safety Camera App start when car is on, stop when car is off.`)}
                             isExpanded={expandedCell == 'run_tomtom'}
                             handleExpanded={() => this.handleExpanded('run_tomtom')}
                             handleChanged={this.props.setBootTomTom}/>
                         }
+                        {!wazeMode &&
                         <X.TableCell
                             type='switch'
-                            title={ i18n._(t`Enable Autonavi Map App`) }
-                            value={ !!parseInt(dragonEnableAutonavi) }
-                            iconSource={ Icons.developer }
-                            description={ i18n._(t`Enable this if you wish to use Autonavi Map App, restart required.`) }
-                            isExpanded={ expandedCell == 'enable_autonavi' }
-                            handleExpanded={ () => this.handleExpanded('enable_autonavi') }
-                            handleChanged={ this.props.setEnableAutonavi} />
+                            title={i18n._(t`Enable Autonavi Map App`)}
+                            value={!!parseInt(dragonEnableAutonavi)}
+                            iconSource={Icons.developer}
+                            description={i18n._(t`Enable this if you wish to use Autonavi Map App, restart required.`)}
+                            isExpanded={expandedCell == 'enable_autonavi'}
+                            handleExpanded={() => this.handleExpanded('enable_autonavi')}
+                            handleChanged={this.props.setEnableAutonavi}/>
+                        }
                         {enableAutonavi &&
-                        <X.TableCell
+                            <X.TableCell
                             type='switch'
-                            title={ i18n._(t`Auto Run Autonavi Map`) }
+                            title={i18n._(t`Auto Run Autonavi Map`)}
                             value={!!parseInt(dragonBootAutonavi)}
                             iconSource={Icons.developer}
-                            description={ i18n._(t`Enable this will have Autonavi Map App start when car is on, stop when car is off.`) }
+                            description={i18n._(t`Enable this will have Autonavi Map App start when car is on, stop when car is off.`)}
                             isExpanded={expandedCell == 'run_autonavi'}
                             handleExpanded={() => this.handleExpanded('run_autonavi')}
                             handleChanged={this.props.setBootAutonavi}/>
                         }
+                        {!wazeMode &&
                         <X.TableCell
                             type='switch'
-                            title={ i18n._(t`Enable Aegis Safety Camera App`) }
-                            value={ !!parseInt(dragonEnableAegis) }
-                            iconSource={ Icons.developer }
-                            description={ i18n._(t`Enable this if you wish to use Aegis Safety Camera App, restart required.`) }
-                            isExpanded={ expandedCell == 'enable_aegis' }
-                            handleExpanded={ () => this.handleExpanded('enable_aegis') }
-                            handleChanged={ this.props.setEnableAegis } />
+                            title={i18n._(t`Enable Aegis Safety Camera App`)}
+                            value={!!parseInt(dragonEnableAegis)}
+                            iconSource={Icons.developer}
+                            description={i18n._(t`Enable this if you wish to use Aegis Safety Camera App, restart required.`)}
+                            isExpanded={expandedCell == 'enable_aegis'}
+                            handleExpanded={() => this.handleExpanded('enable_aegis')}
+                            handleChanged={this.props.setEnableAegis}/>
+                        }
                         {enableAegis &&
-                        <X.TableCell
+                            <X.TableCell
                             type='switch'
-                            title={ i18n._(t`Auto Run Aegis Safety Camera App`) }
+                            title={i18n._(t`Auto Run Aegis Safety Camera App`)}
                             value={!!parseInt(dragonBootAegis)}
                             iconSource={Icons.developer}
-                            description={ i18n._(t`Enable this will have Aegis Safety Camera App start when car is on, stop when car is off.`) }
+                            description={i18n._(t`Enable this will have Aegis Safety Camera App start when car is on, stop when car is off.`)}
                             isExpanded={expandedCell == 'run_aegis'}
                             handleExpanded={() => this.handleExpanded('run_aegis')}
                             handleChanged={this.props.setBootAegis}/>
@@ -1094,6 +1131,12 @@ const mapDispatchToProps = dispatch => ({
     },
     setToyotaSnGMod: (val) => {
         dispatch(updateParam(Params.KEY_TOYOTA_SNG_MOD, (val | 0).toString()));
+    },
+    setEnableWazeMode: (val) => {
+        dispatch(updateParam(Params.KEY_WAZE_MODE, (val | 0).toString()));
+    },
+    runWaze: (val) => {
+        dispatch(updateParam(Params.KEY_RUN_WAZE, (val).toString()));
     },
 });
 

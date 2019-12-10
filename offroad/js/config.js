@@ -76,4 +76,6 @@ export const Params = {
     KEY_ENABLE_SLOW_ON_CURVE: 'DragonEnableSlowOnCurve',
     KEY_ENABLE_LEAD_CAR_MOVING_ALERT: 'DragonEnableLeadCarMovingAlert',
     KEY_TOYOTA_SNG_MOD: 'DragonToyotaSnGMod',
+    KEY_WAZE_MODE: 'DragonWazeMode',
+    KEY_RUN_WAZE: 'DragonRunWaze',
 };

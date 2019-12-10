@@ -91,12 +91,13 @@ class Settings extends Component {
                 DragonEnableTomTom: dragonEnableTomTom,
                 DragonEnableAutonavi: dragonEnableAutonavi,
                 DragonEnableAegis: dragonEnableAegis,
+                DragonWazeMode: dragonWazeMode,
             },
         } = this.props;
 
-        this.setState({ enableTomTom: dragonEnableTomTom === '1' })
-        this.setState({ enableAutonavi: dragonEnableAutonavi === '1' })
-        this.setState({ enableAegis: dragonEnableAegis === '1' })
+        this.setState({ enableTomTom: dragonWazeMode === '0' && dragonEnableTomTom === '1' })
+        this.setState({ enableAutonavi: dragonWazeMode === '0' && dragonEnableAutonavi === '1' })
+        this.setState({ enableAegis: dragonWazeMode === '0' && dragonEnableAegis === '1' })
         if (isMetric) {
             this.setState({ speedLimitOffsetInt: parseInt(mpsToKph(speedLimitOffset)) })
         } else {
