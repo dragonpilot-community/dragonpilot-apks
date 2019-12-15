@@ -11,6 +11,7 @@ export const ALERT_PARAMS = [
   Params.KEY_OFFROAD_CONNECTIVITY_NEEDED,
   Params.KEY_OFFROAD_PANDA_FIRMWARE_MISMATCH,
   Params.KEY_OFFROAD_INVALID_TIME,
+  Params.KEY_OFFROAD_IS_TAKING_SNAPSHOT,
 ];
 const PARAMS = [
   "AccessToken",
@@ -25,7 +26,6 @@ const PARAMS = [
   "HasCompletedSetup",
   "IsGeofenceEnabled",
   "IsMetric",
-  "IsUploadVideoOverCellularEnabled",
   "LimitSetSpeed",
   "LiveParameters",
   "LongitudinalControl",
@@ -37,6 +37,8 @@ const PARAMS = [
   "OpenpilotEnabledToggle",
   "PandaFirmware",
   "PandaDongleId",
+  "CommunityFeaturesToggle",
+  "IsLdwEnabled",
   // dragonpilot
   "DragonLatCtrl",
   "DragonAllowGas",

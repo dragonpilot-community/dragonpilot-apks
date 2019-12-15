@@ -25,12 +25,19 @@ extern "C" JNIEXPORT void JNICALL Java_ai_comma_messaging_Loader_init(JNIEnv *en
     strcpy(messagingLibraryPath, pythonPath);
     strcat(messagingLibraryPath, messagingLibraryFile);
     const char* libcppPath = "/system/comma/usr/lib/libc++_shared.so";
+    const char* libGnustlPath = "/system/comma/usr/lib/libgnustl_shared.so";
 
     void* opened = dlopen(libcppPath, RTLD_NOW | RTLD_GLOBAL);
     if(!opened) {
         char *error = dlerror();
         LOGE ("Error opening libc++_shared ( %s )", (error) ? error : "");
     } else { LOGE("Opened libc++_shared.so"); }
+
+    opened = dlopen(libGnustlPath, RTLD_NOW | RTLD_GLOBAL);
+    if(!opened) {
+        char *error = dlerror();
+        LOGE ("Error opening libgnustl_shared ( %s )", (error) ? error : "");
+    } else { LOGE("Opened libgnustl_shared.so"); }
 
     opened = dlopen(messagingLibraryPath, RTLD_NOW | RTLD_GLOBAL);
     if(!opened) {
@@ -78,6 +85,16 @@ Java_ai_comma_messaging_Message_nativeGetSize(
     Message *msg = (Message *)messageAddr;
 
     return (jlong)msg->getSize();
+}
+
+extern "C"
+JNIEXPORT void JNICALL
+Java_ai_comma_messaging_Message_nativeRelease(
+        JNIEnv *env,
+        jobject obj,
+        jlong messageAddr) {
+    Message *msg = (Message *)messageAddr;
+    delete msg;
 }
 
 std::string jStringToStdString(JNIEnv *env, jstring jStr) {
@@ -235,4 +252,14 @@ Java_ai_comma_messaging_PubSocket_nativeSend(
     env->ReleaseByteArrayElements(jData, bytes, JNI_ABORT);
 
     return err;
+}
+
+extern "C"
+JNIEXPORT void JNICALL
+Java_ai_comma_messaging_PubSocket_nativeClose(
+        JNIEnv *env,
+        jclass cls,
+        jlong sockAddr) {
+    PubSocket *sock = (PubSocket *) sockAddr;
+    delete sock;
 }

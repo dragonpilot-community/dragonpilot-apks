@@ -8,7 +8,6 @@ export const Params = {
     KEY_CALIBRATION_PARAMS: 'CalibrationParams',
     KEY_CLOUD_CALIBRATION: 'CloudCalibration',
     KEY_DONGLE_ID: 'DongleId',
-    KEY_UPLOAD_CELLULAR: 'IsUploadVideoOverCellularEnabled',
     KEY_ACCEPTED_TERMS_VERSION: 'HasAcceptedTerms',
     KEY_DO_UNINSTALL: 'DoUninstall',
     KEY_HAS_COMPLETED_SETUP: 'HasCompletedSetup',
@@ -31,6 +30,9 @@ export const Params = {
     KEY_OFFROAD_CONNECTIVITY_NEEDED: 'Offroad_ConnectivityNeeded',
     KEY_OFFROAD_PANDA_FIRMWARE_MISMATCH: 'Offroad_PandaFirmwareMismatch',
     KEY_OFFROAD_INVALID_TIME: 'Offroad_InvalidTime',
+    KEY_OFFROAD_IS_TAKING_SNAPSHOT: 'Offroad_IsTakingSnapshot',
+    KEY_COMMUNITY_FEATURES: 'CommunityFeaturesToggle',
+    KEY_LANE_DEPARTURE_WARNING_ENABLED: 'IsLdwEnabled',
     // dragonpilot
     KEY_LAT_CTRL: 'DragonLatCtrl',
     KEY_ALLOW_GAS: 'DragonAllowGas',
