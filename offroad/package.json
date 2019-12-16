@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "@babel/core": "^7.4.5",
+    "@babel/core": "^7.7.5",
     "@babel/runtime": "^7.4.5",
+    "@lingui/cli": "^2.9.0",
+    "@lingui/macro": "^2.9.0",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.8.0",
+    "babel-plugin-macros": "^2.8.0",
     "babel-plugin-transform-remove-console": "^6.9.4",
     "jest": "^24.8.0",
     "lodash": "^4.17.4",
@@ -32,9 +36,14 @@
   },
   "dependencies": {
     "@commaai/comma-api": "1.2.1",
-    "@sentry/react-native": "^1.0.9",
-    "comma-x-native": "git+https://git@github.com/commaai/comma-x-native.git",
     "@commaai/jsc-android": "250230.0.0",
+    "@lingui/react": "^2.9.0",
+    "@sentry/react-native": "^1.0.9",
+    "@types/jest": "^24.0.23",
+    "@types/react": "^16.9.16",
+    "@types/react-native": "^0.60.25",
+    "@types/react-test-renderer": "^16.9.1",
+    "comma-x-native": "git+https://git@github.com/dragonpilot-community/comma-x-native.git",
     "moment": "^2.19.1",
     "react": "16.8.3",
     "react-native": "0.59.10",
@@ -48,6 +57,7 @@
     "redux": "^3.7.2",
     "redux-persist": "^5.2.2",
     "redux-persist-filesystem-storage": "^1.1.1",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "typescript": "^3.7.3"
   }
 }
