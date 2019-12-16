@@ -87,6 +87,8 @@ const PARAMS = [
   "DragonToyotaSnGMod",
   "DragonWazeMode",
   "DragonRunWaze",
+  "DragonEnableAssistedLC",
+  "DragonEnableAutoLC",
 ].concat(ALERT_PARAMS);
 
 export function refreshParams(params) {

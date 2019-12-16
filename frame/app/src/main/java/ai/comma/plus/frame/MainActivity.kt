@@ -256,7 +256,7 @@ class MainActivity : Activity(), NewDestinationReceiverDelegate, OffroadNavigati
                 updateSidebarMetrics(
                   log.thermal.freeSpace,
                   log.thermal.pa0,
-                  log.thermal.thermalStatus.toString());
+                  log.thermal.thermalStatus.toString(),
                   log.thermal.ipAddr.toString());
             }
         }

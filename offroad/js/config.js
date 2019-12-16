@@ -80,4 +80,6 @@ export const Params = {
     KEY_TOYOTA_SNG_MOD: 'DragonToyotaSnGMod',
     KEY_WAZE_MODE: 'DragonWazeMode',
     KEY_RUN_WAZE: 'DragonRunWaze',
+    KEY_ASSISTED_LC: 'DragonEnableAssistedLC',
+    KEY_AUTO_LC: 'DragonEnableAutoLC',
 };
