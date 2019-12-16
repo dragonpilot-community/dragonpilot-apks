@@ -575,7 +575,7 @@
       ]
     ]
   },
-  "Enable Lane Departure Warning": {
+  "Enable Lane Departure Warnings": {
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",

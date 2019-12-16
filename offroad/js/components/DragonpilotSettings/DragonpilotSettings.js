@@ -748,7 +748,7 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setToyotaStockDSU } />
                         <X.TableCell
                             type='switch'
-                            title={ i18n._(t`Enable Lane Departure Warning`) }
+                            title={ i18n._(t`Enable Lane Departure Warnings`) }
                             value={ !!parseInt(dragonToyotaLaneDepartureWarning) }
                             iconSource={ Icons.developer }
                             description={ i18n._(t`Enable this if you wish to receive the factory lane departure warning when crossing lanes. (e.g. vibrate steering wheel)`) }

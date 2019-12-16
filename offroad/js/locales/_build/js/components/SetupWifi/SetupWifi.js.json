@@ -3,11 +3,11 @@
     "origin": [
       [
         "js/components/SetupWifi/SetupWifi.js",
-        221
+        226
       ],
       [
         "js/components/SetupWifi/SetupWifi.js",
-        241
+        246
       ]
     ]
   },
@@ -15,7 +15,7 @@
     "origin": [
       [
         "js/components/SetupWifi/SetupWifi.js",
-        222
+        227
       ]
     ]
   },
@@ -23,7 +23,7 @@
     "origin": [
       [
         "js/components/SetupWifi/SetupWifi.js",
-        223
+        228
       ]
     ]
   },
@@ -31,11 +31,11 @@
     "origin": [
       [
         "js/components/SetupWifi/SetupWifi.js",
-        264
+        269
       ],
       [
         "js/components/SetupWifi/SetupWifi.js",
-        328
+        333
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "js/components/SetupWifi/SetupWifi.js",
-        303
+        308
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "js/components/SetupWifi/SetupWifi.js",
-        315
+        320
       ]
     ]
   },
@@ -67,7 +67,7 @@
     "origin": [
       [
         "js/components/SetupWifi/SetupWifi.js",
-        336
+        341
       ]
     ]
   },
@@ -75,7 +75,7 @@
     "origin": [
       [
         "js/components/SetupWifi/SetupWifi.js",
-        344
+        349
       ]
     ]
   },
@@ -83,7 +83,7 @@
     "origin": [
       [
         "js/components/SetupWifi/SetupWifi.js",
-        364
+        370
       ]
     ]
   },
@@ -91,7 +91,7 @@
     "origin": [
       [
         "js/components/SetupWifi/SetupWifi.js",
-        371
+        377
       ]
     ]
   },
@@ -99,7 +99,7 @@
     "origin": [
       [
         "js/components/SetupWifi/SetupWifi.js",
-        391
+        397
       ]
     ]
   },
@@ -107,7 +107,7 @@
     "origin": [
       [
         "js/components/SetupWifi/SetupWifi.js",
-        408
+        414
       ]
     ]
   },
@@ -115,7 +115,7 @@
     "origin": [
       [
         "js/components/SetupWifi/SetupWifi.js",
-        419
+        425
       ]
     ]
   },
@@ -123,7 +123,7 @@
     "origin": [
       [
         "js/components/SetupWifi/SetupWifi.js",
-        419
+        425
       ]
     ]
   }

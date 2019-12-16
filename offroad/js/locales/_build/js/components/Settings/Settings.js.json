@@ -3,19 +3,19 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        134
+        140
       ],
       [
         "js/components/Settings/Settings.js",
-        566
+        582
       ],
       [
         "js/components/Settings/Settings.js",
-        870
+        890
       ],
       [
         "js/components/Settings/Settings.js",
-        872
+        892
       ]
     ]
   },
@@ -23,7 +23,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        134
+        140
       ]
     ]
   },
@@ -31,7 +31,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        135
+        141
       ]
     ]
   },
@@ -39,7 +39,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        136
+        142
       ]
     ]
   },
@@ -47,7 +47,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        215
+        221
       ]
     ]
   },
@@ -55,11 +55,11 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        216
+        222
       ],
       [
         "js/components/Settings/Settings.js",
-        544
+        560
       ]
     ]
   },
@@ -67,7 +67,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        216
+        222
       ]
     ]
   },
@@ -75,7 +75,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        221
+        227
       ]
     ]
   },
@@ -83,7 +83,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        222
+        228
       ]
     ]
   },
@@ -91,7 +91,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        227
+        233
       ]
     ]
   },
@@ -99,7 +99,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        233
+        239
       ]
     ]
   },
@@ -107,7 +107,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        293
+        300
       ]
     ]
   },
@@ -115,7 +115,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        307
+        314
       ]
     ]
   },
@@ -123,7 +123,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        313
+        320
       ]
     ]
   },
@@ -131,7 +131,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        322
+        329
       ]
     ]
   },
@@ -139,7 +139,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        328
+        335
       ]
     ]
   },
@@ -147,7 +147,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        337
+        344
       ]
     ]
   },
@@ -155,7 +155,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        343
+        350
       ]
     ]
   },
@@ -163,7 +163,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        351
+        358
       ]
     ]
   },
@@ -171,7 +171,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        358
+        365
       ]
     ]
   },
@@ -179,7 +179,23 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        361
+        368
+      ]
+    ]
+  },
+  "Enable Lane Departure Warnings": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        375
+      ]
+    ]
+  },
+  "Receive alerts to steer back into the lane when your vehicle drifts over a detected lane line without a turn signal activated while driving over 31mph (50kph).": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        378
       ]
     ]
   },
@@ -187,7 +203,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        368
+        384
       ]
     ]
   },
@@ -195,7 +211,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        371
+        387
       ]
     ]
   },
@@ -203,7 +219,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        377
+        393
       ]
     ]
   },
@@ -211,7 +227,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        380
+        396
       ]
     ]
   },
@@ -219,7 +235,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        437
+        453
       ]
     ]
   },
@@ -227,7 +243,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        455
+        471
       ]
     ]
   },
@@ -235,7 +251,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        464
+        480
       ]
     ]
   },
@@ -243,11 +259,11 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        465
+        481
       ],
       [
         "js/components/Settings/Settings.js",
-        545
+        561
       ]
     ]
   },
@@ -255,11 +271,11 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        465
+        481
       ],
       [
         "js/components/Settings/Settings.js",
-        545
+        561
       ]
     ]
   },
@@ -267,7 +283,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        470
+        486
       ]
     ]
   },
@@ -275,7 +291,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        477
+        493
       ]
     ]
   },
@@ -283,7 +299,31 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        486
+        502
+      ]
+    ]
+  },
+  "chffrplus": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        527
+      ],
+      [
+        "js/components/Settings/Settings.js",
+        647
+      ]
+    ]
+  },
+  "openpilot": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        527
+      ],
+      [
+        "js/components/Settings/Settings.js",
+        647
       ]
     ]
   },
@@ -291,7 +331,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        519
+        535
       ]
     ]
   },
@@ -299,7 +339,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        528
+        544
       ]
     ]
   },
@@ -307,7 +347,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        530
+        546
       ]
     ]
   },
@@ -315,7 +355,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        538
+        554
       ]
     ]
   },
@@ -323,7 +363,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        547
+        563
       ]
     ]
   },
@@ -331,7 +371,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        550
+        566
       ]
     ]
   },
@@ -339,7 +379,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        553
+        569
       ]
     ]
   },
@@ -347,7 +387,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        557
+        573
       ]
     ]
   },
@@ -355,11 +395,11 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        573
+        589
       ],
       [
         "js/components/Settings/Settings.js",
-        876
+        896
       ]
     ]
   },
@@ -367,23 +407,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        595
-      ]
-    ]
-  },
-  "Enable Upload Over Cellular": {
-    "origin": [
-      [
-        "js/components/Settings/Settings.js",
-        605
-      ]
-    ]
-  },
-  "Upload driving data over cellular connection if a sim card is used and no wifi network is available. If you have a limited data plan, you might incur in surcharges.": {
-    "origin": [
-      [
-        "js/components/Settings/Settings.js",
-        608
+        606
       ]
     ]
   },
@@ -407,59 +431,27 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        654
+        655
       ]
     ]
   },
-  "Version": {
+  "Enable Community Features": {
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        662
-      ]
-    ]
-  },
-  "Git Branch": {
-    "origin": [
-      [
-        "js/components/Settings/Settings.js",
-        665
-      ]
-    ]
-  },
-  "Git Revision": {
-    "origin": [
-      [
-        "js/components/Settings/Settings.js",
-        668
-      ]
-    ]
-  },
-  "Panda Firmware": {
-    "origin": [
-      [
-        "js/components/Settings/Settings.js",
-        672
-      ]
-    ]
-  },
-  "N/A": {
-    "origin": [
-      [
-        "js/components/Settings/Settings.js",
-        673
+        664
       ],
       [
         "js/components/Settings/Settings.js",
-        677
+        948
       ]
     ]
   },
-  "Panda Dongle ID": {
+  "Use features from the open source community that are not maintained or supported by comma.ai and have not been confirmed to meet the standard safety model. Be extra cautious when using these features:{0} * GM car port{1} * Toyota with DSU unplugged{2} * Pedal interceptor{3}": {
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        676
+        669
       ]
     ]
   },
@@ -467,7 +459,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        683
+        682
       ]
     ]
   },
@@ -475,7 +467,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        686
+        685
       ]
     ]
   },
@@ -483,7 +475,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        692
+        691
       ]
     ]
   },
@@ -491,19 +483,23 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        702
+        701
       ],
       [
         "js/components/Settings/Settings.js",
-        871
+        891
       ],
       [
         "js/components/Settings/Settings.js",
-        877
+        897
       ],
       [
         "js/components/Settings/Settings.js",
-        883
+        903
+      ],
+      [
+        "js/components/Settings/Settings.js",
+        949
       ]
     ]
   },
@@ -511,7 +507,59 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        702
+        701
+      ]
+    ]
+  },
+  "Version": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        707
+      ]
+    ]
+  },
+  "Git Branch": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        710
+      ]
+    ]
+  },
+  "Git Revision": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        713
+      ]
+    ]
+  },
+  "Panda Firmware": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        717
+      ]
+    ]
+  },
+  "N/A": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        718
+      ],
+      [
+        "js/components/Settings/Settings.js",
+        722
+      ]
+    ]
+  },
+  "Panda Dongle ID": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        721
       ]
     ]
   },
@@ -519,19 +567,11 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        711
+        730
       ]
     ]
   },
-  "WARNING: This grants SSH access to all public keys in your GitHub settings. Never enter a GitHub username other than your own. The built-in SSH key will be disabled if you proceed. A comma employee will never ask you to add their GitHub.": {
-    "origin": [
-      [
-        "js/components/Settings/Settings.js",
-        726
-      ]
-    ]
-  },
-  "GitHub Username": {
+  "WARNING: {0} This grants SSH access to all public keys in your GitHub settings. {1} Never enter a GitHub username other than your own. {2} The built-in SSH key will be disabled if you proceed. {3} A comma employee will never ask you to add their GitHub. {4}": {
     "origin": [
       [
         "js/components/Settings/Settings.js",
@@ -539,11 +579,19 @@
       ]
     ]
   },
+  "GitHub Username": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        764
+      ]
+    ]
+  },
   "Save": {
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        762
+        781
       ]
     ]
   },
@@ -551,7 +599,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        774
+        793
       ]
     ]
   },
@@ -559,7 +607,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        784
+        803
       ]
     ]
   },
@@ -567,7 +615,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        870
+        890
       ]
     ]
   },
@@ -575,7 +623,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        876
+        896
       ]
     ]
   },
@@ -583,7 +631,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        878
+        898
       ]
     ]
   },
@@ -591,11 +639,11 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        882
+        902
       ],
       [
         "js/components/Settings/Settings.js",
-        884
+        904
       ]
     ]
   },
@@ -603,7 +651,23 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        882
+        902
+      ]
+    ]
+  },
+  "Community maintained features are not confirmed by comma.ai to meet the standard safety model. Be extra cautious using them.": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        948
+      ]
+    ]
+  },
+  "Enable": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        950
       ]
     ]
   }

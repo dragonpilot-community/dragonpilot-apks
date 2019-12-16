@@ -25,19 +25,19 @@ msgstr "第三方应用"
 msgid "<  3rd Party Apps Settings"
 msgstr "<  第三方应用设置"
 
-#: js/components/Settings/Settings.js:455
+#: js/components/Settings/Settings.js:471
 msgid "<  Account Settings"
 msgstr "<  帐户设置"
 
-#: js/components/Settings/Settings.js:654
+#: js/components/Settings/Settings.js:655
 msgid "<  Developer Settings"
 msgstr "<  开发人员设置"
 
-#: js/components/Settings/Settings.js:519
+#: js/components/Settings/Settings.js:535
 msgid "<  Device Settings"
 msgstr "<  设备设置"
 
-#: js/components/Settings/Settings.js:595
+#: js/components/Settings/Settings.js:606
 msgid "<  Network Settings"
 msgstr "<  网络设置"
 
@@ -45,7 +45,7 @@ msgstr "<  网络设置"
 msgid "<  Safety Settings"
 msgstr "<  安全设置"
 
-#: js/components/Settings/Settings.js:293
+#: js/components/Settings/Settings.js:300
 msgid "<  Settings"
 msgstr "<  设置"
 
@@ -81,7 +81,7 @@ msgstr "通知"
 msgid "ALL TIME"
 msgstr "全部"
 
-#: js/components/Settings/Settings.js:215
+#: js/components/Settings/Settings.js:221
 msgid "Account"
 msgstr "帐户"
 
@@ -101,31 +101,31 @@ msgstr "调整方向盘监控计时，如果您想取消方向盘监控，请将
 msgid "Allow Gas"
 msgstr "允许踩油门"
 
-#: js/components/Settings/Settings.js:686
+#: js/components/Settings/Settings.js:685
 msgid "Allow devices to connect to your EON using Secure Shell (SSH)."
 msgstr "允许别的设备通过 Secure Shell (SSH) 连接至您的 EON。"
 
-#: js/components/Settings/Settings.js:870
+#: js/components/Settings/Settings.js:890
 msgid "Are you sure you want to reboot?"
 msgstr "您确定要重新启动吗？"
 
-#: js/components/Settings/Settings.js:876
+#: js/components/Settings/Settings.js:896
 msgid "Are you sure you want to shutdown?"
 msgstr "您确定要关机吗？"
 
-#: js/components/Settings/Settings.js:882
+#: js/components/Settings/Settings.js:902
 msgid "Are you sure you want to uninstall?"
 msgstr "您确定要卸载吗？"
 
-#: js/components/SetupWifi/SetupWifi.js:222
+#: js/components/SetupWifi/SetupWifi.js:227
 msgid "Authenticating..."
 msgstr "网络连接中..."
 
-#: js/components/SetupWifi/SetupWifi.js:223
+#: js/components/SetupWifi/SetupWifi.js:228
 msgid "Authentication problem"
 msgstr "身份验证错误"
 
-#: js/components/Settings/Settings.js:692
+#: js/components/Settings/Settings.js:691
 msgid "Authorized SSH Keys"
 msgstr "授权 SSH 密钥"
 
@@ -173,7 +173,7 @@ msgstr "COMMA 积分"
 msgid "Cache Fingerprint"
 msgstr "启用指纹暂存"
 
-#: js/components/Settings/Settings.js:528
+#: js/components/Settings/Settings.js:544
 msgid "Camera Calibration"
 msgstr "摄像头校准"
 
@@ -186,11 +186,12 @@ msgstr "相机偏移距离 (公分)"
 msgid "Camera from EON"
 msgstr "EON 的摄像头"
 
-#: js/components/Settings/Settings.js:702
-#: js/components/Settings/Settings.js:871
-#: js/components/Settings/Settings.js:877
-#: js/components/Settings/Settings.js:883
-#: js/components/SetupWifi/SetupWifi.js:315
+#: js/components/Settings/Settings.js:701
+#: js/components/Settings/Settings.js:891
+#: js/components/Settings/Settings.js:897
+#: js/components/Settings/Settings.js:903
+#: js/components/Settings/Settings.js:949
+#: js/components/SetupWifi/SetupWifi.js:320
 msgid "Cancel"
 msgstr "取消"
 
@@ -202,15 +203,15 @@ msgstr "车型"
 msgid "Charging Control"
 msgstr "充电控制"
 
-#: js/components/Settings/Settings.js:343
+#: js/components/Settings/Settings.js:350
 msgid "Close Aegis Safety Camera"
 msgstr "关闭神盾测速照相"
 
-#: js/components/Settings/Settings.js:328
+#: js/components/Settings/Settings.js:335
 msgid "Close AutoNavi Map"
 msgstr "关闭高德地图"
 
-#: js/components/Settings/Settings.js:313
+#: js/components/Settings/Settings.js:320
 msgid "Close TomTom Safety Camera"
 msgstr "关闭 TomTom 测速照相"
 
@@ -222,16 +223,20 @@ msgstr "关闭位智"
 msgid "Comma.ai, Inc. Terms & Conditions"
 msgstr "Comma.ai, Inc. 条款及细则"
 
-#: js/components/training/Onboarding/Onboarding.js:772
+#: js/components/Settings/Settings.js:948
+msgid "Community maintained features are not confirmed by comma.ai to meet the standard safety model. Be extra cautious using them."
+msgstr "开源社区开发维护的功能，未通过官方标准安全验证，请谨慎使用。"
+
+#: js/components/training/Onboarding/Onboarding.js:774
 msgid "Congratulations! You have completed openpilot training."
 msgstr "恭喜! 您已经学完了教程。"
 
-#: js/components/SetupWifi/SetupWifi.js:264
-#: js/components/SetupWifi/SetupWifi.js:328
+#: js/components/SetupWifi/SetupWifi.js:269
+#: js/components/SetupWifi/SetupWifi.js:333
 msgid "Connect"
 msgstr "连接"
 
-#: js/components/SetupWifi/SetupWifi.js:364
+#: js/components/SetupWifi/SetupWifi.js:370
 msgid "Connect to WiFi"
 msgstr "连接到无线网络"
 
@@ -239,13 +244,13 @@ msgstr "连接到无线网络"
 msgid "Connect to a WiFi or cellular network to upload and review your drives."
 msgstr "连接到 WiFi 或使用 SIM 卡流量上传您的行车记录。"
 
-#: js/components/SetupWifi/SetupWifi.js:221
-#: js/components/SetupWifi/SetupWifi.js:241
+#: js/components/SetupWifi/SetupWifi.js:226
+#: js/components/SetupWifi/SetupWifi.js:246
 msgid "Connected"
 msgstr "已连接"
 
-#: js/components/SetupQr/SetupQr.js:145
-#: js/components/SetupWifi/SetupWifi.js:419
+#: js/components/SetupQr/SetupQr.js:140
+#: js/components/SetupWifi/SetupWifi.js:425
 msgid "Continue"
 msgstr "继续"
 
@@ -254,7 +259,7 @@ msgstr "继续"
 msgid "DRIVES"
 msgstr "驾驶"
 
-#: js/components/Settings/Settings.js:233
+#: js/components/Settings/Settings.js:239
 msgid "Developer"
 msgstr "开发人员"
 
@@ -262,11 +267,11 @@ msgstr "开发人员"
 msgid "Developer perks"
 msgstr "开发人员 perks"
 
-#: js/components/Settings/Settings.js:221
+#: js/components/Settings/Settings.js:227
 msgid "Device"
 msgstr "设备"
 
-#: js/components/Settings/Settings.js:464
+#: js/components/Settings/Settings.js:480
 msgid "Device Paired"
 msgstr "设备已绑定"
 
@@ -275,7 +280,7 @@ msgid "Disable this only if you do not want to see the driving UI and its blocki
 msgstr "关闭这个选项后，画面将不再显示后置镜头的影像，这个选项适合有用第三方导航系统的用户。此功能将会影响您行车记录的录像。"
 
 #: js/components/training/Onboarding/Onboarding.js:567
-#: js/components/training/Onboarding/Onboarding.js:713
+#: js/components/training/Onboarding/Onboarding.js:715
 msgid "Disengage openpilot"
 msgstr "退出 dragonpilot"
 
@@ -327,15 +332,15 @@ msgstr "显示车速"
 msgid "Display Turning Signal"
 msgstr "显示方向灯"
 
-#: js/components/Settings/Settings.js:380
+#: js/components/Settings/Settings.js:396
 msgid "Display speed in km/h instead of mp/h and temperature in °C instead of °F."
 msgstr "启用后，显示 km/h (速度) 或 °C (温度)，否则显示 mph (速度) 或 °F (温度)。"
 
-#: js/components/Settings/Settings.js:547
+#: js/components/Settings/Settings.js:563
 msgid "Dongle ID"
 msgstr "Dongle ID"
 
-#: js/components/SetupQr/SetupQr.js:109
+#: js/components/SetupQr/SetupQr.js:104
 msgid "Download"
 msgstr "下载"
 
@@ -348,9 +353,13 @@ msgstr "驾驶监控"
 msgid "Driver Monitoring detects driver awareness with 3D facial reconstruction and pose estimation. It is used to warn the driver when they appear distracted while openpilot is engaged. This feature is still in beta, so Driver Monitoring is unavailable when the facial tracking is too inaccurate (e.g. at night). The availability is indicated by the face icon at the bottom-left corner of your EON."
 msgstr "驾驶监控系统利用 3D 人脸/姿态识別来判断驾驶的状态。当 dragonpilot 启用时，它会在驾驶分心时发出警示。这个功能仍然在测试阶段，所以监控会在无法正确识別时暂时取消 (例如光线不足时)。您可以从 EON 左下角的人脸图示来判断它的状态。"
 
-#: js/components/Settings/Settings.js:702
+#: js/components/Settings/Settings.js:701
 msgid "Edit"
 msgstr "编辑"
+
+#: js/components/Settings/Settings.js:950
+msgid "Enable"
+msgstr "启用"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:682
 msgid "Enable Aegis Safety Camera App"
@@ -359,6 +368,11 @@ msgstr "启用神盾测速照相"
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:660
 msgid "Enable Autonavi Map App"
 msgstr "启用高德地图"
+
+#: js/components/Settings/Settings.js:664
+#: js/components/Settings/Settings.js:948
+msgid "Enable Community Features"
+msgstr "启用社区功能"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:327
 msgid "Enable Dashcam"
@@ -369,7 +383,8 @@ msgid "Enable Driver Monitoring"
 msgstr "启用驾驶监控"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:751
-msgid "Enable Lane Departure Warning"
+#: js/components/Settings/Settings.js:375
+msgid "Enable Lane Departure Warnings"
 msgstr "启用车道偏离警示"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:486
@@ -392,7 +407,7 @@ msgstr "启用 MiXplorer 档案管理器"
 msgid "Enable Noctua Fan Mode"
 msgstr "启用 Noctua 风扇模式"
 
-#: js/components/Settings/Settings.js:683
+#: js/components/Settings/Settings.js:682
 msgid "Enable SSH"
 msgstr "启用 SSH"
 
@@ -420,10 +435,6 @@ msgstr "启用原厂 DSU 模式"
 msgid "Enable TomTom Safety Camera App"
 msgstr "启用 TomTom 测速照相"
 
-#: js/components/Settings/Settings.js:605
-msgid "Enable Upload Over Cellular"
-msgstr "允许使用 SIM 卡流量上传数据"
-
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:318
 msgid "Enable Uploader"
 msgstr "启用记录上传服务"
@@ -432,7 +443,7 @@ msgstr "启用记录上传服务"
 msgid "Enable Waze Mode"
 msgstr "启用位智车机模式"
 
-#: js/components/Settings/Settings.js:358
+#: js/components/Settings/Settings.js:365
 msgid "Enable openpilot"
 msgstr "启用 dragonpilot"
 
@@ -541,11 +552,11 @@ msgstr "启用 dragonpilot"
 msgid "Finish Setup"
 msgstr "设置完成"
 
-#: js/components/training/Onboarding/Onboarding.js:789
+#: js/components/training/Onboarding/Onboarding.js:791
 msgid "Finish Training"
 msgstr "完成"
 
-#: js/components/Settings/Settings.js:553
+#: js/components/Settings/Settings.js:569
 msgid "Free Storage"
 msgstr "剩余空间"
 
@@ -553,19 +564,19 @@ msgstr "剩余空间"
 msgid "Friday"
 msgstr "星期五"
 
-#: js/components/Settings/Settings.js:665
+#: js/components/Settings/Settings.js:710
 msgid "Git Branch"
 msgstr "Git 分支"
 
-#: js/components/Settings/Settings.js:668
+#: js/components/Settings/Settings.js:713
 msgid "Git Revision"
 msgstr "Git 修订版"
 
-#: js/components/Settings/Settings.js:745
+#: js/components/Settings/Settings.js:764
 msgid "GitHub Username"
 msgstr "GitHub 用户名"
 
-#: js/components/SetupWifi/SetupWifi.js:408
+#: js/components/SetupWifi/SetupWifi.js:414
 msgid "Go Back"
 msgstr "返回"
 
@@ -627,12 +638,12 @@ msgstr "如果您开启这个选项，dp 将会尝试将电量控制在 60%~70% 
 msgid "KM"
 msgstr "公里"
 
-#: js/components/training/Onboarding/Onboarding.js:675
+#: js/components/training/Onboarding/Onboarding.js:677
 msgid "Keep in mind that certain situations are not handled by openpilot. Scenarios such as traffic lights, stop signs, quick vehicle cutins and pedestrians are unrecognized and openpilot may accelerate."
 msgstr "请注意，在红绿灯号标志、停车信号灯标志、前方车辆快速切入、无法识别的行人等特定路况下，dragonpilot 无法正确处理，有可能导致异常加速。"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:169
-#: js/components/Settings/Settings.js:135
+#: js/components/Settings/Settings.js:141
 #: js/components/UpdatePrompt/UpdatePrompt.js:33
 msgid "Later"
 msgstr "稍后"
@@ -655,21 +666,21 @@ msgstr "MiXplorer 档案管理器"
 msgid "Monday"
 msgstr "星期一"
 
-#: js/components/SetupWifi/SetupWifi.js:371
+#: js/components/SetupWifi/SetupWifi.js:377
 msgid "More Options"
 msgstr "更多选项"
 
-#: js/components/Settings/Settings.js:673
-#: js/components/Settings/Settings.js:677
+#: js/components/Settings/Settings.js:718
+#: js/components/Settings/Settings.js:722
 msgid "N/A"
-msgstr "N/A"
+msgstr "无"
 
-#: js/components/Settings/Settings.js:227
+#: js/components/Settings/Settings.js:233
 msgid "Network"
 msgstr "网络"
 
-#: js/components/Settings/Settings.js:465
-#: js/components/Settings/Settings.js:545
+#: js/components/Settings/Settings.js:481
+#: js/components/Settings/Settings.js:561
 msgid "No"
 msgstr "否"
 
@@ -681,7 +692,7 @@ msgstr "没有网络连接"
 msgid "Now that you’re all set up, it’s important to understand the functionality and limitations of openpilot as alpha software before testing."
 msgstr "现在，您已经完成了所有设置，在测试使用之前，了解 dragonpilot 测试版的功能限制非常重要。"
 
-#: js/components/Settings/Settings.js:337
+#: js/components/Settings/Settings.js:344
 msgid "Open Aegis Safety Camera"
 msgstr "开启神盾测速照相"
 
@@ -689,7 +700,7 @@ msgstr "开启神盾测速照相"
 msgid "Open Android Settings"
 msgstr "开启 Android 设置"
 
-#: js/components/Settings/Settings.js:322
+#: js/components/Settings/Settings.js:329
 msgid "Open AutoNavi Map"
 msgstr "开启高德地图"
 
@@ -697,7 +708,7 @@ msgstr "开启高德地图"
 msgid "Open Tethering Settings"
 msgstr "共享网络设置"
 
-#: js/components/Settings/Settings.js:307
+#: js/components/Settings/Settings.js:314
 msgid "Open TomTom Safety Camera"
 msgstr "开启 TomTom 测速照相"
 
@@ -713,11 +724,11 @@ msgstr "无线网络设置"
 msgid "PAST WEEK"
 msgstr "上周"
 
-#: js/components/Settings/Settings.js:486
+#: js/components/Settings/Settings.js:502
 msgid "Pair Device"
 msgstr "绑定帐户"
 
-#: js/components/SetupQr/SetupQr.js:68
+#: js/components/SetupQr/SetupQr.js:63
 msgid "Pair Your Account"
 msgstr "绑定帐户"
 
@@ -725,25 +736,25 @@ msgstr "绑定帐户"
 msgid "Pair your comma account with comma connect"
 msgstr "使用 Comma connect 绑定到您的 Comma 帐户"
 
-#: js/components/Settings/Settings.js:216
-#: js/components/Settings/Settings.js:544
+#: js/components/Settings/Settings.js:222
+#: js/components/Settings/Settings.js:560
 msgid "Paired"
 msgstr "设备已绑定"
 
-#: js/components/Settings/Settings.js:676
+#: js/components/Settings/Settings.js:721
 msgid "Panda Dongle ID"
 msgstr "Panda Dongle ID"
 
-#: js/components/Settings/Settings.js:672
+#: js/components/Settings/Settings.js:717
 msgid "Panda Firmware"
 msgstr "Panda 固件"
 
-#: js/components/SetupWifi/SetupWifi.js:344
+#: js/components/SetupWifi/SetupWifi.js:349
 msgid "Password:"
 msgstr "密码:"
 
-#: js/components/Settings/Settings.js:573
-#: js/components/Settings/Settings.js:876
+#: js/components/Settings/Settings.js:589
+#: js/components/Settings/Settings.js:896
 msgid "Power Off"
 msgstr "关机"
 
@@ -760,14 +771,14 @@ msgstr "隐私政策请参阅 https://my.comma.ai/privacy.html"
 msgid "Radar from your car"
 msgstr "原车雷达"
 
-#: js/components/Settings/Settings.js:134
-#: js/components/Settings/Settings.js:566
-#: js/components/Settings/Settings.js:870
-#: js/components/Settings/Settings.js:872
+#: js/components/Settings/Settings.js:140
+#: js/components/Settings/Settings.js:582
+#: js/components/Settings/Settings.js:890
+#: js/components/Settings/Settings.js:892
 msgid "Reboot"
 msgstr "重新启动"
 
-#: js/components/Settings/Settings.js:136
+#: js/components/Settings/Settings.js:142
 msgid "Reboot Now"
 msgstr "马上"
 
@@ -775,11 +786,15 @@ msgstr "马上"
 msgid "Reboot and Update"
 msgstr "重启并更新"
 
+#: js/components/Settings/Settings.js:378
+msgid "Receive alerts to steer back into the lane when your vehicle drifts over a detected lane line without a turn signal activated while driving over 31mph (50kph)."
+msgstr "车速在 50 km/h 以上，且未打转向灯的情况下，如果检测到车辆驶出当前车道线时，则会发出车道偏离警告，并控制转向将车辆拉回车道线内。"
+
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:330
 msgid "Record EON screen as dashcam footage, it will automatically delete old footage if the available space is less than 15%, footage will be stored in /sdcard/dashcam/."
 msgstr "录下 EON 的画面当做行车记录，当系统的空间不足 15% 时会自动删除旧的记录。记录会存在 /sdcard/dashcam/ 里。"
 
-#: js/components/Settings/Settings.js:368
+#: js/components/Settings/Settings.js:384
 msgid "Record and Upload Driver Camera"
 msgstr "上传驾驶员的驾驶录像"
 
@@ -787,23 +802,23 @@ msgstr "上传驾驶员的驾驶录像"
 msgid "Remote Access"
 msgstr "远程访问"
 
-#: js/components/Settings/Settings.js:784
+#: js/components/Settings/Settings.js:803
 msgid "Remove all"
 msgstr "全部删除"
 
-#: js/components/Settings/Settings.js:538
+#: js/components/Settings/Settings.js:554
 msgid "Reset"
 msgstr "重置"
 
-#: js/components/Settings/Settings.js:134
+#: js/components/Settings/Settings.js:140
 msgid "Resetting calibration requires a reboot."
 msgstr "重置摄像头校准需要重启。"
 
-#: js/components/training/Onboarding/Onboarding.js:797
+#: js/components/training/Onboarding/Onboarding.js:799
 msgid "Restart"
 msgstr "重新学习"
 
-#: js/components/Settings/Settings.js:437
+#: js/components/Settings/Settings.js:453
 msgid "Review Training Guide"
 msgstr "查看使用教程"
 
@@ -815,15 +830,15 @@ msgstr "安全"
 msgid "Saturday"
 msgstr "星期六"
 
-#: js/components/Settings/Settings.js:762
+#: js/components/Settings/Settings.js:781
 msgid "Save"
 msgstr "保存"
 
-#: js/components/Settings/Settings.js:774
+#: js/components/Settings/Settings.js:793
 msgid "Save failed. Ensure that your username is correct and you are connected to the internet."
 msgstr "保存失败，请确保您的设备已联网并输入正确的用户名"
 
-#: js/components/SetupWifi/SetupWifi.js:391
+#: js/components/SetupWifi/SetupWifi.js:397
 msgid "Scanning WiFi Networks..."
 msgstr "无线网络扫描中..."
 
@@ -835,7 +850,7 @@ msgstr "请点击画面中的人脸继续"
 msgid "Select lead car indicator"
 msgstr "请点击画面中的前车指标继续"
 
-#: js/components/training/Onboarding/Onboarding.js:688
+#: js/components/training/Onboarding/Onboarding.js:690
 msgid "Select light to continue"
 msgstr "请点击画面中的红绿灯继续"
 
@@ -843,7 +858,7 @@ msgstr "请点击画面中的红绿灯继续"
 msgid "Select path to continue"
 msgstr "请点击画面中的行车路径继续"
 
-#: js/components/Settings/Settings.js:550
+#: js/components/Settings/Settings.js:566
 msgid "Serial Number"
 msgstr "序列号"
 
@@ -854,19 +869,19 @@ msgstr "序列号"
 msgid "Settings"
 msgstr "设置"
 
-#: js/components/SetupWifi/SetupWifi.js:303
+#: js/components/SetupWifi/SetupWifi.js:308
 msgid "Show password"
 msgstr "显示密码"
 
-#: js/components/Settings/Settings.js:878
+#: js/components/Settings/Settings.js:898
 msgid "Shutdown"
 msgstr "关机"
 
-#: js/components/SetupWifi/SetupWifi.js:419
+#: js/components/SetupWifi/SetupWifi.js:425
 msgid "Skip For Now"
 msgstr "暂时跳过"
 
-#: js/components/SetupQr/SetupQr.js:152
+#: js/components/SetupQr/SetupQr.js:147
 msgid "Skip for Now"
 msgstr "暂时跳过"
 
@@ -878,11 +893,11 @@ msgstr "某些车型 (Lexus IS/GS/ES) 的 DSU 无法拔除，开启这个选项�
 msgid "Steering Monitor Timer"
 msgstr "方向盘监控计时 (分钟)"
 
-#: js/components/SetupQr/SetupQr.js:87
+#: js/components/SetupQr/SetupQr.js:82
 msgid "Succesfully paired to account"
 msgstr "已成功绑定到帐户"
 
-#: js/components/SetupQr/SetupQr.js:109
+#: js/components/SetupQr/SetupQr.js:104
 msgid "Successfully paired to an account in"
 msgstr "已绑定成功："
 
@@ -894,15 +909,15 @@ msgstr "星期日"
 msgid "Tap \"SET\" to engage"
 msgstr "请点击画面中的 “SET” 继续"
 
-#: js/components/training/Onboarding/Onboarding.js:731
+#: js/components/training/Onboarding/Onboarding.js:733
 msgid "Tap a pedal to disengage"
 msgstr "请点击画面中的油门或刹车继续"
 
-#: js/components/Settings/Settings.js:477
+#: js/components/Settings/Settings.js:493
 msgid "Terms of Service available at https://my.comma.ai/terms.html"
 msgstr "服务条款请参阅 https://my.comma.ai/terms.html"
 
-#: js/components/Settings/Settings.js:530
+#: js/components/Settings/Settings.js:546
 msgid "The calibration algorithm is always active on the road facing camera. Resetting calibration is only advised when EON reports an invalid calibration alert or when EON is remounted in a different position."
 msgstr "摄像头是一直在后台自动校准的，只有当您的 EON 发出校准无效的信息或是您将 EON 安装至不同的位置/车子时，才需要重置校准。"
 
@@ -914,7 +929,7 @@ msgstr "三角形指示标志的颜色（红色或黄色）用来表示与前车
 msgid "The lane lines are drawn with varying widths to reflect the confidence in finding your lane."
 msgstr "系统会根据识别准确度，绘制不同粗细的车道线。"
 
-#: js/components/SetupWifi/SetupWifi.js:336
+#: js/components/SetupWifi/SetupWifi.js:341
 msgid "The network \"{0}\" requires a password."
 msgstr "无线网络 \"{0}\" 需要密码"
 
@@ -926,7 +941,7 @@ msgstr "dragonpilot 需要原车使用雷达信号数据计算出与前车的距
 msgid "There was a problem scanning WiFi networks. {0}Make sure WiFi is enabled in \"More Options\" above."
 msgstr "无线网络扫描错误。{0}请确认已在 \"更多选项\" 里开启了无线网络功能。"
 
-#: js/components/training/Onboarding/Onboarding.js:777
+#: js/components/training/Onboarding/Onboarding.js:779
 msgid "This guide can be replayed at any time from the EON settings. To learn more about openpilot, read the wiki and join the community at discord.comma.ai"
 msgstr "您可以随时到 EON 设置里重新阅读使用教程，了解更多关于 dragonpilot 的信息，请查看 wiki 或加入 discord.comma.ai 社区交流。"
 
@@ -946,16 +961,16 @@ msgstr "星期二"
 msgid "UI"
 msgstr "介面"
 
-#: js/components/Settings/Settings.js:882
-#: js/components/Settings/Settings.js:884
+#: js/components/Settings/Settings.js:902
+#: js/components/Settings/Settings.js:904
 msgid "Uninstall"
 msgstr "卸载"
 
-#: js/components/Settings/Settings.js:711
+#: js/components/Settings/Settings.js:730
 msgid "Uninstall {software}"
 msgstr "卸载 {software}"
 
-#: js/components/Settings/Settings.js:216
+#: js/components/Settings/Settings.js:222
 msgid "Unpaired"
 msgstr "未绑定"
 
@@ -977,33 +992,33 @@ msgstr "更新并重启"
 msgid "Upgrade Now"
 msgstr "立即更新"
 
-#: js/components/Settings/Settings.js:557
+#: js/components/Settings/Settings.js:573
 msgid "Upload Speed"
 msgstr "上传速度"
 
-#: js/components/Settings/Settings.js:371
+#: js/components/Settings/Settings.js:387
 msgid "Upload data from the driver facing camera and help improve the Driver Monitoring algorithm."
 msgstr "上传前置摄像头的录像来协助我们提升驾驶监控的准确率。"
 
-#: js/components/Settings/Settings.js:608
-msgid "Upload driving data over cellular connection if a sim card is used and no wifi network is available. If you have a limited data plan, you might incur in surcharges."
-msgstr "如果设备安装了 SIM 卡，并且没有其他网络可用时，会使用 SIM 卡流量上传驾驶记录，如果你的 SIM 卡不是无线流量套餐，超出流量会带来额外的费用。"
-
-#: js/components/Settings/Settings.js:377
+#: js/components/Settings/Settings.js:393
 msgid "Use Metric System"
 msgstr "使用公制单位"
 
-#: js/components/Settings/Settings.js:361
+#: js/components/Settings/Settings.js:669
+msgid "Use features from the open source community that are not maintained or supported by comma.ai and have not been confirmed to meet the standard safety model. Be extra cautious when using these features:{0} * GM car port{1} * Toyota with DSU unplugged{2} * Pedal interceptor{3}"
+msgstr "使用来自开源社区开发维护的功能，包含：{0}* 启用通用 (GM) 车系支援{1}。 * 允许模拟丰田 (Toyota) 车系 DSU 模组{2} * 允许使用 Comma Pedal 模组{3}"
+
+#: js/components/Settings/Settings.js:368
 msgid "Use the openpilot system for adaptive cruise control and lane keep driver assistance. Your attention is required at all times to use this feature. Changing this setting takes effect when the car is powered off."
 msgstr "使用 dragonpilot 的自适应巡航功能和车道保持功能，开启后您需要保持注意力集中，设置更改在重新启动车子后生效。"
 
-#: js/components/Settings/Settings.js:662
+#: js/components/Settings/Settings.js:707
 msgid "Version"
 msgstr "版本"
 
-#: js/components/Settings/Settings.js:726
-msgid "WARNING: This grants SSH access to all public keys in your GitHub settings. Never enter a GitHub username other than your own. The built-in SSH key will be disabled if you proceed. A comma employee will never ask you to add their GitHub."
-msgstr "警告：这个功能会同步 Github 设置里所有公钥的 SSH 访问权限，请不要输入别人的 Github 用户名（即使声称是 comma 的员工），操作完成后，原先内置的 SSH 密钥会被禁用。"
+#: js/components/Settings/Settings.js:745
+msgid "WARNING: {0} This grants SSH access to all public keys in your GitHub settings. {1} Never enter a GitHub username other than your own. {2} The built-in SSH key will be disabled if you proceed. {3} A comma employee will never ask you to add their GitHub. {4}"
+msgstr "警告：{0}这个功能会同步 Github 设置里所有公钥的 SSH 访问权限，{1}请不要输入别人的 Github 用户名（即使声称是 comma 的员工），{2}操作完成后，原先内置的 SSH 密钥会被禁用。{3}"
 
 #: js/components/Home/Home.js:132
 msgid "Wednesday"
@@ -1021,16 +1036,16 @@ msgstr "使用 dragonpilot 时，请务必随时注意前方路况! openpilot �
 msgid "When you are ready to engage openpilot at a comfortable speed, locate the cruise controls on your steering wheel and press \"SET\" to begin."
 msgstr "当车辆行驶在安全速度时，您可以按下位于方向盘上的定速按钮 “SET” 启用 dragonpilot。"
 
-#: js/components/training/Onboarding/Onboarding.js:718
+#: js/components/training/Onboarding/Onboarding.js:720
 msgid "While openpilot is engaged, you may keep your hands on the wheel to override lateral controls. Longitudinal controls will be managed by openpilot until the gas or brake pedal is pressed to disengage."
 msgstr "使用 dragonpilot 时，您可以随时改为人工操作方向盘，dragonpilot 会继续控制车速，直到踩下油门或刹车取消 dragonpilot 为止。"
 
-#: js/components/Settings/Settings.js:465
-#: js/components/Settings/Settings.js:545
+#: js/components/Settings/Settings.js:481
+#: js/components/Settings/Settings.js:561
 msgid "Yes"
 msgstr "是"
 
-#: js/components/Settings/Settings.js:470
+#: js/components/Settings/Settings.js:486
 msgid "You may unpair your device in the comma connect app settings."
 msgstr "您可以在手机应用（Comma connect）中解绑设备。"
 
@@ -1038,11 +1053,16 @@ msgstr "您可以在手机应用（Comma connect）中解绑设备。"
 msgid "Your EON will reboot once completed please DO NOT disconnect panda from power source, manual restart them if nothing happened after 3 minutes."
 msgstr "您的 EON 将会在刷新完成后重新启动，请勿在刷新过程中中断 Panda 的电源。若在三分钟后没有任何反应请手动重开 EON 和 Panda。"
 
-#: js/components/SetupQr/SetupQr.js:119
+#: js/components/SetupQr/SetupQr.js:114
 msgid "and scan this code to pair."
 msgstr "然后扫描这个二维码绑定。"
 
-#: js/components/SetupQr/SetupQr.js:114
+#: js/components/Settings/Settings.js:527
+#: js/components/Settings/Settings.js:647
+msgid "chffrplus"
+msgstr "chffrplus"
+
+#: js/components/SetupQr/SetupQr.js:109
 msgid "comma connect"
 msgstr "comma connect"
 
@@ -1050,7 +1070,7 @@ msgstr "comma connect"
 msgid "day_postfix"
 msgstr " 日"
 
-#: js/components/Settings/Settings.js:351
+#: js/components/Settings/Settings.js:358
 msgid "dragonpilot"
 msgstr "dragonpilot"
 
@@ -1058,10 +1078,15 @@ msgstr "dragonpilot"
 msgid "mth_postfix"
 msgstr " 月 "
 
+#: js/components/Settings/Settings.js:527
+#: js/components/Settings/Settings.js:647
+msgid "openpilot"
+msgstr "dragonpilot"
+
 #: js/components/training/Onboarding/Onboarding.js:583
 #: js/components/training/Onboarding/Onboarding.js:624
 #: js/components/training/Onboarding/Onboarding.js:667
-#: js/components/training/Onboarding/Onboarding.js:710
+#: js/components/training/Onboarding/Onboarding.js:712
 msgid "openpilot controls"
 msgstr "dragonpilot 控制"
 
@@ -1086,6 +1111,6 @@ msgstr "dragonpilot 将在巡航系统启用后开始运行。"
 msgid "yr_postfix"
 msgstr " 年 "
 
-#: js/components/Settings/Settings.js:222
+#: js/components/Settings/Settings.js:228
 msgid "{0} Free"
 msgstr "剩余 {0}"

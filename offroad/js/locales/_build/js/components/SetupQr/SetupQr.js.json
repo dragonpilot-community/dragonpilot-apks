@@ -3,7 +3,7 @@
     "origin": [
       [
         "js/components/SetupQr/SetupQr.js",
-        68
+        63
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "js/components/SetupQr/SetupQr.js",
-        87
+        82
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "js/components/SetupQr/SetupQr.js",
-        109
+        104
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "js/components/SetupQr/SetupQr.js",
-        109
+        104
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "js/components/SetupQr/SetupQr.js",
-        114
+        109
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "js/components/SetupQr/SetupQr.js",
-        119
+        114
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "js/components/SetupQr/SetupQr.js",
-        145
+        140
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "js/components/SetupQr/SetupQr.js",
-        152
+        147
       ]
     ]
   }

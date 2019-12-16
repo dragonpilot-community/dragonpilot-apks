@@ -372,10 +372,10 @@ class Settings extends Component {
                         ) : null }
                         <X.TableCell
                             type='switch'
-                            title='Enable Lane Departure Warnings'
+                            title={ i18n._(t`Enable Lane Departure Warnings`) }
                             value={ !!parseInt(isLaneDepartureWarningEnabled) }
                             iconSource={ Icons.warning }
-                            description='Receive alerts to steer back into the lane when your vehicle drifts over a detected lane line without a turn signal activated while driving over 31mph (50kph).'
+                            description={ i18n._(t`Receive alerts to steer back into the lane when your vehicle drifts over a detected lane line without a turn signal activated while driving over 31mph (50kph).`) }
                             isExpanded={ expandedCell == 'ldw' }
                             handleExpanded={ () => this.handleExpanded('ldw') }
                             handleChanged={ this.props.setLaneDepartureWarningEnabled } />
@@ -524,7 +524,7 @@ class Settings extends Component {
                 Passive: isPassive,
             },
         } = this.props;
-        const software = !!parseInt(isPassive) ? 'chffrplus' : 'openpilot';
+        const software = i18n._(!!parseInt(isPassive) ? t`chffrplus` : t`openpilot`);
         return (
             <View style={ Styles.settings }>
                 <View style={ Styles.settingsHeader }>
@@ -644,7 +644,7 @@ class Settings extends Component {
             },
         } = this.props;
         const { expandedCell } = this.state;
-        const software = !!parseInt(isPassive) ? 'chffrplus' : 'openpilot';
+        const software = i18n._(!!parseInt(isPassive) ? t`chffrplus` : t`openpilot`);
         return (
             <View style={ Styles.settings }>
                 <View style={ Styles.settingsHeader }>
@@ -661,15 +661,17 @@ class Settings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
-                            title='Enable Community Features'
+                            title={ i18n._(t`Enable Community Features`) }
                             value={ !!parseInt(communityFeatures) }
                             iconSource={ Icons.developer }
                             descriptionExtra={
                               <X.Text color='white' size='tiny'>
-                                  Use features from the open source community that are not maintained or supported by comma.ai and have not been confirmed to meet the standard safety model. Be extra cautious when using these features:{'\n'}
-                                  * GM car port{'\n'}
-                                  * Toyota with DSU unplugged{'\n'}
-                                  * Pedal interceptor{'\n'}
+                                  { i18n._(t`
+                                  Use features from the open source community that are not maintained or supported by comma.ai and have not been confirmed to meet the standard safety model. Be extra cautious when using these features:${'\n'}
+                                  * GM car port${'\n'}
+                                  * Toyota with DSU unplugged${'\n'}
+                                  * Pedal interceptor${'\n'}
+                                  `) }
                               </X.Text>
                             }
                             isExpanded={ expandedCell == 'communityFeatures' }
@@ -702,22 +704,22 @@ class Settings extends Component {
                     </X.Table>
                     <X.Table spacing='none'>
                         <X.TableCell
-                            title='Version'
+                            title={ i18n._(t`Version`) }
                             value={ `${ software } v${ version }` } />
                         <X.TableCell
-                            title='Git Branch'
+                            title={ i18n._(t`Git Branch`) }
                             value={ gitBranch } />
                         <X.TableCell
-                            title='Git Revision'
+                            title={ i18n._(t`Git Revision`) }
                             value={ gitRevision.slice(0, 12) }
                             valueTextSize='tiny' />
                         <X.TableCell
-                            title='Panda Firmware'
-                            value={ pandaFirmware != null ? pandaFirmware : 'N/A' }
+                            title={ i18n._(t`Panda Firmware`) }
+                            value={ i18n._(pandaFirmware != null ? pandaFirmware : t`N/A`) }
                             valueTextSize='tiny' />
                         <X.TableCell
-                            title='Panda Dongle ID'
-                            value={ (pandaDongleId != null && pandaDongleId != "unprovisioned") ? pandaDongleId : 'N/A' }
+                            title={ i18n._(t`Panda Dongle ID`) }
+                            value={ i18n._((pandaDongleId != null && pandaDongleId != "unprovisioned") ? pandaDongleId : t`N/A`) }
                             valueTextSize='tiny' />
                     </X.Table>
                     <X.Table color='darkBlue' padding='big'>
@@ -740,18 +742,18 @@ class Settings extends Component {
         return (
             <View>
                 <X.Text color='white' size='tiny'>
-                    <Trans>
+                    {i18n._(t`
                     WARNING:
-                    {'\n'}
+                    ${'\n'}
                     This grants SSH access to all public keys in your GitHub settings.
-                    {'\n'}
+                    ${'\n'}
                     Never enter a GitHub username other than your own.
-                    {'\n'}
+                    ${'\n'}
                     The built-in SSH key will be disabled if you proceed.
-                    {'\n'}
+                    ${'\n'}
                     A comma employee will never ask you to add their GitHub.
-                    {'\n'}
-                    </Trans>
+                    ${'\n'}
+                    `)}
                 </X.Text>
                 <View style={ Styles.githubUsernameInputContainer }>
                     <X.Text
@@ -943,9 +945,9 @@ const mapDispatchToProps = dispatch => ({
     },
     setCommunityFeatures: (communityFeatures) => {
         if (communityFeatures == 1) {
-            Alert.alert('Enable Community Features', 'Community maintained features are not confirmed by comma.ai to meet the standard safety model. Be extra cautious using them.', [
-                { text: 'Cancel', onPress: () => {}, style: 'cancel' },
-                { text: 'Enable', onPress: () => {
+            Alert.alert(i18n._(t`Enable Community Features`), i18n._(t`Community maintained features are not confirmed by comma.ai to meet the standard safety model. Be extra cautious using them.`), [
+                { text: i18n._(t`Cancel`), onPress: () => {}, style: 'cancel' },
+                { text: i18n._(t`Enable`), onPress: () => {
                     dispatch(updateParam(Params.KEY_COMMUNITY_FEATURES, (communityFeatures | 0).toString()));
                 } },
             ]);
