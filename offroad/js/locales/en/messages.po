@@ -626,12 +626,28 @@ msgid "If you disable uploader, it will stop uploading driving data for AI train
 msgstr "If you disable uploader, it will stop uploading driving data for AI training, reboot required."
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:548
-msgid "If you enable this, dp will assist you to change lane once above 24mph / 40kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option."
-msgstr "If you enable this, dp will assist you to change lane once above 24mph / 40kph."
+#~ msgid "If you enable this, dp will assist you to change lane once above 24mph / 40kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option."
+#~ msgstr "If you enable this, dp will assist you to change lane once above 24mph / 40kph."
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:548
+#~ msgid "If you enable this, dp will assist you to change lane once above 37 mph / 59.5kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option."
+#~ msgstr "If you enable this, dp will assist you to change lane once above 37 mph / 59.5kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option."
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:548
+msgid "If you enable this, dp will assist you to change lane once above 37 mph / 60kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option."
+msgstr "If you enable this, dp will assist you to change lane once above 37 mph / 60kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option."
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:558
-msgid "If you enable this, dp will change lane for you once the speed is above 40mph / 65kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option."
-msgstr "If you enable this, dp will change lane for you once the speed is above 40mph / 65kph."
+#~ msgid "If you enable this, dp will change lane for you once the speed is above 40mph / 65kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option."
+#~ msgstr "If you enable this, dp will change lane for you once the speed is above 40mph / 65kph."
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:558
+#~ msgid "If you enable this, dp will change lane for you once the speed is above 60mph / 96.5kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option."
+#~ msgstr "If you enable this, dp will change lane for you once the speed is above 60mph / 96.5kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option."
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:558
+msgid "If you enable this, dp will change lane for you once the speed is above 60mph / 97kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option."
+msgstr "If you enable this, dp will change lane for you once the speed is above 60mph / 97kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option."
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:539
 msgid "If you enable this, dp will notify you when lead car starts moving from stationary."

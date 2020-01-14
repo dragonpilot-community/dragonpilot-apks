@@ -545,7 +545,7 @@ class DragonpilotSettings extends Component {
                             title={ i18n._(t`Enable Assisted Lane Change`) }
                             value={ !!parseInt(dragonEnableAssistedLC) }
                             iconSource={ Icons.developer }
-                            description={ i18n._(t`If you enable this, dp will assist you to change lane once above 24mph / 40kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option.`) }
+                            description={ i18n._(t`If you enable this, dp will assist you to change lane once above 37 mph / 60kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option.`) }
                             isExpanded={ expandedCell == 'enable_assisted_lc' }
                             handleExpanded={ () => this.handleExpanded('enable_assisted_lc') }
                             handleChanged={ this.props.setEnableAssistedLC } />
@@ -555,7 +555,7 @@ class DragonpilotSettings extends Component {
                             title={i18n._(t`Enable Auto Lane Change`)}
                             value={!!parseInt(dragonEnableAutoLC)}
                             iconSource={Icons.developer}
-                            description={i18n._(t`If you enable this, dp will change lane for you once the speed is above 40mph / 65kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option.`)}
+                            description={i18n._(t`If you enable this, dp will change lane for you once the speed is above 60mph / 97kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option.`)}
                             isExpanded={expandedCell == 'enable_auto_lc'}
                             handleExpanded={() => this.handleExpanded('enable_auto_lc')}
                             handleChanged={ this.props.setEnableAutoLC }/>

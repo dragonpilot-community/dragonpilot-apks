@@ -626,12 +626,12 @@ msgid "If you disable uploader, it will stop uploading driving data for AI train
 msgstr "如果您關閉這個選項，記錄上傳服務將停止上傳用來訓練 AI 模式的資料，需要重新開機。"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:548
-msgid "If you enable this, dp will assist you to change lane once above 24mph / 40kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option."
-msgstr "啟用這個選項後，dp 將會在時速高於 24 英里 或 40 公里時協助您換道。（除非您知道您在做什麼，不然我們不建議您使用本功能，我們也不會負任何事故的責任。）"
+msgid "If you enable this, dp will assist you to change lane once above 37 mph / 60kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option."
+msgstr "啟用這個選項後，dp 將會在時速高於 37 英里 或 60 公里時協助您換道。（除非您知道您在做什麼，不然我們不建議您使用本功能，我們也不會負任何事故的責任）"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:558
-msgid "If you enable this, dp will change lane for you once the speed is above 40mph / 65kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option."
-msgstr "啟用這個選項後，dp 將會在時速高於 40 英里 或 65 公里時自動換道。（除非您知道您在做什麼，不然我們不建議您使用本功能，我們也不會負任何事故的責任。）"
+msgid "If you enable this, dp will change lane for you once the speed is above 60mph / 97kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option."
+msgstr "啟用這個選項後，dp 將會在時速高於 60 英里 或 97 公里時自動換道。（除非您知道您在做什麼，不然我們不建議您使用本功能，我們也不會負任何事故的責任）"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:539
 msgid "If you enable this, dp will notify you when lead car starts moving from stationary."
