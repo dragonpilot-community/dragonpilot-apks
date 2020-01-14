@@ -257,6 +257,7 @@ class DragonpilotSettings extends Component {
     renderPrimarySettings() {
         const {
             params: {
+                DragonBootHotspot: dragonBootHotspot,
                 DragonEnableLogger: dragonEnableLogger,
                 DragonEnableUploader: dragonEnableUploader,
                 DragonEnableDashcam: dragonEnableDashcam,
@@ -307,6 +308,15 @@ class DragonpilotSettings extends Component {
                     </X.Table>
                     }
                     <X.Table color='darkBlue'>
+                        <X.TableCell
+                            type='switch'
+                            title={ i18n._(t`Enable Hotspot on Boot`) }
+                            value={ !!parseInt(dragonBootHotspot) }
+                            iconSource={ Icons.developer }
+                            description={ i18n._(t`If you enable this, Hotspot will turn on automatically on boot.`) }
+                            isExpanded={ expandedCell == 'boot_hotspot' }
+                            handleExpanded={ () => this.handleExpanded('boot_hotspot') }
+                            handleChanged={ this.props.setBootHotspot } />
                         <X.TableCell
                             type='switch'
                             title={ i18n._(t`Enable Logger`) }
@@ -1168,6 +1178,9 @@ const mapDispatchToProps = dispatch => ({
     },
     setEnableAutoLC: (val) => {
         dispatch(updateParam(Params.KEY_AUTO_LC, (val | 0).toString()));
+    },
+    setBootHotspot: (val) => {
+        dispatch(updateParam(Params.KEY_BOOT_HOTSPOT, (val | 0).toString()));
     },
 });
 

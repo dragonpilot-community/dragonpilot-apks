@@ -82,4 +82,5 @@ export const Params = {
     KEY_RUN_WAZE: 'DragonRunWaze',
     KEY_ASSISTED_LC: 'DragonEnableAssistedLC',
     KEY_AUTO_LC: 'DragonEnableAutoLC',
+    KEY_BOOT_HOTSPOT: 'DragonBootHotspot',
 };

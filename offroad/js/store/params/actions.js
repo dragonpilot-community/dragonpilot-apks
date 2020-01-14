@@ -89,6 +89,7 @@ const PARAMS = [
   "DragonRunWaze",
   "DragonEnableAssistedLC",
   "DragonEnableAutoLC",
+  "DragonBootHotspot",
 ].concat(ALERT_PARAMS);
 
 export function refreshParams(params) {

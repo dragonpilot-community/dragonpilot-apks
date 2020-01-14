@@ -7,7 +7,7 @@
       ],
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        444
+        454
       ]
     ]
   },
@@ -91,7 +91,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        276
+        277
       ]
     ]
   },
@@ -99,7 +99,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        290
+        291
       ]
     ]
   },
@@ -107,7 +107,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        296
+        297
       ]
     ]
   },
@@ -115,7 +115,23 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        305
+        306
+      ]
+    ]
+  },
+  "Enable Hotspot on Boot": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        313
+      ]
+    ]
+  },
+  "If you enable this, Hotspot will turn on automatically on boot.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        316
       ]
     ]
   },
@@ -123,7 +139,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        312
+        322
       ]
     ]
   },
@@ -131,7 +147,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        315
+        325
       ]
     ]
   },
@@ -139,7 +155,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        321
+        331
       ]
     ]
   },
@@ -147,7 +163,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        324
+        334
       ]
     ]
   },
@@ -155,7 +171,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        330
+        340
       ]
     ]
   },
@@ -163,7 +179,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        333
+        343
       ]
     ]
   },
@@ -171,7 +187,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        339
+        349
       ]
     ]
   },
@@ -179,7 +195,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        341
+        351
       ]
     ]
   },
@@ -187,7 +203,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        372
+        382
       ]
     ]
   },
@@ -195,7 +211,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        375
+        385
       ]
     ]
   },
@@ -203,7 +219,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        381
+        391
       ]
     ]
   },
@@ -211,7 +227,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        384
+        394
       ]
     ]
   },
@@ -219,7 +235,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        390
+        400
       ]
     ]
   },
@@ -227,7 +243,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        393
+        403
       ]
     ]
   },
@@ -235,7 +251,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        399
+        409
       ]
     ]
   },
@@ -243,7 +259,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        401
+        411
       ]
     ]
   },
@@ -251,7 +267,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        436
+        446
       ]
     ]
   },
@@ -259,7 +275,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        449
+        459
       ]
     ]
   },
@@ -267,7 +283,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        481
+        491
       ]
     ]
   },
@@ -275,7 +291,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        491
+        501
       ]
     ]
   },
@@ -283,7 +299,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        494
+        504
       ]
     ]
   },
@@ -291,7 +307,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        500
+        510
       ]
     ]
   },
@@ -299,7 +315,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        503
+        513
       ]
     ]
   },
@@ -307,7 +323,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        509
+        519
       ]
     ]
   },
@@ -315,7 +331,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        512
+        522
       ]
     ]
   },
@@ -323,7 +339,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        518
+        528
       ]
     ]
   },
@@ -331,7 +347,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        521
+        531
       ]
     ]
   },
@@ -339,7 +355,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        527
+        537
       ]
     ]
   },
@@ -347,7 +363,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        530
+        540
       ]
     ]
   },
@@ -355,7 +371,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        536
+        546
       ]
     ]
   },
@@ -363,7 +379,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        539
+        549
       ]
     ]
   },
@@ -371,7 +387,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        545
+        555
       ]
     ]
   },
@@ -379,7 +395,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        548
+        558
       ]
     ]
   },
@@ -387,7 +403,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        555
+        565
       ]
     ]
   },
@@ -395,7 +411,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        558
+        568
       ]
     ]
   },
@@ -403,7 +419,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        567
+        577
       ]
     ]
   },
@@ -411,7 +427,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        570
+        580
       ]
     ]
   },
@@ -419,7 +435,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        576
+        586
       ]
     ]
   },
@@ -427,7 +443,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        579
+        589
       ]
     ]
   },
@@ -435,7 +451,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        585
+        595
       ]
     ]
   },
@@ -443,7 +459,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        587
+        597
       ]
     ]
   },
@@ -451,7 +467,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        643
+        653
       ]
     ]
   },
@@ -459,7 +475,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        653
+        663
       ]
     ]
   },
@@ -467,7 +483,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        656
+        666
       ]
     ]
   },
@@ -475,7 +491,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        663
+        673
       ]
     ]
   },
@@ -483,7 +499,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        666
+        676
       ]
     ]
   },
@@ -491,7 +507,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        674
+        684
       ]
     ]
   },
@@ -499,7 +515,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        677
+        687
       ]
     ]
   },
@@ -507,7 +523,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        685
+        695
       ]
     ]
   },
@@ -515,7 +531,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        688
+        698
       ]
     ]
   },
@@ -523,7 +539,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        696
+        706
       ]
     ]
   },
@@ -531,7 +547,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        699
+        709
       ]
     ]
   },
@@ -539,7 +555,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        707
+        717
       ]
     ]
   },
@@ -547,7 +563,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        710
+        720
       ]
     ]
   },
@@ -555,7 +571,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        718
+        728
       ]
     ]
   },
@@ -563,7 +579,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        721
+        731
       ]
     ]
   },
@@ -571,7 +587,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        728
+        738
       ]
     ]
   },
@@ -579,7 +595,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        731
+        741
       ]
     ]
   },
@@ -587,7 +603,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        757
+        767
       ]
     ]
   },
@@ -595,7 +611,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        767
+        777
       ]
     ]
   },
@@ -603,7 +619,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        770
+        780
       ]
     ]
   },
@@ -611,7 +627,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        776
+        786
       ]
     ]
   },
@@ -619,7 +635,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        779
+        789
       ]
     ]
   },
@@ -627,7 +643,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        785
+        795
       ]
     ]
   },
@@ -635,7 +651,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        788
+        798
       ]
     ]
   },
@@ -643,7 +659,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        849
+        859
       ]
     ]
   },
@@ -651,7 +667,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        859
+        869
       ]
     ]
   },
@@ -659,7 +675,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        862
+        872
       ]
     ]
   },
@@ -667,7 +683,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        868
+        878
       ]
     ]
   },
@@ -675,7 +691,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        871
+        881
       ]
     ]
   },
@@ -683,7 +699,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        877
+        887
       ]
     ]
   },
@@ -691,7 +707,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        880
+        890
       ]
     ]
   },
@@ -699,7 +715,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        886
+        896
       ]
     ]
   },
@@ -707,7 +723,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        889
+        899
       ]
     ]
   },
@@ -715,7 +731,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        895
+        905
       ]
     ]
   },
@@ -723,7 +739,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        898
+        908
       ]
     ]
   },
@@ -731,7 +747,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        904
+        914
       ]
     ]
   },
@@ -739,7 +755,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        907
+        917
       ]
     ]
   },
@@ -747,7 +763,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        913
+        923
       ]
     ]
   },
@@ -755,7 +771,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        916
+        926
       ]
     ]
   },
@@ -763,7 +779,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        922
+        932
       ]
     ]
   },
@@ -771,7 +787,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        925
+        935
       ]
     ]
   },
@@ -779,7 +795,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        931
+        941
       ]
     ]
   },
@@ -787,7 +803,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        934
+        944
       ]
     ]
   },
@@ -795,7 +811,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        940
+        950
       ]
     ]
   },
@@ -803,7 +819,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        943
+        953
       ]
     ]
   },
@@ -811,7 +827,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        949
+        959
       ]
     ]
   },
@@ -819,7 +835,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        952
+        962
       ]
     ]
   },
@@ -827,7 +843,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        958
+        968
       ]
     ]
   },
@@ -835,7 +851,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        960
+        970
       ]
     ]
   }
