@@ -543,7 +543,7 @@ class Settings extends Component {
                             type='custom'
                             title={ i18n._(t`Camera Calibration`) }
                             iconSource={ Icons.calibration }
-                            description={ i18n._(t`The calibration algorithm is always active on the road facing camera. Resetting calibration is only advised when EON reports an invalid calibration alert or when EON is remounted in a different position.`) }
+                            description={ i18n._(t`The calibration algorithm is always active on the road facing camera. Resetting calibration is only advised when the device reports an invalid calibration alert or when the device is remounted in a different position.`) }
                             isExpanded={ expandedCell == 'calibration' }
                             handleExpanded={ () => this.handleExpanded('calibration') }>
                             <X.Button
@@ -638,7 +638,7 @@ class Settings extends Component {
                 GitBranch: gitBranch,
                 GitCommit: gitRevision,
                 Passive: isPassive,
-                PandaFirmware: pandaFirmware,
+                PandaFirmwareHex: pandaFirmwareHex,
                 PandaDongleId: pandaDongleId,
                 CommunityFeaturesToggle: communityFeatures,
             },
@@ -682,7 +682,7 @@ class Settings extends Component {
                             title={ i18n._(t`Enable SSH`) }
                             value={ isSshEnabled }
                             iconSource={ Icons.developer }
-                            description={ i18n._(t`Allow devices to connect to your EON using Secure Shell (SSH).`) }
+                            description={ i18n._(t`Allow devices to connect to your device using Secure Shell (SSH).`) }
                             isExpanded={ expandedCell == 'ssh' }
                             handleExpanded={ () => this.handleExpanded('ssh') }
                             handleChanged={ this.props.setSshEnabled } />
@@ -715,7 +715,7 @@ class Settings extends Component {
                             valueTextSize='tiny' />
                         <X.TableCell
                             title={ i18n._(t`Panda Firmware`) }
-                            value={ i18n._(pandaFirmware != null ? pandaFirmware : t`N/A`) }
+                            value={ pandaFirmwareHex != null ? pandaFirmwareHex : 'N/A' }
                             valueTextSize='tiny' />
                         <X.TableCell
                             title={ i18n._(t`Panda Dongle ID`) }

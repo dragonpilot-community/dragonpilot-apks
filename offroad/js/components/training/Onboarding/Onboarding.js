@@ -18,7 +18,9 @@ const Step = {
     OB_SPLASH: 'OB_SPLASH',
     OB_INTRO: 'OB_INTRO',
     OB_SENSORS: 'OB_SENSORS',
-    OB_CONTROLS: 'OB_CONTROLS',
+    OB_ENGAGE: 'OB_ENGAGE',
+    OB_LANECHANGE: 'OB_LANECHANGE',
+    OB_DISENGAGE: 'OB_DISENGAGE',
     OB_OUTRO: 'OB_OUTRO',
 };
 
@@ -43,6 +45,10 @@ class Onboarding extends Component {
         };
     }
 
+    componentWillMount() {
+        this.handleEngagedMocked(false);
+    }
+
     componentWillUnmount() {
         this.handleEngagedMocked(false);
     }
@@ -54,7 +60,6 @@ class Onboarding extends Component {
         }, () => {
             return this.setState({ step });
         });
-        this.handleEngagedMocked(false);
     }
 
     setStepPoint(stepPoint) {
@@ -104,31 +109,7 @@ class Onboarding extends Component {
         }
     }
 
-    handleSensorVisualPressed(visual) {
-        const { stepChecks } = this.state;
-        const hasCheck = (stepChecks.indexOf(visual) > -1);
-        if (stepChecks.length > 0 && !hasCheck) {
-            this.animatePhotoOffset(0);
-            this.setState({ stepChecks: [...stepChecks, visual] });
-            this.setStepPoint(0);
-            return this.setStep('OB_CONTROLS');
-        } else {
-            this.setState({ stepChecks: [...stepChecks, visual] });
-            switch(visual) {
-                case 'camera':
-                    this.animatePhotoCycled(100);
-                    this.animateLeadEntered(100);
-                    return this.setStepPoint(2); break;
-                case 'radar':
-                    this.animatePhotoOffset(0);
-                    this.animateLeadEntered(0);
-                    this.animatePhotoCycled(0);
-                    return this.setStepPoint(0); break;
-            }
-        }
-    }
-
-    handleControlsRadioPressed(option) {
+    handleEngageRadioPressed(option) {
         switch(option) {
             case 'index':
                 this.animatePhotoOffset(0);
@@ -143,18 +124,73 @@ class Onboarding extends Component {
                 this.animatePhotoOffset(100);
                 this.animatePhotoCycled(100);
                 return this.setStepPoint(2); break;
-            case 'limitations':
-                this.animatePhotoOffset(100);
-                this.animatePhotoCycled(100);
-                return this.setStepPoint(3); break;
-            case 'pedal':
-                this.animatePhotoOffset(100);
-                this.animatePhotoCycledLast(100);
-                return this.setStepPoint(4); break;
         }
     }
 
-    handleControlsVisualPressed(visual) {
+    handleLaneChangeRadioPressed(option) {
+        switch(option) {
+            case 'index':
+                this.animatePhotoOffset(0);
+                this.animatePhotoCycled(0);
+                this.animatePhotoCycledLast(0);
+                return this.setStepPoint(0); break;
+            case 'start':
+                this.animatePhotoOffset(100);
+                this.animatePhotoCycled(0);
+                this.animatePhotoCycledLast(0);
+                return this.setStepPoint(1); break;
+            case 'perform':
+                this.animatePhotoOffset(0);
+                this.animatePhotoCycled(100);
+                this.animatePhotoCycledLast(0);
+                return this.setStepPoint(2); break;
+        }
+    }
+
+    handleDisengageRadioPressed(option) {
+        switch(option) {
+            case 'index':
+                this.animatePhotoOffset(0);
+                this.animatePhotoCycled(0);
+                this.animatePhotoCycledLast(0);
+                return this.setStepPoint(0); break;
+            case 'limitations':
+                this.animatePhotoOffset(100);
+                this.animatePhotoCycled(0);
+                return this.setStepPoint(1); break;
+            case 'disengage':
+                this.animatePhotoOffset(100);
+                this.animatePhotoCycledLast(100);
+                return this.setStepPoint(2); break;
+        }
+    }
+
+    handleSensorVisualPressed(visual) {
+        const { stepChecks } = this.state;
+        const hasCheck = (stepChecks.indexOf(visual) > -1);
+        if (stepChecks.length > 0 && !hasCheck) {
+            this.animatePhotoOffset(0);
+            this.setState({ stepChecks: [...stepChecks, visual] });
+            this.setStepPoint(0);
+            return this.setStep('OB_ENGAGE');
+        } else {
+            this.setState({ stepChecks: [...stepChecks, visual] });
+            switch(visual) {
+                case 'camera':
+                    this.animatePhotoCycled(100);
+                    this.animateLeadEntered(100);
+                    return this.setStepPoint(2); break;
+                case 'radar':
+                    this.animatePhotoOffset(0);
+                    this.animateLeadEntered(0);
+                    this.animatePhotoCycled(0);
+                    this.setStepPoint(0);
+                    return this.setStep('OB_ENGAGE'); break;
+            }
+        }
+    }
+
+    handleEngageVisualPressed(visual) {
         const { stepChecks } = this.state;
         const hasCheck = (stepChecks.indexOf(visual) > -1);
         this.setState({ stepChecks: [...stepChecks, visual] });
@@ -167,13 +203,41 @@ class Onboarding extends Component {
                 this.animatePhotoOffset(100);
                 this.animatePhotoCycled(100);
                 this.animatePhotoCycledLast(100);
-                return this.setStepPoint(3); break;
+                this.setStepPoint(0);
+                return this.setStep('OB_LANECHANGE'); break;
+        }
+    }
+
+    handleLaneChangeVisualPressed(visual) {
+        const { stepChecks } = this.state;
+        const hasCheck = (stepChecks.indexOf(visual) > -1);
+        this.setState({ stepChecks: [...stepChecks, visual] });
+        switch(visual) {
+            case 'start':
+                this.animatePhotoOffset(100);
+                this.animatePhotoCycled(100);
+                this.animatePhotoCycledLast(100);
+                return this.setStepPoint(2); break;
+            case 'perform':
+                this.animatePhotoOffset(100);
+                this.animatePhotoCycled(100);
+                this.animatePhotoCycledLast(100);
+                this.setStepPoint(0);
+                return this.setStep('OB_DISENGAGE'); break;
+        }
+    }
+
+    handleDisengageVisualPressed(visual) {
+        const { stepChecks } = this.state;
+        const hasCheck = (stepChecks.indexOf(visual) > -1);
+        this.setState({ stepChecks: [...stepChecks, visual] });
+        switch(visual) {
             case 'limitations':
                 this.animatePhotoOffset(100);
                 this.animatePhotoCycled(100);
                 this.animatePhotoCycledLast(100);
-                return this.setStepPoint(4); break;
-            case 'pedal':
+                return this.setStepPoint(2); break;
+            case 'disengage':
                 this.animatePhotoOffset(0);
                 this.animatePhotoCycled(0);
                 this.animatePhotoCycledLast(0);
@@ -382,7 +446,7 @@ class Onboarding extends Component {
                         isChecked={ stepChecks.includes('camera') }
                         hasAppend={ true }
                         onPress={ () => this.handleSensorRadioPressed('camera') }
-                        label={ i18n._(t`Camera from EON`) } />
+                        label={ i18n._(t`Camera from Device`) } />
                     <X.RadioField
                         size='big'
                         color='white'
@@ -409,14 +473,14 @@ class Onboarding extends Component {
                     { i18n._(t`openpilot sensors`) }
                 </X.Button>
                 <X.Text size='medium' color='white' weight='bold'>
-                    <Trans>Camera from EON</Trans>
+                    <Trans>Camera from Device</Trans>
                 </X.Text>
                 <X.Text
                     size='small' color='white' weight='light'
                     style={ Styles.onboardingStepContextSmaller }>
                     <Trans>
-                        A vision algorithm leverages EON’s road-facing
-                        camera to determine the path to drive.
+                    A vision algorithm leverages the road-facing
+                    camera to determine the path to drive.
                     </Trans>
                 </X.Text>
                 <X.Text
@@ -490,18 +554,6 @@ class Onboarding extends Component {
         )
     }
 
-    renderSensorsStepPoint() {
-        const { stepPoint } = this.state;
-        switch (stepPoint) {
-            case 0:
-                return this.renderSensorsStepPointIndex(); break;
-            case 1:
-                return this.renderSensorsStepPointCamera(); break;
-            case 2:
-                return this.renderSensorsStepPointRadar(); break;
-        }
-    }
-
     renderSensorsStep() {
         return (
             <X.Entrance style={ Styles.onboardingStep }>
@@ -510,7 +562,7 @@ class Onboarding extends Component {
         )
     }
 
-    renderControlsStepPointIndex() {
+    renderEngagingStepPointIndex() {
         const { stepChecks } = this.state;
         return (
             <View style={ Styles.onboardingStepPoint }>
@@ -531,46 +583,36 @@ class Onboarding extends Component {
                 </View>
                 <View style={ Styles.onboardingStepPointBody }>
                     <X.Text size='bigger' color='white' weight='bold'>
-                        <Trans>openpilot will start driving when cruise control is set.</Trans>
+                        <Trans>openpilot will engage when cruise control is set.</Trans>
                     </X.Text>
                     <X.Text
                         size='smallish' color='white' weight='light'
-                        style={ Styles.onboardingStepContextSmall }>
-                        <Trans>Press cruise to engage and a pedal to disengage.</Trans>
+                        style={ Styles.onboardingStepContext }>
+                        <Trans>
+                        Press cruise to engage and a pedal to disengage.
+                        </Trans>
                     </X.Text>
                     <X.RadioField
+                        size='big'
                         color='white'
                         isChecked={ stepChecks.includes('cruise') }
                         hasAppend={ true }
-                        onPress={ () => this.handleControlsRadioPressed('cruise') }
+                        onPress={ () => this.handleEngageRadioPressed('cruise') }
                         label={ i18n._(t`Engage openpilot`) } />
                     <X.RadioField
+                        size='big'
                         color='white'
                         isDisabled={ !stepChecks.includes('cruise') }
                         isChecked={ stepChecks.includes('monitoring') }
                         hasAppend={ true }
-                        onPress={ () => this.handleControlsRadioPressed('monitoring') }
-                        label={ i18n._(t`Driver Monitoring`) } />
-                    <X.RadioField
-                        color='white'
-                        isDisabled={ !stepChecks.includes('monitoring') }
-                        isChecked={ stepChecks.includes('limitations') }
-                        hasAppend={ true }
-                        onPress={ () => this.handleControlsRadioPressed('limitations') }
-                        label={ i18n._(t`Limited Features`) } />
-                    <X.RadioField
-                        color='white'
-                        isDisabled={ !stepChecks.includes('limitations') }
-                        isChecked={ stepChecks.includes('pedal') }
-                        hasAppend={ true }
-                        onPress={ () => this.handleControlsRadioPressed('pedal') }
-                        label={ i18n._(t`Disengage openpilot`) } />
+                        onPress={ () => this.handleEngageRadioPressed('monitoring') }
+                        label='Driver Monitoring' />
                 </View>
             </View>
         )
     }
 
-    renderControlsStepPointEngage() {
+    renderEngagingStepPointEngage() {
         return (
             <X.Entrance
                 transition='fadeInLeft'
@@ -579,8 +621,8 @@ class Onboarding extends Component {
                 <X.Button
                     size='small' color='ghost' textWeight='light'
                     style={ Styles.onboardingStepPointCrumb }
-                    onPress={ () => this.handleControlsRadioPressed('index') }>
-                    { i18n._(t`openpilot controls`) }
+                    onPress={ () => this.handleEngageRadioPressed('index') }>
+                    { i18n._(t`openpilot engaging`) }
                 </X.Button>
                 <X.Text size='medium' color='white' weight='bold'>
                     <Trans>Engage openpilot</Trans>
@@ -610,7 +652,7 @@ class Onboarding extends Component {
         )
     }
 
-    renderControlsStepPointMonitoring() {
+    renderEngagingStepPointMonitoring() {
         return (
             <X.Entrance
                 transition='fadeInLeft'
@@ -620,8 +662,8 @@ class Onboarding extends Component {
                     <X.Button
                         size='small' color='ghost' textWeight='light'
                         style={ Styles.onboardingStepPointCrumb }
-                        onPress={ () => this.handleControlsRadioPressed('index') }>
-                        { i18n._(t`openpilot controls`) }
+                        onPress={ () => this.handleEngageRadioPressed('index') }>
+                        { i18n._(t`openpilot engaging`) }
                     </X.Button>
                     <X.Text size='medium' color='white' weight='bold'>
                         <Trans>Driver Monitoring</Trans>
@@ -653,7 +695,55 @@ class Onboarding extends Component {
         )
     }
 
-    renderControlsStepPointLimitations() {
+    renderLaneChangeStepPointIndex() {
+        const { stepChecks } = this.state;
+        return (
+            <View style={ Styles.onboardingStepPoint }>
+                <View style={ Styles.onboardingStepPointChain }>
+                    <X.Button
+                        size='small' color='ghost'
+                        style={ Styles.onboardingStepPointChainPrevious }
+                        onPress={ () => this.setStep('OB_ENGAGE') }>
+                        <X.Image
+                            source={ require('../../../img/icon_chevron_right.png') }
+                            style={ Styles.onboardingStepPointChainPreviousIcon } />
+                    </X.Button>
+                    <View style={ Styles.onboardingStepPointChainNumber }>
+                        <X.Text color='white' weight='semibold'>
+                            4
+                        </X.Text>
+                    </View>
+                </View>
+                <View style={ Styles.onboardingStepPointBody }>
+                    <X.Text size='bigger' color='white' weight='bold'>
+                        openpilot can change lanes with your assistance.
+                    </X.Text>
+                    <X.Text
+                        size='smallish' color='white' weight='light'
+                        style={ Styles.onboardingStepContextSmall }>
+                        openpilot is not capable of checking if a lane change is safe. This is your job. openpilot will change lanes regardless if another vehicle is present.
+                    </X.Text>
+                    <X.RadioField
+                        size='big'
+                        color='white'
+                        isChecked={ stepChecks.includes('start') }
+                        hasAppend={ true }
+                        onPress={ () => this.handleLaneChangeRadioPressed('start') }
+                        label='Start Lane Change' />
+                    <X.RadioField
+                        size='big'
+                        color='white'
+                        isDisabled={ !stepChecks.includes('start') }
+                        isChecked={ stepChecks.includes('perform') }
+                        hasAppend={ true }
+                        onPress={ () => this.handleLaneChangeRadioPressed('perform') }
+                        label='Perform Lane Change' />
+                </View>
+            </View>
+        )
+    }
+
+    renderLaneChangeStepPointStart() {
         return (
             <X.Entrance
                 transition='fadeInLeft'
@@ -663,13 +753,142 @@ class Onboarding extends Component {
                     <X.Button
                         size='small' color='ghost' textWeight='light'
                         style={ Styles.onboardingStepPointCrumb }
-                        onPress={ () => this.handleControlsRadioPressed('index') }>
+                        onPress={ () => this.handleLaneChangeRadioPressed('index') }>
                         { i18n._(t`openpilot controls`) }
                     </X.Button>
                     <X.Text size='medium' color='white' weight='bold'>
+                        <Trans>Start Lane Change</Trans>
+                    </X.Text>
+                    <X.Text
+                        size='small' color='white' weight='light'
+                        style={ Styles.onboardingStepContextSmaller }>
                         <Trans>
-                            Limited Features
+                        With openpilot engaged, turn on your signal, check
+                        your surroundings, and confirm it is safe to change lanes.
                         </Trans>
+                    </X.Text>
+                    <X.Button color='ghost'
+                        style={ Styles.onboardingStepPointInstruction }
+                        onPress={ () => this.handleWrongGatePressed() }>
+                        <X.Text
+                            size='small' color='white' weight='semibold'
+                            style={ Styles.onboardingStepPointInstructionText }>
+                            <Trans>Select turn signal</Trans>
+                        </X.Text>
+                        <X.Image
+                            source={ require('../../../img/icon_chevron_right.png') }
+                            style={ Styles.onboardingStepPointInstructionIcon } />
+                    </X.Button>
+                </X.Entrance>
+            </X.Entrance>
+        )
+    }
+
+    renderLaneChangeStepPointPerform() {
+        return (
+            <X.Entrance
+                transition='fadeInLeft'
+                duration={ 1000 }
+                style={ Styles.onboardingStepPointSmall }>
+                <X.Entrance>
+                    <X.Button
+                        size='small' color='ghost' textWeight='light'
+                        style={ Styles.onboardingStepPointCrumb }
+                        onPress={ () => this.handleLaneChangeRadioPressed('index') }>
+                        openpilot lane changes
+                    </X.Button>
+                    <X.Text size='medium' color='white' weight='bold'>
+                        Perform Lane Change
+                    </X.Text>
+                    <X.Text
+                        size='small' color='white' weight='light'
+                        style={ Styles.onboardingStepContextSmaller }>
+                        Continuously observe your surroundings for safety while
+                        gently nudging the steering wheel towards your desired
+                        lane. The combination of turn signal and wheel nudge
+                        will prompt openpilot to change lanes.
+                    </X.Text>
+                    <X.Button color='ghost'
+                        style={ Styles.onboardingStepPointInstruction }
+                        onPress={ () => this.handleWrongGatePressed() }>
+                        <X.Text
+                            size='small' color='white' weight='semibold'
+                            style={ Styles.onboardingStepPointInstructionText }>
+                            Select steering wheel
+                        </X.Text>
+                        <X.Image
+                            source={ require('../../../img/icon_chevron_right.png') }
+                            style={ Styles.onboardingStepPointInstructionIcon } />
+                    </X.Button>
+                </X.Entrance>
+            </X.Entrance>
+        )
+    }
+
+    renderDisengagingStepPointIndex() {
+        const { stepChecks } = this.state;
+        return (
+            <View style={ Styles.onboardingStepPoint }>
+                <View style={ Styles.onboardingStepPointChain }>
+                    <X.Button
+                        size='small' color='ghost'
+                        style={ Styles.onboardingStepPointChainPrevious }
+                        onPress={ () => this.setStep('OB_LANECHANGE') }>
+                        <X.Image
+                            source={ require('../../../img/icon_chevron_right.png') }
+                            style={ Styles.onboardingStepPointChainPreviousIcon } />
+                    </X.Button>
+                    <View style={ Styles.onboardingStepPointChainNumber }>
+                        <X.Text color='white' weight='semibold'>
+                            5
+                        </X.Text>
+                    </View>
+                </View>
+                <View style={ Styles.onboardingStepPointBody }>
+                    <X.Text size='bigger' color='white' weight='bold'>
+                        openpilot will stop driving when a pedal is pressed.
+                    </X.Text>
+                    <X.Text
+                        size='smallish' color='white' weight='light'
+                        style={ Styles.onboardingStepContextSmall }>
+                        When encountering a potentially unsafe situation or
+                        exiting a highway, you can disengage with any pedal.
+                    </X.Text>
+                    <X.RadioField
+                        size='big'
+                        color='white'
+                        isChecked={ stepChecks.includes('limitations') }
+                        hasAppend={ true }
+                        onPress={ () => this.handleDisengageRadioPressed('limitations') }
+                        label='Limited Features' />
+                    <X.RadioField
+                        size='big'
+                        color='white'
+                        isDisabled={ !stepChecks.includes('limitations') }
+                        isChecked={ stepChecks.includes('disengage') }
+                        hasAppend={ true }
+                        onPress={ () => this.handleDisengageRadioPressed('disengage') }
+                        label='Perform Lane Change' />
+                </View>
+            </View>
+        )
+    }
+
+    renderDisengagingStepPointLimitations() {
+        return (
+            <X.Entrance
+                transition='fadeInLeft'
+                duration={ 1000 }
+                style={ Styles.onboardingStepPointSmall }>
+                <X.Entrance>
+                    <X.Button
+                        size='small' color='ghost' textWeight='light'
+                        style={ Styles.onboardingStepPointCrumb }
+                        onPress={ () => this.handleDisengageRadioPressed('index') }>
+                        openpilot disengaging
+                    </X.Button>
+                    <X.Text size='medium' color='white' weight='bold'>
+                        Limited Features
                     </X.Text>
                     <X.Text
                         size='small' color='white' weight='light'
@@ -698,7 +917,7 @@ class Onboarding extends Component {
         )
     }
 
-    renderControlsStepPointDisengage() {
+    renderDisengagingStepPointDisengage() {
         return (
             <X.Entrance
                 transition='fadeInLeft'
@@ -708,8 +927,8 @@ class Onboarding extends Component {
                     <X.Button
                         size='small' color='ghost' textWeight='light'
                         style={ Styles.onboardingStepPointCrumb }
-                        onPress={ () => this.handleControlsRadioPressed('index') }>
-                        { i18n._(t`openpilot controls`) }
+                        onPress={ () => this.handleDisengageRadioPressed('index') }>
+                        { i18n._(t`openpilot disengaging`) }
                     </X.Button>
                     <X.Text size='medium' color='white' weight='bold'>
                         <Trans>Disengage openpilot</Trans>
@@ -741,26 +960,26 @@ class Onboarding extends Component {
         )
     }
 
-    renderControlsStepPoint() {
-        const { stepPoint } = this.state;
-        switch (stepPoint) {
-            case 0:
-                return this.renderControlsStepPointIndex(); break;
-            case 1:
-                return this.renderControlsStepPointEngage(); break;
-            case 2:
-                return this.renderControlsStepPointMonitoring(); break;
-            case 3:
-                return this.renderControlsStepPointLimitations(); break;
-            case 4:
-                return this.renderControlsStepPointDisengage(); break;
-        }
-    }
-
-    renderControlsStep() {
+    renderEngagingStep() {
         return (
             <X.Entrance style={ Styles.onboardingStep }>
-                { this.renderControlsStepPoint() }
+                { this.renderEngagingStepPoint() }
+            </X.Entrance>
+        )
+    }
+
+    renderLaneChangeStep() {
+        return (
+            <X.Entrance style={ Styles.onboardingStep }>
+                { this.renderLaneChangeStepPoint() }
+            </X.Entrance>
+        )
+    }
+
+    renderDisengagingStep() {
+        return (
+            <X.Entrance style={ Styles.onboardingStep }>
+                { this.renderDisengagingStepPoint() }
             </X.Entrance>
         )
     }
@@ -778,7 +997,7 @@ class Onboarding extends Component {
                     style={ Styles.onboardingStepContextSmaller }>
                     <Trans>
                     This guide can be replayed at any time from the
-                    EON settings. To learn more about openpilot, read the
+                    device settings. To learn more about openpilot, read the
                     wiki and join the community at discord.comma.ai
                     </Trans>
                 </X.Text>
@@ -804,6 +1023,54 @@ class Onboarding extends Component {
         )
     }
 
+    renderSensorsStepPoint() {
+        const { stepPoint } = this.state;
+        switch (stepPoint) {
+            case 0:
+                return this.renderSensorsStepPointIndex(); break;
+            case 1:
+                return this.renderSensorsStepPointCamera(); break;
+            case 2:
+                return this.renderSensorsStepPointRadar(); break;
+        }
+    }
+
+    renderEngagingStepPoint() {
+        const { stepPoint } = this.state;
+        switch (stepPoint) {
+            case 0:
+                return this.renderEngagingStepPointIndex(); break;
+            case 1:
+                return this.renderEngagingStepPointEngage(); break;
+            case 2:
+                return this.renderEngagingStepPointMonitoring(); break;
+        }
+    }
+
+    renderLaneChangeStepPoint() {
+        const { stepPoint } = this.state;
+        switch (stepPoint) {
+            case 0:
+                return this.renderLaneChangeStepPointIndex(); break;
+            case 1:
+                return this.renderLaneChangeStepPointStart(); break;
+            case 2:
+                return this.renderLaneChangeStepPointPerform(); break;
+        }
+    }
+
+    renderDisengagingStepPoint() {
+        const { stepPoint } = this.state;
+        switch (stepPoint) {
+            case 0:
+                return this.renderDisengagingStepPointIndex(); break;
+            case 1:
+                return this.renderDisengagingStepPointLimitations(); break;
+            case 2:
+                return this.renderDisengagingStepPointDisengage(); break;
+        }
+    }
+
     renderStep() {
         const { step } = this.state;
         switch (step) {
@@ -813,8 +1080,12 @@ class Onboarding extends Component {
                 return this.renderIntroStep(); break;
             case Step.OB_SENSORS:
                 return this.renderSensorsStep(); break;
-            case Step.OB_CONTROLS:
-                return this.renderControlsStep(); break;
+            case Step.OB_ENGAGE:
+                return this.renderEngagingStep(); break;
+            case Step.OB_LANECHANGE:
+                return this.renderLaneChangeStep(); break;
+            case Step.OB_DISENGAGE:
+                return this.renderDisengagingStep(); break;
             case Step.OB_OUTRO:
                 return this.renderOutroStep(); break;
         }
@@ -963,7 +1234,7 @@ class Onboarding extends Component {
                     </View>
                 ) : null }
 
-                { step === 'OB_CONTROLS' ? (
+                { step === 'OB_ENGAGE' ? (
                     <View style={ Styles.onboardingVisuals }>
                         <Animated.Image
                             source={ require('../../../img/photo_wheel_buttons_01.jpg') }
@@ -978,7 +1249,7 @@ class Onboarding extends Component {
                               }] }>
                                 <X.Button
                                     style={ Styles.onboardingVisualCruiseTouchGateButton }
-                                    onPress={ () => { this.handleControlsVisualPressed('cruise') } } />
+                                    onPress={ () => { this.handleEngageVisualPressed('cruise') } } />
                             </Animated.View>
                         ) : null }
                         { stepPoint == 2 ? (
@@ -999,34 +1270,75 @@ class Onboarding extends Component {
                                   }),
                                 }]}>
                                     <X.Button
-                                        style={ Styles.onboardingPedalTouchGateButton }
-                                        onPress={ () => { this.handleControlsVisualPressed('monitoring') } } />
+                                        style={ Styles.onboardingTouchGateButton }
+                                        onPress={ () => { this.handleEngageVisualPressed('monitoring') } } />
                                 </Animated.View>
                             </React.Fragment>
                         ) : null }
-                        { stepPoint == 3 ? (
+                    </View>
+                ) : null }
+
+                { step === 'OB_LANECHANGE' ? (
+                    <View style={ Styles.onboardingVisuals }>
+                        <Animated.Image
+                            source={ require('../../../img/photo_turn_signal_02.jpg') }
+                            style={ [Styles.onboardingPhotoSignal] } />
+                        { stepPoint == 1 ? (
+                            <Animated.View style={ [Styles.onboardingSignalTouchGate, {
+                              opacity: gateHighlighted.interpolate({
+                                  inputRange: [0, 100],
+                                  outputRange: [0, 1],
+                              }),
+                            }]}>
+                                <X.Button
+                                    style={ Styles.onboardingTouchGateButton }
+                                    onPress={ () => { this.handleLaneChangeVisualPressed('start') } } />
+                            </Animated.View>
+                        ) : null }
+                        { stepPoint == 2 ? (
                             <React.Fragment>
                                 <Animated.Image
-                                    source={ require('../../../img/photo_traffic_light_01.jpg') }
+                                    source={ require('../../../img/photo_wheel_hands_01.jpg') }
                                     style={ [Styles.onboardingPhotoCycled, {
                                         opacity: photoCycled.interpolate({
                                             inputRange: [0, 100],
                                             outputRange: [0, 1],
                                         }),
-                                    }] } />
-                                <Animated.View style={ [Styles.onboardingLightTouchGate, {
+                                    }] }>
+                                </Animated.Image>
+                                <Animated.View style={ [Styles.onboardingWheelTouchGate, {
                                   opacity: gateHighlighted.interpolate({
                                       inputRange: [0, 100],
                                       outputRange: [0, 1],
                                   }),
                                 }]}>
                                     <X.Button
-                                        style={ Styles.onboardingPedalTouchGateButton }
-                                        onPress={ () => { this.handleControlsVisualPressed('limitations') } } />
+                                        style={ Styles.onboardingTouchGateButton }
+                                        onPress={ () => { this.handleLaneChangeVisualPressed('perform') } } />
                                 </Animated.View>
                             </React.Fragment>
                         ) : null }
-                        { stepPoint == 4 ? (
+                    </View>
+                ) : null }
+
+                { step === 'OB_DISENGAGE' ? (
+                    <View style={ Styles.onboardingVisuals }>
+                        <Animated.Image
+                            source={ require('../../../img/photo_traffic_light_01.jpg') }
+                            style={ [Styles.onboardingPhotoCruise] } />
+                        { stepPoint == 1 ? (
+                            <Animated.View style={ [Styles.onboardingLightTouchGate, {
+                                opacity: gateHighlighted.interpolate({
+                                    inputRange: [0, 100],
+                                    outputRange: [0, 1],
+                                }),
+                            }]}>
+                                <X.Button
+                                    style={ Styles.onboardingTouchGateButton }
+                                    onPress={ () => { this.handleDisengageVisualPressed('limitations') } } />
+                            </Animated.View>
+                        ) : null }
+                        { stepPoint == 2 ? (
                             <View style={ Styles.onboardingVisuals }>
                                 <Animated.Image
                                     source={ require('../../../img/photo_pedals_01.jpg') }
@@ -1043,8 +1355,8 @@ class Onboarding extends Component {
                                   }),
                                 }]}>
                                     <X.Button
-                                        style={ Styles.onboardingPedalTouchGateButton }
-                                        onPress={ () => { this.handleControlsVisualPressed('pedal') } } />
+                                        style={ Styles.onboardingTouchGateButton }
+                                        onPress={ () => { this.handleDisengageVisualPressed('disengage') } } />
                                 </Animated.View>
                                 <Animated.View style={ [Styles.onboardingGasPedalTouchGate, {
                                   opacity: gateHighlighted.interpolate({
@@ -1053,8 +1365,8 @@ class Onboarding extends Component {
                                   }),
                                 }] }>
                                     <X.Button
-                                        style={ Styles.onboardingPedalTouchGateButton }
-                                        onPress={ () => { this.handleControlsVisualPressed('pedal') } } />
+                                        style={ Styles.onboardingTouchGateButton }
+                                        onPress={ () => { this.handleDisengageVisualPressed('disengage') } } />
                                 </Animated.View>
                             </View>
                         ) : null }
