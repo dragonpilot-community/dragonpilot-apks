@@ -3,7 +3,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        269
+        333
       ]
     ]
   },
@@ -11,7 +11,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        274
+        338
       ]
     ]
   },
@@ -19,7 +19,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        284
+        348
       ]
     ]
   },
@@ -27,7 +27,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        313
+        377
       ]
     ]
   },
@@ -35,7 +35,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        318
+        382
       ]
     ]
   },
@@ -43,7 +43,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        329
+        393
       ]
     ]
   },
@@ -51,7 +51,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        335
+        399
       ]
     ]
   },
@@ -59,7 +59,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        341
+        405
       ]
     ]
   },
@@ -67,7 +67,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        369
+        433
       ]
     ]
   },
@@ -75,19 +75,19 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        374
+        438
       ]
     ]
   },
-  "Camera from EON": {
+  "Camera from Device": {
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        385
+        449
       ],
       [
         "js/components/training/Onboarding/Onboarding.js",
-        412
+        476
       ]
     ]
   },
@@ -95,11 +95,11 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        393
+        457
       ],
       [
         "js/components/training/Onboarding/Onboarding.js",
-        459
+        523
       ]
     ]
   },
@@ -107,19 +107,19 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        409
+        473
       ],
       [
         "js/components/training/Onboarding/Onboarding.js",
-        456
+        520
       ]
     ]
   },
-  "A vision algorithm leverages EON’s road-facing camera to determine the path to drive.": {
+  "A vision algorithm leverages the road-facing camera to determine the path to drive.": {
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        417
+        481
       ]
     ]
   },
@@ -127,7 +127,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        425
+        489
       ]
     ]
   },
@@ -135,7 +135,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        436
+        500
       ]
     ]
   },
@@ -143,7 +143,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        464
+        528
       ]
     ]
   },
@@ -151,7 +151,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        472
+        536
       ]
     ]
   },
@@ -159,15 +159,15 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        483
+        547
       ]
     ]
   },
-  "openpilot will start driving when cruise control is set.": {
+  "openpilot will engage when cruise control is set.": {
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        534
+        586
       ]
     ]
   },
@@ -175,7 +175,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        539
+        591
       ]
     ]
   },
@@ -183,11 +183,11 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        546
+        601
       ],
       [
         "js/components/training/Onboarding/Onboarding.js",
-        586
+        628
       ]
     ]
   },
@@ -195,55 +195,23 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        553
+        609
       ],
       [
         "js/components/training/Onboarding/Onboarding.js",
-        627
+        669
       ]
     ]
   },
-  "Limited Features": {
+  "openpilot engaging": {
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        560
+        625
       ],
       [
         "js/components/training/Onboarding/Onboarding.js",
-        670
-      ]
-    ]
-  },
-  "Disengage openpilot": {
-    "origin": [
-      [
-        "js/components/training/Onboarding/Onboarding.js",
-        567
-      ],
-      [
-        "js/components/training/Onboarding/Onboarding.js",
-        715
-      ]
-    ]
-  },
-  "openpilot controls": {
-    "origin": [
-      [
-        "js/components/training/Onboarding/Onboarding.js",
-        583
-      ],
-      [
-        "js/components/training/Onboarding/Onboarding.js",
-        624
-      ],
-      [
-        "js/components/training/Onboarding/Onboarding.js",
-        667
-      ],
-      [
-        "js/components/training/Onboarding/Onboarding.js",
-        712
+        666
       ]
     ]
   },
@@ -251,7 +219,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        591
+        633
       ]
     ]
   },
@@ -259,7 +227,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        603
+        645
       ]
     ]
   },
@@ -267,7 +235,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        632
+        674
       ]
     ]
   },
@@ -275,7 +243,123 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        645
+        687
+      ]
+    ]
+  },
+  "Start Lane Change": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        732
+      ],
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        760
+      ]
+    ]
+  },
+  "Perform Lane Change": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        740
+      ],
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        801
+      ],
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        875
+      ]
+    ]
+  },
+  "openpilot controls": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        757
+      ]
+    ]
+  },
+  "With openpilot engaged, turn on your signal, check your surroundings, and confirm it is safe to change lanes.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        765
+      ]
+    ]
+  },
+  "Select turn signal": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        776
+      ]
+    ]
+  },
+  "openpilot lane changes": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        798
+      ]
+    ]
+  },
+  "Continuously observe your surroundings for safety while gently nudging the steering wheel towards your desired lane. The combination of turn signal and wheel nudge will prompt openpilot to change lanes.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        806
+      ]
+    ]
+  },
+  "Select steering wheel": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        819
+      ]
+    ]
+  },
+  "openpilot will stop driving when a pedal is pressed.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        851
+      ]
+    ]
+  },
+  "When encountering a potentially unsafe situation or exiting a highway, you can disengage with any pedal.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        856
+      ]
+    ]
+  },
+  "Limited Features": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        867
+      ],
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        895
+      ]
+    ]
+  },
+  "openpilot disengaging": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        892
+      ],
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        935
       ]
     ]
   },
@@ -283,7 +367,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        677
+        900
       ]
     ]
   },
@@ -291,7 +375,15 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        690
+        913
+      ]
+    ]
+  },
+  "Disengage openpilot": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        938
       ]
     ]
   },
@@ -299,7 +391,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        720
+        943
       ]
     ]
   },
@@ -307,7 +399,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        733
+        956
       ]
     ]
   },
@@ -315,15 +407,15 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        774
+        997
       ]
     ]
   },
-  "This guide can be replayed at any time from the EON settings. To learn more about openpilot, read the wiki and join the community at discord.comma.ai": {
+  "This guide can be replayed at any time from the device settings. To learn more about openpilot, read the wiki and join the community at discord.comma.ai": {
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        779
+        1002
       ]
     ]
   },
@@ -331,7 +423,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        791
+        1014
       ]
     ]
   },
@@ -339,7 +431,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        799
+        1022
       ]
     ]
   }

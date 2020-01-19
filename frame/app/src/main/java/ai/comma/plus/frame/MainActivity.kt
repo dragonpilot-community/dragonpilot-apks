@@ -249,11 +249,11 @@ class MainActivity : Activity(), NewDestinationReceiverDelegate, OffroadNavigati
                 updateSidebarMetrics(
                   log.thermal.freeSpace,
                   log.thermal.pa0,
-                  log.thermal.thermalStatus.toString());
+                  log.thermal.thermalStatus.toString(),
+                  log.thermal.ipAddr.toString());
                 onBatteryChange(
                   log.thermal.batteryPercent.toInt(),
-                  log.thermal.batteryStatus.toString(),
-                  log.thermal.ipAddr.toString())
+                  log.thermal.batteryStatus.toString())
             }
         }
     }
@@ -734,8 +734,7 @@ class MainActivity : Activity(), NewDestinationReceiverDelegate, OffroadNavigati
 
     fun onBatteryChange(level: Int, status: String) {
         val isCharging = status == "Charging"
-        val pct = 100 * (level / (scale * 1.0))
-        batteryPercentageText?.text = String.format("%s%s%s", pct.toInt().toString().padStart(3), "%", if (isCharging) " +" else "  ")
+        batteryPercentageText?.text = String.format("%s%s%s", level.toInt().toString().padStart(3), "%", if (isCharging) " +" else "  ")
     }
 
     inner class NetworkMonitor : BroadcastReceiver() {

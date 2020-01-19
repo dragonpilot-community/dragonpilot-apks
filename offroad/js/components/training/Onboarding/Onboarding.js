@@ -606,7 +606,7 @@ class Onboarding extends Component {
                         isChecked={ stepChecks.includes('monitoring') }
                         hasAppend={ true }
                         onPress={ () => this.handleEngageRadioPressed('monitoring') }
-                        label='Driver Monitoring' />
+                        label={ i18n._(t`Driver Monitoring`) } />
                 </View>
             </View>
         )
@@ -729,7 +729,7 @@ class Onboarding extends Component {
                         isChecked={ stepChecks.includes('start') }
                         hasAppend={ true }
                         onPress={ () => this.handleLaneChangeRadioPressed('start') }
-                        label='Start Lane Change' />
+                        label={ i18n._(t`Start Lane Change`) } />
                     <X.RadioField
                         size='big'
                         color='white'
@@ -737,7 +737,7 @@ class Onboarding extends Component {
                         isChecked={ stepChecks.includes('perform') }
                         hasAppend={ true }
                         onPress={ () => this.handleLaneChangeRadioPressed('perform') }
-                        label='Perform Lane Change' />
+                        label={ i18n._(t`Perform Lane Change`) } />
                 </View>
             </View>
         )
@@ -795,18 +795,20 @@ class Onboarding extends Component {
                         size='small' color='ghost' textWeight='light'
                         style={ Styles.onboardingStepPointCrumb }
                         onPress={ () => this.handleLaneChangeRadioPressed('index') }>
-                        openpilot lane changes
+                        { i18n._(t`openpilot lane changes`) }
                     </X.Button>
                     <X.Text size='medium' color='white' weight='bold'>
-                        Perform Lane Change
+                        <Trans>Perform Lane Change</Trans>
                     </X.Text>
                     <X.Text
                         size='small' color='white' weight='light'
                         style={ Styles.onboardingStepContextSmaller }>
+                        <Trans>
                         Continuously observe your surroundings for safety while
                         gently nudging the steering wheel towards your desired
                         lane. The combination of turn signal and wheel nudge
                         will prompt openpilot to change lanes.
+                        </Trans>
                     </X.Text>
                     <X.Button color='ghost'
                         style={ Styles.onboardingStepPointInstruction }
@@ -814,7 +816,7 @@ class Onboarding extends Component {
                         <X.Text
                             size='small' color='white' weight='semibold'
                             style={ Styles.onboardingStepPointInstructionText }>
-                            Select steering wheel
+                            <Trans>Select steering wheel</Trans>
                         </X.Text>
                         <X.Image
                             source={ require('../../../img/icon_chevron_right.png') }
@@ -846,13 +848,15 @@ class Onboarding extends Component {
                 </View>
                 <View style={ Styles.onboardingStepPointBody }>
                     <X.Text size='bigger' color='white' weight='bold'>
-                        openpilot will stop driving when a pedal is pressed.
+                        <Trans>openpilot will stop driving when a pedal is pressed.</Trans>
                     </X.Text>
                     <X.Text
                         size='smallish' color='white' weight='light'
                         style={ Styles.onboardingStepContextSmall }>
+                        <Trans>
                         When encountering a potentially unsafe situation or
                         exiting a highway, you can disengage with any pedal.
+                        </Trans>
                     </X.Text>
                     <X.RadioField
                         size='big'
@@ -860,7 +864,7 @@ class Onboarding extends Component {
                         isChecked={ stepChecks.includes('limitations') }
                         hasAppend={ true }
                         onPress={ () => this.handleDisengageRadioPressed('limitations') }
-                        label='Limited Features' />
+                        label={ i18n._(t`Limited Features`) } />
                     <X.RadioField
                         size='big'
                         color='white'
@@ -868,7 +872,7 @@ class Onboarding extends Component {
                         isChecked={ stepChecks.includes('disengage') }
                         hasAppend={ true }
                         onPress={ () => this.handleDisengageRadioPressed('disengage') }
-                        label='Perform Lane Change' />
+                        label={ i18n._(t`Perform Lane Change`) } />
                 </View>
             </View>
         )
@@ -885,10 +889,10 @@ class Onboarding extends Component {
                         size='small' color='ghost' textWeight='light'
                         style={ Styles.onboardingStepPointCrumb }
                         onPress={ () => this.handleDisengageRadioPressed('index') }>
-                        openpilot disengaging
+                        { i18n._(t`openpilot disengaging`) }
                     </X.Button>
                     <X.Text size='medium' color='white' weight='bold'>
-                        Limited Features
+                        <Trans>Limited Features</Trans>
                     </X.Text>
                     <X.Text
                         size='small' color='white' weight='light'

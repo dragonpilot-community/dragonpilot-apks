@@ -2302,9 +2302,9 @@ combined-stream@^1.0.6, combined-stream@~1.0.6:
   dependencies:
     delayed-stream "~1.0.0"
 
-"comma-x-native@git+https://git@github.com/dragonpilot-community/comma-x-native.git":
+"comma-x-native@git+https://git@github.com/commaai/comma-x-native.git":
   version "0.2.0"
-  resolved "git+https://git@github.com/dragonpilot-community/comma-x-native.git#1ad501e7a4d48ba33b9241bfb095dcfc219db458"
+  resolved "git+https://git@github.com/commaai/comma-x-native.git#1ad501e7a4d48ba33b9241bfb095dcfc219db458"
   dependencies:
     react-native-linear-gradient "^2.3.0"
 

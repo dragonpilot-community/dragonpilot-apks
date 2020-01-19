@@ -343,7 +343,7 @@
       ]
     ]
   },
-  "The calibration algorithm is always active on the road facing camera. Resetting calibration is only advised when EON reports an invalid calibration alert or when EON is remounted in a different position.": {
+  "The calibration algorithm is always active on the road facing camera. Resetting calibration is only advised when the device reports an invalid calibration alert or when the device is remounted in a different position.": {
     "origin": [
       [
         "js/components/Settings/Settings.js",
@@ -463,7 +463,7 @@
       ]
     ]
   },
-  "Allow devices to connect to your EON using Secure Shell (SSH).": {
+  "Allow devices to connect to your device using Secure Shell (SSH).": {
     "origin": [
       [
         "js/components/Settings/Settings.js",
@@ -543,23 +543,19 @@
       ]
     ]
   },
-  "N/A": {
-    "origin": [
-      [
-        "js/components/Settings/Settings.js",
-        718
-      ],
-      [
-        "js/components/Settings/Settings.js",
-        722
-      ]
-    ]
-  },
   "Panda Dongle ID": {
     "origin": [
       [
         "js/components/Settings/Settings.js",
         721
+      ]
+    ]
+  },
+  "N/A": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        722
       ]
     ]
   },
