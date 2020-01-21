@@ -91,6 +91,7 @@ const PARAMS = [
   "DragonEnableAssistedLC",
   "DragonEnableAutoLC",
   "DragonBootHotspot",
+  "DragonEnableSRLearner",
 ].concat(ALERT_PARAMS);
 
 export function refreshParams(params) {

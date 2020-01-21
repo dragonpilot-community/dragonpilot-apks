@@ -23,7 +23,7 @@ const SettingsRoutes = {
     SAFETY: 'SAFETY',
     UI: 'UI',
     APP: 'APP',
-    TOYOTA: 'TOYOTA',
+    BRANDSPECIFIC: 'BRANDSPECIFIC',
     // HONDA: 'HONDA',
 }
 
@@ -208,9 +208,9 @@ class DragonpilotSettings extends Component {
             },
             {
                 icon: Icons.developer,
-                title: i18n._(t`Toyota/Lexus`),
+                title: i18n._(t`Brand Specific`),
                 context: i18n._(t`Settings`),
-                route: SettingsRoutes.TOYOTA,
+                route: SettingsRoutes.BRANDSPECIFIC,
             },
             // {
             //     icon: Icons.developer,
@@ -264,6 +264,7 @@ class DragonpilotSettings extends Component {
                 DragonNoctuaMode: dragonNoctuaMode,
                 DragonCacheCar: dragonCacheCar,
                 DragonChargingCtrl: dragonChargingCtrl,
+                DragonEnableSRLearner: dragonEnableSRLearner,
             }
         } = this.props;
         const { expandedCell, enableMixplorer, cameraOffsetInt, autoShutdownAtInt, carModel, wazeMode } = this.state;
@@ -308,6 +309,9 @@ class DragonpilotSettings extends Component {
                     </X.Table>
                     }
                     <X.Table color='darkBlue'>
+                        <X.TableCell
+                            title={ i18n._(t`Services`) }
+                            value='' />
                         <X.TableCell
                             type='switch'
                             title={ i18n._(t`Enable Hotspot on Boot`) }
@@ -377,6 +381,11 @@ class DragonpilotSettings extends Component {
                                 </X.Button>
                             </X.Button>
                         </X.TableCell>
+                    </X.Table>
+                    <X.Table color='darkBlue'>
+                        <X.TableCell
+                            title={ i18n._(t`Hardware`) }
+                            value='' />
                         <X.TableCell
                             type='switch'
                             title={ i18n._(t`Enable Noctua Fan Mode`) }
@@ -386,15 +395,6 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'enable_noctua_mode' }
                             handleExpanded={ () => this.handleExpanded('enable_noctua_mode') }
                             handleChanged={ this.props.setNoctuaMode } />
-                        <X.TableCell
-                            type='switch'
-                            title={ i18n._(t`Cache Fingerprint`) }
-                            value={ !!parseInt(dragonCacheCar) }
-                            iconSource={ Icons.developer }
-                            description={ i18n._(t`Enable this to store your fingerprint/vin/car model into files and use it when required, this will reduce the car model detection time, disable this if you put EON onto another car, reboot required.`) }
-                            isExpanded={ expandedCell == 'cache_fingerprint' }
-                            handleExpanded={ () => this.handleExpanded('cache_fingerprint') }
-                            handleChanged={ this.props.setCacheCar } />
                         <X.TableCell
                             type='switch'
                             title={ i18n._(t`Charging Control`) }
@@ -437,6 +437,29 @@ class DragonpilotSettings extends Component {
                                 </X.Button>
                             </X.Button>
                         </X.TableCell>
+                    </X.Table>
+                    <X.Table color='darkBlue'>
+                        <X.TableCell
+                            title={ i18n._(t`Tuning`) }
+                            value='' />
+                        <X.TableCell
+                            type='switch'
+                            title={ i18n._(t`Cache Fingerprint`) }
+                            value={ !!parseInt(dragonCacheCar) }
+                            iconSource={ Icons.developer }
+                            description={ i18n._(t`Enable this to store your fingerprint/vin/car model into files and use it when required, this will reduce the car model detection time, disable this if you put EON onto another car, reboot required.`) }
+                            isExpanded={ expandedCell == 'cache_fingerprint' }
+                            handleExpanded={ () => this.handleExpanded('cache_fingerprint') }
+                            handleChanged={ this.props.setCacheCar } />
+                        <X.TableCell
+                            type='switch'
+                            title={ i18n._(t`Enable Steer Ratio Learner`) }
+                            value={ !!parseInt(dragonEnableSRLearner) }
+                            iconSource={ Icons.developer }
+                            description={ i18n._(t`Enable this to turn on steer ratio learner, We DO NOT RECOMMEND that you turn on this unless you know what you are doing.`) }
+                            isExpanded={ expandedCell == 'sr_learner' }
+                            handleExpanded={ () => this.handleExpanded('sr_learner') }
+                            handleChanged={ this.props.setSRLeaner } />
                     </X.Table>
                     <X.Table color='darkBlue' padding='big'>
                         <X.Button
@@ -497,6 +520,9 @@ class DragonpilotSettings extends Component {
                     <X.Line color='transparent' spacing='tiny' />
                     <X.Table color='darkBlue'>
                         <X.TableCell
+                            title={ i18n._(t`Controls`) }
+                            value='' />
+                        <X.TableCell
                             type='switch'
                             title={ i18n._(t`Enable Lateral Control`) }
                             value={ !!parseInt(dragonLatCtrl) }
@@ -550,6 +576,11 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'enable_lead_car_alert' }
                             handleExpanded={ () => this.handleExpanded('enable_lead_car_alert') }
                             handleChanged={ this.props.setEnableLeadCarMovingAlert } />
+                    </X.Table>
+                    <X.Table color='darkBlue'>
+                        <X.TableCell
+                            title={ i18n._(t`Lane Change`) }
+                            value='' />
                         <X.TableCell
                             type='switch'
                             title={ i18n._(t`Enable Assisted Lane Change`) }
@@ -572,6 +603,9 @@ class DragonpilotSettings extends Component {
                         }
                     </X.Table>
                     <X.Table color='darkBlue'>
+                        <X.TableCell
+                            title={ i18n._(t`Safety Monitors`) }
+                            value='' />
                         <X.TableCell
                             type='switch'
                             title={ i18n._(t`Enable Safety Check`) }
@@ -748,7 +782,7 @@ class DragonpilotSettings extends Component {
         )
     }
 
-    renderToyotaSettings() {
+    renderBrandSpecificSettings() {
         const {
             params: {
                 DragonToyotaStockDSU: dragonToyotaStockDSU,
@@ -764,7 +798,7 @@ class DragonpilotSettings extends Component {
                         color='ghost'
                         size='small'
                         onPress={ () => this.handlePressedBack() }>
-                        { i18n._(t`<  Toyota/Lexus Settings`) }
+                        { i18n._(t`<  Brand Specific Settings`) }
                     </X.Button>
                 </View>
                 <ScrollView
@@ -772,6 +806,9 @@ class DragonpilotSettings extends Component {
                     style={ Styles.settingsWindow }>
                     <X.Line color='transparent' spacing='tiny' />
                     <X.Table color='darkBlue'>
+                        <X.TableCell
+                            title={ i18n._(t`Toyota / Lexus`) }
+                            value='' />
                         <X.TableCell
                             type='switch'
                             title={ i18n._(t`Enable Stock DSU Mode`) }
@@ -799,6 +836,11 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'toyota_sng_mod' }
                             handleExpanded={ () => this.handleExpanded('toyota_sng_mod') }
                             handleChanged={ this.props.setToyotaSnGMod } />
+                    </X.Table>
+                    <X.Table color='darkBlue'>
+                        <X.TableCell
+                            title={ i18n._(t`Honda`) }
+                            value='' />
                     </X.Table>
                 </ScrollView>
             </View>
@@ -1009,8 +1051,8 @@ class DragonpilotSettings extends Component {
                 return this.renderPrimarySettings();
             case SettingsRoutes.SAFETY:
                 return this.renderSafetySettings();
-            case SettingsRoutes.TOYOTA:
-                return this.renderToyotaSettings();
+            case SettingsRoutes.BRANDSPECIFIC:
+                return this.renderBrandSpecificSettings();
             // case SettingsRoutes.HONDA:
             //     return this.renderHondaSettings();
             case SettingsRoutes.UI:
@@ -1181,6 +1223,9 @@ const mapDispatchToProps = dispatch => ({
     },
     setBootHotspot: (val) => {
         dispatch(updateParam(Params.KEY_BOOT_HOTSPOT, (val | 0).toString()));
+    },
+    setSRLeaner: (val) => {
+        dispatch(updateParam(Params.KEY_SR_LEARNER, (val | 0).toString()));
     },
 });
 
