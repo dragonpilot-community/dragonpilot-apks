@@ -716,12 +716,16 @@ class Onboarding extends Component {
                 </View>
                 <View style={ Styles.onboardingStepPointBody }>
                     <X.Text size='bigger' color='white' weight='bold'>
+                        <Trans>
                         openpilot can change lanes with your assistance.
+                        </Trans>
                     </X.Text>
                     <X.Text
                         size='smallish' color='white' weight='light'
                         style={ Styles.onboardingStepContextSmall }>
+                        <Trans>
                         openpilot is not capable of checking if a lane change is safe. This is your job. openpilot will change lanes regardless if another vehicle is present.
+                        </Trans>
                     </X.Text>
                     <X.RadioField
                         size='big'

@@ -13,9 +13,9 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: js/components/Home/Home.js:494
-msgid "14 days of storage"
-msgstr "14 days of storage"
+#: js/components/Home/Home.js:490
+msgid "1 year of storage"
+msgstr "1 year of storage"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:205
 msgid "3rd Party Apps"
@@ -53,10 +53,6 @@ msgstr "<  Safety Settings"
 msgid "<  Settings"
 msgstr "<  Settings"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:767
-#~ msgid "<  Toyota/Lexus Settings"
-#~ msgstr "<  Toyota/Lexus Settings"
-
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:901
 msgid "<  UI Settings"
 msgstr "<  UI Settings"
@@ -69,23 +65,19 @@ msgstr "<  dragonpilot Settings"
 msgid "A driver assistance system is not a self driving car. This means openpilot is designed to work with you, not without you. Your attention is required to drive."
 msgstr "A driver assistance system is not a self driving car. This means dragonpilot is designed to work with you, not without you. Your attention is required to drive."
 
-#: js/components/training/Onboarding/Onboarding.js:417
-#~ msgid "A vision algorithm leverages EON’s road-facing camera to determine the path to drive."
-#~ msgstr "A vision algorithm leverages EON’s road-facing camera to determine the path to drive."
-
 #: js/components/training/Onboarding/Onboarding.js:481
 msgid "A vision algorithm leverages the road-facing camera to determine the path to drive."
 msgstr "A vision algorithm leverages the road-facing camera to determine the path to drive."
 
-#: js/components/Home/Home.js:243
+#: js/components/Home/Home.js:239
 msgid "ALERT"
 msgstr "ALERT"
 
-#: js/components/Home/Home.js:243
+#: js/components/Home/Home.js:239
 msgid "ALERTS"
 msgstr "ALERTS"
 
-#: js/components/Home/Home.js:371
+#: js/components/Home/Home.js:367
 msgid "ALL TIME"
 msgstr "ALL TIME"
 
@@ -108,10 +100,6 @@ msgstr "Adjust the steering monitor timer, set this to 0 if you would like to di
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:536
 msgid "Allow Gas"
 msgstr "Allow Gas"
-
-#: js/components/Settings/Settings.js:685
-#~ msgid "Allow devices to connect to your EON using Secure Shell (SSH)."
-#~ msgstr "Allow devices to connect to your EON using Secure Shell (SSH)."
 
 #: js/components/Settings/Settings.js:685
 msgid "Allow devices to connect to your device using Secure Shell (SSH)."
@@ -157,7 +145,7 @@ msgstr "Auto Run TomTom Safety Camera App"
 msgid "Auto Shutdown (min)"
 msgstr "Auto Shutdown (min)"
 
-#: js/components/Home/Home.js:470
+#: js/components/Home/Home.js:466
 msgid "Become a comma prime member in the comma app and get premium features!"
 msgstr "Become a comma prime member in the comma app and get premium features!"
 
@@ -181,7 +169,7 @@ msgstr "Boost audio alert volume in percentage, set to -100 (%) if you would lik
 msgid "Brand Specific"
 msgstr "Brand Specific"
 
-#: js/components/Home/Home.js:440
+#: js/components/Home/Home.js:436
 msgid "COMMA POINTS"
 msgstr "COMMA POINTS"
 
@@ -201,11 +189,6 @@ msgstr "Camera Offset (cm)"
 #: js/components/training/Onboarding/Onboarding.js:476
 msgid "Camera from Device"
 msgstr "Camera from Device"
-
-#: js/components/training/Onboarding/Onboarding.js:385
-#: js/components/training/Onboarding/Onboarding.js:412
-#~ msgid "Camera from EON"
-#~ msgstr "Camera from EON"
 
 #: js/components/Settings/Settings.js:701
 #: js/components/Settings/Settings.js:891
@@ -248,7 +231,7 @@ msgstr "Comma.ai, Inc. Terms & Conditions"
 msgid "Community maintained features are not confirmed by comma.ai to meet the standard safety model. Be extra cautious using them."
 msgstr "Community maintained features are not confirmed by comma.ai to meet the standard safety model. Be extra cautious using them."
 
-#: js/components/training/Onboarding/Onboarding.js:997
+#: js/components/training/Onboarding/Onboarding.js:1001
 msgid "Congratulations! You have completed openpilot training."
 msgstr "Congratulations! You have completed dragonpilot training."
 
@@ -261,7 +244,7 @@ msgstr "Connect"
 msgid "Connect to WiFi"
 msgstr "Connect to WiFi"
 
-#: js/components/Home/Home.js:299
+#: js/components/Home/Home.js:295
 msgid "Connect to a WiFi or cellular network to upload and review your drives."
 msgstr "Connect to a WiFi or cellular network to upload and review your drives."
 
@@ -275,20 +258,16 @@ msgstr "Connected"
 msgid "Continue"
 msgstr "Continue"
 
-#: js/components/training/Onboarding/Onboarding.js:806
+#: js/components/training/Onboarding/Onboarding.js:810
 msgid "Continuously observe your surroundings for safety while gently nudging the steering wheel towards your desired lane. The combination of turn signal and wheel nudge will prompt openpilot to change lanes."
-msgstr "Continuously observe your surroundings for safety while gently nudging the steering wheel towards your desired lane. The combination of turn signal and wheel nudge will prompt openpilot to change lanes."
-
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:523
-#~ msgid "Control related"
-#~ msgstr "Control related"
+msgstr "Continuously observe your surroundings for safety while gently nudging the steering wheel towards your desired lane. The combination of turn signal and wheel nudge will prompt dragonpilot to change lanes."
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:523
 msgid "Controls"
 msgstr "Controls"
 
-#: js/components/Home/Home.js:327
-#: js/components/Home/Home.js:387
+#: js/components/Home/Home.js:323
+#: js/components/Home/Home.js:383
 msgid "DRIVES"
 msgstr "DRIVES"
 
@@ -296,7 +275,7 @@ msgstr "DRIVES"
 msgid "Developer"
 msgstr "Developer"
 
-#: js/components/Home/Home.js:506
+#: js/components/Home/Home.js:502
 msgid "Developer perks"
 msgstr "Developer perks"
 
@@ -312,7 +291,7 @@ msgstr "Device Paired"
 msgid "Disable this only if you do not want to see the driving UI and its blocking your navigation view, this will also effect what you records in dashcam."
 msgstr "Disable this only if you do not want to see the driving UI and its blocking your navigation view, this will also effect what you records in dashcam."
 
-#: js/components/training/Onboarding/Onboarding.js:938
+#: js/components/training/Onboarding/Onboarding.js:942
 msgid "Disengage openpilot"
 msgstr "Disengage dragonpilot"
 
@@ -365,8 +344,8 @@ msgid "Display Turning Signal"
 msgstr "Display Turning Signal"
 
 #: js/components/Settings/Settings.js:396
-msgid "Display speed in km/h instead of mp/h and temperature in °C instead of °F."
-msgstr "Display speed in km/h instead of mp/h and temperature in °C instead of °F."
+msgid "Display speed in km/h instead of mp/h."
+msgstr "Display speed in km/h instead of mp/h."
 
 #: js/components/Settings/Settings.js:563
 msgid "Dongle ID"
@@ -600,21 +579,17 @@ msgstr "Enable this will let the fan running at full speed at any temperature, r
 msgid "Engage openpilot"
 msgstr "Engage dragonpilot"
 
-#: js/components/Home/Home.js:526
+#: js/components/Home/Home.js:522
 msgid "Finish Setup"
 msgstr "Finish Setup"
 
-#: js/components/training/Onboarding/Onboarding.js:1014
+#: js/components/training/Onboarding/Onboarding.js:1018
 msgid "Finish Training"
 msgstr "Finish Training"
 
 #: js/components/Settings/Settings.js:569
 msgid "Free Storage"
 msgstr "Free Storage"
-
-#: js/components/Home/Home.js:132
-msgid "Friday"
-msgstr "Friday"
 
 #: js/components/Settings/Settings.js:710
 msgid "Git Branch"
@@ -632,8 +607,8 @@ msgstr "GitHub Username"
 msgid "Go Back"
 msgstr "Go Back"
 
-#: js/components/Home/Home.js:359
-#: js/components/Home/Home.js:419
+#: js/components/Home/Home.js:355
+#: js/components/Home/Home.js:415
 msgid "HOURS"
 msgstr "HOURS"
 
@@ -641,7 +616,7 @@ msgstr "HOURS"
 msgid "Hardware"
 msgstr "Hardware"
 
-#: js/components/Home/Home.js:281
+#: js/components/Home/Home.js:277
 msgid "Hide Alerts"
 msgstr "Hide Alerts"
 
@@ -705,12 +680,12 @@ msgstr "If you enable this, the car will slow down automatically when on a curve
 msgid "If you turn this on, dp will try to keep your battery level between 60%~70% to protect your battery."
 msgstr "If you turn this on, dp will try to keep your battery level between 60%~70% to protect your battery."
 
-#: js/components/Home/Home.js:344
-#: js/components/Home/Home.js:404
+#: js/components/Home/Home.js:340
+#: js/components/Home/Home.js:400
 msgid "KM"
 msgstr "KM"
 
-#: js/components/training/Onboarding/Onboarding.js:900
+#: js/components/training/Onboarding/Onboarding.js:904
 msgid "Keep in mind that certain situations are not handled by openpilot. Scenarios such as traffic lights, stop signs, quick vehicle cutins and pedestrians are unrecognized and openpilot may accelerate."
 msgstr "Keep in mind that certain situations are not handled by dragonpilot. Scenarios such as traffic lights, stop signs, quick vehicle cutins and pedestrians are unrecognized and dragonpilot may accelerate."
 
@@ -718,33 +693,25 @@ msgstr "Keep in mind that certain situations are not handled by dragonpilot. Sce
 msgid "Lane Change"
 msgstr "Lane Change"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:582
-#~ msgid "Lane Change Related"
-#~ msgstr "Lane Change Related"
-
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:172
 #: js/components/Settings/Settings.js:141
 #: js/components/UpdatePrompt/UpdatePrompt.js:33
 msgid "Later"
 msgstr "Later"
 
-#: js/components/training/Onboarding/Onboarding.js:867
-#: js/components/training/Onboarding/Onboarding.js:895
+#: js/components/training/Onboarding/Onboarding.js:871
+#: js/components/training/Onboarding/Onboarding.js:899
 msgid "Limited Features"
 msgstr "Limited Features"
 
-#: js/components/Home/Home.js:344
-#: js/components/Home/Home.js:404
+#: js/components/Home/Home.js:340
+#: js/components/Home/Home.js:400
 msgid "MILES"
 msgstr "MILES"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:307
 msgid "MiXplorer File Manager"
 msgstr "MiXplorer File Manager"
-
-#: js/components/Home/Home.js:132
-msgid "Monday"
-msgstr "Monday"
 
 #: js/components/SetupWifi/SetupWifi.js:377
 msgid "More Options"
@@ -763,7 +730,7 @@ msgstr "Network"
 msgid "No"
 msgstr "No"
 
-#: js/components/Home/Home.js:293
+#: js/components/Home/Home.js:289
 msgid "No Network Connection"
 msgstr "No Network Connection"
 
@@ -799,7 +766,7 @@ msgstr "Open Waze"
 msgid "Open WiFi Settings"
 msgstr "Open WiFi Settings"
 
-#: js/components/Home/Home.js:311
+#: js/components/Home/Home.js:307
 msgid "PAST WEEK"
 msgstr "PAST WEEK"
 
@@ -811,7 +778,7 @@ msgstr "Pair Device"
 msgid "Pair Your Account"
 msgstr "Pair Your Account"
 
-#: js/components/Home/Home.js:538
+#: js/components/Home/Home.js:534
 msgid "Pair your comma account with comma connect"
 msgstr "Pair your comma account with comma connect"
 
@@ -832,9 +799,9 @@ msgstr "Panda Firmware"
 msgid "Password:"
 msgstr "Password:"
 
-#: js/components/training/Onboarding/Onboarding.js:740
-#: js/components/training/Onboarding/Onboarding.js:801
-#: js/components/training/Onboarding/Onboarding.js:875
+#: js/components/training/Onboarding/Onboarding.js:744
+#: js/components/training/Onboarding/Onboarding.js:805
+#: js/components/training/Onboarding/Onboarding.js:879
 msgid "Perform Lane Change"
 msgstr "Perform Lane Change"
 
@@ -883,7 +850,7 @@ msgstr "Record EON screen as dashcam footage, it will automatically delete old f
 msgid "Record and Upload Driver Camera"
 msgstr "Record and Upload Driver Camera"
 
-#: js/components/Home/Home.js:482
+#: js/components/Home/Home.js:478
 msgid "Remote Access"
 msgstr "Remote Access"
 
@@ -899,7 +866,7 @@ msgstr "Reset"
 msgid "Resetting calibration requires a reboot."
 msgstr "Resetting calibration requires a reboot."
 
-#: js/components/training/Onboarding/Onboarding.js:1022
+#: js/components/training/Onboarding/Onboarding.js:1026
 msgid "Restart"
 msgstr "Restart"
 
@@ -912,16 +879,8 @@ msgid "Safety"
 msgstr "Safety"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:607
-#~ msgid "Safety Monitor Related"
-#~ msgstr "Safety Monitor Related"
-
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:607
 msgid "Safety Monitors"
 msgstr "Safety Monitors"
-
-#: js/components/Home/Home.js:132
-msgid "Saturday"
-msgstr "Saturday"
 
 #: js/components/Settings/Settings.js:781
 msgid "Save"
@@ -943,7 +902,7 @@ msgstr "Select face to continue"
 msgid "Select lead car indicator"
 msgstr "Select lead car indicator"
 
-#: js/components/training/Onboarding/Onboarding.js:913
+#: js/components/training/Onboarding/Onboarding.js:917
 msgid "Select light to continue"
 msgstr "Select light to continue"
 
@@ -951,11 +910,11 @@ msgstr "Select light to continue"
 msgid "Select path to continue"
 msgstr "Select path to continue"
 
-#: js/components/training/Onboarding/Onboarding.js:819
+#: js/components/training/Onboarding/Onboarding.js:823
 msgid "Select steering wheel"
 msgstr "Select steering wheel"
 
-#: js/components/training/Onboarding/Onboarding.js:776
+#: js/components/training/Onboarding/Onboarding.js:780
 msgid "Select turn signal"
 msgstr "Select turn signal"
 
@@ -994,8 +953,8 @@ msgstr "Skip for Now"
 msgid "Some models DSU cannot be unplugged (such as Lexus IS/GS/ES), once this option is enabled, turn on AHB (Auto High Beam) will keep you dp always on for Lat Control (control gas/brake manually), turn off AHB if you want to cancel dp Lat Control."
 msgstr "Some models DSU cannot be unplugged (such as Lexus IS/GS/ES), once this option is enabled, turn on AHB (Auto High Beam) will keep you dp always on for Lat Control (control gas/brake manually), turn off AHB if you want to cancel dp Lat Control."
 
-#: js/components/training/Onboarding/Onboarding.js:732
-#: js/components/training/Onboarding/Onboarding.js:760
+#: js/components/training/Onboarding/Onboarding.js:736
+#: js/components/training/Onboarding/Onboarding.js:764
 msgid "Start Lane Change"
 msgstr "Start Lane Change"
 
@@ -1011,25 +970,17 @@ msgstr "Succesfully paired to account"
 msgid "Successfully paired to an account in"
 msgstr "Successfully paired to an account in"
 
-#: js/components/Home/Home.js:132
-msgid "Sunday"
-msgstr "Sunday"
-
 #: js/components/training/Onboarding/Onboarding.js:645
 msgid "Tap \"SET\" to engage"
 msgstr "Tap \"SET\" to engage"
 
-#: js/components/training/Onboarding/Onboarding.js:956
+#: js/components/training/Onboarding/Onboarding.js:960
 msgid "Tap a pedal to disengage"
 msgstr "Tap a pedal to disengage"
 
 #: js/components/Settings/Settings.js:493
 msgid "Terms of Service available at https://my.comma.ai/terms.html"
 msgstr "Terms of Service available at https://my.comma.ai/terms.html"
-
-#: js/components/Settings/Settings.js:546
-#~ msgid "The calibration algorithm is always active on the road facing camera. Resetting calibration is only advised when EON reports an invalid calibration alert or when EON is remounted in a different position."
-#~ msgstr "The calibration algorithm is always active on the road facing camera. Resetting calibration is only advised when EON reports an invalid calibration alert or when EON is remounted in a different position."
 
 #: js/components/Settings/Settings.js:546
 msgid "The calibration algorithm is always active on the road facing camera. Resetting calibration is only advised when the device reports an invalid calibration alert or when the device is remounted in a different position."
@@ -1055,29 +1006,13 @@ msgstr "The stock radar in your car helps dragonpilot measure the lead car dista
 msgid "There was a problem scanning WiFi networks. {0}Make sure WiFi is enabled in \"More Options\" above."
 msgstr "There was a problem scanning WiFi networks. {0}Make sure WiFi is enabled in \"More Options\" above."
 
-#: js/components/training/Onboarding/Onboarding.js:779
-#~ msgid "This guide can be replayed at any time from the EON settings. To learn more about openpilot, read the wiki and join the community at discord.comma.ai"
-#~ msgstr "This guide can be replayed at any time from the EON settings. To learn more about dragonpilot, read the wiki and join the community at discord.comma.ai"
-
-#: js/components/training/Onboarding/Onboarding.js:1002
+#: js/components/training/Onboarding/Onboarding.js:1006
 msgid "This guide can be replayed at any time from the device settings. To learn more about openpilot, read the wiki and join the community at discord.comma.ai"
-msgstr "This guide can be replayed at any time from the device settings. To learn more about openpilot, read the wiki and join the community at discord.comma.ai"
-
-#: js/components/Home/Home.js:132
-msgid "Thursday"
-msgstr "Thursday"
+msgstr "This guide can be replayed at any time from the device settings. To learn more about dragonpilot, read the wiki and join the community at discord.comma.ai"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:810
 msgid "Toyota / Lexus"
 msgstr "Toyota / Lexus"
-
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:211
-#~ msgid "Toyota/Lexus"
-#~ msgstr "Toyota/Lexus"
-
-#: js/components/Home/Home.js:132
-msgid "Tuesday"
-msgstr "Tuesday"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:443
 msgid "Tuning"
@@ -1100,7 +1035,7 @@ msgstr "Uninstall {software}"
 msgid "Unpaired"
 msgstr "Unpaired"
 
-#: js/components/Home/Home.js:228
+#: js/components/Home/Home.js:224
 #: js/components/UpdatePrompt/UpdatePrompt.js:36
 msgid "Update Available"
 msgstr "Update Available"
@@ -1114,7 +1049,7 @@ msgstr "Update Panda Firmware"
 msgid "Update and Reboot"
 msgstr "Update and Reboot"
 
-#: js/components/Home/Home.js:463
+#: js/components/Home/Home.js:459
 msgid "Upgrade Now"
 msgstr "Upgrade Now"
 
@@ -1146,15 +1081,11 @@ msgstr "Version"
 msgid "WARNING: {0} This grants SSH access to all public keys in your GitHub settings. {1} Never enter a GitHub username other than your own. {2} The built-in SSH key will be disabled if you proceed. {3} A comma employee will never ask you to add their GitHub. {4}"
 msgstr "WARNING: {0} This grants SSH access to all public keys in your GitHub settings. {1} Never enter a GitHub username other than your own. {2} The built-in SSH key will be disabled if you proceed. {3} A comma employee will never ask you to add their GitHub. {4}"
 
-#: js/components/Home/Home.js:132
-msgid "Wednesday"
-msgstr "Wednesday"
-
 #: js/components/training/Onboarding/Onboarding.js:333
 msgid "Welcome to openpilot alpha"
 msgstr "Welcome to dragonpilot alpha"
 
-#: js/components/training/Onboarding/Onboarding.js:856
+#: js/components/training/Onboarding/Onboarding.js:860
 msgid "When encountering a potentially unsafe situation or exiting a highway, you can disengage with any pedal."
 msgstr "When encountering a potentially unsafe situation or exiting a highway, you can disengage with any pedal."
 
@@ -1166,13 +1097,13 @@ msgstr "When dragonpilot is engaged, you must always pay attention! dragonpilot 
 msgid "When you are ready to engage openpilot at a comfortable speed, locate the cruise controls on your steering wheel and press \"SET\" to begin."
 msgstr "When you are ready to engage dragonpilot at a comfortable speed, locate the cruise controls on your steering wheel and press \"SET\" to begin."
 
-#: js/components/training/Onboarding/Onboarding.js:943
+#: js/components/training/Onboarding/Onboarding.js:947
 msgid "While openpilot is engaged, you may keep your hands on the wheel to override lateral controls. Longitudinal controls will be managed by openpilot until the gas or brake pedal is pressed to disengage."
 msgstr "While dragonpilot is engaged, you may keep your hands on the wheel to override lateral controls. Longitudinal controls will be managed by dragonpilot until the gas or brake pedal is pressed to disengage."
 
-#: js/components/training/Onboarding/Onboarding.js:765
+#: js/components/training/Onboarding/Onboarding.js:769
 msgid "With openpilot engaged, turn on your signal, check your surroundings, and confirm it is safe to change lanes."
-msgstr "With openpilot engaged, turn on your signal, check your surroundings, and confirm it is safe to change lanes."
+msgstr "With dragonpilot engaged, turn on your signal, check your surroundings, and confirm it is safe to change lanes."
 
 #: js/components/Settings/Settings.js:481
 #: js/components/Settings/Settings.js:561
@@ -1200,44 +1131,44 @@ msgstr "chffrplus"
 msgid "comma connect"
 msgstr "comma connect"
 
-#: js/components/Home/Home.js:133
-msgid "day_postfix"
-msgstr ","
-
 #: js/components/Settings/Settings.js:358
 msgid "dragonpilot"
 msgstr "dragonpilot"
 
-#: js/components/Home/Home.js:133
-msgid "mth_postfix"
-msgstr "-"
-
 #: js/components/Settings/Settings.js:527
 #: js/components/Settings/Settings.js:647
 msgid "openpilot"
-msgstr "openpilot"
+msgstr "dragonpilot"
 
-#: js/components/training/Onboarding/Onboarding.js:757
+#: js/components/training/Onboarding/Onboarding.js:719
+msgid "openpilot can change lanes with your assistance."
+msgstr "dragonpilot can change lanes with your assistance."
+
+#: js/components/training/Onboarding/Onboarding.js:761
 msgid "openpilot controls"
 msgstr "dragonpilot controls"
 
-#: js/components/training/Onboarding/Onboarding.js:892
-#: js/components/training/Onboarding/Onboarding.js:935
+#: js/components/training/Onboarding/Onboarding.js:896
+#: js/components/training/Onboarding/Onboarding.js:939
 msgid "openpilot disengaging"
-msgstr "openpilot disengaging"
+msgstr "dragonpilot disengaging"
 
 #: js/components/training/Onboarding/Onboarding.js:625
 #: js/components/training/Onboarding/Onboarding.js:666
 msgid "openpilot engaging"
-msgstr "openpilot engaging"
+msgstr "dragonpilot engaging"
 
 #: js/components/training/Onboarding/Onboarding.js:377
 msgid "openpilot is an advanced driver assistance system."
 msgstr "dragonpilot is an advanced driver assistance system."
 
-#: js/components/training/Onboarding/Onboarding.js:798
+#: js/components/training/Onboarding/Onboarding.js:726
+msgid "openpilot is not capable of checking if a lane change is safe. This is your job. openpilot will change lanes regardless if another vehicle is present."
+msgstr "dragonpilot is not capable of checking if a lane change is safe. This is your job. dragonpilot will change lanes regardless if another vehicle is present."
+
+#: js/components/training/Onboarding/Onboarding.js:802
 msgid "openpilot lane changes"
-msgstr "openpilot lane changes"
+msgstr "dragonpilot lane changes"
 
 #: js/components/training/Onboarding/Onboarding.js:473
 #: js/components/training/Onboarding/Onboarding.js:520
@@ -1250,19 +1181,11 @@ msgstr "dragonpilot uses multiple sensors to see the road ahead."
 
 #: js/components/training/Onboarding/Onboarding.js:586
 msgid "openpilot will engage when cruise control is set."
-msgstr "openpilot will engage when cruise control is set."
+msgstr "dragonpilot will engage when cruise control is set."
 
-#: js/components/training/Onboarding/Onboarding.js:534
-#~ msgid "openpilot will start driving when cruise control is set."
-#~ msgstr "dragonpilot will start driving when cruise control is set."
-
-#: js/components/training/Onboarding/Onboarding.js:851
+#: js/components/training/Onboarding/Onboarding.js:855
 msgid "openpilot will stop driving when a pedal is pressed."
-msgstr "openpilot will stop driving when a pedal is pressed."
-
-#: js/components/Home/Home.js:133
-msgid "yr_postfix"
-msgstr "-"
+msgstr "dragonpilot will stop driving when a pedal is pressed."
 
 #: js/components/Settings/Settings.js:228
 msgid "{0} Free"

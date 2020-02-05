@@ -1,91 +1,9 @@
 {
-  "Sunday": {
-    "origin": [
-      [
-        "js/components/Home/Home.js",
-        132
-      ]
-    ]
-  },
-  "Monday": {
-    "origin": [
-      [
-        "js/components/Home/Home.js",
-        132
-      ]
-    ]
-  },
-  "Tuesday": {
-    "origin": [
-      [
-        "js/components/Home/Home.js",
-        132
-      ]
-    ]
-  },
-  "Wednesday": {
-    "origin": [
-      [
-        "js/components/Home/Home.js",
-        132
-      ]
-    ]
-  },
-  "Thursday": {
-    "origin": [
-      [
-        "js/components/Home/Home.js",
-        132
-      ]
-    ]
-  },
-  "Friday": {
-    "origin": [
-      [
-        "js/components/Home/Home.js",
-        132
-      ]
-    ]
-  },
-  "Saturday": {
-    "origin": [
-      [
-        "js/components/Home/Home.js",
-        132
-      ]
-    ]
-  },
-  "yr_postfix": {
-    "defaults": " / ",
-    "origin": [
-      [
-        "js/components/Home/Home.js",
-        133
-      ]
-    ]
-  },
-  "mth_postfix": {
-    "defaults": " / ",
-    "origin": [
-      [
-        "js/components/Home/Home.js",
-        133
-      ]
-    ]
-  },
-  "day_postfix": {
-    "origin": [
-      [
-        "js/components/Home/Home.js",
-        133
-      ]
-    ]
-  },
   "Update Available": {
     "origin": [
       [
         "js/components/Home/Home.js",
-        228
+        224
       ]
     ]
   },
@@ -93,7 +11,7 @@
     "origin": [
       [
         "js/components/Home/Home.js",
-        243
+        239
       ]
     ]
   },
@@ -101,7 +19,7 @@
     "origin": [
       [
         "js/components/Home/Home.js",
-        243
+        239
       ]
     ]
   },
@@ -109,7 +27,7 @@
     "origin": [
       [
         "js/components/Home/Home.js",
-        281
+        277
       ]
     ]
   },
@@ -117,7 +35,7 @@
     "origin": [
       [
         "js/components/Home/Home.js",
-        293
+        289
       ]
     ]
   },
@@ -125,7 +43,7 @@
     "origin": [
       [
         "js/components/Home/Home.js",
-        299
+        295
       ]
     ]
   },
@@ -133,7 +51,7 @@
     "origin": [
       [
         "js/components/Home/Home.js",
-        311
+        307
       ]
     ]
   },
@@ -141,11 +59,11 @@
     "origin": [
       [
         "js/components/Home/Home.js",
-        327
+        323
       ],
       [
         "js/components/Home/Home.js",
-        387
+        383
       ]
     ]
   },
@@ -153,11 +71,11 @@
     "origin": [
       [
         "js/components/Home/Home.js",
-        344
+        340
       ],
       [
         "js/components/Home/Home.js",
-        404
+        400
       ]
     ]
   },
@@ -165,11 +83,11 @@
     "origin": [
       [
         "js/components/Home/Home.js",
-        344
+        340
       ],
       [
         "js/components/Home/Home.js",
-        404
+        400
       ]
     ]
   },
@@ -177,11 +95,11 @@
     "origin": [
       [
         "js/components/Home/Home.js",
-        359
+        355
       ],
       [
         "js/components/Home/Home.js",
-        419
+        415
       ]
     ]
   },
@@ -189,7 +107,7 @@
     "origin": [
       [
         "js/components/Home/Home.js",
-        371
+        367
       ]
     ]
   },
@@ -197,7 +115,7 @@
     "origin": [
       [
         "js/components/Home/Home.js",
-        440
+        436
       ]
     ]
   },
@@ -205,7 +123,7 @@
     "origin": [
       [
         "js/components/Home/Home.js",
-        463
+        459
       ]
     ]
   },
@@ -213,7 +131,7 @@
     "origin": [
       [
         "js/components/Home/Home.js",
-        470
+        466
       ]
     ]
   },
@@ -221,15 +139,15 @@
     "origin": [
       [
         "js/components/Home/Home.js",
-        482
+        478
       ]
     ]
   },
-  "14 days of storage": {
+  "1 year of storage": {
     "origin": [
       [
         "js/components/Home/Home.js",
-        494
+        490
       ]
     ]
   },
@@ -237,7 +155,7 @@
     "origin": [
       [
         "js/components/Home/Home.js",
-        506
+        502
       ]
     ]
   },
@@ -245,7 +163,7 @@
     "origin": [
       [
         "js/components/Home/Home.js",
-        526
+        522
       ]
     ]
   },
@@ -253,7 +171,7 @@
     "origin": [
       [
         "js/components/Home/Home.js",
-        538
+        534
       ]
     ]
   }

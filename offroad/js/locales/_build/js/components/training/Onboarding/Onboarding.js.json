@@ -247,15 +247,31 @@
       ]
     ]
   },
+  "openpilot can change lanes with your assistance.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        719
+      ]
+    ]
+  },
+  "openpilot is not capable of checking if a lane change is safe. This is your job. openpilot will change lanes regardless if another vehicle is present.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        726
+      ]
+    ]
+  },
   "Start Lane Change": {
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        732
+        736
       ],
       [
         "js/components/training/Onboarding/Onboarding.js",
-        760
+        764
       ]
     ]
   },
@@ -263,15 +279,15 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        740
+        744
       ],
       [
         "js/components/training/Onboarding/Onboarding.js",
-        801
+        805
       ],
       [
         "js/components/training/Onboarding/Onboarding.js",
-        875
+        879
       ]
     ]
   },
@@ -279,7 +295,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        757
+        761
       ]
     ]
   },
@@ -287,7 +303,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        765
+        769
       ]
     ]
   },
@@ -295,7 +311,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        776
+        780
       ]
     ]
   },
@@ -303,7 +319,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        798
+        802
       ]
     ]
   },
@@ -311,7 +327,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        806
+        810
       ]
     ]
   },
@@ -319,7 +335,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        819
+        823
       ]
     ]
   },
@@ -327,7 +343,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        851
+        855
       ]
     ]
   },
@@ -335,7 +351,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        856
+        860
       ]
     ]
   },
@@ -343,11 +359,11 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        867
+        871
       ],
       [
         "js/components/training/Onboarding/Onboarding.js",
-        895
+        899
       ]
     ]
   },
@@ -355,11 +371,11 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        892
+        896
       ],
       [
         "js/components/training/Onboarding/Onboarding.js",
-        935
+        939
       ]
     ]
   },
@@ -367,7 +383,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        900
+        904
       ]
     ]
   },
@@ -375,7 +391,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        913
+        917
       ]
     ]
   },
@@ -383,7 +399,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        938
+        942
       ]
     ]
   },
@@ -391,7 +407,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        943
+        947
       ]
     ]
   },
@@ -399,7 +415,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        956
+        960
       ]
     ]
   },
@@ -407,7 +423,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        997
+        1001
       ]
     ]
   },
@@ -415,7 +431,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        1002
+        1006
       ]
     ]
   },
@@ -423,7 +439,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        1014
+        1018
       ]
     ]
   },
@@ -431,7 +447,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        1022
+        1026
       ]
     ]
   }

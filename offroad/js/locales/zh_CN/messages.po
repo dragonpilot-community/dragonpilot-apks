@@ -13,9 +13,9 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: js/components/Home/Home.js:494
-msgid "14 days of storage"
-msgstr "14 天行车记录"
+#: js/components/Home/Home.js:490
+msgid "1 year of storage"
+msgstr "一年的行车记录"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:205
 msgid "3rd Party Apps"
@@ -69,15 +69,15 @@ msgstr "驾驶辅助系统不是自动驾驶系统，意味着 dragonpilot 需�
 msgid "A vision algorithm leverages the road-facing camera to determine the path to drive."
 msgstr "我们利用后置摄像头图像规划出行车路径。"
 
-#: js/components/Home/Home.js:243
+#: js/components/Home/Home.js:239
 msgid "ALERT"
 msgstr "通知"
 
-#: js/components/Home/Home.js:243
+#: js/components/Home/Home.js:239
 msgid "ALERTS"
 msgstr "通知"
 
-#: js/components/Home/Home.js:371
+#: js/components/Home/Home.js:367
 msgid "ALL TIME"
 msgstr "全部"
 
@@ -145,7 +145,7 @@ msgstr "自动运行 TomTom 测速照相"
 msgid "Auto Shutdown (min)"
 msgstr "自动关机 (分钟)"
 
-#: js/components/Home/Home.js:470
+#: js/components/Home/Home.js:466
 msgid "Become a comma prime member in the comma app and get premium features!"
 msgstr "成为 comma 会员，获取更多功能！"
 
@@ -169,7 +169,7 @@ msgstr "扩大或减少警示音量，设至 -100 (%) 可以完全关闭警示�
 msgid "Brand Specific"
 msgstr "车型"
 
-#: js/components/Home/Home.js:440
+#: js/components/Home/Home.js:436
 msgid "COMMA POINTS"
 msgstr "COMMA 积分"
 
@@ -231,7 +231,7 @@ msgstr "Comma.ai, Inc. 条款及细则"
 msgid "Community maintained features are not confirmed by comma.ai to meet the standard safety model. Be extra cautious using them."
 msgstr "开源社区开发维护的功能，未通过官方标准安全验证，请谨慎使用。"
 
-#: js/components/training/Onboarding/Onboarding.js:997
+#: js/components/training/Onboarding/Onboarding.js:1001
 msgid "Congratulations! You have completed openpilot training."
 msgstr "恭喜! 您已经学完了教程。"
 
@@ -244,7 +244,7 @@ msgstr "连接"
 msgid "Connect to WiFi"
 msgstr "连接到无线网络"
 
-#: js/components/Home/Home.js:299
+#: js/components/Home/Home.js:295
 msgid "Connect to a WiFi or cellular network to upload and review your drives."
 msgstr "连接到 WiFi 或使用 SIM 卡流量上传您的行车记录。"
 
@@ -258,7 +258,7 @@ msgstr "已连接"
 msgid "Continue"
 msgstr "继续"
 
-#: js/components/training/Onboarding/Onboarding.js:806
+#: js/components/training/Onboarding/Onboarding.js:810
 msgid "Continuously observe your surroundings for safety while gently nudging the steering wheel towards your desired lane. The combination of turn signal and wheel nudge will prompt openpilot to change lanes."
 msgstr "不断观察周围环境的安全并同时将方向盘轻轻推向想切至的车道。打转向灯和轻推方向盘这样的组合能指使 dragonpilot 协助您变换车道。"
 
@@ -266,8 +266,8 @@ msgstr "不断观察周围环境的安全并同时将方向盘轻轻推向想切
 msgid "Controls"
 msgstr "操控"
 
-#: js/components/Home/Home.js:327
-#: js/components/Home/Home.js:387
+#: js/components/Home/Home.js:323
+#: js/components/Home/Home.js:383
 msgid "DRIVES"
 msgstr "驾驶"
 
@@ -275,7 +275,7 @@ msgstr "驾驶"
 msgid "Developer"
 msgstr "开发人员"
 
-#: js/components/Home/Home.js:506
+#: js/components/Home/Home.js:502
 msgid "Developer perks"
 msgstr "开发人员 perks"
 
@@ -291,7 +291,7 @@ msgstr "设备已绑定"
 msgid "Disable this only if you do not want to see the driving UI and its blocking your navigation view, this will also effect what you records in dashcam."
 msgstr "关闭这个选项后，画面将不再显示后置镜头的影像，这个选项适合有用第三方导航系统的用户。此功能将会影响您行车记录的录像。"
 
-#: js/components/training/Onboarding/Onboarding.js:938
+#: js/components/training/Onboarding/Onboarding.js:942
 msgid "Disengage openpilot"
 msgstr "退出 dragonpilot"
 
@@ -344,8 +344,8 @@ msgid "Display Turning Signal"
 msgstr "显示方向灯"
 
 #: js/components/Settings/Settings.js:396
-msgid "Display speed in km/h instead of mp/h and temperature in °C instead of °F."
-msgstr "启用后，显示 km/h (速度) 或 °C (温度)，否则显示 mph (速度) 或 °F (温度)。"
+msgid "Display speed in km/h instead of mp/h."
+msgstr "∶启用后，速度单位将改用 km/h。"
 
 #: js/components/Settings/Settings.js:563
 msgid "Dongle ID"
@@ -579,21 +579,17 @@ msgstr "启用这个选项后，EON 的风扇将会一直以全速运转，这�
 msgid "Engage openpilot"
 msgstr "启用 dragonpilot"
 
-#: js/components/Home/Home.js:526
+#: js/components/Home/Home.js:522
 msgid "Finish Setup"
 msgstr "设置完成"
 
-#: js/components/training/Onboarding/Onboarding.js:1014
+#: js/components/training/Onboarding/Onboarding.js:1018
 msgid "Finish Training"
 msgstr "完成"
 
 #: js/components/Settings/Settings.js:569
 msgid "Free Storage"
 msgstr "剩余空间"
-
-#: js/components/Home/Home.js:132
-msgid "Friday"
-msgstr "星期五"
 
 #: js/components/Settings/Settings.js:710
 msgid "Git Branch"
@@ -611,8 +607,8 @@ msgstr "GitHub 用户名"
 msgid "Go Back"
 msgstr "返回"
 
-#: js/components/Home/Home.js:359
-#: js/components/Home/Home.js:419
+#: js/components/Home/Home.js:355
+#: js/components/Home/Home.js:415
 msgid "HOURS"
 msgstr "小时"
 
@@ -620,7 +616,7 @@ msgstr "小时"
 msgid "Hardware"
 msgstr "硬件"
 
-#: js/components/Home/Home.js:281
+#: js/components/Home/Home.js:277
 msgid "Hide Alerts"
 msgstr "隐藏通知"
 
@@ -684,12 +680,12 @@ msgstr "启用这个选项后， dp 在弯道时会依需求减速，这个选�
 msgid "If you turn this on, dp will try to keep your battery level between 60%~70% to protect your battery."
 msgstr "如果您开启这个选项，dp 将会尝试将电量控制在 60%~70% 之间。"
 
-#: js/components/Home/Home.js:344
-#: js/components/Home/Home.js:404
+#: js/components/Home/Home.js:340
+#: js/components/Home/Home.js:400
 msgid "KM"
 msgstr "公里"
 
-#: js/components/training/Onboarding/Onboarding.js:900
+#: js/components/training/Onboarding/Onboarding.js:904
 msgid "Keep in mind that certain situations are not handled by openpilot. Scenarios such as traffic lights, stop signs, quick vehicle cutins and pedestrians are unrecognized and openpilot may accelerate."
 msgstr "请注意，在红绿灯号标志、停车信号灯标志、前方车辆快速切入、无法识别的行人等特定路况下，dragonpilot 无法正确处理，有可能导致异常加速。"
 
@@ -703,23 +699,19 @@ msgstr "换道"
 msgid "Later"
 msgstr "稍后"
 
-#: js/components/training/Onboarding/Onboarding.js:867
-#: js/components/training/Onboarding/Onboarding.js:895
+#: js/components/training/Onboarding/Onboarding.js:871
+#: js/components/training/Onboarding/Onboarding.js:899
 msgid "Limited Features"
 msgstr "有限的功能"
 
-#: js/components/Home/Home.js:344
-#: js/components/Home/Home.js:404
+#: js/components/Home/Home.js:340
+#: js/components/Home/Home.js:400
 msgid "MILES"
 msgstr "英里"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:307
 msgid "MiXplorer File Manager"
 msgstr "MiXplorer 档案管理器"
-
-#: js/components/Home/Home.js:132
-msgid "Monday"
-msgstr "星期一"
 
 #: js/components/SetupWifi/SetupWifi.js:377
 msgid "More Options"
@@ -738,7 +730,7 @@ msgstr "网络"
 msgid "No"
 msgstr "否"
 
-#: js/components/Home/Home.js:293
+#: js/components/Home/Home.js:289
 msgid "No Network Connection"
 msgstr "没有网络连接"
 
@@ -774,7 +766,7 @@ msgstr "开启位智"
 msgid "Open WiFi Settings"
 msgstr "无线网络设置"
 
-#: js/components/Home/Home.js:311
+#: js/components/Home/Home.js:307
 msgid "PAST WEEK"
 msgstr "上周"
 
@@ -786,7 +778,7 @@ msgstr "绑定设备"
 msgid "Pair Your Account"
 msgstr "绑定帐户"
 
-#: js/components/Home/Home.js:538
+#: js/components/Home/Home.js:534
 msgid "Pair your comma account with comma connect"
 msgstr "使用 Comma connect 绑定到您的 Comma 帐户"
 
@@ -807,9 +799,9 @@ msgstr "Panda 固件"
 msgid "Password:"
 msgstr "密码:"
 
-#: js/components/training/Onboarding/Onboarding.js:740
-#: js/components/training/Onboarding/Onboarding.js:801
-#: js/components/training/Onboarding/Onboarding.js:875
+#: js/components/training/Onboarding/Onboarding.js:744
+#: js/components/training/Onboarding/Onboarding.js:805
+#: js/components/training/Onboarding/Onboarding.js:879
 msgid "Perform Lane Change"
 msgstr "进行变换车道"
 
@@ -858,7 +850,7 @@ msgstr "录下 EON 的画面当做行车记录，当系统的空间不足 15% �
 msgid "Record and Upload Driver Camera"
 msgstr "上传驾驶员的驾驶录像"
 
-#: js/components/Home/Home.js:482
+#: js/components/Home/Home.js:478
 msgid "Remote Access"
 msgstr "远程访问"
 
@@ -874,7 +866,7 @@ msgstr "重置"
 msgid "Resetting calibration requires a reboot."
 msgstr "重置摄像头校准需要重启。"
 
-#: js/components/training/Onboarding/Onboarding.js:1022
+#: js/components/training/Onboarding/Onboarding.js:1026
 msgid "Restart"
 msgstr "重新学习"
 
@@ -889,10 +881,6 @@ msgstr "安全"
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:607
 msgid "Safety Monitors"
 msgstr "安全监控"
-
-#: js/components/Home/Home.js:132
-msgid "Saturday"
-msgstr "星期六"
 
 #: js/components/Settings/Settings.js:781
 msgid "Save"
@@ -914,7 +902,7 @@ msgstr "请点击画面中的人脸继续"
 msgid "Select lead car indicator"
 msgstr "请点击画面中的前车指标继续"
 
-#: js/components/training/Onboarding/Onboarding.js:913
+#: js/components/training/Onboarding/Onboarding.js:917
 msgid "Select light to continue"
 msgstr "请点击画面中的红绿灯继续"
 
@@ -922,11 +910,11 @@ msgstr "请点击画面中的红绿灯继续"
 msgid "Select path to continue"
 msgstr "请点击画面中的行车路径继续"
 
-#: js/components/training/Onboarding/Onboarding.js:819
+#: js/components/training/Onboarding/Onboarding.js:823
 msgid "Select steering wheel"
 msgstr "请点选画面中的方向盘"
 
-#: js/components/training/Onboarding/Onboarding.js:776
+#: js/components/training/Onboarding/Onboarding.js:780
 msgid "Select turn signal"
 msgstr "请点选画面中的转向灯"
 
@@ -965,8 +953,8 @@ msgstr "暂时跳过"
 msgid "Some models DSU cannot be unplugged (such as Lexus IS/GS/ES), once this option is enabled, turn on AHB (Auto High Beam) will keep you dp always on for Lat Control (control gas/brake manually), turn off AHB if you want to cancel dp Lat Control."
 msgstr "某些车型 (Lexus IS/GS/ES) 的 DSU 无法拔除，开启这个选项后，您可以使用 AHB (自动大灯) 来控制 dp，当 AHB 开启后，dp 将会一直开启, 您可以手动控制油门和剎车。AHB 关闭后，dp 将会暂时切回原本的模式 (油门/剎车会取消 dp)。"
 
-#: js/components/training/Onboarding/Onboarding.js:732
-#: js/components/training/Onboarding/Onboarding.js:760
+#: js/components/training/Onboarding/Onboarding.js:736
+#: js/components/training/Onboarding/Onboarding.js:764
 msgid "Start Lane Change"
 msgstr "执行车道切换"
 
@@ -982,15 +970,11 @@ msgstr "已成功绑定到帐户"
 msgid "Successfully paired to an account in"
 msgstr "已绑定成功："
 
-#: js/components/Home/Home.js:132
-msgid "Sunday"
-msgstr "星期日"
-
 #: js/components/training/Onboarding/Onboarding.js:645
 msgid "Tap \"SET\" to engage"
 msgstr "请点击画面中的 “SET” 继续"
 
-#: js/components/training/Onboarding/Onboarding.js:956
+#: js/components/training/Onboarding/Onboarding.js:960
 msgid "Tap a pedal to disengage"
 msgstr "请点击画面中的油门或刹车继续"
 
@@ -1022,21 +1006,13 @@ msgstr "dragonpilot 需要原车使用雷达信号数据计算出与前车的距
 msgid "There was a problem scanning WiFi networks. {0}Make sure WiFi is enabled in \"More Options\" above."
 msgstr "无线网络扫描错误。{0}请确认已在 \"更多选项\" 里开启了无线网络功能。"
 
-#: js/components/training/Onboarding/Onboarding.js:1002
+#: js/components/training/Onboarding/Onboarding.js:1006
 msgid "This guide can be replayed at any time from the device settings. To learn more about openpilot, read the wiki and join the community at discord.comma.ai"
 msgstr "您可以随时到设备设置里重新阅读使用教程，了解更多关于 dragonpilot 的信息，请查看 wiki 或加入 discord.comma.ai 社区交流。"
-
-#: js/components/Home/Home.js:132
-msgid "Thursday"
-msgstr "星期四"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:810
 msgid "Toyota / Lexus"
 msgstr "丰田 / 凌志"
-
-#: js/components/Home/Home.js:132
-msgid "Tuesday"
-msgstr "星期二"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:443
 msgid "Tuning"
@@ -1059,7 +1035,7 @@ msgstr "卸载 {software}"
 msgid "Unpaired"
 msgstr "未绑定"
 
-#: js/components/Home/Home.js:228
+#: js/components/Home/Home.js:224
 #: js/components/UpdatePrompt/UpdatePrompt.js:36
 msgid "Update Available"
 msgstr "有版本更新"
@@ -1073,7 +1049,7 @@ msgstr "更新 Panda 韧体"
 msgid "Update and Reboot"
 msgstr "更新并重启"
 
-#: js/components/Home/Home.js:463
+#: js/components/Home/Home.js:459
 msgid "Upgrade Now"
 msgstr "立即更新"
 
@@ -1105,15 +1081,11 @@ msgstr "版本"
 msgid "WARNING: {0} This grants SSH access to all public keys in your GitHub settings. {1} Never enter a GitHub username other than your own. {2} The built-in SSH key will be disabled if you proceed. {3} A comma employee will never ask you to add their GitHub. {4}"
 msgstr "警告：{0}这个功能会同步 Github 设置里所有公钥的 SSH 访问权限，{1}请不要输入别人的 Github 用户名（即使声称是 comma 的员工），{2}操作完成后，原先内置的 SSH 密钥会被禁用。{3}"
 
-#: js/components/Home/Home.js:132
-msgid "Wednesday"
-msgstr "星期三"
-
 #: js/components/training/Onboarding/Onboarding.js:333
 msgid "Welcome to openpilot alpha"
 msgstr "欢迎使用 dragonpilot 测试版"
 
-#: js/components/training/Onboarding/Onboarding.js:856
+#: js/components/training/Onboarding/Onboarding.js:860
 msgid "When encountering a potentially unsafe situation or exiting a highway, you can disengage with any pedal."
 msgstr "当遇到危险情况或是想离开高速公路时，你可以经由踩踏油门或刹车来取消控制。"
 
@@ -1125,11 +1097,11 @@ msgstr "使用 dragonpilot 时，请务必随时注意前方路况! openpilot �
 msgid "When you are ready to engage openpilot at a comfortable speed, locate the cruise controls on your steering wheel and press \"SET\" to begin."
 msgstr "当车辆行驶在安全速度时，您可以按下位于方向盘上的定速按钮 “SET” 启用 dragonpilot。"
 
-#: js/components/training/Onboarding/Onboarding.js:943
+#: js/components/training/Onboarding/Onboarding.js:947
 msgid "While openpilot is engaged, you may keep your hands on the wheel to override lateral controls. Longitudinal controls will be managed by openpilot until the gas or brake pedal is pressed to disengage."
 msgstr "使用 dragonpilot 时，您可以随时改为人工操作方向盘，dragonpilot 会继续控制车速，直到踩下油门或刹车取消 dragonpilot 为止。"
 
-#: js/components/training/Onboarding/Onboarding.js:765
+#: js/components/training/Onboarding/Onboarding.js:769
 msgid "With openpilot engaged, turn on your signal, check your surroundings, and confirm it is safe to change lanes."
 msgstr "使用 dragonpilot 时，打开转向灯，检查周边车道情况，确认可以安全的切换车道。"
 
@@ -1159,29 +1131,25 @@ msgstr "chffrplus"
 msgid "comma connect"
 msgstr "comma connect"
 
-#: js/components/Home/Home.js:133
-msgid "day_postfix"
-msgstr " 日"
-
 #: js/components/Settings/Settings.js:358
 msgid "dragonpilot"
 msgstr "dragonpilot"
-
-#: js/components/Home/Home.js:133
-msgid "mth_postfix"
-msgstr " 月 "
 
 #: js/components/Settings/Settings.js:527
 #: js/components/Settings/Settings.js:647
 msgid "openpilot"
 msgstr "dragonpilot"
 
-#: js/components/training/Onboarding/Onboarding.js:757
+#: js/components/training/Onboarding/Onboarding.js:719
+msgid "openpilot can change lanes with your assistance."
+msgstr "dragonpilot 可以在你的协助下切换车道。"
+
+#: js/components/training/Onboarding/Onboarding.js:761
 msgid "openpilot controls"
 msgstr "dragonpilot 控制"
 
-#: js/components/training/Onboarding/Onboarding.js:892
-#: js/components/training/Onboarding/Onboarding.js:935
+#: js/components/training/Onboarding/Onboarding.js:896
+#: js/components/training/Onboarding/Onboarding.js:939
 msgid "openpilot disengaging"
 msgstr "停用 dragonpilot"
 
@@ -1194,7 +1162,11 @@ msgstr "启用 dragonpilot"
 msgid "openpilot is an advanced driver assistance system."
 msgstr "dragonpilot 是一个高级驾驶辅助系统。"
 
-#: js/components/training/Onboarding/Onboarding.js:798
+#: js/components/training/Onboarding/Onboarding.js:726
+msgid "openpilot is not capable of checking if a lane change is safe. This is your job. openpilot will change lanes regardless if another vehicle is present."
+msgstr "dragonpilot 无法确认周边车道是否安全，需要你自己观察确认，无论旁边车道是否有车，dragonpilot 都会切换成车道。"
+
+#: js/components/training/Onboarding/Onboarding.js:802
 msgid "openpilot lane changes"
 msgstr "dragonpilot 换道"
 
@@ -1211,13 +1183,9 @@ msgstr "dragonpilot 使用多个传感器来检测前方道路。"
 msgid "openpilot will engage when cruise control is set."
 msgstr "dragonpilot 将在巡航系统启用后开始运行。"
 
-#: js/components/training/Onboarding/Onboarding.js:851
+#: js/components/training/Onboarding/Onboarding.js:855
 msgid "openpilot will stop driving when a pedal is pressed."
 msgstr "当踩下油门或刹车时，dragonpilot 将停止所有的操控。"
-
-#: js/components/Home/Home.js:133
-msgid "yr_postfix"
-msgstr " 年 "
 
 #: js/components/Settings/Settings.js:228
 msgid "{0} Free"

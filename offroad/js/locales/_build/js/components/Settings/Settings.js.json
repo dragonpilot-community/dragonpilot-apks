@@ -223,7 +223,7 @@
       ]
     ]
   },
-  "Display speed in km/h instead of mp/h and temperature in °C instead of °F.": {
+  "Display speed in km/h instead of mp/h.": {
     "origin": [
       [
         "js/components/Settings/Settings.js",
