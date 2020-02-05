@@ -4,7 +4,7 @@ import {
     Text,
     View,
     ScrollView,
-    NetInfo, NativeModules,
+    NetInfo,
 } from 'react-native';
 import { connect } from 'react-redux';
 import { NavigationActions } from 'react-navigation';
@@ -75,7 +75,10 @@ class Home extends Component {
     _handleConnectionChange = (isConnected) => {
         console.log('Connection status is ' + (isConnected ? 'online' : 'offline') + ' ' + isConnected);
         this.props.updateConnectionState(isConnected);
-    };
+        if (isConnected) {
+          this.props.fetchDeviceStats();
+        }
+    }
 
     refreshOffroadParams = async () => {
         await this.props.refreshAlertParams();
@@ -127,12 +130,6 @@ class Home extends Component {
         return ((bottom <= latitude) && (latitude <= top) && (left <= longitude) && (longitude <= right));
     }
 
-    getLocalizedDate(){
-        var n = new Date()
-        var weekdays = new Array(i18n._(t`Sunday`), i18n._(t`Monday`), i18n._(t`Tuesday`), i18n._(t`Wednesday`), i18n._(t`Thursday`), i18n._(t`Friday`), i18n._(t`Saturday`))
-        return n.getFullYear() + i18n._(t('yr_postfix')` / `) + (n.getMonth()+1) + i18n._(t('mth_postfix')` / `) + n.getDate() + i18n._(t('day_postfix')``) + ' ' + weekdays[n.getDay()]
-    }
-
     render() {
         const {
             alerts,
@@ -170,7 +167,6 @@ class Home extends Component {
             (alertsVisible || !isConnected) && Styles.homeBodyDark,
         ];
 
-
         return (
             <X.Gradient color='flat_blue'>
                 <View style={ Styles.home }>
@@ -180,7 +176,7 @@ class Home extends Component {
                                 <X.Text
                                     color='white'
                                     weight='light'>
-                                    { this.getLocalizedDate() }
+                                    { summaryDate }
                                 </X.Text>
                             </View>
                             <View style={ Styles.homeHeaderIntroCity }>
@@ -491,7 +487,7 @@ class Home extends Component {
                                                   color='white'
                                                   size='tiny'
                                                   weight='semibold'>
-                                                  <Trans>14 days of storage</Trans>
+                                                  <Trans>1 year of storage</Trans>
                                               </X.Text>
                                           </View>
                                           <View style={ Styles.homeBodyAccountUpgradeFeature }>
