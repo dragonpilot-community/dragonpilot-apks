@@ -16,6 +16,7 @@ import SetupWifi from '../components/SetupWifi';
 import SetupQr from '../components/SetupQr';
 import Onboarding from '../components/training/Onboarding';
 import UpdatePrompt from '../components/UpdatePrompt';
+import DriveRating from '../components/DriveRating';
 import DragonpilotSettings from '../components/DragonpilotSettings'
 
 export const StackNavigator = RNStackNavigator({
@@ -28,6 +29,7 @@ export const StackNavigator = RNStackNavigator({
     Settings: { screen: Settings },
     SettingsWifi: { screen: SettingsWifi },
     UpdatePrompt: { screen: UpdatePrompt },
+    DriveRating: { screen: DriveRating },
     DragonpilotSettings: { screen: DragonpilotSettings },
 }, {
     transitionConfig : () => ({

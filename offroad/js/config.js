@@ -33,6 +33,7 @@ export const Params = {
     KEY_OFFROAD_IS_TAKING_SNAPSHOT: 'Offroad_IsTakingSnapshot',
     KEY_COMMUNITY_FEATURES: 'CommunityFeaturesToggle',
     KEY_LANE_DEPARTURE_WARNING_ENABLED: 'IsLdwEnabled',
+    KEY_LANE_CHANGE_ENABLED: 'LaneChangeEnabled',
     // dragonpilot
     KEY_LAT_CTRL: 'DragonLatCtrl',
     KEY_ALLOW_GAS: 'DragonAllowGas',
