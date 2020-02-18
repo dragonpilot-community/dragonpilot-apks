@@ -55,7 +55,6 @@ class DragonpilotSettings extends Component {
             VolumeBoost: '0',
             carModel: '',
             wazeMode: false,
-            assistedLC: false,
         }
     }
 
@@ -72,7 +71,6 @@ class DragonpilotSettings extends Component {
                 DragonUIVolumeBoost: dragonUIVolumeBoost,
                 DragonCarModel: dragonCarModel,
                 DragonWazeMode: dragonWazeMode,
-                DragonEnableAssistedLC: dragonEnableAssistedLC,
             },
         } = this.props;
         this.setState({ steeringMonitorTimerInt: dragonSteeringMonitorTimer === '0'? 0 : parseInt(dragonSteeringMonitorTimer) || 3 })
@@ -85,7 +83,6 @@ class DragonpilotSettings extends Component {
         this.setState({ VolumeBoostInt: dragonUIVolumeBoost === '0'? 0 : parseInt(dragonUIVolumeBoost) || 0 })
         this.setState({ carModel: dragonCarModel })
         this.setState({ wazeMode: dragonWazeMode === '1' })
-        this.setState({ assistedLC: dragonEnableAssistedLC === '1' })
     }
 
     handleExpanded(key) {
@@ -502,11 +499,10 @@ class DragonpilotSettings extends Component {
                 DragonEnableDriverMonitoring: dragonEnableDriverMonitoring,
                 DragonEnableSlowOnCurve: dragonEnableSlowOnCurve,
                 DragonEnableLeadCarMovingAlert: dragonEnableLeadCarMovingAlert,
-                DragonEnableAssistedLC: dragonEnableAssistedLC,
                 DragonEnableAutoLC: dragonEnableAutoLC,
             },
         } = this.props;
-        const { expandedCell, steeringMonitorTimerInt, assistedLC } = this.state;
+        const { expandedCell, steeringMonitorTimerInt } = this.state;
         return (
             <View style={ Styles.settings }>
                 <View style={ Styles.settingsHeader }>
@@ -586,16 +582,6 @@ class DragonpilotSettings extends Component {
                             value='' />
                         <X.TableCell
                             type='switch'
-                            title={ i18n._(t`Enable Assisted Lane Change`) }
-                            value={ !!parseInt(dragonEnableAssistedLC) }
-                            iconSource={ Icons.developer }
-                            description={ i18n._(t`If you enable this, dp will assist you to change lane once above 37 mph / 60kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option.`) }
-                            isExpanded={ expandedCell == 'enable_assisted_lc' }
-                            handleExpanded={ () => this.handleExpanded('enable_assisted_lc') }
-                            handleChanged={ this.props.setEnableAssistedLC } />
-                        {assistedLC &&
-                        <X.TableCell
-                            type='switch'
                             title={i18n._(t`Enable Auto Lane Change`)}
                             value={!!parseInt(dragonEnableAutoLC)}
                             iconSource={Icons.developer}
@@ -603,7 +589,6 @@ class DragonpilotSettings extends Component {
                             isExpanded={expandedCell == 'enable_auto_lc'}
                             handleExpanded={() => this.handleExpanded('enable_auto_lc')}
                             handleChanged={ this.props.setEnableAutoLC }/>
-                        }
                     </X.Table>
                     <X.Table color='darkBlue'>
                         <X.TableCell
@@ -1217,9 +1202,6 @@ const mapDispatchToProps = dispatch => ({
     },
     runWaze: (val) => {
         dispatch(updateParam(Params.KEY_RUN_WAZE, (val).toString()));
-    },
-    setEnableAssistedLC: (val) => {
-        dispatch(updateParam(Params.KEY_ASSISTED_LC, (val | 0).toString()));
     },
     setEnableAutoLC: (val) => {
         dispatch(updateParam(Params.KEY_AUTO_LC, (val | 0).toString()));

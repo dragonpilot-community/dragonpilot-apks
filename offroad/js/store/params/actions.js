@@ -89,7 +89,6 @@ const PARAMS = [
   "DragonToyotaSnGMod",
   "DragonWazeMode",
   "DragonRunWaze",
-  "DragonEnableAssistedLC",
   "DragonEnableAutoLC",
   "DragonBootHotspot",
   "DragonEnableSRLearner",

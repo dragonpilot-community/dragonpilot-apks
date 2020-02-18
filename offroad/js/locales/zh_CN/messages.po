@@ -21,39 +21,39 @@ msgstr "一年的行车记录"
 msgid "3rd Party Apps"
 msgstr "第三方应用"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:687
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:675
 msgid "<  3rd Party Apps Settings"
 msgstr "<  第三方应用设置"
 
-#: js/components/Settings/Settings.js:471
+#: js/components/Settings/Settings.js:483
 msgid "<  Account Settings"
 msgstr "<  帐户设置"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:801
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:789
 msgid "<  Brand Specific Settings"
 msgstr "<  车型设置"
 
-#: js/components/Settings/Settings.js:655
+#: js/components/Settings/Settings.js:667
 msgid "<  Developer Settings"
 msgstr "<  开发人员设置"
 
-#: js/components/Settings/Settings.js:535
+#: js/components/Settings/Settings.js:547
 msgid "<  Device Settings"
 msgstr "<  设备设置"
 
-#: js/components/Settings/Settings.js:606
+#: js/components/Settings/Settings.js:618
 msgid "<  Network Settings"
 msgstr "<  网络设置"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:514
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:513
 msgid "<  Safety Settings"
 msgstr "<  安全设置"
 
-#: js/components/Settings/Settings.js:300
+#: js/components/Settings/Settings.js:301
 msgid "<  Settings"
 msgstr "<  设置"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:901
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:889
 msgid "<  UI Settings"
 msgstr "<  介面设置"
 
@@ -93,27 +93,27 @@ msgstr "如果您的车子无法在正中央前行，您可以微调此数值，
 msgid "Adjust the shutdown timer if you would like EON to shutdown after a period of time (when usb power is not present), set this to 0 if you would like to disable this feature."
 msgstr "如果您想要 dp 在断电后自动关机，您可以调整自动关机时长，如果您不想启用本功能，请将它设成 0 (分钟)，此功能不支持使用 comma power 的用户。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:631
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
 msgid "Adjust the steering monitor timer, set this to 0 if you would like to disable steering monitor. Default is 3 minutes."
 msgstr "调整方向盘监控计时，如果您想取消方向盘监控，请将它设成 0。预设值为 3 分钟。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:536
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:535
 msgid "Allow Gas"
 msgstr "允许踩油门"
 
-#: js/components/Settings/Settings.js:685
+#: js/components/Settings/Settings.js:697
 msgid "Allow devices to connect to your device using Secure Shell (SSH)."
 msgstr "允许别的设备通过 Secure Shell (SSH) 连接至您的 EON。"
 
-#: js/components/Settings/Settings.js:890
+#: js/components/Settings/Settings.js:902
 msgid "Are you sure you want to reboot?"
 msgstr "您确定要重新启动吗？"
 
-#: js/components/Settings/Settings.js:896
+#: js/components/Settings/Settings.js:908
 msgid "Are you sure you want to shutdown?"
 msgstr "您确定要关机吗？"
 
-#: js/components/Settings/Settings.js:902
+#: js/components/Settings/Settings.js:914
 msgid "Are you sure you want to uninstall?"
 msgstr "您确定要卸载吗？"
 
@@ -125,19 +125,19 @@ msgstr "网络连接中..."
 msgid "Authentication problem"
 msgstr "身份验证错误"
 
-#: js/components/Settings/Settings.js:691
+#: js/components/Settings/Settings.js:703
 msgid "Authorized SSH Keys"
 msgstr "授权 SSH 密钥"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:762
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:750
 msgid "Auto Run Aegis Safety Camera App"
 msgstr "自动运行神盾测速照相"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:740
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:728
 msgid "Auto Run Autonavi Map"
 msgstr "自动运行高德地图"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:718
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:706
 msgid "Auto Run TomTom Safety Camera App"
 msgstr "自动运行 TomTom 测速照相"
 
@@ -157,11 +157,11 @@ msgstr "我们把这些传感器信息融合在一起，构建出前方道路状
 msgid "Begin Training"
 msgstr "开始教程"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:1010
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:998
 msgid "Boost Audio Alert Volume (%)"
 msgstr "扩大警示音量 (%)"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:1012
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:1000
 msgid "Boost audio alert volume in percentage, set to -100 (%) if you would like to disable audio alert. Default is 0 (%)."
 msgstr "扩大或减少警示音量，设至 -100 (%) 可以完全关闭警示音。预设为 0 (%)。"
 
@@ -177,7 +177,7 @@ msgstr "COMMA 积分"
 msgid "Cache Fingerprint"
 msgstr "启用指纹暂存"
 
-#: js/components/Settings/Settings.js:544
+#: js/components/Settings/Settings.js:556
 msgid "Camera Calibration"
 msgstr "摄像头校准"
 
@@ -190,11 +190,11 @@ msgstr "相机偏移距离 (公分)"
 msgid "Camera from Device"
 msgstr "设备的摄像头"
 
-#: js/components/Settings/Settings.js:701
-#: js/components/Settings/Settings.js:891
-#: js/components/Settings/Settings.js:897
+#: js/components/Settings/Settings.js:713
 #: js/components/Settings/Settings.js:903
-#: js/components/Settings/Settings.js:949
+#: js/components/Settings/Settings.js:909
+#: js/components/Settings/Settings.js:915
+#: js/components/Settings/Settings.js:961
 #: js/components/SetupWifi/SetupWifi.js:320
 msgid "Cancel"
 msgstr "取消"
@@ -207,15 +207,15 @@ msgstr "车型"
 msgid "Charging Control"
 msgstr "充电控制"
 
-#: js/components/Settings/Settings.js:350
+#: js/components/Settings/Settings.js:351
 msgid "Close Aegis Safety Camera"
 msgstr "关闭神盾测速照相"
 
-#: js/components/Settings/Settings.js:335
+#: js/components/Settings/Settings.js:336
 msgid "Close AutoNavi Map"
 msgstr "关闭高德地图"
 
-#: js/components/Settings/Settings.js:320
+#: js/components/Settings/Settings.js:321
 msgid "Close TomTom Safety Camera"
 msgstr "关闭 TomTom 测速照相"
 
@@ -227,7 +227,7 @@ msgstr "关闭位智"
 msgid "Comma.ai, Inc. Terms & Conditions"
 msgstr "Comma.ai, Inc. 条款及细则"
 
-#: js/components/Settings/Settings.js:948
+#: js/components/Settings/Settings.js:960
 msgid "Community maintained features are not confirmed by comma.ai to meet the standard safety model. Be extra cautious using them."
 msgstr "开源社区开发维护的功能，未通过官方标准安全验证，请谨慎使用。"
 
@@ -262,7 +262,7 @@ msgstr "继续"
 msgid "Continuously observe your surroundings for safety while gently nudging the steering wheel towards your desired lane. The combination of turn signal and wheel nudge will prompt openpilot to change lanes."
 msgstr "不断观察周围环境的安全并同时将方向盘轻轻推向想切至的车道。打转向灯和轻推方向盘这样的组合能指使 dragonpilot 协助您变换车道。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:523
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:522
 msgid "Controls"
 msgstr "操控"
 
@@ -283,11 +283,11 @@ msgstr "开发人员 perks"
 msgid "Device"
 msgstr "设备"
 
-#: js/components/Settings/Settings.js:480
+#: js/components/Settings/Settings.js:492
 msgid "Device Paired"
 msgstr "设备已绑定"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:914
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:902
 msgid "Disable this only if you do not want to see the driving UI and its blocking your navigation view, this will also effect what you records in dashcam."
 msgstr "关闭这个选项后，画面将不再显示后置镜头的影像，这个选项适合有用第三方导航系统的用户。此功能将会影响您行车记录的录像。"
 
@@ -295,59 +295,59 @@ msgstr "关闭这个选项后，画面将不再显示后置镜头的影像，这
 msgid "Disengage openpilot"
 msgstr "退出 dragonpilot"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:554
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:553
 msgid "Display \"Turn Exceeds Steering Limit\" Alert"
 msgstr "显示 \"弯道超过方向盘转向限制\" 警示讯息"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:992
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:980
 msgid "Display Dev UI"
 msgstr "显示调校介面"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:911
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:899
 msgid "Display Driving UI"
 msgstr "显示驾驶介面"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:965
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:953
 msgid "Display Event / Steering Icon"
 msgstr "显示事件／方向盘图示"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:983
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:971
 msgid "Display Face Icon"
 msgstr "显示人脸图示"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:929
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:917
 msgid "Display Lane Prediction"
 msgstr "显示车道预测"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:938
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:926
 msgid "Display Lead Car Indicator"
 msgstr "显示前车的指示符号"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:974
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:962
 msgid "Display Max Speed"
 msgstr "显示巡航速度"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:1001
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:989
 msgid "Display Mini Dev UI"
 msgstr "显示 dp 介面"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:947
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:935
 msgid "Display Path Prediction"
 msgstr "显示路线预测"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:920
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:908
 msgid "Display Speed"
 msgstr "显示车速"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:956
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:944
 msgid "Display Turning Signal"
 msgstr "显示方向灯"
 
-#: js/components/Settings/Settings.js:396
+#: js/components/Settings/Settings.js:408
 msgid "Display speed in km/h instead of mp/h."
 msgstr "∶启用后，速度单位将改用 km/h。"
 
-#: js/components/Settings/Settings.js:563
+#: js/components/Settings/Settings.js:575
 msgid "Dongle ID"
 msgstr "Dongle ID"
 
@@ -360,36 +360,36 @@ msgstr "下载"
 msgid "Driver Monitoring"
 msgstr "驾驶监控"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:623
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:611
 msgid "Driver Monitoring detects driver awareness with 3D facial reconstruction and pose estimation. It is used to warn the driver when they appear distracted while openpilot is engaged. This feature is still in beta, so Driver Monitoring is unavailable when the facial tracking is too inaccurate (e.g. at night). The availability is indicated by the face icon at the bottom-left corner of your EON."
 msgstr "驾驶监控系统利用 3D 人脸/姿态识別来判断驾驶的状态。当 dragonpilot 启用时，它会在驾驶分心时发出警示。这个功能仍然在测试阶段，所以监控会在无法正确识別时暂时取消 (例如光线不足时)。您可以从 EON 左下角的人脸图示来判断它的状态。"
 
-#: js/components/Settings/Settings.js:701
+#: js/components/Settings/Settings.js:713
 msgid "Edit"
 msgstr "编辑"
 
-#: js/components/Settings/Settings.js:950
+#: js/components/Settings/Settings.js:962
 msgid "Enable"
 msgstr "启用"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:751
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:739
 msgid "Enable Aegis Safety Camera App"
 msgstr "启用神盾测速照相"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:586
-msgid "Enable Assisted Lane Change"
-msgstr "启用辅助变道"
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:589
+#~ msgid "Enable Assisted Lane Change"
+#~ msgstr "启用辅助变道"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:596
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:585
 msgid "Enable Auto Lane Change"
 msgstr "启用自动变道"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:729
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:717
 msgid "Enable Autonavi Map App"
 msgstr "启用高德地图"
 
-#: js/components/Settings/Settings.js:664
-#: js/components/Settings/Settings.js:948
+#: js/components/Settings/Settings.js:676
+#: js/components/Settings/Settings.js:960
 msgid "Enable Community Features"
 msgstr "启用社区功能"
 
@@ -397,7 +397,7 @@ msgstr "启用社区功能"
 msgid "Enable Dashcam"
 msgstr "启用行车记录"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:620
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:608
 msgid "Enable Driver Monitoring"
 msgstr "启用驾驶监控"
 
@@ -405,16 +405,20 @@ msgstr "启用驾驶监控"
 msgid "Enable Hotspot on Boot"
 msgstr "开机时启用个人热点"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:823
-#: js/components/Settings/Settings.js:375
+#: js/components/Settings/Settings.js:377
+msgid "Enable Lane Change Assist"
+msgstr "启用辅助变道"
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:811
+#: js/components/Settings/Settings.js:387
 msgid "Enable Lane Departure Warnings"
 msgstr "启用车道偏离警示"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:527
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:526
 msgid "Enable Lateral Control"
 msgstr "启用横向控制"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:572
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:571
 msgid "Enable Lead Car Moving Alert (BETA)"
 msgstr "启用前车静止移动侦测 (BETA)"
 
@@ -422,7 +426,7 @@ msgstr "启用前车静止移动侦测 (BETA)"
 msgid "Enable Logger"
 msgstr "启用记录服务"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:772
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:760
 msgid "Enable MiXplorer App"
 msgstr "启用 MiXplorer 档案管理器"
 
@@ -430,19 +434,19 @@ msgstr "启用 MiXplorer 档案管理器"
 msgid "Enable Noctua Fan Mode"
 msgstr "启用 Noctua 风扇模式"
 
-#: js/components/Settings/Settings.js:682
+#: js/components/Settings/Settings.js:694
 msgid "Enable SSH"
 msgstr "启用 SSH"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:611
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:599
 msgid "Enable Safety Check"
 msgstr "启用安全监控"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:563
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:562
 msgid "Enable Slow on Curve"
 msgstr "启用弯道减速功能"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:832
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:820
 msgid "Enable SnG Mod"
 msgstr "启用 SnG 补丁"
 
@@ -450,15 +454,15 @@ msgstr "启用 SnG 补丁"
 msgid "Enable Steer Ratio Learner"
 msgstr "启用 Steer Ratio Learner"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:545
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:544
 msgid "Enable Steering On Signal"
 msgstr "启用方向灯暂时取消方向盘控制"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:814
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:802
 msgid "Enable Stock DSU Mode"
 msgstr "启用原厂 DSU 模式"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:707
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:695
 msgid "Enable TomTom Safety Camera App"
 msgstr "启用 TomTom 测速照相"
 
@@ -466,87 +470,87 @@ msgstr "启用 TomTom 测速照相"
 msgid "Enable Uploader"
 msgstr "启用记录上传服务"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:697
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:685
 msgid "Enable Waze Mode"
 msgstr "启用位智车机模式"
 
-#: js/components/Settings/Settings.js:365
+#: js/components/Settings/Settings.js:366
 msgid "Enable openpilot"
 msgstr "启用 dragonpilot"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:530
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:529
 msgid "Enable this if you wish dp to control the steering for you."
 msgstr "启用这个选项后，dp 将可以控制您的方向盘。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:826
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:814
 msgid "Enable this if you wish to receive the factory lane departure warning when crossing lanes. (e.g. vibrate steering wheel)"
 msgstr "开启这个选项后，如果您的车子偏离车道 (压线)，您将会收到警示讯息。 (例如：振动方向盘)"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:700
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:688
 msgid "Enable this if you wish to turn your device into a Waze navigator, NOTE: 1. once this is enabled, tomtom/autonavi will be disabled. 2. Waze will start automatically and you will not be able to change any settings when the car is started. 3. Most driving UI elements will be disabled. 4, Reboot required."
 msgstr "开启这个选项后，您的设备将会变成位智导航车机。注意：1. 启用后将无法使用 TomTom/高德/神盾。 2. 运行中将无法更改部分 dp 设置。 3. 大部分的 dp 介面将会自动关闭。 4. 需重启。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:754
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:742
 msgid "Enable this if you wish to use Aegis Safety Camera App, restart required."
 msgstr "若您想使用神盾测速照相，请启用这个选项，需重启。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:732
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:720
 msgid "Enable this if you wish to use Autonavi Map App, restart required."
 msgstr "若您想使用高德地图，请启用这个选项，需重启。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:775
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:763
 msgid "Enable this if you wish to use MiXplorer file manager App, restart required."
 msgstr "若您想使用 MiXplorer 档案管理器，请启用这个选项，需重启。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:835
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:823
 msgid "Enable this if you wish to use Stop n Go mod, the car will ignore acceleration commands if you are on a hill, we DO NOT RECOMMEND that you enable this unless you know what it is. (Only works on cars that need resume button to start)"
 msgstr "开启这个选项使用 Stop n Go 补丁，注意：在某些路况下您将需要自行踩油门启动（如上坡路段），除非您知道您在做什么，不然我们不建议您使用。（只支援需要按 RES 启动的车款）"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:710
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:698
 msgid "Enable this if you wish to use TomTom Safety Camera App, restart required."
 msgstr "若您想使用 TomTom 测速照相，请启用这个选项，需重启。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:539
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:538
 msgid "Enable this if you wish to use gas on engaged."
 msgstr "启用这个选项后，当 dp 在控制时您仍然可以踩油门。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:995
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:983
 msgid "Enable this to display DevUI found in kegman/arne fork."
 msgstr "用这个选项后，画面将会显示类似於 kegman / arne 的调校介面。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:968
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:956
 msgid "Enable this to display Event / Steering Icon."
 msgstr "启用这个选项后，画面将会显示事件／方向盘图示。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:986
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:974
 msgid "Enable this to display Face Icon."
 msgstr "启用这个选项后，画面将会显示人脸图示。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:977
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:965
 msgid "Enable this to display Max Speed."
 msgstr "启用这个选项后，画面将会显示巡航速度。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:1004
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:992
 msgid "Enable this to display Mini Dev UI designed for dragonpilot."
 msgstr "启用这个选项后，画面将会显示 dp 的调校介面。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:923
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:911
 msgid "Enable this to display Speed."
 msgstr "启用这个选项后，画面将会显示速度以及速度的单位。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:932
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:920
 msgid "Enable this to display lane prediction."
 msgstr "启用这个选项后，画面将会显示车道预测 (两侧的线)。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:941
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:929
 msgid "Enable this to display lead car indicator, this only works on supported cars."
 msgstr "启用这个选项后，画面将会显示前车的指示符号 (三角符号)，请注意，这个只有在支援的车种才会显示。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:950
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:938
 msgid "Enable this to display path prediction."
 msgstr "启用这个选项后，画面将会显示将行驶的路线预测 (中间的线)。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:959
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:947
 msgid "Enable this to display turning signal."
 msgstr "启用这个选项后，画面将会显示方向灯。"
 
@@ -558,15 +562,15 @@ msgstr "启用这个选项后，dp 将会把您车子的指纹暂存起来加快
 msgid "Enable this to turn on steer ratio learner, We DO NOT RECOMMEND that you turn on this unless you know what you are doing."
 msgstr "启用这个选项后，dp 将会开启 steer ratio learner，除非您知道您在做什么，不然我们不建议您关闭它。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:765
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:753
 msgid "Enable this will have Aegis Safety Camera App start when car is on, stop when car is off."
 msgstr "启用这个选项后，神盾测速照相将在行驶时自动开启，当温度过高或熄火后自动关闭。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:743
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:731
 msgid "Enable this will have Autonavi Map App start when car is on, stop when car is off."
 msgstr "启用这个选项后，高德地图将在行驶时自动开启，当温度过高或熄火后自动关闭。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:721
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:709
 msgid "Enable this will have TomTom Safety Camera App start when car is on, stop when car is off."
 msgstr "启用这个选项后，TomTom 测速照相将在行驶时自动开启，当温度过高或熄火后自动关闭。"
 
@@ -587,19 +591,19 @@ msgstr "设置完成"
 msgid "Finish Training"
 msgstr "完成"
 
-#: js/components/Settings/Settings.js:569
+#: js/components/Settings/Settings.js:581
 msgid "Free Storage"
 msgstr "剩余空间"
 
-#: js/components/Settings/Settings.js:710
+#: js/components/Settings/Settings.js:722
 msgid "Git Branch"
 msgstr "Git 分支"
 
-#: js/components/Settings/Settings.js:713
+#: js/components/Settings/Settings.js:725
 msgid "Git Revision"
 msgstr "Git 修订版"
 
-#: js/components/Settings/Settings.js:764
+#: js/components/Settings/Settings.js:776
 msgid "GitHub Username"
 msgstr "GitHub 用户名"
 
@@ -620,7 +624,7 @@ msgstr "硬件"
 msgid "Hide Alerts"
 msgstr "隐藏通知"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:842
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:830
 msgid "Honda"
 msgstr "本田"
 
@@ -640,11 +644,11 @@ msgstr "我会保持关注路况。"
 msgid "If you disable logger (loggered/tombstoned), it will stop recording driving data for AI training, reboot required."
 msgstr "如果您关闭这个选项，记录服务将停止储存用来训练 AI 模式的资料，需要重启。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:614
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:602
 msgid "If you disable this, the driver safety check will be disabled completely, we DO NOT RECOMMEND that you turn off this unless you know what you are doing, we hold no responsibility if you disable this option."
 msgstr "如果您关闭这个选项，dp 的驾驶监控功能将完全取消，除非您知道您在做什么，不然我们不建议您使用，我们也不会负任何事故的责任。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:557
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:556
 msgid "If you disable this, you will not receive any \"Turn Exceeds Steering Limit\" alerts on the screen. Hyundai, Ford, Toyota do not have this alert."
 msgstr "如果您关闭这个选项，您将不再会收到 \"弯道超过方向盘转向限制\" 的警示讯息。 Hyundai、Ford、Toyota 车种没有用到此警示。"
 
@@ -656,23 +660,23 @@ msgstr "如果您关闭这个选项，记录上传服务将停止上传用来训
 msgid "If you enable this, Hotspot will turn on automatically on boot."
 msgstr "启用这个选项后，dp 将於开机时开启个人热点。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:589
-msgid "If you enable this, dp will assist you to change lane once above 37 mph / 60kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option."
-msgstr "启用这个选项后，dp 将会在时速高于 37 英里 或 60 公里时协助您变道。 （除非您知道您在做什么，不然我们不建议您使用本功能，我们也不会负任何事故的责任）"
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:592
+#~ msgid "If you enable this, dp will assist you to change lane once above 37 mph / 60kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option."
+#~ msgstr "启用这个选项后，dp 将会在时速高于 37 英里 或 60 公里时协助您变道。 （除非您知道您在做什么，不然我们不建议您使用本功能，我们也不会负任何事故的责任）"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:599
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:588
 msgid "If you enable this, dp will change lane for you once the speed is above 60mph / 97kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option."
 msgstr "启用这个选项后，dp 将会在时速高于 60 英里 或 97 公里时自动变道。 （除非您知道您在做什么，不然我们不建议您使用本功能，我们也不会负任何事故的责任）"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:575
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:574
 msgid "If you enable this, dp will notify you when lead car starts moving from stationary."
 msgstr "启用这个选项后， 当前车从静止开始移动时 (如红灯)， dp 将会发出警示讯息。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:548
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:547
 msgid "If you enable this, it will temporary disable steering control when left/right blinker is on and resume control 1 second after the blinker is off."
 msgstr "如果您启用这个选项，当方向灯亮起时，将暂时取消 dp 的方向盘控制，然后 dp 会在方向灯熄灭后 1 秒取回控制。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:566
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:565
 msgid "If you enable this, the car will slow down automatically when on a curve road, this feature only works on Long Ctrl supported cars."
 msgstr "启用这个选项后， dp 在弯道时会依需求减速，这个选项只适用于支持纵向控制的车型。"
 
@@ -689,7 +693,7 @@ msgstr "公里"
 msgid "Keep in mind that certain situations are not handled by openpilot. Scenarios such as traffic lights, stop signs, quick vehicle cutins and pedestrians are unrecognized and openpilot may accelerate."
 msgstr "请注意，在红绿灯号标志、停车信号灯标志、前方车辆快速切入、无法识别的行人等特定路况下，dragonpilot 无法正确处理，有可能导致异常加速。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:582
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:581
 msgid "Lane Change"
 msgstr "换道"
 
@@ -717,7 +721,7 @@ msgstr "MiXplorer 档案管理器"
 msgid "More Options"
 msgstr "更多选项"
 
-#: js/components/Settings/Settings.js:722
+#: js/components/Settings/Settings.js:734
 msgid "N/A"
 msgstr "无"
 
@@ -725,8 +729,8 @@ msgstr "无"
 msgid "Network"
 msgstr "网络"
 
-#: js/components/Settings/Settings.js:481
-#: js/components/Settings/Settings.js:561
+#: js/components/Settings/Settings.js:493
+#: js/components/Settings/Settings.js:573
 msgid "No"
 msgstr "否"
 
@@ -738,7 +742,7 @@ msgstr "没有网络连接"
 msgid "Now that you’re all set up, it’s important to understand the functionality and limitations of openpilot as alpha software before testing."
 msgstr "现在，您已经完成了所有设置，在测试使用之前，了解 dragonpilot 测试版的功能限制非常重要。"
 
-#: js/components/Settings/Settings.js:344
+#: js/components/Settings/Settings.js:345
 msgid "Open Aegis Safety Camera"
 msgstr "开启神盾测速照相"
 
@@ -746,15 +750,15 @@ msgstr "开启神盾测速照相"
 msgid "Open Android Settings"
 msgstr "开启 Android 设置"
 
-#: js/components/Settings/Settings.js:329
+#: js/components/Settings/Settings.js:330
 msgid "Open AutoNavi Map"
 msgstr "开启高德地图"
 
-#: js/components/Settings/Settings.js:625
+#: js/components/Settings/Settings.js:637
 msgid "Open Tethering Settings"
 msgstr "共享网络设置"
 
-#: js/components/Settings/Settings.js:314
+#: js/components/Settings/Settings.js:315
 msgid "Open TomTom Safety Camera"
 msgstr "开启 TomTom 测速照相"
 
@@ -762,7 +766,7 @@ msgstr "开启 TomTom 测速照相"
 msgid "Open Waze"
 msgstr "开启位智"
 
-#: js/components/Settings/Settings.js:618
+#: js/components/Settings/Settings.js:630
 msgid "Open WiFi Settings"
 msgstr "无线网络设置"
 
@@ -770,7 +774,7 @@ msgstr "无线网络设置"
 msgid "PAST WEEK"
 msgstr "上周"
 
-#: js/components/Settings/Settings.js:502
+#: js/components/Settings/Settings.js:514
 msgid "Pair Device"
 msgstr "绑定设备"
 
@@ -783,15 +787,15 @@ msgid "Pair your comma account with comma connect"
 msgstr "使用 Comma connect 绑定到您的 Comma 帐户"
 
 #: js/components/Settings/Settings.js:222
-#: js/components/Settings/Settings.js:560
+#: js/components/Settings/Settings.js:572
 msgid "Paired"
 msgstr "设备已绑定"
 
-#: js/components/Settings/Settings.js:721
+#: js/components/Settings/Settings.js:733
 msgid "Panda Dongle ID"
 msgstr "Panda Dongle ID"
 
-#: js/components/Settings/Settings.js:717
+#: js/components/Settings/Settings.js:729
 msgid "Panda Firmware"
 msgstr "Panda 固件"
 
@@ -805,8 +809,12 @@ msgstr "密码:"
 msgid "Perform Lane Change"
 msgstr "进行变换车道"
 
-#: js/components/Settings/Settings.js:589
-#: js/components/Settings/Settings.js:896
+#: js/components/Settings/Settings.js:380
+msgid "Perform assisted lane changes with openpilot by checking your surroundings for safety, activating the turn signal and gently nudging the steering wheel towards your desired lane. openpilot is not capable of checking if a lane change is safe. You must continuously observe your surroundings to use this feature."
+msgstr "检查四周车道安全后，您可以经由打方向灯和轻推方向盘的组合来使用 dragonpilot 辅助切换车道功能。dragonpilot 无法检查是否有后方来车以及四周的安全。您必须持续观察周围的环境才能使用此功能。"
+
+#: js/components/Settings/Settings.js:601
+#: js/components/Settings/Settings.js:908
 msgid "Power Off"
 msgstr "关机"
 
@@ -824,9 +832,9 @@ msgid "Radar from your car"
 msgstr "原车雷达"
 
 #: js/components/Settings/Settings.js:140
-#: js/components/Settings/Settings.js:582
-#: js/components/Settings/Settings.js:890
-#: js/components/Settings/Settings.js:892
+#: js/components/Settings/Settings.js:594
+#: js/components/Settings/Settings.js:902
+#: js/components/Settings/Settings.js:904
 msgid "Reboot"
 msgstr "重新启动"
 
@@ -838,7 +846,7 @@ msgstr "马上"
 msgid "Reboot and Update"
 msgstr "重启并更新"
 
-#: js/components/Settings/Settings.js:378
+#: js/components/Settings/Settings.js:390
 msgid "Receive alerts to steer back into the lane when your vehicle drifts over a detected lane line without a turn signal activated while driving over 31mph (50kph)."
 msgstr "车速在 50 km/h 以上，且未打转向灯的情况下，如果检测到车辆驶出当前车道线时，则会发出车道偏离警告。"
 
@@ -846,7 +854,7 @@ msgstr "车速在 50 km/h 以上，且未打转向灯的情况下，如果检测
 msgid "Record EON screen as dashcam footage, it will automatically delete old footage if the available space is less than 15%, footage will be stored in /sdcard/dashcam/."
 msgstr "录下 EON 的画面当做行车记录，当系统的空间不足 15% 时会自动删除旧的记录。记录会存在 /sdcard/dashcam/ 里。"
 
-#: js/components/Settings/Settings.js:384
+#: js/components/Settings/Settings.js:396
 msgid "Record and Upload Driver Camera"
 msgstr "上传驾驶员的驾驶录像"
 
@@ -854,11 +862,11 @@ msgstr "上传驾驶员的驾驶录像"
 msgid "Remote Access"
 msgstr "远程访问"
 
-#: js/components/Settings/Settings.js:803
+#: js/components/Settings/Settings.js:815
 msgid "Remove all"
 msgstr "全部删除"
 
-#: js/components/Settings/Settings.js:554
+#: js/components/Settings/Settings.js:566
 msgid "Reset"
 msgstr "重置"
 
@@ -870,7 +878,7 @@ msgstr "重置摄像头校准需要重启。"
 msgid "Restart"
 msgstr "重新学习"
 
-#: js/components/Settings/Settings.js:453
+#: js/components/Settings/Settings.js:465
 msgid "Review Training Guide"
 msgstr "查看使用教程"
 
@@ -878,15 +886,15 @@ msgstr "查看使用教程"
 msgid "Safety"
 msgstr "安全"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:607
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:595
 msgid "Safety Monitors"
 msgstr "安全监控"
 
-#: js/components/Settings/Settings.js:781
+#: js/components/Settings/Settings.js:793
 msgid "Save"
 msgstr "保存"
 
-#: js/components/Settings/Settings.js:793
+#: js/components/Settings/Settings.js:805
 msgid "Save failed. Ensure that your username is correct and you are connected to the internet."
 msgstr "保存失败，请确保您的设备已联网并输入正确的用户名"
 
@@ -918,7 +926,7 @@ msgstr "请点选画面中的方向盘"
 msgid "Select turn signal"
 msgstr "请点选画面中的转向灯"
 
-#: js/components/Settings/Settings.js:566
+#: js/components/Settings/Settings.js:578
 msgid "Serial Number"
 msgstr "序列号"
 
@@ -937,7 +945,7 @@ msgstr "设置"
 msgid "Show password"
 msgstr "显示密码"
 
-#: js/components/Settings/Settings.js:898
+#: js/components/Settings/Settings.js:910
 msgid "Shutdown"
 msgstr "关机"
 
@@ -949,7 +957,7 @@ msgstr "暂时跳过"
 msgid "Skip for Now"
 msgstr "暂时跳过"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:817
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:805
 msgid "Some models DSU cannot be unplugged (such as Lexus IS/GS/ES), once this option is enabled, turn on AHB (Auto High Beam) will keep you dp always on for Lat Control (control gas/brake manually), turn off AHB if you want to cancel dp Lat Control."
 msgstr "某些车型 (Lexus IS/GS/ES) 的 DSU 无法拔除，开启这个选项后，您可以使用 AHB (自动大灯) 来控制 dp，当 AHB 开启后，dp 将会一直开启, 您可以手动控制油门和剎车。AHB 关闭后，dp 将会暂时切回原本的模式 (油门/剎车会取消 dp)。"
 
@@ -958,7 +966,7 @@ msgstr "某些车型 (Lexus IS/GS/ES) 的 DSU 无法拔除，开启这个选项�
 msgid "Start Lane Change"
 msgstr "执行车道切换"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:629
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:617
 msgid "Steering Monitor Timer"
 msgstr "方向盘监控计时 (分钟)"
 
@@ -978,11 +986,11 @@ msgstr "请点击画面中的 “SET” 继续"
 msgid "Tap a pedal to disengage"
 msgstr "请点击画面中的油门或刹车继续"
 
-#: js/components/Settings/Settings.js:493
+#: js/components/Settings/Settings.js:505
 msgid "Terms of Service available at https://my.comma.ai/terms.html"
 msgstr "服务条款请参阅 https://my.comma.ai/terms.html"
 
-#: js/components/Settings/Settings.js:546
+#: js/components/Settings/Settings.js:558
 msgid "The calibration algorithm is always active on the road facing camera. Resetting calibration is only advised when the device reports an invalid calibration alert or when the device is remounted in a different position."
 msgstr "摄像头是一直在后台自动校准的，只有当您的设备发出校准无效的信息或是您将设备安装至不同的位置/车子时，才需要重置校准。"
 
@@ -1010,7 +1018,7 @@ msgstr "无线网络扫描错误。{0}请确认已在 \"更多选项\" 里开启
 msgid "This guide can be replayed at any time from the device settings. To learn more about openpilot, read the wiki and join the community at discord.comma.ai"
 msgstr "您可以随时到设备设置里重新阅读使用教程，了解更多关于 dragonpilot 的信息，请查看 wiki 或加入 discord.comma.ai 社区交流。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:810
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:798
 msgid "Toyota / Lexus"
 msgstr "丰田 / 凌志"
 
@@ -1022,12 +1030,12 @@ msgstr "调校"
 msgid "UI"
 msgstr "介面"
 
-#: js/components/Settings/Settings.js:902
-#: js/components/Settings/Settings.js:904
+#: js/components/Settings/Settings.js:914
+#: js/components/Settings/Settings.js:916
 msgid "Uninstall"
 msgstr "卸载"
 
-#: js/components/Settings/Settings.js:730
+#: js/components/Settings/Settings.js:742
 msgid "Uninstall {software}"
 msgstr "卸载 {software}"
 
@@ -1053,31 +1061,31 @@ msgstr "更新并重启"
 msgid "Upgrade Now"
 msgstr "立即更新"
 
-#: js/components/Settings/Settings.js:573
+#: js/components/Settings/Settings.js:585
 msgid "Upload Speed"
 msgstr "上传速度"
 
-#: js/components/Settings/Settings.js:387
+#: js/components/Settings/Settings.js:399
 msgid "Upload data from the driver facing camera and help improve the Driver Monitoring algorithm."
 msgstr "上传前置摄像头的录像来协助我们提升驾驶监控的准确率。"
 
-#: js/components/Settings/Settings.js:393
+#: js/components/Settings/Settings.js:405
 msgid "Use Metric System"
 msgstr "使用公制单位"
 
-#: js/components/Settings/Settings.js:669
+#: js/components/Settings/Settings.js:681
 msgid "Use features from the open source community that are not maintained or supported by comma.ai and have not been confirmed to meet the standard safety model. Be extra cautious when using these features:{0} * GM car port{1} * Toyota with DSU unplugged{2} * Pedal interceptor{3}"
 msgstr "使用来自开源社区开发维护的功能，包含：{0}* 启用通用 (GM) 车系支援{1}。 * 允许模拟丰田 (Toyota) 车系 DSU 模组{2} * 允许使用 Comma Pedal 模组{3}"
 
-#: js/components/Settings/Settings.js:368
+#: js/components/Settings/Settings.js:369
 msgid "Use the openpilot system for adaptive cruise control and lane keep driver assistance. Your attention is required at all times to use this feature. Changing this setting takes effect when the car is powered off."
 msgstr "使用 dragonpilot 的自适应巡航功能和车道保持功能，开启后您需要保持注意力集中，设置更改在重新启动车子后生效。"
 
-#: js/components/Settings/Settings.js:707
+#: js/components/Settings/Settings.js:719
 msgid "Version"
 msgstr "版本"
 
-#: js/components/Settings/Settings.js:745
+#: js/components/Settings/Settings.js:757
 msgid "WARNING: {0} This grants SSH access to all public keys in your GitHub settings. {1} Never enter a GitHub username other than your own. {2} The built-in SSH key will be disabled if you proceed. {3} A comma employee will never ask you to add their GitHub. {4}"
 msgstr "警告：{0}这个功能会同步 Github 设置里所有公钥的 SSH 访问权限，{1}请不要输入别人的 Github 用户名（即使声称是 comma 的员工），{2}操作完成后，原先内置的 SSH 密钥会被禁用。{3}"
 
@@ -1105,12 +1113,12 @@ msgstr "使用 dragonpilot 时，您可以随时改为人工操作方向盘，dr
 msgid "With openpilot engaged, turn on your signal, check your surroundings, and confirm it is safe to change lanes."
 msgstr "使用 dragonpilot 时，打开转向灯，检查周边车道情况，确认可以安全的切换车道。"
 
-#: js/components/Settings/Settings.js:481
-#: js/components/Settings/Settings.js:561
+#: js/components/Settings/Settings.js:493
+#: js/components/Settings/Settings.js:573
 msgid "Yes"
 msgstr "是"
 
-#: js/components/Settings/Settings.js:486
+#: js/components/Settings/Settings.js:498
 msgid "You may unpair your device in the comma connect app settings."
 msgstr "您可以在手机应用（Comma connect）中解绑设备。"
 
@@ -1122,8 +1130,8 @@ msgstr "您的 EON 将会在刷新完成后重新启动，请勿在刷新过程�
 msgid "and scan this code to pair."
 msgstr "然后扫描这个二维码绑定。"
 
-#: js/components/Settings/Settings.js:527
-#: js/components/Settings/Settings.js:647
+#: js/components/Settings/Settings.js:539
+#: js/components/Settings/Settings.js:659
 msgid "chffrplus"
 msgstr "chffrplus"
 
@@ -1131,12 +1139,12 @@ msgstr "chffrplus"
 msgid "comma connect"
 msgstr "comma connect"
 
-#: js/components/Settings/Settings.js:358
+#: js/components/Settings/Settings.js:359
 msgid "dragonpilot"
 msgstr "dragonpilot"
 
-#: js/components/Settings/Settings.js:527
-#: js/components/Settings/Settings.js:647
+#: js/components/Settings/Settings.js:539
+#: js/components/Settings/Settings.js:659
 msgid "openpilot"
 msgstr "dragonpilot"
 
