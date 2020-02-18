@@ -48,6 +48,7 @@ class DragonpilotSettings extends Component {
             steeringMonitorTimerInt: '3',
             enableTomTom: false,
             enableAutonavi: false,
+            enableAegis: false,
             enableMixplorer: false,
             cameraOffsetInt: '6',
             autoShutdownAtInt: '0',
@@ -64,6 +65,7 @@ class DragonpilotSettings extends Component {
                 DragonSteeringMonitorTimer: dragonSteeringMonitorTimer,
                 DragonEnableTomTom: dragonEnableTomTom,
                 DragonEnableAutonavi: dragonEnableAutonavi,
+                DragonEnableAegis: dragonEnableAegis,
                 DragonEnableMixplorer: dragonEnableMixplorer,
                 DragonCameraOffset: dragonCameraOffset,
                 DragonAutoShutdownAt: dragonAutoShutdownAt,
@@ -76,6 +78,7 @@ class DragonpilotSettings extends Component {
         this.setState({ steeringMonitorTimerInt: dragonSteeringMonitorTimer === '0'? 0 : parseInt(dragonSteeringMonitorTimer) || 3 })
         this.setState({ enableTomTom: dragonWazeMode === '0' && dragonEnableTomTom === '1' })
         this.setState({ enableAutonavi: dragonWazeMode === '0' && dragonEnableAutonavi === '1' })
+        this.setState({ enableAegis: dragonWazeMode === '0' && dragonEnableAegis === '1' })
         this.setState({ enableMixplorer: dragonEnableMixplorer === '1' })
         this.setState({ cameraOffsetInt: dragonCameraOffset === '0'? 0 : parseInt(dragonCameraOffset) || 6 })
         this.setState({ autoShutdownAtInt: dragonAutoShutdownAt === '0'? 0 : parseInt(dragonAutoShutdownAt) || 0 })
