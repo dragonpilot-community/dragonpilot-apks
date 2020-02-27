@@ -55,13 +55,6 @@
                     android:textAlignment="center"
                     android:textColor="#ffffff"
                     android:textSize="8sp" />
-                <!--<ImageView-->
-                    <!--android:id="@+id/indicator_battery_icon"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="14dp"-->
-                    <!--android:layout_marginRight="5dp"-->
-                    <!--android:adjustViewBounds="true"-->
-                    <!--android:src="@drawable/indicator_battery_50" />-->
                 <TextView
                     android:id="@+id/battery_percentage"
                     android:layout_width="wrap_content"
@@ -173,7 +166,7 @@
                     android:id="@+id/sidebarMetricTempLabel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/eon_temp"
+                    android:text="@string/temp"
                     android:textColor="#ffffff"
                     android:layout_marginTop="26dp"
                     android:textSize="12sp" />

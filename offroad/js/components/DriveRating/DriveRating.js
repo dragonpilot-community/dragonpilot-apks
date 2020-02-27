@@ -43,7 +43,7 @@ class DriveRating extends Component {
 
     renderRatingFaces() {
         const { selectedRating } = this.state;
-        let ratings = ['1', '2', '3'];
+        let ratings = ['3', '2', '1'];
         return ratings.map((r) => {
             const ratingColor = selectedRating == r ? 'color' : 'white';
             const ratingStyle = [
@@ -100,23 +100,31 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    selectRating: async(lastRouteName, rating) => {
-        const isUpdateAvailableStr = await ChffrPlus.readParam(Params.KEY_IS_UPDATE_AVAILABLE);
-        const isUpdateAvailable = ((isUpdateAvailableStr && isUpdateAvailableStr.trim() === "1") || false);
-
+    selectRating: async (lastRouteName, rating) => {
         if (lastRouteName) {
-            try {
-                const dongleId = await ChffrPlus.readParam("DongleId");
-                const token = await ChffrPlus.createJwt({"identity": dongleId});
-                await Request.configure(token);
-                await Drives.setRouteRating(lastRouteName, rating);
-            } catch(e) {
-                Logging.cloudLog('Failed to set route rating', { lastRouteName, rating, e });
-            }
+            let tries = 0;
+            const retryInterval = setInterval(async () => {
+                try {
+                    const dongleId = await ChffrPlus.readParam("DongleId");
+                    const token = await ChffrPlus.createJwt({"identity": dongleId});
+                    await Request.configure(token);
+                    await Drives.setRouteRating(lastRouteName, rating);
+                    clearInterval(retryInterval);
+                } catch(e) {
+                    Logging.cloudLog('Failed to set route rating', { lastRouteName, rating, e });
+                } finally {
+                    tries++;
+                    if (tries > 120) {
+                        clearInterval(retryInterval);
+                    }
+                }
+            }, 30000);
         } else {
             Logging.cloudLog('Failed to get last route name', { rating });
         }
 
+        const isUpdateAvailableStr = await ChffrPlus.readParam(Params.KEY_IS_UPDATE_AVAILABLE);
+        const isUpdateAvailable = ((isUpdateAvailableStr && isUpdateAvailableStr.trim() === "1") || false);
         if (isUpdateAvailable) {
             const releaseNotes = await ChffrPlus.readParam(Params.KEY_RELEASE_NOTES);
             dispatch(NavigationActions.navigate({ routeName: 'UpdatePrompt',

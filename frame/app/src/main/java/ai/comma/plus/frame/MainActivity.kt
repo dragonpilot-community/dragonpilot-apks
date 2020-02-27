@@ -369,26 +369,6 @@ class MainActivity : Activity(), NewDestinationReceiverDelegate, OffroadNavigati
       sidebarMetricIP?.text = ipAddr;
     }
 
-//    private fun getLocalIpAddress(): String? {
-//        try {
-//
-//            val wm = getSystemService(WIFI_SERVICE) as WifiManager
-//            return ipToString(wm.getConnectionInfo().getIpAddress())
-//        } catch (ex: Exception) {
-//            Log.e("IP Address", ex.toString())
-//        }
-//
-//        return null
-//    }
-//
-//    private fun ipToString(i: Int): String {
-//        return (i and 0xFF).toString() + "." +
-//                (i shr 8 and 0xFF) + "." +
-//                (i shr 16 and 0xFF) + "." +
-//                (i shr 24 and 0xFF)
-//
-//    }
-
     fun enterHomeState() {
         var startApp = OFFROAD_APP
         if (lastStarted) {

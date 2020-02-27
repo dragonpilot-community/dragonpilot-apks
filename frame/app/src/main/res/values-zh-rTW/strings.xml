@@ -1,8 +1,10 @@
 <resources>
     <string name="app_name">Chffr Plus Frame</string>
     <string name="storage">儲存空間</string>
-    <string name="eon_temp">EON 溫度</string>
+    <string name="temp">溫度</string>
     <string name="no_panda">PANDA\n未連線</string>
+    <string name="panda_no_gps">PANDA\nGPS 訊號: 無</string>
+    <string name="panda_good_gps">PANDA\nGPS 訊號: 好</string>
     <string name="panda_active">PANDA\n已連線</string>
     <string name="start_to_begin">啟動您的車子開始</string>
     <string name="go_back">返回</string>
