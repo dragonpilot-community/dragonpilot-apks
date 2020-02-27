@@ -367,6 +367,18 @@
       ]
     ]
   },
+  "openpilot disengaging": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        884
+      ],
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        927
+      ]
+    ]
+  },
   "Keep in mind that certain situations are not handled by openpilot. Scenarios such as traffic lights, stop signs, quick vehicle cutins and pedestrians are unrecognized and openpilot may accelerate.": {
     "origin": [
       [
@@ -380,14 +392,6 @@
       [
         "js/components/training/Onboarding/Onboarding.js",
         905
-      ]
-    ]
-  },
-  "openpilot disengaging": {
-    "origin": [
-      [
-        "js/components/training/Onboarding/Onboarding.js",
-        927
       ]
     ]
   },

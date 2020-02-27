@@ -825,33 +825,33 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@lingui/babel-plugin-extract-messages@2.9.0":
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/@lingui/babel-plugin-extract-messages/-/babel-plugin-extract-messages-2.9.0.tgz#204a34c26935b031916d6b5a64e9703714428cbd"
-  integrity sha512-b99Art2fPcL+qy9cV12cgMmTMstq+WcM1XVmQAldl2cXamR4/RvY2gwwtHNELkQr9S4WTe1L+6wPTUBZttbhnw==
+"@lingui/babel-plugin-extract-messages@2.9.1":
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/@lingui/babel-plugin-extract-messages/-/babel-plugin-extract-messages-2.9.1.tgz#ff76985864c2624027fa50a8b240c9e937c57b47"
+  integrity sha512-ZguvJK/ByupNgmmxvlO43DewGTMVtPsolA/Uxm24YTLg0jf7cu/GRaqYxYt+SojWHuo2/mn6dzDJZPFcK1A2og==
   dependencies:
-    "@lingui/conf" "2.9.0"
+    "@lingui/conf" "2.9.1"
     babel-generator "^6.26.1"
 
-"@lingui/babel-plugin-transform-js@2.9.0":
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/@lingui/babel-plugin-transform-js/-/babel-plugin-transform-js-2.9.0.tgz#79b43ac3cc6f03b48011f33b0c717e1a4ae1cc16"
-  integrity sha512-8mkwiWvNqpu4w6QMgCjxCvDBgkKuio0naB99mtxZD/55d/fZfbEsD6onVbPZGocIyqc4gi9eFAPs/rzGYmujUg==
+"@lingui/babel-plugin-transform-js@2.9.1":
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/@lingui/babel-plugin-transform-js/-/babel-plugin-transform-js-2.9.1.tgz#64ff5e0fe7c1a1714ec6173a3e3ebc7e3253fd55"
+  integrity sha512-m1RAKUKffyxfWQ2Y0KfGHhYofdHdM+0aSsi2kgcebqzsuE8Hwuy+r4GZr593cSIqBu6Ugb6/WKoAUGUoEF9ZHw==
 
-"@lingui/babel-plugin-transform-react@2.9.0":
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/@lingui/babel-plugin-transform-react/-/babel-plugin-transform-react-2.9.0.tgz#f44b01ff8030de3cc1bf945c8e09ca20253aa89f"
-  integrity sha512-m/Dd1p2ckWN6iKXKDfHE9Y03TUD/17wJP1E4963JsZqVFx0Wq5Z9D3m3rCUqfl4OGN38ivHnvoKZ6Y9SLeVjbg==
+"@lingui/babel-plugin-transform-react@2.9.1":
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/@lingui/babel-plugin-transform-react/-/babel-plugin-transform-react-2.9.1.tgz#9e6a9da4cb3d3226aafd8f856f6025646d4e409f"
+  integrity sha512-3btgAUpH5OSlZf/c4bXsDtvPity+H+7Mm1GJmWEwQSjl5kQNLisNVHpWPKvESuNbfQEtmtK5iIMVUYx8GD/Sig==
 
-"@lingui/cli@^2.9.0":
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/@lingui/cli/-/cli-2.9.0.tgz#5fab071a2ac17cf79ef14035f216aa02ebe15b5b"
-  integrity sha512-1NZaw0QE9TYdDIU4d2xtDmuNn734wfjVxjofRMjfVw0XOhsuUCr+PTOJwfFhuw6inVl1wDSNLo88ctrd/27WWQ==
+"@lingui/cli@^2.9.1":
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/@lingui/cli/-/cli-2.9.1.tgz#c29dd04625954a47d5899b26e772e2a8d7b33be9"
+  integrity sha512-Ruzg4UxZzqnJDMpdGE04G8NnXFRAd5nH5dZ7rAYBurSddlLEqE3DVrxMToYC1BfCpbmWznHguPwusljrCUkMeg==
   dependencies:
-    "@lingui/babel-plugin-extract-messages" "2.9.0"
-    "@lingui/babel-plugin-transform-js" "2.9.0"
-    "@lingui/babel-plugin-transform-react" "2.9.0"
-    "@lingui/conf" "2.9.0"
+    "@lingui/babel-plugin-extract-messages" "2.9.1"
+    "@lingui/babel-plugin-transform-js" "2.9.1"
+    "@lingui/babel-plugin-transform-react" "2.9.1"
+    "@lingui/conf" "2.9.1"
     babel-generator "^6.26.1"
     babel-plugin-syntax-jsx "^6.18.0"
     babel-runtime "^6.26.0"
@@ -874,10 +874,10 @@
     pseudolocale "^1.1.0"
     ramda "^0.26.1"
 
-"@lingui/conf@2.9.0":
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/@lingui/conf/-/conf-2.9.0.tgz#b8b0b1c86b238f7ae1a885def484c549be99e80d"
-  integrity sha512-MUQAWWmwUi0JlGE4O/eQ+m92m8maAtPlkO1dei1XU3MavsEh754lUVxCIH4+iwA/KTBqadnivgBj7skok2ntWQ==
+"@lingui/conf@2.9.1":
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/@lingui/conf/-/conf-2.9.1.tgz#a7c2e6ae990e506161171429e36be016058027ec"
+  integrity sha512-33mEShmFemYy5tH+fgvAH+mNaO9MbOyDM1lt+frx/ozXBMbGsPrEReDFGtCY2CGEITn5Q9SGJbcRscnfQ2DubQ==
   dependencies:
     chalk "^2.3.0"
     cosmiconfig "^5.2.1"
@@ -885,28 +885,28 @@
     jest-validate "^24.8.0"
     pkg-conf "^3.1.0"
 
-"@lingui/core@2.9.0":
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/@lingui/core/-/core-2.9.0.tgz#5c1fc0434e73f3f9db2e34d891105684a57bd60f"
-  integrity sha512-RQ1Vlcdf45nOWEPDozlqNoRirBuVWxnk5vE6lTOizyV/ebZRp7IvHzgbtlnQG/rpqxbD3QAx/1+iEBXbZ9/UXw==
+"@lingui/core@2.9.1":
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/@lingui/core/-/core-2.9.1.tgz#e0edf9ad628bd49a0c42958390317834f0283636"
+  integrity sha512-oygikacnRlfR2p8Q30q9z7jBASvVd8JXgoq7q2Ao/NdZyk3YIYbDhBICxAtwlCbm1hSROh2xMS2Ygx3Ezwzp1Q==
   dependencies:
     babel-runtime "^6.26.0"
     make-plural "^4.1.1"
     messageformat-parser "^2.0.0"
 
-"@lingui/macro@^2.9.0":
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/@lingui/macro/-/macro-2.9.0.tgz#2e1ff10c0c2a8723461d8f02c9d133a855f10d24"
-  integrity sha512-Qaf697jBOlDDKKWgpAJar8hbpUqMdvyxHMMPIJfiaq3r2FT/AcR/xveZ4OByWXTbR5UKQ5r3N5KzVkeOE462xA==
+"@lingui/macro@^2.9.1":
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/@lingui/macro/-/macro-2.9.1.tgz#45f1d98012d9d99d4ea17753c609ce72abb961a8"
+  integrity sha512-iuT4rNl57h574vUfO9sYWstpbNMMaBxdscyOnY/R+HIPX0cPSjqaDmKTDInfI1gFpYznM2OOhOpqxMMUGt2+Gw==
   dependencies:
-    "@lingui/babel-plugin-transform-react" "2.9.0"
+    "@lingui/babel-plugin-transform-react" "2.9.1"
 
-"@lingui/react@^2.9.0":
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/@lingui/react/-/react-2.9.0.tgz#0ddba1f2baa74d0e690c5f4d0bc73f7c40ad4a2b"
-  integrity sha512-E71zXq5BOpv6IojLOpEFql+L33/b4Ay5H2lClQUoyk7ZOTT3zAAZ3zIuR6dmBLTMlveCdFnu46lDKMHxaWy6kw==
+"@lingui/react@^2.9.1":
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/@lingui/react/-/react-2.9.1.tgz#6dee029a4067939859b43f4f3dd068cb611256c0"
+  integrity sha512-LUpsw7zDUfS/iJWrBfmaVKcxjyNUQkMjBRuLVEzLHp32A6pK2CGFlDouBsEl1zbJn8gFdcBwWhTsh/FcXZCmXg==
   dependencies:
-    "@lingui/core" "2.9.0"
+    "@lingui/core" "2.9.1"
     babel-runtime "^6.26.0"
     hash-sum "^1.0.2"
     hoist-non-react-statics "3.3.0"
@@ -1213,13 +1213,6 @@
     "@types/istanbul-lib-coverage" "*"
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@^24.0.23":
-  version "24.0.23"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-24.0.23.tgz#046f8e2ade026fe831623e361a36b6fb9a4463e4"
-  integrity sha512-L7MBvwfNpe7yVPTXLn32df/EK+AMBFAFvZrRuArGs7npEWnlziUXK+5GMIUTI4NIuwok3XibsjXCs5HxviYXjg==
-  dependencies:
-    jest-diff "^24.3.0"
-
 "@types/js-yaml@^3.12.1":
   version "3.12.1"
   resolved "https://registry.yarnpkg.com/@types/js-yaml/-/js-yaml-3.12.1.tgz#5c6f4a1eabca84792fbd916f0cb40847f123c656"
@@ -1239,34 +1232,6 @@
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
-
-"@types/prop-types@*":
-  version "15.7.3"
-  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
-  integrity sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
-
-"@types/react-native@^0.60.25":
-  version "0.60.25"
-  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.60.25.tgz#65cb0bf5dd0631079215b63525458e4123c1c90e"
-  integrity sha512-827dIVvSTxSH5uTpsJJH7O4wpRuw0rm3yIzRL3a2yKawA0nyhgC1GPKTXHFIn2GfSdXn1Gty2dJ+k6uDZF3MWQ==
-  dependencies:
-    "@types/prop-types" "*"
-    "@types/react" "*"
-
-"@types/react-test-renderer@^16.9.1":
-  version "16.9.1"
-  resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-16.9.1.tgz#9d432c46c515ebe50c45fa92c6fb5acdc22e39c4"
-  integrity sha512-nCXQokZN1jp+QkoDNmDZwoWpKY8HDczqevIDO4Uv9/s9rbGPbSpy8Uaxa5ixHKkcm/Wt0Y9C3wCxZivh4Al+rQ==
-  dependencies:
-    "@types/react" "*"
-
-"@types/react@*", "@types/react@^16.9.16":
-  version "16.9.16"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.16.tgz#4f12515707148b1f53a8eaa4341dae5dfefb066d"
-  integrity sha512-dQ3wlehuBbYlfvRXfF5G+5TbZF3xqgkikK7DWAsQXe2KnzV+kjD4W2ea+ThCrKASZn9h98bjjPzoTYzfRqyBkw==
-  dependencies:
-    "@types/prop-types" "*"
-    csstype "^2.2.0"
 
 "@types/restify@^4.3.6":
   version "4.3.6"
@@ -2514,11 +2479,6 @@ cssstyle@^1.0.0:
   integrity sha512-GBrLZYZ4X4x6/QEoBnIrqb8B/f5l4+8me2dkom/j1Gtbxy0kBv6OGzKuAsGM75bkGwGAFkt56Iwg28S3XTZgSA==
   dependencies:
     cssom "0.3.x"
-
-csstype@^2.2.0:
-  version "2.6.8"
-  resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.8.tgz#0fb6fc2417ffd2816a418c9336da74d7f07db431"
-  integrity sha512-msVS9qTuMT5zwAGCVm4mxfrZ18BNc6Csd0oJAtiFMZ1FAx1CCvy2+5MDmYoix63LM/6NDbNtodCiGYGmFgO0dA==
 
 dashdash@^1.12.0:
   version "1.14.1"
@@ -4294,7 +4254,7 @@ jest-config@^24.9.0:
     pretty-format "^24.9.0"
     realpath-native "^1.1.0"
 
-jest-diff@^24.3.0, jest-diff@^24.9.0:
+jest-diff@^24.9.0:
   version "24.9.0"
   resolved "https://registry.yarnpkg.com/jest-diff/-/jest-diff-24.9.0.tgz#931b7d0d5778a1baf7452cb816e325e3724055da"
   integrity sha512-qMfrTs8AdJE2iqrTp0hzh7kTd2PQWrsFyj9tORoKmu32xjPjeE4NyjVRDz8ybYwqS2ik8N4hsIpiVTyFeo2lBQ==
@@ -8267,11 +8227,6 @@ typedarray-to-buffer@^3.1.2:
 typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
-
-typescript@^3.7.3:
-  version "3.7.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.7.3.tgz#b36840668a16458a7025b9eabfad11b66ab85c69"
-  integrity sha512-Mcr/Qk7hXqFBXMN7p7Lusj1ktCBydylfQM/FZCk5glCNQJrCUKPkMHdo9R0MTFWsC/4kPFvDS0fDPvukfCkFsw==
 
 ua-parser-js@^0.7.18, ua-parser-js@^0.7.9:
   version "0.7.19"

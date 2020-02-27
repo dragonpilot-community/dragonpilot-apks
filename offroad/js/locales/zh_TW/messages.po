@@ -101,19 +101,23 @@ msgstr "調整方向盤監控計時，如果您想取消方向盤監控，請將
 msgid "Allow Gas"
 msgstr "允許踩油門"
 
-#: js/components/Settings/Settings.js:697
-msgid "Allow devices to connect to your device using Secure Shell (SSH)."
+#: js/components/Settings/Settings.js:695
+msgid "Allow devices to connect to your EON using Secure Shell (SSH)."
 msgstr "允許別的設備經由 Secure Shell (SSH) 連線至您的 EON。"
 
-#: js/components/Settings/Settings.js:902
+#: js/components/Settings/Settings.js:697
+#~ msgid "Allow devices to connect to your device using Secure Shell (SSH)."
+#~ msgstr "允許別的設備經由 Secure Shell (SSH) 連線至您的 EON。"
+
+#: js/components/Settings/Settings.js:900
 msgid "Are you sure you want to reboot?"
 msgstr "您確定要重新啟動嗎？"
 
-#: js/components/Settings/Settings.js:908
+#: js/components/Settings/Settings.js:906
 msgid "Are you sure you want to shutdown?"
 msgstr "您確定要關機嗎？"
 
-#: js/components/Settings/Settings.js:914
+#: js/components/Settings/Settings.js:912
 msgid "Are you sure you want to uninstall?"
 msgstr "您確定要卸載嗎？"
 
@@ -125,7 +129,7 @@ msgstr "認證中..."
 msgid "Authentication problem"
 msgstr "認證錯誤"
 
-#: js/components/Settings/Settings.js:703
+#: js/components/Settings/Settings.js:701
 msgid "Authorized SSH Keys"
 msgstr "已授權的 SSH 密鑰"
 
@@ -190,11 +194,11 @@ msgstr "相機偏移距離 (公分)"
 msgid "Camera from Device"
 msgstr "來自設備的相機"
 
-#: js/components/Settings/Settings.js:713
-#: js/components/Settings/Settings.js:903
-#: js/components/Settings/Settings.js:909
-#: js/components/Settings/Settings.js:915
-#: js/components/Settings/Settings.js:961
+#: js/components/Settings/Settings.js:711
+#: js/components/Settings/Settings.js:901
+#: js/components/Settings/Settings.js:907
+#: js/components/Settings/Settings.js:913
+#: js/components/Settings/Settings.js:959
 #: js/components/SetupWifi/SetupWifi.js:320
 msgid "Cancel"
 msgstr "取消"
@@ -227,11 +231,11 @@ msgstr "關閉位智"
 msgid "Comma.ai, Inc. Terms & Conditions"
 msgstr "Comma.ai, Inc. 條款及細則"
 
-#: js/components/Settings/Settings.js:960
+#: js/components/Settings/Settings.js:958
 msgid "Community maintained features are not confirmed by comma.ai to meet the standard safety model. Be extra cautious using them."
 msgstr "由社群維護的功能尚未通過官方標準的安全驗證，請謹慎使用。"
 
-#: js/components/training/Onboarding/Onboarding.js:1001
+#: js/components/training/Onboarding/Onboarding.js:989
 msgid "Congratulations! You have completed openpilot training."
 msgstr "恭喜您！您已經完成了 dragonpilot 的使用教學"
 
@@ -258,7 +262,7 @@ msgstr "已連線"
 msgid "Continue"
 msgstr "繼續"
 
-#: js/components/training/Onboarding/Onboarding.js:810
+#: js/components/training/Onboarding/Onboarding.js:802
 msgid "Continuously observe your surroundings for safety while gently nudging the steering wheel towards your desired lane. The combination of turn signal and wheel nudge will prompt openpilot to change lanes."
 msgstr "不斷觀察周圍環境的安全並同時將方向盤輕輕推向想切至的車道。打方向燈和輕推方向盤這樣的組合能指使 dragonpilot 協助您變換車道。"
 
@@ -291,7 +295,7 @@ msgstr "設備已配對"
 msgid "Disable this only if you do not want to see the driving UI and its blocking your navigation view, this will also effect what you records in dashcam."
 msgstr "關閉這個選項後，畫面將不再顯示後置鏡頭的影像，這個選項適合有用第三方導航系統的用戶。此功能將會影響您行車記錄的錄像。"
 
-#: js/components/training/Onboarding/Onboarding.js:942
+#: js/components/training/Onboarding/Onboarding.js:930
 msgid "Disengage openpilot"
 msgstr "取消 dragonpilot"
 
@@ -355,8 +359,8 @@ msgstr "Dongle ID"
 msgid "Download"
 msgstr "下載"
 
-#: js/components/training/Onboarding/Onboarding.js:609
-#: js/components/training/Onboarding/Onboarding.js:669
+#: js/components/training/Onboarding/Onboarding.js:607
+#: js/components/training/Onboarding/Onboarding.js:667
 msgid "Driver Monitoring"
 msgstr "駕駛監控"
 
@@ -364,11 +368,11 @@ msgstr "駕駛監控"
 msgid "Driver Monitoring detects driver awareness with 3D facial reconstruction and pose estimation. It is used to warn the driver when they appear distracted while openpilot is engaged. This feature is still in beta, so Driver Monitoring is unavailable when the facial tracking is too inaccurate (e.g. at night). The availability is indicated by the face icon at the bottom-left corner of your EON."
 msgstr "駕駛監控系統利用 3D 人臉/姿態識別來判斷駕駛的狀態。當 dragonpilot 啟用時，它會在駕駛分心時發出警示。這個功能仍然在測試階段，所以監控會在無法正確識別時暫時取消 (例如光線不足時)。您可以從 EON 左下角的人臉圖示來判斷它的狀態。"
 
-#: js/components/Settings/Settings.js:713
+#: js/components/Settings/Settings.js:711
 msgid "Edit"
 msgstr "編輯"
 
-#: js/components/Settings/Settings.js:962
+#: js/components/Settings/Settings.js:960
 msgid "Enable"
 msgstr "啟用"
 
@@ -389,7 +393,7 @@ msgid "Enable Autonavi Map App"
 msgstr "啟用高德地圖"
 
 #: js/components/Settings/Settings.js:676
-#: js/components/Settings/Settings.js:960
+#: js/components/Settings/Settings.js:958
 msgid "Enable Community Features"
 msgstr "啟用社群開發功能"
 
@@ -434,7 +438,7 @@ msgstr "啟用 MiXplorer 檔案管理器"
 msgid "Enable Noctua Fan Mode"
 msgstr "啟用 Noctua 風扇模式"
 
-#: js/components/Settings/Settings.js:694
+#: js/components/Settings/Settings.js:692
 msgid "Enable SSH"
 msgstr "啟用 SSH"
 
@@ -578,8 +582,8 @@ msgstr "啟用這個選項後，TomTom 測速照相將在行駛時自動開啟�
 msgid "Enable this will let the fan running at full speed at any temperature, reboot required."
 msgstr "啟用這個選項後，EON 的風扇將會一直以全速運轉，這個功能適合有改裝 Noctua 風扇的用戶，需要重新開機。"
 
-#: js/components/training/Onboarding/Onboarding.js:601
-#: js/components/training/Onboarding/Onboarding.js:628
+#: js/components/training/Onboarding/Onboarding.js:599
+#: js/components/training/Onboarding/Onboarding.js:626
 msgid "Engage openpilot"
 msgstr "啟用 dragonpilot"
 
@@ -587,7 +591,7 @@ msgstr "啟用 dragonpilot"
 msgid "Finish Setup"
 msgstr "完成設定"
 
-#: js/components/training/Onboarding/Onboarding.js:1018
+#: js/components/training/Onboarding/Onboarding.js:1006
 msgid "Finish Training"
 msgstr "完成教學"
 
@@ -595,15 +599,15 @@ msgstr "完成教學"
 msgid "Free Storage"
 msgstr "剩餘空間"
 
-#: js/components/Settings/Settings.js:722
+#: js/components/Settings/Settings.js:720
 msgid "Git Branch"
 msgstr "Git 分支"
 
-#: js/components/Settings/Settings.js:725
+#: js/components/Settings/Settings.js:723
 msgid "Git Revision"
 msgstr "Git 修訂版"
 
-#: js/components/Settings/Settings.js:776
+#: js/components/Settings/Settings.js:774
 msgid "GitHub Username"
 msgstr "GitHub 用戶名"
 
@@ -627,6 +631,10 @@ msgstr "隱藏提示"
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:830
 msgid "Honda"
 msgstr "Honda"
+
+#: js/components/DriveRating/DriveRating.js:81
+msgid "How was your drive?"
+msgstr ""
 
 #: js/components/training/Onboarding/Onboarding.js:405
 msgid "I will be ready to take over at any time!"
@@ -689,7 +697,7 @@ msgstr "如果您開啟這個選項，dp 將會嘗試將電量控制在 60%~70% 
 msgid "KM"
 msgstr "公里"
 
-#: js/components/training/Onboarding/Onboarding.js:904
+#: js/components/training/Onboarding/Onboarding.js:892
 msgid "Keep in mind that certain situations are not handled by openpilot. Scenarios such as traffic lights, stop signs, quick vehicle cutins and pedestrians are unrecognized and openpilot may accelerate."
 msgstr "請注意，在紅綠燈號誌、停止號誌、前方車輛快速切入、行人穿越等等的情況，因 dragonpilot 無法正確判斷，它將有可能導致不正常的加速。"
 
@@ -703,8 +711,8 @@ msgstr "換道"
 msgid "Later"
 msgstr "稍後"
 
-#: js/components/training/Onboarding/Onboarding.js:871
-#: js/components/training/Onboarding/Onboarding.js:899
+#: js/components/training/Onboarding/Onboarding.js:859
+#: js/components/training/Onboarding/Onboarding.js:887
 msgid "Limited Features"
 msgstr "有限的功能"
 
@@ -721,7 +729,7 @@ msgstr "MiXplorer 檔案管理器"
 msgid "More Options"
 msgstr "更多選項"
 
-#: js/components/Settings/Settings.js:734
+#: js/components/Settings/Settings.js:732
 msgid "N/A"
 msgstr "無"
 
@@ -791,11 +799,11 @@ msgstr "與 comma connect 配對您的 comma 帳號"
 msgid "Paired"
 msgstr "已配對"
 
-#: js/components/Settings/Settings.js:733
+#: js/components/Settings/Settings.js:731
 msgid "Panda Dongle ID"
 msgstr "Panda Dongle ID"
 
-#: js/components/Settings/Settings.js:729
+#: js/components/Settings/Settings.js:727
 msgid "Panda Firmware"
 msgstr "Panda 韌體"
 
@@ -803,9 +811,9 @@ msgstr "Panda 韌體"
 msgid "Password:"
 msgstr "密碼:"
 
-#: js/components/training/Onboarding/Onboarding.js:744
-#: js/components/training/Onboarding/Onboarding.js:805
-#: js/components/training/Onboarding/Onboarding.js:879
+#: js/components/training/Onboarding/Onboarding.js:738
+#: js/components/training/Onboarding/Onboarding.js:797
+#: js/components/training/Onboarding/Onboarding.js:867
 msgid "Perform Lane Change"
 msgstr "進行變換車道"
 
@@ -814,7 +822,7 @@ msgid "Perform assisted lane changes with openpilot by checking your surrounding
 msgstr "檢查四周車道安全後，您可以經由打方向燈和輕推方向盤的組合來使用 dragonpilot 輔助切換車道功能。dragonpilot 無法檢查是否有後方來車以及四周的安全。您必須持續觀察周圍的環境才能使用此功能。"
 
 #: js/components/Settings/Settings.js:601
-#: js/components/Settings/Settings.js:908
+#: js/components/Settings/Settings.js:906
 msgid "Power Off"
 msgstr "關機"
 
@@ -833,8 +841,8 @@ msgstr "來自您車子的雷達"
 
 #: js/components/Settings/Settings.js:140
 #: js/components/Settings/Settings.js:594
+#: js/components/Settings/Settings.js:900
 #: js/components/Settings/Settings.js:902
-#: js/components/Settings/Settings.js:904
 msgid "Reboot"
 msgstr "重新啟動"
 
@@ -862,7 +870,7 @@ msgstr "錄制並上傳駕駛的錄像"
 msgid "Remote Access"
 msgstr "遠端控制"
 
-#: js/components/Settings/Settings.js:815
+#: js/components/Settings/Settings.js:813
 msgid "Remove all"
 msgstr "移除全部"
 
@@ -874,7 +882,7 @@ msgstr "重設"
 msgid "Resetting calibration requires a reboot."
 msgstr "重設校準需要重新啟動。"
 
-#: js/components/training/Onboarding/Onboarding.js:1026
+#: js/components/training/Onboarding/Onboarding.js:1014
 msgid "Restart"
 msgstr "重新開始"
 
@@ -890,11 +898,11 @@ msgstr "安全"
 msgid "Safety Monitors"
 msgstr "安全監控"
 
-#: js/components/Settings/Settings.js:793
+#: js/components/Settings/Settings.js:791
 msgid "Save"
 msgstr "儲存"
 
-#: js/components/Settings/Settings.js:805
+#: js/components/Settings/Settings.js:803
 msgid "Save failed. Ensure that your username is correct and you are connected to the internet."
 msgstr "儲存失敗，請確認您已連上網路並輸入正確的用戶名。"
 
@@ -902,7 +910,7 @@ msgstr "儲存失敗，請確認您已連上網路並輸入正確的用戶名。
 msgid "Scanning WiFi Networks..."
 msgstr "掃描無線網路中..."
 
-#: js/components/training/Onboarding/Onboarding.js:687
+#: js/components/training/Onboarding/Onboarding.js:685
 msgid "Select face to continue"
 msgstr "請點選畫面上的人臉繼續"
 
@@ -910,7 +918,7 @@ msgstr "請點選畫面上的人臉繼續"
 msgid "Select lead car indicator"
 msgstr "請點選畫面上的前車指標繼續"
 
-#: js/components/training/Onboarding/Onboarding.js:917
+#: js/components/training/Onboarding/Onboarding.js:905
 msgid "Select light to continue"
 msgstr "請點選畫面上的紅綠燈繼續"
 
@@ -918,11 +926,11 @@ msgstr "請點選畫面上的紅綠燈繼續"
 msgid "Select path to continue"
 msgstr "請點選畫面上的行車路徑繼續"
 
-#: js/components/training/Onboarding/Onboarding.js:823
+#: js/components/training/Onboarding/Onboarding.js:813
 msgid "Select steering wheel"
 msgstr "請點選畫面上的方向盤"
 
-#: js/components/training/Onboarding/Onboarding.js:780
+#: js/components/training/Onboarding/Onboarding.js:772
 msgid "Select turn signal"
 msgstr "請點選畫面上的方向燈"
 
@@ -945,7 +953,7 @@ msgstr "設定"
 msgid "Show password"
 msgstr "顯示密碼"
 
-#: js/components/Settings/Settings.js:910
+#: js/components/Settings/Settings.js:908
 msgid "Shutdown"
 msgstr "關機"
 
@@ -961,8 +969,8 @@ msgstr "暫時跳過"
 msgid "Some models DSU cannot be unplugged (such as Lexus IS/GS/ES), once this option is enabled, turn on AHB (Auto High Beam) will keep you dp always on for Lat Control (control gas/brake manually), turn off AHB if you want to cancel dp Lat Control."
 msgstr "某些車型 (Lexus IS/GS/ES) 的 DSU 無法拔除，開啟這個選項後，您可以使用 AHB (自動大燈) 來控制 dp，當 AHB 開啟後，dp 將會一直開啟, 您可以手動控制油門和剎車。AHB 關閉後，dp 將會暫時切回原本的模式 (油門/剎車會取消 dp)。"
 
-#: js/components/training/Onboarding/Onboarding.js:736
-#: js/components/training/Onboarding/Onboarding.js:764
+#: js/components/training/Onboarding/Onboarding.js:730
+#: js/components/training/Onboarding/Onboarding.js:758
 msgid "Start Lane Change"
 msgstr "開始切換車道"
 
@@ -978,13 +986,17 @@ msgstr "已成功配對到帳號"
 msgid "Successfully paired to an account in"
 msgstr "已配對成功："
 
-#: js/components/training/Onboarding/Onboarding.js:645
+#: js/components/training/Onboarding/Onboarding.js:643
 msgid "Tap \"SET\" to engage"
 msgstr "請點選畫面上的 \"SET\" 繼續"
 
-#: js/components/training/Onboarding/Onboarding.js:960
+#: js/components/training/Onboarding/Onboarding.js:948
 msgid "Tap a pedal to disengage"
 msgstr "請點選畫面上的油門／剎車繼續"
+
+#: js/components/DriveRating/DriveRating.js:89
+msgid "Tell us how openpilot performed for this drive."
+msgstr ""
 
 #: js/components/Settings/Settings.js:505
 msgid "Terms of Service available at https://my.comma.ai/terms.html"
@@ -1014,7 +1026,7 @@ msgstr "來自您車上的原廠雷達訊號幫助 dragonpilot 計算出與前�
 msgid "There was a problem scanning WiFi networks. {0}Make sure WiFi is enabled in \"More Options\" above."
 msgstr "掃描無線網路出現錯誤。{0}請確認無線網路功能已在上方的 \"更多選項\" 裡開啟。"
 
-#: js/components/training/Onboarding/Onboarding.js:1006
+#: js/components/training/Onboarding/Onboarding.js:994
 msgid "This guide can be replayed at any time from the device settings. To learn more about openpilot, read the wiki and join the community at discord.comma.ai"
 msgstr "若有需要，您可以隨時至設備設定裡重新閱讀使用指南。若您想知道更多關於 dragonpilot 的訊息，請參閱 wiki 或是加入我們在 discord.comma.ai 的社群。"
 
@@ -1030,12 +1042,12 @@ msgstr "調校"
 msgid "UI"
 msgstr "介面"
 
+#: js/components/Settings/Settings.js:912
 #: js/components/Settings/Settings.js:914
-#: js/components/Settings/Settings.js:916
 msgid "Uninstall"
 msgstr "卸載"
 
-#: js/components/Settings/Settings.js:742
+#: js/components/Settings/Settings.js:740
 msgid "Uninstall {software}"
 msgstr "卸載 {software}"
 
@@ -1074,42 +1086,50 @@ msgid "Use Metric System"
 msgstr "使用公／米制單位"
 
 #: js/components/Settings/Settings.js:681
-msgid "Use features from the open source community that are not maintained or supported by comma.ai and have not been confirmed to meet the standard safety model. Be extra cautious when using these features:{0} * GM car port{1} * Toyota with DSU unplugged{2} * Pedal interceptor{3}"
-msgstr "使用由開源社群維護的功能，包含：{0}* 開啟通用 (GM) 車系支援{1}。* 允許模擬豐田 (Toyota) 車系 DSU 模組{2} * 允許使用 Comma Pedal 模組{3}"
+msgid "Use features from the open source community that are not maintained or supported by comma.ai and have not been confirmed to meet the standard safety model. Be extra cautious when using these features: * GM car port * Toyota with DSU unplugged * Pedal interceptor"
+msgstr ""
+
+#: js/components/Settings/Settings.js:681
+#~ msgid "Use features from the open source community that are not maintained or supported by comma.ai and have not been confirmed to meet the standard safety model. Be extra cautious when using these features:{0} * GM car port{1} * Toyota with DSU unplugged{2} * Pedal interceptor{3}"
+#~ msgstr "使用由開源社群維護的功能，包含：{0}* 開啟通用 (GM) 車系支援{1}。* 允許模擬豐田 (Toyota) 車系 DSU 模組{2} * 允許使用 Comma Pedal 模組{3}"
 
 #: js/components/Settings/Settings.js:369
 msgid "Use the openpilot system for adaptive cruise control and lane keep driver assistance. Your attention is required at all times to use this feature. Changing this setting takes effect when the car is powered off."
 msgstr "以 dragonpilot 系統取代您原車的主動車距控制巡航系統以及車道保持輔助系統。使用本系統時，您仍需要全時保持注意。此設定將於重新發動車子後生效。"
 
-#: js/components/Settings/Settings.js:719
+#: js/components/Settings/Settings.js:717
 msgid "Version"
 msgstr "版本"
 
+#: js/components/Settings/Settings.js:755
+msgid "WARNING: This grants SSH access to all public keys in your GitHub settings. Never enter a GitHub username other than your own. The built-in SSH key will be disabled if you proceed. A comma employee will never ask you to add their GitHub."
+msgstr "警告：這將授予您 GitHub 帳號裡所有公開密鑰 SSH 訪問權限。永遠不要輸入您自己以外的 GitHub 用戶名。內建的 SSH 密鑰將無法使用。comma 的員工永遠不會要求您添加他們的 GitHub 用戶名。"
+
 #: js/components/Settings/Settings.js:757
-msgid "WARNING: {0} This grants SSH access to all public keys in your GitHub settings. {1} Never enter a GitHub username other than your own. {2} The built-in SSH key will be disabled if you proceed. {3} A comma employee will never ask you to add their GitHub. {4}"
-msgstr "警告：{0}這將授予您 GitHub 帳號裡所有公開密鑰 SSH 訪問權限。{1}永遠不要輸入您自己以外的 GitHub 用戶名。{2}內建的 SSH 密鑰將無法使用。{3}comma 的員工永遠不會要求您添加他們的 GitHub 用戶名。{4}"
+#~ msgid "WARNING: {0} This grants SSH access to all public keys in your GitHub settings. {1} Never enter a GitHub username other than your own. {2} The built-in SSH key will be disabled if you proceed. {3} A comma employee will never ask you to add their GitHub. {4}"
+#~ msgstr "警告：{0}這將授予您 GitHub 帳號裡所有公開密鑰 SSH 訪問權限。{1}永遠不要輸入您自己以外的 GitHub 用戶名。{2}內建的 SSH 密鑰將無法使用。{3}comma 的員工永遠不會要求您添加他們的 GitHub 用戶名。{4}"
 
 #: js/components/training/Onboarding/Onboarding.js:333
 msgid "Welcome to openpilot alpha"
 msgstr "歡迎來到 dragonpilot alpha"
 
-#: js/components/training/Onboarding/Onboarding.js:860
+#: js/components/training/Onboarding/Onboarding.js:850
 msgid "When encountering a potentially unsafe situation or exiting a highway, you can disengage with any pedal."
 msgstr "當遇到危險情況或是想離開高速公路時，你可以經由踩踏油門或剎車來取消控制。"
 
-#: js/components/training/Onboarding/Onboarding.js:674
+#: js/components/training/Onboarding/Onboarding.js:672
 msgid "When openpilot is engaged, you must always pay attention! openpilot monitors awareness with 3D facial reconstruction and pose. Distracted drivers are alerted, then disengaged from openpilot until corrected."
 msgstr "當您使用 dragonpilot 時，請您務必隨時注意路況! dragonpilot 通過建構 3D 人臉和姿態來判斷駕駛的狀態。若是檢測到駕駛分心，dragonpilot 將在警示過後暫時取消直到駕駛恢復注意力。"
 
-#: js/components/training/Onboarding/Onboarding.js:633
+#: js/components/training/Onboarding/Onboarding.js:631
 msgid "When you are ready to engage openpilot at a comfortable speed, locate the cruise controls on your steering wheel and press \"SET\" to begin."
 msgstr "當您的車行駛在安全的速度時，您可以按下位於方向盤上的巡航鍵 \"SET\" 開始使用 dragonpilot。"
 
-#: js/components/training/Onboarding/Onboarding.js:947
+#: js/components/training/Onboarding/Onboarding.js:935
 msgid "While openpilot is engaged, you may keep your hands on the wheel to override lateral controls. Longitudinal controls will be managed by openpilot until the gas or brake pedal is pressed to disengage."
 msgstr "當您使用 dragonpilot 時，您可以隨時改以人工操控方向，縱向控制則會繼續由 dragonpilot 控制直到踩下油門或剎車取消 dragonpilot 為止。"
 
-#: js/components/training/Onboarding/Onboarding.js:769
+#: js/components/training/Onboarding/Onboarding.js:763
 msgid "With openpilot engaged, turn on your signal, check your surroundings, and confirm it is safe to change lanes."
 msgstr "使用 dragonpilot 時，打開方向燈，檢查您四周的情況，確認是否可以安全的切換車道。"
 
@@ -1148,21 +1168,21 @@ msgstr "dragonpilot"
 msgid "openpilot"
 msgstr "dragonpilot"
 
-#: js/components/training/Onboarding/Onboarding.js:719
+#: js/components/training/Onboarding/Onboarding.js:717
 msgid "openpilot can change lanes with your assistance."
 msgstr "dragonpilot 可以在您的協助下切換車道。"
 
-#: js/components/training/Onboarding/Onboarding.js:761
+#: js/components/training/Onboarding/Onboarding.js:623
+#: js/components/training/Onboarding/Onboarding.js:755
 msgid "openpilot controls"
 msgstr "dragonpilot 控制"
 
-#: js/components/training/Onboarding/Onboarding.js:896
-#: js/components/training/Onboarding/Onboarding.js:939
+#: js/components/training/Onboarding/Onboarding.js:884
+#: js/components/training/Onboarding/Onboarding.js:927
 msgid "openpilot disengaging"
 msgstr "停用 dragonpilot"
 
-#: js/components/training/Onboarding/Onboarding.js:625
-#: js/components/training/Onboarding/Onboarding.js:666
+#: js/components/training/Onboarding/Onboarding.js:664
 msgid "openpilot engaging"
 msgstr "使用 dragonpilot"
 
@@ -1170,11 +1190,11 @@ msgstr "使用 dragonpilot"
 msgid "openpilot is an advanced driver assistance system."
 msgstr "dragonpilot 是進階版的駕駛輔助系統。"
 
-#: js/components/training/Onboarding/Onboarding.js:726
+#: js/components/training/Onboarding/Onboarding.js:722
 msgid "openpilot is not capable of checking if a lane change is safe. This is your job. openpilot will change lanes regardless if another vehicle is present."
 msgstr "dragonpilot 無法確認是否可以安全的變更車道。這是您的工作。無論是否有其它的車輛，dragonpilot 都會變更車道。"
 
-#: js/components/training/Onboarding/Onboarding.js:802
+#: js/components/training/Onboarding/Onboarding.js:794
 msgid "openpilot lane changes"
 msgstr "dragonpilot 換道"
 
@@ -1191,7 +1211,7 @@ msgstr "dragonpilot 使用多個傳感器來監看前方道路。"
 msgid "openpilot will engage when cruise control is set."
 msgstr "dragonpilot 將在巡航系統啟用後開始運作。"
 
-#: js/components/training/Onboarding/Onboarding.js:855
+#: js/components/training/Onboarding/Onboarding.js:845
 msgid "openpilot will stop driving when a pedal is pressed."
 msgstr "當踩下油門或剎車時，dragonpilot 將停止所有的操控。"
 
