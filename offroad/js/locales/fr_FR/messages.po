@@ -85,6 +85,7 @@ msgstr "TOUT LE TEMPS"
 msgid "Account"
 msgstr "Compte"
 
+#: js/components/Settings/Settings.js:621
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:411
 msgid "Adjust the camera offset if your car is not centered, slowly increase this if your car is close to the right, slowly decrease this if your car is close to the left, default is 6 cm."
 msgstr ""
@@ -105,14 +106,17 @@ msgstr ""
 msgid "Allow devices to connect to your EON using Secure Shell (SSH)."
 msgstr "Autoriser les appareils à se connecter à votre EON en utilisant le SSH"
 
+#: js/components/Settings/Settings.js:826
 #: js/components/Settings/Settings.js:900
 msgid "Are you sure you want to reboot?"
 msgstr "Voulez-vous redémarrer?"
 
+#: js/components/Settings/Settings.js:832
 #: js/components/Settings/Settings.js:906
 msgid "Are you sure you want to shutdown?"
 msgstr "Voulez-vous éteindre l'appareil"
 
+#: js/components/Settings/Settings.js:838
 #: js/components/Settings/Settings.js:912
 msgid "Are you sure you want to uninstall?"
 msgstr "Êtes-vous sur de vouloir désinstaller?"
@@ -125,6 +129,7 @@ msgstr "Authentification..."
 msgid "Authentication problem"
 msgstr "Problème d'authentification"
 
+#: js/components/Settings/Settings.js:627
 #: js/components/Settings/Settings.js:701
 msgid "Authorized SSH Keys"
 msgstr "Clés SSH autorisées"
@@ -190,6 +195,11 @@ msgstr ""
 msgid "Camera from Device"
 msgstr "Caméra de l'appareil"
 
+#: js/components/Settings/Settings.js:637
+#: js/components/Settings/Settings.js:827
+#: js/components/Settings/Settings.js:833
+#: js/components/Settings/Settings.js:839
+#: js/components/Settings/Settings.js:876
 #: js/components/Settings/Settings.js:711
 #: js/components/Settings/Settings.js:901
 #: js/components/Settings/Settings.js:907
@@ -227,6 +237,7 @@ msgstr ""
 msgid "Comma.ai, Inc. Terms & Conditions"
 msgstr "Comma.ai, Inc. Termes & Conditions"
 
+#: js/components/Settings/Settings.js:875
 #: js/components/Settings/Settings.js:958
 msgid "Community maintained features are not confirmed by comma.ai to meet the standard safety model. Be extra cautious using them."
 msgstr "Les fonctionnalités maintenues par la communauté ne sont pas confirmés pas comma.ai pour répondre au modèle de sécurité standard. Soyez extremement prudent en les utilisant."
@@ -360,6 +371,7 @@ msgstr "Télécharger"
 msgid "Driver Monitoring"
 msgstr "Surveillance du conducteur"
 
+#: js/components/Settings/Settings.js:637
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:611
 msgid "Driver Monitoring detects driver awareness with 3D facial reconstruction and pose estimation. It is used to warn the driver when they appear distracted while openpilot is engaged. This feature is still in beta, so Driver Monitoring is unavailable when the facial tracking is too inaccurate (e.g. at night). The availability is indicated by the face icon at the bottom-left corner of your EON."
 msgstr ""
@@ -368,10 +380,13 @@ msgstr ""
 msgid "Edit"
 msgstr "Éditer"
 
+#: js/components/Settings/Settings.js:877
 #: js/components/Settings/Settings.js:960
 msgid "Enable"
 msgstr "Activer"
 
+#: js/components/Settings/Settings.js:600
+#: js/components/Settings/Settings.js:875
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:739
 msgid "Enable Aegis Safety Camera App"
 msgstr ""
@@ -403,13 +418,14 @@ msgstr ""
 
 #: js/components/Settings/Settings.js:377
 msgid "Enable Lane Change Assist"
-msgstr ""
+msgstr "Activer l'assistance au changement de voie"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:811
 #: js/components/Settings/Settings.js:387
 msgid "Enable Lane Departure Warnings"
 msgstr "Activer l'avertisseur de sortie de voie"
 
+#: js/components/Settings/Settings.js:618
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:526
 msgid "Enable Lateral Control"
 msgstr ""
@@ -591,14 +607,17 @@ msgstr "Terminer l'entrainnement"
 msgid "Free Storage"
 msgstr "Espace libre"
 
+#: js/components/Settings/Settings.js:646
 #: js/components/Settings/Settings.js:720
 msgid "Git Branch"
 msgstr "Branche Git"
 
+#: js/components/Settings/Settings.js:649
 #: js/components/Settings/Settings.js:723
 msgid "Git Revision"
 msgstr "Révision de Git"
 
+#: js/components/Settings/Settings.js:700
 #: js/components/Settings/Settings.js:774
 msgid "GitHub Username"
 msgstr "Nom d'utilisateur GitHub"
@@ -787,10 +806,12 @@ msgstr "Associez votre compte comma avec comma connect"
 msgid "Paired"
 msgstr "Jumelé"
 
+#: js/components/Settings/Settings.js:657
 #: js/components/Settings/Settings.js:731
 msgid "Panda Dongle ID"
 msgstr "ID du Panda Dongle"
 
+#: js/components/Settings/Settings.js:653
 #: js/components/Settings/Settings.js:727
 msgid "Panda Firmware"
 msgstr "Logiciel du Panda"
@@ -809,6 +830,8 @@ msgstr "Effectuer un changement de voie"
 msgid "Perform assisted lane changes with openpilot by checking your surroundings for safety, activating the turn signal and gently nudging the steering wheel towards your desired lane. openpilot is not capable of checking if a lane change is safe. You must continuously observe your surroundings to use this feature."
 msgstr ""
 
+#: js/components/Settings/Settings.js:525
+#: js/components/Settings/Settings.js:832
 #: js/components/Settings/Settings.js:601
 #: js/components/Settings/Settings.js:906
 msgid "Power Off"
@@ -827,6 +850,10 @@ msgstr "La politique de confidentialité est disponible à https://my.comma.ai/p
 msgid "Radar from your car"
 msgstr "Radar de votre voiture"
 
+#: js/components/Settings/Settings.js:130
+#: js/components/Settings/Settings.js:518
+#: js/components/Settings/Settings.js:826
+#: js/components/Settings/Settings.js:828
 #: js/components/Settings/Settings.js:140
 #: js/components/Settings/Settings.js:594
 #: js/components/Settings/Settings.js:900
@@ -842,6 +869,11 @@ msgstr "Redémarrer Maintenant"
 msgid "Reboot and Update"
 msgstr "Redémarrer et Mettre à Jour"
 
+#: js/components/Settings/Settings.js:314
+msgid "Receive alerts to steer back into the lane when your vehicle drifts over a detected lane line without a turn signal activated while driving over 31mph (50kph)."
+msgstr ""
+
+#: js/components/Settings/Settings.js:320
 #: js/components/Settings/Settings.js:390
 msgid "Receive alerts to steer back into the lane when your vehicle drifts over a detected lane line without a turn signal activated while driving over 31mph (50kph)."
 msgstr ""
@@ -858,6 +890,7 @@ msgstr "Enregister et Uploader la caméra du conducteur"
 msgid "Remote Access"
 msgstr "Accès à distance"
 
+#: js/components/Settings/Settings.js:739
 #: js/components/Settings/Settings.js:813
 msgid "Remove all"
 msgstr "tout supprimer"
@@ -878,6 +911,7 @@ msgstr "Redémarrer"
 msgid "Review Training Guide"
 msgstr "Revoir le guide d'entrainement"
 
+#: js/components/Settings/Settings.js:717
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:193
 msgid "Safety"
 msgstr ""
@@ -890,6 +924,7 @@ msgstr ""
 msgid "Save"
 msgstr "Enregistrer"
 
+#: js/components/Settings/Settings.js:729
 #: js/components/Settings/Settings.js:803
 msgid "Save failed. Ensure that your username is correct and you are connected to the internet."
 msgstr "L'enregistrement a échoué. Vérifiez que votre identifiant est correct et que vous êtes connectés à internet."
@@ -941,6 +976,7 @@ msgstr ""
 msgid "Show password"
 msgstr "Montrer le mot de passe"
 
+#: js/components/Settings/Settings.js:834
 #: js/components/Settings/Settings.js:908
 msgid "Shutdown"
 msgstr "Éteindre"
@@ -1018,6 +1054,8 @@ msgstr "Un problème est survenu lors de l'analyse des réseaux WiFi. {0}Assurez
 msgid "This guide can be replayed at any time from the device settings. To learn more about openpilot, read the wiki and join the community at discord.comma.ai"
 msgstr "Ce guide peut être lu à tout moment à partir des paramètres de l'appareil. Pour en savoir plus sur openpilot, lisez le wiki et rejoignez la communauté sur discord.comma.ai"
 
+#: js/components/Settings/Settings.js:838
+#: js/components/Settings/Settings.js:840
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:798
 msgid "Toyota / Lexus"
 msgstr ""
@@ -1035,6 +1073,7 @@ msgstr ""
 msgid "Uninstall"
 msgstr "Désinstaller"
 
+#: js/components/Settings/Settings.js:666
 #: js/components/Settings/Settings.js:740
 msgid "Uninstall {software}"
 msgstr "Désinstaller {software}"
@@ -1073,6 +1112,9 @@ msgstr "Téléchargez les données du pilote face à la caméra et améliorez l'
 msgid "Use Metric System"
 msgstr "Utiliser le système métrique"
 
+#: js/components/Settings/Settings.js:605
+msgid "Use features from the open source community that are not maintained or supported by comma.ai and have not been confirmed to meet the standard safety model. Be extra cautious when using these features:{0} * GM car port{1} * Toyota with DSU unplugged{2} * Pedal interceptor{3}"
+msgstr "Utilisez des fonctionnalités de la communauté open source qui ne sont pas gérées ou prises en charge par comma.ai et dont la conformité au modèle de sécurité standard n'a pas été confirmée. Soyez extrêmement prudent lorsque vous utilisez ces fonctionnalités:{0} * Port de voiture GM{1} * Toyota avec DSU débranché{2} * Intercepteur de pédale{3}"
 #: js/components/Settings/Settings.js:681
 msgid "Use features from the open source community that are not maintained or supported by comma.ai and have not been confirmed to meet the standard safety model. Be extra cautious when using these features: * GM car port * Toyota with DSU unplugged * Pedal interceptor"
 msgstr "Utilisez des fonctionnalités de la communauté open source qui ne sont pas gérées ou prises en charge par comma.ai et dont la conformité au modèle de sécurité standard n'a pas été confirmée. Soyez extrêmement prudent lorsque vous utilisez ces fonctionnalités: * Port de voiture GM * Toyota avec DSU débranché * Intercepteur de pédale"
@@ -1081,10 +1123,14 @@ msgstr "Utilisez des fonctionnalités de la communauté open source qui ne sont 
 msgid "Use the openpilot system for adaptive cruise control and lane keep driver assistance. Your attention is required at all times to use this feature. Changing this setting takes effect when the car is powered off."
 msgstr "Utilisez le système openpilot pour le régulateur de vitesse adaptatif et l'assistance au conducteur pour garder la voie. Votre attention est requise à tout moment pour utiliser cette fonction. La modification de ce paramètre prend effet lorsque la voiture est éteinte."
 
+#: js/components/Settings/Settings.js:643
 #: js/components/Settings/Settings.js:717
 msgid "Version"
 msgstr "Version"
 
+#: js/components/Settings/Settings.js:681
+msgid "WARNING: {0} This grants SSH access to all public keys in your GitHub settings. {1} Never enter a GitHub username other than your own. {2} The built-in SSH key will be disabled if you proceed. {3} A comma employee will never ask you to add their GitHub. {4}"
+msgstr "AVERTISSEMENT: {0} cela accorde un accès SSH à toutes les clés publiques dans vos paramètres GitHub. {1} N'entrez jamais un nom d'utilisateur GitHub autre que le vôtre. {2} La clé SSH intégrée sera désactivée si vous continuez. {3} Un employé comma ne vous demandera jamais d'ajouter son GitHub.{4}"
 #: js/components/Settings/Settings.js:755
 msgid "WARNING: This grants SSH access to all public keys in your GitHub settings. Never enter a GitHub username other than your own. The built-in SSH key will be disabled if you proceed. A comma employee will never ask you to add their GitHub."
 msgstr "AVERTISSEMENT: cela accorde un accès SSH à toutes les clés publiques dans vos paramètres GitHub. N'entrez jamais un nom d'utilisateur GitHub autre que le vôtre. La clé SSH intégrée sera désactivée si vous continuez. Un employé comma ne vous demandera jamais d'ajouter son GitHub."
@@ -1130,6 +1176,11 @@ msgstr ""
 msgid "and scan this code to pair."
 msgstr "et scannez ce code pour l'appairer"
 
+#: js/components/Settings/Settings.js:187
+#: js/components/Settings/Settings.js:463
+msgid "chffrplus"
+msgstr "chffrplus"
+
 #: js/components/Settings/Settings.js:539
 #: js/components/Settings/Settings.js:659
 msgid "chffrplus"
@@ -1138,6 +1189,11 @@ msgstr ""
 #: js/components/SetupQr/SetupQr.js:109
 msgid "comma connect"
 msgstr "comma connect"
+
+#: js/components/Settings/Settings.js:187
+#: js/components/Settings/Settings.js:463
+msgid "openpilot"
+msgstr "openpilot"
 
 #: js/components/Settings/Settings.js:359
 msgid "dragonpilot"

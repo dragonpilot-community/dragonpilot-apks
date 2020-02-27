@@ -85,6 +85,7 @@ msgstr "全部"
 msgid "Account"
 msgstr "帳號"
 
+#: js/components/Settings/Settings.js:621
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:411
 msgid "Adjust the camera offset if your car is not centered, slowly increase this if your car is close to the right, slowly decrease this if your car is close to the left, default is 6 cm."
 msgstr "如果您的車子無法在正中央前行，您可以微調此數值，太靠右，請增加此值；太靠左，請減少此值。預設為 6 公分。"
@@ -105,6 +106,7 @@ msgstr "允許踩油門"
 msgid "Allow devices to connect to your EON using Secure Shell (SSH)."
 msgstr "允許別的設備經由 Secure Shell (SSH) 連線至您的 EON。"
 
+#: js/components/Settings/Settings.js:826
 #: js/components/Settings/Settings.js:697
 #~ msgid "Allow devices to connect to your device using Secure Shell (SSH)."
 #~ msgstr "允許別的設備經由 Secure Shell (SSH) 連線至您的 EON。"
@@ -113,10 +115,12 @@ msgstr "允許別的設備經由 Secure Shell (SSH) 連線至您的 EON。"
 msgid "Are you sure you want to reboot?"
 msgstr "您確定要重新啟動嗎？"
 
+#: js/components/Settings/Settings.js:832
 #: js/components/Settings/Settings.js:906
 msgid "Are you sure you want to shutdown?"
 msgstr "您確定要關機嗎？"
 
+#: js/components/Settings/Settings.js:838
 #: js/components/Settings/Settings.js:912
 msgid "Are you sure you want to uninstall?"
 msgstr "您確定要卸載嗎？"
@@ -129,6 +133,7 @@ msgstr "認證中..."
 msgid "Authentication problem"
 msgstr "認證錯誤"
 
+#: js/components/Settings/Settings.js:627
 #: js/components/Settings/Settings.js:701
 msgid "Authorized SSH Keys"
 msgstr "已授權的 SSH 密鑰"
@@ -194,6 +199,11 @@ msgstr "相機偏移距離 (公分)"
 msgid "Camera from Device"
 msgstr "來自設備的相機"
 
+#: js/components/Settings/Settings.js:637
+#: js/components/Settings/Settings.js:827
+#: js/components/Settings/Settings.js:833
+#: js/components/Settings/Settings.js:839
+#: js/components/Settings/Settings.js:876
 #: js/components/Settings/Settings.js:711
 #: js/components/Settings/Settings.js:901
 #: js/components/Settings/Settings.js:907
@@ -231,6 +241,7 @@ msgstr "關閉位智"
 msgid "Comma.ai, Inc. Terms & Conditions"
 msgstr "Comma.ai, Inc. 條款及細則"
 
+#: js/components/Settings/Settings.js:875
 #: js/components/Settings/Settings.js:958
 msgid "Community maintained features are not confirmed by comma.ai to meet the standard safety model. Be extra cautious using them."
 msgstr "由社群維護的功能尚未通過官方標準的安全驗證，請謹慎使用。"
@@ -364,6 +375,7 @@ msgstr "下載"
 msgid "Driver Monitoring"
 msgstr "駕駛監控"
 
+#: js/components/Settings/Settings.js:637
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:611
 msgid "Driver Monitoring detects driver awareness with 3D facial reconstruction and pose estimation. It is used to warn the driver when they appear distracted while openpilot is engaged. This feature is still in beta, so Driver Monitoring is unavailable when the facial tracking is too inaccurate (e.g. at night). The availability is indicated by the face icon at the bottom-left corner of your EON."
 msgstr "駕駛監控系統利用 3D 人臉/姿態識別來判斷駕駛的狀態。當 dragonpilot 啟用時，它會在駕駛分心時發出警示。這個功能仍然在測試階段，所以監控會在無法正確識別時暫時取消 (例如光線不足時)。您可以從 EON 左下角的人臉圖示來判斷它的狀態。"
@@ -372,10 +384,13 @@ msgstr "駕駛監控系統利用 3D 人臉/姿態識別來判斷駕駛的狀態�
 msgid "Edit"
 msgstr "編輯"
 
+#: js/components/Settings/Settings.js:877
 #: js/components/Settings/Settings.js:960
 msgid "Enable"
 msgstr "啟用"
 
+#: js/components/Settings/Settings.js:600
+#: js/components/Settings/Settings.js:875
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:739
 msgid "Enable Aegis Safety Camera App"
 msgstr "啟用神盾測速照相"
@@ -411,6 +426,7 @@ msgstr "開機時啟用個人熱點"
 
 #: js/components/Settings/Settings.js:377
 msgid "Enable Lane Change Assist"
+msgstr "啟用換道輔助"
 msgstr "啟用輔助換道"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:811
@@ -418,6 +434,7 @@ msgstr "啟用輔助換道"
 msgid "Enable Lane Departure Warnings"
 msgstr "啟用車道偏離警告"
 
+#: js/components/Settings/Settings.js:618
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:526
 msgid "Enable Lateral Control"
 msgstr "啟用橫向控制"
@@ -599,14 +616,17 @@ msgstr "完成教學"
 msgid "Free Storage"
 msgstr "剩餘空間"
 
+#: js/components/Settings/Settings.js:646
 #: js/components/Settings/Settings.js:720
 msgid "Git Branch"
 msgstr "Git 分支"
 
+#: js/components/Settings/Settings.js:649
 #: js/components/Settings/Settings.js:723
 msgid "Git Revision"
 msgstr "Git 修訂版"
 
+#: js/components/Settings/Settings.js:700
 #: js/components/Settings/Settings.js:774
 msgid "GitHub Username"
 msgstr "GitHub 用戶名"
@@ -634,7 +654,7 @@ msgstr "Honda"
 
 #: js/components/DriveRating/DriveRating.js:81
 msgid "How was your drive?"
-msgstr ""
+msgstr "您本次的體驗如何？"
 
 #: js/components/training/Onboarding/Onboarding.js:405
 msgid "I will be ready to take over at any time!"
@@ -799,10 +819,12 @@ msgstr "與 comma connect 配對您的 comma 帳號"
 msgid "Paired"
 msgstr "已配對"
 
+#: js/components/Settings/Settings.js:657
 #: js/components/Settings/Settings.js:731
 msgid "Panda Dongle ID"
 msgstr "Panda Dongle ID"
 
+#: js/components/Settings/Settings.js:653
 #: js/components/Settings/Settings.js:727
 msgid "Panda Firmware"
 msgstr "Panda 韌體"
@@ -819,8 +841,11 @@ msgstr "進行變換車道"
 
 #: js/components/Settings/Settings.js:380
 msgid "Perform assisted lane changes with openpilot by checking your surroundings for safety, activating the turn signal and gently nudging the steering wheel towards your desired lane. openpilot is not capable of checking if a lane change is safe. You must continuously observe your surroundings to use this feature."
+msgstr "檢查四周車道安全後，您可以經由打方向燈和輕推方向盤的組合來使用 openpilot 輔助切換車道功能。openpilot 無法檢查是否有後方來車以及四周的安全。您必須持續觀察周圍的環境才能使用此功能。"
 msgstr "檢查四周車道安全後，您可以經由打方向燈和輕推方向盤的組合來使用 dragonpilot 輔助切換車道功能。dragonpilot 無法檢查是否有後方來車以及四周的安全。您必須持續觀察周圍的環境才能使用此功能。"
 
+#: js/components/Settings/Settings.js:525
+#: js/components/Settings/Settings.js:832
 #: js/components/Settings/Settings.js:601
 #: js/components/Settings/Settings.js:906
 msgid "Power Off"
@@ -839,6 +864,10 @@ msgstr "隱私政策請參閱 https://my.comma.ai/privacy.html"
 msgid "Radar from your car"
 msgstr "來自您車子的雷達"
 
+#: js/components/Settings/Settings.js:130
+#: js/components/Settings/Settings.js:518
+#: js/components/Settings/Settings.js:826
+#: js/components/Settings/Settings.js:828
 #: js/components/Settings/Settings.js:140
 #: js/components/Settings/Settings.js:594
 #: js/components/Settings/Settings.js:900
@@ -854,6 +883,11 @@ msgstr "馬上重啟"
 msgid "Reboot and Update"
 msgstr "重啟並更新"
 
+#: js/components/Settings/Settings.js:314
+msgid "Receive alerts to steer back into the lane when your vehicle drifts over a detected lane line without a turn signal activated while driving over 31mph (50kph)."
+msgstr "啟用這個選項後，在速超過 30 英里 (50 公里) 下未打方向燈且車輛駛出檢測到的車道分隔線，系統將會發出警示訊息。"
+
+#: js/components/Settings/Settings.js:320
 #: js/components/Settings/Settings.js:390
 msgid "Receive alerts to steer back into the lane when your vehicle drifts over a detected lane line without a turn signal activated while driving over 31mph (50kph)."
 msgstr "啟用這個選項後，當時速超過 30 英里 (50 公里) 且未打方向燈時，如果車輛駛出檢測到的車道分隔線，系統將會發出警示訊息。"
@@ -870,6 +904,7 @@ msgstr "錄制並上傳駕駛的錄像"
 msgid "Remote Access"
 msgstr "遠端控制"
 
+#: js/components/Settings/Settings.js:739
 #: js/components/Settings/Settings.js:813
 msgid "Remove all"
 msgstr "移除全部"
@@ -890,6 +925,7 @@ msgstr "重新開始"
 msgid "Review Training Guide"
 msgstr "查看使用教學"
 
+#: js/components/Settings/Settings.js:717
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:193
 msgid "Safety"
 msgstr "安全"
@@ -902,6 +938,7 @@ msgstr "安全監控"
 msgid "Save"
 msgstr "儲存"
 
+#: js/components/Settings/Settings.js:729
 #: js/components/Settings/Settings.js:803
 msgid "Save failed. Ensure that your username is correct and you are connected to the internet."
 msgstr "儲存失敗，請確認您已連上網路並輸入正確的用戶名。"
@@ -953,6 +990,7 @@ msgstr "設定"
 msgid "Show password"
 msgstr "顯示密碼"
 
+#: js/components/Settings/Settings.js:834
 #: js/components/Settings/Settings.js:908
 msgid "Shutdown"
 msgstr "關機"
@@ -996,7 +1034,7 @@ msgstr "請點選畫面上的油門／剎車繼續"
 
 #: js/components/DriveRating/DriveRating.js:89
 msgid "Tell us how openpilot performed for this drive."
-msgstr ""
+msgstr "告訴我們 openpilot 這次的表現如何。"
 
 #: js/components/Settings/Settings.js:505
 msgid "Terms of Service available at https://my.comma.ai/terms.html"
@@ -1034,6 +1072,8 @@ msgstr "若有需要，您可以隨時至設備設定裡重新閱讀使用指南
 msgid "Toyota / Lexus"
 msgstr "Toyota / Lexus"
 
+#: js/components/Settings/Settings.js:838
+#: js/components/Settings/Settings.js:840
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:443
 msgid "Tuning"
 msgstr "調校"
@@ -1047,6 +1087,7 @@ msgstr "介面"
 msgid "Uninstall"
 msgstr "卸載"
 
+#: js/components/Settings/Settings.js:666
 #: js/components/Settings/Settings.js:740
 msgid "Uninstall {software}"
 msgstr "卸載 {software}"
@@ -1085,6 +1126,9 @@ msgstr "上傳前置相機的錄像來協助我們提升駕駛監控的準確率
 msgid "Use Metric System"
 msgstr "使用公／米制單位"
 
+#: js/components/Settings/Settings.js:605
+msgid "Use features from the open source community that are not maintained or supported by comma.ai and have not been confirmed to meet the standard safety model. Be extra cautious when using these features:{0} * GM car port{1} * Toyota with DSU unplugged{2} * Pedal interceptor{3}"
+msgstr "使用由開源社群維護的功能，包含：{0}* 開啟通用 (GM) 車系支援。{1}* 允許模擬豐田 (Toyota) 車系 DSU 模組。{2}* 允許使用 Comma Pedal 模組。{3}"
 #: js/components/Settings/Settings.js:681
 msgid "Use features from the open source community that are not maintained or supported by comma.ai and have not been confirmed to meet the standard safety model. Be extra cautious when using these features: * GM car port * Toyota with DSU unplugged * Pedal interceptor"
 msgstr ""
@@ -1097,10 +1141,14 @@ msgstr ""
 msgid "Use the openpilot system for adaptive cruise control and lane keep driver assistance. Your attention is required at all times to use this feature. Changing this setting takes effect when the car is powered off."
 msgstr "以 dragonpilot 系統取代您原車的主動車距控制巡航系統以及車道保持輔助系統。使用本系統時，您仍需要全時保持注意。此設定將於重新發動車子後生效。"
 
+#: js/components/Settings/Settings.js:643
 #: js/components/Settings/Settings.js:717
 msgid "Version"
 msgstr "版本"
 
+#: js/components/Settings/Settings.js:681
+msgid "WARNING: {0} This grants SSH access to all public keys in your GitHub settings. {1} Never enter a GitHub username other than your own. {2} The built-in SSH key will be disabled if you proceed. {3} A comma employee will never ask you to add their GitHub. {4}"
+msgstr "警告：{0}這將授予在您 GitHub 帳號裡所有公開密鑰的 SSH 訪問權限。{1}永遠不要輸入您自己以外的 GitHub 用戶名。{2}如果繼續操作，將會暫時禁用內建的 SSH 密鑰。{3}comma 的員工永遠不會要求您添加他們的 GitHub 用戶名。{4}"
 #: js/components/Settings/Settings.js:755
 msgid "WARNING: This grants SSH access to all public keys in your GitHub settings. Never enter a GitHub username other than your own. The built-in SSH key will be disabled if you proceed. A comma employee will never ask you to add their GitHub."
 msgstr "警告：這將授予您 GitHub 帳號裡所有公開密鑰 SSH 訪問權限。永遠不要輸入您自己以外的 GitHub 用戶名。內建的 SSH 密鑰將無法使用。comma 的員工永遠不會要求您添加他們的 GitHub 用戶名。"
@@ -1150,6 +1198,11 @@ msgstr "您的 EON 將會在刷新完成後重新啟動，請勿在刷新過程�
 msgid "and scan this code to pair."
 msgstr "然後掃描這個二維碼配對。"
 
+#: js/components/Settings/Settings.js:187
+#: js/components/Settings/Settings.js:463
+msgid "chffrplus"
+msgstr "chffrplus"
+
 #: js/components/Settings/Settings.js:539
 #: js/components/Settings/Settings.js:659
 msgid "chffrplus"
@@ -1158,6 +1211,11 @@ msgstr "chffrplus"
 #: js/components/SetupQr/SetupQr.js:109
 msgid "comma connect"
 msgstr "comma connect"
+
+#: js/components/Settings/Settings.js:187
+#: js/components/Settings/Settings.js:463
+msgid "openpilot"
+msgstr "openpilot"
 
 #: js/components/Settings/Settings.js:359
 msgid "dragonpilot"
