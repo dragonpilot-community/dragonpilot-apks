@@ -183,11 +183,11 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        601
+        599
       ],
       [
         "js/components/training/Onboarding/Onboarding.js",
-        628
+        626
       ]
     ]
   },
@@ -195,99 +195,11 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        609
+        607
       ],
       [
         "js/components/training/Onboarding/Onboarding.js",
-        669
-      ]
-    ]
-  },
-  "openpilot engaging": {
-    "origin": [
-      [
-        "js/components/training/Onboarding/Onboarding.js",
-        625
-      ],
-      [
-        "js/components/training/Onboarding/Onboarding.js",
-        666
-      ]
-    ]
-  },
-  "When you are ready to engage openpilot at a comfortable speed, locate the cruise controls on your steering wheel and press \"SET\" to begin.": {
-    "origin": [
-      [
-        "js/components/training/Onboarding/Onboarding.js",
-        633
-      ]
-    ]
-  },
-  "Tap \"SET\" to engage": {
-    "origin": [
-      [
-        "js/components/training/Onboarding/Onboarding.js",
-        645
-      ]
-    ]
-  },
-  "When openpilot is engaged, you must always pay attention! openpilot monitors awareness with 3D facial reconstruction and pose. Distracted drivers are alerted, then disengaged from openpilot until corrected.": {
-    "origin": [
-      [
-        "js/components/training/Onboarding/Onboarding.js",
-        674
-      ]
-    ]
-  },
-  "Select face to continue": {
-    "origin": [
-      [
-        "js/components/training/Onboarding/Onboarding.js",
-        687
-      ]
-    ]
-  },
-  "openpilot can change lanes with your assistance.": {
-    "origin": [
-      [
-        "js/components/training/Onboarding/Onboarding.js",
-        719
-      ]
-    ]
-  },
-  "openpilot is not capable of checking if a lane change is safe. This is your job. openpilot will change lanes regardless if another vehicle is present.": {
-    "origin": [
-      [
-        "js/components/training/Onboarding/Onboarding.js",
-        726
-      ]
-    ]
-  },
-  "Start Lane Change": {
-    "origin": [
-      [
-        "js/components/training/Onboarding/Onboarding.js",
-        736
-      ],
-      [
-        "js/components/training/Onboarding/Onboarding.js",
-        764
-      ]
-    ]
-  },
-  "Perform Lane Change": {
-    "origin": [
-      [
-        "js/components/training/Onboarding/Onboarding.js",
-        744
-      ],
-      [
-        "js/components/training/Onboarding/Onboarding.js",
-        805
-      ],
-      [
-        "js/components/training/Onboarding/Onboarding.js",
-        879
+        667
       ]
     ]
   },
@@ -295,7 +207,95 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        761
+        623
+      ],
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        755
+      ]
+    ]
+  },
+  "When you are ready to engage openpilot at a comfortable speed, locate the cruise controls on your steering wheel and press \"SET\" to begin.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        631
+      ]
+    ]
+  },
+  "Tap \"SET\" to engage": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        643
+      ]
+    ]
+  },
+  "openpilot engaging": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        664
+      ]
+    ]
+  },
+  "When openpilot is engaged, you must always pay attention! openpilot monitors awareness with 3D facial reconstruction and pose. Distracted drivers are alerted, then disengaged from openpilot until corrected.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        672
+      ]
+    ]
+  },
+  "Select face to continue": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        685
+      ]
+    ]
+  },
+  "openpilot can change lanes with your assistance.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        717
+      ]
+    ]
+  },
+  "openpilot is not capable of checking if a lane change is safe. This is your job. openpilot will change lanes regardless if another vehicle is present.": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        722
+      ]
+    ]
+  },
+  "Start Lane Change": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        730
+      ],
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        758
+      ]
+    ]
+  },
+  "Perform Lane Change": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        738
+      ],
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        797
+      ],
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        867
       ]
     ]
   },
@@ -303,7 +303,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        769
+        763
       ]
     ]
   },
@@ -311,7 +311,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        780
+        772
       ]
     ]
   },
@@ -319,7 +319,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        802
+        794
       ]
     ]
   },
@@ -327,7 +327,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        810
+        802
       ]
     ]
   },
@@ -335,7 +335,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        823
+        813
       ]
     ]
   },
@@ -343,7 +343,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        855
+        845
       ]
     ]
   },
@@ -351,7 +351,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        860
+        850
       ]
     ]
   },
@@ -359,23 +359,11 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        871
+        859
       ],
       [
         "js/components/training/Onboarding/Onboarding.js",
-        899
-      ]
-    ]
-  },
-  "openpilot disengaging": {
-    "origin": [
-      [
-        "js/components/training/Onboarding/Onboarding.js",
-        896
-      ],
-      [
-        "js/components/training/Onboarding/Onboarding.js",
-        939
+        887
       ]
     ]
   },
@@ -383,7 +371,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        904
+        892
       ]
     ]
   },
@@ -391,7 +379,15 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        917
+        905
+      ]
+    ]
+  },
+  "openpilot disengaging": {
+    "origin": [
+      [
+        "js/components/training/Onboarding/Onboarding.js",
+        927
       ]
     ]
   },
@@ -399,7 +395,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        942
+        930
       ]
     ]
   },
@@ -407,7 +403,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        947
+        935
       ]
     ]
   },
@@ -415,7 +411,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        960
+        948
       ]
     ]
   },
@@ -423,7 +419,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        1001
+        989
       ]
     ]
   },
@@ -431,7 +427,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        1006
+        994
       ]
     ]
   },
@@ -439,7 +435,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        1018
+        1006
       ]
     ]
   },
@@ -447,7 +443,7 @@
     "origin": [
       [
         "js/components/training/Onboarding/Onboarding.js",
-        1026
+        1014
       ]
     ]
   }

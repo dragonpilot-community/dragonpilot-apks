@@ -678,12 +678,10 @@ class Settings extends Component {
                             iconSource={ Icons.developer }
                             descriptionExtra={
                               <X.Text color='white' size='tiny'>
-                                  { i18n._(t`
-                                  Use features from the open source community that are not maintained or supported by comma.ai and have not been confirmed to meet the standard safety model. Be extra cautious when using these features:${'\n'}
-                                  * GM car port${'\n'}
-                                  * Toyota with DSU unplugged${'\n'}
-                                  * Pedal interceptor${'\n'}
-                                  `) }
+                                  <Trans>Use features from the open source community that are not maintained or supported by comma.ai and have not been confirmed to meet the standard safety model. Be extra cautious when using these features:{'\n'}
+                                  * GM car port{'\n'}
+                                  * Toyota with DSU unplugged{'\n'}
+                                  * Pedal interceptor{'\n'}</Trans>
                               </X.Text>
                             }
                             isExpanded={ expandedCell == 'communityFeatures' }
@@ -694,7 +692,7 @@ class Settings extends Component {
                             title={ i18n._(t`Enable SSH`) }
                             value={ isSshEnabled }
                             iconSource={ Icons.developer }
-                            description={ i18n._(t`Allow devices to connect to your device using Secure Shell (SSH).`) }
+                            description={ i18n._(t`Allow devices to connect to your EON using Secure Shell (SSH).`) }
                             isExpanded={ expandedCell == 'ssh' }
                             handleExpanded={ () => this.handleExpanded('ssh') }
                             handleChanged={ this.props.setSshEnabled } />
@@ -754,18 +752,18 @@ class Settings extends Component {
         return (
             <View>
                 <X.Text color='white' size='tiny'>
-                    {i18n._(t`
+                    <Trans>
                     WARNING:
-                    ${'\n'}
+                    {'\n'}
                     This grants SSH access to all public keys in your GitHub settings.
-                    ${'\n'}
+                    {'\n'}
                     Never enter a GitHub username other than your own.
-                    ${'\n'}
+                    {'\n'}
                     The built-in SSH key will be disabled if you proceed.
-                    ${'\n'}
+                    {'\n'}
                     A comma employee will never ask you to add their GitHub.
-                    ${'\n'}
-                    `)}
+                    {'\n'}
+                    </Trans>
                 </X.Text>
                 <View style={ Styles.githubUsernameInputContainer }>
                     <X.Text

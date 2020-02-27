@@ -479,8 +479,8 @@ class Onboarding extends Component {
                     size='small' color='white' weight='light'
                     style={ Styles.onboardingStepContextSmaller }>
                     <Trans>
-                    A vision algorithm leverages the road-facing
-                    camera to determine the path to drive.
+                        A vision algorithm leverages the road-facing
+                        camera to determine the path to drive.
                     </Trans>
                 </X.Text>
                 <X.Text
@@ -587,10 +587,8 @@ class Onboarding extends Component {
                     </X.Text>
                     <X.Text
                         size='smallish' color='white' weight='light'
-                        style={ Styles.onboardingStepContext }>
-                        <Trans>
-                        Press cruise to engage and a pedal to disengage.
-                        </Trans>
+                        style={ Styles.onboardingStepContextSmall }>
+                        <Trans>Press cruise to engage and a pedal to disengage.</Trans>
                     </X.Text>
                     <X.RadioField
                         size='big'
@@ -622,7 +620,7 @@ class Onboarding extends Component {
                     size='small' color='ghost' textWeight='light'
                     style={ Styles.onboardingStepPointCrumb }
                     onPress={ () => this.handleEngageRadioPressed('index') }>
-                    { i18n._(t`openpilot engaging`) }
+                    { i18n._(t`openpilot controls`) }
                 </X.Button>
                 <X.Text size='medium' color='white' weight='bold'>
                     <Trans>Engage openpilot</Trans>
@@ -716,16 +714,12 @@ class Onboarding extends Component {
                 </View>
                 <View style={ Styles.onboardingStepPointBody }>
                     <X.Text size='bigger' color='white' weight='bold'>
-                        <Trans>
-                        openpilot can change lanes with your assistance.
-                        </Trans>
+                        <Trans>openpilot can change lanes with your assistance.</Trans>
                     </X.Text>
                     <X.Text
                         size='smallish' color='white' weight='light'
                         style={ Styles.onboardingStepContextSmall }>
-                        <Trans>
-                        openpilot is not capable of checking if a lane change is safe. This is your job. openpilot will change lanes regardless if another vehicle is present.
-                        </Trans>
+                        <Trans>openpilot is not capable of checking if a lane change is safe. This is your job. openpilot will change lanes regardless if another vehicle is present.</Trans>
                     </X.Text>
                     <X.RadioField
                         size='big'
@@ -766,10 +760,8 @@ class Onboarding extends Component {
                     <X.Text
                         size='small' color='white' weight='light'
                         style={ Styles.onboardingStepContextSmaller }>
-                        <Trans>
-                        With openpilot engaged, turn on your signal, check
-                        your surroundings, and confirm it is safe to change lanes.
-                        </Trans>
+                        <Trans>With openpilot engaged, turn on your signal, check
+                        your surroundings, and confirm it is safe to change lanes.</Trans>
                     </X.Text>
                     <X.Button color='ghost'
                         style={ Styles.onboardingStepPointInstruction }
@@ -807,12 +799,10 @@ class Onboarding extends Component {
                     <X.Text
                         size='small' color='white' weight='light'
                         style={ Styles.onboardingStepContextSmaller }>
-                        <Trans>
-                        Continuously observe your surroundings for safety while
+                        <Trans>Continuously observe your surroundings for safety while
                         gently nudging the steering wheel towards your desired
                         lane. The combination of turn signal and wheel nudge
-                        will prompt openpilot to change lanes.
-                        </Trans>
+                        will prompt openpilot to change lanes.</Trans>
                     </X.Text>
                     <X.Button color='ghost'
                         style={ Styles.onboardingStepPointInstruction }
@@ -857,10 +847,8 @@ class Onboarding extends Component {
                     <X.Text
                         size='smallish' color='white' weight='light'
                         style={ Styles.onboardingStepContextSmall }>
-                        <Trans>
-                        When encountering a potentially unsafe situation or
-                        exiting a highway, you can disengage with any pedal.
-                        </Trans>
+                        <Trans>When encountering a potentially unsafe situation or
+                        exiting a highway, you can disengage with any pedal.</Trans>
                     </X.Text>
                     <X.RadioField
                         size='big'
@@ -1004,9 +992,9 @@ class Onboarding extends Component {
                     color='white' weight='light'
                     style={ Styles.onboardingStepContextSmaller }>
                     <Trans>
-                    This guide can be replayed at any time from the
-                    device settings. To learn more about openpilot, read the
-                    wiki and join the community at discord.comma.ai
+                        This guide can be replayed at any time from the
+                        device settings. To learn more about openpilot, read the
+                        wiki and join the community at discord.comma.ai
                     </Trans>
                 </X.Text>
                 <X.Line color='transparent' spacing='small' />

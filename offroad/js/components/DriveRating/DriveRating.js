@@ -10,6 +10,9 @@ import { Params } from '../../config';
 import X from '../../themes';
 import Styles from './DriveRatingStyles';
 
+// i18n
+import { Trans } from "@lingui/macro"
+
 const RatingFaces = {
     rating_1_color: require('../../img/illustration_rating_1_color.png'),
     rating_1_white: require('../../img/illustration_rating_1_white.png'),
@@ -75,7 +78,7 @@ class DriveRating extends Component {
                             color='white'
                             size='jumbo'
                             weight='bold'>
-                            How was your drive?
+                            <Trans>How was your drive?</Trans>
                         </X.Text>
                     </View>
                     <View style={ Styles.driveRatingSubtitle }>
@@ -83,7 +86,7 @@ class DriveRating extends Component {
                             color='lightGrey200'
                             size='medium'
                             weight='regular'>
-                            Tell us how openpilot performed for this drive.
+                            <Trans>Tell us how openpilot performed for this drive.</Trans>
                         </X.Text>
                     </View>
                     <X.Entrance style={ Styles.driveRatingSelections }>

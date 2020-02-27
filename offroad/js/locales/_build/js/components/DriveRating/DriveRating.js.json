@@ -1,0 +1,18 @@
+{
+  "How was your drive?": {
+    "origin": [
+      [
+        "js/components/DriveRating/DriveRating.js",
+        81
+      ]
+    ]
+  },
+  "Tell us how openpilot performed for this drive.": {
+    "origin": [
+      [
+        "js/components/DriveRating/DriveRating.js",
+        89
+      ]
+    ]
+  }
+}

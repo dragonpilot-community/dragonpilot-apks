@@ -1,0 +1,708 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2020-02-08 15:56+0900\n"
+"Mime-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: ja_JP\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: Ponzu07 <Twitter @nikkurie>\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Ponzu07\n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: js/components/Home/Home.js:479
+msgid "1 year of storage"
+msgstr "1年間保存"
+
+#: js/components/Settings/Settings.js:407
+msgid "<  Account Settings"
+msgstr "<  アカウント設定"
+
+#: js/components/Settings/Settings.js:591
+msgid "<  Developer Settings"
+msgstr "<  開発者設定"
+
+#: js/components/Settings/Settings.js:471
+msgid "<  Device Settings"
+msgstr "<  デバイス設定"
+
+#: js/components/Settings/Settings.js:542
+msgid "<  Network Settings"
+msgstr "<  ネットワーク設定"
+
+#: js/components/Settings/Settings.js:277
+msgid "<  Settings"
+msgstr "<  設定"
+
+#: js/components/training/Onboarding/Onboarding.js:382
+msgid "A driver assistance system is not a self driving car. This means openpilot is designed to work with you, not without you. Your attention is required to drive."
+msgstr "運転支援システムは自動運転車ではありません。つまり、openpilotは運転手がいなくても機能するように設計されているわけではありません。運転には注意が必要です。"
+
+#: js/components/training/Onboarding/Onboarding.js:481
+msgid "A vision algorithm leverages the road-facing camera to determine the path to drive."
+msgstr "視覚アルゴリズムは、道路に面したカメラを利用して、運転する経路を決定します。"
+
+#: js/components/Home/Home.js:228
+msgid "ALERT"
+msgstr "警告"
+
+#: js/components/Home/Home.js:228
+msgid "ALERTS"
+msgstr "警告"
+
+#: js/components/Home/Home.js:356
+msgid "ALL TIME"
+msgstr "常時"
+
+#: js/components/Settings/Settings.js:197
+msgid "Account"
+msgstr "アカウント"
+
+#: js/components/Settings/Settings.js:619
+msgid "Allow devices to connect to your EON using Secure Shell (SSH)."
+msgstr "Secure Shell(SSH)を使用したデバイスのEONへの接続を許可します。"
+
+#: js/components/Settings/Settings.js:824
+msgid "Are you sure you want to reboot?"
+msgstr "再起動しますか?"
+
+#: js/components/Settings/Settings.js:830
+msgid "Are you sure you want to shutdown?"
+msgstr "シャットダウンしますか?"
+
+#: js/components/Settings/Settings.js:836
+msgid "Are you sure you want to uninstall?"
+msgstr "アンインストールしますか?"
+
+#: js/components/SetupWifi/SetupWifi.js:227
+msgid "Authenticating..."
+msgstr "認証中..."
+
+#: js/components/SetupWifi/SetupWifi.js:228
+msgid "Authentication problem"
+msgstr "認証エラー"
+
+#: js/components/Settings/Settings.js:625
+msgid "Authorized SSH Keys"
+msgstr "認証済みSSHキー"
+
+#: js/components/Home/Home.js:455
+msgid "Become a comma prime member in the comma app and get premium features!"
+msgstr "commaアプリでcommaプライムメンバーになってプレミアム機能をゲット!"
+
+#: js/components/training/Onboarding/Onboarding.js:438
+msgid "Before any signals are sent to control your car, sensors are fused to construct a scene of the road."
+msgstr "車をコントロールするための信号が送られる前に、センサーフュージョンにより道路状況が構築される。"
+
+#: js/components/training/Onboarding/Onboarding.js:348
+msgid "Begin Training"
+msgstr "トレーニング開始"
+
+#: js/components/Home/Home.js:425
+msgid "COMMA POINTS"
+msgstr "COMMA ポイント"
+
+#: js/components/Settings/Settings.js:480
+msgid "Camera Calibration"
+msgstr "カメラのキャリブレーション"
+
+#: js/components/training/Onboarding/Onboarding.js:449
+#: js/components/training/Onboarding/Onboarding.js:476
+msgid "Camera from Device"
+msgstr "デバイスのカメラ"
+
+#: js/components/training/Onboarding/Onboarding.js:385
+#: js/components/training/Onboarding/Onboarding.js:412
+#~ msgid "Camera from EON"
+#~ msgstr "EONのカメラ"
+
+#: js/components/Settings/Settings.js:635
+#: js/components/Settings/Settings.js:825
+#: js/components/Settings/Settings.js:831
+#: js/components/Settings/Settings.js:837
+#: js/components/Settings/Settings.js:874
+#: js/components/SetupWifi/SetupWifi.js:320
+msgid "Cancel"
+msgstr "キャンセル"
+
+#: js/components/SetupTerms/SetupTerms.js:47
+msgid "Comma.ai, Inc. Terms & Conditions"
+msgstr "利用規約　Comma.ai, Inc."
+
+#: js/components/Settings/Settings.js:873
+msgid "Community maintained features are not confirmed by comma.ai to meet the standard safety model. Be extra cautious using them."
+msgstr "コミュニティで維持される機能は、標準の安全モデルを満たしているか comma.ai では確認されません。使用には十分に注意してください。"
+
+#: js/components/training/Onboarding/Onboarding.js:989
+msgid "Congratulations! You have completed openpilot training."
+msgstr "おめでとうございます! オープンパイロットトレーニングを完了しました。"
+
+#: js/components/SetupWifi/SetupWifi.js:269
+#: js/components/SetupWifi/SetupWifi.js:333
+msgid "Connect"
+msgstr "接続"
+
+#: js/components/SetupWifi/SetupWifi.js:370
+msgid "Connect to WiFi"
+msgstr "Wi-Fiに接続"
+
+#: js/components/Home/Home.js:284
+msgid "Connect to a WiFi or cellular network to upload and review your drives."
+msgstr "Wi-Fiまたはモバイルネットワークに接続して運転をアップロードして確認します。"
+
+#: js/components/SetupWifi/SetupWifi.js:226
+#: js/components/SetupWifi/SetupWifi.js:246
+msgid "Connected"
+msgstr "接続済み"
+
+#: js/components/SetupQr/SetupQr.js:140
+#: js/components/SetupWifi/SetupWifi.js:425
+msgid "Continue"
+msgstr "再試行"
+
+#: js/components/training/Onboarding/Onboarding.js:802
+msgid "Continuously observe your surroundings for safety while gently nudging the steering wheel towards your desired lane. The combination of turn signal and wheel nudge will prompt openpilot to change lanes."
+msgstr "安全のために常に周囲の状況を確認しながら、慎重にハンドルを車線に向けて動かしてください。ウインカーとハンドル操作の組み合わせは、オープンパイロットに車線変更を促します。"
+
+#: js/components/Home/Home.js:312
+#: js/components/Home/Home.js:372
+msgid "DRIVES"
+msgstr "運転"
+
+#: js/components/Settings/Settings.js:215
+msgid "Developer"
+msgstr "開発者"
+
+#: js/components/Home/Home.js:491
+msgid "Developer perks"
+msgstr "開発者の特典"
+
+#: js/components/Settings/Settings.js:203
+msgid "Device"
+msgstr "デバイス"
+
+#: js/components/Settings/Settings.js:416
+msgid "Device Paired"
+msgstr "連携済みデバイス"
+
+#: js/components/training/Onboarding/Onboarding.js:930
+msgid "Disengage openpilot"
+msgstr "オープンパイロットを解除"
+
+#: js/components/Settings/Settings.js:332
+msgid "Display speed in km/h instead of mp/h."
+msgstr "速度をmp/hではなくkm/hで表示します。"
+
+#: js/components/Settings/Settings.js:499
+msgid "Dongle ID"
+msgstr "ドングルID"
+
+#: js/components/SetupQr/SetupQr.js:104
+msgid "Download"
+msgstr "ダウンロード"
+
+#: js/components/training/Onboarding/Onboarding.js:607
+#: js/components/training/Onboarding/Onboarding.js:667
+msgid "Driver Monitoring"
+msgstr "運転手の監視"
+
+#: js/components/Settings/Settings.js:635
+msgid "Edit"
+msgstr "編集"
+
+#: js/components/Settings/Settings.js:875
+msgid "Enable"
+msgstr "有効"
+
+#: js/components/Settings/Settings.js:600
+#: js/components/Settings/Settings.js:873
+msgid "Enable Community Features"
+msgstr "コミュニティ機能を有効にする"
+
+#: js/components/Settings/Settings.js:301
+msgid "Enable Lane Change Assist"
+msgstr ""
+
+#: js/components/Settings/Settings.js:311
+msgid "Enable Lane Departure Warnings"
+msgstr "車線逸脱警告を有効にする"
+
+#: js/components/Settings/Settings.js:616
+msgid "Enable SSH"
+msgstr "SSHを有効にする"
+
+#: js/components/Settings/Settings.js:290
+msgid "Enable openpilot"
+msgstr "オープンパイロットを有効にする"
+
+#: js/components/training/Onboarding/Onboarding.js:599
+#: js/components/training/Onboarding/Onboarding.js:626
+msgid "Engage openpilot"
+msgstr "オープンパイロットを使用"
+
+#: js/components/Home/Home.js:511
+msgid "Finish Setup"
+msgstr "セットアップを終了"
+
+#: js/components/training/Onboarding/Onboarding.js:1006
+msgid "Finish Training"
+msgstr "トレーニングを終了"
+
+#: js/components/Settings/Settings.js:505
+msgid "Free Storage"
+msgstr "空き容量"
+
+#: js/components/Settings/Settings.js:644
+msgid "Git Branch"
+msgstr "Gitブランチ"
+
+#: js/components/Settings/Settings.js:647
+msgid "Git Revision"
+msgstr "Gitリビジョン"
+
+#: js/components/Settings/Settings.js:698
+msgid "GitHub Username"
+msgstr "GitHub ユーザー名"
+
+#: js/components/SetupWifi/SetupWifi.js:414
+msgid "Go Back"
+msgstr "戻る"
+
+#: js/components/Home/Home.js:344
+#: js/components/Home/Home.js:404
+msgid "HOURS"
+msgstr "時間"
+
+#: js/components/Home/Home.js:266
+msgid "Hide Alerts"
+msgstr "警告を非表示"
+
+#: js/components/DriveRating/DriveRating.js:81
+msgid "How was your drive?"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:405
+msgid "I will be ready to take over at any time!"
+msgstr "いつでも引き継ぎます!"
+
+#: js/components/training/Onboarding/Onboarding.js:399
+msgid "I will be ready to take over at any time."
+msgstr "いつでも引き継ぎます。"
+
+#: js/components/training/Onboarding/Onboarding.js:393
+msgid "I will keep my eyes on the road."
+msgstr "道路から目を離さないようにします。"
+
+#: js/components/Home/Home.js:329
+#: js/components/Home/Home.js:389
+msgid "KM"
+msgstr "KM"
+
+#: js/components/training/Onboarding/Onboarding.js:892
+msgid "Keep in mind that certain situations are not handled by openpilot. Scenarios such as traffic lights, stop signs, quick vehicle cutins and pedestrians are unrecognized and openpilot may accelerate."
+msgstr "特定の状況下でオープンパイロットは動作しないことに注意してください。信号機、停止標識、急な車両の割込み、歩行者などは認識されず、オープンパイロットは加速する可能性があります。"
+
+#: js/components/Settings/Settings.js:131
+#: js/components/UpdatePrompt/UpdatePrompt.js:33
+msgid "Later"
+msgstr "あとで"
+
+#: js/components/training/Onboarding/Onboarding.js:859
+#: js/components/training/Onboarding/Onboarding.js:887
+msgid "Limited Features"
+msgstr "制限された機能"
+
+#: js/components/Home/Home.js:329
+#: js/components/Home/Home.js:389
+msgid "MILES"
+msgstr "マイル"
+
+#: js/components/SetupWifi/SetupWifi.js:377
+msgid "More Options"
+msgstr "詳細設定"
+
+#: js/components/Settings/Settings.js:209
+msgid "Network"
+msgstr "ネットワーク"
+
+#: js/components/Settings/Settings.js:417
+#: js/components/Settings/Settings.js:497
+msgid "No"
+msgstr "いいえ"
+
+#: js/components/Home/Home.js:278
+msgid "No Network Connection"
+msgstr "ネットワークに接続されていません"
+
+#: js/components/training/Onboarding/Onboarding.js:338
+msgid "Now that you’re all set up, it’s important to understand the functionality and limitations of openpilot as alpha software before testing."
+msgstr "準備が完了しました。テスト前にアルファソフトウェアとしてのオープンパイロットの機能と限界を理解することが重要です。"
+
+#: js/components/Settings/Settings.js:561
+msgid "Open Tethering Settings"
+msgstr "テザリング設定を開く"
+
+#: js/components/Settings/Settings.js:554
+msgid "Open WiFi Settings"
+msgstr "Wi-Fi設定を開く"
+
+#: js/components/Home/Home.js:296
+msgid "PAST WEEK"
+msgstr "先週"
+
+#: js/components/Settings/Settings.js:438
+msgid "Pair Device"
+msgstr "デバイス連携"
+
+#: js/components/SetupQr/SetupQr.js:63
+msgid "Pair Your Account"
+msgstr "アカウントの連携"
+
+#: js/components/Home/Home.js:523
+msgid "Pair your comma account with comma connect"
+msgstr "commaアカウントと連携します。"
+
+#: js/components/Settings/Settings.js:198
+#: js/components/Settings/Settings.js:496
+msgid "Paired"
+msgstr "連携済み"
+
+#: js/components/Settings/Settings.js:655
+msgid "Panda Dongle ID"
+msgstr "パンダドングルID"
+
+#: js/components/Settings/Settings.js:651
+msgid "Panda Firmware"
+msgstr "パンダファームウェア"
+
+#: js/components/SetupWifi/SetupWifi.js:349
+msgid "Password:"
+msgstr "パスワード:"
+
+#: js/components/training/Onboarding/Onboarding.js:738
+#: js/components/training/Onboarding/Onboarding.js:797
+#: js/components/training/Onboarding/Onboarding.js:867
+msgid "Perform Lane Change"
+msgstr "車線変更を実行"
+
+#: js/components/Settings/Settings.js:304
+msgid "Perform assisted lane changes with openpilot by checking your surroundings for safety, activating the turn signal and gently nudging the steering wheel towards your desired lane. openpilot is not capable of checking if a lane change is safe. You must continuously observe your surroundings to use this feature."
+msgstr ""
+
+#: js/components/Settings/Settings.js:525
+#: js/components/Settings/Settings.js:830
+msgid "Power Off"
+msgstr "電源オフ"
+
+#: js/components/training/Onboarding/Onboarding.js:591
+msgid "Press cruise to engage and a pedal to disengage."
+msgstr "クルーズボタンを押して有効にし、ペダルを踏んで解除します。"
+
+#: js/components/SetupTerms/SetupTerms.js:49
+msgid "Privacy policy available at https://my.comma.ai/privacy.html"
+msgstr "プライバシーポリシー：https://my.comma.ai/privacy.html"
+
+#: js/components/training/Onboarding/Onboarding.js:457
+#: js/components/training/Onboarding/Onboarding.js:523
+msgid "Radar from your car"
+msgstr "車のレーダー"
+
+#: js/components/Settings/Settings.js:130
+#: js/components/Settings/Settings.js:518
+#: js/components/Settings/Settings.js:824
+#: js/components/Settings/Settings.js:826
+msgid "Reboot"
+msgstr "再起動"
+
+#: js/components/Settings/Settings.js:132
+msgid "Reboot Now"
+msgstr "今すぐ再起動"
+
+#: js/components/UpdatePrompt/UpdatePrompt.js:32
+msgid "Reboot and Update"
+msgstr "更新して再起動"
+
+#: js/components/Settings/Settings.js:320
+msgid "Record and Upload Driver Camera"
+msgstr "運転映像の記録とアップロード"
+
+#: js/components/Home/Home.js:467
+msgid "Remote Access"
+msgstr "リモートアクセス"
+
+#: js/components/Settings/Settings.js:737
+msgid "Remove all"
+msgstr "すべて削除"
+
+#: js/components/Settings/Settings.js:490
+msgid "Reset"
+msgstr "リセット"
+
+#: js/components/Settings/Settings.js:130
+msgid "Resetting calibration requires a reboot."
+msgstr "キャリブレーションをリセットするには再起動が必要です。"
+
+#: js/components/training/Onboarding/Onboarding.js:1014
+msgid "Restart"
+msgstr "リスタート"
+
+#: js/components/Settings/Settings.js:389
+msgid "Review Training Guide"
+msgstr "トレーニングガイドの確認"
+
+#: js/components/Settings/Settings.js:715
+msgid "Save"
+msgstr "保存"
+
+#: js/components/Settings/Settings.js:727
+msgid "Save failed. Ensure that your username is correct and you are connected to the internet."
+msgstr "保存に失敗しました。ユーザー名が正しく、インターネットに接続していることを確認してください。"
+
+#: js/components/SetupWifi/SetupWifi.js:397
+msgid "Scanning WiFi Networks..."
+msgstr "Wi-Fiネットワークのスキャン..."
+
+#: js/components/training/Onboarding/Onboarding.js:685
+msgid "Select face to continue"
+msgstr "続ける場所を選択してください。"
+
+#: js/components/training/Onboarding/Onboarding.js:547
+msgid "Select lead car indicator"
+msgstr "先頭車両インジケータを選択してください"
+
+#: js/components/training/Onboarding/Onboarding.js:905
+msgid "Select light to continue"
+msgstr "ライトを選択してください"
+
+#: js/components/training/Onboarding/Onboarding.js:500
+msgid "Select path to continue"
+msgstr "続けるパスを選択してください"
+
+#: js/components/training/Onboarding/Onboarding.js:813
+msgid "Select steering wheel"
+msgstr "ステアリングホイールを選択してください"
+
+#: js/components/training/Onboarding/Onboarding.js:772
+msgid "Select turn signal"
+msgstr "ウインカーを選択してください"
+
+#: js/components/Settings/Settings.js:502
+msgid "Serial Number"
+msgstr "シリアルナンバー"
+
+#: js/components/SetupWifi/SetupWifi.js:308
+msgid "Show password"
+msgstr "パスワードを表示"
+
+#: js/components/Settings/Settings.js:832
+msgid "Shutdown"
+msgstr "シャットダウン"
+
+#: js/components/SetupWifi/SetupWifi.js:425
+msgid "Skip For Now"
+msgstr "今すぐスキップ"
+
+#: js/components/SetupQr/SetupQr.js:147
+msgid "Skip for Now"
+msgstr "今すぐスキップ"
+
+#: js/components/training/Onboarding/Onboarding.js:730
+#: js/components/training/Onboarding/Onboarding.js:758
+msgid "Start Lane Change"
+msgstr "車線変更を開始"
+
+#: js/components/SetupQr/SetupQr.js:82
+msgid "Succesfully paired to account"
+msgstr "正常にアカウント連携できています"
+
+#: js/components/SetupQr/SetupQr.js:104
+msgid "Successfully paired to an account in"
+msgstr "正常にアカウント連携されました"
+
+#: js/components/training/Onboarding/Onboarding.js:643
+msgid "Tap \"SET\" to engage"
+msgstr "\"SET\" を選択して接続します"
+
+#: js/components/training/Onboarding/Onboarding.js:948
+msgid "Tap a pedal to disengage"
+msgstr "ペダルを踏んで解除"
+
+#: js/components/DriveRating/DriveRating.js:89
+msgid "Tell us how openpilot performed for this drive."
+msgstr ""
+
+#: js/components/Settings/Settings.js:429
+msgid "Terms of Service available at https://my.comma.ai/terms.html"
+msgstr "利用規約：https://my.comma.ai/terms.html"
+
+#: js/components/Settings/Settings.js:482
+msgid "The calibration algorithm is always active on the road facing camera. Resetting calibration is only advised when the device reports an invalid calibration alert or when the device is remounted in a different position."
+msgstr "キャリブレーションアルゴリズムは道路側のカメラでは常に有効です。キャリブレーションのリセットは、EONが無効なキャリブレーション警告を表示した場合かEONを別の場所に取り付けた場合のみ推奨されます。"
+
+#: js/components/training/Onboarding/Onboarding.js:536
+msgid "The indicator is drawn either red or yellow to illustrate relative speed to the lead car."
+msgstr "赤または黄色のインジケータは、先頭車両に対する相対速度を表しています。"
+
+#: js/components/training/Onboarding/Onboarding.js:489
+msgid "The lane lines are drawn with varying widths to reflect the confidence in finding your lane."
+msgstr "車線は、確実に見つけられるようにさまざまな幅で描画されます。"
+
+#: js/components/SetupWifi/SetupWifi.js:341
+msgid "The network \"{0}\" requires a password."
+msgstr "ネットワーク \"{0}\" にはパスワードが必要です。"
+
+#: js/components/training/Onboarding/Onboarding.js:528
+msgid "The stock radar in your car helps openpilot measure the lead car distance for longitudinal control."
+msgstr "あなたの車の車載レーダーは、オープンパイロットが縦方向制御のために先頭車両との距離を測定するのに役立ちます。"
+
+#: js/components/SetupWifi/SetupWifi.js:77
+msgid "There was a problem scanning WiFi networks. {0}Make sure WiFi is enabled in \"More Options\" above."
+msgstr "Wi-Fiネットワークのスキャン中に問題が発生しました。 {0}Wi-fiが有効か \"More Options\" で確認してください。."
+
+#: js/components/training/Onboarding/Onboarding.js:994
+msgid "This guide can be replayed at any time from the device settings. To learn more about openpilot, read the wiki and join the community at discord.comma.ai"
+msgstr "このガイドはデバイス設定からいつでも再生できます。オープンパイロットの詳細についてはWikiを読みDiscordコミュニティに参加してください。"
+
+#: js/components/Settings/Settings.js:836
+#: js/components/Settings/Settings.js:838
+msgid "Uninstall"
+msgstr "アンインストール"
+
+#: js/components/Settings/Settings.js:664
+msgid "Uninstall {software}"
+msgstr "アンインストール {software}"
+
+#: js/components/Settings/Settings.js:198
+msgid "Unpaired"
+msgstr "連携解除"
+
+#: js/components/Home/Home.js:213
+#: js/components/UpdatePrompt/UpdatePrompt.js:36
+msgid "Update Available"
+msgstr "更新可能"
+
+#: js/components/Home/Home.js:448
+msgid "Upgrade Now"
+msgstr "今すぐアップグレード"
+
+#: js/components/Settings/Settings.js:509
+msgid "Upload Speed"
+msgstr "アップロード速度"
+
+#: js/components/Settings/Settings.js:323
+msgid "Upload data from the driver facing camera and help improve the Driver Monitoring algorithm."
+msgstr "運転手側のカメラデータをアップロードし、ドライバ監視アルゴリズムの改善に役立てます。"
+
+#: js/components/Settings/Settings.js:329
+msgid "Use Metric System"
+msgstr "メートル法を使用"
+
+#: js/components/Settings/Settings.js:605
+msgid "Use features from the open source community that are not maintained or supported by comma.ai and have not been confirmed to meet the standard safety model. Be extra cautious when using these features: * GM car port * Toyota with DSU unplugged * Pedal interceptor"
+msgstr "comma.aiでサポートされていないオープンソースコミュニティの機能を使用します。安全標準モデルを満たしていることは確認されていません。次の機能を使用する場合は特に注意してください。*GMカーポート*DSUが接続されていないトヨタ*ペダル式インターセプター"
+
+#: js/components/Settings/Settings.js:293
+msgid "Use the openpilot system for adaptive cruise control and lane keep driver assistance. Your attention is required at all times to use this feature. Changing this setting takes effect when the car is powered off."
+msgstr "オープンパイロットシステムは、アダプティブクルーズコントロールとレーンキープドライバーアシスタンスに使用します。この機能を使用するには、常に注意が必要です。この設定の変更は車の電源がオフのときに有効になります。"
+
+#: js/components/Settings/Settings.js:641
+msgid "Version"
+msgstr "バージョン"
+
+#: js/components/Settings/Settings.js:679
+msgid "WARNING: This grants SSH access to all public keys in your GitHub settings. Never enter a GitHub username other than your own. The built-in SSH key will be disabled if you proceed. A comma employee will never ask you to add their GitHub."
+msgstr "警告:GitHub設定のすべての公開鍵へのSSHアクセスを許可します。自分以外のGitHubユーザ名は絶対に入力しないでください。続行すると、組み込みのSSHキーは無効になります。commaの従業員がGitHubの追加を要求することはありません。"
+
+#: js/components/training/Onboarding/Onboarding.js:333
+msgid "Welcome to openpilot alpha"
+msgstr "オープンパイロットアルファへようこそ"
+
+#: js/components/training/Onboarding/Onboarding.js:850
+msgid "When encountering a potentially unsafe situation or exiting a highway, you can disengage with any pedal."
+msgstr "危険な状況に遭遇した場合や高速道路を出た場合は、ペダルを踏むことで解除できます。"
+
+#: js/components/training/Onboarding/Onboarding.js:672
+msgid "When openpilot is engaged, you must always pay attention! openpilot monitors awareness with 3D facial reconstruction and pose. Distracted drivers are alerted, then disengaged from openpilot until corrected."
+msgstr "オープンパイロットが使用されている場合は、常に注意を払う必要があります。オープンパイロットは、顔の3D構築とポーズを使って認識を監視しています。注意散漫なドライバーは警告を受け、是正されるまでオープンパイロットを無効にされます。"
+
+#: js/components/training/Onboarding/Onboarding.js:631
+msgid "When you are ready to engage openpilot at a comfortable speed, locate the cruise controls on your steering wheel and press \"SET\" to begin."
+msgstr "オープンパイロットを快適な速度で作動させる準備ができたらハンドルのクルーズコントロールボタンを探し、 \"SET\" を押して開始させます。"
+
+#: js/components/training/Onboarding/Onboarding.js:935
+msgid "While openpilot is engaged, you may keep your hands on the wheel to override lateral controls. Longitudinal controls will be managed by openpilot until the gas or brake pedal is pressed to disengage."
+msgstr "オープンパイロットが作動している間は、ハンドルに手を置いたまま横方向のコントロールを無効にすることができます。縦方向の制御は、アクセルまたはブレーキペダルが押されて解除されるまで、オープンパイロットによって管理されます。"
+
+#: js/components/training/Onboarding/Onboarding.js:763
+msgid "With openpilot engaged, turn on your signal, check your surroundings, and confirm it is safe to change lanes."
+msgstr "オープンパイロットをオンにして、ウインカーをオンにし、周囲を確認し、車線変更が安全であることを確認します。"
+
+#: js/components/Settings/Settings.js:417
+#: js/components/Settings/Settings.js:497
+msgid "Yes"
+msgstr "はい"
+
+#: js/components/Settings/Settings.js:422
+msgid "You may unpair your device in the comma connect app settings."
+msgstr "Comma接続アプリの設定でデバイスの連携を解除できます。"
+
+#: js/components/SetupQr/SetupQr.js:114
+msgid "and scan this code to pair."
+msgstr "このコードをスキャンして連携します。"
+
+#: js/components/SetupQr/SetupQr.js:109
+msgid "comma connect"
+msgstr "commaに接続"
+
+#: js/components/training/Onboarding/Onboarding.js:717
+msgid "openpilot can change lanes with your assistance."
+msgstr "オープンパイロットはあなたの助けにより車線変更ができます。"
+
+#: js/components/training/Onboarding/Onboarding.js:623
+#: js/components/training/Onboarding/Onboarding.js:755
+msgid "openpilot controls"
+msgstr "オープンパイロット制御"
+
+#: js/components/training/Onboarding/Onboarding.js:927
+msgid "openpilot disengaging"
+msgstr "オープンパイロットを解除"
+
+#: js/components/training/Onboarding/Onboarding.js:664
+msgid "openpilot engaging"
+msgstr "オープンパイロットを開始"
+
+#: js/components/training/Onboarding/Onboarding.js:377
+msgid "openpilot is an advanced driver assistance system."
+msgstr "オープンパイロットは高度な運転支援システムです。"
+
+#: js/components/training/Onboarding/Onboarding.js:722
+msgid "openpilot is not capable of checking if a lane change is safe. This is your job. openpilot will change lanes regardless if another vehicle is present."
+msgstr "オープンパイロットは車線変更が安全かどうかチェックできません。これはあなたの仕事です。オープンパイロットは、他の車両が存在するかどうかに関係なく車線変更を行います。"
+
+#: js/components/training/Onboarding/Onboarding.js:794
+msgid "openpilot lane changes"
+msgstr "オープンパイロット車線変更"
+
+#: js/components/training/Onboarding/Onboarding.js:473
+#: js/components/training/Onboarding/Onboarding.js:520
+msgid "openpilot sensors"
+msgstr "オープンパイロットセンサー"
+
+#: js/components/training/Onboarding/Onboarding.js:433
+msgid "openpilot uses multiple sensors to see the road ahead."
+msgstr "オープンパイロットは複数のセンサーを使って前方の道路を確認します。"
+
+#: js/components/training/Onboarding/Onboarding.js:586
+msgid "openpilot will engage when cruise control is set."
+msgstr "クルーズコントロールが設定されると、オープンパイロットが起動します。"
+
+#: js/components/training/Onboarding/Onboarding.js:845
+msgid "openpilot will stop driving when a pedal is pressed."
+msgstr "ペダルを踏むと制御を停止します。"
+
+#: js/components/Settings/Settings.js:204
+msgid "{0} Free"
+msgstr "{0} 空き"
