@@ -11,11 +11,11 @@
       ],
       [
         "js/components/Settings/Settings.js",
-        900
+        902
       ],
       [
         "js/components/Settings/Settings.js",
-        902
+        904
       ]
     ]
   },
@@ -40,6 +40,38 @@
       [
         "js/components/Settings/Settings.js",
         142
+      ]
+    ]
+  },
+  "chffrplus": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        211
+      ],
+      [
+        "js/components/Settings/Settings.js",
+        539
+      ],
+      [
+        "js/components/Settings/Settings.js",
+        659
+      ]
+    ]
+  },
+  "openpilot": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        211
+      ],
+      [
+        "js/components/Settings/Settings.js",
+        539
+      ],
+      [
+        "js/components/Settings/Settings.js",
+        659
       ]
     ]
   },
@@ -319,30 +351,6 @@
       ]
     ]
   },
-  "chffrplus": {
-    "origin": [
-      [
-        "js/components/Settings/Settings.js",
-        539
-      ],
-      [
-        "js/components/Settings/Settings.js",
-        659
-      ]
-    ]
-  },
-  "openpilot": {
-    "origin": [
-      [
-        "js/components/Settings/Settings.js",
-        539
-      ],
-      [
-        "js/components/Settings/Settings.js",
-        659
-      ]
-    ]
-  },
   "<  Device Settings": {
     "origin": [
       [
@@ -415,7 +423,7 @@
       ],
       [
         "js/components/Settings/Settings.js",
-        906
+        908
       ]
     ]
   },
@@ -459,11 +467,11 @@
       ],
       [
         "js/components/Settings/Settings.js",
-        958
+        960
       ]
     ]
   },
-  "Use features from the open source community that are not maintained or supported by comma.ai and have not been confirmed to meet the standard safety model. Be extra cautious when using these features: * GM car port * Toyota with DSU unplugged * Pedal interceptor": {
+  "Use features from the open source community that are not maintained or supported by comma.ai and have not been confirmed to meet the standard safety model. Be extra cautious when using these features:{0} * GM car port{1} * Toyota with DSU unplugged{2} * Pedal interceptor{3}": {
     "origin": [
       [
         "js/components/Settings/Settings.js",
@@ -475,7 +483,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        692
+        694
       ]
     ]
   },
@@ -483,7 +491,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        695
+        697
       ]
     ]
   },
@@ -491,7 +499,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        701
+        703
       ]
     ]
   },
@@ -499,23 +507,23 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        711
+        713
       ],
       [
         "js/components/Settings/Settings.js",
-        901
+        903
       ],
       [
         "js/components/Settings/Settings.js",
-        907
+        909
       ],
       [
         "js/components/Settings/Settings.js",
-        913
+        915
       ],
       [
         "js/components/Settings/Settings.js",
-        959
+        961
       ]
     ]
   },
@@ -523,7 +531,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        711
+        713
       ]
     ]
   },
@@ -531,7 +539,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        717
+        719
       ]
     ]
   },
@@ -539,7 +547,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        720
+        722
       ]
     ]
   },
@@ -547,7 +555,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        723
+        725
       ]
     ]
   },
@@ -555,7 +563,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        727
+        729
       ]
     ]
   },
@@ -563,7 +571,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        731
+        733
       ]
     ]
   },
@@ -571,7 +579,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        732
+        734
       ]
     ]
   },
@@ -579,15 +587,15 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        740
+        742
       ]
     ]
   },
-  "WARNING: This grants SSH access to all public keys in your GitHub settings. Never enter a GitHub username other than your own. The built-in SSH key will be disabled if you proceed. A comma employee will never ask you to add their GitHub.": {
+  "WARNING: {0} This grants SSH access to all public keys in your GitHub settings. {1} Never enter a GitHub username other than your own. {2} The built-in SSH key will be disabled if you proceed. {3} A comma employee will never ask you to add their GitHub. {4}": {
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        755
+        757
       ]
     ]
   },
@@ -595,7 +603,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        774
+        776
       ]
     ]
   },
@@ -603,7 +611,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        791
+        793
       ]
     ]
   },
@@ -611,7 +619,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        803
+        805
       ]
     ]
   },
@@ -619,7 +627,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        813
+        815
       ]
     ]
   },
@@ -627,7 +635,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        900
+        902
       ]
     ]
   },
@@ -635,7 +643,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        906
+        908
       ]
     ]
   },
@@ -643,7 +651,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        908
+        910
       ]
     ]
   },
@@ -651,11 +659,11 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        912
+        914
       ],
       [
         "js/components/Settings/Settings.js",
-        914
+        916
       ]
     ]
   },
@@ -663,7 +671,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        912
+        914
       ]
     ]
   },
@@ -671,7 +679,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        958
+        960
       ]
     ]
   },
@@ -679,7 +687,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        960
+        962
       ]
     ]
   }
