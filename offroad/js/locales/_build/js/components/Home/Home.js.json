@@ -1,4 +1,20 @@
 {
+  "dashcam": {
+    "origin": [
+      [
+        "js/components/Home/Home.js",
+        149
+      ]
+    ]
+  },
+  "openpilot": {
+    "origin": [
+      [
+        "js/components/Home/Home.js",
+        149
+      ]
+    ]
+  },
   "Update Available": {
     "origin": [
       [

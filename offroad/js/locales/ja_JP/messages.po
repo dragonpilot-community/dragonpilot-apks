@@ -1140,6 +1140,13 @@ msgstr ""
 msgid "comma connect"
 msgstr "commaに接続"
 
+#: js/components/Home/Home.js:149
+msgid "dashcam"
+msgstr "dashcam"
+
+#: js/components/Home/Home.js:149
+#: js/components/Settings/Settings.js:187
+#: js/components/Settings/Settings.js:463
 #: js/components/Settings/Settings.js:359
 msgid "dragonpilot"
 msgstr "dragonpilot"
