@@ -8,6 +8,7 @@ import { Params } from '../../config';
 
 import {
     deleteParam,
+    refreshParams,
     updateParam,
 } from '../../store/params/actions';
 
@@ -55,10 +56,12 @@ class DragonpilotSettings extends Component {
             VolumeBoost: '0',
             carModel: '',
             wazeMode: false,
+            altAccelProfileInt: 0,
         }
     }
 
     async componentWillMount() {
+        await this.props.refreshParams();
         const {
             params: {
                 DragonSteeringMonitorTimer: dragonSteeringMonitorTimer,
@@ -71,6 +74,7 @@ class DragonpilotSettings extends Component {
                 DragonUIVolumeBoost: dragonUIVolumeBoost,
                 DragonCarModel: dragonCarModel,
                 DragonWazeMode: dragonWazeMode,
+                DragonAccelProfile: dragonAccelProfile,
             },
         } = this.props;
         this.setState({ steeringMonitorTimerInt: dragonSteeringMonitorTimer === '0'? 0 : parseInt(dragonSteeringMonitorTimer) || 3 })
@@ -83,6 +87,7 @@ class DragonpilotSettings extends Component {
         this.setState({ VolumeBoostInt: dragonUIVolumeBoost === '0'? 0 : parseInt(dragonUIVolumeBoost) || 0 })
         this.setState({ carModel: dragonCarModel })
         this.setState({ wazeMode: dragonWazeMode === '1' })
+        this.setState({ accelProfileInt: dragonAccelProfile === '1'? 1 : dragonAccelProfile === '-1'? -1 : 0 })
     }
 
     handleExpanded(key) {
@@ -90,6 +95,21 @@ class DragonpilotSettings extends Component {
         return this.setState({
             expandedCell: expandedCell == key ? null : key,
         })
+    }
+
+    handleChangedAccelProfile(operator) {
+      const { accelProfileInt } = this.state;
+      let _accelProfile;
+      switch (operator) {
+        case 'increment':
+          _accelProfile = Math.min(1, accelProfileInt + 1);
+          break;
+        case 'decrement':
+          _accelProfile = Math.max(-1, accelProfileInt - 1);
+          break;
+      }
+      this.setState({ accelProfileInt: _accelProfile });
+      this.props.setAccelProfile(_accelProfile);
     }
 
     handlePressedBack() {
@@ -105,6 +125,7 @@ class DragonpilotSettings extends Component {
     handleNavigatedFromMenu(route) {
         this.setState({ route: route })
         this.refs.settingsScrollView.scrollTo({ x: 0, y: 0, animated: false })
+        this.props.refreshParams();
     }
 
     handleChangedSteeringMonitorTimer(operator) {
@@ -145,7 +166,7 @@ class DragonpilotSettings extends Component {
                 _autoShutdownAt = autoShutdownAtInt + 1;
                 break;
             case 'decrement':
-                _autoShutdownAt = autoShutdownAtInt - 1;
+                _autoShutdownAt = Math.max(0, autoShutdownAtInt - 1);
                 break;
         }
         this.setState({ autoShutdownAtInt: _autoShutdownAt });
@@ -212,12 +233,6 @@ class DragonpilotSettings extends Component {
                 context: i18n._(t`Settings`),
                 route: SettingsRoutes.BRANDSPECIFIC,
             },
-            // {
-            //     icon: Icons.developer,
-            //     title: 'Honda',
-            //     context: '',
-            //     route: SettingsRoutes.HONDA,
-            // },
         ];
         return settingsMenuItems.map((item, idx) => {
             const cellButtonStyle = [
@@ -267,7 +282,7 @@ class DragonpilotSettings extends Component {
                 DragonEnableSRLearner: dragonEnableSRLearner,
             }
         } = this.props;
-        const { expandedCell, enableMixplorer, cameraOffsetInt, autoShutdownAtInt, carModel, wazeMode } = this.state;
+        const { expandedCell, enableMixplorer, cameraOffsetInt, autoShutdownAtInt, carModel, wazeMode, accelProfileInt } = this.state;
         return (
             <View style={ Styles.settings }>
                 <View style={ Styles.settingsHeader }>
@@ -460,6 +475,39 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'sr_learner' }
                             handleExpanded={ () => this.handleExpanded('sr_learner') }
                             handleChanged={ this.props.setSRLeaner } />
+                        <X.TableCell
+                            type='custom'
+                            title={ i18n._(t`Acceleration Profile`) }
+                            iconSource={ Icons.developer }
+                            description={ i18n._(t`Adjust the acceleration profile, choice of ECO / NORMAL / SPORT`) }
+                            isExpanded={ expandedCell == 'accel_profile' }
+                            handleExpanded={ () => this.handleExpanded('accel_profile') }>
+                            <X.Button
+                                color='ghost'
+                                activeOpacity={ 1 }
+                                style={ Styles.settingsPlusMinus }>
+                                <X.Button
+                                    style={ [Styles.settingsNumericButton, { opacity: accelProfileInt <= -1? 0.1 : 0.8 }] }
+                                    onPress={ () => this.handleChangedAccelProfile('decrement')  }>
+                                    <X.Image
+                                        source={ Icons.minus }
+                                        style={ Styles.settingsNumericIcon } />
+                                </X.Button>
+                                <X.Text
+                                    color='white'
+                                    weight='semibold'
+                                    style={ Styles.settingsNumericValue }>
+                                    { i18n._(accelProfileInt === -1? t`ECO` : accelProfileInt === 0? t`NORMAL` : t`SPORT`) }
+                                </X.Text>
+                                <X.Button
+                                    style={ [Styles.settingsNumericButton, { opacity: accelProfileInt >= 1? 0.1 : 0.8 }] }
+                                    onPress={ () => this.handleChangedAccelProfile('increment') }>
+                                    <X.Image
+                                        source={ Icons.plus }
+                                        style={ Styles.settingsNumericIcon } />
+                                </X.Button>
+                            </X.Button>
+                        </X.TableCell>
                     </X.Table>
                     <X.Table color='darkBlue' padding='big'>
                         <X.Button
@@ -876,6 +924,7 @@ class DragonpilotSettings extends Component {
                 DragonUILead: dragonUILead,
                 DragonUIPath: dragonUIPath,
                 DragonUIBlinker: dragonUIBlinker,
+                DragonUIDMView: dragonUIDMView,
             },
         } = this.props;
         const { expandedCell, VolumeBoostInt } = this.state;
@@ -903,6 +952,15 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'driving_ui' }
                             handleExpanded={ () => this.handleExpanded('driving_ui') }
                             handleChanged={ this.props.setDrivingUI } />
+                        <X.TableCell
+                            type='switch'
+                            title={ i18n._(t`Display Driver Monitor View`) }
+                            value={ !!parseInt(dragonUIDMView) }
+                            iconSource={ Icons.developer }
+                            description={ i18n._(t`Enable this if you wish to see driver monitor view in Picture-In-Picture style.`) }
+                            isExpanded={ expandedCell == 'dm_view' }
+                            handleExpanded={ () => this.handleExpanded('dm_view') }
+                            handleChanged={ this.props.setDMView } />
                         <X.TableCell
                             type='switch'
                             title={ i18n._(t`Display Speed`) }
@@ -1076,6 +1134,9 @@ const mapDispatchToProps = dispatch => ({
     deleteParam: (param) => {
         dispatch(deleteParam(param));
     },
+    refreshParams: () => {
+        dispatch(refreshParams());
+    },
     // dragonpilot
     setLatCtrl: (latCtrl) => {
         dispatch(updateParam(Params.KEY_LAT_CTRL, (latCtrl | 0).toString()));
@@ -1185,6 +1246,9 @@ const mapDispatchToProps = dispatch => ({
     setUIBlinker: (val) => {
         dispatch(updateParam(Params.KEY_UI_BLINKER, (val | 0).toString()));
     },
+    setDMView: (val) => {
+        dispatch(updateParam(Params.KEY_UI_DM_VIEW, (val | 0).toString()));
+    },
     setEnableDriverMonitoring: (val) => {
         dispatch(updateParam(Params.KEY_ENABLE_DRIVER_MONITORING, (val | 0).toString()));
     },
@@ -1211,6 +1275,9 @@ const mapDispatchToProps = dispatch => ({
     },
     setSRLeaner: (val) => {
         dispatch(updateParam(Params.KEY_SR_LEARNER, (val | 0).toString()));
+    },
+    setAccelProfile: (val) => {
+        dispatch(updateParam(Params.KEY_ACCEL_PROFILE, (val | 0).toString()));
     },
 });
 

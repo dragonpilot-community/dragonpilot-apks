@@ -82,6 +82,7 @@ const PARAMS = [
   "DragonUILead",
   "DragonUIPath",
   "DragonUIBlinker",
+  "DragonUIDMView",
   "DragonEnableDriverMonitoring",
   "DragonCarModel",
   "DragonEnableSlowOnCurve",
@@ -92,6 +93,7 @@ const PARAMS = [
   "DragonEnableAutoLC",
   "DragonBootHotspot",
   "DragonEnableSRLearner",
+  "DragonAccelProfile",
 ].concat(ALERT_PARAMS);
 
 export function refreshParams(params) {

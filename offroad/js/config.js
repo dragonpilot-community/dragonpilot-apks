@@ -75,6 +75,7 @@ export const Params = {
     KEY_UI_LEAD: 'DragonUILead',
     KEY_UI_PATH: 'DragonUIPath',
     KEY_UI_BLINKER: 'DragonUIBlinker',
+    KEY_UI_DM_VIEW: 'DragonUIDMView',
     KEY_ENABLE_DRIVER_MONITORING: 'DragonEnableDriverMonitoring',
     KEY_ENABLE_SLOW_ON_CURVE: 'DragonEnableSlowOnCurve',
     KEY_ENABLE_LEAD_CAR_MOVING_ALERT: 'DragonEnableLeadCarMovingAlert',
@@ -84,4 +85,5 @@ export const Params = {
     KEY_AUTO_LC: 'DragonEnableAutoLC',
     KEY_BOOT_HOTSPOT: 'DragonBootHotspot',
     KEY_SR_LEARNER: 'DragonEnableSRLearner',
+    KEY_ACCEL_PROFILE: 'DragonAccelProfile',
 };
