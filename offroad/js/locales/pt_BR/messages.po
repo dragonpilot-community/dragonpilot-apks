@@ -1,0 +1,1235 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2020-03-05 11:33+1000\n"
+"Mime-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: pt_BR\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: js/components/Home/Home.js:490
+msgid "1 year of storage"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:226
+msgid "3rd Party Apps"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:723
+msgid "<  3rd Party Apps Settings"
+msgstr ""
+
+#: js/components/Settings/Settings.js:483
+msgid "<  Account Settings"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:837
+msgid "<  Brand Specific Settings"
+msgstr ""
+
+#: js/components/Settings/Settings.js:667
+msgid "<  Developer Settings"
+msgstr ""
+
+#: js/components/Settings/Settings.js:547
+msgid "<  Device Settings"
+msgstr ""
+
+#: js/components/Settings/Settings.js:618
+msgid "<  Network Settings"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:561
+msgid "<  Safety Settings"
+msgstr ""
+
+#: js/components/Settings/Settings.js:301
+msgid "<  Settings"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:938
+msgid "<  UI Settings"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:293
+msgid "<  dragonpilot Settings"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:382
+msgid "A driver assistance system is not a self driving car. This means openpilot is designed to work with you, not without you. Your attention is required to drive."
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:481
+msgid "A vision algorithm leverages the road-facing camera to determine the path to drive."
+msgstr ""
+
+#: js/components/Home/Home.js:239
+msgid "ALERT"
+msgstr ""
+
+#: js/components/Home/Home.js:239
+msgid "ALERTS"
+msgstr ""
+
+#: js/components/Home/Home.js:367
+msgid "ALL TIME"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:480
+msgid "Acceleration Profile"
+msgstr ""
+
+#: js/components/Settings/Settings.js:221
+msgid "Account"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:482
+msgid "Adjust the acceleration profile, choice of ECO / NORMAL / SPORT"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:426
+msgid "Adjust the camera offset if your car is not centered, slowly increase this if your car is close to the right, slowly decrease this if your car is close to the left, default is 6 cm."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:370
+msgid "Adjust the shutdown timer if you would like EON to shutdown after a period of time (when usb power is not present), set this to 0 if you would like to disable this feature."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:667
+msgid "Adjust the steering monitor timer, set this to 0 if you would like to disable steering monitor. Default is 3 minutes."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:583
+msgid "Allow Gas"
+msgstr ""
+
+#: js/components/Settings/Settings.js:697
+msgid "Allow devices to connect to your EON using Secure Shell (SSH)."
+msgstr ""
+
+#: js/components/Settings/Settings.js:902
+msgid "Are you sure you want to reboot?"
+msgstr ""
+
+#: js/components/Settings/Settings.js:908
+msgid "Are you sure you want to shutdown?"
+msgstr ""
+
+#: js/components/Settings/Settings.js:914
+msgid "Are you sure you want to uninstall?"
+msgstr ""
+
+#: js/components/SetupWifi/SetupWifi.js:227
+msgid "Authenticating..."
+msgstr ""
+
+#: js/components/SetupWifi/SetupWifi.js:228
+msgid "Authentication problem"
+msgstr ""
+
+#: js/components/Settings/Settings.js:703
+msgid "Authorized SSH Keys"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:798
+msgid "Auto Run Aegis Safety Camera App"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:776
+msgid "Auto Run Autonavi Map"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:754
+msgid "Auto Run TomTom Safety Camera App"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:368
+msgid "Auto Shutdown (min)"
+msgstr ""
+
+#: js/components/Home/Home.js:466
+msgid "Become a comma prime member in the comma app and get premium features!"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:438
+msgid "Before any signals are sent to control your car, sensors are fused to construct a scene of the road."
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:348
+msgid "Begin Training"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:1056
+msgid "Boost Audio Alert Volume (%)"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:1058
+msgid "Boost audio alert volume in percentage, set to -100 (%) if you would like to disable audio alert. Default is 0 (%)."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:232
+msgid "Brand Specific"
+msgstr ""
+
+#: js/components/Home/Home.js:436
+msgid "COMMA POINTS"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:462
+msgid "Cache Fingerprint"
+msgstr ""
+
+#: js/components/Settings/Settings.js:556
+msgid "Camera Calibration"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:424
+msgid "Camera Offset (cm)"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:449
+#: js/components/training/Onboarding/Onboarding.js:476
+msgid "Camera from Device"
+msgstr ""
+
+#: js/components/Settings/Settings.js:713
+#: js/components/Settings/Settings.js:903
+#: js/components/Settings/Settings.js:909
+#: js/components/Settings/Settings.js:915
+#: js/components/Settings/Settings.js:961
+#: js/components/SetupWifi/SetupWifi.js:320
+msgid "Cancel"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:530
+msgid "Car Model"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:415
+msgid "Charging Control"
+msgstr ""
+
+#: js/components/Settings/Settings.js:351
+msgid "Close Aegis Safety Camera"
+msgstr ""
+
+#: js/components/Settings/Settings.js:336
+msgid "Close AutoNavi Map"
+msgstr ""
+
+#: js/components/Settings/Settings.js:321
+msgid "Close TomTom Safety Camera"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:313
+msgid "Close Waze"
+msgstr ""
+
+#: js/components/SetupTerms/SetupTerms.js:47
+msgid "Comma.ai, Inc. Terms & Conditions"
+msgstr ""
+
+#: js/components/Settings/Settings.js:960
+msgid "Community maintained features are not confirmed by comma.ai to meet the standard safety model. Be extra cautious using them."
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:989
+msgid "Congratulations! You have completed openpilot training."
+msgstr ""
+
+#: js/components/SetupWifi/SetupWifi.js:269
+#: js/components/SetupWifi/SetupWifi.js:333
+msgid "Connect"
+msgstr ""
+
+#: js/components/SetupWifi/SetupWifi.js:370
+msgid "Connect to WiFi"
+msgstr ""
+
+#: js/components/Home/Home.js:295
+msgid "Connect to a WiFi or cellular network to upload and review your drives."
+msgstr ""
+
+#: js/components/SetupWifi/SetupWifi.js:226
+#: js/components/SetupWifi/SetupWifi.js:246
+msgid "Connected"
+msgstr ""
+
+#: js/components/SetupQr/SetupQr.js:140
+#: js/components/SetupWifi/SetupWifi.js:425
+msgid "Continue"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:802
+msgid "Continuously observe your surroundings for safety while gently nudging the steering wheel towards your desired lane. The combination of turn signal and wheel nudge will prompt openpilot to change lanes."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:570
+msgid "Controls"
+msgstr ""
+
+#: js/components/Home/Home.js:323
+#: js/components/Home/Home.js:383
+msgid "DRIVES"
+msgstr ""
+
+#: js/components/Settings/Settings.js:239
+msgid "Developer"
+msgstr ""
+
+#: js/components/Home/Home.js:502
+msgid "Developer perks"
+msgstr ""
+
+#: js/components/Settings/Settings.js:227
+msgid "Device"
+msgstr ""
+
+#: js/components/Settings/Settings.js:492
+msgid "Device Paired"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:951
+msgid "Disable this only if you do not want to see the driving UI and its blocking your navigation view, this will also effect what you records in dashcam."
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:930
+msgid "Disengage openpilot"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:601
+msgid "Display \"Turn Exceeds Steering Limit\" Alert"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:1038
+msgid "Display Dev UI"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:957
+msgid "Display Driver Monitor View"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:948
+msgid "Display Driving UI"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:1011
+msgid "Display Event / Steering Icon"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:1029
+msgid "Display Face Icon"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:975
+msgid "Display Lane Prediction"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:984
+msgid "Display Lead Car Indicator"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:1020
+msgid "Display Max Speed"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:1047
+msgid "Display Mini Dev UI"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:993
+msgid "Display Path Prediction"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:966
+msgid "Display Speed"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:1002
+msgid "Display Turning Signal"
+msgstr ""
+
+#: js/components/Settings/Settings.js:408
+msgid "Display speed in km/h instead of mp/h."
+msgstr ""
+
+#: js/components/Settings/Settings.js:575
+msgid "Dongle ID"
+msgstr ""
+
+#: js/components/SetupQr/SetupQr.js:104
+msgid "Download"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:607
+#: js/components/training/Onboarding/Onboarding.js:667
+msgid "Driver Monitoring"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:659
+msgid "Driver Monitoring detects driver awareness with 3D facial reconstruction and pose estimation. It is used to warn the driver when they appear distracted while openpilot is engaged. This feature is still in beta, so Driver Monitoring is unavailable when the facial tracking is too inaccurate (e.g. at night). The availability is indicated by the face icon at the bottom-left corner of your EON."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:500
+msgid "ECO"
+msgstr ""
+
+#: js/components/Settings/Settings.js:713
+msgid "Edit"
+msgstr ""
+
+#: js/components/Settings/Settings.js:962
+msgid "Enable"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:787
+msgid "Enable Aegis Safety Camera App"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:633
+msgid "Enable Auto Lane Change"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:765
+msgid "Enable Autonavi Map App"
+msgstr ""
+
+#: js/components/Settings/Settings.js:676
+#: js/components/Settings/Settings.js:960
+msgid "Enable Community Features"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:359
+msgid "Enable Dashcam"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:656
+msgid "Enable Driver Monitoring"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:332
+msgid "Enable Hotspot on Boot"
+msgstr ""
+
+#: js/components/Settings/Settings.js:377
+msgid "Enable Lane Change Assist"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:859
+#: js/components/Settings/Settings.js:387
+msgid "Enable Lane Departure Warnings"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:574
+msgid "Enable Lateral Control"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
+msgid "Enable Lead Car Moving Alert (BETA)"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:341
+msgid "Enable Logger"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:808
+msgid "Enable MiXplorer App"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:406
+msgid "Enable Noctua Fan Mode"
+msgstr ""
+
+#: js/components/Settings/Settings.js:694
+msgid "Enable SSH"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:647
+msgid "Enable Safety Check"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:610
+msgid "Enable Slow on Curve"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:868
+msgid "Enable SnG Mod"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:471
+msgid "Enable Steer Ratio Learner"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:592
+msgid "Enable Steering On Signal"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:850
+msgid "Enable Stock DSU Mode"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:743
+msgid "Enable TomTom Safety Camera App"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:350
+msgid "Enable Uploader"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:733
+msgid "Enable Waze Mode"
+msgstr ""
+
+#: js/components/Settings/Settings.js:366
+msgid "Enable openpilot"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:577
+msgid "Enable this if you wish dp to control the steering for you."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:862
+msgid "Enable this if you wish to receive the factory lane departure warning when crossing lanes. (e.g. vibrate steering wheel)"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:960
+msgid "Enable this if you wish to see driver monitor view in Picture-In-Picture style."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:736
+msgid "Enable this if you wish to turn your device into a Waze navigator, NOTE: 1. once this is enabled, tomtom/autonavi will be disabled. 2. Waze will start automatically and you will not be able to change any settings when the car is started. 3. Most driving UI elements will be disabled. 4, Reboot required."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:790
+msgid "Enable this if you wish to use Aegis Safety Camera App, restart required."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:768
+msgid "Enable this if you wish to use Autonavi Map App, restart required."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:811
+msgid "Enable this if you wish to use MiXplorer file manager App, restart required."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:871
+msgid "Enable this if you wish to use Stop n Go mod, the car will ignore acceleration commands if you are on a hill, we DO NOT RECOMMEND that you enable this unless you know what it is. (Only works on cars that need resume button to start)"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:746
+msgid "Enable this if you wish to use TomTom Safety Camera App, restart required."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:586
+msgid "Enable this if you wish to use gas on engaged."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:1041
+msgid "Enable this to display DevUI found in kegman/arne fork."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:1014
+msgid "Enable this to display Event / Steering Icon."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:1032
+msgid "Enable this to display Face Icon."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:1023
+msgid "Enable this to display Max Speed."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:1050
+msgid "Enable this to display Mini Dev UI designed for dragonpilot."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:969
+msgid "Enable this to display Speed."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:978
+msgid "Enable this to display lane prediction."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:987
+msgid "Enable this to display lead car indicator, this only works on supported cars."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:996
+msgid "Enable this to display path prediction."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:1005
+msgid "Enable this to display turning signal."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:465
+msgid "Enable this to store your fingerprint/vin/car model into files and use it when required, this will reduce the car model detection time, disable this if you put EON onto another car, reboot required."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:474
+msgid "Enable this to turn on steer ratio learner, We DO NOT RECOMMEND that you turn on this unless you know what you are doing."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:801
+msgid "Enable this will have Aegis Safety Camera App start when car is on, stop when car is off."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:779
+msgid "Enable this will have Autonavi Map App start when car is on, stop when car is off."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:757
+msgid "Enable this will have TomTom Safety Camera App start when car is on, stop when car is off."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:409
+msgid "Enable this will let the fan running at full speed at any temperature, reboot required."
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:599
+#: js/components/training/Onboarding/Onboarding.js:626
+msgid "Engage openpilot"
+msgstr ""
+
+#: js/components/Home/Home.js:522
+msgid "Finish Setup"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:1006
+msgid "Finish Training"
+msgstr ""
+
+#: js/components/Settings/Settings.js:581
+msgid "Free Storage"
+msgstr ""
+
+#: js/components/Settings/Settings.js:722
+msgid "Git Branch"
+msgstr ""
+
+#: js/components/Settings/Settings.js:725
+msgid "Git Revision"
+msgstr ""
+
+#: js/components/Settings/Settings.js:776
+msgid "GitHub Username"
+msgstr ""
+
+#: js/components/SetupWifi/SetupWifi.js:414
+msgid "Go Back"
+msgstr ""
+
+#: js/components/Home/Home.js:355
+#: js/components/Home/Home.js:415
+msgid "HOURS"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:402
+msgid "Hardware"
+msgstr ""
+
+#: js/components/Home/Home.js:277
+msgid "Hide Alerts"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:878
+msgid "Honda"
+msgstr ""
+
+#: js/components/DriveRating/DriveRating.js:81
+msgid "How was your drive?"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:405
+msgid "I will be ready to take over at any time!"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:399
+msgid "I will be ready to take over at any time."
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:393
+msgid "I will keep my eyes on the road."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:344
+msgid "If you disable logger (loggered/tombstoned), it will stop recording driving data for AI training, reboot required."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:650
+msgid "If you disable this, the driver safety check will be disabled completely, we DO NOT RECOMMEND that you turn off this unless you know what you are doing, we hold no responsibility if you disable this option."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:604
+msgid "If you disable this, you will not receive any \"Turn Exceeds Steering Limit\" alerts on the screen. Hyundai, Ford, Toyota do not have this alert."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:353
+msgid "If you disable uploader, it will stop uploading driving data for AI training, reboot required."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:335
+msgid "If you enable this, Hotspot will turn on automatically on boot."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:636
+msgid "If you enable this, dp will change lane for you once the speed is above 60mph / 97kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:622
+msgid "If you enable this, dp will notify you when lead car starts moving from stationary."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:595
+msgid "If you enable this, it will temporary disable steering control when left/right blinker is on and resume control 1 second after the blinker is off."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:613
+msgid "If you enable this, the car will slow down automatically when on a curve road, this feature only works on Long Ctrl supported cars."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:418
+msgid "If you turn this on, dp will try to keep your battery level between 60%~70% to protect your battery."
+msgstr ""
+
+#: js/components/Home/Home.js:340
+#: js/components/Home/Home.js:400
+msgid "KM"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:892
+msgid "Keep in mind that certain situations are not handled by openpilot. Scenarios such as traffic lights, stop signs, quick vehicle cutins and pedestrians are unrecognized and openpilot may accelerate."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:629
+msgid "Lane Change"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:193
+#: js/components/Settings/Settings.js:141
+#: js/components/UpdatePrompt/UpdatePrompt.js:33
+msgid "Later"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:859
+#: js/components/training/Onboarding/Onboarding.js:887
+msgid "Limited Features"
+msgstr ""
+
+#: js/components/Home/Home.js:340
+#: js/components/Home/Home.js:400
+msgid "MILES"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:322
+msgid "MiXplorer File Manager"
+msgstr ""
+
+#: js/components/SetupWifi/SetupWifi.js:377
+msgid "More Options"
+msgstr ""
+
+#: js/components/Settings/Settings.js:734
+msgid "N/A"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:500
+msgid "NORMAL"
+msgstr ""
+
+#: js/components/Settings/Settings.js:233
+msgid "Network"
+msgstr ""
+
+#: js/components/Settings/Settings.js:493
+#: js/components/Settings/Settings.js:573
+msgid "No"
+msgstr ""
+
+#: js/components/Home/Home.js:289
+msgid "No Network Connection"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:338
+msgid "Now that you’re all set up, it’s important to understand the functionality and limitations of openpilot as alpha software before testing."
+msgstr ""
+
+#: js/components/Settings/Settings.js:345
+msgid "Open Aegis Safety Camera"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:517
+msgid "Open Android Settings"
+msgstr ""
+
+#: js/components/Settings/Settings.js:330
+msgid "Open AutoNavi Map"
+msgstr ""
+
+#: js/components/Settings/Settings.js:637
+msgid "Open Tethering Settings"
+msgstr ""
+
+#: js/components/Settings/Settings.js:315
+msgid "Open TomTom Safety Camera"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:307
+msgid "Open Waze"
+msgstr ""
+
+#: js/components/Settings/Settings.js:630
+msgid "Open WiFi Settings"
+msgstr ""
+
+#: js/components/Home/Home.js:307
+msgid "PAST WEEK"
+msgstr ""
+
+#: js/components/Settings/Settings.js:514
+msgid "Pair Device"
+msgstr ""
+
+#: js/components/SetupQr/SetupQr.js:63
+msgid "Pair Your Account"
+msgstr ""
+
+#: js/components/Home/Home.js:534
+msgid "Pair your comma account with comma connect"
+msgstr ""
+
+#: js/components/Settings/Settings.js:222
+#: js/components/Settings/Settings.js:572
+msgid "Paired"
+msgstr ""
+
+#: js/components/Settings/Settings.js:733
+msgid "Panda Dongle ID"
+msgstr ""
+
+#: js/components/Settings/Settings.js:729
+msgid "Panda Firmware"
+msgstr ""
+
+#: js/components/SetupWifi/SetupWifi.js:349
+msgid "Password:"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:738
+#: js/components/training/Onboarding/Onboarding.js:797
+#: js/components/training/Onboarding/Onboarding.js:867
+msgid "Perform Lane Change"
+msgstr ""
+
+#: js/components/Settings/Settings.js:380
+msgid "Perform assisted lane changes with openpilot by checking your surroundings for safety, activating the turn signal and gently nudging the steering wheel towards your desired lane. openpilot is not capable of checking if a lane change is safe. You must continuously observe your surroundings to use this feature."
+msgstr ""
+
+#: js/components/Settings/Settings.js:601
+#: js/components/Settings/Settings.js:908
+msgid "Power Off"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:591
+msgid "Press cruise to engage and a pedal to disengage."
+msgstr ""
+
+#: js/components/SetupTerms/SetupTerms.js:49
+msgid "Privacy policy available at https://my.comma.ai/privacy.html"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:457
+#: js/components/training/Onboarding/Onboarding.js:523
+msgid "Radar from your car"
+msgstr ""
+
+#: js/components/Settings/Settings.js:140
+#: js/components/Settings/Settings.js:594
+#: js/components/Settings/Settings.js:902
+#: js/components/Settings/Settings.js:904
+msgid "Reboot"
+msgstr ""
+
+#: js/components/Settings/Settings.js:142
+msgid "Reboot Now"
+msgstr ""
+
+#: js/components/UpdatePrompt/UpdatePrompt.js:32
+msgid "Reboot and Update"
+msgstr ""
+
+#: js/components/Settings/Settings.js:390
+msgid "Receive alerts to steer back into the lane when your vehicle drifts over a detected lane line without a turn signal activated while driving over 31mph (50kph)."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:362
+msgid "Record EON screen as dashcam footage, it will automatically delete old footage if the available space is less than 15%, footage will be stored in /sdcard/dashcam/."
+msgstr ""
+
+#: js/components/Settings/Settings.js:396
+msgid "Record and Upload Driver Camera"
+msgstr ""
+
+#: js/components/Home/Home.js:478
+msgid "Remote Access"
+msgstr ""
+
+#: js/components/Settings/Settings.js:815
+msgid "Remove all"
+msgstr ""
+
+#: js/components/Settings/Settings.js:566
+msgid "Reset"
+msgstr ""
+
+#: js/components/Settings/Settings.js:140
+msgid "Resetting calibration requires a reboot."
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:1014
+msgid "Restart"
+msgstr ""
+
+#: js/components/Settings/Settings.js:465
+msgid "Review Training Guide"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:500
+msgid "SPORT"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:214
+msgid "Safety"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:643
+msgid "Safety Monitors"
+msgstr ""
+
+#: js/components/Settings/Settings.js:793
+msgid "Save"
+msgstr ""
+
+#: js/components/Settings/Settings.js:805
+msgid "Save failed. Ensure that your username is correct and you are connected to the internet."
+msgstr ""
+
+#: js/components/SetupWifi/SetupWifi.js:397
+msgid "Scanning WiFi Networks..."
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:685
+msgid "Select face to continue"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:547
+msgid "Select lead car indicator"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:905
+msgid "Select light to continue"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:500
+msgid "Select path to continue"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:813
+msgid "Select steering wheel"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:772
+msgid "Select turn signal"
+msgstr ""
+
+#: js/components/Settings/Settings.js:578
+msgid "Serial Number"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:328
+msgid "Services"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:215
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:221
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:227
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:233
+msgid "Settings"
+msgstr ""
+
+#: js/components/SetupWifi/SetupWifi.js:308
+msgid "Show password"
+msgstr ""
+
+#: js/components/Settings/Settings.js:910
+msgid "Shutdown"
+msgstr ""
+
+#: js/components/SetupWifi/SetupWifi.js:425
+msgid "Skip For Now"
+msgstr ""
+
+#: js/components/SetupQr/SetupQr.js:147
+msgid "Skip for Now"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:853
+msgid "Some models DSU cannot be unplugged (such as Lexus IS/GS/ES), once this option is enabled, turn on AHB (Auto High Beam) will keep you dp always on for Lat Control (control gas/brake manually), turn off AHB if you want to cancel dp Lat Control."
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:730
+#: js/components/training/Onboarding/Onboarding.js:758
+msgid "Start Lane Change"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:665
+msgid "Steering Monitor Timer"
+msgstr ""
+
+#: js/components/SetupQr/SetupQr.js:82
+msgid "Succesfully paired to account"
+msgstr ""
+
+#: js/components/SetupQr/SetupQr.js:104
+msgid "Successfully paired to an account in"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:643
+msgid "Tap \"SET\" to engage"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:948
+msgid "Tap a pedal to disengage"
+msgstr ""
+
+#: js/components/DriveRating/DriveRating.js:89
+msgid "Tell us how openpilot performed for this drive."
+msgstr ""
+
+#: js/components/Settings/Settings.js:505
+msgid "Terms of Service available at https://my.comma.ai/terms.html"
+msgstr ""
+
+#: js/components/Settings/Settings.js:558
+msgid "The calibration algorithm is always active on the road facing camera. Resetting calibration is only advised when the device reports an invalid calibration alert or when the device is remounted in a different position."
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:536
+msgid "The indicator is drawn either red or yellow to illustrate relative speed to the lead car."
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:489
+msgid "The lane lines are drawn with varying widths to reflect the confidence in finding your lane."
+msgstr ""
+
+#: js/components/SetupWifi/SetupWifi.js:341
+msgid "The network \"{0}\" requires a password."
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:528
+msgid "The stock radar in your car helps openpilot measure the lead car distance for longitudinal control."
+msgstr ""
+
+#: js/components/SetupWifi/SetupWifi.js:77
+msgid "There was a problem scanning WiFi networks. {0}Make sure WiFi is enabled in \"More Options\" above."
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:994
+msgid "This guide can be replayed at any time from the device settings. To learn more about openpilot, read the wiki and join the community at discord.comma.ai"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:846
+msgid "Toyota / Lexus"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:458
+msgid "Tuning"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:220
+msgid "UI"
+msgstr ""
+
+#: js/components/Settings/Settings.js:914
+#: js/components/Settings/Settings.js:916
+msgid "Uninstall"
+msgstr ""
+
+#: js/components/Settings/Settings.js:742
+msgid "Uninstall {software}"
+msgstr ""
+
+#: js/components/Settings/Settings.js:222
+msgid "Unpaired"
+msgstr ""
+
+#: js/components/Home/Home.js:224
+#: js/components/UpdatePrompt/UpdatePrompt.js:36
+msgid "Update Available"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:192
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:525
+msgid "Update Panda Firmware"
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:194
+msgid "Update and Reboot"
+msgstr ""
+
+#: js/components/Home/Home.js:459
+msgid "Upgrade Now"
+msgstr ""
+
+#: js/components/Settings/Settings.js:585
+msgid "Upload Speed"
+msgstr ""
+
+#: js/components/Settings/Settings.js:399
+msgid "Upload data from the driver facing camera and help improve the Driver Monitoring algorithm."
+msgstr ""
+
+#: js/components/Settings/Settings.js:405
+msgid "Use Metric System"
+msgstr ""
+
+#: js/components/Settings/Settings.js:681
+msgid "Use features from the open source community that are not maintained or supported by comma.ai and have not been confirmed to meet the standard safety model. Be extra cautious when using these features:{0} * GM car port{1} * Toyota with DSU unplugged{2} * Pedal interceptor{3}"
+msgstr ""
+
+#: js/components/Settings/Settings.js:369
+msgid "Use the openpilot system for adaptive cruise control and lane keep driver assistance. Your attention is required at all times to use this feature. Changing this setting takes effect when the car is powered off."
+msgstr ""
+
+#: js/components/Settings/Settings.js:719
+msgid "Version"
+msgstr ""
+
+#: js/components/Settings/Settings.js:757
+msgid "WARNING: {0} This grants SSH access to all public keys in your GitHub settings. {1} Never enter a GitHub username other than your own. {2} The built-in SSH key will be disabled if you proceed. {3} A comma employee will never ask you to add their GitHub. {4}"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:333
+msgid "Welcome to openpilot alpha"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:850
+msgid "When encountering a potentially unsafe situation or exiting a highway, you can disengage with any pedal."
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:672
+msgid "When openpilot is engaged, you must always pay attention! openpilot monitors awareness with 3D facial reconstruction and pose. Distracted drivers are alerted, then disengaged from openpilot until corrected."
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:631
+msgid "When you are ready to engage openpilot at a comfortable speed, locate the cruise controls on your steering wheel and press \"SET\" to begin."
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:935
+msgid "While openpilot is engaged, you may keep your hands on the wheel to override lateral controls. Longitudinal controls will be managed by openpilot until the gas or brake pedal is pressed to disengage."
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:763
+msgid "With openpilot engaged, turn on your signal, check your surroundings, and confirm it is safe to change lanes."
+msgstr ""
+
+#: js/components/Settings/Settings.js:493
+#: js/components/Settings/Settings.js:573
+msgid "Yes"
+msgstr ""
+
+#: js/components/Settings/Settings.js:498
+msgid "You may unpair your device in the comma connect app settings."
+msgstr ""
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:192
+msgid "Your EON will reboot once completed please DO NOT disconnect panda from power source, manual restart them if nothing happened after 3 minutes."
+msgstr ""
+
+#: js/components/SetupQr/SetupQr.js:114
+msgid "and scan this code to pair."
+msgstr ""
+
+#: js/components/Settings/Settings.js:211
+#: js/components/Settings/Settings.js:539
+#: js/components/Settings/Settings.js:659
+msgid "chffrplus"
+msgstr ""
+
+#: js/components/SetupQr/SetupQr.js:109
+msgid "comma connect"
+msgstr ""
+
+#: js/components/Home/Home.js:154
+msgid "dashcam"
+msgstr ""
+
+#: js/components/Settings/Settings.js:359
+msgid "dragonpilot"
+msgstr ""
+
+#: js/components/Home/Home.js:154
+#: js/components/Settings/Settings.js:211
+#: js/components/Settings/Settings.js:539
+#: js/components/Settings/Settings.js:659
+msgid "openpilot"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:717
+msgid "openpilot can change lanes with your assistance."
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:623
+#: js/components/training/Onboarding/Onboarding.js:755
+msgid "openpilot controls"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:884
+#: js/components/training/Onboarding/Onboarding.js:927
+msgid "openpilot disengaging"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:664
+msgid "openpilot engaging"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:377
+msgid "openpilot is an advanced driver assistance system."
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:722
+msgid "openpilot is not capable of checking if a lane change is safe. This is your job. openpilot will change lanes regardless if another vehicle is present."
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:794
+msgid "openpilot lane changes"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:473
+#: js/components/training/Onboarding/Onboarding.js:520
+msgid "openpilot sensors"
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:433
+msgid "openpilot uses multiple sensors to see the road ahead."
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:586
+msgid "openpilot will engage when cruise control is set."
+msgstr ""
+
+#: js/components/training/Onboarding/Onboarding.js:845
+msgid "openpilot will stop driving when a pedal is pressed."
+msgstr ""
+
+#: js/components/Settings/Settings.js:228
+msgid "{0} Free"
+msgstr ""
