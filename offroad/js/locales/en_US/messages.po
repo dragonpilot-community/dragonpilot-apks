@@ -215,15 +215,15 @@ msgstr "Car Model"
 msgid "Charging Control"
 msgstr "Charging Control"
 
-#: js/components/Settings/Settings.js:351
+#: js/components/Settings/Settings.js:358
 msgid "Close Aegis Safety Camera"
 msgstr "Close Aegis Safety Camera"
 
-#: js/components/Settings/Settings.js:336
+#: js/components/Settings/Settings.js:343
 msgid "Close AutoNavi Map"
 msgstr "Close AutoNavi Map"
 
-#: js/components/Settings/Settings.js:321
+#: js/components/Settings/Settings.js:328
 msgid "Close TomTom Safety Camera"
 msgstr "Close TomTom Safety Camera"
 
@@ -762,7 +762,12 @@ msgstr "No Network Connection"
 msgid "Now that you’re all set up, it’s important to understand the functionality and limitations of openpilot as alpha software before testing."
 msgstr "Now that you’re all set up, it’s important to understand the functionality and limitations of dragonpilot as alpha software before testing."
 
-#: js/components/Settings/Settings.js:345
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:388
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:685
+msgid "OFF"
+msgstr "OFF"
+
+#: js/components/Settings/Settings.js:352
 msgid "Open Aegis Safety Camera"
 msgstr "Open Aegis Safety Camera"
 
@@ -770,7 +775,7 @@ msgstr "Open Aegis Safety Camera"
 msgid "Open Android Settings"
 msgstr "Open Android Settings"
 
-#: js/components/Settings/Settings.js:330
+#: js/components/Settings/Settings.js:337
 msgid "Open AutoNavi Map"
 msgstr "Open AutoNavi Map"
 
@@ -778,7 +783,7 @@ msgstr "Open AutoNavi Map"
 msgid "Open Tethering Settings"
 msgstr "Open Tethering Settings"
 
-#: js/components/Settings/Settings.js:315
+#: js/components/Settings/Settings.js:322
 msgid "Open TomTom Safety Camera"
 msgstr "Open TomTom Safety Camera"
 
@@ -1164,6 +1169,10 @@ msgstr "and scan this code to pair."
 msgid "chffrplus"
 msgstr "chffrplus"
 
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:444
+#~ msgid "cm"
+#~ msgstr "cm"
+
 #: js/components/SetupQr/SetupQr.js:109
 msgid "comma connect"
 msgstr "comma connect"
@@ -1172,9 +1181,13 @@ msgstr "comma connect"
 msgid "dashcam"
 msgstr "dashcam"
 
-#: js/components/Settings/Settings.js:359
+#: js/components/Settings/Settings.js:314
 msgid "dragonpilot"
 msgstr "dragonpilot"
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:388
+#~ msgid "mins"
+#~ msgstr "mins"
 
 #: js/components/Home/Home.js:154
 #: js/components/Settings/Settings.js:211

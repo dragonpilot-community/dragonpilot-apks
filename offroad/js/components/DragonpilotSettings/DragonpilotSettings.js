@@ -385,7 +385,7 @@ class DragonpilotSettings extends Component {
                                     color='white'
                                     weight='semibold'
                                     style={ Styles.settingsNumericValue }>
-                                    { autoShutdownAtInt }
+                                    { autoShutdownAtInt <= 0? i18n._(t`OFF`) : autoShutdownAtInt }
                                 </X.Text>
                                 <X.Button
                                     style={ [Styles.settingsNumericButton, { opacity: 0.8 }] }
@@ -682,7 +682,7 @@ class DragonpilotSettings extends Component {
                                     color='white'
                                     weight='semibold'
                                     style={ Styles.settingsNumericValue }>
-                                    { steeringMonitorTimerInt }
+                                    { steeringMonitorTimerInt <= 0? i18n._(t`OFF`) : steeringMonitorTimerInt }
                                 </X.Text>
                                 <X.Button
                                     style={ [Styles.settingsNumericButton, { opacity: 0.8 }] }

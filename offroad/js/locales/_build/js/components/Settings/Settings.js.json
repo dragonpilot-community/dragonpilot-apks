@@ -143,11 +143,19 @@
       ]
     ]
   },
+  "dragonpilot": {
+    "origin": [
+      [
+        "js/components/Settings/Settings.js",
+        314
+      ]
+    ]
+  },
   "Open TomTom Safety Camera": {
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        315
+        322
       ]
     ]
   },
@@ -155,7 +163,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        321
+        328
       ]
     ]
   },
@@ -163,7 +171,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        330
+        337
       ]
     ]
   },
@@ -171,7 +179,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        336
+        343
       ]
     ]
   },
@@ -179,7 +187,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        345
+        352
       ]
     ]
   },
@@ -187,15 +195,7 @@
     "origin": [
       [
         "js/components/Settings/Settings.js",
-        351
-      ]
-    ]
-  },
-  "dragonpilot": {
-    "origin": [
-      [
-        "js/components/Settings/Settings.js",
-        359
+        358
       ]
     ]
   },

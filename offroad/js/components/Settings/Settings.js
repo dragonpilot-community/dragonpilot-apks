@@ -307,6 +307,13 @@ class Settings extends Component {
                     <X.Table direction='row' color='darkBlue'>
                         { this.renderSettingsMenu() }
                     </X.Table>
+                    <X.Table color='darkBlue'>
+                        <X.Button
+                            color='settingsDefault'
+                            onPress={ () => this.props.openDragonpilotSettings() }>
+                            { i18n._(t`dragonpilot`) }
+                        </X.Button>
+                    </X.Table>
                     {enableTomTom &&
                     <X.Table color='darkBlue'>
                         <X.Button
@@ -352,13 +359,6 @@ class Settings extends Component {
                         </X.Button>
                     </X.Table>
                     }
-                    <X.Table color='darkBlue'>
-                        <X.Button
-                            color='settingsDefault'
-                            onPress={ () => this.props.openDragonpilotSettings() }>
-                            { i18n._(t`dragonpilot`) }
-                        </X.Button>
-                    </X.Table>
                     <X.Table color='darkBlue'>
                         { !parseInt(isPassive) ? (
                             <X.TableCell

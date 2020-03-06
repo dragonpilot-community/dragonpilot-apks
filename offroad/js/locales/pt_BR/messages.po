@@ -215,15 +215,15 @@ msgstr "Modelo do Carro"
 msgid "Charging Control"
 msgstr "Carregando Controle"
 
-#: js/components/Settings/Settings.js:351
+#: js/components/Settings/Settings.js:358
 msgid "Close Aegis Safety Camera"
 msgstr "Fechar Aegis Safety Camera"
 
-#: js/components/Settings/Settings.js:336
+#: js/components/Settings/Settings.js:343
 msgid "Close AutoNavi Map"
 msgstr "Fechar AutoNavi Map"
 
-#: js/components/Settings/Settings.js:321
+#: js/components/Settings/Settings.js:328
 msgid "Close TomTom Safety Camera"
 msgstr "Fechar TomTom Safety Camera"
 
@@ -762,7 +762,12 @@ msgstr "Sem Conexão de Rede"
 msgid "Now that you’re all set up, it’s important to understand the functionality and limitations of openpilot as alpha software before testing."
 msgstr "Agora que você está pronto, é importante entender as funcionalidades e limitações do dragonpilot como um software alpha software antes de testar."
 
-#: js/components/Settings/Settings.js:345
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:388
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:685
+msgid "OFF"
+msgstr ""
+
+#: js/components/Settings/Settings.js:352
 msgid "Open Aegis Safety Camera"
 msgstr "Abrir Aegis Safety Camera"
 
@@ -770,7 +775,7 @@ msgstr "Abrir Aegis Safety Camera"
 msgid "Open Android Settings"
 msgstr "Abrir COnfiguraçãoes do Android"
 
-#: js/components/Settings/Settings.js:330
+#: js/components/Settings/Settings.js:337
 msgid "Open AutoNavi Map"
 msgstr "Abrir AutoNavi Map"
 
@@ -778,7 +783,7 @@ msgstr "Abrir AutoNavi Map"
 msgid "Open Tethering Settings"
 msgstr "Abrir Configurações de Compartilhamento de Internet"
 
-#: js/components/Settings/Settings.js:315
+#: js/components/Settings/Settings.js:322
 msgid "Open TomTom Safety Camera"
 msgstr "Abrir TomTom Safety Camera"
 
@@ -840,7 +845,7 @@ msgstr "Desligar"
 
 #: js/components/training/Onboarding/Onboarding.js:591
 msgid "Press cruise to engage and a pedal to disengage."
-msgstr "Pressione "SET" para ativar e um dos pedais para desativar."
+msgstr "Pressione \"SET\" para ativar e um dos pedais para desativar."
 
 #: js/components/SetupTerms/SetupTerms.js:49
 msgid "Privacy policy available at https://my.comma.ai/privacy.html"
@@ -1127,7 +1132,7 @@ msgstr "Em caso de situação insegura ao sair de uma auto-estrada, você pode d
 
 #: js/components/training/Onboarding/Onboarding.js:672
 msgid "When openpilot is engaged, you must always pay attention! openpilot monitors awareness with 3D facial reconstruction and pose. Distracted drivers are alerted, then disengaged from openpilot until corrected."
-msgstr "Quando o dragonpilot estiver ativado, você deve prestar atencão! O dragonpilot monitora sua atenção com o sistema de reconstrução facial 3D e pose. Motoristas destraídos são alertados, e o dragonpilot desativado até que se corrijam."
+msgstr "Quando o dragonpilot estiver ativado, você deve prestar atencão! O dragonpilot monitora sua atenção com o sistema de reconstrução facial 3D e pose. Motoristas destraídos são alertados, e o dragonpilot desativado até que se corrijam.cm"
 
 #: js/components/training/Onboarding/Onboarding.js:631
 msgid "When you are ready to engage openpilot at a comfortable speed, locate the cruise controls on your steering wheel and press \"SET\" to begin."
@@ -1164,6 +1169,10 @@ msgstr "e escaneie este código para conectar."
 msgid "chffrplus"
 msgstr "chffrplus"
 
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:444
+#~ msgid "cm"
+#~ msgstr ""
+
 #: js/components/SetupQr/SetupQr.js:109
 msgid "comma connect"
 msgstr "comma connect"
@@ -1172,9 +1181,13 @@ msgstr "comma connect"
 msgid "dashcam"
 msgstr "Modo Câmera de Para-brisas"
 
-#: js/components/Settings/Settings.js:359
+#: js/components/Settings/Settings.js:314
 msgid "dragonpilot"
 msgstr "dragonpilot"
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:388
+#~ msgid "mins"
+#~ msgstr ""
 
 #: js/components/Home/Home.js:154
 #: js/components/Settings/Settings.js:211

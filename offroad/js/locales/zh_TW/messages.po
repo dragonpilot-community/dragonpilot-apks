@@ -215,15 +215,15 @@ msgstr "車型"
 msgid "Charging Control"
 msgstr "充電控制"
 
-#: js/components/Settings/Settings.js:351
+#: js/components/Settings/Settings.js:358
 msgid "Close Aegis Safety Camera"
 msgstr "關閉神盾測速照相"
 
-#: js/components/Settings/Settings.js:336
+#: js/components/Settings/Settings.js:343
 msgid "Close AutoNavi Map"
 msgstr "關閉高德地圖"
 
-#: js/components/Settings/Settings.js:321
+#: js/components/Settings/Settings.js:328
 msgid "Close TomTom Safety Camera"
 msgstr "關閉 TomTom 測速照相"
 
@@ -762,7 +762,12 @@ msgstr "沒有網路連線"
 msgid "Now that you’re all set up, it’s important to understand the functionality and limitations of openpilot as alpha software before testing."
 msgstr "現在您已經完成了所有的設定，在您開始測試之前，請您務必先了解身為 alpha 版的 dragonpilot 它的功能和限制。"
 
-#: js/components/Settings/Settings.js:345
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:388
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:685
+msgid "OFF"
+msgstr "停用"
+
+#: js/components/Settings/Settings.js:352
 msgid "Open Aegis Safety Camera"
 msgstr "開啟神盾測速照相"
 
@@ -770,7 +775,7 @@ msgstr "開啟神盾測速照相"
 msgid "Open Android Settings"
 msgstr "開啟 Android 設定"
 
-#: js/components/Settings/Settings.js:330
+#: js/components/Settings/Settings.js:337
 msgid "Open AutoNavi Map"
 msgstr "開啟高德地圖"
 
@@ -778,7 +783,7 @@ msgstr "開啟高德地圖"
 msgid "Open Tethering Settings"
 msgstr "開啟網絡共享設定"
 
-#: js/components/Settings/Settings.js:315
+#: js/components/Settings/Settings.js:322
 msgid "Open TomTom Safety Camera"
 msgstr "開啟 TomTom 測速照相"
 
@@ -1164,6 +1169,10 @@ msgstr "然後掃描這個二維碼配對。"
 msgid "chffrplus"
 msgstr "chffrplus"
 
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:444
+#~ msgid "cm"
+#~ msgstr "公分"
+
 #: js/components/SetupQr/SetupQr.js:109
 msgid "comma connect"
 msgstr "comma connect"
@@ -1172,9 +1181,13 @@ msgstr "comma connect"
 msgid "dashcam"
 msgstr "dashcam"
 
-#: js/components/Settings/Settings.js:359
+#: js/components/Settings/Settings.js:314
 msgid "dragonpilot"
 msgstr "dragonpilot"
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:388
+#~ msgid "mins"
+#~ msgstr "分鐘"
 
 #: js/components/Home/Home.js:154
 #: js/components/Settings/Settings.js:211

@@ -215,15 +215,15 @@ msgstr "车型"
 msgid "Charging Control"
 msgstr "充电控制"
 
-#: js/components/Settings/Settings.js:351
+#: js/components/Settings/Settings.js:358
 msgid "Close Aegis Safety Camera"
 msgstr "关闭神盾测速照相"
 
-#: js/components/Settings/Settings.js:336
+#: js/components/Settings/Settings.js:343
 msgid "Close AutoNavi Map"
 msgstr "关闭高德地图"
 
-#: js/components/Settings/Settings.js:321
+#: js/components/Settings/Settings.js:328
 msgid "Close TomTom Safety Camera"
 msgstr "关闭 TomTom 测速照相"
 
@@ -762,7 +762,12 @@ msgstr "没有网络连接"
 msgid "Now that you’re all set up, it’s important to understand the functionality and limitations of openpilot as alpha software before testing."
 msgstr "现在，您已经完成了所有设置，在测试使用之前，了解 dragonpilot 测试版的功能限制非常重要。"
 
-#: js/components/Settings/Settings.js:345
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:388
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:685
+msgid "OFF"
+msgstr "停用"
+
+#: js/components/Settings/Settings.js:352
 msgid "Open Aegis Safety Camera"
 msgstr "开启神盾测速照相"
 
@@ -770,7 +775,7 @@ msgstr "开启神盾测速照相"
 msgid "Open Android Settings"
 msgstr "开启 Android 设置"
 
-#: js/components/Settings/Settings.js:330
+#: js/components/Settings/Settings.js:337
 msgid "Open AutoNavi Map"
 msgstr "开启高德地图"
 
@@ -778,7 +783,7 @@ msgstr "开启高德地图"
 msgid "Open Tethering Settings"
 msgstr "共享网络设置"
 
-#: js/components/Settings/Settings.js:315
+#: js/components/Settings/Settings.js:322
 msgid "Open TomTom Safety Camera"
 msgstr "开启 TomTom 测速照相"
 
@@ -1164,6 +1169,10 @@ msgstr "然后扫描这个二维码绑定。"
 msgid "chffrplus"
 msgstr "chffrplus"
 
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:444
+#~ msgid "cm"
+#~ msgstr "厘米"
+
 #: js/components/SetupQr/SetupQr.js:109
 msgid "comma connect"
 msgstr "comma connect"
@@ -1172,9 +1181,13 @@ msgstr "comma connect"
 msgid "dashcam"
 msgstr "dashcam"
 
-#: js/components/Settings/Settings.js:359
+#: js/components/Settings/Settings.js:314
 msgid "dragonpilot"
 msgstr "dragonpilot"
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:388
+#~ msgid "mins"
+#~ msgstr "分钟"
 
 #: js/components/Home/Home.js:154
 #: js/components/Settings/Settings.js:211

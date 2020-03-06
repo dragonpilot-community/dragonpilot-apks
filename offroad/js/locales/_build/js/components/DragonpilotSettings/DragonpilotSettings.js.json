@@ -207,6 +207,18 @@
       ]
     ]
   },
+  "OFF": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        388
+      ],
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        685
+      ]
+    ]
+  },
   "Hardware": {
     "origin": [
       [
