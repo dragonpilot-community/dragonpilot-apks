@@ -42,6 +42,7 @@ export const Params = {
     KEY_ENABLE_STEERING_ON_SIGNAL: 'DragonEnableSteeringOnSignal',
     KEY_ENABLE_DASHCAM: 'DragonEnableDashcam',
     KEY_ENABLE_DRIVER_SAFETY_CHECK: 'DragonEnableDriverSafetyCheck',
+    KEY_ENABLE_AUTO_SHUTDOWN: 'DragonEnableAutoShutdown',
     KEY_AUTO_SHUTDOWN: 'DragonAutoShutdownAt',
     KEY_ENABLE_NOCTUA_MODE: 'DragonNoctuaMode',
     KEY_CACHE_CAR: 'DragonCacheCar',

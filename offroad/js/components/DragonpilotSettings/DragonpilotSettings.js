@@ -47,15 +47,10 @@ class DragonpilotSettings extends Component {
             route: SettingsRoutes.PRIMARY,
             expandedCell: null,
             steeringMonitorTimerInt: '3',
-            enableTomTom: false,
-            enableAutonavi: false,
-            enableAegis: false,
-            enableMixplorer: false,
             cameraOffsetInt: '6',
             autoShutdownAtInt: '0',
             VolumeBoost: '0',
             carModel: '',
-            wazeMode: false,
             altAccelProfileInt: 0,
         }
     }
@@ -65,28 +60,18 @@ class DragonpilotSettings extends Component {
         const {
             params: {
                 DragonSteeringMonitorTimer: dragonSteeringMonitorTimer,
-                DragonEnableTomTom: dragonEnableTomTom,
-                DragonEnableAutonavi: dragonEnableAutonavi,
-                DragonEnableAegis: dragonEnableAegis,
-                DragonEnableMixplorer: dragonEnableMixplorer,
                 DragonCameraOffset: dragonCameraOffset,
                 DragonAutoShutdownAt: dragonAutoShutdownAt,
                 DragonUIVolumeBoost: dragonUIVolumeBoost,
                 DragonCarModel: dragonCarModel,
-                DragonWazeMode: dragonWazeMode,
                 DragonAccelProfile: dragonAccelProfile,
             },
         } = this.props;
         this.setState({ steeringMonitorTimerInt: dragonSteeringMonitorTimer === '0'? 0 : parseInt(dragonSteeringMonitorTimer) || 3 })
-        this.setState({ enableTomTom: dragonWazeMode === '0' && dragonEnableTomTom === '1' })
-        this.setState({ enableAutonavi: dragonWazeMode === '0' && dragonEnableAutonavi === '1' })
-        this.setState({ enableAegis: dragonWazeMode === '0' && dragonEnableAegis === '1' })
-        this.setState({ enableMixplorer: dragonEnableMixplorer === '1' })
         this.setState({ cameraOffsetInt: dragonCameraOffset === '0'? 0 : parseInt(dragonCameraOffset) || 6 })
         this.setState({ autoShutdownAtInt: dragonAutoShutdownAt === '0'? 0 : parseInt(dragonAutoShutdownAt) || 0 })
         this.setState({ VolumeBoostInt: dragonUIVolumeBoost === '0'? 0 : parseInt(dragonUIVolumeBoost) || 0 })
         this.setState({ carModel: dragonCarModel })
-        this.setState({ wazeMode: dragonWazeMode === '1' })
         this.setState({ accelProfileInt: dragonAccelProfile === '1'? 1 : dragonAccelProfile === '-1'? -1 : 0 })
     }
 
@@ -136,7 +121,7 @@ class DragonpilotSettings extends Component {
               _steeringMonitorTimer = steeringMonitorTimerInt + 1;
               break;
           case 'decrement':
-              _steeringMonitorTimer = Math.max(0, steeringMonitorTimerInt - 1);
+              _steeringMonitorTimer = Math.max(1, steeringMonitorTimerInt - 1);
               break;
         }
         this.setState({ steeringMonitorTimerInt: _steeringMonitorTimer });
@@ -166,7 +151,7 @@ class DragonpilotSettings extends Component {
                 _autoShutdownAt = autoShutdownAtInt + 1;
                 break;
             case 'decrement':
-                _autoShutdownAt = Math.max(0, autoShutdownAtInt - 1);
+                _autoShutdownAt = Math.max(1, autoShutdownAtInt - 1);
                 break;
         }
         this.setState({ autoShutdownAtInt: _autoShutdownAt });
@@ -280,9 +265,13 @@ class DragonpilotSettings extends Component {
                 DragonCacheCar: dragonCacheCar,
                 DragonChargingCtrl: dragonChargingCtrl,
                 DragonEnableSRLearner: dragonEnableSRLearner,
+                DragonEnableAutoShutdown: dragonEnableAutoShutdown,
+                // for state only
+                DragonWazeMode: dragonWazeMode,
+                DragonEnableMixplorer: dragonEnableMixplorer,
             }
         } = this.props;
-        const { expandedCell, enableMixplorer, cameraOffsetInt, autoShutdownAtInt, carModel, wazeMode, accelProfileInt } = this.state;
+        const { expandedCell, cameraOffsetInt, autoShutdownAtInt, carModel, accelProfileInt } = this.state;
         return (
             <View style={ Styles.settings }>
                 <View style={ Styles.settingsHeader }>
@@ -299,7 +288,7 @@ class DragonpilotSettings extends Component {
                     <X.Table direction='row' color='darkBlue'>
                         { this.renderSettingsMenu() }
                     </X.Table>
-                    {wazeMode &&
+                    {dragonWazeMode === '1' &&
                     <X.Table color='darkBlue'>
                         <X.Button
                             color='settingsDefault'
@@ -314,7 +303,7 @@ class DragonpilotSettings extends Component {
                         </X.Button>
                     </X.Table>
                     }
-                    {enableMixplorer &&
+                    {dragonEnableMixplorer === '1' &&
                     <X.Table color='darkBlue'>
                         <X.Button
                             color='settingsDefault'
@@ -327,15 +316,6 @@ class DragonpilotSettings extends Component {
                         <X.TableCell
                             title={ i18n._(t`Services`) }
                             value='' />
-                        <X.TableCell
-                            type='switch'
-                            title={ i18n._(t`Enable Hotspot on Boot`) }
-                            value={ !!parseInt(dragonBootHotspot) }
-                            iconSource={ Icons.developer }
-                            description={ i18n._(t`If you enable this, Hotspot will turn on automatically on boot.`) }
-                            isExpanded={ expandedCell == 'boot_hotspot' }
-                            handleExpanded={ () => this.handleExpanded('boot_hotspot') }
-                            handleChanged={ this.props.setBootHotspot } />
                         <X.TableCell
                             type='switch'
                             title={ i18n._(t`Enable Logger`) }
@@ -363,23 +343,47 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'dashcam' }
                             handleExpanded={ () => this.handleExpanded('dashcam') }
                             handleChanged={ this.props.setEnableDashcam } />
+                    </X.Table>
+                    <X.Table color='darkBlue'>
+                        <X.TableCell
+                            title={ i18n._(t`Hardware`) }
+                            value='' />
+                        <X.TableCell
+                            type='switch'
+                            title={ i18n._(t`Enable Hotspot on Boot`) }
+                            value={ !!parseInt(dragonBootHotspot) }
+                            iconSource={ Icons.developer }
+                            description={ i18n._(t`If you enable this, Hotspot will turn on automatically on boot.`) }
+                            isExpanded={ expandedCell == 'boot_hotspot' }
+                            handleExpanded={ () => this.handleExpanded('boot_hotspot') }
+                            handleChanged={ this.props.setBootHotspot } />
+                        <X.TableCell
+                            type='switch'
+                            title={ i18n._(t`Enable Auto Shutdown`) }
+                            value={ !!parseInt(dragonEnableAutoShutdown) }
+                            iconSource={ Icons.developer }
+                            description={ i18n._(t`Enable this if you wish to shutdown your device automatically. (not suitable for comma power users)`) }
+                            isExpanded={ expandedCell == 'auto_shutdown' }
+                            handleExpanded={ () => this.handleExpanded('auto_shutdown') }
+                            handleChanged={ this.props.setEnableAutoShutdown } />
+                        {dragonEnableAutoShutdown === '1' &&
                         <X.TableCell
                             type='custom'
-                            title={ i18n._(t`Auto Shutdown (min)`) }
-                            iconSource={ Icons.developer }
-                            description={ i18n._(t`Adjust the shutdown timer if you would like EON to shutdown after a period of time (when usb power is not present), set this to 0 if you would like to disable this feature.`) }
-                            isExpanded={ expandedCell == 'autoShutdown' }
-                            handleExpanded={ () => this.handleExpanded('autoShutdown') }>
+                            title={i18n._(t`Auto Shutdown (min)`)}
+                            iconSource={Icons.developer}
+                            description={i18n._(t`Adjust the shutdown timer to shutdown your device after a period of time.`)}
+                            isExpanded={expandedCell == 'auto_shutdown_timer'}
+                            handleExpanded={() => this.handleExpanded('auto_shutdown_timer')}>
                             <X.Button
                                 color='ghost'
-                                activeOpacity={ 1 }
-                                style={ Styles.settingsPlusMinus }>
+                                activeOpacity={1}
+                                style={Styles.settingsPlusMinus}>
                                 <X.Button
-                                    style={ [Styles.settingsNumericButton, { opacity: autoShutdownAtInt <= 0? 0.1 : 0.8 }] }
-                                    onPress={ () => this.handleChangedAutoShutdownAt('decrement')  }>
+                                    style={[Styles.settingsNumericButton, {opacity: autoShutdownAtInt <= 1 ? 0.1 : 0.8}]}
+                                    onPress={() => this.handleChangedAutoShutdownAt('decrement')}>
                                     <X.Image
-                                        source={ Icons.minus }
-                                        style={ Styles.settingsNumericIcon } />
+                                        source={Icons.minus}
+                                        style={Styles.settingsNumericIcon}/>
                                 </X.Button>
                                 <X.Text
                                     color='white'
@@ -388,19 +392,15 @@ class DragonpilotSettings extends Component {
                                     { autoShutdownAtInt <= 0? i18n._(t`OFF`) : autoShutdownAtInt }
                                 </X.Text>
                                 <X.Button
-                                    style={ [Styles.settingsNumericButton, { opacity: 0.8 }] }
-                                    onPress={ () => this.handleChangedAutoShutdownAt('increment') }>
+                                    style={[Styles.settingsNumericButton, {opacity: 0.8}]}
+                                    onPress={() => this.handleChangedAutoShutdownAt('increment')}>
                                     <X.Image
-                                        source={ Icons.plus }
-                                        style={ Styles.settingsNumericIcon } />
+                                        source={Icons.plus}
+                                        style={Styles.settingsNumericIcon}/>
                                 </X.Button>
                             </X.Button>
                         </X.TableCell>
-                    </X.Table>
-                    <X.Table color='darkBlue'>
-                        <X.TableCell
-                            title={ i18n._(t`Hardware`) }
-                            value='' />
+                        }
                         <X.TableCell
                             type='switch'
                             title={ i18n._(t`Enable Noctua Fan Mode`) }
@@ -419,6 +419,11 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'charging_ctrl' }
                             handleExpanded={ () => this.handleExpanded('charging_ctrl') }
                             handleChanged={ this.props.setChargingCtrl} />
+                    </X.Table>
+                    <X.Table color='darkBlue'>
+                        <X.TableCell
+                            title={ i18n._(t`Tuning`) }
+                            value='' />
                         <X.TableCell
                             type='custom'
                             title={ i18n._(t`Camera Offset (cm)`) }
@@ -452,11 +457,6 @@ class DragonpilotSettings extends Component {
                                 </X.Button>
                             </X.Button>
                         </X.TableCell>
-                    </X.Table>
-                    <X.Table color='darkBlue'>
-                        <X.TableCell
-                            title={ i18n._(t`Tuning`) }
-                            value='' />
                         <X.TableCell
                             type='switch'
                             title={ i18n._(t`Cache Fingerprint`) }
@@ -651,32 +651,35 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'safetyCheck' }
                             handleExpanded={ () => this.handleExpanded('safetyCheck') }
                             handleChanged={ this.props.setEnableDriverSafetyCheck } />
+                        {dragonEnableDriverSafetyCheck === '1' &&
                         <X.TableCell
                             type='switch'
-                            title={ i18n._(t`Enable Driver Monitoring`) }
-                            value={ !!parseInt(dragonEnableDriverMonitoring) }
-                            iconSource={ Icons.monitoring }
-                            description={ i18n._(t`Driver Monitoring detects driver awareness with 3D facial reconstruction and pose estimation. It is used to warn the driver when they appear distracted while openpilot is engaged. This feature is still in beta, so Driver Monitoring is unavailable when the facial tracking is too inaccurate (e.g. at night). The availability is indicated by the face icon at the bottom-left corner of your EON.`) }
-                            isExpanded={ expandedCell == 'driver_monitoring' }
-                            handleExpanded={ () => this.handleExpanded('driver_monitoring') }
-                            handleChanged={ this.props.setEnableDriverMonitoring } />
+                            title={i18n._(t`Enable Driver Monitoring`)}
+                            value={!!parseInt(dragonEnableDriverMonitoring)}
+                            iconSource={Icons.monitoring}
+                            description={i18n._(t`Driver Monitoring detects driver awareness with 3D facial reconstruction and pose estimation. It is used to warn the driver when they appear distracted while openpilot is engaged. This feature is still in beta, so Driver Monitoring is unavailable when the facial tracking is too inaccurate (e.g. at night). The availability is indicated by the face icon at the bottom-left corner of your EON.`)}
+                            isExpanded={expandedCell == 'driver_monitoring'}
+                            handleExpanded={() => this.handleExpanded('driver_monitoring')}
+                            handleChanged={this.props.setEnableDriverMonitoring}/>
+                        }
+                        {dragonEnableDriverSafetyCheck === '1' && dragonEnableDriverMonitoring === '1' &&
                         <X.TableCell
                             type='custom'
-                            title={ i18n._(t`Steering Monitor Timer`) }
-                            iconSource={ Icons.developer }
-                            description={ i18n._(t`Adjust the steering monitor timer, set this to 0 if you would like to disable steering monitor. Default is 3 minutes.`) }
-                            isExpanded={ expandedCell == 'steering_monitor_timer' }
-                            handleExpanded={ () => this.handleExpanded('steering_monitor_timer') }>
+                            title={i18n._(t`Steering Monitor Timer`)}
+                            iconSource={Icons.developer}
+                            description={i18n._(t`Adjust the steering monitor timer, set this to 0 if you would like to disable steering monitor. Default is 3 minutes.`)}
+                            isExpanded={expandedCell == 'steering_monitor_timer'}
+                            handleExpanded={() => this.handleExpanded('steering_monitor_timer')}>
                             <X.Button
                                 color='ghost'
-                                activeOpacity={ 1 }
-                                style={ Styles.settingsPlusMinus }>
+                                activeOpacity={1}
+                                style={Styles.settingsPlusMinus}>
                                 <X.Button
-                                    style={ [Styles.settingsNumericButton, { opacity: steeringMonitorTimerInt <= 0? 0.1 : 0.8 }] }
-                                    onPress={ () => this.handleChangedSteeringMonitorTimer('decrement')  }>
+                                    style={[Styles.settingsNumericButton, {opacity: steeringMonitorTimerInt <= 1 ? 0.1 : 0.8}]}
+                                    onPress={() => this.handleChangedSteeringMonitorTimer('decrement')}>
                                     <X.Image
-                                        source={ Icons.minus }
-                                        style={ Styles.settingsNumericIcon } />
+                                        source={Icons.minus}
+                                        style={Styles.settingsNumericIcon}/>
                                 </X.Button>
                                 <X.Text
                                     color='white'
@@ -685,14 +688,15 @@ class DragonpilotSettings extends Component {
                                     { steeringMonitorTimerInt <= 0? i18n._(t`OFF`) : steeringMonitorTimerInt }
                                 </X.Text>
                                 <X.Button
-                                    style={ [Styles.settingsNumericButton, { opacity: 0.8 }] }
-                                    onPress={ () => this.handleChangedSteeringMonitorTimer('increment') }>
+                                    style={[Styles.settingsNumericButton, {opacity: 0.8}]}
+                                    onPress={() => this.handleChangedSteeringMonitorTimer('increment')}>
                                     <X.Image
-                                        source={ Icons.plus }
-                                        style={ Styles.settingsNumericIcon } />
+                                        source={Icons.plus}
+                                        style={Styles.settingsNumericIcon}/>
                                 </X.Button>
                             </X.Button>
                         </X.TableCell>
+                        }
                     </X.Table>
                 </ScrollView>
             </View>
@@ -710,9 +714,10 @@ class DragonpilotSettings extends Component {
                 DragonBootAegis: dragonBootAegis,
                 DragonEnableMixplorer: dragonEnableMixplorer,
                 DragonWazeMode: dragonWazeMode,
+                DragonGreyPandaMode: dragonGreyPandaMode,
             },
         } = this.props;
-        const { expandedCell, enableTomTom, enableAutonavi, enableAegis, wazeMode } = this.state;
+        const { expandedCell } = this.state;
         return (
             <View style={ Styles.settings }>
                 <View style={ Styles.settingsHeader }>
@@ -730,6 +735,15 @@ class DragonpilotSettings extends Component {
                     <X.Table color='darkBlue'>
                         <X.TableCell
                             type='switch'
+                            title={ i18n._(t`Use External GPS Signal`) }
+                            value={ !!parseInt(dragonGreyPandaMode) }
+                            iconSource={ Icons.developer }
+                            description={ i18n._(t`Enable this if you wish to use external GPS signal (Grey Panda/Black Panda/C2 Users only).`) }
+                            isExpanded={ expandedCell == 'ext_gps' }
+                            handleExpanded={ () => this.handleExpanded('ext_gps') }
+                            handleChanged={ this.props.setEnableGreyPandaMode } />
+                        <X.TableCell
+                            type='switch'
                             title={ i18n._(t`Enable Waze Mode`) }
                             value={ !!parseInt(dragonWazeMode) }
                             iconSource={ Icons.developer }
@@ -737,7 +751,7 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'enable_waze' }
                             handleExpanded={ () => this.handleExpanded('enable_waze') }
                             handleChanged={ this.props.setEnableWazeMode } />
-                        {!wazeMode &&
+                        {dragonWazeMode === '0' &&
                         <X.TableCell
                             type='switch'
                             title={i18n._(t`Enable TomTom Safety Camera App`)}
@@ -748,7 +762,7 @@ class DragonpilotSettings extends Component {
                             handleExpanded={() => this.handleExpanded('enable_tomtom')}
                             handleChanged={this.props.setEnableTomTom}/>
                         }
-                        {enableTomTom &&
+                        {dragonEnableTomTom === '1' &&
                             <X.TableCell
                             type='switch'
                             title={i18n._(t`Auto Run TomTom Safety Camera App`)}
@@ -759,7 +773,7 @@ class DragonpilotSettings extends Component {
                             handleExpanded={() => this.handleExpanded('run_tomtom')}
                             handleChanged={this.props.setBootTomTom}/>
                         }
-                        {!wazeMode &&
+                        {dragonWazeMode === '0' &&
                         <X.TableCell
                             type='switch'
                             title={i18n._(t`Enable Autonavi Map App`)}
@@ -770,7 +784,7 @@ class DragonpilotSettings extends Component {
                             handleExpanded={() => this.handleExpanded('enable_autonavi')}
                             handleChanged={this.props.setEnableAutonavi}/>
                         }
-                        {enableAutonavi &&
+                        {dragonEnableAutonavi === '1' &&
                             <X.TableCell
                             type='switch'
                             title={i18n._(t`Auto Run Autonavi Map`)}
@@ -781,7 +795,7 @@ class DragonpilotSettings extends Component {
                             handleExpanded={() => this.handleExpanded('run_autonavi')}
                             handleChanged={this.props.setBootAutonavi}/>
                         }
-                        {!wazeMode &&
+                        {dragonWazeMode === '0' &&
                         <X.TableCell
                             type='switch'
                             title={i18n._(t`Enable Aegis Safety Camera App`)}
@@ -792,7 +806,7 @@ class DragonpilotSettings extends Component {
                             handleExpanded={() => this.handleExpanded('enable_aegis')}
                             handleChanged={this.props.setEnableAegis}/>
                         }
-                        {enableAegis &&
+                        {dragonEnableAegis === '1' &&
                             <X.TableCell
                             type='switch'
                             title={i18n._(t`Auto Run Aegis Safety Camera App`)}
@@ -1156,6 +1170,9 @@ const mapDispatchToProps = dispatch => ({
     setEnableDashcam: (enableDashcam) => {
         dispatch(updateParam(Params.KEY_ENABLE_DASHCAM, (enableDashcam | 0).toString()));
     },
+    setEnableAutoShutdown: (val) => {
+        dispatch(updateParam(Params.KEY_ENABLE_AUTO_SHUTDOWN, (val | 0).toString()));
+    },
     setEnableDriverSafetyCheck: (enableDriverSafetyCheck) => {
         dispatch(updateParam(Params.KEY_ENABLE_DRIVER_SAFETY_CHECK, (enableDriverSafetyCheck | 0).toString()));
     },
@@ -1278,6 +1295,9 @@ const mapDispatchToProps = dispatch => ({
     },
     setAccelProfile: (val) => {
         dispatch(updateParam(Params.KEY_ACCEL_PROFILE, (val | 0).toString()));
+    },
+    setEnableGreyPandaMode: (val) => {
+        dispatch(updateParam(Params.KEY_GREY_PANDA_MODE, (val | 0).toString()));
     },
 });
 
