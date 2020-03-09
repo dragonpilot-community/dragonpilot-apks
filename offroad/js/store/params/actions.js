@@ -49,6 +49,7 @@ const PARAMS = [
   "DragonEnableSteeringOnSignal",
   "DragonEnableDashcam",
   "DragonEnableDriverSafetyCheck",
+  "DragonEnableAutoShutdown",
   "DragonAutoShutdownAt",
   "DragonNoctuaMode",
   "DragonCacheCar",
