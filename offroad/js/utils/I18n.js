@@ -10,6 +10,7 @@ import ptBR from '../locales/pt_BR/messages.js';
 import moment from 'moment';
 import 'moment/locale/zh-cn';
 import 'moment/locale/zh-tw';
+import 'moment/locale/fr';
 import 'moment/locale/ja';
 import 'moment/locale/pt-br';
 
