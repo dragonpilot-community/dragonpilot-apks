@@ -95,6 +95,8 @@ const PARAMS = [
   "DragonBootHotspot",
   "DragonEnableSRLearner",
   "DragonAccelProfile",
+  "DragonEnableAutoShutdown",
+  "DragonLastModified",
 ].concat(ALERT_PARAMS);
 
 export function refreshParams(params) {
@@ -118,6 +120,7 @@ export function updateParam(param, value) {
     dispatch({ type: ACTION_PARAM_CHANGED, payload: { param, value }});
     setTimeout(() => {
       ChffrPlus.writeParam(param, value);
+      ChffrPlus.writeParam('DragonLastModified', Math.floor(Date.now() / 1000).toString())
     }, 0);
   }
 }

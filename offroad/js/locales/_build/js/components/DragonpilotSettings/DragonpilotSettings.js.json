@@ -231,6 +231,18 @@
       ]
     ]
   },
+  "OFF": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        392
+      ],
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        688
+      ]
+    ]
+  },
   "Enable Noctua Fan Mode": {
     "origin": [
       [
@@ -383,7 +395,7 @@
       ]
     ]
   },
-  "Controls": {
+  "Lateral Control": {
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
@@ -407,7 +419,7 @@
       ]
     ]
   },
-  "Allow Gas": {
+  "Enable Steering On Signal": {
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
@@ -415,7 +427,7 @@
       ]
     ]
   },
-  "Enable this if you wish to use gas on engaged.": {
+  "If you enable this, it will temporary disable steering control when left/right blinker is on and resume control 1 second after the blinker is off.": {
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
@@ -423,7 +435,7 @@
       ]
     ]
   },
-  "Enable Steering On Signal": {
+  "Display \"Turn Exceeds Steering Limit\" Alert": {
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
@@ -431,7 +443,7 @@
       ]
     ]
   },
-  "If you enable this, it will temporary disable steering control when left/right blinker is on and resume control 1 second after the blinker is off.": {
+  "If you disable this, you will not receive any \"Turn Exceeds Steering Limit\" alerts on the screen. Hyundai, Ford, Toyota do not have this alert.": {
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
@@ -439,7 +451,7 @@
       ]
     ]
   },
-  "Display \"Turn Exceeds Steering Limit\" Alert": {
+  "Enable Auto Lane Change": {
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
@@ -447,7 +459,7 @@
       ]
     ]
   },
-  "If you disable this, you will not receive any \"Turn Exceeds Steering Limit\" alerts on the screen. Hyundai, Ford, Toyota do not have this alert.": {
+  "If you enable this, dp will change lane for you once the speed is above 60mph / 97kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option.": {
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
@@ -455,11 +467,35 @@
       ]
     ]
   },
+  "Longitudinal Control": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        611
+      ]
+    ]
+  },
+  "Allow Gas": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        615
+      ]
+    ]
+  },
+  "Enable this if you wish to use gas on engaged.": {
+    "origin": [
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        618
+      ]
+    ]
+  },
   "Enable Slow on Curve": {
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        610
+        624
       ]
     ]
   },
@@ -467,7 +503,7 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        613
+        627
       ]
     ]
   },
@@ -475,35 +511,11 @@
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        619
-      ]
-    ]
-  },
-  "If you enable this, dp will notify you when lead car starts moving from stationary.": {
-    "origin": [
-      [
-        "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        622
-      ]
-    ]
-  },
-  "Lane Change": {
-    "origin": [
-      [
-        "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        629
-      ]
-    ]
-  },
-  "Enable Auto Lane Change": {
-    "origin": [
-      [
-        "js/components/DragonpilotSettings/DragonpilotSettings.js",
         633
       ]
     ]
   },
-  "If you enable this, dp will change lane for you once the speed is above 60mph / 97kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option.": {
+  "If you enable this, dp will notify you when lead car starts moving from stationary.": {
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",

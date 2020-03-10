@@ -567,7 +567,7 @@ class DragonpilotSettings extends Component {
                     <X.Line color='transparent' spacing='tiny' />
                     <X.Table color='darkBlue'>
                         <X.TableCell
-                            title={ i18n._(t`Controls`) }
+                            title={ i18n._(t`Lateral Control`) }
                             value='' />
                         <X.TableCell
                             type='switch'
@@ -578,15 +578,6 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'lat_ctrl' }
                             handleExpanded={ () => this.handleExpanded('lat_ctrl') }
                             handleChanged={ this.props.setLatCtrl } />
-                        <X.TableCell
-                            type='switch'
-                            title={ i18n._(t`Allow Gas`) }
-                            value={ !!parseInt(dragonAllowGas) }
-                            iconSource={ Icons.developer }
-                            description={ i18n._(t`Enable this if you wish to use gas on engaged.`) }
-                            isExpanded={ expandedCell == 'allow_gas' }
-                            handleExpanded={ () => this.handleExpanded('allow_gas') }
-                            handleChanged={ this.props.setAllowGas } />
                         <X.TableCell
                             type='switch'
                             title={ i18n._(t`Enable Steering On Signal`) }
@@ -607,6 +598,29 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setDisplaySteeringLimitAlert } />
                         <X.TableCell
                             type='switch'
+                            title={i18n._(t`Enable Auto Lane Change`)}
+                            value={!!parseInt(dragonEnableAutoLC)}
+                            iconSource={Icons.developer}
+                            description={i18n._(t`If you enable this, dp will change lane for you once the speed is above 60mph / 97kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option.`)}
+                            isExpanded={expandedCell == 'enable_auto_lc'}
+                            handleExpanded={() => this.handleExpanded('enable_auto_lc')}
+                            handleChanged={ this.props.setEnableAutoLC }/>
+                    </X.Table>
+                    <X.Table color='darkBlue'>
+                        <X.TableCell
+                            title={ i18n._(t`Longitudinal Control`) }
+                            value='' />
+                        <X.TableCell
+                            type='switch'
+                            title={ i18n._(t`Allow Gas`) }
+                            value={ !!parseInt(dragonAllowGas) }
+                            iconSource={ Icons.developer }
+                            description={ i18n._(t`Enable this if you wish to use gas on engaged.`) }
+                            isExpanded={ expandedCell == 'allow_gas' }
+                            handleExpanded={ () => this.handleExpanded('allow_gas') }
+                            handleChanged={ this.props.setAllowGas } />
+                        <X.TableCell
+                            type='switch'
                             title={ i18n._(t`Enable Slow on Curve`) }
                             value={ !!parseInt(dragonEnableSlowOnCurve) }
                             iconSource={ Icons.developer }
@@ -623,20 +637,6 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'enable_lead_car_alert' }
                             handleExpanded={ () => this.handleExpanded('enable_lead_car_alert') }
                             handleChanged={ this.props.setEnableLeadCarMovingAlert } />
-                    </X.Table>
-                    <X.Table color='darkBlue'>
-                        <X.TableCell
-                            title={ i18n._(t`Lane Change`) }
-                            value='' />
-                        <X.TableCell
-                            type='switch'
-                            title={i18n._(t`Enable Auto Lane Change`)}
-                            value={!!parseInt(dragonEnableAutoLC)}
-                            iconSource={Icons.developer}
-                            description={i18n._(t`If you enable this, dp will change lane for you once the speed is above 60mph / 97kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option.`)}
-                            isExpanded={expandedCell == 'enable_auto_lc'}
-                            handleExpanded={() => this.handleExpanded('enable_auto_lc')}
-                            handleChanged={ this.props.setEnableAutoLC }/>
                     </X.Table>
                     <X.Table color='darkBlue'>
                         <X.TableCell
@@ -762,7 +762,7 @@ class DragonpilotSettings extends Component {
                             handleExpanded={() => this.handleExpanded('enable_tomtom')}
                             handleChanged={this.props.setEnableTomTom}/>
                         }
-                        {dragonEnableTomTom === '1' &&
+                        {dragonWazeMode === '0' && dragonEnableTomTom === '1' &&
                             <X.TableCell
                             type='switch'
                             title={i18n._(t`Auto Run TomTom Safety Camera App`)}
@@ -784,7 +784,7 @@ class DragonpilotSettings extends Component {
                             handleExpanded={() => this.handleExpanded('enable_autonavi')}
                             handleChanged={this.props.setEnableAutonavi}/>
                         }
-                        {dragonEnableAutonavi === '1' &&
+                        {dragonWazeMode === '0' && dragonEnableAutonavi === '1' &&
                             <X.TableCell
                             type='switch'
                             title={i18n._(t`Auto Run Autonavi Map`)}
@@ -806,8 +806,8 @@ class DragonpilotSettings extends Component {
                             handleExpanded={() => this.handleExpanded('enable_aegis')}
                             handleChanged={this.props.setEnableAegis}/>
                         }
-                        {dragonEnableAegis === '1' &&
-                            <X.TableCell
+                        {dragonWazeMode === '0' && dragonEnableAegis === '1' &&
+                        <X.TableCell
                             type='switch'
                             title={i18n._(t`Auto Run Aegis Safety Camera App`)}
                             value={!!parseInt(dragonBootAegis)}

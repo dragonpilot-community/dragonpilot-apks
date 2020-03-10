@@ -105,7 +105,7 @@ msgstr "调整关机计时让您的装置自动关机"
 msgid "Adjust the steering monitor timer, set this to 0 if you would like to disable steering monitor. Default is 3 minutes."
 msgstr "调整方向盘监控计时，如果您想取消方向盘监控，请将它设成 0。预设值为 3 分钟。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:583
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:615
 msgid "Allow Gas"
 msgstr "允许踩油门"
 
@@ -270,10 +270,6 @@ msgstr "继续"
 msgid "Continuously observe your surroundings for safety while gently nudging the steering wheel towards your desired lane. The combination of turn signal and wheel nudge will prompt openpilot to change lanes."
 msgstr "不断观察周围环境的安全并同时将方向盘轻轻推向想切至的车道。打转向灯和轻推方向盘这样的组合能指使 dragonpilot 协助您变换车道。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:570
-msgid "Controls"
-msgstr "操控"
-
 #: js/components/Home/Home.js:323
 #: js/components/Home/Home.js:383
 msgid "DRIVES"
@@ -303,7 +299,7 @@ msgstr "关闭这个选项后，画面将不再显示后置镜头的影像，这
 msgid "Disengage openpilot"
 msgstr "退出 dragonpilot"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:601
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:592
 msgid "Display \"Turn Exceeds Steering Limit\" Alert"
 msgstr "显示 \"弯道超过方向盘转向限制\" 警示讯息"
 
@@ -392,7 +388,7 @@ msgstr "启用"
 msgid "Enable Aegis Safety Camera App"
 msgstr "启用神盾测速照相"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:633
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:601
 msgid "Enable Auto Lane Change"
 msgstr "启用自动变道"
 
@@ -434,7 +430,7 @@ msgstr "启用车道偏离警示"
 msgid "Enable Lateral Control"
 msgstr "启用横向控制"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:633
 msgid "Enable Lead Car Moving Alert (BETA)"
 msgstr "启用前车静止移动侦测 (BETA)"
 
@@ -458,7 +454,7 @@ msgstr "启用 SSH"
 msgid "Enable Safety Check"
 msgstr "启用安全监控"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:610
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:624
 msgid "Enable Slow on Curve"
 msgstr "启用弯道减速功能"
 
@@ -470,7 +466,7 @@ msgstr "启用 SnG 补丁"
 msgid "Enable Steer Ratio Learner"
 msgstr "启用 Steer Ratio Learner"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:592
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:583
 msgid "Enable Steering On Signal"
 msgstr "启用方向灯暂时取消方向盘控制"
 
@@ -538,7 +534,7 @@ msgstr "若您想使用 TomTom 测速照相，请启用这个选项，需重启�
 msgid "Enable this if you wish to use external GPS signal (Grey Panda/Black Panda/C2 Users only)."
 msgstr "启用这个选项后，您将可以让您的导航应用使用外部的 GPS 信号 (仅适用于 灰熊/黑熊/C2 的用户)。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:586
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:618
 msgid "Enable this if you wish to use gas on engaged."
 msgstr "启用这个选项后，当 dp 在控制时您仍然可以踩油门。"
 
@@ -680,7 +676,7 @@ msgstr "如果您关闭这个选项，记录服务将停止储存用来训练 AI
 msgid "If you disable this, the driver safety check will be disabled completely, we DO NOT RECOMMEND that you turn off this unless you know what you are doing, we hold no responsibility if you disable this option."
 msgstr "如果您关闭这个选项，dp 的驾驶监控功能将完全取消，除非您知道您在做什么，不然我们不建议您使用，我们也不会负任何事故的责任。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:604
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:595
 msgid "If you disable this, you will not receive any \"Turn Exceeds Steering Limit\" alerts on the screen. Hyundai, Ford, Toyota do not have this alert."
 msgstr "如果您关闭这个选项，您将不再会收到 \"弯道超过方向盘转向限制\" 的警示讯息。 Hyundai、Ford、Toyota 车种没有用到此警示。"
 
@@ -692,19 +688,19 @@ msgstr "如果您关闭这个选项，记录上传服务将停止上传用来训
 msgid "If you enable this, Hotspot will turn on automatically on boot."
 msgstr "启用这个选项后，dp 将於开机时开启个人热点。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:636
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:604
 msgid "If you enable this, dp will change lane for you once the speed is above 60mph / 97kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option."
 msgstr "启用这个选项后，dp 将会在时速高于 60 英里 或 97 公里时自动变道。 （除非您知道您在做什么，不然我们不建议您使用本功能，我们也不会负任何事故的责任）"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:622
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:636
 msgid "If you enable this, dp will notify you when lead car starts moving from stationary."
 msgstr "启用这个选项后， 当前车从静止开始移动时 (如红灯)， dp 将会发出警示讯息。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:595
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:586
 msgid "If you enable this, it will temporary disable steering control when left/right blinker is on and resume control 1 second after the blinker is off."
 msgstr "如果您启用这个选项，当方向灯亮起时，将暂时取消 dp 的方向盘控制，然后 dp 会在方向灯熄灭后 1 秒取回控制。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:613
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:627
 msgid "If you enable this, the car will slow down automatically when on a curve road, this feature only works on Long Ctrl supported cars."
 msgstr "启用这个选项后， dp 在弯道时会依需求减速，这个选项只适用于支持纵向控制的车型。"
 
@@ -721,20 +717,24 @@ msgstr "公里"
 msgid "Keep in mind that certain situations are not handled by openpilot. Scenarios such as traffic lights, stop signs, quick vehicle cutins and pedestrians are unrecognized and openpilot may accelerate."
 msgstr "请注意，在红绿灯号标志、停车信号灯标志、前方车辆快速切入、无法识别的行人等特定路况下，dragonpilot 无法正确处理，有可能导致异常加速。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:629
-msgid "Lane Change"
-msgstr "换道"
-
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:178
 #: js/components/Settings/Settings.js:141
 #: js/components/UpdatePrompt/UpdatePrompt.js:33
 msgid "Later"
 msgstr "稍后"
 
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:570
+msgid "Lateral Control"
+msgstr "横向控制"
+
 #: js/components/training/Onboarding/Onboarding.js:859
 #: js/components/training/Onboarding/Onboarding.js:887
 msgid "Limited Features"
 msgstr "有限的功能"
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:611
+msgid "Longitudinal Control"
+msgstr "纵向控制"
 
 #: js/components/Home/Home.js:340
 #: js/components/Home/Home.js:400
@@ -774,8 +774,8 @@ msgstr "没有网络连接"
 msgid "Now that you’re all set up, it’s important to understand the functionality and limitations of openpilot as alpha software before testing."
 msgstr "现在，您已经完成了所有设置，在测试使用之前，了解 dragonpilot 测试版的功能限制非常重要。"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:388
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:685
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:392
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:688
 msgid "OFF"
 msgstr "停用"
 
@@ -1185,10 +1185,6 @@ msgstr "然后扫描这个二维码绑定。"
 msgid "chffrplus"
 msgstr "chffrplus"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:444
-#~ msgid "cm"
-#~ msgstr "厘米"
-
 #: js/components/SetupQr/SetupQr.js:109
 msgid "comma connect"
 msgstr "comma connect"
@@ -1200,10 +1196,6 @@ msgstr "dashcam"
 #: js/components/Settings/Settings.js:314
 msgid "dragonpilot"
 msgstr "dragonpilot"
-
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:388
-#~ msgid "mins"
-#~ msgstr "分钟"
 
 #: js/components/Home/Home.js:154
 #: js/components/Settings/Settings.js:211

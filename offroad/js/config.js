@@ -87,4 +87,5 @@ export const Params = {
     KEY_BOOT_HOTSPOT: 'DragonBootHotspot',
     KEY_SR_LEARNER: 'DragonEnableSRLearner',
     KEY_ACCEL_PROFILE: 'DragonAccelProfile',
+    KEY_ENABLE_AUTO_SHUTDOWN: 'DragonEnableAutoShutdown',
 };

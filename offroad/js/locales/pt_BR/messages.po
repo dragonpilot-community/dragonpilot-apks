@@ -63,7 +63,7 @@ msgstr "<  Voltar  |  Configurações do dragonpilot"
 
 #: js/components/training/Onboarding/Onboarding.js:382
 msgid "A driver assistance system is not a self driving car. This means openpilot is designed to work with you, not without you. Your attention is required to drive."
-msgstr "Um sistema de assistência ao motorista não é um sistema de direção autônoma. Isso significa que o openpilot é desenhado para funcionar com sua ajuda, não sem você. Sua atenção é necessária para dirigir."
+msgstr "Um sistema de assistência ao motorista não é um sistema de direção autônoma. Isso significa que o dragonpilot é desenhado para funcionar com sua ajuda, não sem você. Sua atenção é necessária para dirigir."
 
 #: js/components/training/Onboarding/Onboarding.js:481
 msgid "A vision algorithm leverages the road-facing camera to determine the path to drive."
@@ -105,7 +105,7 @@ msgstr ""
 msgid "Adjust the steering monitor timer, set this to 0 if you would like to disable steering monitor. Default is 3 minutes."
 msgstr "Ajuste o temporizador de toque no volante, ajuste em 0 se você quiser desativar esta função. O normal é 3 minutos"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:583
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:615
 msgid "Allow Gas"
 msgstr "Permitir controle de aceleração"
 
@@ -215,15 +215,15 @@ msgstr "Modelo do Carro"
 msgid "Charging Control"
 msgstr "Controlar Saúde da Bateria"
 
-#: js/components/Settings/Settings.js:351
+#: js/components/Settings/Settings.js:358
 msgid "Close Aegis Safety Camera"
 msgstr "Fechar Aegis Safety Camera"
 
-#: js/components/Settings/Settings.js:336
+#: js/components/Settings/Settings.js:343
 msgid "Close AutoNavi Map"
 msgstr "Fechar AutoNavi Map"
 
-#: js/components/Settings/Settings.js:321
+#: js/components/Settings/Settings.js:328
 msgid "Close TomTom Safety Camera"
 msgstr "Fechar TomTom Safety Camera"
 
@@ -241,7 +241,7 @@ msgstr "Funções mantidas pela comunidade não são testadas pela comma.ai de m
 
 #: js/components/training/Onboarding/Onboarding.js:989
 msgid "Congratulations! You have completed openpilot training."
-msgstr "Parabéns! Você completoiu o treinamento do openpilot."
+msgstr "Parabéns! Você completoiu o treinamento do dragonpilot."
 
 #: js/components/SetupWifi/SetupWifi.js:269
 #: js/components/SetupWifi/SetupWifi.js:333
@@ -268,11 +268,7 @@ msgstr "Continuar"
 
 #: js/components/training/Onboarding/Onboarding.js:802
 msgid "Continuously observe your surroundings for safety while gently nudging the steering wheel towards your desired lane. The combination of turn signal and wheel nudge will prompt openpilot to change lanes."
-msgstr "Mantenha continuamente atenção ao seu redor e empurre gentilmente o volante para o lado da faixa que desejar. A combinação de seta e toque no volante irão iniciar a troca de faixas do openpilot."
-
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:570
-msgid "Controls"
-msgstr "Controles"
+msgstr "Mantenha continuamente atenção ao seu redor e empurre gentilmente o volante para o lado da faixa que desejar. A combinação de seta e toque no volante irão iniciar a troca de faixas do dragonpilot."
 
 #: js/components/Home/Home.js:323
 #: js/components/Home/Home.js:383
@@ -301,9 +297,9 @@ msgstr "Desative isto somente se você não quiser ver a interface de navegaçã
 
 #: js/components/training/Onboarding/Onboarding.js:930
 msgid "Disengage openpilot"
-msgstr "Desativar openpilot"
+msgstr "Desativar dragonpilot"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:601
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:592
 msgid "Display \"Turn Exceeds Steering Limit\" Alert"
 msgstr "Curva excede os limites do carro"
 
@@ -374,7 +370,7 @@ msgstr "Monitoramento do Motorista"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:660
 msgid "Driver Monitoring detects driver awareness with 3D facial reconstruction and pose estimation. It is used to warn the driver when they appear distracted while openpilot is engaged. This feature is still in beta, so Driver Monitoring is unavailable when the facial tracking is too inaccurate (e.g. at night). The availability is indicated by the face icon at the bottom-left corner of your EON."
-msgstr "Quando o openpilot estiver ativado, você deve prestar atencão! O openpilot monitora sua atenção com o sistema de reconstrução facial 3D e pose. Motoristas destraídos são alertados, e o openpilot desativado até que se corrijam."
+msgstr "Quando o dragonpilot estiver ativado, você deve prestar atencão! O dragonpilot monitora sua atenção com o sistema de reconstrução facial 3D e pose. Motoristas destraídos são alertados, e o dragonpilot desativado até que se corrijam."
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:500
 msgid "ECO"
@@ -392,7 +388,7 @@ msgstr "Ativar"
 msgid "Enable Aegis Safety Camera App"
 msgstr "Ativar Aegis Safety Camera"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:633
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:601
 msgid "Enable Auto Lane Change"
 msgstr "Ativar Mudança de Faixa Automática"
 
@@ -434,7 +430,7 @@ msgstr "Avisos de Saída de Faixa"
 msgid "Enable Lateral Control"
 msgstr "Controle de Volante"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:633
 msgid "Enable Lead Car Moving Alert (BETA)"
 msgstr "Alerta de Movimento do Carro à Frente (BETA) "
 
@@ -458,7 +454,7 @@ msgstr "Ativar SSH"
 msgid "Enable Safety Check"
 msgstr "Checagem de Segurança"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:610
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:624
 msgid "Enable Slow on Curve"
 msgstr "Diminur Velocidade em Curvas"
 
@@ -470,7 +466,7 @@ msgstr "Ativar SnG Mod"
 msgid "Enable Steer Ratio Learner"
 msgstr "Razão de Esterçamento Variável"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:592
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:583
 msgid "Enable Steering On Signal"
 msgstr "Desativar controle de volante ao ligar a seta"
 
@@ -492,7 +488,7 @@ msgstr "Ativar Waze"
 
 #: js/components/Settings/Settings.js:366
 msgid "Enable openpilot"
-msgstr "Habilitar openpilot"
+msgstr "Habilitar dragonpilot"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:577
 msgid "Enable this if you wish dp to control the steering for you."
@@ -538,7 +534,7 @@ msgstr "Use o aplicativo TomTom Safety Camera, é necessário reiniciar o dispos
 msgid "Enable this if you wish to use external GPS signal (Grey Panda/Black Panda/C2 Users only)."
 msgstr ""
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:586
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:618
 msgid "Enable this if you wish to use gas on engaged."
 msgstr "Ativa o controle de aceleração do carro"
 
@@ -609,7 +605,7 @@ msgstr "Ative para deixar o ventilador funcionando a toda velocidade em qualquer
 #: js/components/training/Onboarding/Onboarding.js:599
 #: js/components/training/Onboarding/Onboarding.js:626
 msgid "Engage openpilot"
-msgstr "Ativar openpilot"
+msgstr "Ativar dragonpilot"
 
 #: js/components/Home/Home.js:522
 msgid "Finish Setup"
@@ -680,7 +676,7 @@ msgstr "Se você desabilitar o histórico (loggered/tombstoned), isto irá para 
 msgid "If you disable this, the driver safety check will be disabled completely, we DO NOT RECOMMEND that you turn off this unless you know what you are doing, we hold no responsibility if you disable this option."
 msgstr "Se desativar isto, o Monitoramento do Motorista será desativado completamente, nós NÃO RECOMENDAMOS que você desative a não ser que saiba o que está fazendo, nós não somos responsáveis se desativar esta opção."
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:604
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:595
 msgid "If you disable this, you will not receive any \"Turn Exceeds Steering Limit\" alerts on the screen. Hyundai, Ford, Toyota do not have this alert."
 msgstr "Se desativar isto, você não vai mais receber nenhum alerta do tipo \"Curva excede os limites do carro\" na sua tela. Hyundai, Ford, Toyota não tem este alerta."
 
@@ -692,21 +688,21 @@ msgstr "Se desativar o uploader, isto irá para o upload de dados para treinamen
 msgid "If you enable this, Hotspot will turn on automatically on boot."
 msgstr "Ative caso queira que o Compartilhamento de Internet inicie automaticamente ao ligar este dispositivo"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:636
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:604
 msgid "If you enable this, dp will change lane for you once the speed is above 60mph / 97kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option."
-msgstr "Ative caso queira que o openpilot mude a faixa automaticamente quando a velocidade estiver acima de 97km/h / 60mph. Nós NÃO RECOMENDAMOS que você desative a não ser que saiba o que está fazendo, nós não somos responsáveis se desativar esta opção."
+msgstr "Ative caso queira que o dragonpilot mude a faixa automaticamente quando a velocidade estiver acima de 97km/h / 60mph. Nós NÃO RECOMENDAMOS que você desative a não ser que saiba o que está fazendo, nós não somos responsáveis se desativar esta opção."
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:622
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:636
 msgid "If you enable this, dp will notify you when lead car starts moving from stationary."
 msgstr "Ative caso queira ser notificado quando o carro a frente começar a se movimentar"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:595
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:586
 msgid "If you enable this, it will temporary disable steering control when left/right blinker is on and resume control 1 second after the blinker is off."
 msgstr "Ative para desligar controle de volante equanto a seta estiver ligada (piscando)"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:613
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:627
 msgid "If you enable this, the car will slow down automatically when on a curve road, this feature only works on Long Ctrl supported cars."
-msgstr "Ativar desaceleração automática em curvas acentuadas, esta funcão só funciona se o openpilot pode controlar seu carro logitudinalmente"
+msgstr "Ativar desaceleração automática em curvas acentuadas, esta funcão só funciona se o dragonpilot pode controlar seu carro logitudinalmente"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:418
 msgid "If you turn this on, dp will try to keep your battery level between 60%~70% to protect your battery."
@@ -721,20 +717,24 @@ msgstr "KM"
 msgid "Keep in mind that certain situations are not handled by openpilot. Scenarios such as traffic lights, stop signs, quick vehicle cutins and pedestrians are unrecognized and openpilot may accelerate."
 msgstr ""
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:629
-msgid "Lane Change"
-msgstr "Troca de Faixa"
-
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:178
 #: js/components/Settings/Settings.js:141
 #: js/components/UpdatePrompt/UpdatePrompt.js:33
 msgid "Later"
 msgstr "Depois"
 
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:570
+msgid "Lateral Control"
+msgstr "Controle de Volante"
+
 #: js/components/training/Onboarding/Onboarding.js:859
 #: js/components/training/Onboarding/Onboarding.js:887
 msgid "Limited Features"
 msgstr "Funções Limitadas"
+
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:611
+msgid "Longitudinal Control"
+msgstr ""
 
 #: js/components/Home/Home.js:340
 #: js/components/Home/Home.js:400
@@ -772,9 +772,14 @@ msgstr "Sem Conexão de Rede"
 
 #: js/components/training/Onboarding/Onboarding.js:338
 msgid "Now that you’re all set up, it’s important to understand the functionality and limitations of openpilot as alpha software before testing."
-msgstr "Agora que você está pronto, é importante entender as funcionalidades e limitações do openpilot como um software alpha software antes de testar."
+msgstr "Agora que você está pronto, é importante entender as funcionalidades e limitações do dragonpilot como um software alpha software antes de testar."
 
-#: js/components/Settings/Settings.js:345
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:392
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:688
+msgid "OFF"
+msgstr ""
+
+#: js/components/Settings/Settings.js:352
 msgid "Open Aegis Safety Camera"
 msgstr "Abrir Aegis Safety Camera"
 
@@ -782,7 +787,7 @@ msgstr "Abrir Aegis Safety Camera"
 msgid "Open Android Settings"
 msgstr "Abrir Configuraçãoes do Android"
 
-#: js/components/Settings/Settings.js:330
+#: js/components/Settings/Settings.js:337
 msgid "Open AutoNavi Map"
 msgstr "Abrir AutoNavi Map"
 
@@ -790,7 +795,7 @@ msgstr "Abrir AutoNavi Map"
 msgid "Open Tethering Settings"
 msgstr "Abrir Configurações de Compartilhamento de Internet"
 
-#: js/components/Settings/Settings.js:315
+#: js/components/Settings/Settings.js:322
 msgid "Open TomTom Safety Camera"
 msgstr "Abrir TomTom Safety Camera"
 
@@ -843,7 +848,7 @@ msgstr "Iniciar Troca de Faixa"
 
 #: js/components/Settings/Settings.js:380
 msgid "Perform assisted lane changes with openpilot by checking your surroundings for safety, activating the turn signal and gently nudging the steering wheel towards your desired lane. openpilot is not capable of checking if a lane change is safe. You must continuously observe your surroundings to use this feature."
-msgstr "Perform assisted lane changes with openpilot by checking your surroundings for safety, activating the turn signal and gently nudging the steering wheel towards your desired lane. openpilot is not capable of checking if a lane change is safe. You must continuously observe your surroundings to use this feature."
+msgstr "Perform assisted lane changes with dragonpilot by checking your surroundings for safety, activating the turn signal and gently nudging the steering wheel towards your desired lane. dragonpilot is not capable of checking if a lane change is safe. You must continuously observe your surroundings to use this feature."
 
 #: js/components/Settings/Settings.js:601
 #: js/components/Settings/Settings.js:908
@@ -1024,7 +1029,7 @@ msgstr "Toque em um dos pedais para desativar"
 
 #: js/components/DriveRating/DriveRating.js:89
 msgid "Tell us how openpilot performed for this drive."
-msgstr "Conte-nos como o openpilot se saiu neste trajeto."
+msgstr "Conte-nos como o dragonpilot se saiu neste trajeto."
 
 #: js/components/Settings/Settings.js:505
 msgid "Terms of Service available at https://my.comma.ai/terms.html"
@@ -1048,7 +1053,7 @@ msgstr "A rede \"{0}\" requer senha."
 
 #: js/components/training/Onboarding/Onboarding.js:528
 msgid "The stock radar in your car helps openpilot measure the lead car distance for longitudinal control."
-msgstr "O radar original do seu carro ajuda o openpilot a medir a distância para os carros á sua frente"
+msgstr "O radar original do seu carro ajuda o dragonpilot a medir a distância para os carros á sua frente"
 
 #: js/components/SetupWifi/SetupWifi.js:77
 msgid "There was a problem scanning WiFi networks. {0}Make sure WiFi is enabled in \"More Options\" above."
@@ -1056,7 +1061,7 @@ msgstr "Problema ao encontrar redes WiFi. {0}Tenha certeza que o WiFi está ativ
 
 #: js/components/training/Onboarding/Onboarding.js:994
 msgid "This guide can be replayed at any time from the device settings. To learn more about openpilot, read the wiki and join the community at discord.comma.ai"
-msgstr "Este guia pode ser revisto a qualquer momento nas configurações do dispositivo. Para saber mais sobre o openpilot, leia a página wiki e entre na comunidade discord.comma.ai"
+msgstr "Este guia pode ser revisto a qualquer momento nas configurações do dispositivo. Para saber mais sobre o dragonpilot, leia a página wiki e entre na comunidade discord.comma.ai"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:860
 msgid "Toyota / Lexus"
@@ -1123,7 +1128,7 @@ msgstr "Uso de funções código aberto da comunidade não são mantidas ou supo
 
 #: js/components/Settings/Settings.js:369
 msgid "Use the openpilot system for adaptive cruise control and lane keep driver assistance. Your attention is required at all times to use this feature. Changing this setting takes effect when the car is powered off."
-msgstr "O sistema openpilot controla a velocidade adaptativa e assiste na manutenção de faixa. Sua atenção é exigida a todo momento. Reinicie o carro após alterar esta seleção."
+msgstr "O sistema dragonpilot controla a velocidade adaptativa e assiste na manutenção de faixa. Sua atenção é exigida a todo momento. Reinicie o carro após alterar esta seleção."
 
 #: js/components/Settings/Settings.js:719
 msgid "Version"
@@ -1135,7 +1140,7 @@ msgstr "ATENÇÃO: {0} Isto fornece acesso SSH para as chaves públicas nas suas
 
 #: js/components/training/Onboarding/Onboarding.js:333
 msgid "Welcome to openpilot alpha"
-msgstr "Bem vindo ao openpilot alpha"
+msgstr "Bem vindo ao dragonpilot alpha"
 
 #: js/components/training/Onboarding/Onboarding.js:850
 msgid "When encountering a potentially unsafe situation or exiting a highway, you can disengage with any pedal."
@@ -1143,19 +1148,19 @@ msgstr "Em caso de situação insegura ao sair de uma auto-estrada, você pode d
 
 #: js/components/training/Onboarding/Onboarding.js:672
 msgid "When openpilot is engaged, you must always pay attention! openpilot monitors awareness with 3D facial reconstruction and pose. Distracted drivers are alerted, then disengaged from openpilot until corrected."
-msgstr "Quando o openpilot estiver ativado, você deve prestar atencão! O openpilot monitora sua atenção com o sistema de reconstrução facial 3D e pose. Motoristas destraídos são alertados, e o openpilot desativado até que se corrijam."
+msgstr "Quando o dragonpilot estiver ativado, você deve prestar atencão! O dragonpilot monitora sua atenção com o sistema de reconstrução facial 3D e pose. Motoristas destraídos são alertados, e o dragonpilot desativado até que se corrijam."
 
 #: js/components/training/Onboarding/Onboarding.js:631
 msgid "When you are ready to engage openpilot at a comfortable speed, locate the cruise controls on your steering wheel and press \"SET\" to begin."
-msgstr "Quando você estiver pronto para ativar o openpilot à uma velocidade confortável, localize os botões do piloto automático do seu volante e pressione \"SET\" para começar."
+msgstr "Quando você estiver pronto para ativar o dragonpilot à uma velocidade confortável, localize os botões do piloto automático do seu volante e pressione \"SET\" para começar."
 
 #: js/components/training/Onboarding/Onboarding.js:935
 msgid "While openpilot is engaged, you may keep your hands on the wheel to override lateral controls. Longitudinal controls will be managed by openpilot until the gas or brake pedal is pressed to disengage."
-msgstr "Quando o openpilot estiver ativado, você pode manter suas mãos no volante para mudar de direção. O volante será contolado pelo openpilot até que um dos pedais seja pressionado para desativar."
+msgstr "Quando o dragonpilot estiver ativado, você pode manter suas mãos no volante para mudar de direção. O volante será contolado pelo dragonpilot até que um dos pedais seja pressionado para desativar."
 
 #: js/components/training/Onboarding/Onboarding.js:763
 msgid "With openpilot engaged, turn on your signal, check your surroundings, and confirm it is safe to change lanes."
-msgstr "Com openpilot ativado, ligue a seta, observe ao seu redor, e confirme que é seguro trocar de faixa."
+msgstr "Com dragonpilot ativado, ligue a seta, observe ao seu redor, e confirme que é seguro trocar de faixa."
 
 #: js/components/Settings/Settings.js:493
 #: js/components/Settings/Settings.js:573
@@ -1188,7 +1193,7 @@ msgstr "comma connect"
 msgid "dashcam"
 msgstr "Modo Câmera de Para-brisas"
 
-#: js/components/Settings/Settings.js:359
+#: js/components/Settings/Settings.js:314
 msgid "dragonpilot"
 msgstr "dragonpilot"
 
@@ -1197,54 +1202,54 @@ msgstr "dragonpilot"
 #: js/components/Settings/Settings.js:539
 #: js/components/Settings/Settings.js:659
 msgid "openpilot"
-msgstr "openpilot"
+msgstr "dragonpilot"
 
 #: js/components/training/Onboarding/Onboarding.js:717
 msgid "openpilot can change lanes with your assistance."
-msgstr "O openpilot pode trocar de faixa com sua assistência."
+msgstr "O dragonpilot pode trocar de faixa com sua assistência."
 
 #: js/components/training/Onboarding/Onboarding.js:623
 #: js/components/training/Onboarding/Onboarding.js:755
 msgid "openpilot controls"
-msgstr "Controles do openpilot"
+msgstr "Controles do dragonpilot"
 
 #: js/components/training/Onboarding/Onboarding.js:884
 #: js/components/training/Onboarding/Onboarding.js:927
 msgid "openpilot disengaging"
-msgstr "openpilot desativando"
+msgstr "dragonpilot desativando"
 
 #: js/components/training/Onboarding/Onboarding.js:664
 msgid "openpilot engaging"
-msgstr "openpilot ativando"
+msgstr "dragonpilot ativando"
 
 #: js/components/training/Onboarding/Onboarding.js:377
 msgid "openpilot is an advanced driver assistance system."
-msgstr "O openpilot é um sestema avançado de assistência ao motorista."
+msgstr "O dragonpilot é um sestema avançado de assistência ao motorista."
 
 #: js/components/training/Onboarding/Onboarding.js:722
 msgid "openpilot is not capable of checking if a lane change is safe. This is your job. openpilot will change lanes regardless if another vehicle is present."
-msgstr "O openpilot não é capaz de saber quando a troca de faixas é segura. Isto é sua responsabilidade. O openpilot vai mudar mesmo que outro veículo estiver perto."
+msgstr "O dragonpilot não é capaz de saber quando a troca de faixas é segura. Isto é sua responsabilidade. O dragonpilot vai mudar mesmo que outro veículo estiver perto."
 
 #: js/components/training/Onboarding/Onboarding.js:794
 msgid "openpilot lane changes"
-msgstr "trocas de faixa do openpilot"
+msgstr "trocas de faixa do dragonpilot"
 
 #: js/components/training/Onboarding/Onboarding.js:473
 #: js/components/training/Onboarding/Onboarding.js:520
 msgid "openpilot sensors"
-msgstr "Sensores do openpilot"
+msgstr "Sensores do dragonpilot"
 
 #: js/components/training/Onboarding/Onboarding.js:433
 msgid "openpilot uses multiple sensors to see the road ahead."
-msgstr "O openpilot usa múltiplos sensores para ver a estrada à frente."
+msgstr "O dragonpilot usa múltiplos sensores para ver a estrada à frente."
 
 #: js/components/training/Onboarding/Onboarding.js:586
 msgid "openpilot will engage when cruise control is set."
-msgstr "O openpilot vai ativar quando o botão SET no volante for pressionado."
+msgstr "O dragonpilot vai ativar quando o botão SET no volante for pressionado."
 
 #: js/components/training/Onboarding/Onboarding.js:845
 msgid "openpilot will stop driving when a pedal is pressed."
-msgstr "O openpilot vai parar de dirigir quando um pedal for pressionado."
+msgstr "O dragonpilot vai parar de dirigir quando um pedal for pressionado."
 
 #: js/components/Settings/Settings.js:228
 msgid "{0} Free"
