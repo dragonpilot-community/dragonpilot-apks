@@ -102,8 +102,8 @@ msgid "Adjust the shutdown timer to shutdown your device after a period of time.
 msgstr ""
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:670
-msgid "Adjust the steering monitor timer, set this to 0 if you would like to disable steering monitor. Default is 3 minutes."
-msgstr "Ajuste o temporizador de toque no volante, ajuste em 0 se você quiser desativar esta função. O normal é 3 minutos"
+msgid "Adjust the steering monitor timer, set this to \"OFF\" if you would like to disable steering monitor. Default is 3 minutes."
+msgstr "Ajuste o temporizador de toque no volante, ajuste em \"Desligar\" se você quiser desativar esta função. O normal é 3 minutos"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:615
 msgid "Allow Gas"
@@ -777,7 +777,7 @@ msgstr "Agora que você está pronto, é importante entender as funcionalidades 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:392
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:688
 msgid "OFF"
-msgstr ""
+msgstr "Desligar"
 
 #: js/components/Settings/Settings.js:352
 msgid "Open Aegis Safety Camera"

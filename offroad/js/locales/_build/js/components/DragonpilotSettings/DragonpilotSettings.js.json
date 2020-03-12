@@ -571,7 +571,7 @@
       ]
     ]
   },
-  "Adjust the steering monitor timer, set this to 0 if you would like to disable steering monitor. Default is 3 minutes.": {
+  "Adjust the steering monitor timer, set this to \"OFF\" if you would like to disable steering monitor. Default is 3 minutes.": {
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",

@@ -102,8 +102,8 @@ msgid "Adjust the shutdown timer to shutdown your device after a period of time.
 msgstr "调整关机计时让您的装置自动关机"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:670
-msgid "Adjust the steering monitor timer, set this to 0 if you would like to disable steering monitor. Default is 3 minutes."
-msgstr "调整方向盘监控计时，如果您想取消方向盘监控，请将它设成 0。预设值为 3 分钟。"
+msgid "Adjust the steering monitor timer, set this to \"OFF\" if you would like to disable steering monitor. Default is 3 minutes."
+msgstr "调整方向盘监控计时，如果您想取消方向盘监控，请将它设成「停用」。预设值为 3 分钟。"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:615
 msgid "Allow Gas"

@@ -662,12 +662,12 @@ class DragonpilotSettings extends Component {
                             handleExpanded={() => this.handleExpanded('driver_monitoring')}
                             handleChanged={this.props.setEnableDriverMonitoring}/>
                         }
-                        {dragonEnableDriverSafetyCheck === '1' && dragonEnableDriverMonitoring === '1' &&
+                        {dragonEnableDriverSafetyCheck === '1' &&
                         <X.TableCell
                             type='custom'
                             title={i18n._(t`Steering Monitor Timer`)}
                             iconSource={Icons.developer}
-                            description={i18n._(t`Adjust the steering monitor timer, set this to 0 if you would like to disable steering monitor. Default is 3 minutes.`)}
+                            description={i18n._(t`Adjust the steering monitor timer, set this to "OFF" if you would like to disable steering monitor. Default is 3 minutes.`)}
                             isExpanded={expandedCell == 'steering_monitor_timer'}
                             handleExpanded={() => this.handleExpanded('steering_monitor_timer')}>
                             <X.Button
