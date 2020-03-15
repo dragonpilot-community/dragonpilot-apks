@@ -121,7 +121,7 @@ class DragonpilotSettings extends Component {
               _steeringMonitorTimer = steeringMonitorTimerInt + 1;
               break;
           case 'decrement':
-              _steeringMonitorTimer = Math.max(1, steeringMonitorTimerInt - 1);
+              _steeringMonitorTimer = Math.max(0, steeringMonitorTimerInt - 1);
               break;
         }
         this.setState({ steeringMonitorTimerInt: _steeringMonitorTimer });
@@ -682,7 +682,7 @@ class DragonpilotSettings extends Component {
                                 activeOpacity={1}
                                 style={Styles.settingsPlusMinus}>
                                 <X.Button
-                                    style={[Styles.settingsNumericButton, {opacity: steeringMonitorTimerInt <= 1 ? 0.1 : 0.8}]}
+                                    style={[Styles.settingsNumericButton, {opacity: steeringMonitorTimerInt <= 0 ? 0.1 : 0.8}]}
                                     onPress={() => this.handleChangedSteeringMonitorTimer('decrement')}>
                                     <X.Image
                                         source={Icons.minus}
