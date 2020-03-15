@@ -98,8 +98,8 @@ msgid "Adjust the camera offset if your car is not centered, slowly increase thi
 msgstr "Adjust the camera offset if your car is not centered, slowly increase this if your car is close to the right, slowly decrease this if your car is close to the left, default is 6 cm."
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:601
-msgid "Adjust the following distance profile (aka Dynamic Following), choice of TRAFFIC / STANDARD / ROADTRIP"
-msgstr "Adjust the following distance profile (aka Dynamic Following), choice of TRAFFIC / STANDARD / ROADTRIP"
+msgid "Adjust the following distance profile (aka Dynamic Following), choice of SHORT / NORMAL / LONG"
+msgstr "Adjust the following distance profile (aka Dynamic Following), choice of SHORT / NORMAL / LONG"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:391
 msgid "Adjust the shutdown timer to shutdown your device after a period of time."
@@ -725,6 +725,10 @@ msgstr "KM"
 msgid "Keep in mind that certain situations are not handled by openpilot. Scenarios such as traffic lights, stop signs, quick vehicle cutins and pedestrians are unrecognized and openpilot may accelerate."
 msgstr "Keep in mind that certain situations are not handled by dragonpilot. Scenarios such as traffic lights, stop signs, quick vehicle cutins and pedestrians are unrecognized and dragonpilot may accelerate."
 
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
+msgid "LONG"
+msgstr "LONG"
+
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:195
 #: js/components/Settings/Settings.js:141
 #: js/components/UpdatePrompt/UpdatePrompt.js:33
@@ -761,6 +765,7 @@ msgstr "More Options"
 msgid "N/A"
 msgstr "N/A"
 
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:652
 msgid "NORMAL"
 msgstr "NORMAL"
@@ -871,10 +876,6 @@ msgstr "Press cruise to engage and a pedal to disengage."
 msgid "Privacy policy available at https://my.comma.ai/privacy.html"
 msgstr "Privacy policy available at https://my.comma.ai/privacy.html"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
-msgid "ROADTRIP"
-msgstr "ROADTRIP"
-
 #: js/components/training/Onboarding/Onboarding.js:457
 #: js/components/training/Onboarding/Onboarding.js:523
 msgid "Radar from your car"
@@ -931,13 +932,13 @@ msgstr "Restart"
 msgid "Review Training Guide"
 msgstr "Review Training Guide"
 
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
+msgid "SHORT"
+msgstr "SHORT"
+
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:652
 msgid "SPORT"
 msgstr "SPORT"
-
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
-msgid "STANDARD"
-msgstr "STANDARD"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:216
 msgid "Safety"
@@ -1034,10 +1035,6 @@ msgstr "Succesfully paired to account"
 #: js/components/SetupQr/SetupQr.js:104
 msgid "Successfully paired to an account in"
 msgstr "Successfully paired to an account in"
-
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
-msgid "TRAFFIC"
-msgstr "TRAFFIC"
 
 #: js/components/training/Onboarding/Onboarding.js:643
 msgid "Tap \"SET\" to engage"

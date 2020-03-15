@@ -91,15 +91,15 @@ msgstr "帳號"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:634
 msgid "Adjust the acceleration profile, choice of ECO / NORMAL / SPORT"
-msgstr "調整加速模式，有 「節能」 / 「正常」 / 「運動」 供選擇。"
+msgstr "調整加速模式，有 「節能」 / 「普通」 / 「運動」 供選擇。"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:448
 msgid "Adjust the camera offset if your car is not centered, slowly increase this if your car is close to the right, slowly decrease this if your car is close to the left, default is 6 cm."
 msgstr "如果您的車子無法在正中央前行，您可以微調此數值，太靠右，請增加此值；太靠左，請減少此值。預設為 6 公分。"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:601
-msgid "Adjust the following distance profile (aka Dynamic Following), choice of TRAFFIC / STANDARD / ROADTRIP"
-msgstr "調整跟車距離，有 「擁堵」/「標準」/「長途」供選擇。"
+msgid "Adjust the following distance profile (aka Dynamic Following), choice of SHORT / NORMAL / LONG"
+msgstr "調整跟車距離，有 「短距」 / 「普通」 / 「長距」供選擇。"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:391
 msgid "Adjust the shutdown timer to shutdown your device after a period of time."
@@ -725,6 +725,10 @@ msgstr "公里"
 msgid "Keep in mind that certain situations are not handled by openpilot. Scenarios such as traffic lights, stop signs, quick vehicle cutins and pedestrians are unrecognized and openpilot may accelerate."
 msgstr "請注意，在紅綠燈號誌、停止號誌、前方車輛快速切入、行人穿越等等的情況，因 dragonpilot 無法正確判斷，它將有可能導致不正常的加速。"
 
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
+msgid "LONG"
+msgstr "長距"
+
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:195
 #: js/components/Settings/Settings.js:141
 #: js/components/UpdatePrompt/UpdatePrompt.js:33
@@ -761,9 +765,10 @@ msgstr "更多選項"
 msgid "N/A"
 msgstr "無"
 
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:652
 msgid "NORMAL"
-msgstr "正常"
+msgstr "普通"
 
 #: js/components/Settings/Settings.js:233
 msgid "Network"
@@ -871,10 +876,6 @@ msgstr "按下巡航鈕啟動，踩油門或剎車取消。"
 msgid "Privacy policy available at https://my.comma.ai/privacy.html"
 msgstr "隱私政策請參閱 https://my.comma.ai/privacy.html"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
-msgid "ROADTRIP"
-msgstr "長途"
-
 #: js/components/training/Onboarding/Onboarding.js:457
 #: js/components/training/Onboarding/Onboarding.js:523
 msgid "Radar from your car"
@@ -931,13 +932,13 @@ msgstr "重新開始"
 msgid "Review Training Guide"
 msgstr "查看使用教學"
 
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
+msgid "SHORT"
+msgstr "短距"
+
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:652
 msgid "SPORT"
 msgstr "運動"
-
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
-msgid "STANDARD"
-msgstr "標準"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:216
 msgid "Safety"
@@ -1034,10 +1035,6 @@ msgstr "已成功配對到帳號"
 #: js/components/SetupQr/SetupQr.js:104
 msgid "Successfully paired to an account in"
 msgstr "已配對成功："
-
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
-msgid "TRAFFIC"
-msgstr "擁堵"
 
 #: js/components/training/Onboarding/Onboarding.js:643
 msgid "Tap \"SET\" to engage"

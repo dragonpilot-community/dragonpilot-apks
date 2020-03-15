@@ -98,7 +98,7 @@ msgid "Adjust the camera offset if your car is not centered, slowly increase thi
 msgstr "如果您的车子无法在正中央前行，您可以微调此数值，太靠右，请增加此值；太靠左，请减少此值。预设为 6 公分。"
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:601
-msgid "Adjust the following distance profile (aka Dynamic Following), choice of TRAFFIC / STANDARD / ROADTRIP"
+msgid "Adjust the following distance profile (aka Dynamic Following), choice of SHORT / NORMAL / LONG"
 msgstr ""
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:391
@@ -725,6 +725,10 @@ msgstr "公里"
 msgid "Keep in mind that certain situations are not handled by openpilot. Scenarios such as traffic lights, stop signs, quick vehicle cutins and pedestrians are unrecognized and openpilot may accelerate."
 msgstr "请注意，在红绿灯号标志、停车信号灯标志、前方车辆快速切入、无法识别的行人等特定路况下，dragonpilot 无法正确处理，有可能导致异常加速。"
 
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
+msgid "LONG"
+msgstr ""
+
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:195
 #: js/components/Settings/Settings.js:141
 #: js/components/UpdatePrompt/UpdatePrompt.js:33
@@ -761,6 +765,7 @@ msgstr "更多选项"
 msgid "N/A"
 msgstr "无"
 
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:652
 msgid "NORMAL"
 msgstr "正常"
@@ -871,10 +876,6 @@ msgstr "按下巡航按钮启动，踩下油门或刹车取消。"
 msgid "Privacy policy available at https://my.comma.ai/privacy.html"
 msgstr "隐私政策请参阅 https://my.comma.ai/privacy.html"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
-msgid "ROADTRIP"
-msgstr ""
-
 #: js/components/training/Onboarding/Onboarding.js:457
 #: js/components/training/Onboarding/Onboarding.js:523
 msgid "Radar from your car"
@@ -931,13 +932,13 @@ msgstr "重新学习"
 msgid "Review Training Guide"
 msgstr "查看使用教程"
 
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
+msgid "SHORT"
+msgstr ""
+
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:652
 msgid "SPORT"
 msgstr "运动"
-
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
-msgid "STANDARD"
-msgstr ""
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:216
 msgid "Safety"
@@ -1034,10 +1035,6 @@ msgstr "已成功绑定到帐户"
 #: js/components/SetupQr/SetupQr.js:104
 msgid "Successfully paired to an account in"
 msgstr "已绑定成功："
-
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
-msgid "TRAFFIC"
-msgstr ""
 
 #: js/components/training/Onboarding/Onboarding.js:643
 msgid "Tap \"SET\" to engage"

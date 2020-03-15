@@ -443,7 +443,7 @@
       ]
     ]
   },
-  "Adjust the following distance profile (aka Dynamic Following), choice of TRAFFIC / STANDARD / ROADTRIP": {
+  "Adjust the following distance profile (aka Dynamic Following), choice of SHORT / NORMAL / LONG": {
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
@@ -451,7 +451,7 @@
       ]
     ]
   },
-  "TRAFFIC": {
+  "LONG": {
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
@@ -459,15 +459,19 @@
       ]
     ]
   },
-  "STANDARD": {
+  "NORMAL": {
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
         619
+      ],
+      [
+        "js/components/DragonpilotSettings/DragonpilotSettings.js",
+        652
       ]
     ]
   },
-  "ROADTRIP": {
+  "SHORT": {
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",
@@ -492,14 +496,6 @@
     ]
   },
   "ECO": {
-    "origin": [
-      [
-        "js/components/DragonpilotSettings/DragonpilotSettings.js",
-        652
-      ]
-    ]
-  },
-  "NORMAL": {
     "origin": [
       [
         "js/components/DragonpilotSettings/DragonpilotSettings.js",

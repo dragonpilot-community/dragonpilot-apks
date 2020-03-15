@@ -598,7 +598,7 @@ class DragonpilotSettings extends Component {
                             type='custom'
                             title={ i18n._(t`Following Distance Profile`) }
                             iconSource={ Icons.developer }
-                            description={ i18n._(t`Adjust the following distance profile (aka Dynamic Following), choice of TRAFFIC / STANDARD / ROADTRIP`) }
+                            description={ i18n._(t`Adjust the following distance profile (aka Dynamic Following), choice of SHORT / NORMAL / LONG`) }
                             isExpanded={ expandedCell == 'df_profile' }
                             handleExpanded={ () => this.handleExpanded('df_profile') }>
                             <X.Button
@@ -616,7 +616,7 @@ class DragonpilotSettings extends Component {
                                     color='white'
                                     weight='semibold'
                                     style={ Styles.settingsNumericValue }>
-                                    { i18n._(dfProfileInt === -1? t`TRAFFIC` : dfProfileInt === 0? t`STANDARD` : t`ROADTRIP`) }
+                                    { i18n._(dfProfileInt === -1? t`LONG` : dfProfileInt === 0? t`NORMAL` : t`SHORT`) }
                                 </X.Text>
                                 <X.Button
                                     style={ [Styles.settingsNumericButton, { opacity: dfProfileInt >= 1? 0.1 : 0.8 }] }

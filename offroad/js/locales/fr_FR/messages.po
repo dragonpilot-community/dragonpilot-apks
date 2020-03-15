@@ -98,7 +98,7 @@ msgid "Adjust the camera offset if your car is not centered, slowly increase thi
 msgstr ""
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:601
-msgid "Adjust the following distance profile (aka Dynamic Following), choice of TRAFFIC / STANDARD / ROADTRIP"
+msgid "Adjust the following distance profile (aka Dynamic Following), choice of SHORT / NORMAL / LONG"
 msgstr ""
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:391
@@ -725,6 +725,10 @@ msgstr "KM"
 msgid "Keep in mind that certain situations are not handled by openpilot. Scenarios such as traffic lights, stop signs, quick vehicle cutins and pedestrians are unrecognized and openpilot may accelerate."
 msgstr "Gardez à l'esprit que certaines situations ne sont pas gérées par dragonpilot. Les scénarios tels que les feux de circulation, les panneaux stop, les arrêts rapides des véhicules et les piétons ne sont pas reconnus et dragonpilot peut accélérer."
 
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
+msgid "LONG"
+msgstr ""
+
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:195
 #: js/components/Settings/Settings.js:141
 #: js/components/UpdatePrompt/UpdatePrompt.js:33
@@ -761,6 +765,7 @@ msgstr "Plus d'Options"
 msgid "N/A"
 msgstr ""
 
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:652
 msgid "NORMAL"
 msgstr ""
@@ -871,10 +876,6 @@ msgstr "Appuyer sur votre régulateur de vitesse pour engager et une pédale pou
 msgid "Privacy policy available at https://my.comma.ai/privacy.html"
 msgstr "La politique de confidentialité est disponible à https://my.comma.ai/privacy.html"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
-msgid "ROADTRIP"
-msgstr ""
-
 #: js/components/training/Onboarding/Onboarding.js:457
 #: js/components/training/Onboarding/Onboarding.js:523
 msgid "Radar from your car"
@@ -931,12 +932,12 @@ msgstr "Redémarrer"
 msgid "Review Training Guide"
 msgstr "Revoir le guide d'entrainement"
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:652
-msgid "SPORT"
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
+msgid "SHORT"
 msgstr ""
 
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
-msgid "STANDARD"
+#: js/components/DragonpilotSettings/DragonpilotSettings.js:652
+msgid "SPORT"
 msgstr ""
 
 #: js/components/DragonpilotSettings/DragonpilotSettings.js:216
@@ -1034,10 +1035,6 @@ msgstr "Association réussie au compte"
 #: js/components/SetupQr/SetupQr.js:104
 msgid "Successfully paired to an account in"
 msgstr "Association réussie à un compte en"
-
-#: js/components/DragonpilotSettings/DragonpilotSettings.js:619
-msgid "TRAFFIC"
-msgstr ""
 
 #: js/components/training/Onboarding/Onboarding.js:643
 msgid "Tap \"SET\" to engage"
