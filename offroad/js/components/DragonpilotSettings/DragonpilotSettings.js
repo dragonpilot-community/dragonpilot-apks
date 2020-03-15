@@ -21,7 +21,7 @@ import { t, Trans } from "@lingui/macro"
 
 const SettingsRoutes = {
     PRIMARY: 'PRIMARY',
-    SAFETY: 'SAFETY',
+    CONTROLS: 'CONTROLS',
     UI: 'UI',
     APP: 'APP',
     BRANDSPECIFIC: 'BRANDSPECIFIC',
@@ -213,9 +213,9 @@ class DragonpilotSettings extends Component {
         const settingsMenuItems = [
             {
                 icon: Icons.developer,
-                title: i18n._(t`Safety`),
+                title: i18n._(t`Controls`),
                 context: i18n._(t`Settings`),
-                route: SettingsRoutes.SAFETY,
+                route: SettingsRoutes.CONTROLS,
             },
             {
                 icon: Icons.developer,
@@ -520,7 +520,7 @@ class DragonpilotSettings extends Component {
         )
     }
 
-    renderSafetySettings() {
+    renderControlsSettings() {
         const {
             params: {
                 DragonLatCtrl: dragonLatCtrl,
@@ -532,6 +532,7 @@ class DragonpilotSettings extends Component {
                 DragonEnableSlowOnCurve: dragonEnableSlowOnCurve,
                 DragonEnableLeadCarMovingAlert: dragonEnableLeadCarMovingAlert,
                 DragonEnableAutoLC: dragonEnableAutoLC,
+                LaneChangeEnabled: laneChangeEnabled,
             },
         } = this.props;
         const { expandedCell, steeringMonitorTimerInt,  dfProfileInt, accelProfileInt } = this.state;
@@ -542,7 +543,7 @@ class DragonpilotSettings extends Component {
                         color='ghost'
                         size='small'
                         onPress={ () => this.handlePressedBack() }>
-                        { i18n._(t`<  Safety Settings`) }
+                        { i18n._(t`<  Controls Settings`) }
                     </X.Button>
                 </View>
                 <ScrollView
@@ -562,24 +563,29 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'lat_ctrl' }
                             handleExpanded={ () => this.handleExpanded('lat_ctrl') }
                             handleChanged={ this.props.setLatCtrl } />
+                        {dragonLatCtrl === "1" &&
                         <X.TableCell
                             type='switch'
-                            title={ i18n._(t`Enable Steering On Signal`) }
-                            value={ !!parseInt(dragonEnableSteeringOnSignal) }
-                            iconSource={ Icons.developer }
-                            description={ i18n._(t`If you enable this, it will temporary disable steering control when left/right blinker is on and resume control 1 second after the blinker is off.`) }
-                            isExpanded={ expandedCell == 'enable_steering_on_signal' }
-                            handleExpanded={ () => this.handleExpanded('enable_steering_on_signal') }
-                            handleChanged={ this.props.setEnableSteeringOnSignal } />
+                            title={i18n._(t`Display "Turn Exceeds Steering Limit" Alert`)}
+                            value={!!parseInt(dragonDisplaySteeringLimitAlert)}
+                            iconSource={Icons.developer}
+                            description={i18n._(t`If you disable this, you will not receive any "Turn Exceeds Steering Limit" alerts on the screen.`)}
+                            isExpanded={expandedCell == 'display_steering_limit_alert'}
+                            handleExpanded={() => this.handleExpanded('display_steering_limit_alert')}
+                            handleChanged={this.props.setDisplaySteeringLimitAlert}/>
+                        }
+                        {dragonLatCtrl === "1" && laneChangeEnabled === "0" &&
                         <X.TableCell
                             type='switch'
-                            title={ i18n._(t`Display "Turn Exceeds Steering Limit" Alert`) }
-                            value={ !!parseInt(dragonDisplaySteeringLimitAlert) }
-                            iconSource={ Icons.developer }
-                            description={ i18n._(t`If you disable this, you will not receive any "Turn Exceeds Steering Limit" alerts on the screen. Hyundai, Ford, Toyota do not have this alert.`) }
-                            isExpanded={ expandedCell == 'display_steering_limit_alert' }
-                            handleExpanded={ () => this.handleExpanded('display_steering_limit_alert') }
-                            handleChanged={ this.props.setDisplaySteeringLimitAlert } />
+                            title={i18n._(t`Enable Steering On Signal`)}
+                            value={!!parseInt(dragonEnableSteeringOnSignal)}
+                            iconSource={Icons.developer}
+                            description={i18n._(t`If you enable this, it will temporary disable steering control when left/right blinker is on and resume control 1 second after the blinker is off.`)}
+                            isExpanded={expandedCell == 'enable_steering_on_signal'}
+                            handleExpanded={() => this.handleExpanded('enable_steering_on_signal')}
+                            handleChanged={this.props.setEnableSteeringOnSignal}/>
+                        }
+                        {dragonLatCtrl === "1" && laneChangeEnabled === "1" &&
                         <X.TableCell
                             type='switch'
                             title={i18n._(t`Enable Auto Lane Change`)}
@@ -588,7 +594,8 @@ class DragonpilotSettings extends Component {
                             description={i18n._(t`If you enable this, dp will change lane for you once the speed is above 60mph / 97kph. We DO NOT RECOMMEND that you turn on this unless you know what you are doing, we hold no responsibility if you enable this option.`)}
                             isExpanded={expandedCell == 'enable_auto_lc'}
                             handleExpanded={() => this.handleExpanded('enable_auto_lc')}
-                            handleChanged={ this.props.setEnableAutoLC }/>
+                            handleChanged={this.props.setEnableAutoLC}/>
+                        }
                     </X.Table>
                     <X.Table color='darkBlue'>
                         <X.TableCell
@@ -680,7 +687,7 @@ class DragonpilotSettings extends Component {
                             handleChanged={ this.props.setEnableSlowOnCurve } />
                         <X.TableCell
                             type='switch'
-                            title={ i18n._(t`Enable Lead Car Moving Alert (BETA)`) }
+                            title={ i18n._(t`Enable Lead Car Moving Alert`) }
                             value={ !!parseInt(dragonEnableLeadCarMovingAlert) }
                             iconSource={ Icons.developer }
                             description={ i18n._(t`If you enable this, dp will notify you when lead car starts moving from stationary.`) }
@@ -712,12 +719,12 @@ class DragonpilotSettings extends Component {
                             handleExpanded={() => this.handleExpanded('driver_monitoring')}
                             handleChanged={this.props.setEnableDriverMonitoring}/>
                         }
-                        {dragonEnableDriverSafetyCheck === '1' && dragonEnableDriverMonitoring === '1' &&
+                        {dragonEnableDriverSafetyCheck === '1' &&
                         <X.TableCell
                             type='custom'
                             title={i18n._(t`Steering Monitor Timer`)}
                             iconSource={Icons.developer}
-                            description={i18n._(t`Adjust the steering monitor timer, set this to 0 if you would like to disable steering monitor. Default is 3 minutes.`)}
+                            description={i18n._(t`Adjust the steering monitor timer, set this to "OFF" if you would like to disable steering monitor. Default is 3 minutes.`)}
                             isExpanded={expandedCell == 'steering_monitor_timer'}
                             handleExpanded={() => this.handleExpanded('steering_monitor_timer')}>
                             <X.Button
@@ -1159,8 +1166,8 @@ class DragonpilotSettings extends Component {
         switch (route) {
             case SettingsRoutes.PRIMARY:
                 return this.renderPrimarySettings();
-            case SettingsRoutes.SAFETY:
-                return this.renderSafetySettings();
+            case SettingsRoutes.CONTROLS:
+                return this.renderControlsSettings();
             case SettingsRoutes.BRANDSPECIFIC:
                 return this.renderBrandSpecificSettings();
             // case SettingsRoutes.HONDA:

@@ -13,6 +13,8 @@ import { NavigationActions } from 'react-navigation';
 
 import RootReducer from './js/store';
 
+import AppWindow from './js/components/AppWindow';
+
 import StackNavigator from './js/navigators/StackNavigator';
 
 import HomeButtonListener from './js/utils/HomeButtonListener';
@@ -114,7 +116,9 @@ export default class App extends Component {
                     <PersistGate
                         persistor={ this.persistor }
                         onBeforeLift={ this.onBeforeLift }>
-                        <StackNavigator />
+                        <AppWindow>
+                            <StackNavigator />
+                        </AppWindow>
                     </PersistGate>
                 </Provider>
             </I18nProvider>
