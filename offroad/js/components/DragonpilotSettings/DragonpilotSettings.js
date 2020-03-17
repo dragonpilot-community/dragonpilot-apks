@@ -65,6 +65,7 @@ class DragonpilotSettings extends Component {
                 DragonUIVolumeBoost: dragonUIVolumeBoost,
                 DragonCarModel: dragonCarModel,
                 DragonAccelProfile: dragonAccelProfile,
+                DragonDynamicFollow: dragonDynamicFollow,
             },
         } = this.props;
         this.setState({ steeringMonitorTimerInt: dragonSteeringMonitorTimer === '0'? 0 : parseInt(dragonSteeringMonitorTimer) || 3 })
@@ -73,6 +74,7 @@ class DragonpilotSettings extends Component {
         this.setState({ VolumeBoostInt: dragonUIVolumeBoost === '0'? 0 : parseInt(dragonUIVolumeBoost) || 0 })
         this.setState({ carModel: dragonCarModel })
         this.setState({ accelProfileInt: dragonAccelProfile === '1'? 1 : dragonAccelProfile === '-1'? -1 : 0 })
+        this.setState({ dfProfileInt: dragonDynamicFollow === '1'? 1 : dragonDynamicFollow === '0'? 0 : dragonDynamicFollow === '-1' ? -1 : -2 })
     }
 
     handleExpanded(key) {
@@ -95,6 +97,21 @@ class DragonpilotSettings extends Component {
       }
       this.setState({ accelProfileInt: _accelProfile });
       this.props.setAccelProfile(_accelProfile);
+    }
+
+    handleChangedDFProfile(operator) {
+        const { dfProfileInt } = this.state;
+        let _dfProfile;
+        switch (operator) {
+            case 'increment':
+                _dfProfile = Math.min(1, dfProfileInt + 1);
+                break;
+            case 'decrement':
+                _dfProfile = Math.max(-2, dfProfileInt - 1);
+                break;
+        }
+        this.setState({ dfProfileInt: _dfProfile });
+        this.props.setDFProfile(_dfProfile);
     }
 
     handlePressedBack() {
@@ -271,7 +288,7 @@ class DragonpilotSettings extends Component {
                 DragonEnableMixplorer: dragonEnableMixplorer,
             }
         } = this.props;
-        const { expandedCell, cameraOffsetInt, autoShutdownAtInt, carModel, accelProfileInt } = this.state;
+        const { expandedCell, cameraOffsetInt, autoShutdownAtInt, carModel } = this.state;
         return (
             <View style={ Styles.settings }>
                 <View style={ Styles.settingsHeader }>
@@ -475,39 +492,6 @@ class DragonpilotSettings extends Component {
                             isExpanded={ expandedCell == 'sr_learner' }
                             handleExpanded={ () => this.handleExpanded('sr_learner') }
                             handleChanged={ this.props.setSRLeaner } />
-                        <X.TableCell
-                            type='custom'
-                            title={ i18n._(t`Acceleration Profile`) }
-                            iconSource={ Icons.developer }
-                            description={ i18n._(t`Adjust the acceleration profile, choice of ECO / NORMAL / SPORT`) }
-                            isExpanded={ expandedCell == 'accel_profile' }
-                            handleExpanded={ () => this.handleExpanded('accel_profile') }>
-                            <X.Button
-                                color='ghost'
-                                activeOpacity={ 1 }
-                                style={ Styles.settingsPlusMinus }>
-                                <X.Button
-                                    style={ [Styles.settingsNumericButton, { opacity: accelProfileInt <= -1? 0.1 : 0.8 }] }
-                                    onPress={ () => this.handleChangedAccelProfile('decrement')  }>
-                                    <X.Image
-                                        source={ Icons.minus }
-                                        style={ Styles.settingsNumericIcon } />
-                                </X.Button>
-                                <X.Text
-                                    color='white'
-                                    weight='semibold'
-                                    style={ Styles.settingsNumericValue }>
-                                    { i18n._(accelProfileInt === -1? t`ECO` : accelProfileInt === 0? t`NORMAL` : t`SPORT`) }
-                                </X.Text>
-                                <X.Button
-                                    style={ [Styles.settingsNumericButton, { opacity: accelProfileInt >= 1? 0.1 : 0.8 }] }
-                                    onPress={ () => this.handleChangedAccelProfile('increment') }>
-                                    <X.Image
-                                        source={ Icons.plus }
-                                        style={ Styles.settingsNumericIcon } />
-                                </X.Button>
-                            </X.Button>
-                        </X.TableCell>
                     </X.Table>
                     <X.Table color='darkBlue' padding='big'>
                         <X.Button
@@ -551,7 +535,7 @@ class DragonpilotSettings extends Component {
                 LaneChangeEnabled: laneChangeEnabled,
             },
         } = this.props;
-        const { expandedCell, steeringMonitorTimerInt } = this.state;
+        const { expandedCell, steeringMonitorTimerInt,  dfProfileInt, accelProfileInt } = this.state;
         return (
             <View style={ Styles.settings }>
                 <View style={ Styles.settingsHeader }>
@@ -617,6 +601,72 @@ class DragonpilotSettings extends Component {
                         <X.TableCell
                             title={ i18n._(t`Longitudinal Control`) }
                             value='' />
+                        <X.TableCell
+                            type='custom'
+                            title={ i18n._(t`Following Distance Profile`) }
+                            iconSource={ Icons.developer }
+                            description={ i18n._(t`Adjust the following distance profile (aka Dynamic Following), choice of OFF / SHORT / NORMAL / LONG`) }
+                            isExpanded={ expandedCell == 'df_profile' }
+                            handleExpanded={ () => this.handleExpanded('df_profile') }>
+                            <X.Button
+                                color='ghost'
+                                activeOpacity={ 1 }
+                                style={ Styles.settingsPlusMinus }>
+                                <X.Button
+                                    style={ [Styles.settingsNumericButton, { opacity: dfProfileInt <= -2? 0.1 : 0.8 }] }
+                                    onPress={ () => this.handleChangedDFProfile('decrement')  }>
+                                    <X.Image
+                                        source={ Icons.minus }
+                                        style={ Styles.settingsNumericIcon } />
+                                </X.Button>
+                                <X.Text
+                                    color='white'
+                                    weight='semibold'
+                                    style={ Styles.settingsNumericValue }>
+                                    { i18n._(dfProfileInt === 1? t`SHORT` : dfProfileInt === 0? t`NORMAL` : dfProfileInt === -1? t`LONG` : `OFF`) }
+                                </X.Text>
+                                <X.Button
+                                    style={ [Styles.settingsNumericButton, { opacity: dfProfileInt >= 1? 0.1 : 0.8 }] }
+                                    onPress={ () => this.handleChangedDFProfile('increment') }>
+                                    <X.Image
+                                        source={ Icons.plus }
+                                        style={ Styles.settingsNumericIcon } />
+                                </X.Button>
+                            </X.Button>
+                        </X.TableCell>
+                        <X.TableCell
+                            type='custom'
+                            title={ i18n._(t`Acceleration Profile`) }
+                            iconSource={ Icons.developer }
+                            description={ i18n._(t`Adjust the acceleration profile, choice of ECO / NORMAL / SPORT`) }
+                            isExpanded={ expandedCell == 'accel_profile' }
+                            handleExpanded={ () => this.handleExpanded('accel_profile') }>
+                            <X.Button
+                                color='ghost'
+                                activeOpacity={ 1 }
+                                style={ Styles.settingsPlusMinus }>
+                                <X.Button
+                                    style={ [Styles.settingsNumericButton, { opacity: accelProfileInt <= -1? 0.1 : 0.8 }] }
+                                    onPress={ () => this.handleChangedAccelProfile('decrement')  }>
+                                    <X.Image
+                                        source={ Icons.minus }
+                                        style={ Styles.settingsNumericIcon } />
+                                </X.Button>
+                                <X.Text
+                                    color='white'
+                                    weight='semibold'
+                                    style={ Styles.settingsNumericValue }>
+                                    { i18n._(accelProfileInt === -1? t`ECO` : accelProfileInt === 0? t`NORMAL` : t`SPORT`) }
+                                </X.Text>
+                                <X.Button
+                                    style={ [Styles.settingsNumericButton, { opacity: accelProfileInt >= 1? 0.1 : 0.8 }] }
+                                    onPress={ () => this.handleChangedAccelProfile('increment') }>
+                                    <X.Image
+                                        source={ Icons.plus }
+                                        style={ Styles.settingsNumericIcon } />
+                                </X.Button>
+                            </X.Button>
+                        </X.TableCell>
                         <X.TableCell
                             type='switch'
                             title={ i18n._(t`Allow Gas`) }
@@ -1305,6 +1355,9 @@ const mapDispatchToProps = dispatch => ({
     },
     setEnableGreyPandaMode: (val) => {
         dispatch(updateParam(Params.KEY_GREY_PANDA_MODE, (val | 0).toString()));
+    },
+    setDFProfile: (val) => {
+        dispatch(updateParam(Params.KEY_DYNAMIC_FOLLOW, (val | 0).toString()));
     },
 });
 

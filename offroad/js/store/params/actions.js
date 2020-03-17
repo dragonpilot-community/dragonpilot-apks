@@ -97,6 +97,7 @@ const PARAMS = [
   "DragonAccelProfile",
   "DragonEnableAutoShutdown",
   "DragonLastModified",
+  "DragonDynamicFollow",
 ].concat(ALERT_PARAMS);
 
 export function refreshParams(params) {
