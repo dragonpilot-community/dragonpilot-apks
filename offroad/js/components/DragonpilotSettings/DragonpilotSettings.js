@@ -74,7 +74,7 @@ class DragonpilotSettings extends Component {
         this.setState({ VolumeBoostInt: dragonUIVolumeBoost === '0'? 0 : parseInt(dragonUIVolumeBoost) || 0 })
         this.setState({ carModel: dragonCarModel })
         this.setState({ accelProfileInt: dragonAccelProfile === '1'? 1 : dragonAccelProfile === '-1'? -1 : 0 })
-        this.setState({ dfProfileInt: dragonDynamicFollow === '1'? 1 : dragonDynamicFollow === '-1'? -1 : 0 })
+        this.setState({ dfProfileInt: dragonDynamicFollow === '1'? 1 : dragonDynamicFollow === '0'? 0 : dragonDynamicFollow === '-1' ? -1 : -2 })
     }
 
     handleExpanded(key) {
@@ -107,7 +107,7 @@ class DragonpilotSettings extends Component {
                 _dfProfile = Math.min(1, dfProfileInt + 1);
                 break;
             case 'decrement':
-                _dfProfile = Math.max(-1, dfProfileInt - 1);
+                _dfProfile = Math.max(-2, dfProfileInt - 1);
                 break;
         }
         this.setState({ dfProfileInt: _dfProfile });
@@ -605,7 +605,7 @@ class DragonpilotSettings extends Component {
                             type='custom'
                             title={ i18n._(t`Following Distance Profile`) }
                             iconSource={ Icons.developer }
-                            description={ i18n._(t`Adjust the following distance profile (aka Dynamic Following), choice of SHORT / NORMAL / LONG`) }
+                            description={ i18n._(t`Adjust the following distance profile (aka Dynamic Following), choice of OFF / SHORT / NORMAL / LONG`) }
                             isExpanded={ expandedCell == 'df_profile' }
                             handleExpanded={ () => this.handleExpanded('df_profile') }>
                             <X.Button
@@ -613,7 +613,7 @@ class DragonpilotSettings extends Component {
                                 activeOpacity={ 1 }
                                 style={ Styles.settingsPlusMinus }>
                                 <X.Button
-                                    style={ [Styles.settingsNumericButton, { opacity: dfProfileInt <= -1? 0.1 : 0.8 }] }
+                                    style={ [Styles.settingsNumericButton, { opacity: dfProfileInt <= -2? 0.1 : 0.8 }] }
                                     onPress={ () => this.handleChangedDFProfile('decrement')  }>
                                     <X.Image
                                         source={ Icons.minus }
@@ -623,7 +623,7 @@ class DragonpilotSettings extends Component {
                                     color='white'
                                     weight='semibold'
                                     style={ Styles.settingsNumericValue }>
-                                    { i18n._(dfProfileInt === -1? t`LONG` : dfProfileInt === 0? t`NORMAL` : t`SHORT`) }
+                                    { i18n._(dfProfileInt === 1? t`SHORT` : dfProfileInt === 0? t`NORMAL` : dfProfileInt === -1? t`LONG` : `OFF`) }
                                 </X.Text>
                                 <X.Button
                                     style={ [Styles.settingsNumericButton, { opacity: dfProfileInt >= 1? 0.1 : 0.8 }] }
